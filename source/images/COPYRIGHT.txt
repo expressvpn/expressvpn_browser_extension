@@ -1,0 +1,3 @@
+All image assets are part of the ExpressVPN Browser Extension:
+Copyright 2017-2019 Express VPN International Ltd
+Licensed GPL v2
