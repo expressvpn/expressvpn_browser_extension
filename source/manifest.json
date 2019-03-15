@@ -1,7 +1,7 @@
 {
   "name": "__MSG_app_name_title__",
   "short_name": "__MSG_app_short_name_title__",
-  "version": "3.2.0.5",
+  "version": "3.2.0.13",
   "manifest_version": 2,
   "description": "__MSG_app_description_text__",
   "author": "ExpressVPN",

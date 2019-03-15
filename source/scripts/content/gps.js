@@ -201,11 +201,8 @@ function shouldInject() {
   return ((document instanceof HTMLDocument) || (document instanceof XMLDocument))
 }
 
-function inject() {
-  chrome.storage.local.get(['currentInfo', 'prefs'], function (storage) {
-    pref_hideLocation = storage.prefs.hideLocation;
-    sendLocation(storage.currentInfo);
-  });
+function inject(storage) {
+  sendLocation(storage.currentInfo);
 
   chrome.storage.onChanged.addListener(function (changes, namespace) {
     if (changes.prefs) {
@@ -237,6 +234,10 @@ function inject() {
   }
 }
 
-if (shouldInject()) {
-  inject();
-}
+chrome.storage.local.get(['currentInfo', 'prefs'], function (storage) {
+  pref_hideLocation = storage.prefs.hideLocation;
+
+  if (shouldInject() && pref_hideLocation === true) {
+    inject(storage);
+  }
+});
