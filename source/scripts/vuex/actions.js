@@ -13,13 +13,16 @@ export default {
   setCurrentView({ commit }, currentView) {
     commit('SET_CURRENT_VIEW', currentView);
   },
-  setCurrentCountryInfo({ commit }, info) {
-    commit('SET_CURRENT_COUNTRY_INFO', info);
-  },
-  setPreviousScrollPosition({ commit }, pos) {
-    commit('SET_PREVIOUS_SCROLL_POSITION', pos);
+  setCurrentContainer({ commit }, currentContainer) {
+    commit('SET_CURRENT_CONTAINER', currentContainer);
   },
   setRatingMessageType({ commit }, ratingMessageType) {
     commit('SET_RATING_MESSAGE_TYPE', ratingMessageType);
+  },
+  setIgnoreStateUpdates({ commit }, shouldIgnore) {
+    commit('SET_IGNORE_STATE_UPDATES', shouldIgnore);
+    if (shouldIgnore === false) {
+      chrome.runtime.sendMessage({ getState: true });
+    }
   },
 };

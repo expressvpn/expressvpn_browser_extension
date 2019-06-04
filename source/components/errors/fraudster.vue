@@ -4,74 +4,64 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template lang="html">
-  <div :id="currentInfo.state" :class="currentInfo.state">
-    <div class="errorHeader">
-      <div id="errorHeader">{{ localize(`error_fraudster_title`) }}</div>
-      <span class="promobar-icon"></span>
-    </div>
-    <div class='errorMessage'>
-      <p id='p1' v-html="localize('error_fraudster_p1_text')"></p>
-      <p id='p2'style='height: 20px;'></p>
-    </div>
+  <div>
+    <h1>{{ localize(`error_fraudster_title`) }}</h1>
+    <hint stringKey="error_fraudster_hint" iconName="icon-41-error" type="error"></hint>
+    <span v-html="localize('error_fraudster_p1_text')"></span>
+    <a href="mailto:support@expressvpn.zendesk.com" target="_blank">support@expressvpn.zendesk.com</a>
+    <span v-html="localize('error_fraudster_p2_text')"></span>
+    <span class="bold spaceIt">{{ localize('error_fraudster_question1_text') }}</span>
+    <span>{{ localize('error_fraudster_p3_text') }}</span>
+    <span class="bold spaceIt">{{ localize('error_fraudster_question2_text') }}</span>
+    <span>{{ localize('error_fraudster_p4_text') }}</span>
+    <span class="spaceIt">{{ localize('error_fraudster_p5_text') }}</span>
   </div>
 </template>
 
 <script type="text/javascript">
-  import errorContainer from './errorContainer.vue';
+import hint from '../partials/hint.vue';
 
-  export default {
-    name: 'fraudster',
-    // share common functionality with component mixins
-    mixins: [],
-    // compose new components
-    extends: errorContainer,
-    // component properties/variables
-    props: {
-    },
-    // variables
-    data: function () {
-      return {
-      };
-    },
-    computed: {
-    },
-    // when component uses other components
-    components: {},
-    // methods
-    watch: {},
-    methods: {
-    },
-    // component Lifecycle hooks
-    beforeCreate() {},
-    mounted() {
-      let browserName = '';
-      browserName = this.browserInfo.name;
-      if (browserName === 'Firefox') {
-        document.getElementById('errorContainer').style.overflowY = 'scroll'; // Using scrollview in case 'Firefox' browser.
-      } else {
-        this.$root.$el.style.height = '525px';
-        this.$parent.$el.style.height = '404px';
-      }
-      /* eslint no-underscore-dangle: 0 */
-      this.$el.querySelector('#fraudster-text-1').setAttribute(this.$options._scopeId, '');
-      this.$el.querySelector('#email').setAttribute(this.$options._scopeId, '');
-    },
+export default {
+  name: 'fraudster',
+  // share common functionality with component mixins
+  mixins: [],
+  // component properties/variables
+  props: {
+  },
+  // variables
+  data: function () {
+    return {
+    };
+  },
+  computed: {
+  },
+  // when component uses other components
+  components: {
+    hint,
+  },
+  // methods
+  watch: {},
+  methods: {
+  },
+  // component Lifecycle hooks
+  beforeCreate() {},
+  mounted() {
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-#fraudster {
-  .errorMessage {
+span {
+  display: block;
+  margin-top: 3px;
+  &:first-of-type {
+    margin-top: 20px;
   }
-  #p1 {
-    user-select: text;
+  &.spaceIt {
+    margin-top: 28px;
   }
-  #fraudster-text-1 {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-  }
-  #email {
-    color: #2196f3;
-  }
+}
+a {
+  margin-top: 3px;
 }
 </style>

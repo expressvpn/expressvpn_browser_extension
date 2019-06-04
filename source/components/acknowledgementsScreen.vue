@@ -4,13 +4,9 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="acknowledgementsScreen" :class="currentInfo.state">
-    <div class='sideHeader'>
-      <div id='settingsBackBtn' class="sideBackBtn" @click="sideBackBtnClick"></div>
-      <span id="screen_title">{{ localize('menu_item_acknowledgements_text') }}</span>
-    </div>
-    <div class="acknowledgements-screen-container">
-      <div class="scroll-container">
+  <div>
+    <secondary-header stringkey="menu_item_acknowledgements_text" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
+    <div class="acknowledgements-container">
         <p>ExpressVPN browser extension is made possible by several open source libraries.</p>
         <p>HTTPS Everywhere is released under GPLv2+ by EFF.</p>
 <p>Certain FOSS Licenses, such as the GNU General Public License, GNU Lesser (or Library) General Public License, and Mozilla Public License, require that ExpressVPN make available to recipients the source code corresponding to FOSS binaries distributed under those licenses. Recipients who would like to receive a copy of such source code should submit a request to ExpressVPN by email, at opensource@expressvpn.com.
@@ -568,9 +564,9 @@ selenium-webdriver<br>
 
       </div>
     </div>
-  </div>
 </template>
 <script>
+import secondaryHeader from './partials/secondaryHeader.vue';
 
 export default {
   name: 'acknowledgementsScreen',
@@ -582,46 +578,27 @@ export default {
       this.$store.dispatch('setCurrentView', 'helpScreen');
     },
   },
-  mounted() {
+  components: {
+    secondaryHeader,
   },
 };
 </script>
 
-<style lang="scss">
-$xvpn_blue: #1f475a;
-$xvpn_blue_light: #317190;
-#acknowledgementsScreen {
-  background-color: #f6f6f6;
-  height: 100vh;
-  width: 100vw;
-  z-index: 5;
-  float: left;
-  position: absolute;
-  top: 0;
+<style lang="scss" scoped>
+.acknowledgements {
 
-  .sideHeader {
-    border: 0;
+  &-container {
+    background: $gray-50;
+    padding: 25px 15px;
+    height: calc(600px - 60px);
+    width: 100vw;
+    border-top: 1px solid #DEDEDE;
+    overflow: hidden auto;
+    font-size: 17.5px;
+    line-height: 23px;
   }
-
-  .acknowledgements-screen-container {
-    height: 370px;
-    margin: 0px 10px;
-    border-radius: 3px;
-    background-color: rgb(254,254,254);
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
-    overflow: hidden;
-    .scroll-container {
-      padding: 0 5px;
-      margin-top: 19px;
-      height: 350px;
-      overflow-x: hidden;
-      font-size: 11.5px;
-      user-select: text !important;
-
-      p {
-        user-select: text !important;
-      }
-    }
-  }
+}
+pre {
+  white-space: pre-line;
 }
 </style>

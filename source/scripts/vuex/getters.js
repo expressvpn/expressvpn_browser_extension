@@ -10,9 +10,6 @@ export default {
   currentContainer: state => state.currentContainer,
   currentView: state => state.currentView,
   previousView: state => state.previousView,
-  previousScrollPosition: state => state.previousScrollPosition,
-  currentCountry: state => state.currentCountry,
-  currentRegion: state => state.currentRegion,
-  country_code: state => state.country_code,
   ratingMessageType: state => state.ratingMessageType,
+  ignoringStateUpdates: state => state.ignoringStateUpdates,
 };

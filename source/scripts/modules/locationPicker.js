@@ -94,6 +94,18 @@ const getLocationById = (locationsList, _id) => {
   }
 };
 
+const getRecentLocations = (allLocationsList, recentLocations) => {
+  let returnLocations = [];
+
+  if (recentLocations && allLocationsList) {
+    for (let locationId of recentLocations) {
+      returnLocations.push(getLocationById(allLocationsList, locationId));
+    }
+  }
+
+  return returnLocations;
+};
+
 module.exports = {
   filterLocationsByProtocol,
   getLocationByName,
@@ -101,4 +113,5 @@ module.exports = {
   isValidRecommendedCountry,
   getRecentConnectedLocations,
   getLocationById,
+  getRecentLocations,
 };

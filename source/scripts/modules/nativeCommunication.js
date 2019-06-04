@@ -219,7 +219,7 @@ export default (function () {
    * Connects to the location passed in the parameter
    * returns the stringified request made to the watchdog so this method can be tested
   * */
-  const connectToLocation = (location) => {
+  const connectToLocation = (location, connectWhileConnected = false) => {
     let connectionData = {};
     if (location.is_country) {
       connectionData.country = location.name;
@@ -227,6 +227,7 @@ export default (function () {
       connectionData.name = location.name;
       connectionData.is_default = location.is_smart_location;
       connectionData.id = location.id;
+      connectionData.change_connected_location = connectWhileConnected; // eslint-disable-line camelcase
     }
     return sendNativeMessage(buildRequest('XVPN.Connect', connectionData));
   };

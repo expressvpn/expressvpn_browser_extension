@@ -4,70 +4,132 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="menuScreen">
-    <div class="header" id="header">
-      <div class="longLogo"></div>
-      <button id="backToMainScreenButton" @click="backToMainScreen"></button>
+  <div>
+    <main-header icon="icon-23-close" :iconClickCallback="backToMainScreen"></main-header>
+    <div class="menu-container">
+      <menu-item v-for="item in menuItems" :key="item.id" :model="item" />
+      <!--
+      <div class="button-container">
+        <button class="button-secondary" @click="resetState">{{ localize('menu_signout_text') }}</button>
+      </div>
+       -->
     </div>
-    <div class="menuContainer" id="menuContainer">
-      <menu-item
-        v-for="item in menuItems"
-        v-bind:key="item.id"
-        :model="item"
-      >
-      </menu-item>
-    </div>
-    <popup
-      :options="options"
-    >
-    </popup>
+    <popup :options="options"></popup>
   </div>
 </template>
 <script>
-import menuItem from './menuItem.vue';
-import popup from './popup.vue';
+import UAParser from 'ua-parser-js';
+import mainHeader from './partials/mainHeader.vue';
+import menuItem from './partials/menuItem.vue';
+import popup from './partials/popup.vue';
 
 export default {
   name: 'menuScreen',
   data: function () {
     return {
       menuItems: [
-        { id: 'settings_general', nameId: 'menu_settings_general_name', iconId: 'Settings' },
-        { id: 'settings_privacy', nameId: 'menu_settings_privacy_security_name', iconId: 'Security' },
-        { id: 'myAccount', nameId: 'menu_my_account', iconId: 'Account' },
-        { id: 'help_support', nameId: 'menu_help_support', iconId: 'Help' },
         {
-          id: 'other_devices', nameId: 'menu_setup_other_devices', iconId: 'Devices', condition: this.canSetupOtherDevices,
+          id: 'settings_general',
+          localeKey: 'menu_settings_general_name',
+          icon: 'icon-99-settings',
+          classColor: 'primary-20',
         },
         {
-          id: 'get_free', nameId: 'menu_get_30_days_free', iconId: 'Gift', condition: this.canGetFreeTrial,
+          id: 'settings_privacy',
+          localeKey: 'menu_settings_privacy_security_name',
+          icon: 'icon-97-security',
+          classColor: 'primary-20',
         },
         {
-          id: 'rate_vpn', nameId: 'menu_rate_expressvpn', iconId: 'ThumbsUp', condition: this.canRateExtension, callback: this.rateMenuItemClick,
+          id: 'myAccount',
+          localeKey: 'menu_my_account',
+          icon: 'icon-2-account',
+          classColor: 'primary-20',
+        },
+        {
+          isDivider: true,
+        },
+        {
+          id: 'help_support',
+          localeKey: 'menu_help_support',
+          icon: 'icon-53-help',
+          classColor: 'accent-20',
+        },
+        {
+          isDivider: true,
+        },
+        {
+          id: 'other_devices',
+          localeKey: 'menu_setup_other_devices',
+          isVisible: this.canSetupOtherDevices,
+          icon: 'icon-34-devices',
+          classColor: 'information-20',
+        },
+        {
+          id: 'get_free',
+          localeKey: 'menu_get_30_days_free',
+          isVisible: this.canGetFreeTrial,
+          icon: 'icon-91-refer',
+          classColor: 'information-20',
+        },
+        {
+          id: 'rate_vpn',
+          localeKey: 'menu_rate_expressvpn',
+          isVisible: this.canRateExtension,
+          icon: 'icon-87-rate',
+          callback: this.rateMenuItemClick,
+          classColor: 'information-20',
+        },
+        {
+          id: 'beta_feedback',
+          localeKey: 'menu_beta_feedback',
+          isVisible: () => __IS_BETA__,
+          icon: 'icon-17-bugs',
+          callback: this.sendBetaFeedback,
+          classColor: 'purple-20',
         },
       ],
       options: {},
       isAvailableRateVPN: false,
-      isRegularUser: false,
     };
   },
   computed: {
   },
   components: {
-    'menu-item': menuItem,
-    'popup': popup,
+    mainHeader,
+    menuItem,
+    popup,
   },
   methods: {
+    canGetFreeTrial() {
+      return this.utils.isRegularUser(this.currentInfo.subscription) && !this.utils.isPaymentMethodIAP(this.currentInfo.subscription);
+    },
+    canRateExtension() {
+      return this.isAvailableRateVPN && !__IS_BETA__;
+    },
+    canSetupOtherDevices() {
+      return this.utils.isRegularUser(this.currentInfo.subscription);
+    },
     backToMainScreen: function (event) {
       this.$store.dispatch('setCurrentView', 'mainScreen');
     },
     rateMenuItemClick: function () {
       this.options = {
         id: 'menu_ratevpn',
-        cbBtn1: this.leaveRatingClick,
-        cbBtn2: this.helpBtnClick,
-        condition: true,
-        style: 'VERTICAL',
+        buttons: [
+          {
+            highlightIt: true,
+            callback: this.leaveRatingClick,
+          },
+          {
+            callback: this.helpBtnClick,
+          },
+          {
+            callback: () => { this.options = {}; },
+          },
+        ],
+        isVisible: true,
+        style: 'vertical',
       };
     },
     leaveRatingClick: function (event) {
@@ -81,94 +143,41 @@ export default {
     helpBtnClick: function (event) {
       this.$store.dispatch('setCurrentView', 'helpScreen');
     },
-    canSetupOtherDevices: function () {
-      return this.isRegularUser;
-    },
-    canGetFreeTrial: function () {
-      return this.isRegularUser;
-    },
-    canRateExtension: function () {
-      return this.isAvailableRateVPN;
+    sendBetaFeedback() {
+      const systemInfo = UAParser(window.navigator.userAgent);
+      const subject = `ExpressVPN BETA feedback (${systemInfo.browser.name} v${systemInfo.browser.version} - v${chrome.runtime.getManifest().version})`;
+      const body = `Please explain the feedback or issue you're encountering in as much detail as possible so we can help. We'll get back to you within a few days, often much sooner.
+        
+        
+System Information:
+
+System: ${systemInfo.os.name} ${systemInfo.os.version}
+ExpressVPN Version: ${this.currentInfo.app.version}
+Locale: ${window.currentLanguageCode}`;
+
+      this.createTab({ url: `mailto:insiders+extensionbeta@expressvpn.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}` });
     },
   },
   mounted() {
     let self = this;
     chrome.storage.local.get(null, function (storage) {
-      let ratingValues = storage.rating;
-      self.isRegularUser = ratingValues.isRegularUser;
       self.isAvailableRateVPN = (storage.isSubscriber === true);
+
+      if (process.env.NODE_ENV === 'development') {
+        document.querySelector('.menu-container').insertAdjacentHTML('afterend', '<button class="mock-button" id="mockMenu"></button>');
+        document.getElementById('mockMenu').addEventListener('click', () => {
+          self.isRegularUser = true;
+          self.isAvailableRateVPN = true;
+        });
+      }
     });
   },
 };
 </script>
 <style lang="scss" scoped>
-$xvpn_red: #c8252c;
-#menuScreen {
-  background-color: #f6f6f6;
-  width: 100vw;
+.menu-container {
+  background: $gray-50;
+  padding: 20px 15px;
   height: 100vh;
-  z-index: 3;
-  float: left;
-  position: absolute;
-  top: 0;
-
-  .longLogo {
-    top: 18px;
-    left: 18px;
-  }
-
-  #backToMainScreenButton {
-    position: absolute;
-    content: ' ';
-    height: 13px;
-    width: 13px;
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
-    right: 18px;
-    top: 27px;
-    transition: opacity 600ms, visibility 600ms;
-    visibility: visible;
-    filter: invert(60%);
-    cursor: pointer;
-    opacity: 1;
-  }
-
-  #backToMainScreenButton:hover {
-    filter: invert(80%);
-  }
-
-  #menuContainer {
-    padding-top: 15px;
-  }
-
-  .signoutBtnHolder {
-    position: absolute;
-    bottom: 18px;
-    text-align: center;
-    width: 100%;
-    button {
-      width: 213px;
-      height: 32.6px;
-      border-radius: 3.2px;
-      background-color: #ffffff;
-      border: 1px solid #c8252c !important;
-      text-align: center;
-      color: #c8252c;
-      border: 0;
-      transition: all .2s;
-      font-weight: bold;
-      font-size: 13px;
-    }
-    button:hover {
-      color: #ffffff;
-      background-color: #c8252c;
-    }
-    button:focus {
-      color: #ffffff;
-      background: #9d1d23;
-    }
-  }
 }
 </style>

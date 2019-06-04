@@ -25,8 +25,11 @@ const utils = (function () {
       latest_version: '',
       latest_version_url: '',
     },
+    preferences: {},
     subscription: {},
-    website_url: 'https://www.exp3links3.net',
+    website_url: 'https://www.zdbwoet.com',
+    connectingTimes: [],
+    localizedStrings: {},
   };
 
   const defaultPreferences = {
@@ -190,34 +193,40 @@ const utils = (function () {
     return 0;
   };
 
-  const setLanguage = (locale) => {
-    let request = new XMLHttpRequest();
-    let langPath = chrome.runtime.getURL('/_locales/');
-    let defaultLangURL = langPath + 'en/messages.json';
-    request.onload = function () {
-      if (this.responseText != null) {
-        window.localizedStrings = JSON.parse(this.responseText);
-      } else {
-        window.localizedStrings = {};
-      }
+  const setLanguage = (_locale) => {
+    let locale = isNullOrEmpty(_locale) ? (window.currentLanguageCode || '').split('-')[0] : _locale;
+    let localeFileUrl = `${chrome.runtime.getURL('/_locales')}/[XX]/messages.json`;
+    const fetchDefaultLang = function (error) {
+      return fetch(localeFileUrl.replace('[XX]', 'en'))
+        .then(function (response) {
+          console.log('Defaulting to en');
+          return response.json();
+        })
+        .then(function (strings) {
+          return strings;
+        });
     };
-    request.onerror = function () {
-      this.open('GET', defaultLangURL, false);
-      this.send(null);
-    };
-    try {
-      let localeStr = isNullOrEmpty(locale) ? window.currentLanguageCode.split('-')[0] : locale;
-      request.open('GET', langPath + localeStr + '/messages.json', false);
-      request.send(null);
-    } catch (e) {
-      request.open('GET', defaultLangURL, false);
-      request.send(null);
-    }
+
+    return !isNullOrEmpty(locale) ?
+      fetch(localeFileUrl.replace('[XX]', locale))
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (strings) {
+          return strings;
+        })
+        .catch(fetchDefaultLang) // 404 -> default to English
+      : fetchDefaultLang();
   };
 
   const localize = (localeKey) => {
+    if (!window.localizedStrings) {
+      setLanguage();
+    }
+
     let strings = window.localizedStrings || {};
     let obj = strings[localeKey] || '';
+
     if (obj && typeof obj === 'object') {
       return obj.message || '';
     }
@@ -261,10 +270,83 @@ const utils = (function () {
 
   const isRegularUser = (subscriptionInfo) => (subscriptionInfo.status === 'ACTIVE') && (subscriptionInfo.plan_type === 'full');
 
+  const getTimeDelta = (_date1, _date2) => {
+    _date2 = _date2 || (new Date()).getTime() / 1000; // eslint-disable-line no-param-reassign
+
+    let date1 = new Date(_date1 * 1000);
+    let date2 = new Date(_date2 * 1000);
+
+    let rawDifference = (date2 - date1);
+
+    let seconds = Math.floor((rawDifference) / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+
+    hours -= (days * 24);
+    minutes = (days * 24 * 60) - (hours * 60);
+    seconds -= (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+
+    return {
+      days, hours, minutes, seconds, rawDifference,
+    };
+  };
+
   /**
-   * Filter source array by excluding elements that belong to target array.
+   *  Given a subscription object, return true or false if the user's subscription expired
   */
-  const removeCommonElements = (source, target) => source.filter(el => target.indexOf(el) === -1);
+  const isSubscriptionExpired = (subscriptionObj) => (getTimeDelta(subscriptionObj.expiration_time).rawDifference > 0);
+
+  /**
+   *  Given a subscription object, return true or false if the user's subscription in grace period
+  */
+  const isInGracePeriod = (subscriptionObj, nDays = 2) => isSubscriptionExpired(subscriptionObj) && Math.abs(getTimeDelta(subscriptionObj.expiration_time).days) <= nDays;
+
+  /**
+   *  Given a subscription object, return true or false if the user's subscription was paid via IAP
+  */
+  const isPaymentMethodIAP = (subscriptionObj) => {
+    let isIAP = subscriptionObj.is_using_in_app_purchase;
+    return isIAP && (subscriptionObj.payment_method === 'app_store_auto_renewable' || subscriptionObj.payment_method === 'app_store_non_renewable');
+  };
+
+  /**
+   *  Given a subscription object, return true or false if the user's subscription is automatically renewable
+  */
+  const isInAppPurchasesRenewable = (subscriptionObj) => {
+    let isIAP = subscriptionObj.is_using_in_app_purchase;
+    return isIAP && subscriptionObj.payment_method === 'app_store_auto_renewable' && subscriptionObj.auto_bill === true;
+  };
+
+  /**
+   *  Given a subscription object, return true or false if the user's last IAP subscription failed
+  */
+  const isLastInAppPurchasesFailure = (subscriptionObj) => {
+    let isIAP = subscriptionObj.is_using_in_app_purchase;
+    return isIAP && subscriptionObj.payment_method === 'app_store_auto_renewable' && subscriptionObj.last_auto_bill_failure === true;
+  };
+
+  /**
+   * Checks if the current subscription data makes it impossible to continue
+  */
+  const getLastIAPFatalError = (subscriptionObj) => {
+    let iapStatus = null;
+
+    if (isPaymentMethodIAP(subscriptionObj) === false) {
+      return null;
+    }
+    if ((subscriptionObj.status === 'FREE_TRIAL_EXPIRED') && isLastInAppPurchasesFailure(subscriptionObj) && (subscriptionObj.auto_bill === true)) {
+      iapStatus = 'FREE_TRIAL_IAP_RENEWAL_FAILED';
+    } else if ((subscriptionObj.status === 'FREE_TRIAL_EXPIRED') && (isSubscriptionExpired(subscriptionObj) === true) && (subscriptionObj.auto_bill === false)) {
+      iapStatus = 'FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED';
+    } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && (subscriptionObj.auto_bill === true)) {
+      iapStatus = 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON';
+    } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && (subscriptionObj.auto_bill === false)) {
+      iapStatus = 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF';
+    }
+
+    return iapStatus;
+  };
 
   return {
     isNullOrEmpty,
@@ -275,13 +357,19 @@ const utils = (function () {
     versionCompare,
     sortAndGroupBy,
     escapeRegExp,
-    removeCommonElements,
     currentInfo,
     setLanguage,
     localize,
     isRegularUser,
     defaultPreferences,
     ICONS,
+    isPaymentMethodIAP,
+    isInAppPurchasesRenewable,
+    isLastInAppPurchasesFailure,
+    getTimeDelta,
+    isInGracePeriod,
+    getLastIAPFatalError,
+    isSubscriptionExpired,
   };
 }());
 

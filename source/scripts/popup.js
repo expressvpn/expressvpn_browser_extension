@@ -17,11 +17,12 @@ const app = new Vue({
   store,
   render: h => h(App),
   mounted() {
+    let self = this;
+
     chrome.runtime.sendMessage({ getState: true });
     chrome.runtime.sendMessage({ getLocations: true });
     chrome.runtime.sendMessage({ getMessages: true });
 
-    let self = this;
     chrome.storage.local.get(null, (storage) => {
       // show message from cache in case it fails to get a response.
       let msgNumber = 0;
@@ -33,14 +34,17 @@ const app = new Vue({
         return message;
       }()), 5 * 60 * 1000);
     });
+
     // Chromium bug: https://bugs.chromium.org/p/chromium/issues/detail?id=428044
     // Forces pop to increase its size by 2px 100ms after load
+    /*
     window.setTimeout(function () {
       document.body.style.height = '452px';
       window.setTimeout(function () {
         document.body.style.height = '450px';
       }, 100);
     }, 100);
+    */
   },
   computed: mapGetters([
     'currentView',
@@ -50,13 +54,34 @@ const app = new Vue({
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.state) {
     let currentInfo = message.data;
-    let debugState = (new URL(window.location.href)).searchParams.get('state');
-    if (!utils.isNullOrEmpty(debugState)) {
-      currentInfo.state = debugState;
+    if (process.env.NODE_ENV === 'development') {
+      let debugData = (new URL(window.location.href)).searchParams.get('data');
+      let debugLocale = (new URL(window.location.href)).searchParams.get('locale');
+      let debugBackgroundData = (new URL(window.location.href)).searchParams.get('bkdata');
+      if (!utils.isNullOrEmpty(debugData)) {
+        currentInfo = require('object-assign-deep')(currentInfo, JSON.parse(debugData));
+      }
+      if (!utils.isNullOrEmpty(debugLocale)) {
+        utils.setLanguage(debugLocale).then(strings => {
+          currentInfo.localizedStrings = strings;
+          app.$store.dispatch('updateCurrentInfo', currentInfo);
+        });
+      }
+      if (!utils.isNullOrEmpty(debugBackgroundData)) {
+        let bkdata = JSON.parse(debugBackgroundData);
+        chrome.runtime.sendMessage({ [bkdata.method]: true, data: bkdata.data, locale: debugLocale });
+      }
+    }
+    if (app.$store.getters.ignoringStateUpdates === false) {
+      app.$store.dispatch('updateCurrentInfo', currentInfo);
     }
 
-    app.$store.dispatch('updateCurrentInfo', currentInfo);
-    if (app.errorStates.indexOf(currentInfo.state) === -1 && currentInfo.state !== 'NOT_INSTALLED') {
+    if (utils.getLastIAPFatalError(currentInfo.subscription) !== null && !app.errorStates.filter(state => state !== 'subscription_expired').includes(currentInfo.state)) {
+      currentInfo.state = 'iapError';
+      app.$store.dispatch('updateCurrentInfo', currentInfo);
+    }
+
+    if (app.errorStates.indexOf(currentInfo.state) === -1) {
       if (((currentInfo.state === 'connecting') || (currentInfo.state === 'reconnecting')) && (app.currentView !== 'SettingsGeneral' && app.currentView !== 'mainScreen')) {
         app.$store.dispatch('setCurrentView', 'mainScreen');
       }

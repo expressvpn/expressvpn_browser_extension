@@ -4,138 +4,127 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="helpScreen" :class="currentInfo.state">
-    <div class='sideHeader'>
-      <div id='settingsBackBtn' class="sideBackBtn" @click="sideBackBtnClick"></div>
-      <span>{{ localize('menu_help_support') }}</span>
-    </div>
-    <div class="help-screen-container">
+  <div>
+    <secondary-header stringkey="menu_help_support" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
+    <div class="help-container">
       <div class="help-section">
-        <div class="section-header" id="help_support">{{ localize('menu_section_support_title') }}</div>
-        <div class="section-body">
-          <div class="section-item" id="help_faq" @click="createTab({ url: currentInfo.website_url + '/support/vpn-setup/expressvpn-browser-extension/?utm_source=extension&utm_medium=browser_extension&utm_campaign=browser_extension_links&utm_content=faq' })">{{ localize('menu_item_faq_text') }}</div>
-          <div class="section-item" id="help_contact_support" @click="openAppSupportScreen">{{ localize('menu_item_contact_support_text') }}</div>
-<!--           <div class="section-item" id="help_diagnostic" v-if="currentInfo.os !== 'LINUX'" @click="openAppDiagnosticScreen">{{ localize('menu_item_diagnostic_text') }}</div>
- -->        </div>
+        <div class="help-section-header">{{ localize('menu_section_support_title') }}</div>
+        <menuItem :model="menuModels['report']" />
+        <menuItem :model="menuModels['improvements']" />
+        <menuItem :model="menuModels['talk']" />
       </div>
+      <div class="divider" />
+
       <div class="help-section">
-        <div class="section-header" id="help_tools">{{ localize('menu_section_tools_title') }}</div>
-        <div class="section-body">
-          <div class="section-item" id="help_ip_check" @click="createTab({ url: currentInfo.website_url + '/what-is-my-ip?utm_source= extension&utm_medium=browser_extension&utm_campaign=ip_address_checker&utm_content=bob_hamburger_ip_address_checker' })">{{ localize('menu_item_ip_address_checker_text') }}</div>
-          <div class="section-item" id="help_dns_leak" @click="createTab({ url: currentInfo.website_url + '/dns-leak-test?utm_source= extension&utm_medium=browser_extension&utm_campaign=dns_leak_test&utm_content=bob_hamburger_dns_leak_test' })">{{ localize('menu_item_DNS_leak_test_text') }}</div>
-          <div class="section-item" id="help_webrtc_leak" @click="createTab({ url: currentInfo.website_url + '/webrtc-leak-test?utm_source= extension&utm_medium=browser_extension&utm_campaign=webrtc_leak_test&utm_content=bob_hamburger_webrtc_leak_test' })">{{ localize('menu_item_webRTC_leak_test_text') }}</div>
-        </div>
-      </div>
-      <div class="help-section">
-        <div class="section-header" id="help_about">{{ localize('menu_section_about_title') }}</div>
-        <div class="app-version-container" v-html="extensionVersionContent"/>
-        <div class="app-version-container" v-html="appVersionContent"/>
-        <div class="section-body">
-          <div class="section-item" id="acknowledgementsBtn" @click="acknowledgementsButtonClick">{{ localize('menu_item_acknowledgements_text') }}</div>
-        </div>
+        <div class="help-section-header">{{ localize('menu_section_about_title') }}</div>
+        <menuItem :model="menuModels['acknowledgements']" />
+        <div class="version-info">{{ extensionVersion }}</div>
+        <div class="version-info">{{ appVersion }}</div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import secondaryHeader from './partials/secondaryHeader.vue';
+import menuItem from './partials/menuItem.vue';
+
 export default {
   name: 'helpScreen',
+  data: function () {
+    return {
+      menuModels: {
+        report: {
+          icon: 'icon-17-bugs',
+          localeKey: 'menu_section_support_report_menu_label',
+          classColor: 'accent-20',
+          callback: this.contactSupport,
+        },
+        /*
+        improvements: {
+          icon: 'icon-113-tips',
+          localeKey: 'menu_section_support_improvements_menu_label',
+          classColor: 'accent-20',
+          callback: this.suggestImprovements,
+        },
+        */
+        talk: {
+          icon: 'icon-67-live-chat',
+          localeKey: 'menu_section_support_chat_menu_label',
+          classColor: 'accent-20',
+          callback: this.talkToUs,
+        },
+        acknowledgements: {
+          icon: 'icon-3-acknowledge',
+          localeKey: 'menu_item_acknowledgements_text',
+          classColor: 'accent-20',
+          callback: this.acknowledgementsButtonClick,
+        },
+      },
+    };
+  },
   computed: {
-    extensionVersionContent() {
-      let version = '';
-      ({ version } = chrome.runtime.getManifest());
-      return '<span class="app-version-text">' + this.localize('menu_item_extension_version_text').replace('%s', version) + '</span>';
+    extensionVersion() {
+      return this.localize('menu_item_extension_version_text').replace('%VERSION%', chrome.runtime.getManifest().version);
     },
-    appVersionContent() {
+    appVersion() {
       let osName = this.currentInfo.os.charAt(0) + this.currentInfo.os.substr(1).toLowerCase();
-      return '<span class="app-version-text">' +
-                this.localize('menu_item_app_version_text').replace('[%p]', osName).replace('%s', this.currentInfo.app.version) +
-              '</span>';
+      return this.localize('menu_item_app_version_text').replace('%OS%', osName).replace('%VERSION%', this.currentInfo.app.version);
     },
   },
   methods: {
     sideBackBtnClick: function (event) {
       this.$store.dispatch('setCurrentView', 'menuScreen');
     },
-    openAppSupportScreen: function () {
-      let suportScreenText = '/support?utm_source= extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=bob_hamburger_contact_support';
-      this.createTab({ url: this.currentInfo.website_url + suportScreenText });
+    contactSupport() {
+      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=menu_contact_support` });
     },
-    openAppDiagnosticScreen: function () {
-      // native will be added later
+    talkToUs() {
+      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=menu_contact_support#open-chat` });
+    },
+    suggestImprovements() {
+      alert('TODO');
     },
     acknowledgementsButtonClick: function () {
       this.$store.dispatch('setCurrentView', 'acknowledgementsScreen');
     },
   },
-  mounted() {
+  components: {
+    secondaryHeader,
+    menuItem,
   },
 };
 </script>
 
-<style lang="scss">
-$xvpn_blue: #1f475a;
-$xvpn_blue_light: #317190;
-#helpScreen {
-  background-color: #f6f6f6;
-  height: 100vh;
-  width: 100vw;
-  z-index: 4;
-  float: left;
-  position: absolute;
-  top: 0;
-
-  .sideHeader {
-    border: 0;
+<style lang="scss" scoped>
+.divider {
+  border-bottom: 1px solid #DEDEDE;
+  margin-top: 25px;
+}
+.version-info {
+  margin-top: 25px;
+  color: $gray-20;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  user-select: text;
+}
+.help {
+  &-container {
+    background: $gray-50;
+    padding: 0 15px;
+    height: 100vh;
+    border-top: 1px solid #DEDEDE;
   }
+  &-section {
 
-  .help-screen-container {
-    height: 370px;
-    margin: 0px 10px;
-    border-radius: 3px;
-    background-color: rgb(254,254,254);
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
-    overflow: hidden;
-    .help-section {
-      padding: 18px 12px 0 12px;
-      .section-header {
-        height: 24px;
-        font-size: 18px;
+      &-header {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        color: $black-20;
         font-family: ProximaNova-Light;
-      }
-      .section-item {
-        height: 24px;
-        border-radius: 5px;
-        background: $xvpn_blue;
-        color: #ffffff;
-        line-height: 25px;
-        text-align: center;
-        margin-bottom: 6px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all .2s;
-      }
-      .section-item:last-child {
-        margin-bottom: 0;
-      }
-      .section-item:hover {
-        background: $xvpn_blue_light;
-      }
-      .app-version-container {
-        font-size: 13px;
-        margin-bottom: 5px;
-        .app-version-text {
-          //  Increase font-size 1 px of "Extension Version" text and make it bold, font-family "PROXIMA NOVA" (original font)
-          font-size: 14px;
-          font-family: 'ProximaNova-SemiBold';
-          span {
-            font-size: 13px;
-            font-family: 'ProximaNova';
-            font-weight: normal;
-          }
-        }
+        font-size: 24px;
       }
     }
-  }
 }
 </style>

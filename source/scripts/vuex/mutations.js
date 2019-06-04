@@ -7,13 +7,17 @@ export default {
   UPDATE_CURRENTINFO(stateParams, newCurrentInfo) {
     let state = stateParams;
     state.currentInfo = newCurrentInfo;
-    if (state.errorStates.indexOf(state.currentInfo.state) === -1 && state.currentInfo.state !== 'NOT_INSTALLED') {
-      state.currentContainer = 'okContainer';
-    } else if (state.errorStates.indexOf(state.currentInfo.state) > -1) {
-      state.currentContainer = 'errorContainer';
-    } else {
-      state.currentContainer = 'noAppContainer';
+    if (state.currentContainer.startsWith('iap') !== true) {
+      if (state.errorStates.indexOf(state.currentInfo.state) === -1) {
+        state.currentContainer = 'home'; // 'okContainer';
+      } else if (state.errorStates.indexOf(state.currentInfo.state) > -1) {
+        state.currentContainer = 'errorContainer';
+      }
     }
+  },
+  SET_CURRENT_CONTAINER(stateParams, newCurrentContainer) { // ToDo: Remove
+    let state = stateParams;
+    state.currentContainer = newCurrentContainer;
   },
   SET_LATEST_MESSAGE(stateParams, newLatestMessage) {
     let state = stateParams;
@@ -24,18 +28,12 @@ export default {
     state.previousView = state.currentView;
     state.currentView = newCurrentView;
   },
-  SET_CURRENT_COUNTRY_INFO(stateParams, info) {
-    let state = stateParams;
-    state.currentCountry = info.country;
-    state.currentRegion = info.region;
-    state.country_code = info.country_code;
-  },
-  SET_PREVIOUS_SCROLL_POSITION(stateParams, pos) {
-    let state = stateParams;
-    state.previousScrollPosition = pos;
-  },
   SET_RATING_MESSAGE_TYPE(stateParams, newRatingMessageType) {
     let state = stateParams;
     state.ratingMessageType = newRatingMessageType;
+  },
+  SET_IGNORE_STATE_UPDATES(stateParams, shouldIgnore) {
+    let state = stateParams;
+    state.ignoringStateUpdates = shouldIgnore;
   },
 };
