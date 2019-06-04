@@ -5,7 +5,7 @@ Licensed GPL v2
 -->
 <template lang="html">
   <!--<transition :name="'fade_' + currentView" mode="out-in">-->
-  <div id="appContainer">
+  <div id="appContainer" @click="discardHint">
     <transition name="slide">
       <component :is="currentView" :class="getClassName"></component>
     </transition>
@@ -14,12 +14,11 @@ Licensed GPL v2
 
 <script>
 import mainScreen from './mainScreen.vue';
-import locationsScreen from './LocationPicker/locationsScreen.vue';
-import countryScreen from './LocationPicker/countryScreen.vue';
+import locationPicker from './locationPicker.vue';
 import SettingsGeneral from './settings/SettingsGeneral.vue';
 import SettingsPrivacy from './settings/SettingsPrivacy.vue';
 import menuScreen from './menuScreen.vue';
-import myAccount from './MyAccount/Main.vue';
+import myAccount from './account.vue';
 import helpScreen from './helpScreen.vue';
 import acknowledgementsScreen from './acknowledgementsScreen.vue';
 
@@ -44,8 +43,7 @@ export default {
   },
   components: {
     mainScreen,
-    locationsScreen,
-    countryScreen,
+    locationPicker,
     SettingsGeneral,
     SettingsPrivacy,
     menuScreen,
@@ -54,6 +52,11 @@ export default {
     acknowledgementsScreen,
   },
   methods: {
+    discardHint: function (ev) {
+      if (!!this.$el.querySelector('.hint') === true) {
+        this.$emit('discard-hint');
+      }
+    },
   },
   mounted() {
     // Update rating message conditions whenever open extension since values don't change.
@@ -74,6 +77,7 @@ export default {
     width: 100%;
     height: 100%;
   }
+  /*
   .slide-enter-active,
   .slide-leave-active {
     transition: all 0.4s ease;
@@ -116,4 +120,5 @@ export default {
   .countryScreen-mainScreen.slide-leave-active {
     margin-left: 100%;
   }
+  */
 </style>

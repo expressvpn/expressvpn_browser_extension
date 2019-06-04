@@ -4,136 +4,73 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template lang="html">
-  <div :class="currentInfo.state">
-    <div class="errorHeader">
-      <div id="errorHeader">{{ localize(`error_${localeKey}_title`) }}</div>
-      <span class="promobar-icon"></span>
-    </div>
-    <div class='errorMessage' :class="currentInfo.state">
-      <!-- <p id='p1'>{{ expireMessage }}</p> -->
-      <p id="p1" v-html="localize(`error_${localeKey}_benefits_text`)"></p>
-      <div id="ulWrapper">
-        <ul id="errorWhyRenew">
-          <li id="l1" class="errorItemStyle">{{ localize(`error_${localeKey}_l1_text`) }}</li>
-          <li id="l2" class="errorItemStyle">{{ localize(`error_${localeKey}_l2_text`) }}</li>
-          <li id="l3" class="errorItemStyle">{{ localize(`error_${localeKey}_l3_text`) }}</li>
-          <li id="l4" class="errorItemStyle">{{ localize(`error_${localeKey}_l4_text`) }}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="errorBtnsHolder">
-      <button @click="openLink">{{ localize(localeKey === 'subscription_expired' ? 'error_subscription_expired_buy_subscription_button_label' : 'error_free_trial_expired_upgrade_now_button_label') }}</button>
-      <button id="signoutBtn" :class="{ invisible: (currentInfo.os === 'LINUX') }" @click="openApp">{{ localize('error_open_app_open_app_button_label') }}</button>
-      <!-- <a  class="linkButton" @click="openApp">{{ localize(`error_${localeKey}_enter_new_code_button_label`) }}</a> -->
+<div>
+  <div v-if="isBusinessUser()">
+    <error-icon iconName="icon-2-account" />
+    <h1>{{ localize(`error_business_subscription_expired_title`) }}</h1>
+    <p>{{ localize('error_business_subscription_expired_text') }}</p>
+    <p v-html="$parent.addAnchor('error_business_subscription_expired_contact_support_text', '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=license_revoked_contact_support')" @click="$parent.checkForLinks"></p>
+    <div class="button-container">
+      <button class="button-primary" @click="resetState">{{ localize('error_business_subscription_expired_signout_button_label') }}</button>
     </div>
   </div>
+  <div v-else>
+    <h1>{{ localize(`error_${localeKey}_title`) }}</h1>
+    <p>{{localize(`error_${localeKey}_benefits_text`)}}</p>
+    <ul class="check-list">
+      <li>{{ localize(`error_${localeKey}_l1_text`) }}</li>
+      <li>{{ localize(`error_${localeKey}_l2_text`) }}</li>
+      <li>{{ localize(`error_${localeKey}_l3_text`) }}</li>
+      <li>{{ localize(`error_${localeKey}_l4_text`) }}</li>
+    </ul>
+    <div class="button-container">
+      <button class="button-primary" @click="openLink">{{ localize(localeKey === 'subscription_expired' ? 'error_subscription_expired_buy_subscription_button_label' : 'error_free_trial_expired_upgrade_now_button_label') }}</button>
+      <button class="button-secondary" @click="resetState">{{ localize('error_signout_button') }}</button>
+    </div>
+  </div>
+</div>
 </template>
 
 <script type="text/javascript">
-  import errorContainer from './errorContainer.vue';
+import mixinSubscription from '../../scripts/mixins/subscription';
+import errorIcon from '../partials/errorIcon.vue';
 
-  export default {
-    name: 'subscription_expired',
-    // share common functionality with component mixins
-    mixins: [],
-    // compose new components
-    extends: errorContainer,
-    // component properties/variables
-    props: {
+export default {
+  name: 'subscription_expired',
+  mixins: [mixinSubscription],
+  props: {
+  },
+  data: function () {
+    return {
+    };
+  },
+  computed: {
+    localeKey() {
+      return this.currentInfo.subscription.status.startsWith('FREE_TRIAL_') ? 'free_trial_expired' : 'subscription_expired';
     },
-    // variables
-    data: function () {
-      return {
-      };
+  },
+  components: { errorIcon },
+  watch: {},
+  methods: {
+    openLink: function () {
+      let url = '/order?';
+      if (this.isPaymentMethodIAP()) {
+        url += 'payment_method=ios-iap&';
+      }
+      if (this.localeKey === 'subscription_expired') {
+        url += 'utm_source=browser_extensions&utm_medium=apps&utm_campaign=reactivation&utm_content=subscriptionexpired_buynewsubscription';
+      } else {
+        url += 'source=free-trial&utm_campaign=free_trial&utm_content=free_trial_expired&utm_medium=apps&utm_source=browser_extension';
+      }
+      this.createTab({ url: this.currentInfo.website_url + url });
     },
-    computed: {
-      expireMessage() {
-        return this.localize(`error_${this.localeKey}_status_text`).replace('%1', this.getExpirationDate());
-      },
-      localeKey() {
-        return (this.currentInfo.subscription.status === 'FREE_TRIAL_EXPIRED') ? 'free_trial_expired' : 'subscription_expired';
-      },
-    },
-    // when component uses other components
-    components: {},
-    // methods
-    watch: {},
-    methods: {
-      openLink: function () {
-        let trackingLink;
-        if (this.localeKey === 'subscription_expired') {
-          trackingLink = '/order?utm_source=browser_extensions&utm_medium=apps&utm_campaign=reactivation&utm_content=subscriptionexpired_buynewsubscription';
-        } else {
-          trackingLink = '/order?source=free-trial&utm_campaign=free_trial&utm_content=free_trial_expired&utm_medium=apps&utm_source=browser_extension';
-        }
-        this.createTab({ url: this.currentInfo.website_url + trackingLink });
-      },
-      signoutBtnClick: function (event) {
-        this.resetState();
-        this.currentInfo.state = 'not_activated';
-        this.$store.dispatch('setCurrentView', 'mainScreen');
-      },
-      getExpirationDate: function () {
-        let time = this.currentInfo.subscription.expiration_time;
-        return this.getFormattedDate(time);
-      },
-    },
-    // component Lifecycle hooks
-    beforeCreate() {},
-    mounted() {
-    },
+  },
+  beforeCreate() {},
+  mounted() {
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.subscription_expired {
-  #errorHeader {
-    text-align: left !important;
-  }
-  .errorMessage {
-    margin-top: 12px !important;
-    #ulWrapper {
-      margin-top: 20px;
-    }
-  }
-  #errorWhyRenew {
-    list-style-type: none;
-    font-size: 12px;
-    color: #4a4a4a;
-    padding-left: 0;
-    text-align: left;
-    margin-top: 2px;
-  }
 
-  #errorWhyRenew > li {
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding: 5px 0 5px 21px;
-    font-size: 14px;
-  }
-
-  #p2 {
-    font-weight: 600;
-    margin-top: 14px;
-  }
-  .errorItemStyle {
-    background-image: url('/images/checkgreen.png')!important;
-  }
-  .errorBtnsHolder {
-    button#signoutBtn {
-      background-color: #ffffff;
-      border: 1px solid #c8252c !important;
-      text-align: center;
-      color: #c8252c;
-      border: 0;
-      margin-top: 10px;
-      transition: all .2s;
-    }
-    button#signoutBtn:hover {
-      color: #ffffff;
-      background-color: #c8252c;
-      opacity: 1;
-    }
-  }
-}
 </style>

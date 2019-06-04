@@ -4,37 +4,41 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="SettingsGeneral">
-    <div class='sideHeader'>
-      <div id='settingsBackBtn' class="sideBackBtn" @click="sideBackBtnClick"></div>
-      <span>{{ localize('menu_settings_settings_general_title') }}</span>
-    </div>
-    <div class="settings">
-      <div class='setting'>
-        <span>{{ localize('menu_settings_general_header') }}</span>
-        <div class="opt-holder">
+  <div>
+    <secondary-header stringkey="menu_settings_settings_general_title" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
+    <div class="setting-container">
+      <div class='setting-group'>
+        <span class="setting-header">{{ localize('menu_settings_general_header') }}</span>
+        <div class="setting-option-container">
           <label for="chrome.auto_connect">{{ localize('menu_connection_startup_text') }}</label>
           <toggle-switch id="chrome.auto_connect" v-model="prefs['chrome.auto_connect']"></toggle-switch>
         </div>
-        <div class="opt-holder">
+        <div class="setting-option-container">
           <label for="chrome.desktop_notification">{{ localize('menu_desktop_notification_text') }}</label>
           <toggle-switch id="chrome.desktop_notification" v-model="prefs['chrome.desktop_notification']"></toggle-switch>
         </div>
       </div>
-      <button @click="allVPNsettingsClick" id="allVPNsettings">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
-      <div class="separator"></div>
-      <div class='setting'>
-        <span>{{ localize('menu_settings_general_language_header') }}</span>
-        <div id="languageSetting">
-          <select id="language" v-model="prefs.language" :options="langList" label="label">
-            <option :id="'lang_'+lang.code" v-for="lang in langList" v-bind:value="lang.code">
-              {{ lang.label }}
-            </option>
-          </select>
+
+      <button @click="openAppSettings" id="openAppSettings">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
+
+      <div class="divider"></div>
+
+      <div class='setting-group'>
+        <span class="setting-header">{{ localize('menu_settings_general_language_header') }}</span>
+        <div class="setting-option-container">
+          <div class="select-container">
+            <label for="language">{{ localize('menu_settings_general_language_label') }}</label>
+            <select id="language" v-model="prefs.language">
+              <option :id="'lang_'+lang.code" v-for="lang in langList" :value="lang.code" :key="lang.code">
+                {{ lang.label }}
+              </option>
+            </select>
+            <i class="icon icon-38-dropdown" />
+          </div>
         </div>
       </div>
-      <div class="setting only-for-alpha-builds">
-        <div class="opt-holder">
+      <div class="setting-group only-for-alpha-builds">
+        <div class="setting-option-container">
           <label for="ratingPeriodicity">Periodicity</label>
           <select name="ratingPeriodicity" id="ratingPeriodicity" v-model="prefs.ratingPeriodicity"><!-- Value is in seconds -->          
             <option v-bind:value="300">5 minutes</option>
@@ -48,14 +52,15 @@ Licensed GPL v2
         <div class="opt-description">Last Review: <b>{{ lastReviewDate }}</b></div>
       </div>
       <transition name="slide-fade" >
-        <hint type="success" icon="CheckWhite" message="hint_saved_text" v-if="isSaving"></hint>
+        <toast message="hint_saved_text" v-if="isSaving"></toast>
       </transition>
     </div>
   </div>
 </template>
 <script>
-import toggleSwitch from '../EDS/ToggleSwitch.vue';
-import hint from '../EDS/Hint.vue';
+import secondaryHeader from '../partials/secondaryHeader.vue';
+import toggleSwitch from './ToggleSwitch.vue';
+import toast from './toast.vue';
 
 export default {
   name: 'SettingsGeneral',
@@ -73,7 +78,8 @@ export default {
   },
   components: {
     toggleSwitch,
-    hint,
+    toast,
+    secondaryHeader,
   },
   watch: {
     prefs: {
@@ -86,8 +92,6 @@ export default {
         self.rating.updateRatingMessageConditions(newVal.ratingPeriodicity);
         chrome.storage.local.set({ 'prefs': Object.assign({}, newVal) }, function () {
           chrome.runtime.sendMessage({ updateExtensionSettings: true });
-          window.currentLanguageCode = newVal.language;
-          self.setLanguage();
         });
       },
       deep: true,
@@ -104,7 +108,7 @@ export default {
     sideBackBtnClick: function (event) {
       this.$store.dispatch('setCurrentView', 'menuScreen');
     },
-    allVPNsettingsClick: (event) => {
+    openAppSettings: (event) => {
       chrome.runtime.sendMessage({ openPreferences: true });
     },
   },
@@ -151,143 +155,96 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-$xvpn_red: #c8252c;
-#SettingsGeneral {
-  background-color: #fafafa;
-  width: 100vw;
-  height: 100vh;
-  z-index: 4;
-  float: left;
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
+<style lang="scss">
+#openAppSettings {
+  height: 34px;
+  background: $gray-50;
+  border: 1px solid #D0D6DA;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 15px;
+  color: $primary-20;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
 
-  a {
-    color: $xvpn_red;
-    font-size: 14px;
+  &:hover {
+    color: $primary-30;
   }
-
-  .separator {
-    width: calc(100% - 15px);
-    border-bottom: 1px solid #ccc;
-    margin: 20px 0px 20px 0px;
+  &:active {
+    color: $primary-10;
   }
-
-  button#allVPNsettings {
-      width: calc(100% - 15px);
-      height: 30px;
-      border-radius: 4px;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-      font-size: 14px;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 31px;
-      letter-spacing: normal;
-      background-color: #ffffff;
-      border: 1px solid $xvpn_red !important;
-      text-align: center;
-      color: $xvpn_red;
-      margin-top: 5px;
-      transition: all .2s;
-      font-family: ProximaNova-Semibold;
-    }
-    button#allVPNsettings:hover {
-      color: #ffffff;
-      background-color: $xvpn_red;
-      opacity: 1;
-    }
-
-.sideHeader {
-  height: 80px;
-  border-bottom: none;
-  background-color: #fafafa;
 }
-
-.sideHeader span {
-  font-size: 24px;
+.divider {
+  border-bottom: 1px solid #DEDEDE;
+  margin: 25px 0;
 }
+.setting {
 
-.sideBackBtn {
-    top: 31px;
-}
+  &-container {
+    background: $gray-50;
+    padding: 25px 15px;
+    height: 100vh;
+    border-top: 1px solid #DEDEDE;
 
-  .opt-holder {
-    height: 20px;
-    left: 0px;
-    display:flex;
-    align-items:center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    input[type="checkbox"] {
-      float: right;
+    .toggle {
+      right: 0;
+      position: absolute;
     }
-
   }
 
-  .toggle {
-    transform: scale(0.5);
-    margin-left: auto;
-    order: 2;
-  }
-
-
-  .settings {
-    padding: 5px 0px 0px 14px;
-    margin: 0px 10px 0px 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.15);
-    flex: 1;
-    margin-bottom: 10px;
-  }
-
-  .opt-description {
-    color: #606060;
-    font-size: 14px;
-  }
-
-  .setting {
-    margin-top: 10px;
-  }
-
-  .setting span {
-    font-size: 20px;
-    color: #4a4a4a;
-    display: block;
+  &-header {
+    color: $black-20;
     font-family: ProximaNova-Light;
+    font-size: 24px;
   }
 
-  .setting label {
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4a4a4a;
+  &-group {
+
   }
 
-  #languageSetting span {
-    padding-left: 0px;
-  }
-
-  #languageSetting {
-    border: 1px solid #000;
-    border-radius: 4px;
-    margin-right: 15px;
+  &-option-container {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
     position: relative;
-    margin-bottom: 10px;
-    margin-top: 15px;
-    
-    select {
-      font-size: 13px;
+
+    label {
+      color: $black-20;
+      font-size: 18px;
+    }
+
+    .select-container {
+      border: 1px solid $black-20;
+      border-radius: 4px;
+      position: relative;
+      padding: 6px 15px;
+      height: 52px;
       width: 100%;
-      background-color: #fff;
-      border: 0px;
-      height: 35px;
+
+      label {
+        font-size: 12px;
+        color: $gray-20;
+        position: absolute;
+      }
+      select {
+        background: $gray-50;
+        border: 0;
+        color: $black-20;
+        font-size: 18px;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin-top: calc(22px - 6px); // - 6px from padding in the container
+      }
+      .icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
     }
   }
 }

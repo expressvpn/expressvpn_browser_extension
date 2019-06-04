@@ -50,7 +50,6 @@ const backgroundHelper = (function () {
         return 'BAD_OS_VERSION';
       }
     }
-    return 'BAD_OS';
   };
 
   // removes username and password from the url so it can be safely checked (EXP-01-005)

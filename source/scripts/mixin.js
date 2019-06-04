@@ -28,10 +28,15 @@ export default {
     openApp: () => {
       chrome.runtime.sendMessage({ openApp: true });
     },
-    localize: utils.localize,
-    setLanguage: function () {
-      utils.setLanguage();
-      this.$forceUpdate();
+    localize: function (localeKey) {
+      let strings = this.currentInfo.localizedStrings || {};
+
+      let obj = strings[localeKey] || '';
+
+      if (obj && typeof obj === 'object') {
+        return obj.message || '';
+      }
+      return strings[localeKey] || '';
     },
     getFormattedDate: function (time, options) {
       let defaultOptions = {
@@ -54,6 +59,11 @@ export default {
       }
       return dateStr;// format eg : 'January 19, 2017' for 'en' locale
     },
+    openLocationPicker() {
+      if (['connected', 'ready'].includes(this.currentInfo.state)) {
+        this.$store.dispatch('setCurrentView', 'locationPicker');
+      }
+    },
   },
   computed: {
     ...mapGetters([
@@ -61,21 +71,15 @@ export default {
       'errorStates',
     ]),
   },
-  mounted() {
-    // setLanguage (popup.js) is called after localize. Must be called before localize.
-    if (utils.isNullOrEmpty(window.localizedStrings)) {
-      let self = this;
-      chrome.storage.local.get('prefs', function (storage) {
-        if (storage.prefs && storage.prefs.language) {
-          window.currentLanguageCode = storage.prefs.language;
-        } else {
-          window.currentLanguageCode = navigator.language.toLowerCase();
+  mounted: function () {
+    if (process.env.NODE_ENV === 'development') { // this will get stripped out in the production build
+      this.$nextTick(function () {
+        window.parent.postMessage('expressvpn_test_loaded', '*');
+        if (!document.getElementById('mockFlag')) {
+          document.querySelector('body').insertAdjacentHTML('beforeend', '<div style="position: absolute;" id="mockFlag"></div>');
         }
-        self.setLanguage();
       });
     }
-  },
-  created: function () {
   },
   data: function () {
     return {
@@ -85,14 +89,29 @@ export default {
       locationPicker: locationPicker,
       browserInfo: UAParser(window.navigator.userAgent).browser,
       langList: [
+        /*
+        { code: 'da', language: 'Danish', label: 'Dansk (Danish)' },
+        { code: 'de', language: 'German', label: 'Deutsch (German)' },
+        */
         { code: 'en', language: 'English', label: 'English (English)' },
+        /*
+        { code: 'es', language: 'Spanish', label: 'Español (Spanish)' },
+        */
         { code: 'fr', language: 'French', label: 'Français (French)' },
-      ],
-      webrtcMinimumVersion: [
-        {
-          name: 'Firefox',
-          minimumVersion: '54',
-        },
+        /*
+        { code: 'it', language: 'Italian', label: 'Italiano (Italian)' },
+        { code: 'nl', language: 'Dutch', label: 'Nederlands (Dutch)' },
+        { code: 'no', language: 'Norwegian', label: 'Norsk (Norwegian)' },
+        { code: 'pl', language: 'Polish', label: 'Polski (Polish)' },
+        { code: 'pt', language: 'Portuguese', label: 'Português (Portuguese)' },
+        { code: 'ru', language: 'Russian', label: 'Русский (Russian)' },
+        { code: 'fi', language: 'Finnish', label: 'Suomi (Finnish)' },
+        { code: 'sv', language: 'Swedish', label: 'Svenska (Swedish)' },
+        { code: 'th', language: 'Thai', label: ' ภาษาไทย (Thai)' },
+        { code: 'tr', language: 'Turkish', label: 'Türkçe (Turkish)' },
+        { code: 'ja', language: 'Japanese', label: '日本語 (Japanese)' },
+        { code: 'ko', language: 'Korean', label: '한국어 (Korean)' },
+        */
       ],
       browserDict: {
         'Google Chrome': 'Chrome',

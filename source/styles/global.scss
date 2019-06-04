@@ -1,0 +1,156 @@
+@import 'shared/scss/xv_style.scss';
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("../fonts/ProximaNova-Semibold.otf") format('opentype');
+}
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url("../fonts/ProximaNova-Light.otf") format('opentype');
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+body {
+  width: 350px;
+  height: 600px;
+  background-color: $gray-40;
+  margin: 0;
+  font-family: ProximaNova, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  transition: height 2s;
+  user-select: none;
+  overflow: hidden;
+  
+  transition: height 2s;
+}
+
+.icon {
+  color: $gray-10;
+  font-size: 20px;
+
+  &-small {
+    font-size: 16px;
+  }
+  &-medium {
+    font-size: 24px;
+  }
+  &-large {
+    font-size: 68px;
+  }
+}
+
+div, span, label, input, textarea, select, button, li { /* override user agent stylesheet */
+  font-family: ProximaNova, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: $blue-20;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  &-container {
+    position: absolute;
+    bottom: 15px;
+
+    button {
+      font-family: ProximaNova-Semibold;
+      font-size: 20px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+      height: 52px;
+      width: 320px;
+      outline: 0;
+
+      &:nth-of-type(n+2) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &-top {
+    margin-bottom: calc(52px + 15px); // button's height + :nth-of-type(n+2)'s margin-top
+  }
+
+  &-primary {
+    color: #FFFFFF;
+    background-color: $primary-20;
+
+    &:hover {
+      background-color: $primary-30;
+    }
+    &:active {
+      background-color: $primary-10;
+    }
+  }
+  &-secondary {
+    color: $primary-20;
+    background-color: $gray-50;
+
+    &:hover {
+      color: $primary-30;
+    }
+    &:active {
+      color: $primary-10;
+    }
+  }
+}
+
+ul.check-list {
+  list-style: none;
+  padding: 0;
+  li {
+    padding-left: 1.3em;
+    font-size: 20px;
+
+    &:before {
+      font-family: xv-fonticon;
+      content: "\74"; // icon-20-check
+      color: $green-20;
+      display: inline-block;
+      margin-left: -1.3em;
+      width: 1.3em;
+      vertical-align: sub;
+    }
+  }
+}
+
+.invisible {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.mock-button {
+  opacity:0;
+  position:absolute;
+}
+
+.only-for-alpha-builds { display: none; }
+
+/*--OVERRIDE_STYLES_ALPHA_BUILD_ONLY--
+#SettingsGeneral .settings {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.setting {
+  margin-top: 10px !important;
+}
+--/OVERRIDE_STYLES_ALPHA_BUILD_ONLY--*/

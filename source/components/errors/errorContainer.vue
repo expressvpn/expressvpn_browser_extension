@@ -4,12 +4,19 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="errorContainer" :class="currentInfo.state">
-    <component :is="currentErrorComponent"></component>
+  <div :class="currentInfo.state">
+    <main-header :hideIcon="true"></main-header>
+    <div class="error-container">
+      <component :is="currentErrorComponent"></component>
+    </div>
   </div>
 </template>
 
 <script>
+import mainHeader from '../partials/mainHeader.vue';
+import mixinError from '../../scripts/mixins/error';
+import mixinSubscription from '../../scripts/mixins/subscription';
+
 // Loads all vue components "semi-dynamically"
 const getAllErrorComponents = () => {
   const vueFiles = require.context('./', false, /\.vue$/);
@@ -25,92 +32,57 @@ const getAllErrorComponents = () => {
 
 export default {
   name: 'errorContainer',
-  components: getAllErrorComponents(),
+  mixins: [mixinError, mixinSubscription],
+  components: Object.assign({}, getAllErrorComponents(), { 'mainHeader': mainHeader }),
   computed: {
     currentErrorComponent() {
       let allErrorComponents = getAllErrorComponents();
       let importName = this.currentInfo.state;
 
-      // if (allErrorComponents.hasOwnProperty(importName) === false) {
-      if (Object.prototype.hasOwnProperty.call(allErrorComponents, importName) === false) {
+      if (!this.isTrialUser() && this.isPaymentMethodIAP() && this.isLastInAppPurchasesFailure()) {
+        importName = 'iapError';
+      } else if (Object.prototype.hasOwnProperty.call(allErrorComponents, importName) === false) {
         importName = 'defaultError';
       }
       return importName;
     },
   },
-  mixins: [],
-  methods: {},
-  mounted() {},
 };
 </script>
 
 <style lang="scss">
-$xvpn_red: #c8252c;
-#errorContainer {
-  height: 330px;
-  width: 240px;
-  background-color: #ffffff;
-  box-shadow: 0px 1.5px 4px 2px rgba(0,0,0,0.1);
-  padding: 20px 10px;
-  border-radius: 4px;
-  margin-left: 10px;
+.error-container {
+  background-color: $gray-50;
+  height: calc(600px - 60px); // total height - header
+  padding: 25px 15px;
+  overflow-y: auto;
 
-  &.fraudster {
-  }
-
-  .errorMessage {
-    margin-top: 10px;
-    font-size: 13.6px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.28;
-    letter-spacing: normal;
-    text-align: left;
-    color: #1a1c21;
-  }
-
-  #errorHeader {
-    font-size: 13.5px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    text-align: left;
-    color: #fefefe;
-  }
-
-  .errorBtnsHolder {
-    position: absolute;
-    bottom: 30px;
+  h1 {
+    font-family: ProximaNova-Light;
+    font-size: 24px;
+    color: $black-20;
     text-align: center;
-    width: 80%;
-    button {
-      width: 240px;
-      height: 39px;
-      border-radius: 4px;
-      background-color: $xvpn_red;
-      text-align: center;
-      border: 0;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-      font-size: 15px;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #f7f7f7;
-      font-family: ProximaNova-Semibold;
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-    .linkButton {
-      display: block;
-      margin-top: 18px;
-      margin-bottom: 12px;
-      font-size: 13px;
-      line-height: 0.74;
-      letter-spacing: 0.4px;
-    }
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p {
+    margin-top: 25px;    
+    color: $black-20;
+  }
+
+  a, p, span, li {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .hint-container {
+    padding: 0 !important;
+  }
+
+  .bold {
+    font-family: proximaNova-Semibold;
   }
 }
+
 </style>

@@ -1,0 +1,43 @@
+<!-- 
+ExpressVPN Browser Extension:
+Copyright 2017-2019 Express VPN International Ltd
+Licensed GPL v2
+-->
+<template>
+  <div class="message" @click="createTab({ url: latestMessage.button_link }, $event)">
+    <div class="message-text">{{ latestMessage.message }}</div>
+    <a class="message-link" tabindex="-1" @click="createTab({ url: latestMessage.button_link }, $event)">{{ latestMessage.button }}</a>
+  </div>
+</template>
+<script>
+
+export default {
+  computed: {
+  },
+  methods: {
+  },
+  mounted() {
+  },
+  props: {
+    latestMessage: {},
+  },
+};
+</script>
+
+<style lang="scss">
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 15px 25px;
+  font-size: 12px;
+  box-shadow: inset 0px 4px 6px 0px rgba(100, 100, 100, 0.1);
+
+  &-text {
+    color: $gray-10;
+  }
+}
+</style>
