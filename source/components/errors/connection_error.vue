@@ -68,7 +68,7 @@ export default {
 ol {
   counter-reset: item; 
   margin: 15px 0 0 0; 
-  padding-left: 0;
+  padding-left: 33px;
   
   &>li {
     list-style: none inside; 
@@ -76,8 +76,8 @@ ol {
     margin-bottom: 10px;
     
     &:before {
-      content: counter(item) ;
-      margin-right: 8px;
+      content: counter(item);
+      margin: 0 10px 0 -35px;
       padding: 1px;
       display: inline-block;
       border-radius: 50%;

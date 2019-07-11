@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Confidentialité, sécurité et rapidité. Contrôlez l'appli ExpressVPN directement depuis Chrome, masquez votre localisation et accédez à du contenu depuis n'importe où dans le monde.",
+    "message": "Confidentialité, sécurité, rapidité. Contrôlez l'appli ExpressVPN depuis Chrome, masquez votre localisation et accédez à du contenu.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Confidentialité, sécurité et rapidité. Contrôlez l'appli ExpressVPN directement depuis Firefox, masquez votre localisation et accédez à du contenu depuis n'importe où dans le monde.",
+    "message": "Confidentialité, sécurité, rapidité. Contrôlez l'appli ExpressVPN depuis Firefox, masquez votre localisation et accédez à du contenu.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN : un proxy VPN qui vous donne accès à tout",
+    "message": "ExpressVPN : un proxy VPN pour tout débloquer",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -25,7 +25,7 @@
     "message": "Acheter un abonnement"
   },
   "error_app_not_found_contact_support_text": {
-    "message": "Besoin d'aide ? Veuillez [contacter l'équipe Support]."
+    "message": "Besoin d'aide ? Veuillez [contacter le Support client]."
   },
   "error_app_not_found_download_LINUX_button_label": {
     "message": "Télécharger l'appli Linux"
@@ -55,7 +55,7 @@
     "message": "Revenir à l'écran principal"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "Pour toute question, veuillez [contacter l'équipe Support]."
+    "message": "Pour toute question, veuillez [contacter le Support client]."
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "Se déconnecter"
@@ -76,7 +76,7 @@
     "message": "Vous pouvez aussi masquer l'extension par un clic droit sur l'icône puis en sélectionant \"Retirer de la barre de tâches\" ou \"Déplacer dans le menu\"."
   },
   "error_compatibility_error_os_version_p1_text": {
-    "message": "Cette extension est actuellement disponible sur <b>macOS 10.10 / Windows 7</b> et plus récents uniquement."
+    "message": "Actuellement, cette extension est disponible uniquement sur <b>macOS 10.10 / Windows 7</b> et les versions plus récentes."
   },
   "error_compatibility_error_os_version_p2_text": {
     "message": "Veuillez mettre à jour votre système d'exploitation pour utiliser cette extension."
@@ -112,13 +112,25 @@
     "message": "Échec de connexion "
   },
   "error_connection_error_to_location_text": {
-    "message": "La connexion à cette localisation VPN a échoué :<br>%LOCATION%"
+    "message": "La connexion à cette localisation VPN n'a pu aboutir :<br>%LOCATION%"
   },
   "error_connection_error_try_again_button_label": {
     "message": "Réessayer"
   },
   "error_expired_update_now_link_text": {
     "message": "Déjà abonné ? [Mettre à jour]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Vous avez été déconnecté parce que les détails de votre compte ont été mis à jour."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "Pour continuer à utiliser ExpressVPN, veuillez vous connecter à nouveau."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Se connecter"
+  },
+  "error_forced_signout_title": {
+    "message": "Se connecter à ExpressVPN"
   },
   "error_fraudster_hint": {
     "message": "Nous n'avons pas pu vérifier vos informations de facturation. Par conséquent, nous avons annulé votre paiement. "
@@ -157,7 +169,7 @@
     "message": "Entrer code d'activation"
   },
   "error_free_trial_expired_l1_text": {
-    "message": "Applis pour tous les appareils"
+    "message": "Des applis pour tous les appareils"
   },
   "error_free_trial_expired_l2_text": {
     "message": "Garantie 30 jours satisfait ou remboursé"
@@ -178,10 +190,10 @@
     "message": "Essai gratuit expiré"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
-    "message": "Prendre un abonnement"
+    "message": "S'abonner maintenant"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
-    "message": "Prendre un abonnement"
+    "message": "Acheter un abonnement"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
     "message": "Se déconnecter"
@@ -230,7 +242,7 @@
     "message": "Installer l'appli de bureau"
   },
   "error_NOT_INSTALLED_secondary_button": {
-    "message": "Prendre un abonnement"
+    "message": "Acheter un nouvel abonnement"
   },
   "error_NOT_INSTALLED_title": {
     "message": "L'appli n'est pas installée"
@@ -242,7 +254,7 @@
     "message": "Vous devez lancer l’appli ExpressVPN pour pouvoir utiliser cette extension."
   },
   "error_open_app_contact_support_button_label": {
-    "message": "Contactez le Support client"
+    "message": "Contacter le Support client"
   },
   "error_open_app_open_app_button_label": {
     "message": "Ouvrir l'appli de bureau"
@@ -263,7 +275,7 @@
     "message": "Vous avez dépassé la limite d'appareils connectés pour cet abonnement."
   },
   "error_simultaneous_connection_p2_text": {
-    "message": "Veuillez déconnecter un appareil ou [prendre un abonnement supplémentaire]."
+    "message": "Veuillez déconnecter un appareil ou [acheter un abonnement supplémentaire]."
   },
   "error_simultaneous_connection_title": {
     "message": "Trop d'appareils connectés."
@@ -299,7 +311,7 @@
     "message": "Support technique 24/7"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
-    "message": "Prendre un abonnement"
+    "message": "Acheter un nouvel abonnement"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
     "message": "Se déconnecter"
@@ -334,6 +346,15 @@
   "hint_connection_delay_text": {
     "message": "Tentative de connexion en cours..."
   },
+  "hint_no_internet_connecting_text": {
+    "message": "Aucune connexion internet. <br>Le VPN se connectera dès que possible."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Aucune connexion Internet détectée.<br>Le VPN peut être indisponible."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Aucune connexion Internet. <br>Le VPN se reconnectera dès que possible."
+  },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Connexion interrompue. Reconnexion en cours..."
   },
@@ -362,7 +383,7 @@
     "message": "Garantie 30 jours satisfait ou remboursé"
   },
   "list_item_apps_for_every_device": {
-    "message": "Applis tous appareils"
+    "message": "Des applis pour tous les appareils"
   },
   "list_item_locations_worldwide": {
     "message": "160 localisations dans le monde"
@@ -389,7 +410,7 @@
     "message": "Rechercher une localisation"
   },
   "location_picker_smart_location_text": {
-    "message": "Serveur automatique"
+    "message": "Localisation auto"
   },
   "location_picker_tab_all_text": {
     "message": "Toutes"
@@ -407,7 +428,7 @@
     "message": "Localisation choisie"
   },
   "main_screen_smart_location_text": {
-    "message": "Serveur automatique"
+    "message": "Localisation auto"
   },
   "main_screen_status_vpn_connected_text": {
     "message": "Connecté"
@@ -465,7 +486,7 @@
     "message": "Obtenez 30 jours gratuits"
   },
   "menu_help_support": {
-    "message": "Aide & Support"
+    "message": "Aide et Support"
   },
   "menu_item_acknowledgements_text": {
     "message": "Mentions spéciales"
@@ -522,7 +543,7 @@
     "message": "Plus tard"
   },
   "menu_ratevpn_text": {
-    "message": "Si vous aimez utiliser ExpressVPN, laissez-nous un avis pour nous le dire !"
+    "message": "Nous espérons que vous profitez d'ExpressVPN. Voulez-vous nous laisser un avis ?"
   },
   "menu_ratevpn_title": {
     "message": "Vous aimez ExpressVPN ?"
@@ -534,7 +555,7 @@
     "message": "À propos d'ExpressVPN"
   },
   "menu_section_support_chat_menu_label": {
-    "message": "Contactez-nous"
+    "message": "Nous contacter"
   },
   "menu_section_support_improvements_menu_label": {
     "message": "Suggérer une amélioration"
@@ -543,7 +564,7 @@
     "message": "Signaler un problème"
   },
   "menu_section_support_title": {
-    "message": "Contactez-nous"
+    "message": "Nous contacter"
   },
   "menu_settings_general_header": {
     "message": "Général"
@@ -603,7 +624,7 @@
     "message": "Aidez-nous à nous améliorer"
   },
   "message_item_rating3_title": {
-    "message": "Pourriez-vous nous laisser un avis ?"
+    "message": "Voulez-vous nous laisser un avis ?"
   },
   "message_item_rating_cancel_button_title": {
     "message": "Non merci"
@@ -648,7 +669,7 @@
     "message": "Début de l'abonnement"
   },
   "myaccount_active_refer_button_label": {
-    "message": "Parrainez des amis"
+    "message": "Parrainer des amis"
   },
   "myaccount_expiring_buy_button_label": {
     "message": "Acheter un abonnement"
@@ -657,16 +678,22 @@
     "message": "Renouveler"
   },
   "myaccount_expiring_upgrade_button_label": {
-    "message": "Abonnez-vous"
+    "message": "S'abonner"
   },
   "myaccount_manage_button_label": {
-    "message": "Gérez votre abonnement"
+    "message": "Gérer votre abonnement"
   },
   "myaccount_why_get_subscription_subheader_text": {
-    "message": "Pourquoi prendre un abonnement ?"
+    "message": "Pourquoi acheter un abonnement ?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Pourquoi renouveler ?"
+  },
+  "notification_extension_update_message": {
+    "message": "Découvrez les nouveautés contenues dans la version %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN mis à jour"
   },
   "phishing_alert_dialog_content": {
     "message": "<span>%s</span> peut contenir un logiciel ou contenu conçu pour vous soutirer des informations personnelles (infos bancaires, photos, mots de passe, messages). [En savoir&nbsp;plus]"
@@ -690,7 +717,7 @@
     "message": "Abonnez-vous"
   },
   "promobar_iap_failed_header": {
-    "message": "Votre dernier paiement a échoué"
+    "message": "Votre dernier paiement n'a pu aboutir"
   },
   "promobar_iap_failed_text": {
     "message": "Mettre à jour le mode de paiement"
@@ -783,13 +810,13 @@
     "message": "Échec de connexion à %s."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "La connexion à %s a échoué. Le trafic Internet est bloqué pour protéger vos données."
+    "message": "La connexion à %s n'a pu aboutir. Le trafic Internet est bloqué pour protéger vos données."
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Trop d'appareils connectés"
   },
   "vpn_status_notification_connection_limit_text": {
-    "message": "Veuillez déconnecter un appareil ou prendre un abonnement supplémentaire."
+    "message": "Veuillez déconnecter un appareil ou acheter un abonnement supplémentaire."
   },
   "vpn_status_notification_reconnecting_label": {
     "message": "Reconnexion au VPN... "
@@ -799,5 +826,34 @@
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
     "message": " Reconnexion à %s. Le trafic Internet est bloqué pour protéger vos données."
+  },
+  "welcome_continue_button_label": {
+    "message": "Continuer"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Démarrer"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "L'extension ExpressVPN est une télécommande pour l'appli de bureau."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "Une fois connecté, le VPN protège votre appareil tout entier, pas seulement votre navigateur."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "En savoir plus"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "L'extension brouille votre localisation, bloque WebRTC et inclut HTTPS Everywhere."
+  },
+  "welcome_skip_button_label": {
+    "message": "Passer"
+  },
+  "language_dropdown_english": {
+    "message": "Anglais (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Français (Français)",
+    "description": "Do not translate the text between parentheses"
   }
 }

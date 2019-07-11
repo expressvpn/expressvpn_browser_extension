@@ -25,6 +25,13 @@
   opacity: 0;
 }
 
+.v-leave { opacity: 1; position: absolute; }
+.v-leave-active { transition: opacity 0.4s }
+.v-leave-to { opacity: 0; }
+.v-enter { opacity: 0; position: absolute;}
+.v-enter-active  { transition: opacity 1s }
+.v-enter-to { opacity: 1; }
+
 body {
   width: 350px;
   height: 600px;

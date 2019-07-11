@@ -30,9 +30,9 @@ const MIN_APP_VERSION = {
   let recommendedLocationsList = [];
   let allLocationsList = [];
   let prefs = utils.defaultPreferences;
-  let ratingData = rating.defaultRatingData;
   let myBrowser = UAParser(window.navigator.userAgent).browser;
   let whiteList = [];
+  let notificationUpdateId = '';
   let mockData = {
     prevNotificationId: '',
     prevState: '',
@@ -72,8 +72,9 @@ const MIN_APP_VERSION = {
         prefs = Object.assign({}, prefs, storage.prefs); // make sure new options are added
       }
       chrome.storage.local.set({ prefs });
-      utils.setLanguage(prefs.language).then(strings => {
-        currentInfo.localizedStrings = strings;
+      utils.setLanguage(prefs.language).then(langObj => {
+        currentInfo.localizedStrings = langObj.strings;
+        currentInfo.locale = langObj.locale;
         chrome.runtime.sendMessage({ state: true, data: currentInfo });
       });
       setWebrtcOption();
@@ -81,24 +82,21 @@ const MIN_APP_VERSION = {
   }
 
   function setRatingConfig() {
-    chrome.storage.local.get('rating', (storage) => {
-      if (typeof storage.rating === 'object') {
-        ratingData = Object.assign({}, ratingData, storage.rating);
+    chrome.storage.sync.get('rating', (storage) => {
+      if (typeof storage.rating !== 'undefined') {
+        currentInfo.ratingData = storage.rating;
+        currentInfo.ratingData.activatedDate = (currentInfo.ratingData.activatedDate === 0) ? Date.now() / 1000 : currentInfo.ratingData.activatedDate;
+        currentInfo.ratingData.successfulConnections = (currentInfo.ratingData.successfulConnections > 0) ? currentInfo.ratingData.successfulConnections : 0;
+        chrome.storage.sync.set({ 'rating': currentInfo.ratingData });
       }
-      ratingData.activatedDate = (ratingData.activatedDate === 0) ? Date.now() / 1000 : ratingData.activatedDate;
-      ratingData.lastReviewDate = (ratingData.lastReviewDate === 0) ? ratingData.activatedDate : ratingData.lastReviewDate;
-      ratingData.successfulConnections = (ratingData.successfulConnections > 0) ? ratingData.successfulConnections : 0;
-      if (ratingData.isUserEligible === null) {
-        ratingData.isUserEligible = (Math.round(100 * Math.random()) <= 10);
-      }
-      rating.updateSubscriberPeriodicity(prefs.ratingPeriodicity);
-      chrome.alarms.create('checkIfSubscriber', { periodInMinutes: prefs.ratingPeriodicity / 60 });
-      chrome.storage.local.set({ 'rating': ratingData });
     });
   }
 
   function updateIcon(newIcon) {
     chrome.browserAction.setBadgeText({ text: newIcon.text });
+    if (chrome.browserAction.setBadgeTextColor) { // Requires FF 63+
+      chrome.browserAction.setBadgeTextColor({ color: '#FFFFFF' });
+    }
     chrome.browserAction.setBadgeBackgroundColor({ color: newIcon.color });
   }
 
@@ -150,6 +148,9 @@ const MIN_APP_VERSION = {
 
   function updateStatus(name, data) {
     switch (name) {
+      case 'WaitForNetworkReady':
+        currentInfo.hasInternet = (data.result === 'has internet');
+        break;
       case 'ServiceStateChanged':
         switch (data.newstate) {
           case 'ready':
@@ -184,7 +185,7 @@ const MIN_APP_VERSION = {
             break;
         }
 
-        if (data.oldstate !== data.newstate) {
+        if (data.oldstate && data.newstate && data.oldstate !== data.newstate) {
           if ((data.oldstate === 'ready' || data.oldstate === 'connection_error') && data.newstate === 'connecting') {
             // Remove cancelled connections
             currentInfo.connectingTimes = currentInfo.connectingTimes.filter(el => Object.prototype.hasOwnProperty.call(el, 'delta'));
@@ -199,19 +200,18 @@ const MIN_APP_VERSION = {
               currentInfo.connectingTimes = currentInfo.connectingTimes.slice(0, 5);
             }
           }
-        }
 
-        if (ratingData.lastState !== data.newstate) {
           if (prefs['chrome.desktop_notification'] === true) {
             showConnectionNotification(data.newstate);
           }
-          ratingData = rating.updateRatingDataFromState(ratingData, data.newstate);
-          chrome.storage.local.set({ 'rating': ratingData });
+
+          currentInfo.ratingData = rating.updateRatingDataFromState(currentInfo.ratingData, data);
+          chrome.storage.sync.set({ 'rating': currentInfo.ratingData });
         }
+
         if (!badStates.includes(currentInfo.state)) {
           currentInfo.state = (data.newstate === 'activated') ? 'ready' : data.newstate;
           if (data.newstate === 'activated') { // initialize all value when activated app.
-            chrome.storage.local.set({ 'rating': rating.defaultRatingData });
             setRatingConfig();
           }
         }
@@ -314,6 +314,19 @@ const MIN_APP_VERSION = {
     return ((currentInfo.preferences.preferred_protocol.toLowerCase() === 'auto') || (loc.protocols.includes(currentInfo.preferences.preferred_protocol.toLowerCase())));
   }
 
+  function showUpdateNotification(currentVersion) {
+    let options = {
+      type: 'basic',
+      title: localize('notification_extension_update_title'),
+      message: localize('notification_extension_update_message').replace('%VERSION%', currentVersion),
+      iconUrl: '/images/toolbar-icon-128.png',
+    };
+    chrome.notifications.create(null, options, id => {
+      notificationUpdateId = id;
+      mockData.prevNotificationId = id;
+    });
+  }
+
   // For Firefox, when open new browser window, badge background color become red.
   // This issue is related to Firefox itself.
   // So we need to update extension app state including badge color when open a new window.
@@ -323,19 +336,39 @@ const MIN_APP_VERSION = {
     });
   }
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    // console.debug("message", message);
-    if (message.mockConnection) {
-      if (process.env.NODE_ENV === 'development') {
-        if (mockData.prevState === message.data) {
-          return;
-        }
-        utils.setLanguage(message.locale);
-        chrome.notifications.clear(mockData.prevNotificationId);
-        showConnectionNotification(message.data, (id) => {
-          mockData.prevNotificationId = id;
-          mockData.prevState = message.data;
-        });
+    if (message.mock && process.env.NODE_ENV === 'development') {
+      console.log('Got mock', message);
+      switch (message.category) {
+        case 'connection':
+          if (mockData.prevState === message.data) {
+            return;
+          }
+          chrome.notifications.clear(mockData.prevNotificationId);
+          showConnectionNotification(message.data, (id) => {
+            mockData.prevNotificationId = id;
+            mockData.prevState = message.data;
+          });
+          break;
+        case 'locale':
+          if (currentInfo.locale === message.locale) {
+            return;
+          }
+          utils.setLanguage(message.locale).then(langObj => {
+            currentInfo.localizedStrings = langObj.strings;
+            currentInfo.locale = langObj.locale;
+            chrome.runtime.sendMessage({ state: true, data: currentInfo });
+          });
+          break;
+        case 'update':
+          chrome.notifications.clear(mockData.prevNotificationId);
+          showUpdateNotification(chrome.runtime.getManifest().version);
+          break;
+        default:
+          break;
       }
+    } else if (message.clicked5star) {
+      currentInfo.ratingData.everClickedMaxRating = true;
+      setRatingConfig();
     } else if (message.customLocation) {
       com.openLocationPicker();
     } else if (message.getLocations) {
@@ -348,11 +381,14 @@ const MIN_APP_VERSION = {
       if (!badStates.includes(currentInfo.state)) {
         com.getMessages();
       }
+    } else if (message.finishedWelcome) {
+      currentInfo.showWelcome = false;
+      updatePopupState();
     } else if (message.getState) {
       com.getStatus(); // check if there are app updates
       updatePopupState();
     } else if (message.connectToSelectedLocation) {
-      if (currentInfo.state === 'ready') {
+      if (currentInfo.state === 'ready' || currentInfo.state === 'connection_error') {
         com.selectLocation(currentInfo.selectedLocation);
         com.connectToLocation(currentInfo.selectedLocation);
       } else if (currentInfo.state === 'connected') {
@@ -368,7 +404,7 @@ const MIN_APP_VERSION = {
       com.disconnect();
     } else if (message.updateSelectedLocation) {
       currentInfo.selectedLocation = message.selectedLocation;
-      if (currentInfo.state === 'ready') {
+      if (currentInfo.state === 'ready' || currentInfo.state === 'connection_error') {
         // Notify expressVPN service of new location selected
         com.selectLocation(currentInfo.selectedLocation);
       }
@@ -386,34 +422,40 @@ const MIN_APP_VERSION = {
       com.openPreferences();
     } else if (message.updateExtensionSettings) {
       updateExtensionSettings();
-    } else if (message.updateReviewDate) {
-      ratingData.lastReviewDate = Date.now() / 1000;
-      chrome.storage.local.set({ 'rating': ratingData });
     } else if (message.proceedAnyway) {
       whiteList.push({ 'tabId': message.tabId, 'url': message.url });
       chrome.tabs.update(message.tabId, { url: message.url });
     }
   });
 
-  chrome.storage.onChanged.addListener(function (changes, areaName) {
-    if (changes.prefs && changes.prefs.newValue && changes.prefs.oldValue) {
-      if (changes.prefs.newValue.ratingPeriodicity !== changes.prefs.oldValue.ratingPeriodicity) {
-        setRatingConfig();
+  chrome.runtime.setUninstallURL('https://expressv.typeform.com/to/LjmI4J');
+
+  chrome.runtime.onInstalled.addListener(details => {
+    if (details.reason === 'install') {
+      currentInfo.showWelcome = true;
+    } else if (details.reason === 'update' && prefs['chrome.desktop_notification'] === true) {
+      const rx = /^(\d{1,2}.\d{1,2})/g; // Only show notification for major and minor update
+      const currentVersion = chrome.runtime.getManifest().version;
+      const currentVersionMatches = currentVersion.match(rx);
+      const previousVersionMatches = details.previousVersion.match(rx);
+
+      if (currentVersionMatches.length === 1 && previousVersionMatches.length === 1 && previousVersionMatches[0] !== currentVersionMatches[0]) {
+        setTimeout(() => { // Allow the strings used in localize() to be created
+          showUpdateNotification(currentVersion);
+        }, 100);
       }
     }
   });
 
-  chrome.alarms.onAlarm.addListener(alarm => {
-    switch (alarm.name) {
-      case 'checkIfSubscriber':
-        rating.checkIfSubscriber(ratingData);
+  chrome.notifications.onClicked.addListener(notificationId => {
+    switch (notificationId) {
+      case notificationUpdateId:
+        chrome.tabs.create({ url: `${currentInfo.website_url}/support/release-notes/browser-extension/` });
         break;
       default:
         break;
     }
   });
-
-  chrome.runtime.setUninstallURL('https://expressv.typeform.com/to/LjmI4J');
 
   // message listener for background communication
   window.addEventListener('message', (event) => {
@@ -486,7 +528,7 @@ const MIN_APP_VERSION = {
         currentInfo.app.latest_version_url = message.currentInfo.app.latest_version_url;
         currentInfo.subscription = message.currentInfo.subscription;
         if (currentInfo.subscription) {
-          ratingData.isRegularUser = utils.isRegularUser(currentInfo.subscription);
+          currentInfo.ratingData.isRegularUser = utils.isRegularUser(currentInfo.subscription);
         }
         currentInfo.website_url = message.currentInfo.website_url || currentInfo.website_url;
         updateStatus('ServiceStateChanged', { newstate: message.currentInfo.state });
@@ -495,6 +537,7 @@ const MIN_APP_VERSION = {
         com.getStatus();
         com.getEnginePreferences();
         com.getLocationList();
+        com.getMessages();
 
         // check if app version is compatible with the extension
         if (Object.keys(message.data).length > 0) {

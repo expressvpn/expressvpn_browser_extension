@@ -7,22 +7,24 @@ Licensed GPL v2
   <div id="locationPicker">
     <secondary-header stringkey="location_picker_locations_title" :onBackClick="sideBackBtnClick" :showSearchOption="!searchFlag" :onSearchClick="showSearchBox" />
 
-    <div class="location-tab-container">
-      <div :class="['location-tab', { active: activeTab === 'recommended' }]" @click="setActiveTab('recommended')">{{ localize('location_picker_tab_recommended_text') }}</div>
-      <div :class="['location-tab', { active: activeTab === 'all' }]" @click="setActiveTab('all')">{{ localize('location_picker_tab_all_text') }}</div>
-    </div>
-
-    <div class="location-list-container">
-      <country-screen v-if="showCountryScreen" :country="currentCountry"/>
-
-      <div v-if="searchFlag  && !showCountryScreen">
-        <search-box-container v-if="searchFlag" v-model="searchText" :initialText="initialText"/>
-        <search-locations-container v-if="searchTypingStatus" :searchText="searchText" />
+    <div>
+      <div class="location-tab-container">
+        <div :class="['location-tab', { active: activeTab === 'recommended' }]" @click="setActiveTab('recommended')">{{ localize('location_picker_tab_recommended_text') }}</div>
+        <div :class="['location-tab', { active: activeTab === 'all' }]" @click="setActiveTab('all')">{{ localize('location_picker_tab_all_text') }}</div>
       </div>
-      
-      <div v-if="showCountryScreen === false && searchTypingStatus === false">
-        <recommended-locations v-if="activeTab === 'recommended'" />
-        <all-locations v-else :expandRegion="currentExpandedRegion" />
+
+      <div class="location-list-container">
+        <div v-if="searchFlag">
+          <search-box-container v-if="searchFlag" v-model="searchText" :initialText="initialText"/>
+          <search-locations-container v-if="searchTypingStatus" :searchText="searchText" />
+        </div>
+
+        <country-screen v-if="showCountryScreen && searchTypingStatus === false" :country="currentCountry"/>
+        
+        <div v-if="showCountryScreen === false && searchTypingStatus === false">
+          <recommended-locations v-if="activeTab === 'recommended'" />
+          <all-locations v-else :expandRegion="currentExpandedRegion" />
+        </div>
       </div>
     </div>
 
@@ -77,6 +79,8 @@ export default {
       this.currentExpandedRegion = data.region;
       if (data.searchText !== '') {
         this.initialText = data.searchText;
+      } else {
+        this.cancelSearch();
       }
 
       this.currentCountry = {};
@@ -86,7 +90,7 @@ export default {
     });
 
     this.$root.$on('connect-to-location', (selectedLocation) => {
-      if (this.currentInfo.state === 'ready' || localStorage.getItem('hasCWCbefore')) {
+      if ((this.currentInfo.state === 'ready' || this.currentInfo.state === 'connection_error') || localStorage.getItem('hasCWCbefore')) {
         this.updateLocationAndConnect(selectedLocation);
       } else if (this.currentInfo.state === 'connected') {
         this.popupOptions = {

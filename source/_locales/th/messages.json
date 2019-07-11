@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "ความเป็นส่วนตัว ความปลอดภัย และความเร็ว ควบคุมแอป ExpressVPN ได้โดยตรงจาก Chrome ปิดบังตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "ความเป็นส่วนตัว ความปลอดภัย และความเร็ว ควบคุมแอป ExpressVPN ได้โดยตรงจาก Firefox ปิดบังตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN พร็อกซีเพื่อปลดบล็อกทุกอย่าง",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "หรือคุณสามารถซ่อนส่วนขยายโดยการคลิกขวาที่ไอคอนและเลือก \"ซ่อนในเมนู Chrome\""
+  },
+  "error_@firefox@_hide_text": {
+    "message": "หรือคุณสามารถซ่อนส่วนขยายโดยคลิกขวาที่ไอคอนและเลือก \"ลบออกจากแถบเครื่องมือ\" หรือ \"ย้ายไปที่เมนู\""
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "ซื้อการเป็นสมาชิก"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "\nต้องการความช่วยเหลือ? โปรด [ติดต่อฝ่ายสนับสนุน]"
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "ดาวน์โหลดแอป Linux"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "ดาวน์โหลดแอป Mac"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "ดาวน์โหลดแอป Windows"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "ใหม่สำหรับ ExpressVPN ใช่หรือไม่? [เริ่มต้น]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "โปรดติดตั้งแอป ExpressVPN จาก Google Play Store"
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "ส่วนขยายนี้ต้องการแอป ExpressVPN สำหรับ Linux ที่มีการสมัครใช้งานอยู่"
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "ส่วนขยายนี้ต้องการแอป ExpressVPN สำหรับ Mac ที่มีการสมัครใช้งานอยู่"
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "ส่วนขยายนี้ต้องการแอป ExpressVPN สำหรับ Windows ที่มีการสมัครใช้งานอยู่"
+  },
+  "error_btnReturnHome_default": {
+    "message": "กลับสู่หน้าหลัก"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "หากคุณมีคำถามใดๆ โปรด [ติดต่อฝ่ายสนับสนุน]"
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "ออกจากระบบ"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "หมดอายุ (%1)"
+  },
+  "error_business_subscription_expired_text": {
+    "message": "โปรดติดต่อเจ้าของบัญชีเพื่อซื้อการสมัครรับข้อมูลธุรกิจใหม่"
+  },
+  "error_business_subscription_expired_title": {
+    "message": "การสมัครสมาชิกหมดอายุแล้ว"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "หรือคุณสามารถซ่อนส่วนขยายโดยการคลิกขวาที่ไอคอนและเลือก \"ซ่อนในเมนู Chrome\""
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "หรือคุณสามารถซ่อนส่วนขยายโดยคลิกขวาที่ไอคอนและเลือก \"ลบออกจากแถบเครื่องมือ\" หรือ \"ย้ายไปที่เมนู\""
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "ขณะนี้ส่วนขยายนี้มีให้บริการเฉพาะสำหรับ <b>macOS 10.10 / Windows 7 </b> และใหม่กว่า"
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "โปรดอัปเดตระบบปฏิบัติการเพื่อใช้ส่วนขยาย"
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "เรียนรู้เพิ่มเติม"
+  },
+  "error_compatibility_error_title": {
+    "message": "อัพเดตระบบปฏิบัติการ"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "เลือก [ตำแหน่ง VPN] อื่น"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "หากทุกอย่างล้มเหลว [ติดต่อฝ่ายสนับสนุน]"
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "ปัจจุบันการเข้าชมทางอินเทอร์เน็ตถูกปิดกั้นเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "กลับสู่หน้าหลัก"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "ยกเลิก"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "ปลดบล็อกอินเทอร์เน็ต"
+  },
+  "error_connection_error_title": {
+    "message": "ไม่สามารถเชื่อมต่อ"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "ไม่สามารถเชื่อมต่อกับ<br>%LOCATION%"
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "ลองอีกครั้ง"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "สมัครรับข้อมูลแล้ว? [อัพเดทตอนนี้]"
+  },
+  "error_forced_signout_p1_text": {
+    "message": "คุณได้ออกจากระบบเนื่องจากรายละเอียดบัญชีของคุณได้รับการอัปเดต"
+  },
+  "error_forced_signout_p2_text": {
+    "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดลงชื่อเข้าใช้อีกครั้ง"
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "ลงชื่อเข้าใช้"
+  },
+  "error_forced_signout_title": {
+    "message": "ลงชื่อเข้าใช้ ExpressVPN"
+  },
+  "error_fraudster_hint": {
+    "message": "เราไม่สามารถยืนยันข้อมูลการเรียกเก็บเงินของคุณได้ดังนั้นเราจึงได้ยกเลิกการชำระเงินของคุณ"
+  },
+  "error_fraudster_p1_text": {
+    "message": "หากต้องการเปิดใช้งานการสมัครของคุณอีกครั้ง <br>โปรดส่งอีเมลมาที่"
+  },
+  "error_fraudster_p2_text": {
+    "message": "หัวเรื่อง: <span class='bold'>Billing Verification</span>"
+  },
+  "error_fraudster_p3_text": {
+    "message": "โปรดแนบภาพถ่ายของบัตรเครดิตที่คุณใช้ (ให้เห็นเฉพาะตัวเลข 4 หลักสุดท้ายและชื่อเท่านั้น)"
+  },
+  "error_fraudster_p4_text": {
+    "message": "โปรดระบุหมายเลขโทรศัพท์ของคุณ (พร้อมรหัสประเทศ) และเวลาที่ดีที่สุดที่เราสามารถโทรหาคุณได้"
+  },
+  "error_fraudster_p5_text": {
+    "message": "ทีมเรียกเก็บเงินจะตอบกลับภายใน 24–48 ชั่วโมง"
+  },
+  "error_fraudster_question1_text": {
+    "message": "คุณจ่ายด้วยบัตรเครดิตหรือไม่?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "ไม่ได้ชำระเงินด้วยบัตรเครดิตใช่ไหม?"
+  },
+  "error_fraudster_title": {
+    "message": "บัญชีถูกระงับ"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "การทดลองใช้ฟรีของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ\n\n"
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "ทำไมต้องอัปเกรด?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "กรอกรหัสการเปิดใช้งาน"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "แอปสำหรับทุกอุปกรณ์"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "การรับประกันคืนเงิน 30 วัน"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "160 ตำแหน่งทั่วโลก"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "แบนด์วิดท์ไม่จำกัด"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "หมดอายุ (%1)"
+  },
+  "error_free_trial_expired_title": {
+    "message": "การทดลองใช้ฟรีหมดอายุแล้ว"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "อัปเกรดตอนนี้"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "รับการสมัครสมาชิก"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "ออกจากระบบ"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "การทดลองใช้ฟรีหมดอายุ"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "อัปเดตรายละเอียดการชำระเงิน"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "ออกจากระบบ"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "หากต้องการใช้ ExpressVPN ต่อไปโปรดอัปเดตรายละเอียดการชำระเงินในบัญชี iTunes / App Store ของคุณ"
+  },
+  "error_IAP_MAIN_title": {
+    "message": "การชำระเงินล้มเหลว"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN จะเปิดใช้งานโดยอัตโนมัติภายใน 30 นาทีหลังจากอัปเดตรายละเอียดของคุณ"
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "โปรดรันคำสั่งนี้ในเทอร์มินัลของคุณเพื่อเปิดใช้งานแอปเดสก์ท็อป:"
+  },
+  "error_not_activated_text": {
+    "message": "โปรดลงชื่อเข้าใช้แอป ExpressVPN สำหรับเดสก์ท็อปเพื่อใช้ส่วนขยายนี้"
+  },
+  "error_not_activated_title": {
+    "message": "ไม่ได้เปิดใช้แอป"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "หาก Play Store ไม่มีอยู่ใน Chromebook ของคุณ โปรดทำตามคำแนะนำ [การกำหนดค่าด้วยตนเอง] ของเรา"
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ติดตั้ง ExpressVPN"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS ไม่รองรับ",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "ติดตั้งแอปเดสก์ท็อป"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "สมัครสมาชิกใหม่"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "ไม่ได้ติดตั้งแอป"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "ส่วนขยายนี้ต้องการให้แอป ExpressVPN ทำงาน"
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "ส่วนขยายนี้ต้องการให้แอป ExpressVPN ทำงาน"
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "เปิดแอปเดสก์ท็อป"
+  },
+  "error_open_app_title": {
+    "message": "แอปไม่เปิด"
+  },
+  "error_signout_button": {
+    "message": "ออกจากระบบ"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "ยกเลิก"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "เรียนรู้เพิ่มเติม"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "คุณได้ใช้เกินขีดจำกัดการใช้อุปกรณ์ ExpressVPN สำหรับการสมัครนี้แล้ว"
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "โปรดยกเลิกการเชื่อมต่ออุปกรณ์หรือ [ซื้อการสมัครสมาชิกเพิ่มเติม]"
+  },
+  "error_simultaneous_connection_title": {
+    "message": "ถึงขีดจำกัดการเชื่อมต่อแล้ว"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "อัปเดตรายละเอียดการชำระเงิน"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "ครั้งหน้า"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "การสมัครของคุณหมดอายุ แต่มันง่ายที่จะเชื่อมต่ออีกครั้ง"
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "เหตุใดจึงต่ออายุ?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "สมัครสมาชิกใหม่"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "กรอกรหัสการเปิดใช้งาน"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "แอปสำหรับทุกอุปกรณ์"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "แนะนำเพื่อน รับ 30 วันฟรี"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "160 ตำแหน่งทั่วโลก"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "สมัครสมาชิกใหม่"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "ออกจากระบบ"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "การสมัครสมาชิกหมดอายุแล้ว"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "อัปเดตรายละเอียดการชำระเงิน"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "ออกจากระบบ"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "หมดอายุ (%1)"
+  },
+  "error_subscription_expired_title": {
+    "message": "การสมัครสมาชิกหมดอายุแล้ว"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "อัพเกรดตอนนี้"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "อัปเดตแอป "
+  },
+  "error_upgrade_app_text": {
+    "message": "ส่วนขยายนี้ต้องใช้แอป ExpressVPN เวอร์ชันล่าสุด"
+  },
+  "general_contact_support_button_label": {
+    "message": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "hint_connection_delay_text": {
+    "message": "ยังคงพยายามเชื่อมต่อ"
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต <br> VPN จะเชื่อมต่อเมื่อพร้อมใช้งาน"
+  },
+  "hint_no_internet_ready_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต <br> VPN อาจใช้งานไม่ได้"
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "การเชื่อมต่ออินเทอร์เน็ตขาดหายไป <br> VPN จะเชื่อมต่อใหม่เมื่อพร้อมใช้งาน"
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "การเชื่อมต่อลดลงโดยไม่คาดหมาย เชื่อมต่อใหม่..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "ขณะนี้ปริมาณการใช้อินเทอร์เน็ตถูกบล็อกเพื่อปกป้องความเป็นส่วนตัวของคุณ"
+  },
+  "hint_saved_text": {
+    "message": "บันทึก "
+  },
+  "home_change_location_popup_btn0": {
+    "message": "ยกเลิก"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "ดำเนินการต่อ"
+  },
+  "home_change_location_popup_text": {
+    "message": "การสมัครของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
+  },
+  "home_change_location_popup_title": {
+    "message": "เปลี่ยนสถานที่"
+  },
+  "list_item_247_support": {
+    "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
+  },
+  "list_item_30day_guarantee": {
+    "message": "การรับประกันคืนเงิน 30 วัน"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "แอปสำหรับทุกอุปกรณ์"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 ตำแหน่งทั่วโลก"
+  },
+  "list_item_refer_frieds": {
+    "message": "แนะนำเพื่อน รับ 30 วันฟรี"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "แบนด์วิดท์ไม่จำกัด"
+  },
+  "location_picker_locations_title": {
+    "message": "ตำแหน่ง VPN"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "สถานที่ล่าสุด"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "สถานที่แนะนำ"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "ไม่มีผลลัพธ์"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "ค้นหาเมืองหรือประเทศ"
+  },
+  "location_picker_smart_location_text": {
+    "message": "สถานที่อัจฉริยะ"
+  },
+  "location_picker_tab_all_text": {
+    "message": "สถานที่ทั้งหมด"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "แนะนำ"
+  },
+  "main_screen_current_location_text": {
+    "message": "สถานที่ปัจจุบัน"
+  },
+  "main_screen_recent_location_text": {
+    "message": "สถานที่ล่าสุด"
+  },
+  "main_screen_selected_location_text": {
+    "message": "ตำแหน่งที่เลือก"
+  },
+  "main_screen_smart_location_text": {
+    "message": "สถานที่อัจฉริยะ"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "เชื่อมต่อแล้ว"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "กำลังเชื่อมต่อ..."
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "กำลังยกเลิกการเชื่อมต่อ..."
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "ไม่ได้เชื่อมต่อ"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "กำลังเชื่อมต่อใหม่..."
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "กำลังใช้งานการทดสอบความเร็ว..."
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> อาจมีซอฟต์แวร์อันตรายที่สามารถลบหรือขโมยข้อมูลส่วนบุคคล (อาทิเช่น รายละเอียด ธนาคาร รูปภาพ รหัสผ่าน ข้อความ)[เรียนรู้&nbsp;เพิ่มเติม]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "อันตราย: มัลแวร์ล่วงหน้า"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "กลับสู่ความปลอดภัย"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "ดำเนินการต่อ"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "ฉันเข้าใจถึงความเสี่ยง"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "คุณแน่ใจหรือไม่?"
+  },
+  "menu_beta_feedback": {
+    "message": "ส่งข้อเสนอแนะเบต้า"
+  },
+  "menu_cancel_text": {
+    "message": "ยกเลิก"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "เริ่มต้น Firefox",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "เชื่อมต่อกับการเปิดเบราเซอร์"
+  },
+  "menu_desktop_notification_text": {
+    "message": "แสดงการแจ้งเตือนบนเดสก์ท็อป"
+  },
+  "menu_get_30_days_free": {
+    "message": "รับฟรี 30 วัน"
+  },
+  "menu_help_support": {
+    "message": "ความช่วยเหลือและการสนับสนุน"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "การแสดงความขอบคุณ"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% รุ่นของแอป: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "ข้อมูลการวินิจฉัย"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "การทดสอบการรั่วไหล DNS"
+  },
+  "menu_item_extension_version_text": {
+    "message": "เวอร์ชันส่วนขยาย: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "คำถามที่พบบ่อย"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "ตัวตรวจสอบที่อยู่ IP"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "การทดสอบการรั่วไหล WebRTC"
+  },
+  "menu_myaccount_title": {
+    "message": "บัญชี"
+  },
+  "menu_my_account": {
+    "message": "บัญชี"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "การป้องกันมัลแวร์และฟิชชิ่ง"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "บล็อก WebRTC"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS ทุกที่ "
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "หลอกล่อตำแหน่งของคุณ"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "ให้คะแนนระดับ 5 ดาว!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "บอกเราว่าจะทำอย่างไรให้ดีขึ้น"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "ครั้งหน้า"
+  },
+  "menu_ratevpn_text": {
+    "message": "เราหวังว่าคุณจะชอบใช้งาน ExpressVPN! คุณสามารถรีวิวให้เราได้หรือไม่?"
+  },
+  "menu_ratevpn_title": {
+    "message": "เพลิดเพลินกับ ExpressVPN หรือไม่?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "ให้คะแนน ExpressVPN"
+  },
+  "menu_section_about_title": {
+    "message": "เกี่ยวกับ "
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "พูดคุยกับเรา"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "แนะนำการปรับปรุง"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "รายงานปัญหา"
+  },
+  "menu_section_support_title": {
+    "message": "ได้รับการติดต่อ"
+  },
+  "menu_settings_general_header": {
+    "message": "ทั่วไป"
+  },
+  "menu_settings_general_language_header": {
+    "message": "ภาษาส่วนขยาย"
+  },
+  "menu_settings_general_language_label": {
+    "message": "ภาษา"
+  },
+  "menu_settings_general_name": {
+    "message": "การตั้งค่า"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "กำหนดค่าการตั้งค่าแอปเดสก์ท็อป"
+  },
+  "menu_settings_help_button_label": {
+    "message": "ช่วยเหลือ"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "บล็อกไซต์ที่หลอกลวงและป้องกันไม่ให้โฆษณาแอบขุด cryptocurrency"
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "ป้องกันไม่ให้เว็บไซต์ค้นพบที่อยู่ IP จริงและตำแหน่งของคุณในขณะที่เชื่อมต่อกับ VPN"
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "หยุดการกำหนดตำแหน่ง HTML5 จากการเปิดเผยสถานที่ที่มีอยู่จริงของคุณในขณะที่เชื่อมต่อกับ VPN"
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "เชื่อมต่อกับเว็บไซต์ HTTPS ที่มีความปลอดภัยมากขึ้นในกรณีที่มี"
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "เรียนรู้เพิ่มเติม"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "ความเป็นส่วนตัวและความปลอดภัย"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "การตั้งค่า"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "การตั้งค่าความเป็นส่วนตัว"
+  },
+  "menu_setup_other_devices": {
+    "message": "ตั้งค่าอุปกรณ์อื่นๆ"
+  },
+  "menu_signout_p1_text": {
+    "message": "คุณแน่ใจใช่หรือไม่? คุณจะลงชื่อออกจากแอปเดสก์ท็อป"
+  },
+  "menu_signout_text": {
+    "message": "ออกจากระบบ"
+  },
+  "message_item_rating1_title": {
+    "message": "เพลิดเพลินกับ ExpressVPN หรือไม่?"
+  },
+  "message_item_rating2_title": {
+    "message": "แจ้งให้เราทราบว่าเราสามารถปรับปรุงได้อย่างไร?"
+  },
+  "message_item_rating3_title": {
+    "message": "คุณสามารถรีวิวให้เราได้หรือไม่?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "ไม่เป็นไรขอบคุณ"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "ตกลง"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "แบ่งปัน ExpressVPN และรับบริการฟรี!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "สำหรับเพื่อนทุกคนที่สมัครใช้งาน เราจะให้พวกคุณฟรีทั้ง 30 วัน"
+  },
+  "myaccount_account_expired_label": {
+    "message": "หมดอายุ"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "หมดอายุ"
+  },
+  "myaccount_account_renews_label": {
+    "message": "ต่ออายุ"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "เปิดใช้งาน"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "หมดอายุ"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "ทดลอง"
+  },
+  "myaccount_account_status_label": {
+    "message": "สถานะบัญชี"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "การทดลองหมดอายุ"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "ทดลอง"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "การสมัครสมาชิกเริ่มต้น"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "แนะนำเพื่อน"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "ซื้อตอนนี้ "
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "ต่ออายุตอนนี้"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "อัปเกรดตอนนี้"
+  },
+  "myaccount_manage_button_label": {
+    "message": "จัดการบัญชี"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "ทำไมต้องสมัครสมาชิก?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "ทำไมต้องต่ออายุ?"
+  },
+  "notification_extension_update_message": {
+    "message": "คลิกเพื่อดูว่ามีอะไรใหม่ในรุ่น %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN อัปเดตแล้ว"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> อาจมีเนื้อหาหรือซอฟต์แวร์ที่ออกแบบมาเพื่อหลอกลวงให้คุณเปิดเผยข้อมูลส่วนบุคคล (อาทิเช่น รายละเอียด ธนาคาร รูปภาพ รหัสผ่าน ข้อความ) [เรียนรู้&nbsp;เพิ่มเติม]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "อันตราย: ฟิชชิ่งล่วงหน้า"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "การทดลองใช้ฟรีหมดอายุในอีก [days] วัน"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "การทดลองใช้ฟรีของคุณหมดอายุแล้ว"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "การทดลองใช้ฟรีหมดอายุใน [hours] ชั่วโมง  "
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "การทดลองใช้ฟรีหมดอายุภายใน <1 ชั่วโมง  "
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "อัปเกรดตอนนี้"
+  },
+  "promobar_iap_failed_header": {
+    "message": "การชำระเงินครั้งล่าสุดของคุณล้มเหลว"
+  },
+  "promobar_iap_failed_text": {
+    "message": "อัปเดตวิธีการชำระเงิน"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome ถูกแยกออกจาก VPN"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox ถูกแยกออกจาก VPN"
+  },
+  "promobar_splittunneling_text": {
+    "message": "ตรวจสอบการตั้งค่า"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "การสมัครสมาชิกหมดอายุใน [days] วัน "
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "สมาชิกของคุณหมดอายุแล้ว"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "การสมัครสมาชิกหมดอายุใน [hours] ชั่วโมง"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "สมัครสมาชิกใหม่"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "ต่ออายุตอนนี้"
+  },
+  "promobar_update_available_header": {
+    "message": "อัปเดตพร้อมใช้งาน!"
+  },
+  "promobar_update_available_text": {
+    "message": "ติดตั้งตอนนี้"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "การทดลองใช้ฟรีหมดอายุในอีก [days] วัน"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "การทดลองใช้ฟรีของคุณหมดอายุแล้ว"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "การทดลองใช้ฟรีหมดอายุใน [hours] ชั่วโมง  "
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "การทดลองใช้ฟรีหมดอายุภายใน <1 ชั่วโมง  "
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "อัพเกรดตอนนี้"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome ถูกแยกออกจาก VPN"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox ถูกแยกออกจาก VPN"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "ตรวจสอบการตั้งค่า"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "การสมัครสมาชิกหมดอายุใน [days] วัน "
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "การสมัครสมาชิกของคุณหมดอายุแล้ว"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "สมัครสมาชิกใหม่"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "การสมัครสมาชิกหมดอายุใน [hours] ชั่วโมง"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "การสมัครรับข้อมูลหมดอายุภายใน <1 ชั่วโมง"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "ต่ออายุตอนนี้"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "เชื่อมต่อ VPN แล้ว"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "เชื่อมต่อกับ %s"
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "กำลังเชื่อมต่อ VPN..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN ไม่สามารถเชื่อมต่อได้"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "ไม่สามารถเชื่อมต่อกับ %s"
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "ไม่สามารถเชื่อมต่อกับ %s การจราจรทางอินเทอร์เน็ตถูกบล็อก"
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "ถึงขีดจำกัดการเชื่อมต่อแล้ว"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "โปรดถอดอุปกรณ์หรือซื้อการสมัครสมาชิกข้อมูลเพิ่มเติม"
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "กำลังเชื่อมต่อ VPN..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "กำลังเชื่อมต่อใหม่กับ %s"
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "กำลังเชื่อมต่อใหม่ไปยัง %s การจราจรทางอินเทอร์เน็ตถูกบล็อก"
+  },
+  "welcome_continue_button_label": {
+    "message": "ดำเนินการต่อ"
+  },
+  "welcome_get_started_button_label": {
+    "message": "เริ่มต้น"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ส่วนขยาย ExpressVPN เป็นรีโมทคอนโทรลสำหรับแอปเดสก์ท็อป"
+  },
+  "welcome_screen2_p1_text": {
+    "message": "เมื่อคุณเชื่อมต่อกับ VPN มันจะปกป้องอุปกรณ์ทั้งหมดของคุณไม่ใช่เฉพาะเบราว์เซอร์"
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "เรียนรู้เพิ่มเติม"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "ส่วนขยายจะหลอกลวงตำแหน่งของคุณบล็อก WebRTC และรวม HTTPS ทุกที่"
+  },
+  "welcome_skip_button_label": {
+    "message": "ข้าม"
+  }
+}

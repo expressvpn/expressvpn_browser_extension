@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "プライバシー、セキュリティ、そしてスピード。Chromeから直接ExpressVPNアプリを操作して、あなたの場所を偽装し、どこからでもコンテンツにアクセスしましょう。",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "プライバシー、セキュリティ、そしてスピード。Firefoxから直接ExpressVPNアプリを操作して、あなたの場所を偽装し、どこからでもコンテンツにアクセスしましょう。",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN：すべてのブロックを解除するVPNプロキシ",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "または、アイコンを右クリックし、「Chromeメニューに隠す」を選択することで拡張機能を隠すことができます。"
+  },
+  "error_@firefox@_hide_text": {
+    "message": "または、アイコンを右クリックし、「ツールバーから削除」または「メニューに移動」を選択することで拡張機能を隠すことができます。"
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "サブスクリプションを購入"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "ヘルプが必要ですか？[サポートにお問い合わせ]ください。"
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Linuxアプリをダウンロード"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Macアプリをダウンロード"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Windowsアプリをダウンロード"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "ExpressVPNの新規ユーザーですか？[はじめる]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "GoogleプレイストアからExpressVPNアプリをインストールしてください。"
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "この拡張機能は、有効なサブスクリプションを持つLinux版ExpressVPNアプリが必要です。"
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "この拡張機能は、有効なサブスクリプションを持つMac版ExpressVPNアプリが必要です。"
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "この拡張機能は、有効なサブスクリプションを持つWindows版ExpressVPNアプリが必要です。"
+  },
+  "error_btnReturnHome_default": {
+    "message": "ホームに戻る"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "ご質問がある場合、[サポートにお問い合わせ]ください。"
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "サインアウト"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "失効(%1)。"
+  },
+  "error_business_subscription_expired_text": {
+    "message": "新しいビジネス用のサブスクリプションを購入するにはアカウントの所有者にお問い合わせください。"
+  },
+  "error_business_subscription_expired_title": {
+    "message": "サブスクリプションが失効しています"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "または、アイコンを右クリックし、「Chromeメニューに隠す」を選択することで拡張機能を隠すことができます。"
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "または、アイコンを右クリックし、「ツールバーから削除」または「メニューに移動」を選択することで拡張機能を隠すことができます。"
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "この拡張機能は現在<b>macOS 10.10 / Windows 7</b>、最新版のみで利用可能です。"
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "拡張機能を使用するために、オペレーティングシステムをアップデートしてください。"
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "詳細"
+  },
+  "error_compatibility_error_title": {
+    "message": "オペレーティングシステムをアップデート"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "インターネット接続を確認"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "違う[VPNロケーション]を選択"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "問題が解決されない場合は、[サポートにご連絡ください]。"
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "プライバシー保護のためトラフィックは現在ブロックされています。"
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "ホームに戻る"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "キャンセル"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "インターネットのブロック解除"
+  },
+  "error_connection_error_title": {
+    "message": "接続エラー"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "<br>%LOCATION%に接続できません"
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "再度試す"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "既に購入しましたか？[今すぐアップグレードする]。"
+  },
+  "error_forced_signout_p1_text": {
+    "message": "アカウント情報が更新されたためサインアウトしました。"
+  },
+  "error_forced_signout_p2_text": {
+    "message": "ExpressVPNを使用し続けるには再度サインインしてください。"
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "サインイン"
+  },
+  "error_forced_signout_title": {
+    "message": "ExpressVPNにサインイン"
+  },
+  "error_fraudster_hint": {
+    "message": "決済情報を確認できなかったため、お支払いがキャンセルされました。"
+  },
+  "error_fraudster_p1_text": {
+    "message": "サブスクリプションを再有効化するには、以下のメールアドレス宛にメールしてください："
+  },
+  "error_fraudster_p2_text": {
+    "message": "題名： <span class='bold'>Billing Verification</span>。"
+  },
+  "error_fraudster_p3_text": {
+    "message": "決済に使用したクレジットカードの写真を添付してください(カード番号の最後の4桁と名前のみ)。"
+  },
+  "error_fraudster_p4_text": {
+    "message": "電話番号 (国コード含む) とご都合の良い日時をご記入ください。"
+  },
+  "error_fraudster_p5_text": {
+    "message": "経理チームが24~48時間以内にお返事します。"
+  },
+  "error_fraudster_question1_text": {
+    "message": "クレジットカード払いしましたか？"
+  },
+  "error_fraudster_question2_text": {
+    "message": "クレジットカード払いしていませんか？"
+  },
+  "error_fraudster_title": {
+    "message": "アカウントの一時停止"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "無料トライアルの有効期限が切れていますが、簡単に再度接続できます。"
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "アップグレードするメリット"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "アクティベーションコードを入力"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "全デバイスに対応のアプリ"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30日間返金保証"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "全世界160ヵ所のロケーション"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "24時間カスタマーサポート"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "無制限の帯域幅"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "失効(%1)。"
+  },
+  "error_free_trial_expired_title": {
+    "message": "無料トライアル終了"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "今すぐアップグレード"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "サブスクリプションを購入"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "サインアウト"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "無料トライアル終了"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "お支払い情報を更新"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "サインアウト"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "ExpressVPNを使用し続けるには、お持ちのiTunes / App Storeのアカウントの決済情報を更新してください。"
+  },
+  "error_IAP_MAIN_title": {
+    "message": "お支払いの失敗"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPNは、情報が更新された後30分以内に自動的に有効化されます。"
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "デスクトップアプリをアクティベートするには、このコマンドをご使用の端末で実行してください："
+  },
+  "error_not_activated_text": {
+    "message": "この拡張機能を使用するには、ExpressVPNのデスクトップアプリにサインインしてください。"
+  },
+  "error_not_activated_title": {
+    "message": "アプリが有効化されていません"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "お使いのChromebookでプレイストアが利用不可能な場合は、[手動設定]手順に従ってください。"
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ExpressVPNのインストール"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "お問い合わせ"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OSはサポートされていません",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "デスクトップアプリをインストール"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "サブスクリプションを再購入"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "アプリがインストールされていません"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "この拡張機能を使用するにはExpressVPNアプリが必要です。"
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "この拡張機能を使用するにはExpressVPNアプリの実行が必要です。"
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "お問い合わせ"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "デスクトップアプリを開く"
+  },
+  "error_open_app_title": {
+    "message": "アプリを開けません"
+  },
+  "error_signout_button": {
+    "message": "サインアウト"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "キャンセル"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "詳細"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "このサブスクリプションでのExpressVPNの接続上限を超えています。"
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "デバイスを1台切断するか、「追加のサブスクリプション」をご購入ください。"
+  },
+  "error_simultaneous_connection_title": {
+    "message": "接続上限に達しています。"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "お支払い情報を更新"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "あとで"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "サブスクリプションが失効していますが、簡単に再接続できます。"
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "更新するメリット"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "新しいサブスクリプションを購入"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "アクティベーションコードを入力"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "全デバイスに対応のアプリ"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "お友達を紹介して、30日間無料サービスを獲得"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "全世界160ヵ所のロケーション"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "24時間カスタマーサポート"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "サブスクリプションを再購入"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "サインアウト"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "失効したサブスクリプション"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "お支払い情報を更新"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "サインアウト"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "失効 (%1)。"
+  },
+  "error_subscription_expired_title": {
+    "message": "失効したサブスクリプション"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "今すぐアップデート"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "アプリをアップデート"
+  },
+  "error_upgrade_app_text": {
+    "message": "この拡張機能を使用するには、最新バージョンのExpressVPNアプリが必要です。"
+  },
+  "general_contact_support_button_label": {
+    "message": "サポートに問い合わせる"
+  },
+  "hint_connection_delay_text": {
+    "message": "しばらくお待ちください…"
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "インターネット接続を検出できません。見つかり次第、VPNは接続されます。"
+  },
+  "hint_no_internet_ready_text": {
+    "message": "インターネット接続を検出できません。<br>VPNを使用できない場合があります。"
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "インターネット接続がありません。<br>利用可能になり次第VPNは再接続されます。"
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "接続が予期せず切断されました。再接続中…"
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "プライバシー保護のためインターネット通信はブロックされました。"
+  },
+  "hint_saved_text": {
+    "message": "保存しました"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "キャンセル"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "続行"
+  },
+  "home_change_location_popup_text": {
+    "message": "再接続中に、インターネットトラフィックの保護が不十分になる可能性があります。"
+  },
+  "home_change_location_popup_title": {
+    "message": "ロケーションの変更"
+  },
+  "list_item_247_support": {
+    "message": "24時間体制のカスタマーサポート"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30日間返金保証"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "すべてのデバイスに対応のアプリ"
+  },
+  "list_item_locations_worldwide": {
+    "message": "全世界160カ所のロケーション"
+  },
+  "list_item_refer_frieds": {
+    "message": "お友達を紹介して、30日間無料サービスを獲得"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "無制限の帯域幅"
+  },
+  "location_picker_locations_title": {
+    "message": "VPNロケーション"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "最近の接続先"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "おすすめのロケーション"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "該当なし"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "国または都市を検索"
+  },
+  "location_picker_smart_location_text": {
+    "message": "スマートロケーション"
+  },
+  "location_picker_tab_all_text": {
+    "message": "すべてのロケーション"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "おすすめ"
+  },
+  "main_screen_current_location_text": {
+    "message": "現在のロケーション"
+  },
+  "main_screen_recent_location_text": {
+    "message": "最近の接続先"
+  },
+  "main_screen_selected_location_text": {
+    "message": "選択中のロケーション"
+  },
+  "main_screen_smart_location_text": {
+    "message": "スマートロケーション"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "接続完了"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "接続中"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "切断中"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "未接続"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "再接続中"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "速度テストを実行中"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span>個人情報 (金融情報、写真、パスワード、メッセージなど) を削除または盗む危険なソフトウェアを含む可能性があります。[Learn&nbsp;more]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "危険：マルウェアがある可能性あり"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Safetyに戻る"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "続行"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "リスクを理解しています"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "よろしいですか？"
+  },
+  "menu_beta_feedback": {
+    "message": "ベータフィードバックを送信"
+  },
+  "menu_cancel_text": {
+    "message": "キャンセル"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefoxの起動",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "ブラウザ起動に接続"
+  },
+  "menu_desktop_notification_text": {
+    "message": "デスクトップ通知を表示"
+  },
+  "menu_get_30_days_free": {
+    "message": "30日間無料サービスを獲得"
+  },
+  "menu_help_support": {
+    "message": "ヘルプ＆サポート"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "ライセンス"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS%アプリバージョン：%VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "サポートに問い合わせ"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "診断情報"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS漏れテスト"
+  },
+  "menu_item_extension_version_text": {
+    "message": "拡張機能バージョン：%VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "よくある質問"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IPアドレスチェッカー"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC漏れテスト"
+  },
+  "menu_myaccount_title": {
+    "message": "アカウント"
+  },
+  "menu_my_account": {
+    "message": "アカウント"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "マルウェア＆フィッシング保護"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "WebRTCをブロック"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "ロケーションを隠す"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "星5つをつける！"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "ご意見をお聞かせください"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "あとで"
+  },
+  "menu_ratevpn_text": {
+    "message": "ExpressVPNにご満足いただけましたか？レビューにご協力ください。"
+  },
+  "menu_ratevpn_title": {
+    "message": "ExpressVPNにご満足ですか？"
+  },
+  "menu_rate_expressvpn": {
+    "message": "ExpressVPNの評価"
+  },
+  "menu_section_about_title": {
+    "message": "詳細"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "お問い合わせ\n"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "改善を提案する"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "問題を報告する"
+  },
+  "menu_section_support_title": {
+    "message": "お問い合わせ"
+  },
+  "menu_settings_general_header": {
+    "message": "一般"
+  },
+  "menu_settings_general_language_header": {
+    "message": "拡張機能言語"
+  },
+  "menu_settings_general_language_label": {
+    "message": "言語"
+  },
+  "menu_settings_general_name": {
+    "message": "設定"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "デスクトップアプリの設定を構成"
+  },
+  "menu_settings_help_button_label": {
+    "message": "ヘルプ"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "詐欺ページをブロックし、密かにマイニングを行なっている広告を防止します。"
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "VPNに接続中に、ウェブサイトが実際のIPアドレスやアクセス場所を見つけるのを防止します。"
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "VPNに接続中にHTML5ジオロケーションが実際のアクセス場所を公開することを防止します。"
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "安全性が高いHTTPSバージョンのウェブサイトに自動で接続します。"
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "詳細"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "プライバシー＆セキュリティ"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "設定"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "プライバシー設定"
+  },
+  "menu_setup_other_devices": {
+    "message": "他のデバイスを設定"
+  },
+  "menu_signout_p1_text": {
+    "message": "デスクトップアプリからサインアウトします。よろしいですか？"
+  },
+  "menu_signout_text": {
+    "message": "サインアウト"
+  },
+  "message_item_rating1_title": {
+    "message": "ExpressVPNにご満足ですか？"
+  },
+  "message_item_rating2_title": {
+    "message": "改善にご協力いただけますか？"
+  },
+  "message_item_rating3_title": {
+    "message": "レビューを残していただけませんか？"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "いいえ"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "OK"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "ExpressVPNを紹介して無料サービスを獲得しましょう！"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "お友達が登録する毎に、30日間無料サービスをプレゼントします！"
+  },
+  "myaccount_account_expired_label": {
+    "message": "失効"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "有効期限"
+  },
+  "myaccount_account_renews_label": {
+    "message": "更新"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "有効"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "失効"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "トライアル"
+  },
+  "myaccount_account_status_label": {
+    "message": "ステータス"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "トライアル失効"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "トライアル"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "サブスクリプション開始"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "お友達紹介"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "今すぐ購入"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "今すぐ更新"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "今すぐアップグレード"
+  },
+  "myaccount_manage_button_label": {
+    "message": "アカウントを管理する"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "サブスクリプションに含まれるもの"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "更新するメリット"
+  },
+  "notification_extension_update_message": {
+    "message": "バージョン%VERSION%の最新情報を確認するにはクリック"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPNアップデート"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span>個人情報 (金融情報、写真、パスワード、メッセージなど) を公開させるコンテンツまたはソフトウェアを含む可能性があります。[Learn&nbsp;more]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "危険：フィッシングがある可能性あり"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "無料トライアルは[days]日後に失効"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "無料トライアル失効"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "無料トライアルは[hours]時間後に失効"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "無料トライアルは1時間以内に失効"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "今すぐアップグレード"
+  },
+  "promobar_iap_failed_header": {
+    "message": "前回の支払い失敗"
+  },
+  "promobar_iap_failed_text": {
+    "message": "お支払い方法を更新"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "ChromeはVPNから除外されました"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "FirefoxはVPNから除外されました"
+  },
+  "promobar_splittunneling_text": {
+    "message": "設定を確認"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "サブスクリプションは[days]日後に失効"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "サブスクリプションが失効しました"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "サブスクリプションは[hours]時間後に失効"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "新しいサブスクリプションの取得"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "今すぐ更新"
+  },
+  "promobar_update_available_header": {
+    "message": "アップデートが利用可能です！"
+  },
+  "promobar_update_available_text": {
+    "message": "今すぐインストール"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "無料トライアルは[days]日後に失効します"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "無料トライアル失効"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "無料トライアルは[hours]時間後に失効します"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "無料トライアルは1時間以内に失効します"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "今すぐアップグレード"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "ChromeはVPNから除外されました"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "FirefoxはVPNから除外されました"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "設定を確認"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "サブスクリプションは[days]日後に失効します"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "サブスクリプションが失効しました"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "新しいサブスクリプションを購入"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "サブスクリプションは[hours]時間後に失効します"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "サブスクリプションは1時間以内に失効します"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "今すぐ更新"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN接続完了"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "%sに接続しています。"
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN接続中…"
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN接続エラー"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "%sに接続できません。"
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "%sに接続できません。インターネット通信はブロックされました。"
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "接続上限オーバー"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "デバイスを1台切断するか、追加のサブスクリプションをご購入ください。"
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN接続中…"
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "%sに接続しています。"
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "%sに接続中です。インターネット通信はブロックされました。"
+  },
+  "welcome_continue_button_label": {
+    "message": "続行"
+  },
+  "welcome_get_started_button_label": {
+    "message": "開始する"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ExpressVPNの拡張機能でデスクトップアプリの遠隔操作ができます。"
+  },
+  "welcome_screen2_p1_text": {
+    "message": "VPNに接続している間、ブラウザだけでなく、デバイス全体が保護されます。"
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "詳細"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "拡張機能はどこにいてもHTTPSを含み、あなたの場所を偽装し、WebRTCをブロックします。"
+  },
+  "welcome_skip_button_label": {
+    "message": "スキップ"
+  }
+}

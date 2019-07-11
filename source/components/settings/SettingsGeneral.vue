@@ -37,20 +37,6 @@ Licensed GPL v2
           </div>
         </div>
       </div>
-      <div class="setting-group only-for-alpha-builds">
-        <div class="setting-option-container">
-          <label for="ratingPeriodicity">Periodicity</label>
-          <select name="ratingPeriodicity" id="ratingPeriodicity" v-model="prefs.ratingPeriodicity"><!-- Value is in seconds -->          
-            <option v-bind:value="300">5 minutes</option>
-            <option v-bind:value="86400">Every day</option>
-          </select>
-        </div>
-        <div class="opt-description">Successful Connections: <b>{{ successfulConnections }}</b></div>
-        <div class="opt-description">Activated: <b>{{ activatedDate }}</b></div>
-        <div class="opt-description">successfulConnection: <b>{{ isSuccessfulConnection }}</b></div>
-        <div class="opt-description">PreviousConnectionTime: <b>{{ previousConnectionTime }}</b> minutes</div>
-        <div class="opt-description">Last Review: <b>{{ lastReviewDate }}</b></div>
-      </div>
       <transition name="slide-fade" >
         <toast message="hint_saved_text" v-if="isSaving"></toast>
       </transition>
@@ -87,9 +73,7 @@ export default {
         if (this.isMounting === true) { // skip the semi-initial assignment
           return;
         }
-        let self = this;
         this.triggerSaveAnimation();
-        self.rating.updateRatingMessageConditions(newVal.ratingPeriodicity);
         chrome.storage.local.set({ 'prefs': Object.assign({}, newVal) }, function () {
           chrome.runtime.sendMessage({ updateExtensionSettings: true });
         });
@@ -137,14 +121,6 @@ export default {
             }
           }
         }
-      }
-      let ratingValue = storage.rating;
-      self.successfulConnections = ratingValue.successfulConnections;
-      self.activatedDate = new Date(ratingValue.activatedDate * 1000);
-      self.isSuccessfulConnection = ratingValue.isSuccessfulConnection;
-      self.previousConnectionTime = Math.round(ratingValue.previousConnectionTime / 60);
-      if (ratingValue.lastReviewDate > ratingValue.activatedDate) {
-        self.lastReviewDate = new Date(ratingValue.lastReviewDate * 1000);
       }
     });
 

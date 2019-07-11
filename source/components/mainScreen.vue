@@ -5,20 +5,14 @@ Licensed GPL v2
 -->
 <template>
 <div id="mainScreen" :class="currentContainer">
-    <!--
-    <notification></notification>
-    <div class="header" id="header" :class="[{ 'errorState': errorStates.includes(currentInfo.state)  }, currentInfo.state]">
-      <div id="settingsIcon" :class="[{ invisible: errorStates.concat(['NOT_INSTALLED']).includes(currentInfo.state)  }, currentInfo.state]" @click="menuIconClick"></div>
-      <div v-if="errorStates.concat(['NOT_INSTALLED']).includes(currentInfo.state)" class="longLogo"></div>
-    </div>
-    -->
-    <component :is="currentContainer"></component>
+  <component :is="currentContainer"></component>
 </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import home from './home.vue';
 import errorContainer from './errors/errorContainer.vue';
+import welcome from './welcome.vue';
 
 export default {
   name: 'mainScreen',
@@ -33,13 +27,14 @@ export default {
   components: {
     home,
     errorContainer,
+    welcome,
   },
   computed: {
     ...mapGetters([
       'currentInfo',
     ]),
     currentContainer() {
-      return this.$store.getters.currentContainer;
+      return this.currentInfo.showWelcome ? 'welcome' : this.$store.getters.currentContainer;
     },
   },
   methods: {

@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Datenschutz, Sicherheit und Geschwindigkeit. Steuern Sie die ExpressVPN-App direkt von Chrome aus, täuschen Sie Ihren Standort und greifen Sie überall auf Inhalte zu.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Datenschutz, Sicherheit und Geschwindigkeit. Steuern Sie die ExpressVPN-App direkt von Firefox aus, täuschen Sie Ihren Standort und greifen Sie überall auf Inhalte zu.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN-Proxy, um alles zu entsperren.",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "Alternativ können Sie die Erweiterung ausblenden, indem Sie mit der rechten Maustaste auf das Symbol klicken und \"Im Chrome-Menü verbergen\" auswählen."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "Alternativ können Sie die Erweiterung ausblenden, indem Sie mit der rechten Maustaste auf das Symbol klicken und \"Aus der Toolbar entfernen\" oder \"Ins Menü verschieben\" auswählen."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Ein Abo erwerben"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Sie benötigen Hilfe? Bitte [kontaktieren Sie den Support]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Linux App herunterladen"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Mac App herunterladen"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Windows App herunterladen"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "Neu bei ExpressVPN? [Erste Schritte]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Bitte laden Sie ExpressVPN im Google Play Store herunter."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Für diese Erweiterung ist die ExpressVPN App für Linux mit einem aktiven Abonnement erforderlich."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Für diese Erweiterung ist die ExpressVPN App für Mac mit einem aktiven Abonnement erforderlich."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Für diese Erweiterung ist die ExpressVPN App für Windows mit einem aktiven Abonnement erforderlich."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Zurück zum Start"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Haben Sie Fragen, [kontaktieren Sie bitte den Support]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Abmelden"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Abgelaufen (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Bitte wenden Sie sich an den Kontoinhaber, um ein neues Geschäftsabo zu erwerben."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Abo abgelaufen"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "Alternativ können Sie die Erweiterung ausblenden, indem Sie mit der rechten Maustaste auf das Symbol klicken und \"Im Chrome-Menü verbergen\" auswählen."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "Alternativ können Sie die Erweiterung ausblenden, indem Sie mit der rechten Maustaste auf das Symbol klicken und \"Aus der Toolbar entfernen\" oder \"Ins Menü verschieben\" auswählen."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "Diese Erweiterung ist derzeit nur verfügbar für <b>macOS 10.10 / Windows 7</b> und höher."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Bitte aktualisieren Sie Ihr Betriebssystem, um die Erweiterung zu nutzen."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Mehr erfahren"
+  },
+  "error_compatibility_error_title": {
+    "message": "Betriebssystem aktualisieren"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "Prüfen Sie Ihre Internetverbindung"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Wählen Sie einen anderen [VPN-Standort]"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Wenn nichts funktioniert, [kontaktieren Sie den Support]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "Der Internetverkehr ist derzeit gesperrt, um Ihre Privatsphäre zu schützen."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Zurück zum Start"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "Abbrechen"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "Internet freischalten"
+  },
+  "error_connection_error_title": {
+    "message": "Verbindung nicht möglich"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "Verbindung mit <br>%LOCATION% nicht möglich"
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Erneut versuchen"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Sie haben bereits ein Konto? [Jetzt updaten]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Sie wurden abgemeldet, weil Ihre Kontodaten aktualisiert wurden."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "Um ExpressVPN weiterhin nutzen zu können, melden Sie sich bitte erneut an."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Einloggen"
+  },
+  "error_forced_signout_title": {
+    "message": "Anmelden für ExpressVPN"
+  },
+  "error_fraudster_hint": {
+    "message": "Wir konnten Ihre Zahlungsdaten nicht verifizieren und haben die Zahlung storniert."
+  },
+  "error_fraudster_p1_text": {
+    "message": "Um Ihr Abonnement zu reaktivieren, <br>bitte senden Sie eine E-Mail an"
+  },
+  "error_fraudster_p2_text": {
+    "message": "Betreff: <span class='bold'>Billing Verification</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "Bitte fügen Sie ein Foto der verwendeten Kreditkarte hinzu (NUR letzte 4 Ziffern & Name erkenntlich)."
+  },
+  "error_fraudster_p4_text": {
+    "message": "Bitte geben Sie Ihre Telefonnummer (mit Landesvorwahl) und die beste Zeit an, zu der wir Sie anrufen können."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Das Rechnungsstellungs-Team wird binnen 24-48 Stunden antworten."
+  },
+  "error_fraudster_question1_text": {
+    "message": "Sie haben per Kreditkarte bezahlt?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Sie haben nicht per Kreditkarte bezahlt?"
+  },
+  "error_fraudster_title": {
+    "message": "Konto gesperrt"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Ihre kostenlose Probeversion ist abgelaufen. Sie können sich jedoch leicht wieder verbinden."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Warum upgraden?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Aktivierungscode eingeben"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Apps für jedes Gerät"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30-Tage Geld-zurück-Garantie"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "160 Standorte weltweit"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "Support rund um die Uhr"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Unbegrenzte Bandbreite"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Abgelaufen (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Probeversion abgelaufen"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Jetzt upgraden"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Abonnement erwerben"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Abmelden"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Probeversion abgelaufen"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Zahlung aktualisieren"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Abmelden"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "Um ExpressVPN weiterhin nutzen zu können, aktualisieren Sie bitte die Zahlungsdaten in Ihrem Konto im iTunes / App Store."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Zahlung fehlgeschlagen"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN wird automatisch innerhalb von 30 Minuten nach der Aktualisierung Ihrer Daten aktiviert."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Bitte führen Sie diesen Befehl in Ihrer Kommandozeile aus, um die Desktop-App zu aktivieren:"
+  },
+  "error_not_activated_text": {
+    "message": "Bitte melden Sie sich in der ExpressVPN Desktop-App an, um diese Erweiterung zu nutzen."
+  },
+  "error_not_activated_title": {
+    "message": "App nicht aktiviert"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Ist Play Store auf Ihrem Chromebook nicht verfügbar, folgen Sie bitte unseren Anleitungen zur [manuellen Konfiguration]."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ExpressVPN-App installieren"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Support kontaktieren"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS nicht unterstützt",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Desktop-App installieren"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Neues Abo erwerben"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "App nicht installiert"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Für diese Erweiterung muss die ExpressVPN App in Betrieb sein."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Für diese Erweiterung muss die ExpressVPN App in Betrieb sein."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Support kontaktieren"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Desktop-App öffnen"
+  },
+  "error_open_app_title": {
+    "message": "App nicht aktiviert"
+  },
+  "error_signout_button": {
+    "message": "Abmelden"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "Abbrechen"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Mehr erfahren"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "Sie haben ExpressVPNs Beschränkung zur Gerätenutzung für dieses Abonnement überschritten."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Bitte trennen Sie ein Gerät oder [purchase an additional subscription]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Höchstgrenze erreicht."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Zahlungsdetails aktualisieren"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Später"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Ihr Abonnement ist abgelaufen. Es ist jedoch einfach, sich wieder zu verbinden!"
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Warum verlängern?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Neues Abo erwerben"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Aktivierungscode eingeben"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Apps für jedes Gerät"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "Freunde empfehlen, 30 Tage kostenlos erhalten"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "160 Standorte weltweit"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "Support rund um die Uhr"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Neues Abo erwerben"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Abmelden"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Abo  abgelaufen"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Zahlung aktualisieren"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Abmelden"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Abgelaufen (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Abonnement abgelaufen"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Jetzt aktualisieren"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "App aktualisieren"
+  },
+  "error_upgrade_app_text": {
+    "message": "Für diese Erweiterung wird die neueste Version der ExpressVPN App benötigt. "
+  },
+  "general_contact_support_button_label": {
+    "message": "Support kontaktieren"
+  },
+  "hint_connection_delay_text": {
+    "message": "Verbindet..."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Internetverbindung kann nicht erkannt werden.<br>Das VPN verbindet sich, sobald dies möglich ist."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Internetverbindung kann nicht erkannt werden.<br>VPN ist möglicherweise nicht verfügbar."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Die Internetverbindung wurde unterbrochen. <br>Das VPN verbindet sich wieder, sobald dies möglich ist."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Verbindung unerwartet abgebrochen. Verbindet..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "Der Internetverkehr ist jetzt zu Ihrem Schutz blockiert."
+  },
+  "hint_saved_text": {
+    "message": "Gespeichert"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "Abbrechen"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Weiter"
+  },
+  "home_change_location_popup_text": {
+    "message": "Ihr Internetverkehr kann während der Verbindungsherstellung ungeschützt sein."
+  },
+  "home_change_location_popup_title": {
+    "message": "Standort ändern"
+  },
+  "list_item_247_support": {
+    "message": "Support rund um die Uhr"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30-Tage Geld-zurück-Garantie"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Apps für jedes Gerät"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 Standorte weltweit"
+  },
+  "list_item_refer_frieds": {
+    "message": "Freunde werben, 30 Tage kostenlos erhalten"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Unbegrenzte Bandbreite"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN-Standorte"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Kürzliche Standorte"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Empfohlene Standorte"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "KEINE ERGEBNISSE"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Land oder Stadt suchen"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Auto-Standort"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Alle Standorte"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Empfohlen"
+  },
+  "main_screen_current_location_text": {
+    "message": "Aktueller Standort"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Kürzlicher Standort"
+  },
+  "main_screen_selected_location_text": {
+    "message": "Ausgewählter Standort"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Smart Location"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "Verbunden"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Verbindet"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Wird getrennt"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "Nicht verbunden"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Verbindet neu"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Geschwindigkeitstest läuft"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> kann schädliche Software enthalten, die Ihre persönlichen Daten (wie Bankdetails, Fotos, Passwörter un Nachrichten) löschen oder stehlen könnten. [Mehr&nbsp;erfahren]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Gefahr: Malware im Anmarsch"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Zurück zu Sicherheit"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Dennoch fortfahren"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Ich verstehe die Risiken"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Sind Sie sicher?"
+  },
+  "menu_beta_feedback": {
+    "message": "Beta-Feedback senden"
+  },
+  "menu_cancel_text": {
+    "message": "Abbrechen"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox-Start",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Beim Browser-Start verbinden"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Desktop-Benachrichtigungen"
+  },
+  "menu_get_30_days_free": {
+    "message": "Erhalten Sie 30 Tage gratis"
+  },
+  "menu_help_support": {
+    "message": "Hilfe & Support"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Haftungsausschluss"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% App-Version: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Support kontaktieren"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Diagnosedaten"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS-Lecktest"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Version der Erweiterung: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "FAQ (Häufige Fragen)"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP-Adressprüfung"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC-Lecktest"
+  },
+  "menu_myaccount_title": {
+    "message": "Konto"
+  },
+  "menu_my_account": {
+    "message": "Konto"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Schutz vor Malware & Phishing"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "WebRTC sperren"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Standort vortäuschen"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "Bewerten Sie mit 5 Sternen!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Sagen Sie uns, was wir besser machen können"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Später"
+  },
+  "menu_ratevpn_text": {
+    "message": "Wir hoffen, dass Sie mit der Nutzung von ExpressVPN zufrieden sind! Würden Sie eine Bewertung hinterlassen?"
+  },
+  "menu_ratevpn_title": {
+    "message": "Ihnen gefällt ExpressVPN?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "ExpressVPN bewerten"
+  },
+  "menu_section_about_title": {
+    "message": "Über die App"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Kontaktieren Sie uns"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Einen Verbesserungsvorschlag machen"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Ein Problem berichten"
+  },
+  "menu_section_support_title": {
+    "message": "Kontakt"
+  },
+  "menu_settings_general_header": {
+    "message": "Allgemein"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Sprache der Erweiterung"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Sprache"
+  },
+  "menu_settings_general_name": {
+    "message": "Einstellungen"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Desktop-App konfigurieren"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Hilfe"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Sperren Sie betrügerische Webseiten und verhindern Sie, dass Anzeigen heimlich Kryptowährung schürfen."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "Verhindern Sie, dass Webseiten Ihre wahre IP-Adresse und Ihren Standort entdecken, während Sie mit dem VPN verbunden sind."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "Verhindern Sie mit einer bestehenden VPN-Verbindung, dass HTML-basierte Geolokalisierung Ihre physischen Daten offenlegt."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Verbinden Sie sich automatisch mit der sichereren HTTPS-Version von Webseiten, sofern verfügbar."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Mehr erfahren"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Datenschutz & Sicherheit"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Einstellungen"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Datenschutzeinstellungen"
+  },
+  "menu_setup_other_devices": {
+    "message": "Andere Geräte einrichten"
+  },
+  "menu_signout_p1_text": {
+    "message": "Sind Sie sicher? Sie werden auch von der Desktop-App abgemeldet."
+  },
+  "menu_signout_text": {
+    "message": "Abmelden"
+  },
+  "message_item_rating1_title": {
+    "message": "Ihnen gefällt ExpressVPN?"
+  },
+  "message_item_rating2_title": {
+    "message": "Wie können wir uns verbessern?"
+  },
+  "message_item_rating3_title": {
+    "message": "Würden Sie eine Bewertung hinterlassen?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Nein, danke"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "OK"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "Teilen Sie ExpressVPN mit Ihren Freunden und erhalten Sie kostenlosen Service."
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "Für jeden Freund, der sich anmeldet, geben wir Ihnen beiden 30 Tage gratis."
+  },
+  "myaccount_account_expired_label": {
+    "message": "Abgelaufen"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Läuft ab"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Verlängert"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Aktiv"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Abgelaufen"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Probeversion"
+  },
+  "myaccount_account_status_label": {
+    "message": "Kontostatus"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Probeversion abgelaufen"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Probeversion"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Abo beginnt"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Freunde werben"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Jetzt kaufen"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Jetzt verlängern"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Jetzt upgraden"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Konto verwalten"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Wofür ein neues Abo?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Warum verlängern?"
+  },
+  "notification_extension_update_message": {
+    "message": "Klicken Sie hier, um zu sehen, was es Neues in der Version %VERSION% gibt."
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN wurde aktualisiert"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> kann Inhalte oder Software enthalten, die Sie zur Preisgabe von persönlichen Daten bewegen sollen (z. B. Bankdaten, Fotos, Passwörter, Nachrichten). [Mehr&nbsp;erfahren]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Gefahr: Phishing im Anmarsch"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Testversion läuft in [days] Tagen ab"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Kostenlose Testversion ist abgelaufen"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "Testversion läuft in [hours] Stunden ab"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "Testversion läuft in <1 Stunde ab"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Jetzt upgraden"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Ihre letzte Zahlung ist fehlgeschlagen"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Zahlungsmethode aktualisieren"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome ist vom VPN ausgeschlossen"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox ist vom VPN ausgeschlossen"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Einstellungen prüfen"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Abonnement läuft in [days] Tagen ab"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Ihr Abo ist abgelaufen"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Abonnement läuft in [hours] Stunden ab"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Neues Abo erhalten"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Jetzt erneuern"
+  },
+  "promobar_update_available_header": {
+    "message": "Neue Version verfügbar!"
+  },
+  "promobar_update_available_text": {
+    "message": "Jetzt installieren"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Testversion läuft in [days] Tagen ab"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Kostenlose Testversion ist abgelaufen"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Testversion läuft in [hours] Stunden ab"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "Testversion läuft in <1 Stunden ab"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Jetzt upgraden"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome ist vom VPN ausgeschlossen"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox ist vom VPN ausgeschlossen"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Einstellungen prüfen"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Abonnement läuft in [days] Tagen ab"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Ihr Abonnement ist abgelaufen"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Neues Abo erwerben"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Abonnement läuft in [hours] Stunden ab"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "Abonnement läuft in <1 Stunde ab"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Jetzt verlängern"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "Verbunden"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "Verbunden mit %s."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "Verbindet..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN kann sich nicht verbinden"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "Verbindung mit %s nicht möglich."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "Kann nicht mit %s verbinden. Internetverkehr gesperrt.\n"
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Höchstgrenze erreicht"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Bitte trennen Sie ein Gerät oder erwerben Sie ein zusätzliches Abonnement."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "Verbindet..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "Verbindet mit %s."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "Wiederherstellung der Verbindung mit %s. Internetverkehr gesperrt."
+  },
+  "welcome_continue_button_label": {
+    "message": "Weiter"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Los geht's"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "Die ExpressVPN-Erweiterung ist eine Fernbedienung für die Desktop-App."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "Wenn Sie mit dem VPN verbunden sind, schützt es Ihr gesamtes Gerät, nicht nur den Browser."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Mehr erfahren"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "Die Erweiterung spooft Ihren Standort, blockiert WebRTC und beinhaltet HTTPS Everywhere."
+  },
+  "welcome_skip_button_label": {
+    "message": "Überspringen"
+  }
+}

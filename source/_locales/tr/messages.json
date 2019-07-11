@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Gizlilik, güvenlik ve hız. ExpressVPN uygulamasını doğrudan Chrome üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere her yerden erişin.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Gizlilik, güvenlik ve hız. ExpressVPN uygulamasını doğrudan Firefox üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere her yerden erişin.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: her şeye engeli kaldırmak için VPN vekili",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "Alternatif olarak, simgeye sağ tıklayarak ve \"Chrome menüsünde gizle\"yi seçerek eklentiyi gizleyebilirsiniz."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "Alternatif olarak, simgeye sağ tıklayarak ve \"Araç Çubuğundan Kaldır\"ı veya \"Chrome menüsünde gizle\"yi seçerek eklentiyi gizleyebilirsiniz."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Bir abonelik satın alın"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Yardıma ihtiyacınız mı var? Lütfen [Destek ile iletişime geçin]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Linux Uygulamasını İndir"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Mac Uygulamasını İndir"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Windows Uygulamasını İndir"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "ExpressVPN'e yeni misiniz? [Başlayın]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Lütfen Google Play Store'dan ExpressVPN uygulamasını yükleyin."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Bu eklenti aktif bir aboneliğe sahip Linux için ExpressVPN uygulamasını gerektirir."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Bu eklenti aktif bir aboneliğe sahip Mac için ExpressVPN uygulamasını gerektirir."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Bu eklenti aktif bir aboneliğe sahip Windows için ExpressVPN uygulamasını gerektirir."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Anasayfaya Dön"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Herhangi bir sorunuz var ise, lütfen [Destek ile iletişime geçin]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Çıkış Yap"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Sona erdi (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Yeni bir işletme aboneliği satın almak için lütfen hesap sahibi ile iletişime geçin."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Abonelik Sona Erdi"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "Alternatif olarak, simgeye sağ tıklayarak ve \"Chrome menüsünde gizle\"yi seçerek eklentiyi gizleyebilirsiniz."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "Alternatif olarak, simgeye sağ tıklayarak ve \"Araç Çubuğundan Kaldır\"ı veya \"Chrome menüsünde gizle\"yi seçerek eklentiyi gizleyebilirsiniz."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "Bu eklenti sadece <b>macOS 10.10 / Windows 7</b> ve daha yenisi üzerinde kullanılabilir."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Eklentiyi kullanabilmek için lütfen işletim sisteminizi güncelleyin."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Daha Fazlasını Öğrenin"
+  },
+  "error_compatibility_error_title": {
+    "message": "İşletim Sistemini Güncelleyin"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "İnternet bağlantınızı kontrol edin"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Farklı bir [VPN konumu] seçin"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Hiçbiri işe yaramaz ise, [Destek ile iletişime geçin]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "İnternet trafiği gizliliğinizi korumak amacıyla şu anda engellenmektedir."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Anasayfa'ya Dön"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "İptal"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "İnternet'e Engeli Kaldırın"
+  },
+  "error_connection_error_title": {
+    "message": "Bağlanamadı"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "%LOCATION%<br>konumuna bağlanılamadı."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Tekrar Deneyin"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Zaten abone misiniz? [Hemen güncelleyin]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Hesabınızdan çıkış yapıldı çünkü hesap bilgileriniz güncellendi."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "ExpressVPN'i kullanmaya devam etmek için lütfen tekrar giriş yapın."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Giriş Yap"
+  },
+  "error_forced_signout_title": {
+    "message": "ExpressVPN'e Giriş Yapın"
+  },
+  "error_fraudster_hint": {
+    "message": "Faturalama bilgilerinizi doğrulayamadık, bu yüzden ödemenizi iptal ettik."
+  },
+  "error_fraudster_p1_text": {
+    "message": "Aboneliğinizi yeniden etkinleştirmek için, <br>lütfen şu adrese e-posta gönderin:"
+  },
+  "error_fraudster_p2_text": {
+    "message": "konu satırı: <span class='bold'>Fatura Doğrulama</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "Ödeme için kullanılan kredi kartının fotoğrafını ekleyin (SADECE son 4 rakam ve adınız görülebilir şekilde)."
+  },
+  "error_fraudster_p4_text": {
+    "message": "Lütfen telefon numaranızı (ülke kodu ile) ve sizi arayabileceğimiz en uygun saati ekleyin."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Fatura Ekibi 24–48 saat içinde yanıt verecektir."
+  },
+  "error_fraudster_question1_text": {
+    "message": "Bir kredi kartı ile mi ödediniz?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Bir kredi kartı ile ödemediniz mi?"
+  },
+  "error_fraudster_title": {
+    "message": "Hesap askıya alındı"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Ücretsiz denemeniz sona erdi, ancak tekrar bağlanmak çok kolay."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Neden yükseltmeli?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Aktivasyon Kodu'nu girin"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Her cihaz için uygulama"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30 günlük para iade garantisi"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "Dünya genelinde 160 konum"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "7/24 müşteri desteği"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Sınırsız bant genişliği"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Sona erdi (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Ücretsiz Deneme sona erdi"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Hemen Yükseltin"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Abonelik Edinin"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Çıkış Yap"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Ücretsiz Deneme Sona Erdi"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Ödeme Bilgilerini Güncelleyin"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Çıkış Yap"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "ExpressVPN'i kullanmaya devam etmek için lütfen iTunes/App Store hesabınızdan ödeme bilgilerini güncelleyin."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Ödeme Başarısız Oldu"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN bilgilerinizi güncelledikten sonraki 30 dakika içinde otomatik olarak aktif hale gelecektir."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Masaüstü uygulamasını etkinleştirmek için lütfen bu komutu terminalde çalıştırın:"
+  },
+  "error_not_activated_text": {
+    "message": "Bu eklentiyi kullanmak için lütfen ExpressVPN masaüstü uygulamasında giriş yapın."
+  },
+  "error_not_activated_title": {
+    "message": "Uygulama Aktif Değil"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Chromebook'unuzda Play Store yok ise, lütfen [el ile yapılandırma] yönergelerimizi takip edin."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ExpressVPN'i Yükleyin"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Destek ile iletişime geçin"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS Desteklenmiyor",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Masaüstü Uygulamasını Yükle"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Yeni Abonelik Edinin"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "Uygulama Yüklenmemiş"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Bu eklenti ExpressVPN uygulamasının çalışmasını gerektirir."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Bu eklenti ExpressVPN uygulamasının çalışmasını gerektirir."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Destek ile İletişime Geç"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Masaüstü Uygulamasını Aç"
+  },
+  "error_open_app_title": {
+    "message": "Uygulama Açık Değil"
+  },
+  "error_signout_button": {
+    "message": "Çıkış Yap"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "İptal"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Daha Fazlasını Öğrenin"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "ExpressVPN'in bu abonelik için cihaz kullanım sınırını aştınız."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Lütfen bir cihazın bağlantısını sonlandırın veya [ek bir abonelik satın alın]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Bağlantı sınırına ulaşıldı."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Ödeme Bilgilerini Güncelleyin"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Daha sonra"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Aboneliğiniz sona erdi, ancak tekrar bağlanmak çok kolay."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Neden yenilemeli?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Yeni Abonelik Edinin"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Aktivasyon kodu'nu girin"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Her cihaz için uygulama"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "Arkadaşlara önerin, ücretsiz 30 gün edinin"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "Dünya genelinde 160 konum"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "7/24 müşteri desteği"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Yeni Abonelik Edinin"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Çıkış Yap"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Abonelik Sona Erdi"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Ödeme Bilgilerini Güncelleyin"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Çıkış Yap"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Sona erdi (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Abonelik sona erdi"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Şimdi Güncelleyin"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "Uygulamayı Güncelleyin"
+  },
+  "error_upgrade_app_text": {
+    "message": "Bu eklenti ExpressVPN uygulamasının en son versiyonuna ihtiyaç duymaktadır."
+  },
+  "general_contact_support_button_label": {
+    "message": "Destek ile İletişime Geç"
+  },
+  "hint_connection_delay_text": {
+    "message": "Hala bağlanmaya çalışıyor."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "İnternet bağlantısı algılanamıyor.<br>VPN bağlantı olduğunda bağlanacak."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "İnternet bağlantısı algılanamıyor.<br>VPN kullanım dışı olabilir."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "İnternet bağlantısı koptu.<br>VPN bağlantı olduğunda tekrar bağlanacak."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Bağlantı beklenmedik bir şekilde koptu. Tekrar bağlanıyor..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "İnternet trafiği gizliliğinizi korumak amacıyla şu anda engellenmektedir."
+  },
+  "hint_saved_text": {
+    "message": "Kaydedildi"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "İptal"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Devam Et"
+  },
+  "home_change_location_popup_text": {
+    "message": "İnternet trafiğiniz tekrar bağlanma sırasında güvenli olmayabilir."
+  },
+  "home_change_location_popup_title": {
+    "message": "Konumu Değiştir"
+  },
+  "list_item_247_support": {
+    "message": "7/24 müşteri desteği"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30 günlük para iade garantisi"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Her cihaza uygun uygulamalar"
+  },
+  "list_item_locations_worldwide": {
+    "message": "Dünya genelinde 160 konum"
+  },
+  "list_item_refer_frieds": {
+    "message": "Arkadaşlara önerin, ücretsiz 30 gün edinin"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Sınırsız bant genişliği"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN Konumları"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Son Konumlar"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Önerilen Konumlar"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "SONUÇ YOK"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Bir şehir veya ülke ara"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Akıllı Konum"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Tüm Konumlar"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Önerilen"
+  },
+  "main_screen_current_location_text": {
+    "message": "Geçerli Konum"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Son Konum"
+  },
+  "main_screen_selected_location_text": {
+    "message": "Seçilen Konum"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Akıllı Konum"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "Bağlandı"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Bağlanıyor"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Bağlantı kesiliyor"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "Bağlı Değil"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Tekrar bağlanıyor"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Hız Testi çalışıyor"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> kişisel bilgilerinizi (banka bilgileri, fotoğraflar, şifreler, mesajlar gibi) silebilecek veya çalabilecek tehlikeli yazılım içerebilir.[Daha&nbsp;fazlasını&nbsp;öğrenin]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Dikkat: Kötü Amaçlı Yazılım Olabilir"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Güenliğe Geri Dön"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Yine de Devam Et"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Riskleri Anlıyorum"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Emin misiniz?"
+  },
+  "menu_beta_feedback": {
+    "message": "Beta Geri Bildirimi Gönder"
+  },
+  "menu_cancel_text": {
+    "message": "İptal"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox Başlatma",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Tarayıcı çalıştığında bağlan"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Masaüstü bildirimlerini göster"
+  },
+  "menu_get_30_days_free": {
+    "message": "Ücretsiz 30 Gün Edinin"
+  },
+  "menu_help_support": {
+    "message": "Yardım & Destek"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Referanslar"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% uygulama versiyonu: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Destek ile İletişime Geç"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Hata Bulma Bilgileri"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS Sızıntı Testi"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Eklenti versiyonu: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "Sıkça Sorulan Sorular"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP Adresi Kontrolü"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC Sızıntı Testi"
+  },
+  "menu_myaccount_title": {
+    "message": "Hesap"
+  },
+  "menu_my_account": {
+    "message": "Hesap"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Kötü amaçlı yazılım & dolandırıcılık koruması"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "WebRTC'yi Engelle"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Konumu gizle"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "5 yıldız ile oylayın!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Bize nasıl daha iyi olacağımızı söyleyin"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Daha sonra"
+  },
+  "menu_ratevpn_text": {
+    "message": "ExpressVPN'i kullanmayı sevdiğinizi umuyoruz! Bize bir yorum yapmak ister misiniz?"
+  },
+  "menu_ratevpn_title": {
+    "message": "ExpressVPN'i Sevdiniz mi?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "ExpressVPN'i Oylayın"
+  },
+  "menu_section_about_title": {
+    "message": "Hakkında"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Bizimle konuşun"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Bir iyileştirme önerin"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Bir sorun bildirin"
+  },
+  "menu_section_support_title": {
+    "message": "İletişime geçin"
+  },
+  "menu_settings_general_header": {
+    "message": "Genel"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Eklenti dili"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Dil"
+  },
+  "menu_settings_general_name": {
+    "message": "Ayarlar"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Masaüstü Uygulama Ayarlarını Yapılandırın"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Yardım"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Dolandırıcı siteleri engelleyin ve gizli bir şekilde kripto para çıkaran reklamları önleyin."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "VPN'e bağlı iken web sitelerinin gerçek IP adresinizi ve konumunuzu öğrenmelerini önleyin."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "VPN'e bağlı iken HTML5 konum belirlemenin nerede olduğunuzu ortaya çıkarmasını önleyin."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Uygun olduğunda web sitelerinin daha güvenli HTTPS versiyonlarına otomatik olarak bağlanın."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Daha Fazlasını Öğrenin"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Gizlilik & Güvenlik"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Ayarlar"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Gizlilik Ayarları"
+  },
+  "menu_setup_other_devices": {
+    "message": "Diğer Cihazlara Kurun"
+  },
+  "menu_signout_p1_text": {
+    "message": "Emin misiniz? Masaüstü uygulamasından da çıkış yapacaksınız."
+  },
+  "menu_signout_text": {
+    "message": "Çıkış Yap"
+  },
+  "message_item_rating1_title": {
+    "message": "ExpressVPN'i Sevdiniz mi?"
+  },
+  "message_item_rating2_title": {
+    "message": "Nasıl daha iyi olabileceğimizi söylemek ister misiniz?"
+  },
+  "message_item_rating3_title": {
+    "message": "Bize bir yorum yapmak ister misiniz?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Hayır"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "Tamam"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "ExpressVPN'i paylaşın ve ücretsiz hizmet edinin!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "Bir abonelik satın alan her arkadaş için her ikinize de ücretsiz 30 gün veriyoruz."
+  },
+  "myaccount_account_expired_label": {
+    "message": "Sona eriş tarihi"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Sona ereceği tarih"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Yenileme tarihi"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Aktif"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Sona erdi"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Deneme"
+  },
+  "myaccount_account_status_label": {
+    "message": "Hesap durumu"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Deneme sona erdi"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Deneme"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Abonelik başlama tarihi"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Arkadaşlara Önerin"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Hemen Satın Al"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Hemen Yenileyin"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Hemen Yükseltin"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Hesabı Yönetin"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Neden bir abonelik edinmeli?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Neden yenilemeli?"
+  },
+  "notification_extension_update_message": {
+    "message": "%VERSION% versiyonundaki yenilikleri görmek için tıklayın"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN Güncellendi"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> kişisel bilgilerinizi (banka bilgileri, fotoğraflar, şifreler, mesajlar gibi) ifşa etmeniz amacıyla aldatmak için tasarlanmış içerik veya yazılım içerebilir. [Daha&nbsp;fazlasını&nbsp;öğrenin]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Dikkat: Dolandırıcılık Olabilir"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Ücretsiz deneme [days] gün içinde sona eriyor"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Ücretsiz denemeniz sona erdi"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "Ücretsiz deneme [hours] saat içinde sona eriyor"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "Ücretsiz deneme <1 saat içinde sona eriyor"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Hemen yükseltin"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Son ödemeniz başarısız oldu"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Ödeme yöntemini güncelleyin"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome VPN'in dışında bırakılmış"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox VPN'in dışında bırakılmış"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Ayarları gözden geçirin"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Abonelik [days] gün içinde sona eriyor"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Aboneliğiniz sona erdi"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Abonelik [hours] saat içinde sona eriyor"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Yeni abonelik edinin"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Hemen yenileyin"
+  },
+  "promobar_update_available_header": {
+    "message": "Güncelleme hazır!"
+  },
+  "promobar_update_available_text": {
+    "message": "Hemen yükleyin"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Ücretsiz deneme [days] gün içinde sona eriyor"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Ücretsiz denemeniz sona erdi"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Ücretsiz deneme [hours] saat içinde sona eriyor"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "Ücretsiz deneme <1 saat içinde sona eriyor"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Hemen yükseltin"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome VPN'in dışında bırakılmış"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox VPN'in dışında bırakılmış"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Ayarları gözden geçirin"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Abonelik [days] gün içinde sona eriyor"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Aboneliğiniz sona erdi"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Yeni abonelik edinin"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Abonelik [hours] saat içinde sona eriyor"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "Abonelik <1 saat içinde sona eriyor"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Hemen yenileyin"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN Bağlandı"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "%s'a bağlandı."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN Bağlanıyor..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN Bağlanamadı"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "%s'a bağlanamadı."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "%s'e bağlanılamıyor. İnternet trafiği engellendi."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Bağlantı Sınırına Ulaşıldı"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Lütfen bir cihazın bağlantısını sonlandırın veya ek bir abonelik satın alın."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN Yeniden Bağlanıyor..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "%s'e yeniden bağlanıyor."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "%s'e yeniden bağlanıyor. İnternet trafiği engellendi."
+  },
+  "welcome_continue_button_label": {
+    "message": "İlerle"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Başlayın"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ExpressVPN eklentisi masaüstü uygulaması için bir uzaktan kontrol aracıdır."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "VPN'e bağlı olduğunuzda sadece tarayıcınızı değil, cihazınızın tamamını korur."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Daha fazlasını öğrenin"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "Bu eklenti konumunuzu gizler, WebRTC'yi engeller ve HTTPS Everywhere'i içerir."
+  },
+  "welcome_skip_button_label": {
+    "message": "Atla"
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /*
 ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
@@ -19,8 +20,7 @@ export default {
     let state = stateParams;
     state.currentContainer = newCurrentContainer;
   },
-  SET_LATEST_MESSAGE(stateParams, newLatestMessage) {
-    let state = stateParams;
+  SET_LATEST_MESSAGE(state, newLatestMessage) {
     state.latestMessage = newLatestMessage;
   },
   SET_CURRENT_VIEW(stateParams, newCurrentView) {
@@ -28,12 +28,11 @@ export default {
     state.previousView = state.currentView;
     state.currentView = newCurrentView;
   },
-  SET_RATING_MESSAGE_TYPE(stateParams, newRatingMessageType) {
-    let state = stateParams;
-    state.ratingMessageType = newRatingMessageType;
-  },
   SET_IGNORE_STATE_UPDATES(stateParams, shouldIgnore) {
     let state = stateParams;
     state.ignoringStateUpdates = shouldIgnore;
+  },
+  SET_LANG_LIST(state, langList) {
+    state.langList = langList;
   },
 };

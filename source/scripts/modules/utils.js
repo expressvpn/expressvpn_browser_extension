@@ -3,6 +3,9 @@ ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
+import { locals as styles } from '@/styles/shared/scss/_variables.scss';
+import { defaultRatingData } from './rating';
+
 const utils = (function () {
   const currentInfo = {
     state: 'ready',
@@ -18,6 +21,8 @@ const utils = (function () {
       country_code: '',
       id: 0,
     },
+    hasInternet: true,
+    showWelcome: false,
     recommendedLocationsList: [],
     allLocationsList: [],
     app: {
@@ -27,9 +32,10 @@ const utils = (function () {
     },
     preferences: {},
     subscription: {},
-    website_url: 'https://www.zdbwoet.com',
+    website_url: 'https://www.ujsrxts.com',
     connectingTimes: [],
     localizedStrings: {},
+    ratingData: defaultRatingData,
   };
 
   const defaultPreferences = {
@@ -38,7 +44,6 @@ const utils = (function () {
     'chrome.desktop_notification': true,
     'httpsEverywhere': true,
     'httpsPeriodicity': 86400,
-    'ratingPeriodicity': 86400,
     'language': '',
     'hideLocation': true,
   };
@@ -46,11 +51,11 @@ const utils = (function () {
   const ICONS = {
     connected: {
       text: '✓',
-      color: '#45B649',
+      color: styles.success20,
     },
     connecting: {
       text: '···',
-      color: '#F5A827',
+      color: styles.alert20,
     },
     default: {
       text: '',
@@ -58,7 +63,7 @@ const utils = (function () {
     },
     error: {
       text: '✕',
-      color: '#999999',
+      color: styles.border20,
     },
   };
 
@@ -194,7 +199,7 @@ const utils = (function () {
   };
 
   const setLanguage = (_locale) => {
-    let locale = isNullOrEmpty(_locale) ? (window.currentLanguageCode || '').split('-')[0] : _locale;
+    let locale = isNullOrEmpty(_locale) ? (navigator.language || '').split('-')[0] : _locale;
     let localeFileUrl = `${chrome.runtime.getURL('/_locales')}/[XX]/messages.json`;
     const fetchDefaultLang = function (error) {
       return fetch(localeFileUrl.replace('[XX]', 'en'))
@@ -203,7 +208,7 @@ const utils = (function () {
           return response.json();
         })
         .then(function (strings) {
-          return strings;
+          return { strings, locale: 'en' };
         });
     };
 
@@ -213,7 +218,7 @@ const utils = (function () {
           return response.json();
         })
         .then(function (strings) {
-          return strings;
+          return { strings, locale };
         })
         .catch(fetchDefaultLang) // 404 -> default to English
       : fetchDefaultLang();

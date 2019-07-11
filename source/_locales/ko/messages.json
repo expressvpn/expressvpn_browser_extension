@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "개인 정보 보호, 보안 및 빠른 속도를 제공합니다. Chrome에서 바로 ExpressVPN 앱을 조정하여 위치를 스푸핑하고 어디서나 원하시는 컨텐츠에 액세스하세요.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "개인 정보 보호, 보안 및 빠른 속도를 제공합니다. Firefox에서 바로 ExpressVPN 앱을 조정하여 위치를 스푸핑하고 어디서나 원하시는 컨텐츠에 액세스하세요.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: 모든 차단을 해제하는 VPN 프록시",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "또는, 아이콘을 마우스 오른쪽 클릭한 뒤 \"Chrome 메뉴에서 숨기기\"를 선택하여 확장 프로그램을 숨길 수 있습니다."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "또는, 아이콘을 마우스 오른쪽 클릭한 뒤 \"툴바에서 제거\" 또는 \"메뉴로 이동\"을 선택하여 확장 프로그램을 숨길 수 있습니다."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "정액제 구입"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "도움이 필요하세요? [지원팀에 문의]하세요."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Linux 앱 다운로드"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Mac 앱 다운로드"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Windows 앱 다운로드"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "ExpressVPN에 새로 오셨나요? [지금 바로 시작하세요]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Google Play Store에서 ExpressVPN 앱을 설치해주세요."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "이 확장 프로그램을 사용하시려면 활성화 정액제와  Linux용 ExpressVPN 앱이 필요합니다. "
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "이 확장 프로그램을 사용하시려면 활성화 정액제와 Mac용 ExpressVPN 앱이 필요합니다. "
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "이 확장 프로그램을 사용하시려면 활성화 정액제와 Windows용 ExpressVPN 앱이 필요합니다. "
+  },
+  "error_btnReturnHome_default": {
+    "message": "홈으로 돌아가기"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "문의 사항이 있으시면, [지원팀에 문의]하세요."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "로그아웃"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "만료 (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "계정 소유자에게 새로운 비즈니스 정액제<br>구입을 요청하세요."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "정액제가 만료되었습니다"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "또는, 아이콘을 마우스 오른쪽 클릭한 뒤 \"Chrome 메뉴에서 숨기기\"를 선택하여 확장 프로그램을 숨길 수 있습니다."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "또는, 아이콘을 마우스 오른쪽 클릭한 뒤 \"툴바에서 제거\" 또는 \"메뉴로 이동\"을 선택하여 확장 프로그램을 숨길 수 있습니다."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "이 확장 프로그램은 현재 <b>macOS 10.10 / Windows 7</b> 이상에서만 이용 가능합니다."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "이 확장 프로그램을 사용하시려면 운영 체제를 업데이트해주세요."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "더 보기"
+  },
+  "error_compatibility_error_title": {
+    "message": "운영 체제를 업데이트해주세요"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "인터넷 연결을 확인해주세요"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "다른 [VPN 위치]를 선택해보세요"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "다른 모든 방법으로도 안 되면, [지원팀에 문의]하세요."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "홈으로 돌아가기"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "취소"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "인터넷 차단 해제"
+  },
+  "error_connection_error_title": {
+    "message": "연결할 수 없습니다"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "<br>%LOCATION%에 연결할 수 없습니다."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "다시 시도"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "이미 가입하셨나요? [지금 업데이트]하세요."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "고객님의 계정 정보가 업데이트되어<br>로그아웃되셨습니다."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "ExpressVPN을 계속 사용하시려면,<br>다시 로그인해주세요."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "로그인"
+  },
+  "error_forced_signout_title": {
+    "message": "ExpressVPN에 로그인해주세요"
+  },
+  "error_fraudster_hint": {
+    "message": "고객님의 결제 정보가 확인되지 않아, 결제가 취소되었습니다."
+  },
+  "error_fraudster_p1_text": {
+    "message": "정액제를 재활성화하시려면,<br>이메일을 보내주세요"
+  },
+  "error_fraudster_p2_text": {
+    "message": "제목: <span class='bold'>Billing Verification</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "사용하신 신용 카드의 사진을 포함해주세요(마지막 4자리 숫자와 이름만 보이게 해주세요)"
+  },
+  "error_fraudster_p4_text": {
+    "message": "고객님의 전화 번호(국가 번호 포함)와 통화하시기에 가장 좋은 시간대를 알려주세요. "
+  },
+  "error_fraudster_p5_text": {
+    "message": "청구팀이 24-48시간 내에 답변을 드릴 것입니다."
+  },
+  "error_fraudster_question1_text": {
+    "message": "신용 카드로 결제하셨나요?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "신용 카드로 결제한 것이 아니신가요?"
+  },
+  "error_fraudster_title": {
+    "message": "계정이 일시 중지되었습니다"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "무료 체험이 종료되었으나, 쉽게 다시 이용하실 수 있습니다."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "업그레이드해야 하는 이유"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "활성화 코드 입력"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "모든 기기에서 이용 가능한 앱"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30일 환불 보장"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "전 세계 160개 위치"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "연중무휴 고객 지원"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "무제한 대역폭"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "만료 (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "무료 체험이 종료되었습니다"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "지금 업그레이드"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "정액제를 구입하세요"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "로그아웃"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "무료 체험이 종료되었습니다"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "결제 정보 업데이트"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "로그아웃"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "ExpressVPN을 계속 사용하시려면, iTunes / App Store 계정에서 결제 정보를 업데이트해주세요."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "결제에 실패했습니다"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "정보 업데이트 후 30분 내에 ExpressVPN이 자동으로 활성화됩니다."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "데스크탑 앱을 활성화하시려면 컴퓨터에서 이 명령을 실행해주세요:"
+  },
+  "error_not_activated_text": {
+    "message": "이 확장 프로그램을 사용하시려면 ExpressVPN 데스크탑 앱에 로그인해주세요."
+  },
+  "error_not_activated_title": {
+    "message": "앱이 활성화되지 않습니다"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Chromebook에서 Play Store를 이용할 수 없는 경우, [수동 구성] 지침을 따라주세요."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ExpressVPN 설치"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "지원 문의"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS가 지원되지 않습니다",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "데스크탑 앱 설치"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "새로운 정액제 구입"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "앱이 설치되지 않습니다"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "이 확장 프로그램을 사용하시려면 ExpressVPN 앱을 실행해주세요. "
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "이 확장 프로그램을 사용하시려면 ExpressVPN 앱을 실행해주세요. "
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "지원팀에 문의"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "데스크탑 앱 열기"
+  },
+  "error_open_app_title": {
+    "message": "앱이 열려있지 않습니다"
+  },
+  "error_signout_button": {
+    "message": "로그아웃"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "취소"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "더 보기"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "이 정액제에 대한 ExpressVPN 장치 사용<br>제한을 초과하셨습니다."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "장치의 연결을 해제하시거나, [추가 정액제를 구입해주세요]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "연결 제한에 도달했습니다."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "결제 정보 업데이트"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "나중에"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "정액제가 만료되었으나, 쉽게 다시 이용하실 수 있습니다."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "갱신해야 하는 이유"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "새로운 정액제 구입"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "활성화 코드 입력"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "모든 기기에서 이용 가능한 앱"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "친구 추천 시 30일 무료 이용권 제공"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "전 세계 160개 위치"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "연중무휴 고객 지원"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "새로운 정액제 구입"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "로그아웃"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "정액제가 만료되었습니다"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "결제 정보 업데이트"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "로그아웃"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "만료 (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "정액제가 만료되었습니다"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "지금 업데이트"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "앱을 업데이트해주세요"
+  },
+  "error_upgrade_app_text": {
+    "message": "이 확장 프로그램을 사용하시려면 ExpressVPN 앱을 최신 버전으로 업데이트해주세요."
+  },
+  "general_contact_support_button_label": {
+    "message": "지원 문의"
+  },
+  "hint_connection_delay_text": {
+    "message": "아직 연결 중입니다."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "인터넷 연결이 감지되지 않습니다.<br>인터넷이 연결되면 VPN에 연결됩니다."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "인터넷 연결이 감지되지 않습니다.<br> VPN을 이용하실 수 없습니다."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "인터넷 연결이 끊어졌습니다.<br>인터넷이 연결되면 VPN에 다시<br>연결됩니다."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "연결이 예기치 않게 끊어져, 다시 연결하는 중입니다..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "개인 정보 보호를 위해 인터넷 트래픽이 차단되었습니다."
+  },
+  "hint_saved_text": {
+    "message": "저장되었습니다"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "취소"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "계속"
+  },
+  "home_change_location_popup_text": {
+    "message": "다시 연결하는 동안 인터넷 트래픽이 안전하지 않을 수 있습니다."
+  },
+  "home_change_location_popup_title": {
+    "message": "위치 변경"
+  },
+  "list_item_247_support": {
+    "message": "연중무휴 고객 지원"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30일 환불 보장"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "모든 기기에서 이용 가능한 앱"
+  },
+  "list_item_locations_worldwide": {
+    "message": "전 세계 160개 위치"
+  },
+  "list_item_refer_frieds": {
+    "message": "친구 추천 시 30일 무료 이용권 제공"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "무제한 대역폭"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN 위치"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "최근 연결 위치"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "권장 위치"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "결과 없음"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "도시 또는 국가별 검색"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Smart Location"
+  },
+  "location_picker_tab_all_text": {
+    "message": "전체 위치"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "권장"
+  },
+  "main_screen_current_location_text": {
+    "message": "현재 위치"
+  },
+  "main_screen_recent_location_text": {
+    "message": "최근 연결 위치"
+  },
+  "main_screen_selected_location_text": {
+    "message": "선택된 위치"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Smart Location"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "ON"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "연결 중"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "연결 해제 중"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "OFF"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "재연결 중"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "속도 테스트 실행 중"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span>에 개인 정보(예: 은행 세부 정보, 사진, 비밀번호, 메시지)를 삭제하거나 도용할 수 있는 위험한 소프트웨어가 포함되어있을 수 있습니다. [더 보기]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "위험: 멀웨어 위험이 있습니다"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "안전한 곳으로 돌아가기"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "그래도 진행"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "해당 위험성을 이해합니다"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "정말이세요?"
+  },
+  "menu_beta_feedback": {
+    "message": "베타 피드백 전송"
+  },
+  "menu_cancel_text": {
+    "message": "취소"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox 시작",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "브라우저 실행 시 연결"
+  },
+  "menu_desktop_notification_text": {
+    "message": "데스크탑 알림 표시"
+  },
+  "menu_get_30_days_free": {
+    "message": "30일 무료 이용권 받기"
+  },
+  "menu_help_support": {
+    "message": "지원"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "승인"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% 앱 버전: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "지원 문의"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "진단 정보"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS 유출 테스트"
+  },
+  "menu_item_extension_version_text": {
+    "message": "확장 프로그램 버전: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "자주 묻는 질문"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP 주소 검사기"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC 유출 테스트"
+  },
+  "menu_myaccount_title": {
+    "message": "계정"
+  },
+  "menu_my_account": {
+    "message": "계정"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "멀웨어 & 피싱 보호"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "WebRTC 차단"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "위치 스푸핑"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "별 5개를 남겨주세요!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "개선 방법을 알려주세요"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "나중에"
+  },
+  "menu_ratevpn_text": {
+    "message": "고객님께서 ExpressVPN을 즐기고 계시길<br>바랍니다! 후기를 남겨 주시겠어요?"
+  },
+  "menu_ratevpn_title": {
+    "message": "ExpressVPN을 즐기고 계세요?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "ExpressVPN 평가하기"
+  },
+  "menu_section_about_title": {
+    "message": "정보"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "문의"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "개선 사항 제안"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "오류 보고"
+  },
+  "menu_section_support_title": {
+    "message": "지원"
+  },
+  "menu_settings_general_header": {
+    "message": "일반"
+  },
+  "menu_settings_general_language_header": {
+    "message": "확장 프로그램 언어"
+  },
+  "menu_settings_general_language_label": {
+    "message": "언어"
+  },
+  "menu_settings_general_name": {
+    "message": "설정"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "데스크탑 앱 설정 구성"
+  },
+  "menu_settings_help_button_label": {
+    "message": "지원"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "사기 사이트를 차단하고 비밀리에 암호화폐를 마인하는 광고를 막습니다."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "VPN에 연결되어있는 동안 웹사이트가 고객님의 실제 IP<br>주소와 위치를 확인하지 못하도록 합니다."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "VPN에 연결되어있는 동안 HTML5 지오로케이션이<br>고객님의 실제 위치를 나타내지 않도록 합니다."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "가능한 경우 보다 안전한 HTTPS 웹사이트 버전에<br>자동으로 연결합니다."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "더 보기"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "개인 정보 보호 & 보안"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "설정"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "개인 정보 보호 설정"
+  },
+  "menu_setup_other_devices": {
+    "message": "다른 장치에 설치"
+  },
+  "menu_signout_p1_text": {
+    "message": "정말이세요? 데스크탑 앱에서도 로그아웃됩니다."
+  },
+  "menu_signout_text": {
+    "message": "로그아웃"
+  },
+  "message_item_rating1_title": {
+    "message": "ExpressVPN을 즐기고 계세요?"
+  },
+  "message_item_rating2_title": {
+    "message": "개선할 수 있는 방법을 알려주시겠어요?"
+  },
+  "message_item_rating3_title": {
+    "message": "후기를 남겨 주시겠어요?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "아니요"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "확인"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "ExpressVPN을 공유하시고 무료 이용권을<br>받으세요!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "친구가 가입할 때마다, 두 분 모두에게 30일 무료 이용권이 지급됩니다."
+  },
+  "myaccount_account_expired_label": {
+    "message": "만료"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "만료 일자"
+  },
+  "myaccount_account_renews_label": {
+    "message": "갱신"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "활성화"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "만료"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "체험"
+  },
+  "myaccount_account_status_label": {
+    "message": "계정 상태"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "체험 종료"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "체험"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "정액제 시작"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "친구 추천"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "지금 구입"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "지금 갱신"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "지금 업그레이드"
+  },
+  "myaccount_manage_button_label": {
+    "message": "계정 관리"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "정액제를 구입해야 하는 이유"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "갱신해야 하는 이유"
+  },
+  "notification_extension_update_message": {
+    "message": "클릭하여 %VERSION% 버전의 새로운 기능을 확인하세요"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN이 업데이트되었습니다"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span>에 사용자를 속여 개인 정보(예: 은행 세부 정보, 사진, 비밀번호, 메시지)를 노출하도록 고안된 소프트웨어나 컨텐츠가 포함되어있을 수 있습니다. [더 보기]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "위험: 피싱 위험이 있습니다"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "무료 체험이 [days]일 내에 종료됩니다"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "무료 체험이 종료되었습니다"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "무료 체험이 [hours]시간 내에 종료됩니다"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "무료 체험이 1시간 내에 종료됩니다"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "지금 업그레이드하세요"
+  },
+  "promobar_iap_failed_header": {
+    "message": "최종 결제에 실패했습니다"
+  },
+  "promobar_iap_failed_text": {
+    "message": "결제 수단을 업데이트해주세요"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome이 VPN에서 제외되었습니다"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox가 VPN에서 제외되었습니다"
+  },
+  "promobar_splittunneling_text": {
+    "message": "설정을 확인하세요"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "정액제가 [days]일 내에 만료됩니다"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "정액제가 만료되었습니다"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "정액제가 [hours]시간 내에 만료됩니다"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "새로운 정액제를 구입하세요"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "지금 갱신하세요"
+  },
+  "promobar_update_available_header": {
+    "message": "업데이트하실 수 있습니다!"
+  },
+  "promobar_update_available_text": {
+    "message": "지금 설치하세요"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "무료 체험이 [days]일 내에 종료됩니다"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "무료 체험이 종료되었습니다"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "무료 체험이 [hours]시간 내에 종료됩니다"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "무료 체험이 1시간 내에 종료됩니다"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "지금 업그레이드하세요"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome이 VPN에서 제외되었습니다"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox가 VPN에서 제외되었습니다"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "설정을 확인하세요"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "정액제가 [days]일 내에 만료됩니다"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "정액제가 만료되었습니다"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "새로운 정액제를 구입하세요"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "정액제가 [hours]시간 내에 만료됩니다"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "정액제가 1시간 내에 만료됩니다"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "지금 갱신하세요"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN이 연결되었습니다"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "%s에 연결되었습니다."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN 연결 중..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN에 연결할 수 없습니다"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "%s에 연결할 수 없습니다."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "%s에 연결할 수 없습니다. 인터넷 트래픽이 차단되었습니다."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "연결 제한에 도달했습니다"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "장치의 연결을 해제하시거나, 추가 정액제를 구입해주세요."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN 재연결 중..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "%s에 다시 연결하는 중입니다."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "%s에 재연결하는 중입니다. 인터넷 트래픽이 차단되었습니다."
+  },
+  "welcome_continue_button_label": {
+    "message": "계속"
+  },
+  "welcome_get_started_button_label": {
+    "message": "시작하기"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ExpressVPN 확장 프로그램으로<br>데스크탑 앱을 조종할 수 있습니다."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "VPN이 연결되면, 브라우저뿐만 아니라 기기 전체를 보호해줍니다. "
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "더 보기"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "확장 프로그램은 위치를 스푸핑하고 WebRTC를 차단하며 HTTPS Everywhere를 포함합니다."
+  },
+  "welcome_skip_button_label": {
+    "message": "건너뛰기"
+  }
+}

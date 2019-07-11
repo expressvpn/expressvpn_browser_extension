@@ -52,7 +52,7 @@
   border-radius: 4px;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   box-sizing: content-box;
 
   &.information {
@@ -70,15 +70,23 @@
     }
   }
 
+  &.green {
+    background-color: $green-40;
+    color: $green-10;
+    .icon {
+      color: $green-10;
+    }
+  }
+
   &-text {
     font-family: ProximaNova-Semibold;
     font-size: 16px;
     margin-left: 15px;
+    line-height: 20px;
   }
 
   &-container {
     margin-top: 10px;
-    padding: 0 15px;
   }
 }
 </style>
