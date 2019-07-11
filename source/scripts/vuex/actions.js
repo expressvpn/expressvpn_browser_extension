@@ -7,8 +7,8 @@ export default {
   updateCurrentInfo({ commit }, currentInfo) {
     commit('UPDATE_CURRENTINFO', currentInfo);
   },
-  setLatestMessage({ commit }, currentInfo) {
-    commit('SET_LATEST_MESSAGE', currentInfo);
+  setLatestMessage({ commit }, latestMessage) {
+    commit('SET_LATEST_MESSAGE', latestMessage);
   },
   setCurrentView({ commit }, currentView) {
     commit('SET_CURRENT_VIEW', currentView);
@@ -16,13 +16,13 @@ export default {
   setCurrentContainer({ commit }, currentContainer) {
     commit('SET_CURRENT_CONTAINER', currentContainer);
   },
-  setRatingMessageType({ commit }, ratingMessageType) {
-    commit('SET_RATING_MESSAGE_TYPE', ratingMessageType);
-  },
   setIgnoreStateUpdates({ commit }, shouldIgnore) {
     commit('SET_IGNORE_STATE_UPDATES', shouldIgnore);
     if (shouldIgnore === false) {
       chrome.runtime.sendMessage({ getState: true });
     }
+  },
+  setlangList({ commit }, langList) {
+    commit('SET_LANG_LIST', langList);
   },
 };

@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Privacy, veiligheid en snelheid. Beheer de ExpressVPN app direct vanuit Chrome, stel een neplocatie in en krijg overal toegang tot content.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Privacy, veiligheid en snelheid. Beheer de ExpressVPN app direct vanuit Firefox, stel een neplocatie in en krijg overal toegang tot content.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN proxy om alles te deblokkeren",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "U kunt daarnaast de extensie verbergen door met de rechtermuisknop op het icoontje te klikken en \"Verbergen in Chrome-menu\" te selecteren."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "U kunt daarnaast de extensie verbergen door met de rechtermuisknop op het icoontje te klikken en \"uit Toolbar Verwijderen\" of \"Naar menu verplaatsen\" te selecteren."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Schaf een abonnement aan"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Hulp nodig? Neem [contact op met de Helpdesk]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Download de Linux App"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Download de Mac App"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Download de Windows App"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "Nieuw bij ExpressVPN? [Begin]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Installeer de ExpressVPN app in de Google App Store."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Deze extensie vereist de ExpressVPN app voor Linux met een actief abonnement."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Deze extensie vereist de ExpressVPN app voor Mac met een actief abonnement."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Deze extensie vereist de ExpressVPN app voor Windows met een actief abonnement."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Terug naar Home"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Als u vragen hebt kunt u contact opnemen met [de Helpdesk]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Uitloggen"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Verlopen (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Neem contact op met de accounteigenaar om een nieuw bedrijfsabonnement aan te schaffen."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Abonnement verlopen"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "U kunt daarnaast de extensie verbergen door met de rechtermuisknop op het icoontje te drukken en \"Verbergen in Chrome-menu\" te selecteren."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "U kunt daarnaast de extensie verbergen door met de rechtermuisknop op het icoontje te klikken en \"uit Toolbar Verwijderen\" of \"Naar menu verplaatsen\" te selecteren."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "Deze extensie is op dit moment alleen verkrijgbaar voor <b>macOS 10.10 / Windows 7</b>  en hoger."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Update uw operatiesysteem om de extensie te kunnen gebruiken."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Meer informatie"
+  },
+  "error_compatibility_error_title": {
+    "message": "Operatiesysteem updaten"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "Controleer uw internetverbinding"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Kies een andere [VPN locatie]"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Als het probleem zich blijft voordoen, [neem contact op met de Helpdesk]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "Internetverkeer wordt op dit moment geblokkeerd om uw privacy te beschermen."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Terug naar beginscherm"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "Annuleren"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "Internetblokkering opheffen"
+  },
+  "error_connection_error_title": {
+    "message": "Kan geen verbinding maken"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "Kan geen verbinding maken met <br>%LOCATION%."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Probeer opnieuw"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Heeft u al een abonnement? [Update now]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "U bent uitgelogd omdat uw accountgegevens geüpdatet zijn."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "Log opnieuw in om ExpressVPN te blijven gebruiken."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Inloggen"
+  },
+  "error_forced_signout_title": {
+    "message": "Inloggen bij ExpressVPN"
+  },
+  "error_fraudster_hint": {
+    "message": "Wij konden uw factuurinformatie niet verifiëren, daarom hebben wij uw betaling geannuleerd."
+  },
+  "error_fraudster_p1_text": {
+    "message": "Om uw abonnement opnieuw te activeren, stuur een e-mail"
+  },
+  "error_fraudster_p2_text": {
+    "message": "onderwerp: <span class='bold'>Billing Verification</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "Sluit een foto bij van de creditcard die u heeft gebruikt (waarop ALLEEN de laatste 4 cijfers en de naam te lezen zijn)"
+  },
+  "error_fraudster_p4_text": {
+    "message": "Vermeld ook uw telefoonnummer (met landcode) en het tijdstip waarop we u het beste kunnen bellen."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Het facturatieteam reageert binnen 24-48 uur."
+  },
+  "error_fraudster_question1_text": {
+    "message": "Hebt u met een creditcard betaald?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Hebt u niet met een creditcard betaald?"
+  },
+  "error_fraudster_title": {
+    "message": "Account geschorst"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Uw gratis proefperiode is verlopen, maar u kunt eenvoudig weer verbinding maken."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Waarom Upgraden?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Voer activatiecode in"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Apps voor elk apparaat"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30-dagen geld terug garantie"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "160 locaties wereldwijd"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "24 uur per dag, 7 dagen per week klantenondersteuning"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Onbeperkte bandbreedte"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Verlopen (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Gratis proefperiode verlopen"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Abonnement nemen"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Abonnement nemen"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Uitloggen"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Gratis proefperiode verlopen"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Betalingsgegevens bijwerken"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Uitloggen"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "Actualiseer de betalingsgegevens in uw iTunes / App store account als u ExpressVPN wilt blijven gebruiken. "
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Betaling mislukt"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN zal automatisch 30 minuten na het actualiseren van uw gegevens geactiveerd worden."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Voer deze command in uw terminal in om de desktop app te activeren:"
+  },
+  "error_not_activated_text": {
+    "message": "Log in op de ExpressVPN desktop app om deze extensie te gebruiken."
+  },
+  "error_not_activated_title": {
+    "message": "App niet geactiveerd"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Als Play Store niet op uw Chromebook beschikbaar is, volg onze [manual configuration] instructies."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "ExpressVPN installeren"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Naar de Helpdesk"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS niet ondersteund",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Installeer desktop app"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Nieuw abonnement nemen"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "App niet geïnstalleerd"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Deze extensie vereist een actieve ExpressVPN app."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Deze extensie vereist een actieve ExpressVPN app."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Naar de Helpdesk"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Open de desktop app"
+  },
+  "error_open_app_title": {
+    "message": "App niet geopend"
+  },
+  "error_signout_button": {
+    "message": "Uitloggen"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "Annuleren"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Meer informatie"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "U heeft het apparaatgebruik van ExpressVPN op dit abonnement overschreden."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Verbreek de verbinding van een apparaat of [purchase an additional subscription]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Verbindingslimiet bereikt."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Betalingsgegevens bijwerken"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Nu niet"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Uw abonnement is verlopen, maar u kunt eenvoudig weer verbinding maken."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Waarom vernieuwen?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Nieuw abonnement nemen"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Voer activatiecode in"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Apps voor elk apparaat"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "Verwijs vrienden, ontvang 30 dagen"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "160 locaties wereldwijd"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "24 uur per dag, 7 dagen per week klantenondersteuning"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Nieuw abonnement nemen"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Uitloggen"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Abonnement verlopen"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Betalingsgegevens bijwerken"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Uitloggen"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Verlopen (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Abonnement verlopen"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Nu updaten"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "App updaten"
+  },
+  "error_upgrade_app_text": {
+    "message": "Deze extensie vereist de laatste versie van de ExpressVPN app."
+  },
+  "general_contact_support_button_label": {
+    "message": "Naar de Helpdesk"
+  },
+  "hint_connection_delay_text": {
+    "message": "Er wordt nog naar een verbinding gezocht."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Kan geen internetverbinding vinden. <br>VPN maakt verbinding zodra deze weer beschikbaar is."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Kan geen internetverbinding vinden. <br>VPN is mogelijk niet beschikbaar."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Geen internetverbinding. <br>VPN maakt weer verbinding zodra deze beschikbaar is."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Verbinding onverwachts verbroken. Bezig met herstellen..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "Internetverkeer wordt momenteel geblokkeerd om uw privacy te beschermen."
+  },
+  "hint_saved_text": {
+    "message": "Opgeslagen"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "Annuleren"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Doorgaan"
+  },
+  "home_change_location_popup_text": {
+    "message": "Internetverkeer kan onbeveiligd zijn tijdens het opnieuw verbinden."
+  },
+  "home_change_location_popup_title": {
+    "message": "Locatie veranderen"
+  },
+  "list_item_247_support": {
+    "message": "24/7 klantenondersteuning"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30-dagen geld-terug garantie"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Apps voor elk apparaat\n"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 locaties wereldwijd"
+  },
+  "list_item_refer_frieds": {
+    "message": "Verwijs vrienden en krijg 30 dagen gratis"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Onbeperkte bandbreedte"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN locaties"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Recente locaties"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Aanbevolen locaties"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "GEEN RESULTATEN"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Zoek naar een stad of land"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Smart Location"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Alle locaties"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Aanbevolen"
+  },
+  "main_screen_current_location_text": {
+    "message": "Huidige locatie"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Recente locatie"
+  },
+  "main_screen_selected_location_text": {
+    "message": "Gekozen locatie"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Smart Location"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "Verbonden"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Verbinding aan het maken"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Verbreekt verbinding..."
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "Niet verbonden"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Opnieuw verbinding aan het maken"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Snelheidstest bezig"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> kan gevaarlijke software bevatten die persoonlijke informatie kan verwijderen of stelen (bijv. bankgegevens, foto's, wachtwoorden, berichten). [Meer&nbsp;informatie]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Gevaar: Malware Verderop"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Terug naar veiligheid"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Toch Doorgaan"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Ik Begrijp de Risico's"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Weet u het zeker?"
+  },
+  "menu_beta_feedback": {
+    "message": "Stuur bètafeedback"
+  },
+  "menu_cancel_text": {
+    "message": "Annuleren"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox Startup",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Verbinden bij opstarten browser"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Desktopmeldingen weergeven"
+  },
+  "menu_get_30_days_free": {
+    "message": "Ontvang 30 dagen gratis"
+  },
+  "menu_help_support": {
+    "message": "Hulp & ondersteuning"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Dankwoord"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% app versie: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Naar de Helpdesk"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Diagnostische Informatie"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS lektest"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Extensieversie: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "Veelgestelde vragen"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP adrescontrole"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC lektest"
+  },
+  "menu_myaccount_title": {
+    "message": "Account"
+  },
+  "menu_my_account": {
+    "message": "Account"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Malware & phishing-beveiliging"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "Blokkeer WebRTC"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "Overal HTTPS"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Vervals uw locatie"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "Laat een 5-sterren beoordeling achter!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Laat ons weten wat wij kunnen verbeteren"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Nu niet"
+  },
+  "menu_ratevpn_text": {
+    "message": "We hopen dat u tevreden bent met ExpressVPN! Zou u een beoordeling achter willen laten?"
+  },
+  "menu_ratevpn_title": {
+    "message": "Bevalt ExpressVPN?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "Beoordeel ExpressVPN"
+  },
+  "menu_section_about_title": {
+    "message": "Over"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Neem contact met ons op"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Een verbetering voorstellen"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Een probleem melden"
+  },
+  "menu_section_support_title": {
+    "message": "Contacteren"
+  },
+  "menu_settings_general_header": {
+    "message": "Algemeen"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Taalextensie"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Taal"
+  },
+  "menu_settings_general_name": {
+    "message": "Instellingen"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Configureer de app-instellingen"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Hulp"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Blokkeer scam-sites en voorkom ads die cryptocurrency stiekem mijnen."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "Voorkom dat websites achter uw echte IP-adres en locatie komen wanneer u verbonden bent met VPN."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "Stop HTML5 geolocatie met het delen van uw fysieke locatie wanneer u verbonden bent met VPN."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Maak automatisch verbinding met de beter beveiligde HTTPS-versie van websites indien beschikbaar."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Meer informatie\n"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Privacy & veiligheid"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Instellingen"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Privacy-instellingen"
+  },
+  "menu_setup_other_devices": {
+    "message": "Andere apparaten instellen"
+  },
+  "menu_signout_p1_text": {
+    "message": "Weet u het zeker? U wordt ook uitgelogd van de desktop app."
+  },
+  "menu_signout_text": {
+    "message": "Uitloggen"
+  },
+  "message_item_rating1_title": {
+    "message": "Bent u tevreden met ExpressVPN?"
+  },
+  "message_item_rating2_title": {
+    "message": "Wilt u met ons delen hoe wij kunnen verbeteren?"
+  },
+  "message_item_rating3_title": {
+    "message": "Zou u een beoordeling achter willen laten?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Nee bedankt"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "Ja hoor"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "Deel ExpressVPN met uw vrienden en ontvang gratis diensten!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "Voor iedere vriend die zich aanmeldt ontvangt u ieder 30 dagen gratis."
+  },
+  "myaccount_account_expired_label": {
+    "message": "Verlopen"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Verloopt op"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Vernieuwt"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Actief"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Verlopen"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Proefperiode"
+  },
+  "myaccount_account_status_label": {
+    "message": "Accountstatus"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Proefperiode verlopen"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Proefperiode"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Abonnement start"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Verwijs vrienden"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Schaf nu aan"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Nu verlengen"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Abonnement nemen"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Account beheren"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Waarom zou u een abonnement nemen?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Waarom verlengen?"
+  },
+  "notification_extension_update_message": {
+    "message": "Klik om te zien wat er nieuw is in versie %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN is geüpdatet"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> kan gevaarlijke inhoud of software bevatten die u zal proberen over te halen persoonlijke informatie te delen (bijv. bankgegevens, foto's, wachtwoorden, berichten). [Meer&nbsp;informatie]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Gevaar: Phishing Verderop"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Gratis proefperiode verloopt over [days] dagen"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Uw gratis proefperiode is verlopen"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "Gratis proefperiode verloopt over [hours] uur"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "Gratis proefperiode verloopt over <1 uur"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Nu upgraden"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Uw laatste betaling is mislukt"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Actualiseer betalingswijze"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome uitgesloten van VPN"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox uitgesloten van VPN"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Bekijk instellingen"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Abonnement verloopt over [days] dagen"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Uw abonnement is verlopen"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Abonnement verloopt over [hours] uur"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Nieuw abonnement nemen"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Nu verlengen"
+  },
+  "promobar_update_available_header": {
+    "message": "Update beschikbaar!"
+  },
+  "promobar_update_available_text": {
+    "message": "Nu installeren"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Gratis proefperiode verloopt over [days] dagen"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Gratis proefperiode is verlopen"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Gratis proefperiode verloopt over [hours] uur"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "Gratis proefperiode verloopt over <1 uur"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Nu upgraden"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome is uitgesloten van VPN"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox is uitgesloten van VPN"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Bekijk instellingen"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Abonnement verloopt over [days] dagen"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Uw abonnement is verlopen"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Nieuw abonnement nemen"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Abonnement verloopt over [hours] uur"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "Abonnement verloopt over <1 uur"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Nu verlengen"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN verbonden"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "Verbonden met %s ."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN is Verbinding aan het maken..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN kan geen verbinding maken"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "Niet mogelijk om verbinding te maken met %s ."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "Kan geen verbinding maken met %s. Internetverkeer wordt geblokkeerd."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Verbindingslimiet bereikt"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Verbreek de verbinding van een apparaat of schaf een extra abonnement aan."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN opnieuw verbinden..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "Verbindt opnieuw met %s ."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "Opnieuw verbinding aan het maken met %s . Internetverkeer wordt geblokkeerd."
+  },
+  "welcome_continue_button_label": {
+    "message": "Doorgaan"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Nu aan de slag"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "De ExpressVPN extensie is een afstandsbediening voor de desktop app."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "Wanneer u verbinding hebt gemaakt met de VPN, beschermt deze niet alleen de browser maar uw hele apparaat."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Meer informatie"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "De extensie verbergt uw locatie, blokkeert WebRTC en gebruikt overal HTTPS."
+  },
+  "welcome_skip_button_label": {
+    "message": "Overslaan"
+  }
+}

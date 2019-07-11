@@ -58,15 +58,6 @@ export default {
       }
     },
   },
-  mounted() {
-    // Update rating message conditions whenever open extension since values don't change.
-    let self = this;
-    chrome.storage.local.get(null, function (storage) {
-      if (typeof storage.prefs === 'object') {
-        self.rating.updateRatingMessageConditions(storage.prefs.ratingPeriodicity);
-      }
-    });
-  },
 };
 </script>
 

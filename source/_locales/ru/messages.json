@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Конфиденциальность, безопасность и скорость. Вы можете управлять приложением ExpressVPN прямо из Chrome, маскировать свое местоположение и получать доступ к контенту в любом месте.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Конфиденциальность, безопасность и скорость. Вы можете управлять приложением ExpressVPN прямо из Firefox, маскировать свое местоположение и получать доступ к контенту в любом месте.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN-прокси, чтобы разблокировать всё",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "Кроме того, вы можете скрыть расширение, щелкнув значок правой кнопкой мыши и выбрав «Скрыть в меню Chrome»."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "Кроме того, вы можете скрыть расширение, щелкнув значок правой кнопкой мыши и выбрав «Удалить из панели инструментов» или «Переместить в меню»."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Купить подписку"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Нужна помощь? Пожалуйста, [обратитесь в службу поддержки]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Скачать приложение для Linux"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Скачать приложение для Mac"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Скачать приложение для Windows"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "Новый пользователь? [Начать]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Пожалуйста, установите приложение ExpressVPN из Google Play."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Необходимо приложение ExpressVPN для Linux с активной подпиской."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Необходимо приложение ExpressVPN для Mac с действующей подпиской."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Необходимо приложение ExpressVPN для Windows с активной подпиской."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Главный экран"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Если у вас есть вопросы, пожалуйста, [обратитесь в службу поддержки]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Выйти"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Подписка истекла (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Чтобы купить новую бизнес-подписку, обратитесь к владельцу вашей учетной записи."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Подписка истекла"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "Кроме того, вы можете скрыть расширение, щелкнув значок правой кнопкой мыши и выбрав «Скрыть в меню Chrome»."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "Кроме того, вы можете скрыть расширение, щелкнув значок правой кнопкой мыши и выбрав «Удалить из панели инструментов» или «Переместить в меню»."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "В настоящее время расширение доступно только для <b>macOS 10.10 / Windows 7</b> и более поздних версий."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Чтобы использовать расширение, пожалуйста, обновите операционную систему."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Подробнее"
+  },
+  "error_compatibility_error_title": {
+    "message": "Обновите операционную систему"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "Проверьте интернет-соединение"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Выберите другую [VPN-локацию]"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Если ничего не помогает, [обратитесь в службу поддержки]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Главный экран"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "Отмена"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "Разблокировать Интернет"
+  },
+  "error_connection_error_title": {
+    "message": "Не удается подключиться"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "Не удалось подключиться к<br>%LOCATION%."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Повторить попытку"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Уже есть подписка? [Обновите сейчас]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Из-за обновления учетной записи был произведен выход из системы."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "Чтобы продолжить использовать ExpressVPN, войдите в учетную запись еще раз."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Войти"
+  },
+  "error_forced_signout_title": {
+    "message": "Вход в ExpressVPN"
+  },
+  "error_fraudster_hint": {
+    "message": "Мы не смогли подтвердить вашу платежную информацию, поэтому ваш платеж был отменен."
+  },
+  "error_fraudster_p1_text": {
+    "message": "Чтобы активировать свою подписку, <br/>пожалуйста, отправьте сообщение по адресу"
+  },
+  "error_fraudster_p2_text": {
+    "message": "тема письма: <span class='bold'>Billing Verification</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "Приложите фотографию кредитной карты, которую вы использовали (должны быть видны ТОЛЬКО последние 4 цифры и имя)"
+  },
+  "error_fraudster_p4_text": {
+    "message": "Напишите свой номер телефона с кодом страны и укажите, когда нам лучше всего связаться с вами."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Сотрудники отдела оплаты услуг ответят вам в течение 24–48 часов. "
+  },
+  "error_fraudster_question1_text": {
+    "message": "Вы платили кредитной картой?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Не платили кредитной картой?"
+  },
+  "error_fraudster_title": {
+    "message": "Учетная запись приостановлена"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Срок бесплатного пробного периода истек, но вы можете легко подключиться опять."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Зачем нужна подписка?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Ввести код активации"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Приложения для всех устройств"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "Гарантия возврата денег 30 дней"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "160 локаций по всему миру"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "Техподдержка 24/7"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Неограниченная пропускная способность"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Подписка истекла (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Пробный период истек"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Купить подписку сейчас"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Купить подписку"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Выйти"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Пробный период истек"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Обновить данные"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Выйти"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "Чтобы продолжить использовать ExpressVPN, пожалуйста, обновите платежные данные в вашей учетной записи iTunes/App Store."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Оплата не прошла"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN автоматически активируется в течение 30 минут после обновления ваших данных."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Чтобы активировать приложение, запустите эту команду в терминале: "
+  },
+  "error_not_activated_text": {
+    "message": "Чтобы использовать расширение, пожалуйста, авторизуйтесь в приложении ExpressVPN для ПК."
+  },
+  "error_not_activated_title": {
+    "message": "Приложение не активировано"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Если Play Store недоступен на Chromebook, пожалуйста, следуйте нашим инструкциям по [ручной установке]."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "Установить ExpressVPN"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Связаться с нами"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS не поддерживается",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Установить приложение для ПК"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Купить новую подписку"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "Приложение не установлено"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Необходимо, чтобы приложение ExpressVPN было запущено."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Необходимо, чтобы приложение ExpressVPN было запущено."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Связаться с нами"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Открыть приложение для ПК"
+  },
+  "error_open_app_title": {
+    "message": "Приложение не открыто"
+  },
+  "error_signout_button": {
+    "message": "Выйти"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "Отмена"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Подробнее"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "Вы превысили максимально возможное количество устройств для этой подписки."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Пожалуйста, отключите устройство или [купите дополнительную подписку]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Превышен лимит подключений."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Обновить данные"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Не сейчас"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Срок действия вашей подписки истек, но вы можете легко подключиться опять."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Зачем продлевать подписку?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Купить новую подписку"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Ввести код активации"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Приложения для всех устройств"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "30 бесплатных дней за каждого друга"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "160 локаций по всему миру"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "Техподдержка 24/7"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Купить новую подписку"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Выйти"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Подписка истекла"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Обновить данные"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Выйти"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Истекла (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Подписка истекла"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Обновить сейчас"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "Обновите приложение"
+  },
+  "error_upgrade_app_text": {
+    "message": "Необходима последняя версия приложения ExpressVPN."
+  },
+  "general_contact_support_button_label": {
+    "message": "Связаться с нами"
+  },
+  "hint_connection_delay_text": {
+    "message": "Идет подключение."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "VPN подключится, когда будет интернет-соединение."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Нет интернет-соединения.<br>VPN может быть недоступна."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "VPN-соединение восстановится после подключения к Интернету."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Соединение прервалось. Повторное подключение..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "Интернет-трафик заблокирован для вашей защиты."
+  },
+  "hint_saved_text": {
+    "message": "Сохранено"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "Отмена"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Продолжить"
+  },
+  "home_change_location_popup_text": {
+    "message": "Ваш интернет-трафик может быть незащищен во время переподключения."
+  },
+  "home_change_location_popup_title": {
+    "message": "Смена локации"
+  },
+  "list_item_247_support": {
+    "message": "Техподдержка 24/7"
+  },
+  "list_item_30day_guarantee": {
+    "message": "Гарантия возврата денег 30 дней"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Приложения для всех устройств"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 локаций по всему миру"
+  },
+  "list_item_refer_frieds": {
+    "message": "30 бесплатных дней за каждого друга"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Неограниченная пропускная способность"
+  },
+  "location_picker_locations_title": {
+    "message": "Локации VPN-серверов"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Предыдущие локации"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Рекомендуемые локации"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "НИЧЕГО НЕ НАЙДЕНО"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Поиск по стране или городу"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Автовыбор"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Все локации"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Рекомендуемые"
+  },
+  "main_screen_current_location_text": {
+    "message": "Текущая локация"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Предыдущая локация"
+  },
+  "main_screen_selected_location_text": {
+    "message": "Выбранная локация"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Автовыбор"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "Соединение установлено"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Подключение"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Отключение"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "Соединение не установлено"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Повторное подключение"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Выполняется тест скорости"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> может содержать опасное ПО, способное удалить или украсть персональные данные (например, банковские реквизиты, фотографии, пароли, сообщения). [Подробнее]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Угроза: вредоносная программа"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Назад под защиту"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Продолжить"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Я понимаю риск"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Вы уверены?"
+  },
+  "menu_beta_feedback": {
+    "message": "Отправить отзыв о бета-версии"
+  },
+  "menu_cancel_text": {
+    "message": "Отмена"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Запуск Firefox",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Запуск при открытии браузера"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Показывать уведомления на рабочем столе"
+  },
+  "menu_get_30_days_free": {
+    "message": "Получить 30 дней в подарок"
+  },
+  "menu_help_support": {
+    "message": "Справка и поддержка"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Уведомления"
+  },
+  "menu_item_app_version_text": {
+    "message": "Версия приложения для %OS%: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Связаться с нами"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Диагностическая информация"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "Проверка на утечку DNS"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Версия расширения: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "Типичные вопросы"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "Проверка IP-адреса"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "Проверка на утечку через WebRTC"
+  },
+  "menu_myaccount_title": {
+    "message": "Учетная запись"
+  },
+  "menu_my_account": {
+    "message": "Уч. запись"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Защита от вредоносных программ и фишинга"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "Заблокировать WebRTC"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Скрыть местоположение"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "Поставить 5 звезд!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Посоветовать, как улучшить сервис"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Не сейчас"
+  },
+  "menu_ratevpn_text": {
+    "message": "Надеемся, что это так! Не могли бы вы оставить отзыв?"
+  },
+  "menu_ratevpn_title": {
+    "message": "Вам нравится ExpressVPN?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "Оценить ExpressVPN"
+  },
+  "menu_section_about_title": {
+    "message": "О приложении"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Обратная связь"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Предложить улучшение"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Сообщить о проблеме"
+  },
+  "menu_section_support_title": {
+    "message": "Связаться с нами"
+  },
+  "menu_settings_general_header": {
+    "message": "Общие"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Язык расширения"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Язык"
+  },
+  "menu_settings_general_name": {
+    "message": "Настройки"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Настроить параметры в приложении"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Справка"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Заблокируйте мошеннические сайты и защитите себя от рекламы, которая тайно майнит криптовалюту."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "Не позволяет веб-сайтам обнаружить ваш настоящий IP-адрес и местоположение при подключении к VPN."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "Не позволяет HTML5 geolocation раскрывать ваше физическое местонахождение при подключении к VPN."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Автоматическое подключение к более безопасной HTTPS-версии веб-сайтов, если такая имеется."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Подробнее"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Анонимность и безопасность"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Настройки"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Настройки конфиденциальности"
+  },
+  "menu_setup_other_devices": {
+    "message": "Установка на другие устройства"
+  },
+  "menu_signout_p1_text": {
+    "message": "Вы уверены? Вы также выйдете из уч. записи настольного приложения."
+  },
+  "menu_signout_text": {
+    "message": "Выйти"
+  },
+  "message_item_rating1_title": {
+    "message": "Вам нравится ExpressVPN?"
+  },
+  "message_item_rating2_title": {
+    "message": "Посоветуйте, как нам улучшить сервис."
+  },
+  "message_item_rating3_title": {
+    "message": "Не могли бы вы оставить отзыв?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Не сейчас"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "OK"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "Порекомендуйте ExpressVPN и получите бесплатное обслуживание!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "За каждого друга, оформившего подписку, мы подарим вам обоим 30 дней обслуживания!"
+  },
+  "myaccount_account_expired_label": {
+    "message": "Срок истек"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Срок истекает"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Обновится"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Активна"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Истекла"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Пробный период"
+  },
+  "myaccount_account_status_label": {
+    "message": "Состояние уч. записи:"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Истекла"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Пробный период"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Подписка начинается"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Пригласить друзей"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Купить сейчас"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Продлить сейчас "
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Купить подписку сейчас"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Управление учетной записью"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Зачем нужна подписка?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Зачем продлевать подписку?"
+  },
+  "notification_extension_update_message": {
+    "message": "Нажмите, чтобы узнать, что нового в версии %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "Вышло обновление ExpressVPN"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> может содержать контент или ПО, побуждающее вас раскрыть личную информацию (например, банковские реквизиты, фотографии, пароли, сообщения). [Подробнее]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Угроза: фишинг "
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Пробный период истекает через [days] дн."
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Ваш пробный период истек"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "Пробный период истекает через [hours] ч"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "До окончания пробного периода < 1 ч"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Купите подписку сейчас"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Платеж не прошел"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Обновите способ оплаты"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome исключен из VPN"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox исключен из VPN"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Проверьте настройки"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Подписка истекает через [days] дн."
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Срок действия вашей подписки истек"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Подписка истекает через [hours] ч"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Купите новую подписку"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Продлите сейчас "
+  },
+  "promobar_update_available_header": {
+    "message": "Доступно обновление!"
+  },
+  "promobar_update_available_text": {
+    "message": "Установите сейчас"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Пробный период истекает через [days] дн."
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Ваш пробный период истек"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Пробный период истекает через [hours] ч"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "До окончания пробного периода < 1 ч"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Купите подписку сейчас"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome исключен из VPN"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox исключен из VPN"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Проверьте настройки"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Подписка истекает через [days] дн."
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Срок действия вашей подписки истек"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Купите новую подписку"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Подписка истекает через [hours] ч"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "До окончания подписки < 1 ч"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Продлите сейчас "
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN-соединение установлено"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "Вы подключены к %s."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "Подключение к VPN..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "Не удается подключиться к VPN"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "Не удалось подключиться к %s."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "Не удается подключиться к %s. Интернет-трафик заблокирован."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Превышен лимит подключений"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Пожалуйста, отключите устройство или купите дополнительную подписку."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "Повторное подключение к VPN..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "Повторное подключение к %s."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "Идет повторное подключение к %s. Интернет-трафик заблокирован."
+  },
+  "welcome_continue_button_label": {
+    "message": "Продолжить"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Начать"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "Расширение ExpressVPN — это пульт управления для настольного приложения."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "Когда вы подключены к VPN, она защищает всё устройство, а не только браузер."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Подробнее"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "Расширение скрывает ваше местоположение, блокирует WebRTC и включает HTTPS Everywhere."
+  },
+  "welcome_skip_button_label": {
+    "message": "Пропустить"
+  }
+}

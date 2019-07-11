@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Privatliv, säkerhet, och fart. Kontrollera ExpressVPN-appen direkt från Chrome, spoofa din position, och kom åt allt innehåll du vill se.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Privatliv, säkerhet, och fart. Kontrollera ExpressVPN-appen direkt från Firefox, spoofa din position, och kom åt allt innehåll du vill se.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN-proxy som avblockerar allt",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "Alternativt kan du dölja tillägget genom att högerklicka på ikonen och välja \"Dölj i Chrome-menyn\"."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "Alternativt kan du dölja tillägget genom att högerklicka på ikonen och välja \"Ta bort från verktygsfältet\" eller \"Flytta till menyn\"."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Köp ett abonnemang"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Behöver du hjälp? Vänligen [kontakta support]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Ladda ner Linux-appen"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Ladda ner Mac-appen"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Ladda ner Windows-appen"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "Ny hos ExpressVPN? [Get started]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Vänligen installera ExpressVPN-appen från Google Play Store."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Det här tillägget kräver ExpressVPN-appen för Linux med ett aktivt abonnemang."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Det här tillägget kräver ExpressVPN-appen för Mac med ett aktivt abonnemang."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Det här tillägget kräver ExpressVPN-appen för Windows med ett aktivt abonnemang."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Gå tillbaks till startsidan"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Om du har några frågor, vänligen [kontakta support]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Logga ut"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Utgånget (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Vänligen kontakta kontoinnehavaren för att köpa ett nytt företagsabonnemang."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Abonnemanget har löpt ut"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "Alternativt kan du dölja tillägget genom att högerklicka på ikonen och välja \"Dölj i Chrome-menyn\"."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "Alternativt kan du dölja tillägget genom att högerklicka på ikonen och välja \"Ta bort från verktygsfältet\" eller \"Flytta till menyn\"."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "Det här tillägget är för närvarande bara tillgängligt för <b>macOS 10.10 / Windows 7</b> eller nyare."
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Vänligen uppdatera ditt operativsystem för att använda det här tillägget."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Lär dig mer"
+  },
+  "error_compatibility_error_title": {
+    "message": "Uppdatera operativsystemet"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "Kolla din uppkoppling"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Välj en annan [VPN-position]"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Om inget annan funkar, [kontakta support]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "Internettrafiken blockeras för närvarande för att skydda ditt privatliv."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Tillbaka till startsidan"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "Avbryt"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "Avblockera internet"
+  },
+  "error_connection_error_title": {
+    "message": "Kunde inte ansluta"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "Kunde inte ansluta till<br>%LOCATION%."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Prova igen"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Har du redan ett abonnemang? [Uppdatera nu]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Du har loggats ut eftersom dina kontouppgifter uppdaterades."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "För att fortsätta använda ExpressVPN, vänligen logga in igen."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Logga in"
+  },
+  "error_forced_signout_title": {
+    "message": "Logga in på ExpressVPN"
+  },
+  "error_fraudster_hint": {
+    "message": "Vi kunde inte verifiera din faktureringsinformation, så vi har avbrutit din betalning."
+  },
+  "error_fraudster_p1_text": {
+    "message": "För att återaktivera ditt abonnemang,<br>vänligen mejla"
+  },
+  "error_fraudster_p2_text": {
+    "message": "ämnesrad: <span class='bold'>Billing Verification</span>"
+  },
+  "error_fraudster_p3_text": {
+    "message": "Vänligen inkludera en bild på kreditkortet du använde (som ENDAST visar de 4 sista siffrorna och namnet)."
+  },
+  "error_fraudster_p4_text": {
+    "message": "Vänligen inkludera ditt telefonnummer (med landskod) och vilka tider vi enklast kan nå dig."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Faktureringsavdelningen svarar inom 24-48 timmar."
+  },
+  "error_fraudster_question1_text": {
+    "message": "Betalade du med kreditkort?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Betalade du inte med ett kreditkort?"
+  },
+  "error_fraudster_title": {
+    "message": "Kontot avstängt"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Din provperiod har löpt ut, men det är enkelt att koppla upp sig igen."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Varför uppgradera?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Ange aktiveringskod"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Appar till alla enheter"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30 dagars pengarna-tillbaka-garanti"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "160 positioner världen över"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "Kundtjänst dygnet runt"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Obegränsad bandbredd"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Utgånget (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Gratis provperiod slut"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Uppgradera nu"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Skaffa ett abonnemang"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Logga ut"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Gratis provperiod slut"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Uppdatera betaluppgifter"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Logga ut"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "För att fortsätta använda ExpressVPN, vänligen uppdatera betaluppgifterna på ditt iTunes / App Store-konto."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Betalning misslyckades"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN kommer automatiskt aktiveras inom 30 minuter från att du uppdaterar dina uppgifter."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Vänligen kör det här kommandot i din terminal för att aktivera skrivbordsappen:"
+  },
+  "error_not_activated_text": {
+    "message": "Vänligen logga in i ExpressVPN:s skrivbordsapp för att använda det här tillägget."
+  },
+  "error_not_activated_title": {
+    "message": "Appen är inte aktiverad"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Om Play Store inte är tillgängligt på din Chromebook, vänligen följ våra guider för [manuella konfigurationer]."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "Installera ExpressVPN"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Kontakta support"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome OS stöds inte",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Installera skrivbordsappen"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Skaffa nytt abonnemang"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "Appen är inte installerad"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Det här tillägget kräver ExpressVPN-appen för att köras."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Det här tillägget kräver ExpressVPN-appen för att användas."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Kontakta support"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Öppna skrivbordsappen"
+  },
+  "error_open_app_title": {
+    "message": "Appen är inte öppen"
+  },
+  "error_signout_button": {
+    "message": "Logga ut"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "Avbryt"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Lär dig mer"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "Du har överskridit ExpressVPN:s enhetsgräns för det här abonnemanget."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Vänligen koppla från en enhet eller [köp ytterligare ett abonnemang]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Anslutningsgränsen nådd."
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Uppdatera betaluppgifter"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Senare"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Ditt abonnemang har löpt ut, men det är enkelt att återansluta."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Varför förnya?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Skaffa nytt abonnemang"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Ange aktiveringskoden"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Appar till alla enheter"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "Referera vänner, få 30 dagar gratis"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "160 positioner världen över"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "Kundtjänst dygnet runt"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Skaffa nytt abonnemang"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Logga ut"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Abonnemang utgånget"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Uppdatera betaluppgifter"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Logga ut"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Utgånget (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Abonnemanget har löpt ut"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Uppdatera nu"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "Uppdatera appen"
+  },
+  "error_upgrade_app_text": {
+    "message": "Det här tillägget kräver den senaste versionen av ExpressVPN-appen."
+  },
+  "general_contact_support_button_label": {
+    "message": "Kontakta support"
+  },
+  "hint_connection_delay_text": {
+    "message": "Försöker fortfarande ansluta."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Kunde inte hitta någon internetuppkoppling.<br>VPN kopplar upp när en anslutning hittas."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Kunde inte hitta någon internetuppkoppling.<br>VPN kan vara otillgängligt."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Internetanslutningen tappades.<br>VPN kommer återansluta så fort det går."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Anslutningen förlorades. Återansluter. . ."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "Internettrafik blockeras för att skydda ditt privatliv."
+  },
+  "hint_saved_text": {
+    "message": "Sparat"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "Avbryt"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Fortsätt"
+  },
+  "home_change_location_popup_text": {
+    "message": "Din internettrafik kan vara oskyddad medan du återansluter."
+  },
+  "home_change_location_popup_title": {
+    "message": "Ändra position"
+  },
+  "list_item_247_support": {
+    "message": "Kundtjänst dygnet runt"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30 dagars pengarna-tillbaka-garanti"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Appar till alla enheter"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 positioner världen över"
+  },
+  "list_item_refer_frieds": {
+    "message": "Referera vänner, få 30 dagar gratis"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Obegränsad bandbredd"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN-positioner"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Senaste positioner"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Rekommenderade positioner"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "INGA RESULTAT"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Sök efter en stad eller ett land"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Smart position"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Alla positioner"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Rekommenderade"
+  },
+  "main_screen_current_location_text": {
+    "message": "Aktuell position"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Senaste positionen"
+  },
+  "main_screen_selected_location_text": {
+    "message": "Vald position"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Smart position"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "Ansluten"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Ansluter"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Kopplar från"
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "Inte ansluten"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Återansluter"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Hastighetstestet körs"
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> kan innehålla skadlig mjukvara som kan radera eller stjäla personlig information (t.ex. bankuppgifter, bilder, lösenord, meddelanden). [Lean&nbsp;more]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Varning: Malware kan finnas"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Tillbaka till säkerhet"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Fortsätt ändå"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Jag förstår riskerna"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Är du säker?"
+  },
+  "menu_beta_feedback": {
+    "message": "Skicka Beta feedback"
+  },
+  "menu_cancel_text": {
+    "message": "Avbryt"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox Startup",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Anslut när webbläsaren startas"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Visa skrivbordsnotifikationer"
+  },
+  "menu_get_30_days_free": {
+    "message": "Få 30 dagar gratis"
+  },
+  "menu_help_support": {
+    "message": "Hjälp & support"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Licenser"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS%-appversion: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Kontakta support"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Diagnostisk information"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS-läckagetest"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Tilläggsversion: %VERSION%"
+  },
+  "menu_item_faq_text": {
+    "message": "Vanliga frågor"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP-adresskollen"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC-läckagetest"
+  },
+  "menu_myaccount_title": {
+    "message": "Konto"
+  },
+  "menu_my_account": {
+    "message": "Konto"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Malware & phishing-skydd"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "Blockera WebRTC"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS Everywhere"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Dölj din position"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "Ge oss 5 stjärnor!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Berätta hur vi kan bli bättre"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Senare"
+  },
+  "menu_ratevpn_text": {
+    "message": "Vi hoppas att du älskar att använda ExpressVPN! Skulle du vilja ge oss ditt omdöme?"
+  },
+  "menu_ratevpn_title": {
+    "message": "Gillar du ExpressVPN?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "Betygsätt ExpressVPN"
+  },
+  "menu_section_about_title": {
+    "message": "Om"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Tala med oss"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Föreslå en förbättring"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Rapportera ett problem"
+  },
+  "menu_section_support_title": {
+    "message": "Kontakta oss"
+  },
+  "menu_settings_general_header": {
+    "message": "Allmänt"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Tilläggets språk"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Språk"
+  },
+  "menu_settings_general_name": {
+    "message": "Inställningar"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Skrivbordsappens inställningar"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Hjälp"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Blockera bluffhemsidor och förhindra annonser från att skaffa kryptovalutor."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "Förhindra sidor från att upptäcka din sanna IP-adress och position när du är ansluten till VPN."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "Stoppa HTML5-geolokalisering från att avslöja din faktiska position när du är ansluten till VPN."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Ansluter automatiskt till den säkrare HTTPS-versionen på hemsidor där detta är möjligt."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Lär dig mer"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Privatliv & säkerhet"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Inställningar"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Sekretessinställningar"
+  },
+  "menu_setup_other_devices": {
+    "message": "Kom igång på andra enheter"
+  },
+  "menu_signout_p1_text": {
+    "message": "Är du säker? Du kommer att loggas ut från skrivbordsappen."
+  },
+  "menu_signout_text": {
+    "message": "Logga ut"
+  },
+  "message_item_rating1_title": {
+    "message": "Gillar du ExpressVPN?"
+  },
+  "message_item_rating2_title": {
+    "message": "Låt oss veta hur kan vi förbättra vår tjänst?"
+  },
+  "message_item_rating3_title": {
+    "message": "Skulle du vilja ge oss ditt omdöme?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Nej tack"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "OK"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "Dela ExpressVPN och få gratis förbrukning!"
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "För varje vän som registrerar sig ger vi er båda 30 dagar gratis."
+  },
+  "myaccount_account_expired_label": {
+    "message": "Utgånget"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Löper ut om"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Förnyas"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Aktivt"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Utgånget"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Provperiod"
+  },
+  "myaccount_account_status_label": {
+    "message": "Kontostatus"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Provperiod har löpt ut"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Provperiod"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Abonnemanget börjar"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Bjud in vänner"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Köp nu"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Förnya nu"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Uppgradera nu"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Hantera konto"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Varför skaffa ett abonnemang?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Varför förnya?"
+  },
+  "notification_extension_update_message": {
+    "message": "Klicka för att se vad som är nytt i version %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN uppdaterat"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> kan innehålla skadlig mjukvara som försöker lura dig att avslöja personlig information (t.ex. bankuppgifter, bilder, lösenord, meddelanden). [Lean&nbsp;more]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Varning: Phishing försiggår"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Gratis provperiod löper ut om [days] dagar"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Din gratis provperiod har utgått"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "Gratis provperiod löper ut om [hours] timmar"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "Gratis provperiod löper ut om <1 timme"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Uppgradera nu"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Din senaste betalning misslyckades"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Uppdatera betalmetod"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome exkluderas från VPN"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox exkluderas från VPN"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Granska inställningar"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Abonnemanget löper ut om [days] dagar"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Ditt abonnemang har löpt ut"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Abonnemanget löper ut om [hours] timmar"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Skaffa nytt abonnemang"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Förnya nu"
+  },
+  "promobar_update_available_header": {
+    "message": "Uppdatering tillgänglig!"
+  },
+  "promobar_update_available_text": {
+    "message": "Installera nu"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Gratis provperiod löper ut om [days] dagar"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Din gratis provperiod har löpt ut"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Gratis provperiod löper ut om [hours] timmar"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "Gratis provperiod löper ut om <1 timme"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Uppgradera nu"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome exkluderas från VPN"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox exkluderas från VPN"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Granska inställningar"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Abonnemanget löper ut om [days] dagar"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Ditt abonnemang har utgått"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Skaffa nytt abonnemang"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Abonnemanget löper ut om [hours] timmar"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "Abonnemanget löper ut om <1 timme"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Förnya nu"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN anslutet"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "Ansluten till %s."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN ansluter..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN kunde inte ansluta"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "Kunde inte ansluta till %s."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "Kunde inte ansluta till %s. Internettrafiken blockeras."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Anslutningsgräns nådd"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Vänligen koppla bort en enhet eller köp ett abonnemang till."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN återansluter..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "Återansluter till %s."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "Återansluter till %s. Internettrafiken blockeras."
+  },
+  "welcome_continue_button_label": {
+    "message": "Fortsätt"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Kom igång"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ExpressVPN-tillägget är en fjärrkontroll för skrivbordsappen."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "När du är ansluten till vårt VPN, så skyddas hela din enhet, inte bara din webbläsare."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Lär dig mer"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "Tillägget spoofar din position, blockerar WebRTC, och inkluderar HTTPS Everywhere."
+  },
+  "welcome_skip_button_label": {
+    "message": "Skippa"
+  }
+}

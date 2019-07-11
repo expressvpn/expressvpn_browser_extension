@@ -1,8 +1,8 @@
 <template>
   <div class="circleProgressBar">
-    <svg class="progress" :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`">
+    <svg :class="['progress', { 'infinite': showInfiniteAnimation }]" :width="size" :height="size" :viewBox="`0 0 ${size} ${size}`">
       <circle :class="['progress-background', `progress-background-${currentInfo.state}`]" :cx="size/2" :cy="size/2" :r="radius" :stroke-width="strokeWidth" />
-      <circle :class="['progress-bar', `progress-bar-${currentInfo.state}`]" :cx="size/2" :cy="size/2" :r="radius" :stroke-width="strokeWidth" :stroke-dasharray="circumference" :stroke-dashoffset="dashoffset" />
+      <circle :class="['progress-bar', `progress-bar-${currentInfo.state}`, { 'infinite': showInfiniteAnimation }]" :cx="size/2" :cy="size/2" :r="radius" :stroke-width="strokeWidth" :stroke-dasharray="circumference" :stroke-dashoffset="dashoffset" />
 	  </svg>
   </div>
 </template>
@@ -23,6 +23,9 @@
       };
     },
     computed: {
+      showInfiniteAnimation() {
+        return (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.hasInternet === false);
+      },
       radius() {
         return (this.size / 2) - (this.strokeWidth / 2);
       },
@@ -43,29 +46,58 @@
   };
 </script>
 <style lang="scss" scoped>
-  .progress {
-    transform: rotate(-90deg);
+.progress {
+  transform: rotate(-90deg);
 
-    &-background {
-      stroke: $gray-30;
-      fill: $gray-50;
+  &.infinite {
+    animation: rotate 2s linear infinite;
+  }
 
-      &-ready {
-        stroke: $red-20;
-      }
-    }
-    
-    &-bar {
-      fill: none;
+  &-background {
+    stroke: $gray-30;
+    fill: $gray-50;
 
-      &-connecting {
-        stroke: $green-30;
-        transition: stroke-dashoffset 1s linear;
-      }
-      &-connected {
-        stroke: $green-30;
-        stroke-dashoffset: 0;
-      }
+    &-ready {
+      stroke: $red-20;
     }
   }
+  
+  &-bar {
+    fill: none;
+
+    &-connecting, &-reconnecting {
+      stroke: $green-30;
+      transition: stroke-dashoffset 1s linear;
+    }
+    &-connected {
+      stroke: $green-30;
+      stroke-dashoffset: 0;
+    }
+
+    &.infinite {
+      animation: dash 2.5s linear infinite;
+    }
+
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,570;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 254,570;
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dasharray: 254,570;
+    stroke-dashoffset: -340;
+  }
+}
 </style>

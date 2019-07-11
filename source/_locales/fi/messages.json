@@ -1,0 +1,851 @@
+{
+  "app_description_@chrome@_text": {
+    "message": "Yksityisyys, turvallisuus ja nopeus. Hallitse ExpressVPN-sovellusta suoraan Chromesta, huijaa sijaintisii ja käytä sisältöä missä tahansa.",
+    "description": "The description of the application"
+  },
+  "app_description_@firefox@_text": {
+    "message": "Yksityisyys, turvallisuus ja nopeus. Ohjaa ExpressVPN-sovellusta suoraan Firefoxista, huijaa sijaintisi ja käytä sisältöä missä tahansa.",
+    "description": "The description of the application"
+  },
+  "app_name_title": {
+    "message": "ExpressVPN: VPN-välityspalvelin estojen poistamiseksi",
+    "description": "The name of the application"
+  },
+  "app_short_name_title": {
+    "message": "ExpressVPN",
+    "description": "The short name of the application"
+  },
+  "error_@chrome@_hide_text": {
+    "message": "Voit vaihtoehtoisesti piilottaa laajennuksen klikkaamalla ikonia oikealla painikkeella ja valitsemalla kohdan \"Piilota Chrome-valikkoon\"."
+  },
+  "error_@firefox@_hide_text": {
+    "message": "Voit vaihtoehtoisesti piilottaa laajennuksen klikkaamalla ikonia oikealla painikkeella ja valitsemalla kohdan \"Poista työkalupalkista\" tai \"Siirrä valikkoon\"."
+  },
+  "error_app_not_found_buy_subscription_button_label": {
+    "message": "Osta tilaus"
+  },
+  "error_app_not_found_contact_support_text": {
+    "message": "Tarvitsetko apua? Ole hyvä ja [ota yhteyttä asiakastukeen]."
+  },
+  "error_app_not_found_download_LINUX_button_label": {
+    "message": "Lataa Linux-sovellus"
+  },
+  "error_app_not_found_download_MAC_button_label": {
+    "message": "Lataa Mac-sovellus"
+  },
+  "error_app_not_found_download_WINDOWS_button_label": {
+    "message": "Lataa Windows-sovellus"
+  },
+  "error_app_not_found_get_started_text": {
+    "message": "Uusi ExpressVPN:n käyttäjä? [Aloita]"
+  },
+  "error_app_not_found_require_CHROMIUM_text": {
+    "message": "Asenna ExpressVPN-sovellus Google Play Storesta."
+  },
+  "error_app_not_found_require_LINUX_text": {
+    "message": "Tämä laajennus edellyttää ExpressVPN-sovellusta Linuxlle sekä voimassaolevaa tilausta."
+  },
+  "error_app_not_found_require_MAC_text": {
+    "message": "Tämä laajennus edellyttää, että ExpressVPN-sovellus Macille -tilaus on voimassa."
+  },
+  "error_app_not_found_require_WINDOWS_text": {
+    "message": "Tämä laajennus edellyttää ExpressVPN-sovellusta Windowsille sekä voimassa olevaa tilausta."
+  },
+  "error_btnReturnHome_default": {
+    "message": "Palaa etusivulle"
+  },
+  "error_business_subscription_expired_contact_support_text": {
+    "message": "Jos sinulla on kysyttävää, ole hyvä ja [ota yhteyttä asiakastukeen]."
+  },
+  "error_business_subscription_expired_signout_button_label": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_business_subscription_expired_status_text": {
+    "message": "Vanhentunut (%1)."
+  },
+  "error_business_subscription_expired_text": {
+    "message": "Ole hyvä ja ota yhteyttä tilin omistajaan uuden yritystilauksen tekemiseksi."
+  },
+  "error_business_subscription_expired_title": {
+    "message": "Tilaus on vanhentunut"
+  },
+  "error_compatibility_error_@chrome@_hide_text": {
+    "message": "Voit vaihtoehtoisesti piilottaa laajennuksen klikkaamalla ikonia oikealla painikkeella ja valitsemalla kohdan \"Piilota Chrome-valikkoon\"."
+  },
+  "error_compatibility_error_@firefox@_hide_text": {
+    "message": "Voit vaihtoehtoisesti piilottaa laajennuksen klikkaamalla ikonia oikealla painikkeella ja valitsemalla kohdan \"Poista työkalupalkista\" tai \"Siirrä valikkoon\"."
+  },
+  "error_compatibility_error_os_version_p1_text": {
+    "message": "Tämä laajennusosa on tällä hetkellä saatavilla vain käyttöjärjestelmille <b>macOS 10.10 / Windows 7</b>"
+  },
+  "error_compatibility_error_os_version_p2_text": {
+    "message": "Ole hyvä ja päivitä käyttöjärjestelmäsi laajennuksen käyttämiseksi."
+  },
+  "error_compatibility_error_os_version_update_button_label": {
+    "message": "Lue lisää"
+  },
+  "error_compatibility_error_title": {
+    "message": "Päivitä käyttöjärjestelmä"
+  },
+  "error_connection_error_check_l1_text": {
+    "message": "Tarkista Internet-yhteys"
+  },
+  "error_connection_error_check_l2_text": {
+    "message": "Valitse toinen [VPN-sijainti]"
+  },
+  "error_connection_error_check_l3_text": {
+    "message": "Jos kaikki muu epäonnistuu, [ota yhteyttä tukeen]."
+  },
+  "error_connection_error_lock_on_text": {
+    "message": "Internet-liikenne on tällä hetkellä estettynä yksityisyytesi suojelemiseksi."
+  },
+  "error_connection_error_return_home_button_label": {
+    "message": "Palaa kotiin"
+  },
+  "error_connection_error_return_home_button_label_network_lock_off": {
+    "message": "Peruuta"
+  },
+  "error_connection_error_return_home_button_label_network_lock_on": {
+    "message": "Poista estot verkosta"
+  },
+  "error_connection_error_title": {
+    "message": "Yhdistäminen ei onnistu"
+  },
+  "error_connection_error_to_location_text": {
+    "message": "Ei voitu yhdistää <br>%LOCATION%."
+  },
+  "error_connection_error_try_again_button_label": {
+    "message": "Yritä uudelleen"
+  },
+  "error_expired_update_now_link_text": {
+    "message": "Oletko jo tilannut? [Päivitä nyt]."
+  },
+  "error_forced_signout_p1_text": {
+    "message": "Olet kirjautunut ulos, koska tilitietosi on päivitetty."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "Jatkaaksesi ExpressVPN:n käyttöä, kirjaudu uudelleen sisään."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Sisäänkirjaudu"
+  },
+  "error_forced_signout_title": {
+    "message": "Sisäänkirjaudu ExpressVPN:ään"
+  },
+  "error_fraudster_hint": {
+    "message": "Emme voineet vahvistaa laskutustietojasi, joten olemme peruuttaneet maksusi."
+  },
+  "error_fraudster_p1_text": {
+    "message": "<span id='fraudster-text-1'>Emme pystyneet vahvistamaan laskutustietojasi, joten olemme peruuttaneet maksusi.</span><br/><br/><span>Jos haluat aktivoida tilauksesi uudelleen, ole hyvä ja <br/>lähetä sähköpostia osoitteeseen </span><br/><span id='email'>support@expressvpn.zendesk.com</span>,<br /><span>aiheella <b>Laskutuksen vahvistaminen</b></span>.<br/><br/><b>Maksoitko luottokortilla?</b><br/><span>Lisää viestiin valokuva käyttämästäsi luottokortista (siten, että näkyvillä ovat VAIN 4 viimeistä numeroa ja nimi).<br/><br/><b>Etkö maksanut luottokortilla?</b><br/>Liitä puhelinnumerosi (maakoodi mukaan lukien) ja ilmoita, mihin aikaan voimme soittaa sinulle.<br/><br/>Laskutustiimi vastaa 24-48 tunnin kuluessa.</span>"
+  },
+  "error_fraudster_p2_text": {
+    "message": "aihe: <span class='bold'>Laskutusvahvistus</span>."
+  },
+  "error_fraudster_p3_text": {
+    "message": "Lisää käytetyn luottokortin valokuva (VAIN neljä viimeistä numeroa ja nimi näkyvissä)"
+  },
+  "error_fraudster_p4_text": {
+    "message": "Anna puhelinnumerosi (maakoodi) ja paras aika, johon voimme soittaa sinulle."
+  },
+  "error_fraudster_p5_text": {
+    "message": "Laskutustiimi vastaa 24–48 tunnin kuluessa."
+  },
+  "error_fraudster_question1_text": {
+    "message": "Maksoitko luottokortilla?"
+  },
+  "error_fraudster_question2_text": {
+    "message": "Etkö maksanut luottokortilla?"
+  },
+  "error_fraudster_title": {
+    "message": "Tili estetty"
+  },
+  "error_free_trial_expired_benefits_text": {
+    "message": "Ilmainen kokeilujaksosi on päättynyt, <br/>mutta yhteyden muodostaminen uudelleen on helppoa."
+  },
+  "error_free_trial_expired_benefits_title": {
+    "message": "Miksi korottaa?"
+  },
+  "error_free_trial_expired_enter_new_code_button_label": {
+    "message": "Syötä aktivointikoodi"
+  },
+  "error_free_trial_expired_l1_text": {
+    "message": "Sovellukset joka laitteelle"
+  },
+  "error_free_trial_expired_l2_text": {
+    "message": "30 päivän rahat takaisin -takuu"
+  },
+  "error_free_trial_expired_l3_text": {
+    "message": "145+ sijaintia ympäri maailmaa"
+  },
+  "error_free_trial_expired_l4_text": {
+    "message": "24/7 asiakastuki"
+  },
+  "error_free_trial_expired_l5_text": {
+    "message": "Rajoittamaton kaistanleveys"
+  },
+  "error_free_trial_expired_status_text": {
+    "message": "Vanhentunut (%1)."
+  },
+  "error_free_trial_expired_title": {
+    "message": "Ilmainen kokeilujakso on päättynyt"
+  },
+  "error_free_trial_expired_upgrade_now_button_label": {
+    "message": "Tee tilaus"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
+    "message": "Hanki tilaus"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
+    "message": "Ilmaiskokeilu on päättynyt"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
+    "message": "Päivitä maksutiedot"
+  },
+  "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_IAP_CONTINUE_USING_p1_text": {
+    "message": "Jos haluat jatkaa ExpressVPN:n käyttöä, päivitä maksutiedot iTunes / App Store -tiliisi."
+  },
+  "error_IAP_MAIN_title": {
+    "message": "Maksu epäonnistui"
+  },
+  "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
+    "message": "ExpressVPN aktivoituu automaattisesti 30 minuutin kuluessa tietojen päivittämisestä."
+  },
+  "error_not_activated_LINUX_text": {
+    "message": "Käynnistä tämä komento päätelaitteessasi aktivoidaksesi työpöydän sovelluksen:"
+  },
+  "error_not_activated_text": {
+    "message": "Käytä tätä laajennusta kirjautumalla ExpressVPN-työpöytäsovellukseen."
+  },
+  "error_not_activated_title": {
+    "message": "Sovellus ei ole aktivoitu"
+  },
+  "error_NOT_INSTALLED_chromeOS_manual": {
+    "message": "Jos Play-myymälä ei ole käytettävissä Chromebookissa, noudata [manual configuration] -ohjeita."
+  },
+  "error_NOT_INSTALLED_chromeOS_primary_button": {
+    "message": "Asenna ExpressVPN-sovellus"
+  },
+  "error_NOT_INSTALLED_chromeOS_secondary_button": {
+    "message": "Ota yhteyttä tukeen"
+  },
+  "error_NOT_INSTALLED_chromeOS_title": {
+    "message": "Chrome-käyttöjärjestelmää ei tueta",
+    "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_primary_button": {
+    "message": "Asenna työpöydän sovellus"
+  },
+  "error_NOT_INSTALLED_secondary_button": {
+    "message": "Tee uusi tilaus"
+  },
+  "error_NOT_INSTALLED_title": {
+    "message": "Sovellusta ei ole asennettu"
+  },
+  "error_open_app_@chrome@_text": {
+    "message": "Tämä laajennus edellyttää, että ExpressVPN-sovellus on päällä."
+  },
+  "error_open_app_@firefox@_text": {
+    "message": "Tämä laajennus edellyttää ExpressVPN-sovelluksen päällä olemista."
+  },
+  "error_open_app_contact_support_button_label": {
+    "message": "Ota yhteyttä asiakastukeen"
+  },
+  "error_open_app_open_app_button_label": {
+    "message": "Avaa tietokoneella oleva sovellus"
+  },
+  "error_open_app_title": {
+    "message": "Sovellus ei ole auki"
+  },
+  "error_signout_button": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_simultaneous_connection_cancel_button_label": {
+    "message": "Peruuta"
+  },
+  "error_simultaneous_connection_learn_more_button_label": {
+    "message": "Lue lisää"
+  },
+  "error_simultaneous_connection_p1_text": {
+    "message": "Olet ylittänyt ExpressVPN:n laitteen käyttörajan tälle tilaukselle."
+  },
+  "error_simultaneous_connection_p2_text": {
+    "message": "Irrota laite tai [tee lisätilaus]."
+  },
+  "error_simultaneous_connection_title": {
+    "message": "Yhteysrajoitus saavutettu"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
+    "message": "Päivitä maksutiedot"
+  },
+  "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Myöhemmin"
+  },
+  "error_subscription_expired_benefits_text": {
+    "message": "Tilauksesi on vanhentunut, <br/>mutta yhteyden muodostaminen uudelleen on helppoa."
+  },
+  "error_subscription_expired_benefits_title": {
+    "message": "Miksi uusia?"
+  },
+  "error_subscription_expired_buy_subscription_button_label": {
+    "message": "Tee uusi tilaus"
+  },
+  "error_subscription_expired_enter_new_code_button_label": {
+    "message": "Syötä aktivointikoodi"
+  },
+  "error_subscription_expired_l1_text": {
+    "message": "Sovellukset joka laitteelle"
+  },
+  "error_subscription_expired_l2_text": {
+    "message": "Suosittele ystäville, niin saat 30 päivää ilmaiseksi"
+  },
+  "error_subscription_expired_l3_text": {
+    "message": "145+ sijaintia ympäri maailmaa"
+  },
+  "error_subscription_expired_l4_text": {
+    "message": "24/7 asiakastuki"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
+    "message": "Hanki uusi tilaus"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_sub_button_label": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_title": {
+    "message": "Tilaus on vanhentunut"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
+    "message": "Päivitä maksutiedot"
+  },
+  "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
+    "message": "Kirjaudu ulos"
+  },
+  "error_subscription_expired_status_text": {
+    "message": "Vanhentunut (%1)."
+  },
+  "error_subscription_expired_title": {
+    "message": "Tilaus on vanhentunut"
+  },
+  "error_upgrade_app_button_label": {
+    "message": "Päivitä nyt"
+  },
+  "error_upgrade_app_header_title": {
+    "message": "Päivitä ExpressVPN-sovellus"
+  },
+  "error_upgrade_app_text": {
+    "message": "Tämä laajennus edellyttää ExpressVPN-sovelluksen viimeisintä versiota."
+  },
+  "general_contact_support_button_label": {
+    "message": "Ota yhteyttä asiakastukeen"
+  },
+  "hint_connection_delay_text": {
+    "message": "Yhteyden muodostamista yritetään yhä."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Internet-yhteyttä ei löydy. <br> VPN yhdistää, kun se on käytettävissä."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Internet-yhteyttä ei löydy. <br> VPN ei ehkä ole käytettävissä."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Internet-yhteys on katkennut. <br>VPN yhdistyy uudelleen, kun se on käytettävissä."
+  },
+  "hint_reconnecting_network_lock_off_text": {
+    "message": "Yhteys on katkennut yllättäin. Yhdistetään uudelleen ..."
+  },
+  "hint_reconnecting_network_lock_on_text": {
+    "message": "Internet-liikenne on nyt estetty yksityisyyden suojaamiseksi."
+  },
+  "hint_saved_text": {
+    "message": "Tallennettu"
+  },
+  "home_change_location_popup_btn0": {
+    "message": "Peru"
+  },
+  "home_change_location_popup_btn1": {
+    "message": "Jatka"
+  },
+  "home_change_location_popup_text": {
+    "message": "Internet-liikenne voi olla epävarma uudelleenasennuksen aikana."
+  },
+  "home_change_location_popup_title": {
+    "message": "Vaihda sijaintia"
+  },
+  "list_item_247_support": {
+    "message": "24/7 asiakastuki"
+  },
+  "list_item_30day_guarantee": {
+    "message": "30 päivän rahat takaisin -takuu"
+  },
+  "list_item_apps_for_every_device": {
+    "message": "Sovellukset jokaiselle laitteelle"
+  },
+  "list_item_locations_worldwide": {
+    "message": "160 sijaintia ympäri maailmaa"
+  },
+  "list_item_refer_frieds": {
+    "message": "Suosittele ystäville, saat 30 päivää ilmaiseksi"
+  },
+  "list_item_unlimited_bandwidth": {
+    "message": "Rajoittamaton kaistanleveys"
+  },
+  "location_picker_locations_title": {
+    "message": "VPN-sijainnit"
+  },
+  "location_picker_recent_locations_text": {
+    "message": "Viimeisimmät sijainnit"
+  },
+  "location_picker_recommended_locations_text": {
+    "message": "Suositellut sijainnit"
+  },
+  "location_picker_search_no_results_text": {
+    "message": "EI TULOKSIA"
+  },
+  "location_picker_search_placeholder_text": {
+    "message": "Etsi kaupunkia tai maata"
+  },
+  "location_picker_smart_location_text": {
+    "message": "Älysijainti"
+  },
+  "location_picker_tab_all_text": {
+    "message": "Kaikki sijainnit"
+  },
+  "location_picker_tab_recommended_text": {
+    "message": "Suositukset"
+  },
+  "main_screen_current_location_text": {
+    "message": "Nykyinen sijainti"
+  },
+  "main_screen_recent_location_text": {
+    "message": "Viimeaikainen sijainti"
+  },
+  "main_screen_selected_location_text": {
+    "message": "VALITTU SIJAINTI"
+  },
+  "main_screen_smart_location_text": {
+    "message": "Älykäs sijainti"
+  },
+  "main_screen_status_vpn_connected_text": {
+    "message": "VPN on PÄÄLLÄ"
+  },
+  "main_screen_status_vpn_connecting_text": {
+    "message": "Yhdistetään"
+  },
+  "main_screen_status_vpn_disconnecting_text": {
+    "message": "Katkaistaan yhteyttä..."
+  },
+  "main_screen_status_vpn_ready_text": {
+    "message": "VPN on POIS PÄÄLTÄ"
+  },
+  "main_screen_status_vpn_reconnecting_text": {
+    "message": "Yhdistetään uudelleen"
+  },
+  "main_screen_status_vpn_speedtesting_text": {
+    "message": "Nopeustesti käynnissä..."
+  },
+  "malware_alert_dialog_content": {
+    "message": "<span>%s</span> saattaa sisältää vaarallisia ohjelmia, jotka voivat poistaa tai varastaa henkilötietojasi (esim. pankkitiedot, valokuvat, salasanat, viestit). [Lue&nbsp;lisää]"
+  },
+  "malware_alert_dialog_title": {
+    "message": "Vaara: Haittaohjelmia näköpiirissä"
+  },
+  "malware_phishing_alert_dialog_back_to_safety_button_label": {
+    "message": "Takaisin Turvallisuus-sivulle"
+  },
+  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
+    "message": "Jatka silti"
+  },
+  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
+    "message": "Tiedostan riskit"
+  },
+  "malware_phishing_alert_dialog_proceed_question_label": {
+    "message": "Oletko varma?"
+  },
+  "menu_beta_feedback": {
+    "message": "Lähetä beta-palautetta"
+  },
+  "menu_cancel_text": {
+    "message": "Peruuta"
+  },
+  "menu_connection_startup_@firefox@_header": {
+    "message": "Firefox-aloitus",
+    "description": "Settings startup header"
+  },
+  "menu_connection_startup_text": {
+    "message": "Muodosta yhteys selaimen avautuessa"
+  },
+  "menu_desktop_notification_text": {
+    "message": "Näytä tietokoneen ilmoitukset"
+  },
+  "menu_get_30_days_free": {
+    "message": "Hyödynnä 30 päivää ilmaiseksi"
+  },
+  "menu_help_support": {
+    "message": "Apu & Tuki"
+  },
+  "menu_item_acknowledgements_text": {
+    "message": "Tunnustukset"
+  },
+  "menu_item_app_version_text": {
+    "message": "%OS% sovellusversio: %VERSION%"
+  },
+  "menu_item_contact_support_text": {
+    "message": "Ota yhteyttä asiakastukeen"
+  },
+  "menu_item_diagnostic_text": {
+    "message": "Diagnostiikkatiedot"
+  },
+  "menu_item_DNS_leak_test_text": {
+    "message": "DNS-vuototesti"
+  },
+  "menu_item_extension_version_text": {
+    "message": "Laajennuksen versio: <span>%s</span>"
+  },
+  "menu_item_faq_text": {
+    "message": "Usein kysytyt kysymykset"
+  },
+  "menu_item_ip_address_checker_text": {
+    "message": "IP-osoitteen tarkastus"
+  },
+  "menu_item_webRTC_leak_test_text": {
+    "message": "WebRTC-vuototesti"
+  },
+  "menu_myaccount_title": {
+    "message": "Tili"
+  },
+  "menu_my_account": {
+    "message": "Tili"
+  },
+  "menu_privacy_block_malwarephishing_text": {
+    "message": "Suoja haittaohjelmia & kalastelua vastaan"
+  },
+  "menu_privacy_block_webrtc_text": {
+    "message": "Estä WebRTC"
+  },
+  "menu_privacy_enable_https_everywhere_text": {
+    "message": "HTTPS kaikkialla"
+  },
+  "menu_privacy_hide_location_text": {
+    "message": "Piilota sijaintisi"
+  },
+  "menu_ratevpn_btn0": {
+    "message": "Jätä 5 tähden luokitus!"
+  },
+  "menu_ratevpn_btn1": {
+    "message": "Anna 5 tähden arvosana!"
+  },
+  "menu_ratevpn_btn2": {
+    "message": "Kerro meille, mitä voisimme tehdä paremmin"
+  },
+  "menu_ratevpn_text": {
+    "message": "Toivottavasti pidät ExpressVPN:stä! Voisitko antaa meistä arvion?"
+  },
+  "menu_ratevpn_title": {
+    "message": "Nautitko ExpressVPN:n käytöstä?"
+  },
+  "menu_rate_expressvpn": {
+    "message": "Arvostele ExpressVPN"
+  },
+  "menu_section_about_title": {
+    "message": "Tietoa"
+  },
+  "menu_section_support_chat_menu_label": {
+    "message": "Kerro meille"
+  },
+  "menu_section_support_improvements_menu_label": {
+    "message": "Ehdota parannusta"
+  },
+  "menu_section_support_report_menu_label": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "menu_section_support_title": {
+    "message": "Pyydä apua"
+  },
+  "menu_settings_general_header": {
+    "message": "Yleistä"
+  },
+  "menu_settings_general_language_header": {
+    "message": "Laajennuksen kieli"
+  },
+  "menu_settings_general_language_label": {
+    "message": "Kieli"
+  },
+  "menu_settings_general_name": {
+    "message": "Asetukset"
+  },
+  "menu_settings_general_open_app_settings_button_label": {
+    "message": "Konfiguroi koneen asetukset"
+  },
+  "menu_settings_help_button_label": {
+    "message": "Apua"
+  },
+  "menu_settings_privacy_block_malwarephishing_description_text": {
+    "message": "Estä huijaussivustot ja mainokset, jotka louhivat salaa kryptovaluuttaa."
+  },
+  "menu_settings_privacy_block_webrtc_description_text": {
+    "message": "Estä sivustoja näkemästä todellista IP-osoitettasi ja sijaintiasi ollessasi yhteydessä VPN:ään."
+  },
+  "menu_settings_privacy_hide_location_description_text": {
+    "message": "Estä HTML5-geosijaintia paljastamasta fyysistä sijaintiasi ollessasi yhteydessä VPN:ään."
+  },
+  "menu_settings_privacy_https_everywhere_description_text": {
+    "message": "Muodosta yhteys automaattisesti sivustojen turvallisempaan HTTPS-versioon kun sellainen on saatavilla."
+  },
+  "menu_settings_privacy_learn_more_button_label": {
+    "message": "Lue lisää"
+  },
+  "menu_settings_privacy_security_name": {
+    "message": "Yksityisyys & turvallisuus"
+  },
+  "menu_settings_settings_general_title": {
+    "message": "Asetukset"
+  },
+  "menu_settings_settings_privacy_title": {
+    "message": "Yksityisyysasetukset"
+  },
+  "menu_setup_other_devices": {
+    "message": "Asenna muita laitteita"
+  },
+  "menu_signout_p1_text": {
+    "message": "Oletko varma? Sinut kirjataan ulos myös tietokoneella olevasta sovelluksesta."
+  },
+  "menu_signout_text": {
+    "message": "Kirjaudu ulos"
+  },
+  "message_item_rating1_title": {
+    "message": "Nautitko ExpressVPN:stä?"
+  },
+  "message_item_rating2_title": {
+    "message": "Kerro meille, kuinka voimme suoriutua paremmin"
+  },
+  "message_item_rating3_title": {
+    "message": "Voisitko arvioida meidät?"
+  },
+  "message_item_rating_cancel_button_title": {
+    "message": "Ei kiitos"
+  },
+  "message_item_rating_primary_button_title": {
+    "message": "OK"
+  },
+  "myaccount_account_active_p1_text": {
+    "message": "Jaa ExpressVPN ystäviesi kanssa ja saat ilmaisen palvelun."
+  },
+  "myaccount_account_active_p2_text": {
+    "message": "Jokaisesta rekisteröityvästä ystävästä annamme sinulle 30 päivää ilmaiseksi!"
+  },
+  "myaccount_account_expired_label": {
+    "message": "Vanhentunut"
+  },
+  "myaccount_account_expiry_label": {
+    "message": "Vanhenee"
+  },
+  "myaccount_account_renews_label": {
+    "message": "Uusitut"
+  },
+  "myaccount_account_status_active_text": {
+    "message": "Aktiivinen"
+  },
+  "myaccount_account_status_expired_text": {
+    "message": "Vanhentunut"
+  },
+  "myaccount_account_status_free_trial_active_text": {
+    "message": "Kokeilu"
+  },
+  "myaccount_account_status_label": {
+    "message": "Tilin tila"
+  },
+  "myaccount_account_status_trial_expired_text": {
+    "message": "Kokeilujakso päättyi"
+  },
+  "myaccount_account_status_trial_text": {
+    "message": "Kokeilu"
+  },
+  "myaccount_account_subscription_starts_label": {
+    "message": "Tilaus alkaa"
+  },
+  "myaccount_active_refer_button_label": {
+    "message": "Suosittele ystäville"
+  },
+  "myaccount_expiring_buy_button_label": {
+    "message": "Osta nyt"
+  },
+  "myaccount_expiring_renew_button_label": {
+    "message": "Uusi nyt"
+  },
+  "myaccount_expiring_upgrade_button_label": {
+    "message": "Päivitä nyt"
+  },
+  "myaccount_manage_button_label": {
+    "message": "Hallitse tiliä"
+  },
+  "myaccount_why_get_subscription_subheader_text": {
+    "message": "Miksi tehdä tilaus?"
+  },
+  "myaccount_why_renew_subheader_text": {
+    "message": "Miksi uudistaa?"
+  },
+  "notification_extension_update_message": {
+    "message": "Klikkaa nähdäksesi mitä uutta on versiossa %VERSION%"
+  },
+  "notification_extension_update_title": {
+    "message": "ExpressVPN päivitetty"
+  },
+  "phishing_alert_dialog_content": {
+    "message": "<span>%s</span> saattaa sisältää sellaista sisältöä tai ohjelmia, joiden tavoitteena on saada sinut paljastamaan henkilötietojasi (esim. pankkitiedot, valokuvat, salasanat, viestit). [Lue&nbsp;lisää]"
+  },
+  "phishing_alert_dialog_title": {
+    "message": "Vaara: Kalastelua näköpiirissä"
+  },
+  "promobar_free_trial_expiring_soon_days_header": {
+    "message": "Ilmainen kokeiluversio päättyy [days] päivässä"
+  },
+  "promobar_free_trial_expiring_soon_expired_header": {
+    "message": "Ilmainen kokeilusi on päättynyt"
+  },
+  "promobar_free_trial_expiring_soon_hours_header": {
+    "message": "lmainen kokeiluversio päättyy [hours] tunnissa"
+  },
+  "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
+    "message": "Ilmainen kokeiluversio päättyy <1 tunnissa"
+  },
+  "promobar_free_trial_expiring_soon_text": {
+    "message": "Päivitä nyt"
+  },
+  "promobar_iap_failed_header": {
+    "message": "Viimeinen maksusi epäonnistui"
+  },
+  "promobar_iap_failed_text": {
+    "message": "Päivitä maksutapa"
+  },
+  "promobar_splittunneling_@chrome@_header": {
+    "message": "Chrome on poistettu VPN:stä"
+  },
+  "promobar_splittunneling_@firefox@_header": {
+    "message": "Firefox on VPN:n ulkopuolella"
+  },
+  "promobar_splittunneling_text": {
+    "message": "Tarkista asetukset"
+  },
+  "promobar_subscription_expiring_soon_days_header": {
+    "message": "Tilaus päättyy [days] päivässä"
+  },
+  "promobar_subscription_expiring_soon_expired_header": {
+    "message": "Tilaus on vanhentunut"
+  },
+  "promobar_subscription_expiring_soon_hours_header": {
+    "message": "Tilaus päättyy [hours] tunnissa"
+  },
+  "promobar_subscription_expiring_soon_renewable_false_text": {
+    "message": "Hanki uusi tilaus"
+  },
+  "promobar_subscription_expiring_soon_renewable_true_text": {
+    "message": "Uudista nyt"
+  },
+  "promobar_update_available_header": {
+    "message": "Päivitys saatavilla!"
+  },
+  "promobar_update_available_text": {
+    "message": "Asenna nyt"
+  },
+  "promo_bar_free_trial_expiring_soon_days_text": {
+    "message": "Maksuton kokeilujakso päättyy [days] päivän kuluttua"
+  },
+  "promo_bar_free_trial_expiring_soon_expired_text": {
+    "message": "Maksuton kokeilujaksosi on päättynyt"
+  },
+  "promo_bar_free_trial_expiring_soon_hours_text": {
+    "message": "Ilmainen kokeilujakso päättyy [hours] tunnin kuluessa"
+  },
+  "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
+    "message": "Ilmainen kokeilujakso päättyy < 1 tunnin kuluttua"
+  },
+  "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
+    "message": "Korota nyt"
+  },
+  "promo_bar_splittunneling_@chrome@_text": {
+    "message": "Chrome ei ole mukana VPN:ssä"
+  },
+  "promo_bar_splittunneling_@firefox@_text": {
+    "message": "Firefox ei kuulu VPN:ään"
+  },
+  "promo_bar_splittunneling_settings_button_label": {
+    "message": "Tarkista asetukset"
+  },
+  "promo_bar_subscription_expiring_soon_days_text": {
+    "message": "Tilaus päättyy [days] päivän päästä"
+  },
+  "promo_bar_subscription_expiring_soon_expired_text": {
+    "message": "Tilauksesi on vanhentunut"
+  },
+  "promo_bar_subscription_expiring_soon_get_new_subscription_button_label": {
+    "message": "Tee uusi tilaus"
+  },
+  "promo_bar_subscription_expiring_soon_hours_text": {
+    "message": "Tilaus päättyy [hours] tunnin kuluttua"
+  },
+  "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
+    "message": "Tilaus vanhenee  < 1 tunnin kuluessa"
+  },
+  "promo_bar_subscription_expiring_soon_renew_now_button_label": {
+    "message": "Uusi nyt"
+  },
+  "vpn_status_notification_connected_label": {
+    "message": "VPN-yhteys muodostettu"
+  },
+  "vpn_status_notification_connected_text": {
+    "message": "Yhteys muodostettu kohteeseen %s."
+  },
+  "vpn_status_notification_connecting_label": {
+    "message": "VPN muodostaa yhteyttä..."
+  },
+  "vpn_status_notification_connection_failed_label": {
+    "message": "VPN-yhteys ei onnistunut"
+  },
+  "vpn_status_notification_connection_failed_network_lock_off_text": {
+    "message": "Ei voitu yhdistää %s."
+  },
+  "vpn_status_notification_connection_failed_network_lock_on_text": {
+    "message": "Ei voitu yhdistää kohteeseen %s. Internet-liikenne on estetty."
+  },
+  "vpn_status_notification_connection_limit_label": {
+    "message": "Yhteysrajoitus saavutettu"
+  },
+  "vpn_status_notification_connection_limit_text": {
+    "message": "Ole hyvä ja irrota laite tai tee lisätilaus."
+  },
+  "vpn_status_notification_reconnecting_label": {
+    "message": "VPN-yhteyttä muodostetaan uudelleen..."
+  },
+  "vpn_status_notification_reconnecting_network_lock_off_text": {
+    "message": "Muodostetaan uudelleen yhteyttä kohteeseen %s."
+  },
+  "vpn_status_notification_reconnecting_network_lock_on_text": {
+    "message": "Muodostetaan uudelleen yhteyttä kohteeseen %s. Internet-liikenne on estetty."
+  },
+  "welcome_continue_button_label": {
+    "message": "Jatka"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Aloita"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "ExpressVPN-laajennus on työpöytäsovelluksen kaukosäädin."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "Kun olet yhteydessä VPN:ään, se suojaa koko laitettasi, ei vain selainta."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Lue lisää"
+  },
+  "welcome_screen3_p1_text": {
+    "message": "Laajennus piilottaa sijaintisi, estää WebRTC:n ja sisältää HTTPS:n kaikkialla."
+  },
+  "welcome_skip_button_label": {
+    "message": "Ohita"
+  }
+}

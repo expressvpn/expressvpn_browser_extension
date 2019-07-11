@@ -8,7 +8,7 @@ Licensed GPL v2
     <h1>{{ localize(`error_fraudster_title`) }}</h1>
     <hint stringKey="error_fraudster_hint" iconName="icon-41-error" type="error"></hint>
     <span v-html="localize('error_fraudster_p1_text')"></span>
-    <a href="mailto:support@expressvpn.zendesk.com" target="_blank">support@expressvpn.zendesk.com</a>
+    <a href="mailto:support@expressvpn.zendesk.com?subject=Billing Verification" target="_blank">support@expressvpn.zendesk.com</a>
     <span v-html="localize('error_fraudster_p2_text')"></span>
     <span class="bold spaceIt">{{ localize('error_fraudster_question1_text') }}</span>
     <span>{{ localize('error_fraudster_p3_text') }}</span>

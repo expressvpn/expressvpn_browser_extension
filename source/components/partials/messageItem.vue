@@ -4,22 +4,19 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div class="message" @click="createTab({ url: latestMessage.button_link }, $event)">
-    <div class="message-text">{{ latestMessage.message }}</div>
-    <a class="message-link" tabindex="-1" @click="createTab({ url: latestMessage.button_link }, $event)">{{ latestMessage.button }}</a>
+  <div class="message" @click="createTab({ url: latestMessage.button_url }, $event)">
+    <div class="message-text">{{ latestMessage.simple_message }}</div>
+    <a class="message-link" tabindex="-1" @click="createTab({ url: latestMessage.button_url }, $event)">{{ latestMessage.button_text }}</a>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex';
 
 export default {
   computed: {
-  },
-  methods: {
-  },
-  mounted() {
-  },
-  props: {
-    latestMessage: {},
+    ...mapGetters([
+      'latestMessage',
+    ]),
   },
 };
 </script>

@@ -175,7 +175,7 @@
     "message": "Select a different [VPN location]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "If all else fails, [contact Support]."
+    "message": "If all else fails, [contact Support]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Internet traffic is currently blocked to protect your privacy."
@@ -205,7 +205,8 @@
     "message": "To reactivate your subscription,<br>please email"
   },
   "error_fraudster_p2_text": {
-    "message": "subject line: <span class='bold'>Billing Verification</span>."
+    "message": "subject line: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_question1_text": {
     "message": "Did you pay with a credit card?"
@@ -327,8 +328,6 @@
   "list_item_30day_guarantee": {
     "message": "30-day money-back guarantee"
   },
-
-
   "error_subscription_expired_l4_text": {
     "message": "24/7 customer support"
   },
@@ -350,6 +349,39 @@
   "general_contact_support_button_label": {
     "message": "Contact Support"
   },
+  "error_forced_signout_title": {
+    "message": "Sign In to ExpressVPN"
+  },
+  "error_forced_signout_p1_text": {
+    "message": "You have been signed out because your account details were updated."
+  },
+  "error_forced_signout_p2_text": {
+    "message": "To continue using ExpressVPN, please sign in again."
+  },
+  "error_forced_signout_signin_button_label": {
+    "message": "Sign In"
+  },
+  "welcome_screen1_p1_text": {
+    "message": "The ExpressVPN extension is a remote control for the desktop app."
+  },
+  "welcome_screen2_p1_text": {
+    "message": "When you’re connected to the VPN, it protects your entire device, not just the browser."
+  },
+  "welcome_screen3_p1_text": {
+    "message": "The extension spoofs your location, blocks WebRTC, and includes HTTPS Everywhere."
+  },
+  "welcome_screen3_learn_more_text": {
+    "message": "Learn more"
+  },
+  "welcome_skip_button_label": {
+    "message": "Skip"
+  },
+  "welcome_continue_button_label": {
+    "message": "Continue"
+  },
+  "welcome_get_started_button_label": {
+    "message": "Get Started"
+  },
   "hint_saved_text": {
     "message": "Saved"
   },
@@ -358,6 +390,15 @@
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Connection unexpectedly dropped. Reconnecting…"
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Cannot detect internet connection.<br>VPN may be unavailable."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Cannot detect internet connection.<br>VPN will connect when available."
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "Internet connection lost.<br>VPN will reconnect when available."
   },
   "location_picker_locations_title": {
     "message": "VPN Locations"
@@ -510,21 +551,6 @@
   "home_change_location_popup_title": {
     "message": "Change Location"
   },
-  "menu_ratevpn_btn0": {
-    "message": "Leave a 5-star rating!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Tell us how to do better"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Later"
-  },
-  "menu_ratevpn_text": {
-    "message": "We hope you love using ExpressVPN! Would you mind leaving us a review?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Enjoying ExpressVPN?"
-  },
   "menu_rate_expressvpn": {
     "message": "Rate ExpressVPN"
   },
@@ -596,21 +622,6 @@
   },
   "menu_beta_feedback": {
     "message": "Send Beta Feedback"
-  },
-  "message_item_rating1_title": {
-    "message": "Enjoying ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "Let us know how we can improve?"
-  },
-  "message_item_rating3_title": {
-    "message": "Would you mind leaving us a review?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "No Thanks"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Why renew?"
@@ -768,7 +779,12 @@
   "promobar_iap_failed_text":{
     "message":"Update payment method"
   },
-  
+  "notification_extension_update_title": {
+    "message": "ExpressVPN Updated"
+  },
+  "notification_extension_update_message": {
+    "message": "Click to see what's new in version %VERSION%"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN Connected"
   },
@@ -801,5 +817,100 @@
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
     "message": "Reconnecting to %s. Internet traffic is blocked."
+  },
+  "language_dropdown_english": {
+    "message": "English (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "French (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_danish": {
+    "message": "Danish (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "German (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Spanish (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italian (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Dutch (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norwegian (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Polish (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portuguese (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russian (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finnish (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Swedish (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thai (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Turkish (Türkçe)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japanese (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Korean (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "rating_prompt_header": {
+    "message": "How much do you like ExpressVPN?"
+  },
+  "rating_improve_header": {
+    "message": "How can we do better?"
+  },
+  "rating_improve_report_button": {
+    "message": "Report a problem"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Suggest an improvement"
+  },
+  "rating_thanks4_text": {
+    "message": "Thanks for your rating!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Thank you! Rate us on Chrome Web Store?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Thank you! Rate us on Firefox Add-ons Store?"
+  },
+  "rating_no_thanks_text": {
+    "message": "No thanks"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
   }
 }

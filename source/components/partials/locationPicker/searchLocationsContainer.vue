@@ -33,31 +33,45 @@ export default {
       if (!this.searchText.trim()) {
         rxSearch = new RegExp(/(?:)/, 'i');
       }
-      for (let region in this.currentInfo.allLocationsList) {
-        regionObj = this.locationPicker.filterLocationsByProtocol(this.currentInfo.allLocationsList[region], this.currentInfo.preferences.preferred_protocol);
-        for (let country in regionObj) {
-          // Allow search by partial country name and by country code
-          if (rxSearch.test(country) || regionObj[country].some((el) => el.country_code === this.searchText.toUpperCase())) {
-            if (regionObj[country].length > 1) {
-              if (this.currentCountry) {
-                regionObj[country].forEach(function (locationObj) {
-                  if (rxSearch.test(locationObj.name)) {
-                    filteredLocations.push({ isCountry: false, locationObj: locationObj });
-                  }
-                });
-              } else {
-                filteredLocations.push({ isCountry: true, locationObj: regionObj[country][0] });
-              }
-            } else {
-              // Set type to location if country has only one location since it doesn't make sense to show the country screen for just 1 cluster
-              filteredLocations.push({ isCountry: false, locationObj: regionObj[country][0] });
-            }
-          } else {
-            regionObj[country].forEach(function (locationObj) {
+      // In case we're inside the country screen, show only matches for given country
+      if (this.$parent.showCountryScreen === true) {
+        Object.keys(this.currentInfo.allLocationsList).forEach(regionName => {
+          let countryObj = this.locationPicker.filterLocationsByProtocol(this.currentInfo.allLocationsList[regionName], this.currentInfo.preferences.preferred_protocol)[this.$parent.currentCountry.name];
+          if (countryObj) {
+            countryObj.forEach(function (locationObj) {
               if (rxSearch.test(locationObj.name)) {
                 filteredLocations.push({ isCountry: false, locationObj: locationObj });
               }
             });
+          }
+        });
+      } else {
+        for (let region in this.currentInfo.allLocationsList) {
+          regionObj = this.locationPicker.filterLocationsByProtocol(this.currentInfo.allLocationsList[region], this.currentInfo.preferences.preferred_protocol);
+          for (let country in regionObj) {
+            // Allow search by partial country name and by country code
+            if (rxSearch.test(country) || regionObj[country].some((el) => el.country_code === this.searchText.toUpperCase())) {
+              if (regionObj[country].length > 1) {
+                if (this.currentCountry) {
+                  regionObj[country].forEach(function (locationObj) {
+                    if (rxSearch.test(locationObj.name)) {
+                      filteredLocations.push({ isCountry: false, locationObj: locationObj });
+                    }
+                  });
+                } else {
+                  filteredLocations.push({ isCountry: true, locationObj: regionObj[country][0] });
+                }
+              } else {
+                // Set type to location if country has only one location since it doesn't make sense to show the country screen for just 1 cluster
+                filteredLocations.push({ isCountry: false, locationObj: regionObj[country][0] });
+              }
+            } else {
+              regionObj[country].forEach(function (locationObj) {
+                if (rxSearch.test(locationObj.name)) {
+                  filteredLocations.push({ isCountry: false, locationObj: locationObj });
+                }
+              });
+            }
           }
         }
       }
@@ -66,10 +80,6 @@ export default {
   },
   components: {
     'location-item': locationItem,
-  },
-  methods: {
-  },
-  mounted() {
   },
   props: {
     searchText: {

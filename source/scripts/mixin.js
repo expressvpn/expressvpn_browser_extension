@@ -6,7 +6,6 @@ Licensed GPL v2
 import UAParser from 'ua-parser-js';
 import { mapGetters } from 'vuex';
 import utils from './modules/utils';
-import rating from './modules/rating';
 import locationPicker from './modules/locationPicker';
 
 export default {
@@ -47,20 +46,20 @@ export default {
       let currentLangObj = null;
       let dateStr = '';
       for (let i in this.langList) {
-        if (this.langList[i].code === window.currentLanguageCode) {
+        if (this.langList[i].code === this.currentInfo.locale) {
           currentLangObj = this.langList[i];
           break;
         }
       }
       if (currentLangObj !== null) {
-        dateStr = expiryDate.toLocaleDateString(window.currentLanguageCode, optionEl);
+        dateStr = expiryDate.toLocaleDateString(this.currentInfo.locale, optionEl);
       } else {
         dateStr = expiryDate.toLocaleDateString('en-us', optionEl).replace(/[^ -~]/g, '');
       }
       return dateStr;// format eg : 'January 19, 2017' for 'en' locale
     },
     openLocationPicker() {
-      if (['connected', 'ready'].includes(this.currentInfo.state)) {
+      if (['connected', 'ready', 'connection_error'].includes(this.currentInfo.state)) {
         this.$store.dispatch('setCurrentView', 'locationPicker');
       }
     },
@@ -69,6 +68,7 @@ export default {
     ...mapGetters([
       'currentInfo',
       'errorStates',
+      'langList',
     ]),
   },
   mounted: function () {
@@ -84,35 +84,9 @@ export default {
   data: function () {
     return {
       utils: utils,
-      rating: rating,
       localizedStrings: {},
       locationPicker: locationPicker,
       browserInfo: UAParser(window.navigator.userAgent).browser,
-      langList: [
-        /*
-        { code: 'da', language: 'Danish', label: 'Dansk (Danish)' },
-        { code: 'de', language: 'German', label: 'Deutsch (German)' },
-        */
-        { code: 'en', language: 'English', label: 'English (English)' },
-        /*
-        { code: 'es', language: 'Spanish', label: 'Español (Spanish)' },
-        */
-        { code: 'fr', language: 'French', label: 'Français (French)' },
-        /*
-        { code: 'it', language: 'Italian', label: 'Italiano (Italian)' },
-        { code: 'nl', language: 'Dutch', label: 'Nederlands (Dutch)' },
-        { code: 'no', language: 'Norwegian', label: 'Norsk (Norwegian)' },
-        { code: 'pl', language: 'Polish', label: 'Polski (Polish)' },
-        { code: 'pt', language: 'Portuguese', label: 'Português (Portuguese)' },
-        { code: 'ru', language: 'Russian', label: 'Русский (Russian)' },
-        { code: 'fi', language: 'Finnish', label: 'Suomi (Finnish)' },
-        { code: 'sv', language: 'Swedish', label: 'Svenska (Swedish)' },
-        { code: 'th', language: 'Thai', label: ' ภาษาไทย (Thai)' },
-        { code: 'tr', language: 'Turkish', label: 'Türkçe (Turkish)' },
-        { code: 'ja', language: 'Japanese', label: '日本語 (Japanese)' },
-        { code: 'ko', language: 'Korean', label: '한국어 (Korean)' },
-        */
-      ],
       browserDict: {
         'Google Chrome': 'Chrome',
         'Firefox': 'Firefox',

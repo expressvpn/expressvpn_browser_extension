@@ -14,14 +14,12 @@ Licensed GPL v2
       </div>
        -->
     </div>
-    <popup :options="options"></popup>
   </div>
 </template>
 <script>
 import UAParser from 'ua-parser-js';
 import mainHeader from './partials/mainHeader.vue';
 import menuItem from './partials/menuItem.vue';
-import popup from './partials/popup.vue';
 
 export default {
   name: 'menuScreen',
@@ -89,7 +87,6 @@ export default {
           classColor: 'purple-20',
         },
       ],
-      options: {},
       isAvailableRateVPN: false,
     };
   },
@@ -98,14 +95,17 @@ export default {
   components: {
     mainHeader,
     menuItem,
-    popup,
   },
   methods: {
     canGetFreeTrial() {
       return this.utils.isRegularUser(this.currentInfo.subscription) && !this.utils.isPaymentMethodIAP(this.currentInfo.subscription);
     },
     canRateExtension() {
-      return this.isAvailableRateVPN && !__IS_BETA__;
+      return (
+        this.isAvailableRateVPN && 
+        this.currentInfo.ratingData && 
+        this.currentInfo.ratingData.everClickedMaxRating === false && 
+        !__IS_BETA__) || (__IS_ALPHA__ || (process.env.NODE_ENV === 'development'));
     },
     canSetupOtherDevices() {
       return this.utils.isRegularUser(this.currentInfo.subscription);
@@ -114,62 +114,25 @@ export default {
       this.$store.dispatch('setCurrentView', 'mainScreen');
     },
     rateMenuItemClick: function () {
-      this.options = {
-        id: 'menu_ratevpn',
-        buttons: [
-          {
-            highlightIt: true,
-            callback: this.leaveRatingClick,
-          },
-          {
-            callback: this.helpBtnClick,
-          },
-          {
-            callback: () => { this.options = {}; },
-          },
-        ],
-        isVisible: true,
-        style: 'vertical',
-      };
-    },
-    leaveRatingClick: function (event) {
-      let currentBrowser = this.browserInfo.name;
-      if (currentBrowser === 'Chrome') {
-        this.createTab({ url: 'https://chrome.google.com/webstore/detail/expressvpn-for-chrome/fgddmllnllkalaagkghckoinaemmogpe/reviews' });
-      } else if (currentBrowser === 'Firefox') {
-        this.createTab({ url: 'https://addons.mozilla.org/en-US/firefox/addon/expressvpn/' });
-      }
+      let self = this;
+      this.backToMainScreen();
+      setTimeout(() => {
+        self.$root.$emit('show-rating-prompt');
+      }, 100);
     },
     helpBtnClick: function (event) {
       this.$store.dispatch('setCurrentView', 'helpScreen');
     },
     sendBetaFeedback() {
       const systemInfo = UAParser(window.navigator.userAgent);
-      const subject = `ExpressVPN BETA feedback (${systemInfo.browser.name} v${systemInfo.browser.version} - v${chrome.runtime.getManifest().version})`;
-      const body = `Please explain the feedback or issue you're encountering in as much detail as possible so we can help. We'll get back to you within a few days, often much sooner.
-        
-        
-System Information:
-
-System: ${systemInfo.os.name} ${systemInfo.os.version}
-ExpressVPN Version: ${this.currentInfo.app.version}
-Locale: ${window.currentLanguageCode}`;
-
-      this.createTab({ url: `mailto:insiders+extensionbeta@expressvpn.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}` });
+      const url = `https://expressv.typeform.com/to/Jla85o?browser_name=${systemInfo.browser.name}&browser_ver=${systemInfo.browser.version}&ext_ver=${chrome.runtime.getManifest().version}&os_name=${systemInfo.os.name}&os_ver=${systemInfo.os.version}&app_ver=${this.currentInfo.app.version}&locale=${this.currentInfo.locale}&is_beta=true`;
+      this.createTab({ url });
     },
   },
   mounted() {
     let self = this;
     chrome.storage.local.get(null, function (storage) {
       self.isAvailableRateVPN = (storage.isSubscriber === true);
-
-      if (process.env.NODE_ENV === 'development') {
-        document.querySelector('.menu-container').insertAdjacentHTML('afterend', '<button class="mock-button" id="mockMenu"></button>');
-        document.getElementById('mockMenu').addEventListener('click', () => {
-          self.isRegularUser = true;
-          self.isAvailableRateVPN = true;
-        });
-      }
     });
   },
 };

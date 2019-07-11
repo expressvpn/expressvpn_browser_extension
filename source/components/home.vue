@@ -37,8 +37,10 @@ Licensed GPL v2
           <div v-if="['ready', 'connected'].includes(currentInfo.state)" class="icon icon-133-more-circle current-location-more-icon"></div>
           <div v-else class="icon icon-73-more icon-disabled"></div>
         </div>
-        <transition name="fade">
-          <div v-if="['ready', 'connected'].includes(currentInfo.state)" class="location-buttons">
+        <transition mode="out-in">
+          <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText" :iconName="hintIcon" :type="hintType" />
+          
+          <div v-else-if="['ready', 'connected'].includes(currentInfo.state)" class="location-buttons">
             <div class="location-box" v-for="location in visibleLocations" v-bind:key="location.id" @click="connectToLocation(location)">
                 <div class="location-box-text-type">{{ localize(`main_screen_${location.type}_location_text`) }}</div>
                 <div class="location-box-text-name">{{ location.name }}</div>
@@ -47,27 +49,25 @@ Licensed GPL v2
         </transition>
       </div>
 
-      <popup :options="popupOptions"></popup>
-
-      <transition name="fade">
-        <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText"></hint>
+      <transition name="fade" mode="out-in" :duration="{ enter: 500, leave: 0 }">
+        <ratingPrompt v-if="showRatingPrompt" :discardPrompt="onDiscardRatingPrompt" :style="{ transitionDelay: transitionDelay }" />
       </transition>
 
+      <popup :options="popupOptions"></popup>
+
       <div class="message-container">
-        <message-item :latestMessage='latestMessage' v-if='ratingMessageType === rating.ratingContainer.GENERAL_MESSAGE'></message-item>
-        <rating-message-item v-else></rating-message-item>
+        <message-item />
       </div>
     </div>
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
 import mixinLocation from '@/scripts/mixins/location';
 import CircleProgressBar from './partials/circleProgressBar.vue';
 import Hint from './partials/hint.vue';
-import ratingMessageItem from './partials/ratingMessageItem.vue';
 import messageItem from './partials/messageItem.vue';
 import popup from './partials/popup.vue';
+import ratingPrompt from './partials/ratingPrompt.vue';
 import mainHeader from './partials/mainHeader.vue';
 
 export default {
@@ -75,15 +75,40 @@ export default {
   mixins: [mixinLocation],
   data() {
     return {
+      transitionDelay: '2s',
+      discardPrompt: false,
       discardHint: false,
       popupOptions: {},
+      hintIcon: null,
+      hintType: '',
+      show4starHint: false,
+      forceRatingPrompt: false,
     };
   },
   computed: {
-    ...mapGetters([
-      'latestMessage',
-      'ratingMessageType',
-    ]),
+    showRatingPrompt() {
+      const requiredConnectionTime = (__IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 0 : 15 * 60;
+      const rating = this.currentInfo.ratingData;
+
+      if (rating) {
+        const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || 0;
+        const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || 0;
+        const NOW = (new Date()).getTime();
+
+        return (
+          rating.isSubscriber === true &&
+          rating.isSuccessfulConnection === true &&
+          rating.previousConnectionTime >= requiredConnectionTime &&
+          rating.everClickedMaxRating === false &&
+          this.discardPrompt === false &&
+          this.daysBetween(NOW, lastDiscardDate) > 30 &&
+          this.daysBetween(NOW, lastFailedRateDate) > 10 &&
+          this.currentInfo.os !== 'LINUX' &&
+          this.currentInfo.locale === 'en' &&
+          this.currentInfo.state === 'connected'
+        ) || (this.forceRatingPrompt === true);
+      }
+    },
     selectedLocation() {
       return this.currentInfo.selectedLocation || {};
     },
@@ -115,6 +140,7 @@ export default {
       let text = '';
       let connectingTimes = this.currentInfo.connectingTimes;
       let nConnections = this.currentInfo.connectingTimes.length;
+      this.hintType = 'information';
 
       // Check for delayed connection
       if (
@@ -125,16 +151,31 @@ export default {
         this.discardHint === false// If the user already discarded the hint
       ) {
         text = 'hint_connection_delay_text';
-      } else if (
-        this.currentInfo.state === 'reconnecting'
-      ) {
+        this.hintIcon = null;
+      } else if (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.hasInternet === false) { // GIVEN the user is NOT connected to the VPN and their internet connection is unavailable
+        text = `hint_no_internet_${this.currentInfo.state}_text`;
+        this.hintIcon = 'icon-13-block';
+      } else if (this.currentInfo.state === 'reconnecting') {
         let networkLockStatus = this.currentInfo.preferences.traffic_guard_level ? 'on' : 'off';
         text = `hint_reconnecting_network_lock_${networkLockStatus}_text`;
+        this.hintIcon = null;
+      } else if (this.show4starHint === true) {
+        text = 'rating_thanks4_text';
+        this.hintType = 'green';
+        this.hintIcon = 'icon-110-thanks';
       }
       return text;
     },
   },
   methods: {
+    onDiscardRatingPrompt() {
+      localStorage.setItem('lastDiscardDate', (new Date()).getTime());
+      this.discardPrompt = true; // trigger computed
+      this.forceRatingPrompt = false;
+    },
+    daysBetween(ts1, ts2) { // ToDo: Replace with moment.js
+      return Math.round(Math.abs((+ts1) - (+ts2)) / 8.64e7);
+    },
     getAverageTopConnectionTime: function (nLastConnections) {
       let sortedConnectingTimes = this.currentInfo.connectingTimes.sort((a, b) => b.delta - a.delta);
       let topNConnections = sortedConnectingTimes.slice(0, nLastConnections);
@@ -202,9 +243,9 @@ export default {
     CircleProgressBar,
     Hint,
     messageItem,
-    ratingMessageItem,
     popup,
     mainHeader,
+    ratingPrompt,
   },
   created() {
     let self = this;
@@ -212,15 +253,19 @@ export default {
     this.$parent.$parent.$on('discard-hint', function () {
       self.discardHint = true;
     });
-  },
-  mounted() {
-    let self = this;
-    if (process.env.NODE_ENV === 'development') {
-      document.querySelector('.content').insertAdjacentHTML('afterend', '<button class="mock-button" id="mockRating"></button>');
-      document.getElementById('mockRating').addEventListener('click', () => {
-        self.$store.dispatch('setRatingMessageType', self.rating.ratingContainer.FACES_SCREEN);
-      });
-    }
+
+    this.$root.$on('show-rating-prompt', () => {
+      self.transitionDelay = '0s';
+      self.forceRatingPrompt = true;
+    });
+
+    this.$on('show-4star-hint', () => {
+      self.show4starHint = true;
+      self.onDiscardRatingPrompt();
+      setTimeout(() => {
+        self.show4starHint = false;
+      }, 4000);
+    });
   },
 };
 </script>

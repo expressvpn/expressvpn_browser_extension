@@ -7,7 +7,6 @@ import Vue from 'vue';
 import { mapGetters } from 'vuex';
 import store from './vuex/store';
 import utils from './modules/utils';
-import rating from './modules/rating';
 import App from '../components/app.vue';
 import mixin from './mixin';
 
@@ -27,24 +26,13 @@ const app = new Vue({
       // show message from cache in case it fails to get a response.
       let msgNumber = 0;
       setInterval((function message() {
-        if (typeof storage.latestMessage === 'object') {
-          self.$store.dispatch('setLatestMessage', storage.latestMessage[msgNumber]);
-          msgNumber = (msgNumber + 1 >= storage.latestMessage.length) ? 0 : msgNumber + 1;
+        if (typeof storage.messages === 'object') { // it's actually an Array...
+          self.$store.dispatch('setLatestMessage', storage.messages[msgNumber]);
+          msgNumber = (msgNumber + 1 >= storage.messages.length) ? 0 : msgNumber + 1;
         }
         return message;
       }()), 5 * 60 * 1000);
     });
-
-    // Chromium bug: https://bugs.chromium.org/p/chromium/issues/detail?id=428044
-    // Forces pop to increase its size by 2px 100ms after load
-    /*
-    window.setTimeout(function () {
-      document.body.style.height = '452px';
-      window.setTimeout(function () {
-        document.body.style.height = '450px';
-      }, 100);
-    }, 100);
-    */
   },
   computed: mapGetters([
     'currentView',
@@ -62,14 +50,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         currentInfo = require('object-assign-deep')(currentInfo, JSON.parse(debugData));
       }
       if (!utils.isNullOrEmpty(debugLocale)) {
-        utils.setLanguage(debugLocale).then(strings => {
-          currentInfo.localizedStrings = strings;
-          app.$store.dispatch('updateCurrentInfo', currentInfo);
-        });
+        chrome.runtime.sendMessage({ mock: true, category: 'locale', locale: debugLocale });
       }
       if (!utils.isNullOrEmpty(debugBackgroundData)) {
         let bkdata = JSON.parse(debugBackgroundData);
-        chrome.runtime.sendMessage({ [bkdata.method]: true, data: bkdata.data, locale: debugLocale });
+        chrome.runtime.sendMessage({ mock: true, category: bkdata.category, data: bkdata.data });
       }
     }
     if (app.$store.getters.ignoringStateUpdates === false) {
@@ -86,20 +71,32 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         app.$store.dispatch('setCurrentView', 'mainScreen');
       }
     }
-  } else if (message.latestMessage) {
-    if (typeof message.data !== 'undefined') {
-      app.$store.dispatch('setLatestMessage', message.data);
-    }
-  } else if (message.checkRatingMessage) { // Whenever successfully connected, background sends message and here receives.
-    if (app.currentView === 'mainScreen') {
-      chrome.storage.local.get(null, function (storage) {
-        if (rating.isAvailableRateMessageItem(storage.rating, storage.isSubscriber) === true) {
-          setTimeout(function () {
-            chrome.runtime.sendMessage({ 'updateReviewDate': true });
-            app.$store.dispatch('setRatingMessageType', rating.ratingContainer.FACES_SCREEN);
-          }, 2000);
-        }
-      });
-    }
+
+    // Set language list
+    app.$store.dispatch('setlangList', [
+      /*
+        { code: 'da', label: app.localize('language_dropdown_danish') },
+        { code: 'de', label: app.localize('language_dropdown_german') },
+        */
+      { code: 'en', label: app.localize('language_dropdown_english') },
+      /*
+       { code: 'es', label: app.localize('language_dropdown_spanish') },
+       */
+      { code: 'fr', label: app.localize('language_dropdown_french') },
+      /*
+       { code: 'it', label: app.localize('language_dropdown_italian') },
+       { code: 'nl', label: app.localize('language_dropdown_dutch') },
+       { code: 'no', label: app.localize('language_dropdown_norwegian') },
+       { code: 'pl', label: app.localize('language_dropdown_polish') },
+       { code: 'pt', label: app.localize('language_dropdown_portuguese') },
+       { code: 'ru', label: app.localize('language_dropdown_russian') },
+       { code: 'fi', label: app.localize('language_dropdown_finnish') },
+       { code: 'sv', label: app.localize('language_dropdown_swedish') },
+       { code: 'th', label: app.localize('language_dropdown_thai') },
+       { code: 'tr', label: app.localize('language_dropdown_turkish') },
+       { code: 'ja', label: app.localize('language_dropdown_japanese') },
+       { code: 'ko', label: app.localize('language_dropdown_korean') },
+       */
+    ]);
   }
 });

@@ -39,14 +39,12 @@ export default {
           classColor: 'accent-20',
           callback: this.contactSupport,
         },
-        /*
         improvements: {
           icon: 'icon-113-tips',
           localeKey: 'menu_section_support_improvements_menu_label',
           classColor: 'accent-20',
           callback: this.suggestImprovements,
         },
-        */
         talk: {
           icon: 'icon-67-live-chat',
           localeKey: 'menu_section_support_chat_menu_label',
@@ -82,7 +80,7 @@ export default {
       this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=menu_contact_support#open-chat` });
     },
     suggestImprovements() {
-      alert('TODO');
+      this.createTab({ url: 'https://expressv.typeform.com/to/Jla85o' });
     },
     acknowledgementsButtonClick: function () {
       this.$store.dispatch('setCurrentView', 'acknowledgementsScreen');

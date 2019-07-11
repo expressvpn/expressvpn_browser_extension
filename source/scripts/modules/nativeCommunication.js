@@ -38,8 +38,6 @@ export default (function () {
     return nextDelay;
   };
 
-  // based on C# String.IsNullOrEmpty()
-  const isNullOrEmpty = (str) => (str === null || typeof str === 'undefined' || str === '');
   const connect = () => {
     const helperName = 'com.expressvpn.helper';
     port = chrome.runtime.connectNative(helperName);
@@ -108,15 +106,8 @@ export default (function () {
         // eslint-disable-next-line camelcase
         window.top.postMessage({ method: 'updateLocationsData', data: { recommended: recommendedList, all: msg.locations, recent_locations_ids: msg.recent_locations_ids } }, '*');
       } else if (msg.messages) {
-        let latestMessages = msg.messages.filter(message => message.is_alert === true);
-        // If there is no alertmessage, it sends messages.
-        latestMessages = latestMessages.length > 0 ? latestMessages : msg.messages;
-        const curMessage = latestMessages[0];
-        if (((typeof curMessage === 'object') && (!isNullOrEmpty(curMessage.button) && !isNullOrEmpty(curMessage.button_link) && !isNullOrEmpty(curMessage.message))) === true) {
-          chrome.runtime.sendMessage({ latestMessage: true, data: curMessage });
-        }
-        if (latestMessages.length > 0) {
-          chrome.storage.local.set({ 'latestMessage': latestMessages });
+        if (msg.messages.length > 0) {
+          chrome.storage.local.set({ 'messages': msg.messages });
         }
       } else if (msg.data && !msg.name) {
         console.error(msg);
