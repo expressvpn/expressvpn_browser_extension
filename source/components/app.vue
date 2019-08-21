@@ -62,54 +62,12 @@ export default {
 </script>
 
 <style lang="scss">
-  #appContainer {
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-  /*
-  .slide-enter-active,
-  .slide-leave-active {
-    transition: all 0.4s ease;
-  }
-  .mainScreen-menuScreen,
-  .menuScreen-SettingsGeneral,
-  .SettingsGeneral-menuScreen,
-  .menuScreen-SettingsPrivacy,
-  .SettingsPrivacy-menuScreen,
-  .menuScreen-myAccount,
-  .myAccount-menuScreen,
-  .menuScreen-helpScreen,
-  .helpScreen-menuScreen,
-  .helpScreen-acknowledgementsScreen,
-  .acknowledgementsScreen-helpScreen,
-  .mainScreen-locationsScreen,
-  .locationsScreen-countryScreen,
-  .countryScreen-locationsScreen {
-    margin-left: 0;
-  }
-  .menuScreen-mainScreen.slide-enter,
-  .menuScreen-mainScreen.slide-leave-active,
-  .SettingsGeneral-menuScreen.slide-enter,
-  .SettingsGeneral-menuScreen.slide-leave-active,
-  .SettingsPrivacy-menuScreen.slide-enter,
-  .SettingsPrivacy-menuScreen.slide-leave-active,
-  .myAccount-menuScreen.slide-enter,
-  .myAccount-menuScreen.slide-leave-active,
-  .acknowledgementsScreen-helpScreen.slide-enter,
-  .acknowledgementsScreen-helpScreen.slide-leave-active,
-  .helpScreen-menuScreen.slide-enter,
-  .helpScreen-menuScreen.slide-leave-active {
-    margin-left: -100%;
-  }
-  .locationsScreen-mainScreen.slide-enter,
-  .locationsScreen-mainScreen.slide-leave-active,
-  .countryScreen-locationsScreen.slide-enter,
-  .countryScreen-locationsScreen.slide-leave-active,
-  .countryScreen-mainScreen.slide-enter,
-  .countryScreen-mainScreen.slide-leave-active {
-    margin-left: 100%;
-  }
-  */
+@import '@/styles/global.scss';
+
+#appContainer {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 </style>

@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Gizlilik, güvenlik ve hız. ExpressVPN uygulamasını doğrudan Chrome üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere her yerden erişin.",
+    "message": "ExpressVPN uygulamasını doğrudan Chrome üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere erişin.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -42,14 +42,17 @@
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "Lütfen Google Play Store'dan ExpressVPN uygulamasını yükleyin."
   },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Tarayıcınızı <b>Ubuntu Software Center</b>'dan yüklediyseniz, eklenti Linux uygulaması ile iletişim kuramayacak. [Daha fazlasını öğrenin]"
+  },
   "error_app_not_found_require_LINUX_text": {
-    "message": "Bu eklenti aktif bir aboneliğe sahip Linux için ExpressVPN uygulamasını gerektirir."
+    "message": "Bu eklenti, Linux için Express VPN uygulamasının yüklü olmasını ve aktif bir abonelik içermesini gerektirir."
   },
   "error_app_not_found_require_MAC_text": {
-    "message": "Bu eklenti aktif bir aboneliğe sahip Mac için ExpressVPN uygulamasını gerektirir."
+    "message": "Bu eklenti, Mac için Express VPN uygulamasının yüklü olmasını ve aktif bir abonelik içermesini gerektirir."
   },
   "error_app_not_found_require_WINDOWS_text": {
-    "message": "Bu eklenti aktif bir aboneliğe sahip Windows için ExpressVPN uygulamasını gerektirir."
+    "message": "Bu eklenti, Windows için Express VPN uygulamasının yüklü olmasını ve aktif bir abonelik içermesini gerektirir."
   },
   "error_btnReturnHome_default": {
     "message": "Anasayfaya Dön"
@@ -94,7 +97,7 @@
     "message": "Farklı bir [VPN konumu] seçin"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Hiçbiri işe yaramaz ise, [Destek ile iletişime geçin]."
+    "message": "Hiçbiri işe yaramaz ise, [Destek ile iletişime geçin]"
   },
   "error_connection_error_lock_on_text": {
     "message": "İnternet trafiği gizliliğinizi korumak amacıyla şu anda engellenmektedir."
@@ -139,7 +142,8 @@
     "message": "Aboneliğinizi yeniden etkinleştirmek için, <br>lütfen şu adrese e-posta gönderin:"
   },
   "error_fraudster_p2_text": {
-    "message": "konu satırı: <span class='bold'>Fatura Doğrulama</span>."
+    "message": "konu satırı: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Ödeme için kullanılan kredi kartının fotoğrafını ekleyin (SADECE son 4 rakam ve adınız görülebilir şekilde)."
@@ -214,10 +218,10 @@
     "message": "Ödeme Başarısız Oldu"
   },
   "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
-    "message": "ExpressVPN bilgilerinizi güncelledikten sonraki 30 dakika içinde otomatik olarak aktif hale gelecektir."
+    "message": "Bilgilerinizi güncellediğinizde, ExpressVPN 30 dakika içinde otomatik olarak aktif hale gelecektir."
   },
   "error_not_activated_LINUX_text": {
-    "message": "Masaüstü uygulamasını etkinleştirmek için lütfen bu komutu terminalde çalıştırın:"
+    "message": "Masaüstü uygulamasını aktif hale getirmek için lütfen şu komutu terminalde çalıştırın:"
   },
   "error_not_activated_text": {
     "message": "Bu eklentiyi kullanmak için lütfen ExpressVPN masaüstü uygulamasında giriş yapın."
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "Chrome OS Desteklenmiyor",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "Uygulama Bulunamadı"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Masaüstü Uygulamasını Yükle"
@@ -376,6 +383,158 @@
   "home_change_location_popup_title": {
     "message": "Konumu Değiştir"
   },
+  "home_report_issue_label": {
+    "message": "Geri bildirim"
+  },
+  "home_report_issue_no": {
+    "message": "Hayır"
+  },
+  "home_report_issue_text": {
+    "message": "Bağlı iken herhangi bir sorun yaşadınız mı?"
+  },
+  "home_report_issue_yes": {
+    "message": "Evet"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Sorununuzu açıklayın"
+  },
+  "issue_reporter_header": {
+    "message": "Ne oldu?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Farklı bir sunucu konumuna bağlanmayı denediniz mi?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Gönderilemedi. Lütfen bağlantınızı kontrol edin ve tekrar deneyin."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Erişmek istediğiniz hizmetin bulunduğu ülkedeki bir sunucu konumuna bağlanmayı  hiç denediniz mi?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Farklı bir sunucu konumuna bağlanmayı veya VPN protokolünü değiştirmeyi denediniz mi?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Ana Sayfa"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Yardıma ihtiyacınız mı var?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Video izleme web sitelerinde proxy hataları alıyorum"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN bağlı gösteriyor ama kullanamıyorum"
+  },
+  "issue_reporter_opt3": {
+    "message": "Belirli bir web sitesine erişemiyorum"
+  },
+  "issue_reporter_opt4": {
+    "message": "Google'da yanlış dili görüyorum"
+  },
+  "issue_reporter_opt5": {
+    "message": "Çok fazla Google captcha görüyorum"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN hızı çok yavaş"
+  },
+  "issue_reporter_opt7": {
+    "message": "Bağlantım sürekli kopuyor"
+  },
+  "issue_reporter_opt8": {
+    "message": "Diğer"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Rapor gönderildi"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Gönderiliyor..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Raporu Gönder"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Web sitesini ExpressVPN ile paylaş"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Destek ile İletişime Geçin"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Hizmeti tüm ExpressVPN müşterileri için iyileştirmeye yardımcı olduğunuz için teşekkür ederiz."
+  },
+  "issue_reporter_title": {
+    "message": "Bir Sorun Bildirin"
+  },
+  "issue_reporter_website_label": {
+    "message": "Web sitesi"
+  },
+  "language_dropdown_danish": {
+    "message": "Danimarkaca (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Flemenkçe (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "İngilizce (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Fince (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Fransızca (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Almanca (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "İtalyanca (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japonca (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Korece (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norveççe (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Lehçe (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portekizce (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Rusça (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "İspanyolca (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "İsveççe (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Tayca (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Türkçe (Türkçe)",
+    "description": "Do not translate the text between parentheses"
+  },
   "list_item_247_support": {
     "message": "7/24 müşteri desteği"
   },
@@ -383,7 +542,7 @@
     "message": "30 günlük para iade garantisi"
   },
   "list_item_apps_for_every_device": {
-    "message": "Her cihaza uygun uygulamalar"
+    "message": "Her cihaz için uygulama"
   },
   "list_item_locations_worldwide": {
     "message": "Dünya genelinde 160 konum"
@@ -398,7 +557,7 @@
     "message": "VPN Konumları"
   },
   "location_picker_recent_locations_text": {
-    "message": "Son Konumlar"
+    "message": "Önceki̇ Konumlar"
   },
   "location_picker_recommended_locations_text": {
     "message": "Önerilen Konumlar"
@@ -422,7 +581,7 @@
     "message": "Geçerli Konum"
   },
   "main_screen_recent_location_text": {
-    "message": "Son Konum"
+    "message": "Önceki Konum"
   },
   "main_screen_selected_location_text": {
     "message": "Seçilen Konum"
@@ -477,7 +636,7 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "Tarayıcı çalıştığında bağlan"
+    "message": "Tarayıcı açıldığında bağlan"
   },
   "menu_desktop_notification_text": {
     "message": "Masaüstü bildirimlerini göster"
@@ -486,7 +645,7 @@
     "message": "Ücretsiz 30 Gün Edinin"
   },
   "menu_help_support": {
-    "message": "Yardım & Destek"
+    "message": "Yardım ve Destek"
   },
   "menu_item_acknowledgements_text": {
     "message": "Referanslar"
@@ -525,28 +684,13 @@
     "message": "Kötü amaçlı yazılım & dolandırıcılık koruması"
   },
   "menu_privacy_block_webrtc_text": {
-    "message": "WebRTC'yi Engelle"
+    "message": "WebRTC'yi engelle"
   },
   "menu_privacy_enable_https_everywhere_text": {
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
     "message": "Konumu gizle"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "5 yıldız ile oylayın!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Bize nasıl daha iyi olacağımızı söyleyin"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Daha sonra"
-  },
-  "menu_ratevpn_text": {
-    "message": "ExpressVPN'i kullanmayı sevdiğinizi umuyoruz! Bize bir yorum yapmak ister misiniz?"
-  },
-  "menu_ratevpn_title": {
-    "message": "ExpressVPN'i Sevdiniz mi?"
   },
   "menu_rate_expressvpn": {
     "message": "ExpressVPN'i Oylayın"
@@ -600,7 +744,7 @@
     "message": "Daha Fazlasını Öğrenin"
   },
   "menu_settings_privacy_security_name": {
-    "message": "Gizlilik & Güvenlik"
+    "message": "Gizlilik ve Güvenlik"
   },
   "menu_settings_settings_general_title": {
     "message": "Ayarlar"
@@ -617,26 +761,11 @@
   "menu_signout_text": {
     "message": "Çıkış Yap"
   },
-  "message_item_rating1_title": {
-    "message": "ExpressVPN'i Sevdiniz mi?"
-  },
-  "message_item_rating2_title": {
-    "message": "Nasıl daha iyi olabileceğimizi söylemek ister misiniz?"
-  },
-  "message_item_rating3_title": {
-    "message": "Bize bir yorum yapmak ister misiniz?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Hayır"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "Tamam"
-  },
   "myaccount_account_active_p1_text": {
     "message": "ExpressVPN'i paylaşın ve ücretsiz hizmet edinin!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Bir abonelik satın alan her arkadaş için her ikinize de ücretsiz 30 gün veriyoruz."
+    "message": "Bir abonelik satın alan her arkadaşınız için her ikinize de ücretsiz 30 gün veriyoruz."
   },
   "myaccount_account_expired_label": {
     "message": "Sona eriş tarihi"
@@ -711,7 +840,7 @@
     "message": "Ücretsiz deneme [hours] saat içinde sona eriyor"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Ücretsiz deneme <1 saat içinde sona eriyor"
+    "message": "Ücretsiz denemenin bitmesine 1 saatten az kaldı"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Hemen yükseltin"
@@ -762,7 +891,7 @@
     "message": "Ücretsiz deneme [hours] saat içinde sona eriyor"
   },
   "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
-    "message": "Ücretsiz deneme <1 saat içinde sona eriyor"
+    "message": "Ücretsiz denemenin bitmesine 1 saatten az kaldı"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
     "message": "Hemen yükseltin"
@@ -789,16 +918,43 @@
     "message": "Abonelik [hours] saat içinde sona eriyor"
   },
   "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
-    "message": "Abonelik <1 saat içinde sona eriyor"
+    "message": "Aboneliğin bitmesine 1 saatten az kaldı"
   },
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Hemen yenileyin"
+  },
+  "rating_improve_header": {
+    "message": "Nasıl daha iyi olabiliriz?"
+  },
+  "rating_improve_report_button": {
+    "message": "Bir sorun bildirin"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Bir iyileştirme önerin"
+  },
+  "rating_no_thanks_text": {
+    "message": "Hayır teşekkürler"
+  },
+  "rating_prompt_header": {
+    "message": "ExpressVPN'i ne kadar seviyorsunuz?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "Tamam"
+  },
+  "rating_thanks4_text": {
+    "message": "Değerlendirmeniz için teşekkür ederiz!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Teşekkür ederiz! Bizi Chrome Web Mağazasında oylamak ister misiniz?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Teşekkür ederiz! Bizi Firefox Eklenti Mağazasında oylamak ister misiniz?"
   },
   "vpn_status_notification_connected_label": {
     "message": "VPN Bağlandı"
   },
   "vpn_status_notification_connected_text": {
-    "message": "%s'a bağlandı."
+    "message": "%s konumuna bağlandı."
   },
   "vpn_status_notification_connecting_label": {
     "message": "VPN Bağlanıyor..."
@@ -810,7 +966,7 @@
     "message": "%s'a bağlanamadı."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "%s'e bağlanılamıyor. İnternet trafiği engellendi."
+    "message": "%s konumuna bağlanılamıyor. İnternet trafiği engellendi."
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Bağlantı Sınırına Ulaşıldı"
@@ -822,10 +978,10 @@
     "message": "VPN Yeniden Bağlanıyor..."
   },
   "vpn_status_notification_reconnecting_network_lock_off_text": {
-    "message": "%s'e yeniden bağlanıyor."
+    "message": "%s konumuna yeniden bağlanılıyor."
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
-    "message": "%s'e yeniden bağlanıyor. İnternet trafiği engellendi."
+    "message": "%s konumuna yeniden bağlanıyor. İnternet trafiği engellendi."
   },
   "welcome_continue_button_label": {
     "message": "İlerle"

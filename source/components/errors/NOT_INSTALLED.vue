@@ -6,9 +6,10 @@ Licensed GPL v2
 <template lang="html">
   <div>
     <error-icon :iconName="isChromeOS ? 'icon-22-chrome' : 'icon-37-download'" />
-    <h1>{{ localize(`error_NOT_INSTALLED_${isChromeOS ? 'chromeOS_' : ''}title`) }}</h1>
+    <h1>{{ title }}</h1>
     <p>{{ localize(`error_app_not_found_require_${currentInfo.os}_text`) }}</p>
-    <p v-if="!isChromeOS" v-html="$parent.addAnchor('error_app_not_found_contact_support_text', '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_found_contact_support')" @click="$parent.checkForLinks"></p>
+    <p v-if="!isChromeOS && !isLinux" v-html="$parent.addAnchor('error_app_not_found_contact_support_text', '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_found_contact_support')" @click="$parent.checkForLinks"></p>
+    <p v-else-if="isLinux" v-html="$parent.addAnchor('error_app_not_found_require_LINUX_snap_text', '/support/vpn-setup/app-for-linux/#software-center')" @click="$parent.checkForLinks"></p>
     <p v-else v-html="$parent.addAnchor('error_NOT_INSTALLED_chromeOS_manual', '/latest?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_found_contact_support#manual')" @click="$parent.checkForLinks"></p>
     <div class="button-container">
       <button class="button-primary" @click="primaryClick">{{ localize(`error_NOT_INSTALLED_${isChromeOS ? 'chromeOS_' : ''}primary_button`) }}</button>
@@ -33,8 +34,26 @@ export default {
     };
   },
   computed: {
+    title() {
+      let titleKey = '';
+      switch (this.currentInfo.os) {
+        case 'LINUX':
+          titleKey = 'error_NOT_INSTALLED_linux_title';
+          break;
+        case 'CHROMIUM':
+          titleKey = 'error_NOT_INSTALLED_chromeOS_title';
+          break;
+        default:
+          titleKey = 'error_NOT_INSTALLED_title';
+          break;
+      }
+      return this.localize(titleKey);
+    },
     isChromeOS() {
       return this.currentInfo.os === 'CHROMIUM';
+    },
+    isLinux() {
+      return this.currentInfo.os === 'LINUX';
     },
   },
   // when component uses other components

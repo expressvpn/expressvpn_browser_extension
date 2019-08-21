@@ -19,7 +19,7 @@ Licensed GPL v2
         </div>
       </div>
 
-      <button @click="openAppSettings" id="openAppSettings">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
+      <button v-if="currentInfo.os !== 'LINUX'" @click="openAppSettings" id="openAppSettings">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
 
       <div class="divider"></div>
 
@@ -123,11 +123,6 @@ export default {
         }
       }
     });
-
-    // Hide All settings button in Linux since it has no UI
-    if (this.currentInfo.os === 'LINUX') {
-      document.getElementById('allVPNsettings').style.display = 'none';
-    }
   },
 };
 </script>

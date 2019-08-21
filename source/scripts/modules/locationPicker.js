@@ -106,7 +106,7 @@ const getRecentLocations = (allLocationsList, recentLocations) => {
   return returnLocations;
 };
 
-module.exports = {
+export default {
   filterLocationsByProtocol,
   getLocationByName,
   trimLocationName,

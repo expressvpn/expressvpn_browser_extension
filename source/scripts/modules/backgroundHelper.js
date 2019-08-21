@@ -4,7 +4,7 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
 import UAParser from 'ua-parser-js';
-import utils from './utils';
+import * as utils from './utils';
 
 const minimumOSRequirements = [
   {
@@ -70,4 +70,4 @@ const backgroundHelper = (function () {
   };
 }());
 
-module.exports = backgroundHelper;
+export default backgroundHelper;

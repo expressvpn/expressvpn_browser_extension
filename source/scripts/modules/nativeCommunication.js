@@ -47,7 +47,7 @@ export default (function () {
       if ((msg === null) || (typeof msg !== 'object')) { // null is an object...
         return true; // must return true to keep the event listener running
       }
-      if (msg.error) {
+      if (msg.error && typeof msg.error === 'string') {
         if (msg.error.indexOf('sendEngineCommand: not activated') > 0) {
           currentBackoffCollision = prevCurrentBackoffCollision;
         }
@@ -73,6 +73,7 @@ export default (function () {
           },
           subscription: msg.subscription,
           website_url: msg.info.website_url,
+          raw: msg.info,
         };
         // since selectedLocation does not contain the cluster name if it's a country
         // we need to get the full location object from either current_location (if it's connected) or last_location (if it's not connected to the VPN server)

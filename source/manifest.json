@@ -1,12 +1,11 @@
 {
   "name": "__MSG_app_name_title__",
   "short_name": "__MSG_app_short_name_title__",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "manifest_version": 2,
   "description": "__MSG_app_description_text__",
   "author": "ExpressVPN",
-  "__chrome__key": "",
-  "__chrome__minimum_chrome_version": "53",
+  "__chrome__minimum_chrome_version": "55",
   "icons": {
     "16": "images/toolbar-icon-16.png",
     "32": "images/toolbar-icon-32.png",
@@ -27,18 +26,16 @@
   },
   "permissions": [
     "alarms",
+    "cookies",
     "nativeMessaging",
     "privacy",
     "storage",
-    "webNavigation",
     "webRequest",
     "webRequestBlocking",
-    "contextMenus",
-    "cookies",
     "tabs",
-    "proxy",
     "unlimitedStorage",
     "notifications",
+    "proxy",
     "<all_urls>"
   ],
   "browser_action": {

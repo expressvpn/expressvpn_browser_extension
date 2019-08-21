@@ -44,7 +44,7 @@ const updateRatingDataFromState = (ratingParam, data) => {
   return ratingData;
 };
 
-module.exports = {
+export default {
   defaultRatingData,
   updateRatingDataFromState,
 };

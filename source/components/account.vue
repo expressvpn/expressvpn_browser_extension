@@ -52,10 +52,9 @@ export default {
       this.$store.dispatch('setCurrentView', 'menuScreen');
     },
     getExpiryType: function () {
-      if (
-        (!this.isPaymentMethodIAP() && this.hasSubscriptionExpired()) ||
-        (this.isPaymentMethodIAP() && this.isInGracePeriod())
-      ) {
+      if (this.hasSubscriptionExpired() && this.isRenewable() && this.isPaymentMethodIAP() && !this.isLastInAppPurchasesFailure()) {
+        return 'payment_due';
+      } else if (this.hasSubscriptionExpired()) {
         return 'expired';
       } else if (this.subscription.status === 'FREE_TRIAL_ACTIVE' && this.subscription.auto_bill === true) {
         return 'subscription_starts';
@@ -67,10 +66,7 @@ export default {
     },
     getAccountStatus() {
       let accountStatus = this.subscription.status.toLowerCase();
-      if (
-        (!this.isPaymentMethodIAP() && this.hasSubscriptionExpired()) ||
-        (this.isPaymentMethodIAP() && this.isInGracePeriod())
-      ) {
+      if (this.hasSubscriptionExpired()) {
         accountStatus = 'expired';
       } else if (this.hasSubscriptionExpired() && this.isTrialUser()) {
         accountStatus = 'trial_expired';

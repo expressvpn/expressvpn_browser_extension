@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Confidentialité, sécurité, rapidité. Contrôlez l'appli ExpressVPN depuis Chrome, masquez votre localisation et accédez à du contenu.",
+    "message": "Contrôlez l'appli ExpressVPN depuis Chrome, masquez votre localisation et accédez à du contenu.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Confidentialité, sécurité, rapidité. Contrôlez l'appli ExpressVPN depuis Firefox, masquez votre localisation et accédez à du contenu.",
+    "message": "Confidentialité, sécurité et rapidité. Contrôlez l'appli ExpressVPN directement depuis Firefox, masquez votre localisation et accédez à du contenu depuis n'importe où dans le monde.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN : un proxy VPN pour tout débloquer",
+    "message": "ExpressVPN : un proxy VPN qui vous donne accès à tout",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -40,7 +40,10 @@
     "message": "Pas encore client? [Démarrez]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "Veuillez installer l'appli ExpressVPN depuis le Google Play Store."
+    "message": "Veuillez installer l'appli ExpressVPN depuis Google Play Store."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Si vous avez installé votre navigateur à partir du <b>Centre logiciel Ubuntu,</b> l'extension ne sera pas en mesure de communiquer avec l'appli Linux. [En savoir plus]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Cette extension nécessite un abonnement ExpressVPN et l'appli Linux."
@@ -88,13 +91,13 @@
     "message": "Mettre à jour le système d'exploitation"
   },
   "error_connection_error_check_l1_text": {
-    "message": "Vérifiez l'état de votre connexion Internet"
+    "message": "Vérifiez l'état de votre connexion Internet."
   },
   "error_connection_error_check_l2_text": {
-    "message": "Sélectionnez une autre [localisation VPN]"
+    "message": "Sélectionnez une autre [localisation VPN]."
   },
   "error_connection_error_check_l3_text": {
-    "message": "Si cela ne fonctionne pas, [contactez le Support client]."
+    "message": "Si l'erreur persiste, [contactez le Support client]."
   },
   "error_connection_error_lock_on_text": {
     "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
@@ -112,7 +115,7 @@
     "message": "Échec de connexion "
   },
   "error_connection_error_to_location_text": {
-    "message": "La connexion à cette localisation VPN n'a pu aboutir :<br>%LOCATION%"
+    "message": "Échec de connexion à<br>%LOCATION%."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Réessayer"
@@ -139,7 +142,8 @@
     "message": "Pour réactiver votre abonnement,<br>veuillez envoyer un e-mail à"
   },
   "error_fraudster_p2_text": {
-    "message": "sujet : <span class='bold'>Billing Verification</span>"
+    "message": "sujet : <span class='bold'>Billing Verification</span>",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Joignez une photo de la carte de crédit utilisée pour le paiement (ne révélez QUE les quatre derniers chiffres et le nom)."
@@ -148,7 +152,7 @@
     "message": "Précisez votre numéro de téléphone (avec préfixe de pays) et l'horaire auquel nous pouvons vous contacter. "
   },
   "error_fraudster_p5_text": {
-    "message": "L'équipe Facturation vous répondra sous 24 à 48h. "
+    "message": "Le Service de facturation vous répondra sous 24 à 48h. "
   },
   "error_fraudster_question1_text": {
     "message": "Avez-vous payé avec une carte de crédit ?"
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "L'appli ne prend pas en charge Chrome OS",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "Appli inconnue"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Installer l'appli de bureau"
@@ -332,7 +339,7 @@
     "message": "Abonnement expiré"
   },
   "error_upgrade_app_button_label": {
-    "message": "Mettre à jour l'appli"
+    "message": "Mettre à jour maintenant"
   },
   "error_upgrade_app_header_title": {
     "message": "Mettre à jour l'appli"
@@ -347,7 +354,7 @@
     "message": "Tentative de connexion en cours..."
   },
   "hint_no_internet_connecting_text": {
-    "message": "Aucune connexion internet. <br>Le VPN se connectera dès que possible."
+    "message": "Aucune connexion Internet détectée. <br>Le VPN se connectera dès que possible."
   },
   "hint_no_internet_ready_text": {
     "message": "Aucune connexion Internet détectée.<br>Le VPN peut être indisponible."
@@ -362,7 +369,7 @@
     "message": "Le trafic Internet est bloqué pour protéger vos données."
   },
   "hint_saved_text": {
-    "message": "OK"
+    "message": "Enregistré"
   },
   "home_change_location_popup_btn0": {
     "message": "Annuler"
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "Changer de localisation"
+  },
+  "home_report_issue_label": {
+    "message": "Avis"
+  },
+  "home_report_issue_no": {
+    "message": "Non"
+  },
+  "home_report_issue_text": {
+    "message": "Avez-vous rencontré des problèmes lors de votre connexion ?"
+  },
+  "home_report_issue_yes": {
+    "message": "Oui"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Décrivez votre problème"
+  },
+  "issue_reporter_header": {
+    "message": "Que s'est-il passé ?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Avez-vous essayé de vous connecter à une autre localisation de serveur  ?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Impossible d'envoyer. Veuillez vérifier votre connexion et essayer à nouveau."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Avez-vous essayé de vous connecter à une localisation de serveur dans le pays où le service que vous souhaitez accéder est basé ?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Avez-vous essayé de vous connecter à une autre localisation de serveur ou de changer de protocole VPN  ?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Accueil"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Vous avez besoin d'aide ?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Je vois des erreurs de proxy sur les sites de streaming vidéo"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN s'affiche comme connecté, mais je ne peux pas naviguer"
+  },
+  "issue_reporter_opt3": {
+    "message": "Je ne peux pas accéder à un certain site Web"
+  },
+  "issue_reporter_opt4": {
+    "message": "Je vois un langage incorrect sur Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "Je vois trop de captchas Google"
+  },
+  "issue_reporter_opt6": {
+    "message": "La vitesse du VPN est très lente"
+  },
+  "issue_reporter_opt7": {
+    "message": "Je suis tout le temps déconnecté"
+  },
+  "issue_reporter_opt8": {
+    "message": "Autre"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Rapport envoyé"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Envoi... "
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Envoyer un rapport"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Partager le site Web avec ExpressVPN"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Contacter le Support client"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Merci d'avoir aidé à améliorer le service pour tous les clients d'ExpressVPN."
+  },
+  "issue_reporter_title": {
+    "message": "Signaler un problème"
+  },
+  "issue_reporter_website_label": {
+    "message": "Site Web"
+  },
+  "language_dropdown_danish": {
+    "message": "Danois (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Néerlandais (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Anglais (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finlandais (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Français (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Allemand (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italien (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japonais (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Coréen (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norvégien (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Polonais (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portugais (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russe (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Espagnol (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Suédois (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thaïlandais (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Turc (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "Support client 24/7"
@@ -404,10 +563,10 @@
     "message": "Localisations recommandées"
   },
   "location_picker_search_no_results_text": {
-    "message": "Aucun résultat"
+    "message": "AUCUN RÉSULTAT"
   },
   "location_picker_search_placeholder_text": {
-    "message": "Rechercher une localisation"
+    "message": "Chercher une localisation"
   },
   "location_picker_smart_location_text": {
     "message": "Localisation auto"
@@ -492,7 +651,7 @@
     "message": "Mentions spéciales"
   },
   "menu_item_app_version_text": {
-    "message": "%OS% Version de l'appli : %VERSION%"
+    "message": "Version de l'appli pour %OS% : %VERSION%"
   },
   "menu_item_contact_support_text": {
     "message": "Contacter le support"
@@ -532,21 +691,6 @@
   },
   "menu_privacy_hide_location_text": {
     "message": "Masquer ma position"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "Laissez-nous 5 étoiles !"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Aidez-nous à nous améliorer"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Plus tard"
-  },
-  "menu_ratevpn_text": {
-    "message": "Nous espérons que vous profitez d'ExpressVPN. Voulez-vous nous laisser un avis ?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Vous aimez ExpressVPN ?"
   },
   "menu_rate_expressvpn": {
     "message": "Notez ExpressVPN"
@@ -594,7 +738,7 @@
     "message": "Empêche la géolocalisation HTML5 de révéler votre localisation physique quand connecté au VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "Connexion automatique à la version HTTPS sécurisée des sites web si disponible"
+    "message": "Connexion automatique à la version HTTPS sécurisée des sites web si disponible."
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "En savoir plus"
@@ -617,23 +761,8 @@
   "menu_signout_text": {
     "message": "Déconnecter"
   },
-  "message_item_rating1_title": {
-    "message": "Vous aimez ExpressVPN ?"
-  },
-  "message_item_rating2_title": {
-    "message": "Aidez-nous à nous améliorer"
-  },
-  "message_item_rating3_title": {
-    "message": "Voulez-vous nous laisser un avis ?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Non merci"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
-    "message": "Parlez d'ExpressVPN avec vos amis et gagnez des jours gratuits."
+    "message": "Parlez d'ExpressVPN à vos amis et gagnez des jours gratuits !"
   },
   "myaccount_account_active_p2_text": {
     "message": "Pour chaque ami parrainé, nous vous offrons à tous les deux 30 jours gratuits. "
@@ -711,7 +840,7 @@
     "message": "L'essai gratuit expire dans [hours] heures"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Essai : < 1 heure restante"
+    "message": "L'essai expire dans < 1 heure"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Abonnez-vous"
@@ -753,16 +882,16 @@
     "message": "Installer maintenant"
   },
   "promo_bar_free_trial_expiring_soon_days_text": {
-    "message": "Essai : [days] jours restants"
+    "message": "L'essai expire dans [days] jours"
   },
   "promo_bar_free_trial_expiring_soon_expired_text": {
     "message": "Essai gratuit terminé"
   },
   "promo_bar_free_trial_expiring_soon_hours_text": {
-    "message": "Essai : [hours] heures restantes"
+    "message": "L'essai expire dans [hours] heures"
   },
   "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
-    "message": "Essai : < 1 heure restante"
+    "message": "L'essai expire dans < 1 heure"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
     "message": "S'abonner maintenant"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Renouveler"
   },
+  "rating_improve_header": {
+    "message": "Comment pouvons-nous nous améliorer ?"
+  },
+  "rating_improve_report_button": {
+    "message": "Signaler un problème"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Suggérer une amélioration"
+  },
+  "rating_no_thanks_text": {
+    "message": "Non merci"
+  },
+  "rating_prompt_header": {
+    "message": "À quel point appréciez-vous ExpressVPN ?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Merci de nous avoir laissé un avis !"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Merci ! Pourriez-vous nous laisser un avis sur le Web Store de Chrome ?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Merci ! Pourriez-vous nous laisser un avis sur le Add-ons Store de Firefox ?"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN connecté"
   },
@@ -810,7 +966,7 @@
     "message": "Échec de connexion à %s."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "La connexion à %s n'a pu aboutir. Le trafic Internet est bloqué pour protéger vos données."
+    "message": "La connexion à %s n'a pu aboutir. Le trafic Internet est bloqué."
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Trop d'appareils connectés"
@@ -825,7 +981,7 @@
     "message": "Reconnexion à %s."
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
-    "message": " Reconnexion à %s. Le trafic Internet est bloqué pour protéger vos données."
+    "message": " Reconnexion à %s. Le trafic Internet est bloqué."
   },
   "welcome_continue_button_label": {
     "message": "Continuer"
@@ -847,13 +1003,5 @@
   },
   "welcome_skip_button_label": {
     "message": "Passer"
-  },
-  "language_dropdown_english": {
-    "message": "Anglais (English)",
-    "description": "Do not translate the text between parentheses"
-  },
-  "language_dropdown_french": {
-    "message": "Français (Français)",
-    "description": "Do not translate the text between parentheses"
   }
 }

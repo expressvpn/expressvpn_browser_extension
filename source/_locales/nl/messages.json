@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Privacy, veiligheid en snelheid. Beheer de ExpressVPN app direct vanuit Chrome, stel een neplocatie in en krijg overal toegang tot content.",
+    "message": "Bedien de ExpressVPN app rechtstreeks vanuit Chrome, verander uw locatie en zie content overal.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -40,7 +40,10 @@
     "message": "Nieuw bij ExpressVPN? [Begin]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "Installeer de ExpressVPN app in de Google App Store."
+    "message": "Installeer de ExpressVPN app vanuit Google Play."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Als u uw browser vanuit het <b>Ubuntu Software Center</b> geïnstalleerd heeft zal de extensie niet kunnen communiceren met de Linux app. [Kom meer te weten]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Deze extensie vereist de ExpressVPN app voor Linux met een actief abonnement."
@@ -55,7 +58,7 @@
     "message": "Terug naar Home"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "Als u vragen hebt kunt u contact opnemen met [de Helpdesk]."
+    "message": "Als u vragen hebt, kunt u contact opnemen met [de Helpdesk]."
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "Uitloggen"
@@ -94,7 +97,7 @@
     "message": "Kies een andere [VPN locatie]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Als het probleem zich blijft voordoen, [neem contact op met de Helpdesk]."
+    "message": "Als het probleem zich blijft voordoen, [neem dan contact op met de Helpdesk]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Internetverkeer wordt op dit moment geblokkeerd om uw privacy te beschermen."
@@ -136,10 +139,11 @@
     "message": "Wij konden uw factuurinformatie niet verifiëren, daarom hebben wij uw betaling geannuleerd."
   },
   "error_fraudster_p1_text": {
-    "message": "Om uw abonnement opnieuw te activeren, stuur een e-mail"
+    "message": "Om uw abonnement opnieuw te activeren mailt u naar "
   },
   "error_fraudster_p2_text": {
-    "message": "onderwerp: <span class='bold'>Billing Verification</span>."
+    "message": "onderwerp: <span class='bold'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Sluit een foto bij van de creditcard die u heeft gebruikt (waarop ALLEEN de laatste 4 cijfers en de naam te lezen zijn)"
@@ -226,7 +230,7 @@
     "message": "App niet geactiveerd"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Als Play Store niet op uw Chromebook beschikbaar is, volg onze [manual configuration] instructies."
+    "message": "Als Google Play niet op uw Chromebook beschikbaar is, volg onze handmatige configuraties instructies."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "ExpressVPN installeren"
@@ -238,8 +242,11 @@
     "message": "Chrome OS niet ondersteund",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
   },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "App niet gevonden"
+  },
   "error_NOT_INSTALLED_primary_button": {
-    "message": "Installeer desktop app"
+    "message": "Desktop app installeren"
   },
   "error_NOT_INSTALLED_secondary_button": {
     "message": "Nieuw abonnement nemen"
@@ -275,7 +282,7 @@
     "message": "U heeft het apparaatgebruik van ExpressVPN op dit abonnement overschreden."
   },
   "error_simultaneous_connection_p2_text": {
-    "message": "Verbreek de verbinding van een apparaat of [purchase an additional subscription]."
+    "message": "Ontkoppel een apparaat of [koop een extra abonnement]."
   },
   "error_simultaneous_connection_title": {
     "message": "Verbindingslimiet bereikt."
@@ -376,6 +383,158 @@
   "home_change_location_popup_title": {
     "message": "Locatie veranderen"
   },
+  "home_report_issue_label": {
+    "message": "Feedback"
+  },
+  "home_report_issue_no": {
+    "message": "Nee"
+  },
+  "home_report_issue_text": {
+    "message": "Heeft u problemen ervaren terwijl u verbonden bent?"
+  },
+  "home_report_issue_yes": {
+    "message": "Ja"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Beschrijf het probleem"
+  },
+  "issue_reporter_header": {
+    "message": "Wat is er gebeurd?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Heeft u al geprobeerd verbinding te maken met een andere server locatie?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Kan niet verzenden. Controleer uw verbinding en probeer het opnieuw."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Heeft u al geprobeerd verbinding te maken met een server locatie in het land waar de dienst waar u toegang tot wilt zich bevindt?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Heeft u al geprobeerd verbinding te maken met een andere server locatie of VPN protocol?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Thuis"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Hulp nodig?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Ik zie proxy fouten op video streaming websites"
+  },
+  "issue_reporter_opt2": {
+    "message": "Ik zie dat ExpressVPN verbonden is maar ik kan niet surfen"
+  },
+  "issue_reporter_opt3": {
+    "message": "Ik kan een bepaalde website niet bezoeken"
+  },
+  "issue_reporter_opt4": {
+    "message": "Ik zie onjuiste taal op Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "Ik zie teveel Google captchas"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN snelheid is erg traag"
+  },
+  "issue_reporter_opt7": {
+    "message": "De verbinding wordt constant verbroken"
+  },
+  "issue_reporter_opt8": {
+    "message": "Anders"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Rapport verzonden"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Bezig met verzenden..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Rapport versturen"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Deel website met ExpressVPN"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Contact opnemen met Helpdesk"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Bedankt voor uw hulp bij het verbeteren van de diensten voor alle ExpressVPN klanten."
+  },
+  "issue_reporter_title": {
+    "message": "Een probleem melden"
+  },
+  "issue_reporter_website_label": {
+    "message": "Website"
+  },
+  "language_dropdown_danish": {
+    "message": "Deens (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Nederlands (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Engels (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Fins (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Frans (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Duits (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italiaans (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japans (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Koreaans (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Noors (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Pools (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portugees (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russisch (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Spaans (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Zweeds (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thais (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Turks (Türkçe)",
+    "description": "Do not translate the text between parentheses"
+  },
   "list_item_247_support": {
     "message": "24/7 klantenondersteuning"
   },
@@ -410,7 +569,7 @@
     "message": "Zoek naar een stad of land"
   },
   "location_picker_smart_location_text": {
-    "message": "Smart Location"
+    "message": "Smart location"
   },
   "location_picker_tab_all_text": {
     "message": "Alle locaties"
@@ -428,7 +587,7 @@
     "message": "Gekozen locatie"
   },
   "main_screen_smart_location_text": {
-    "message": "Smart Location"
+    "message": "Smart location"
   },
   "main_screen_status_vpn_connected_text": {
     "message": "Verbonden"
@@ -489,7 +648,7 @@
     "message": "Hulp & ondersteuning"
   },
   "menu_item_acknowledgements_text": {
-    "message": "Dankwoord"
+    "message": "Erkenningen"
   },
   "menu_item_app_version_text": {
     "message": "%OS% app versie: %VERSION%"
@@ -528,25 +687,10 @@
     "message": "Blokkeer WebRTC"
   },
   "menu_privacy_enable_https_everywhere_text": {
-    "message": "Overal HTTPS"
+    "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
     "message": "Vervals uw locatie"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "Laat een 5-sterren beoordeling achter!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Laat ons weten wat wij kunnen verbeteren"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Nu niet"
-  },
-  "menu_ratevpn_text": {
-    "message": "We hopen dat u tevreden bent met ExpressVPN! Zou u een beoordeling achter willen laten?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Bevalt ExpressVPN?"
   },
   "menu_rate_expressvpn": {
     "message": "Beoordeel ExpressVPN"
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "Uitloggen"
   },
-  "message_item_rating1_title": {
-    "message": "Bent u tevreden met ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "Wilt u met ons delen hoe wij kunnen verbeteren?"
-  },
-  "message_item_rating3_title": {
-    "message": "Zou u een beoordeling achter willen laten?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Nee bedankt"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "Ja hoor"
-  },
   "myaccount_account_active_p1_text": {
     "message": "Deel ExpressVPN met uw vrienden en ontvang gratis diensten!"
   },
@@ -666,7 +795,7 @@
     "message": "Proefperiode"
   },
   "myaccount_account_subscription_starts_label": {
-    "message": "Abonnement start"
+    "message": "Abonnement start op"
   },
   "myaccount_active_refer_button_label": {
     "message": "Verwijs vrienden"
@@ -696,7 +825,7 @@
     "message": "ExpressVPN is geüpdatet"
   },
   "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> kan gevaarlijke inhoud of software bevatten die u zal proberen over te halen persoonlijke informatie te delen (bijv. bankgegevens, foto's, wachtwoorden, berichten). [Meer&nbsp;informatie]"
+    "message": "<span>%s</span> kan gevaarlijke content of software bevatten die u zal proberen over te halen persoonlijke informatie te delen (bijv. bankgegevens, foto's, wachtwoorden, berichten). [Meer&nbsp;informatie]"
   },
   "phishing_alert_dialog_title": {
     "message": "Gevaar: Phishing Verderop"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Nu verlengen"
   },
+  "rating_improve_header": {
+    "message": "Wat kunnen wij verbeteren?"
+  },
+  "rating_improve_report_button": {
+    "message": "Een probleem melden"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Een verbetering voorstellen"
+  },
+  "rating_no_thanks_text": {
+    "message": "Nee, bedankt"
+  },
+  "rating_prompt_header": {
+    "message": "Hoe tevreden bent u met ExpressVPN?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Bedankt voor uw beoordeling!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Bedankt! Wilt u ons beoordelen in de Chrome Web store? "
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Bedankt! Wilt u ons beoordelen in de Firefox Add-ons Store? "
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN verbonden"
   },
@@ -816,7 +972,7 @@
     "message": "Verbindingslimiet bereikt"
   },
   "vpn_status_notification_connection_limit_text": {
-    "message": "Verbreek de verbinding van een apparaat of schaf een extra abonnement aan."
+    "message": "Ontkoppel een apparaat of koop een extra abonnement."
   },
   "vpn_status_notification_reconnecting_label": {
     "message": "VPN opnieuw verbinden..."
@@ -843,7 +999,7 @@
     "message": "Meer informatie"
   },
   "welcome_screen3_p1_text": {
-    "message": "De extensie verbergt uw locatie, blokkeert WebRTC en gebruikt overal HTTPS."
+    "message": "De extensie verbergt uw locatie, blokkeert WebRTC en gebruikt HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Overslaan"

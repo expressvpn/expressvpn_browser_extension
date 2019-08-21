@@ -16,8 +16,8 @@ export default {
     isExpiringSoon(nDays = 10) {
       return (this.getTimeToExpiry().days < nDays);
     },
-    isInGracePeriod(nDays = 2) {
-      return this.hasSubscriptionExpired() && Math.abs(this.getTimeToExpiry().days) <= nDays;
+    isInGracePeriod() {
+      return this.hasSubscriptionExpired() && ['ACTIVE', 'FREE_TRIAL_ACTIVE', 'MULTI_DEVICE_FREE_TRIAL_ACTIVE'].includes(this.subscription.status);
     },
     isRegularUser() {
       return this.status === 'ACTIVE' && this.subscription.plan_type === 'full';
@@ -102,7 +102,7 @@ export default {
 
       if (this.getTimeToExpiry().rawDifference < 0) {
         accountState = 'expired';
-      } else if ((this.getTimeToExpiry().days <= this.DAYS_TO_EXPIRING_STATE && !this.isRenewable()) || (this.isTrialUser())) {
+      } else if (this.getTimeToExpiry().days < this.DAYS_TO_EXPIRING_STATE && !this.isRenewable()) {
         accountState = 'expiring';
       } else {
         accountState = 'active';

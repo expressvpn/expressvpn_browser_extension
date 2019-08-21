@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Yksityisyys, turvallisuus ja nopeus. Hallitse ExpressVPN-sovellusta suoraan Chromesta, huijaa sijaintisii ja käytä sisältöä missä tahansa.",
+    "message": "Hallitse ExpressVPN-sovellusta suoraan Chromesta, huijaa sijaintisi ja käytä sisältöä missä tahansa.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -40,10 +40,13 @@
     "message": "Uusi ExpressVPN:n käyttäjä? [Aloita]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "Asenna ExpressVPN-sovellus Google Play Storesta."
+    "message": "Asenna ExpressVPN-sovellus Google Play Kaupasta."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Jos olet asentanut selaimesi <b>Ubuntu -ohjelmistokeskuksesta </b>, laajennus ei pysty kommunikoimaan Linux-sovelluksen kanssa. [Lisätietoja]"
   },
   "error_app_not_found_require_LINUX_text": {
-    "message": "Tämä laajennus edellyttää ExpressVPN-sovellusta Linuxlle sekä voimassaolevaa tilausta."
+    "message": "Tämä laajennus edellyttää ExpressVPN-sovellusta Linuxille sekä voimassaolevaa tilausta."
   },
   "error_app_not_found_require_MAC_text": {
     "message": "Tämä laajennus edellyttää, että ExpressVPN-sovellus Macille -tilaus on voimassa."
@@ -76,7 +79,7 @@
     "message": "Voit vaihtoehtoisesti piilottaa laajennuksen klikkaamalla ikonia oikealla painikkeella ja valitsemalla kohdan \"Poista työkalupalkista\" tai \"Siirrä valikkoon\"."
   },
   "error_compatibility_error_os_version_p1_text": {
-    "message": "Tämä laajennusosa on tällä hetkellä saatavilla vain käyttöjärjestelmille <b>macOS 10.10 / Windows 7</b>"
+    "message": "Tämä laajennusosa on tällä hetkellä saatavilla vain käyttöjärjestelmille <b>macOS 10.10 / Windows 7</b> ja uudemmille."
   },
   "error_compatibility_error_os_version_p2_text": {
     "message": "Ole hyvä ja päivitä käyttöjärjestelmäsi laajennuksen käyttämiseksi."
@@ -94,10 +97,10 @@
     "message": "Valitse toinen [VPN-sijainti]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Jos kaikki muu epäonnistuu, [ota yhteyttä tukeen]."
+    "message": "Muussa tapauksessa [ota yhteyttä tukeen]."
   },
   "error_connection_error_lock_on_text": {
-    "message": "Internet-liikenne on tällä hetkellä estettynä yksityisyytesi suojelemiseksi."
+    "message": "Internet-liikenne on tällä hetkellä estettynä yksityisyytesi suojaamiseksi."
   },
   "error_connection_error_return_home_button_label": {
     "message": "Palaa kotiin"
@@ -106,7 +109,7 @@
     "message": "Peruuta"
   },
   "error_connection_error_return_home_button_label_network_lock_on": {
-    "message": "Poista estot verkosta"
+    "message": "Poista internetin esto"
   },
   "error_connection_error_title": {
     "message": "Yhdistäminen ei onnistu"
@@ -124,22 +127,23 @@
     "message": "Olet kirjautunut ulos, koska tilitietosi on päivitetty."
   },
   "error_forced_signout_p2_text": {
-    "message": "Jatkaaksesi ExpressVPN:n käyttöä, kirjaudu uudelleen sisään."
+    "message": "Jos haluat jatkaa ExpressVPN:n käyttöä, kirjaudu uudelleen sisään."
   },
   "error_forced_signout_signin_button_label": {
-    "message": "Sisäänkirjaudu"
+    "message": "Kirjaudu"
   },
   "error_forced_signout_title": {
-    "message": "Sisäänkirjaudu ExpressVPN:ään"
+    "message": "Kirjaudu ExpressVPN:ään"
   },
   "error_fraudster_hint": {
     "message": "Emme voineet vahvistaa laskutustietojasi, joten olemme peruuttaneet maksusi."
   },
   "error_fraudster_p1_text": {
-    "message": "<span id='fraudster-text-1'>Emme pystyneet vahvistamaan laskutustietojasi, joten olemme peruuttaneet maksusi.</span><br/><br/><span>Jos haluat aktivoida tilauksesi uudelleen, ole hyvä ja <br/>lähetä sähköpostia osoitteeseen </span><br/><span id='email'>support@expressvpn.zendesk.com</span>,<br /><span>aiheella <b>Laskutuksen vahvistaminen</b></span>.<br/><br/><b>Maksoitko luottokortilla?</b><br/><span>Lisää viestiin valokuva käyttämästäsi luottokortista (siten, että näkyvillä ovat VAIN 4 viimeistä numeroa ja nimi).<br/><br/><b>Etkö maksanut luottokortilla?</b><br/>Liitä puhelinnumerosi (maakoodi mukaan lukien) ja ilmoita, mihin aikaan voimme soittaa sinulle.<br/><br/>Laskutustiimi vastaa 24-48 tunnin kuluessa.</span>"
+    "message": "Jos haluat aktivoida tilauksesi uudelleen, <br>ole hyvä ja lähetä sähköpostia osoitteeseen"
   },
   "error_fraudster_p2_text": {
-    "message": "aihe: <span class='bold'>Laskutusvahvistus</span>."
+    "message": "aiheella: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Lisää käytetyn luottokortin valokuva (VAIN neljä viimeistä numeroa ja nimi näkyvissä)"
@@ -157,13 +161,13 @@
     "message": "Etkö maksanut luottokortilla?"
   },
   "error_fraudster_title": {
-    "message": "Tili estetty"
+    "message": "Tilin käyttö keskeytetty"
   },
   "error_free_trial_expired_benefits_text": {
     "message": "Ilmainen kokeilujaksosi on päättynyt, <br/>mutta yhteyden muodostaminen uudelleen on helppoa."
   },
   "error_free_trial_expired_benefits_title": {
-    "message": "Miksi korottaa?"
+    "message": "Miksi kannattaa päivittää?"
   },
   "error_free_trial_expired_enter_new_code_button_label": {
     "message": "Syötä aktivointikoodi"
@@ -190,7 +194,7 @@
     "message": "Ilmainen kokeilujakso on päättynyt"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
-    "message": "Tee tilaus"
+    "message": "Päivitä nyt"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
     "message": "Hanki tilaus"
@@ -226,7 +230,7 @@
     "message": "Sovellus ei ole aktivoitu"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Jos Play-myymälä ei ole käytettävissä Chromebookissa, noudata [manual configuration] -ohjeita."
+    "message": "Jos Play Kauppa ei ole käytettävissä Chromebookissa, noudata [manuaalisia määritysohjeita]."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "Asenna ExpressVPN-sovellus"
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "Chrome-käyttöjärjestelmää ei tueta",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "Sovellusta ei löydy"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Asenna työpöydän sovellus"
@@ -272,13 +279,13 @@
     "message": "Lue lisää"
   },
   "error_simultaneous_connection_p1_text": {
-    "message": "Olet ylittänyt ExpressVPN:n laitteen käyttörajan tälle tilaukselle."
+    "message": "Olet ylittänyt ExpressVPN:n laitteiden enimmäismäärän tälle tilaukselle."
   },
   "error_simultaneous_connection_p2_text": {
     "message": "Irrota laite tai [tee lisätilaus]."
   },
   "error_simultaneous_connection_title": {
-    "message": "Yhteysrajoitus saavutettu"
+    "message": "Yhteyksien enimmäismäärä saavutettu "
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Päivitä maksutiedot"
@@ -287,7 +294,7 @@
     "message": "Myöhemmin"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Tilauksesi on vanhentunut, <br/>mutta yhteyden muodostaminen uudelleen on helppoa."
+    "message": "Tilauksesi on vanhentunut, mutta yhteyden muodostaminen uudelleen on helppoa."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Miksi uusia?"
@@ -376,6 +383,158 @@
   "home_change_location_popup_title": {
     "message": "Vaihda sijaintia"
   },
+  "home_report_issue_label": {
+    "message": "Palaute"
+  },
+  "home_report_issue_no": {
+    "message": "Ei"
+  },
+  "home_report_issue_text": {
+    "message": "Oliko sinulla ongelmia ollessasi yhteydessä?"
+  },
+  "home_report_issue_yes": {
+    "message": "Kyllä"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Kuvaile ongelmasi"
+  },
+  "issue_reporter_header": {
+    "message": "Mitä tapahtui?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Oletko yrittänyt muodostaa yhteyden toiseen palvelinsijaintiin?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Lähetys epäonnistui. Tarkista yhteys ja yritä uudelleen."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Oletko yrittänyt muodostaa yhteyden palvelinpaikkaan maassa, johon palvelu, jota haluat käyttää sijaitsee?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Oletko yrittänyt muodostaa yhteyden toiseen palvelinsijaintiin tai muuttaa VPN-protokollaa?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Kotisivu"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Tarvitsetko apua?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Näen välityspalvelimen virheitä videon suoratoisto-verkkosivustoilla"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN näyttää yhteyden, mutta en voi selata"
+  },
+  "issue_reporter_opt3": {
+    "message": "En pääse tiettyyn verkkosivustoon"
+  },
+  "issue_reporter_opt4": {
+    "message": "Näen väärän kielen Googlessa"
+  },
+  "issue_reporter_opt5": {
+    "message": "Näen liian monta Google captchaa"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN-nopeus on erittäin hidas"
+  },
+  "issue_reporter_opt7": {
+    "message": "Yhteyteni katkeilee"
+  },
+  "issue_reporter_opt8": {
+    "message": "Muu"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Ilmoitus lähetetty"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Lähettää..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Lähetä ilmoitus"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Jaa verkkosivu ExpressVPN:n avulla"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Ota yhteyttä tukeen"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Kiitos siitä, että autat parantamaan palvelua kaikille ExpressVPN-asiakkaille."
+  },
+  "issue_reporter_title": {
+    "message": "Ilmoita ongelma"
+  },
+  "issue_reporter_website_label": {
+    "message": "Verkkosivusto"
+  },
+  "language_dropdown_danish": {
+    "message": "Tanska (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Hollanti (Alankomaat)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Englanti (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finnish (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Ranska (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Saksa (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italia (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japani (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Korea (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norja (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Puola (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portugali (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Venäjä (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Espanja (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Ruotsi (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thai (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Turkki (Türkçe)",
+    "description": "Do not translate the text between parentheses"
+  },
   "list_item_247_support": {
     "message": "24/7 asiakastuki"
   },
@@ -410,7 +569,7 @@
     "message": "Etsi kaupunkia tai maata"
   },
   "location_picker_smart_location_text": {
-    "message": "Älysijainti"
+    "message": "Älykäs sijainti"
   },
   "location_picker_tab_all_text": {
     "message": "Kaikki sijainnit"
@@ -477,7 +636,7 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "Muodosta yhteys selaimen avautuessa"
+    "message": "Yhdistä selaimen avautuessa"
   },
   "menu_desktop_notification_text": {
     "message": "Näytä tietokoneen ilmoitukset"
@@ -486,7 +645,7 @@
     "message": "Hyödynnä 30 päivää ilmaiseksi"
   },
   "menu_help_support": {
-    "message": "Apu & Tuki"
+    "message": "Apu ja tuki"
   },
   "menu_item_acknowledgements_text": {
     "message": "Tunnustukset"
@@ -504,7 +663,7 @@
     "message": "DNS-vuototesti"
   },
   "menu_item_extension_version_text": {
-    "message": "Laajennuksen versio: <span>%s</span>"
+    "message": "Laajennuksen versio: %VERSION%"
   },
   "menu_item_faq_text": {
     "message": "Usein kysytyt kysymykset"
@@ -528,25 +687,10 @@
     "message": "Estä WebRTC"
   },
   "menu_privacy_enable_https_everywhere_text": {
-    "message": "HTTPS kaikkialla"
+    "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
     "message": "Piilota sijaintisi"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "Jätä 5 tähden luokitus!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Anna 5 tähden arvosana!"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Kerro meille, mitä voisimme tehdä paremmin"
-  },
-  "menu_ratevpn_text": {
-    "message": "Toivottavasti pidät ExpressVPN:stä! Voisitko antaa meistä arvion?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Nautitko ExpressVPN:n käytöstä?"
   },
   "menu_rate_expressvpn": {
     "message": "Arvostele ExpressVPN"
@@ -579,7 +723,7 @@
     "message": "Asetukset"
   },
   "menu_settings_general_open_app_settings_button_label": {
-    "message": "Konfiguroi koneen asetukset"
+    "message": "Määritä työpöydän sovellusasetukset"
   },
   "menu_settings_help_button_label": {
     "message": "Apua"
@@ -600,7 +744,7 @@
     "message": "Lue lisää"
   },
   "menu_settings_privacy_security_name": {
-    "message": "Yksityisyys & turvallisuus"
+    "message": "Yksityisyys ja turvallisuus"
   },
   "menu_settings_settings_general_title": {
     "message": "Asetukset"
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "Kirjaudu ulos"
   },
-  "message_item_rating1_title": {
-    "message": "Nautitko ExpressVPN:stä?"
-  },
-  "message_item_rating2_title": {
-    "message": "Kerro meille, kuinka voimme suoriutua paremmin"
-  },
-  "message_item_rating3_title": {
-    "message": "Voisitko arvioida meidät?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Ei kiitos"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
     "message": "Jaa ExpressVPN ystäviesi kanssa ja saat ilmaisen palvelun."
   },
@@ -645,7 +774,7 @@
     "message": "Vanhenee"
   },
   "myaccount_account_renews_label": {
-    "message": "Uusitut"
+    "message": "Uusitaan"
   },
   "myaccount_account_status_active_text": {
     "message": "Aktiivinen"
@@ -684,7 +813,7 @@
     "message": "Hallitse tiliä"
   },
   "myaccount_why_get_subscription_subheader_text": {
-    "message": "Miksi tehdä tilaus?"
+    "message": "Miksi kannattaa tilata?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Miksi uudistaa?"
@@ -702,7 +831,7 @@
     "message": "Vaara: Kalastelua näköpiirissä"
   },
   "promobar_free_trial_expiring_soon_days_header": {
-    "message": "Ilmainen kokeiluversio päättyy [days] päivässä"
+    "message": "Ilmainen kokeiluversio päättyy [days] päivän kuluttua"
   },
   "promobar_free_trial_expiring_soon_expired_header": {
     "message": "Ilmainen kokeilusi on päättynyt"
@@ -711,7 +840,7 @@
     "message": "lmainen kokeiluversio päättyy [hours] tunnissa"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Ilmainen kokeiluversio päättyy <1 tunnissa"
+    "message": "Ilmainen kokeiluversio päättyy <1 tunnin kuluttua"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Päivitä nyt"
@@ -732,13 +861,13 @@
     "message": "Tarkista asetukset"
   },
   "promobar_subscription_expiring_soon_days_header": {
-    "message": "Tilaus päättyy [days] päivässä"
+    "message": "Tilaus päättyy [days] päivän kuluttua"
   },
   "promobar_subscription_expiring_soon_expired_header": {
     "message": "Tilaus on vanhentunut"
   },
   "promobar_subscription_expiring_soon_hours_header": {
-    "message": "Tilaus päättyy [hours] tunnissa"
+    "message": "Tilaus päättyy [hours] tunnin kuluttua"
   },
   "promobar_subscription_expiring_soon_renewable_false_text": {
     "message": "Hanki uusi tilaus"
@@ -765,7 +894,7 @@
     "message": "Ilmainen kokeilujakso päättyy < 1 tunnin kuluttua"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
-    "message": "Korota nyt"
+    "message": "Päivitä nyt"
   },
   "promo_bar_splittunneling_@chrome@_text": {
     "message": "Chrome ei ole mukana VPN:ssä"
@@ -777,7 +906,7 @@
     "message": "Tarkista asetukset"
   },
   "promo_bar_subscription_expiring_soon_days_text": {
-    "message": "Tilaus päättyy [days] päivän päästä"
+    "message": "Tilaus päättyy [days] päivän kuluttua"
   },
   "promo_bar_subscription_expiring_soon_expired_text": {
     "message": "Tilauksesi on vanhentunut"
@@ -793,6 +922,33 @@
   },
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Uusi nyt"
+  },
+  "rating_improve_header": {
+    "message": "Kuinka voimme suoriutua paremmin?"
+  },
+  "rating_improve_report_button": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Ehdota parannusta"
+  },
+  "rating_no_thanks_text": {
+    "message": "Ei kiitos"
+  },
+  "rating_prompt_header": {
+    "message": "Kuinka paljon pidät ExpressVPN:stä?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Kiitos arviostasi!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Kiitos. Arvioisitko meidät Chrome Web Storessa?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Kiitos! Arvioi meidät Firefoxin lisäosien myymälässä?"
   },
   "vpn_status_notification_connected_label": {
     "message": "VPN-yhteys muodostettu"

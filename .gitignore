@@ -1,0 +1,24 @@
+.DS_Store
+
+node_modules
+temp
+.tmp
+/dist
+build
+package
+reports
+internal
+prod
+VERSION
+
+# Test output folders
+output/
+tmp/
+bin/
+output/
+report/*
+
+.log
+debug.log
+
+tests/screenshots/extension/*

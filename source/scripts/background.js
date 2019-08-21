@@ -3,13 +3,9 @@ ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
-import 'babel-core/register';
-import 'babel-polyfill';
-import 'chromereload/devonly';
 import UAParser from 'ua-parser-js';
-
 import com from './modules/nativeCommunication';
-import utils from './modules/utils';
+import * as utils from './modules/utils';
 import rating from './modules/rating';
 import coords from './modules/locations.json';
 import bk from './modules/backgroundHelper';
@@ -39,6 +35,7 @@ const MIN_APP_VERSION = {
   };
 
   console.info('Loaded!', new Date());
+
 
   require('./modules/https/https.js');
 
@@ -186,6 +183,8 @@ const MIN_APP_VERSION = {
         }
 
         if (data.oldstate && data.newstate && data.oldstate !== data.newstate) {
+          currentInfo.hasCurrentStateSince = Date.now(); // Saves when the current state has been set
+
           if ((data.oldstate === 'ready' || data.oldstate === 'connection_error') && data.newstate === 'connecting') {
             // Remove cancelled connections
             currentInfo.connectingTimes = currentInfo.connectingTimes.filter(el => Object.prototype.hasOwnProperty.call(el, 'delta'));
@@ -257,8 +256,10 @@ const MIN_APP_VERSION = {
     // on fresh installs this property does not exist
     if ((typeof currentInfo.selectedLocation !== 'undefined') && (currentInfo.selectedLocation.name !== '') &&
       (typeof locationsData[currentInfo.selectedLocation.name] === 'object')) {
+
       currentInfo.selectedLocation.country_code = locationsData[currentInfo.selectedLocation.name].country_code;
       currentInfo.selectedLocation.coords = utils.calculateRandomPosition(locationsData[currentInfo.selectedLocation.name].coords); // randomise the coords
+      currentInfo.selectedLocation.id = locationsData[currentInfo.selectedLocation.name].id;
     }
 
     chrome.runtime.sendMessage({ state: true, data: currentInfo });
@@ -428,8 +429,6 @@ const MIN_APP_VERSION = {
     }
   });
 
-  chrome.runtime.setUninstallURL('https://expressv.typeform.com/to/LjmI4J');
-
   chrome.runtime.onInstalled.addListener(details => {
     if (details.reason === 'install') {
       currentInfo.showWelcome = true;
@@ -456,6 +455,19 @@ const MIN_APP_VERSION = {
         break;
     }
   });
+
+  chrome.webRequest.onBeforeRequest.addListener(details => {
+    if (
+      details.method === 'GET'
+      && currentInfo.preferences.traffic_guard_level
+      && ['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state)
+    ) {
+      return { redirectUrl: `${chrome.runtime.getURL('/html/networkLock.html')}?url=${details.url}` };
+    }
+  }, {
+    urls: ['http://*/*', 'https://*/*'],
+    types: ['main_frame'],
+  }, ['blocking']);
 
   // message listener for background communication
   window.addEventListener('message', (event) => {
@@ -491,13 +503,14 @@ const MIN_APP_VERSION = {
           } else {
             locationsData[location.name].coords = { lat: 38.883333, lon: -77.000 };
           }
+          locationsData[location.name].id = location.id;
 
           // Might not be needed anymore
           locationsData[location.country] = {};
           locationsData[location.country].country_code = location.country_code;
+          locationsData[location.country].id = location.id;
           locationsData[location.country].coords = (typeof coords[location.country] === 'object') ? coords[location.country].default : { lat: 38.883333, lon: -77.000 };
         });
-
         if ((typeof currentInfo.selectedLocation !== 'undefined') && (currentInfo.selectedLocation.name !== '')) {
           currentInfo.selectedLocation.coords = locationsData[currentInfo.selectedLocation.name].coords;
           chrome.storage.local.set({ 'currentInfo': currentInfo });
@@ -520,6 +533,9 @@ const MIN_APP_VERSION = {
         updatePopupState();
         break;
       case 'updateStatus':
+        if (message.name === 'ServiceStateChanged' && message.data && message.data.newstate === 'connected') {
+          com.getStatus();
+        }
         updateStatus(message.name, message.data);
         break;
       case 'currentState':
@@ -531,6 +547,10 @@ const MIN_APP_VERSION = {
           currentInfo.ratingData.isRegularUser = utils.isRegularUser(currentInfo.subscription);
         }
         currentInfo.website_url = message.currentInfo.website_url || currentInfo.website_url;
+        currentInfo.raw = message.currentInfo.raw;
+        if (currentInfo.raw.current_location && currentInfo.raw.connection) {
+          currentInfo.previousConnection = { id: currentInfo.raw.current_location.id, protocol: currentInfo.raw.connection.protocol };
+        }
         updateStatus('ServiceStateChanged', { newstate: message.currentInfo.state });
         break;
       case 'connectedToHelper':
@@ -593,7 +613,10 @@ const MIN_APP_VERSION = {
     }
   }, false);
 
-  currentInfo.os = bk.groupOsName(UAParser(window.navigator.userAgent).os.name.split(' ')[0]).toUpperCase();
+  const sys = UAParser(window.navigator.userAgent);
+  currentInfo.os = bk.groupOsName(sys.os.name.split(' ')[0]).toUpperCase();
+  currentInfo.system.os = sys.os;
+  currentInfo.system.browser = sys.browser;
   const errorState = bk.checkPlatformCompatibility(currentInfo);
 
   // Setup listeners depending on current preferences

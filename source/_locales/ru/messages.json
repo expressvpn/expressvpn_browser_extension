@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Конфиденциальность, безопасность и скорость. Вы можете управлять приложением ExpressVPN прямо из Chrome, маскировать свое местоположение и получать доступ к контенту в любом месте.",
+    "message": "Управляйте ExpressVPN прямо из Chrome. Скройте IP-адрес и получите доступ к контенту отовсюду.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -41,6 +41,9 @@
   },
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "Пожалуйста, установите приложение ExpressVPN из Google Play."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Если вы установили браузер из <b>Центра приложений Ubuntu</b>, расширение не сможет общаться с приложением для Linux. [Подробнее]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Необходимо приложение ExpressVPN для Linux с активной подпиской."
@@ -94,7 +97,7 @@
     "message": "Выберите другую [VPN-локацию]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Если ничего не помогает, [обратитесь в службу поддержки]."
+    "message": "Если ничего не помогает, [обратитесь в службу поддержки]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
@@ -136,10 +139,11 @@
     "message": "Мы не смогли подтвердить вашу платежную информацию, поэтому ваш платеж был отменен."
   },
   "error_fraudster_p1_text": {
-    "message": "Чтобы активировать свою подписку, <br/>пожалуйста, отправьте сообщение по адресу"
+    "message": "Чтобы активировать подписку,<br/>отправьте сообщение по адресу"
   },
   "error_fraudster_p2_text": {
-    "message": "тема письма: <span class='bold'>Billing Verification</span>."
+    "message": "Тема письма: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Приложите фотографию кредитной карты, которую вы использовали (должны быть видны ТОЛЬКО последние 4 цифры и имя)"
@@ -202,7 +206,7 @@
     "message": "Пробный период истек"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
-    "message": "Обновить данные"
+    "message": "Обновить платежные данные"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_sub_button_label": {
     "message": "Выйти"
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "Chrome OS не поддерживается",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "Приложение не найдено"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Установить приложение для ПК"
@@ -281,7 +288,7 @@
     "message": "Превышен лимит подключений."
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
-    "message": "Обновить данные"
+    "message": "Обновить платежные данные"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
     "message": "Не сейчас"
@@ -320,7 +327,7 @@
     "message": "Подписка истекла"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_main_button_label": {
-    "message": "Обновить данные"
+    "message": "Обновить платежные данные"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON_sub_button_label": {
     "message": "Выйти"
@@ -359,7 +366,7 @@
     "message": "Соединение прервалось. Повторное подключение..."
   },
   "hint_reconnecting_network_lock_on_text": {
-    "message": "Интернет-трафик заблокирован для вашей защиты."
+    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
   },
   "hint_saved_text": {
     "message": "Сохранено"
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "Смена локации"
+  },
+  "home_report_issue_label": {
+    "message": "Обратная связь"
+  },
+  "home_report_issue_no": {
+    "message": "Нет"
+  },
+  "home_report_issue_text": {
+    "message": "У вас были проблемы во время подключения?"
+  },
+  "home_report_issue_yes": {
+    "message": "Да"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Опишите проблему"
+  },
+  "issue_reporter_header": {
+    "message": "Что случилось?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Вы пробовали подключиться к серверу в другой локации?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Не удалось отправить. Проверьте интернет-соединение и попробуйте еще раз."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Вы пробовали подключиться к VPN-серверу в стране, где базируется сервис, к которому вы хотите получить доступ?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Вы пробовали подключиться к серверу в другой локации или изменить VPN-протокол?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "На главную"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Нужна помощь?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Я вижу ошибки прокси-сервера на сайтах с потоковым видео"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN подключен, но я не могу просматривать страницы"
+  },
+  "issue_reporter_opt3": {
+    "message": "Не могу получить доступ к определенному сайту"
+  },
+  "issue_reporter_opt4": {
+    "message": "Я вижу неправильный язык в Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "Я вижу слишком много Google captcha"
+  },
+  "issue_reporter_opt6": {
+    "message": "Скорость VPN очень медленная"
+  },
+  "issue_reporter_opt7": {
+    "message": "Приложение всё время отключается"
+  },
+  "issue_reporter_opt8": {
+    "message": "Другое"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Отчет отправлен"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Отправка..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Отправить отчет"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Сообщить ExpressVPN имя сайта"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Связаться с нами"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Благодарим за помощь в улучшении сервиса для всех клиентов ExpressVPN."
+  },
+  "issue_reporter_title": {
+    "message": "Сообщить о проблеме"
+  },
+  "issue_reporter_website_label": {
+    "message": "Сайт"
+  },
+  "language_dropdown_danish": {
+    "message": "Датский (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Голландский (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Английский (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Финнский (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Французский (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Немецкий (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Итальянский (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Японский (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Корейский (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Норвежский (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Польский (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Португальский (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Русский (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Испанский (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Шведский (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Тайский (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Турецкий (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "Техподдержка 24/7"
@@ -407,7 +566,7 @@
     "message": "НИЧЕГО НЕ НАЙДЕНО"
   },
   "location_picker_search_placeholder_text": {
-    "message": "Поиск по стране или городу"
+    "message": "Поиск по стране"
   },
   "location_picker_smart_location_text": {
     "message": "Автовыбор"
@@ -533,21 +692,6 @@
   "menu_privacy_hide_location_text": {
     "message": "Скрыть местоположение"
   },
-  "menu_ratevpn_btn0": {
-    "message": "Поставить 5 звезд!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Посоветовать, как улучшить сервис"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Не сейчас"
-  },
-  "menu_ratevpn_text": {
-    "message": "Надеемся, что это так! Не могли бы вы оставить отзыв?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Вам нравится ExpressVPN?"
-  },
   "menu_rate_expressvpn": {
     "message": "Оценить ExpressVPN"
   },
@@ -616,21 +760,6 @@
   },
   "menu_signout_text": {
     "message": "Выйти"
-  },
-  "message_item_rating1_title": {
-    "message": "Вам нравится ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "Посоветуйте, как нам улучшить сервис."
-  },
-  "message_item_rating3_title": {
-    "message": "Не могли бы вы оставить отзыв?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Не сейчас"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
   },
   "myaccount_account_active_p1_text": {
     "message": "Порекомендуйте ExpressVPN и получите бесплатное обслуживание!"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Продлите сейчас "
   },
+  "rating_improve_header": {
+    "message": "Как нам улучшить сервис?"
+  },
+  "rating_improve_report_button": {
+    "message": "Сообщить о проблеме"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Предложить улучшение"
+  },
+  "rating_no_thanks_text": {
+    "message": "Нет, спасибо"
+  },
+  "rating_prompt_header": {
+    "message": "Насколько вам нравится ExpressVPN?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Спасибо за вашу оценку!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Спасибо! Хотите оценить нас в интернет-магазине Chrome?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Спасибо! Хотите оценить нас в магазине Firefox Add-ons?"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN-соединение установлено"
   },
@@ -810,7 +966,7 @@
     "message": "Не удалось подключиться к %s."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "Не удается подключиться к %s. Интернет-трафик заблокирован."
+    "message": "Не удается подключиться к %s. Трафик заблокирован."
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Превышен лимит подключений"

@@ -19,7 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 .toast {
-  width: 115px;
+  width: fit-content;
+  width: -moz-fit-content;
   height: 44px;
   border-radius: 4px;
   padding: 15px 10px;

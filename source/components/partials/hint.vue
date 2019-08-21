@@ -48,12 +48,12 @@
 </script>
 <style lang="scss" scoped>
 .hint {
-  min-height: 44px;
+  //min-height: 44px;
   border-radius: 4px;
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  box-sizing: content-box;
+  // box-sizing: content-box;
 
   &.information {
     background-color: $blue-40;

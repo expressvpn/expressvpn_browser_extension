@@ -27,7 +27,7 @@ export default {
       if (this.iconError === true) {
         iconName = 'XV';
       }
-      return chrome.extension.getURL('/images/flags/' + iconName + '.svg');
+      return chrome.extension.getURL('/images/flags/' + iconName.toUpperCase() + '.svg');
     },
   },
   methods: {

@@ -2,21 +2,22 @@
 
 @font-face {
   font-family: "ProximaNova";
-  src: url("../fonts/ProximaNova-Regular.otf") format('opentype');
+  src: url("/fonts/ProximaNova-Regular.otf") format('opentype');
 }
 @font-face {
   font-family: "ProximaNova-Semibold";
-  src: url("../fonts/ProximaNova-Semibold.otf") format('opentype');
+  src: url("/fonts/ProximaNova-Semibold.otf") format('opentype');
 }
 @font-face {
   font-family: "ProximaNova-Light";
-  src: url("../fonts/ProximaNova-Light.otf") format('opentype');
+  src: url("/fonts/ProximaNova-Light.otf") format('opentype');
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
   outline: 0;
 }
+
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s;
@@ -41,8 +42,11 @@ body {
   transition: height 2s;
   user-select: none;
   overflow: hidden;
-  
-  transition: height 2s;
+  animation: fadein 0.4s;
+}
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
 }
 
 .icon {

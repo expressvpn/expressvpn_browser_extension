@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "ความเป็นส่วนตัว ความปลอดภัย และความเร็ว ควบคุมแอป ExpressVPN ได้โดยตรงจาก Chrome ปิดบังตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
+    "message": "ควบคุมแอป ExpressVPN ได้โดยตรงจาก Chrome ซ่อนตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -42,6 +42,9 @@
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "โปรดติดตั้งแอป ExpressVPN จาก Google Play Store"
   },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "หากคุณติดตั้งเบราว์เซอร์จาก <b>Ubuntu Software Center </b> ส่วนขยายจะไม่สามารถสื่อสารกับแอป Linux ได้ [เรียนรู้เพิ่มเติม]"
+  },
   "error_app_not_found_require_LINUX_text": {
     "message": "ส่วนขยายนี้ต้องการแอป ExpressVPN สำหรับ Linux ที่มีการสมัครใช้งานอยู่"
   },
@@ -64,7 +67,7 @@
     "message": "หมดอายุ (%1)"
   },
   "error_business_subscription_expired_text": {
-    "message": "โปรดติดต่อเจ้าของบัญชีเพื่อซื้อการสมัครรับข้อมูลธุรกิจใหม่"
+    "message": "โปรดติดต่อเจ้าของบัญชีเพื่อซื้อการสมัครสมาชิกสำหรับธุรกิจใหม่"
   },
   "error_business_subscription_expired_title": {
     "message": "การสมัครสมาชิกหมดอายุแล้ว"
@@ -85,7 +88,7 @@
     "message": "เรียนรู้เพิ่มเติม"
   },
   "error_compatibility_error_title": {
-    "message": "อัพเดตระบบปฏิบัติการ"
+    "message": "อัปเดตระบบปฏิบัติการ"
   },
   "error_connection_error_check_l1_text": {
     "message": "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต"
@@ -97,7 +100,7 @@
     "message": "หากทุกอย่างล้มเหลว [ติดต่อฝ่ายสนับสนุน]"
   },
   "error_connection_error_lock_on_text": {
-    "message": "ปัจจุบันการเข้าชมทางอินเทอร์เน็ตถูกปิดกั้นเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
+    "message": "ปัจจุบันการใช้งานอินเทอร์เน็ตถูกบล็อกเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
   },
   "error_connection_error_return_home_button_label": {
     "message": "กลับสู่หน้าหลัก"
@@ -133,13 +136,14 @@
     "message": "ลงชื่อเข้าใช้ ExpressVPN"
   },
   "error_fraudster_hint": {
-    "message": "เราไม่สามารถยืนยันข้อมูลการเรียกเก็บเงินของคุณได้ดังนั้นเราจึงได้ยกเลิกการชำระเงินของคุณ"
+    "message": "เราไม่สามารถยืนยันข้อมูลการเรียกเก็บเงินของคุณได้ ดังนั้นเราจึงได้ยกเลิกการชำระเงินของคุณ"
   },
   "error_fraudster_p1_text": {
-    "message": "หากต้องการเปิดใช้งานการสมัครของคุณอีกครั้ง <br>โปรดส่งอีเมลมาที่"
+    "message": "หากต้องการเปิดใช้งานการสมัครของคุณอีกครั้ง<br> โปรดอีเมลมาที่"
   },
   "error_fraudster_p2_text": {
-    "message": "หัวเรื่อง: <span class='bold'>Billing Verification</span>"
+    "message": "หัวเรื่อง: <span class='bold DO_NOT_TRANSLATE'>การยืนยันการเรียกเก็บเงิน</span>",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "โปรดแนบภาพถ่ายของบัตรเครดิตที่คุณใช้ (ให้เห็นเฉพาะตัวเลข 4 หลักสุดท้ายและชื่อเท่านั้น)"
@@ -235,8 +239,11 @@
     "message": "ติดต่อฝ่ายสนับสนุน"
   },
   "error_NOT_INSTALLED_chromeOS_title": {
-    "message": "Chrome OS ไม่รองรับ",
+    "message": "ไม่รองรับ Chrome OS ",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "ไม่พบแอป"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "ติดตั้งแอปเดสก์ท็อป"
@@ -248,10 +255,10 @@
     "message": "ไม่ได้ติดตั้งแอป"
   },
   "error_open_app_@chrome@_text": {
-    "message": "ส่วนขยายนี้ต้องการให้แอป ExpressVPN ทำงาน"
+    "message": "จำเป็นต้องเปิดแอป ExpressVPN เพื่อใช้งานส่วนขยายนี้"
   },
   "error_open_app_@firefox@_text": {
-    "message": "ส่วนขยายนี้ต้องการให้แอป ExpressVPN ทำงาน"
+    "message": "จำเป็นต้องเปิดแอป ExpressVPN เพื่อใช้งานส่วนขยายนี้"
   },
   "error_open_app_contact_support_button_label": {
     "message": "ติดต่อฝ่ายสนับสนุน"
@@ -287,7 +294,7 @@
     "message": "ครั้งหน้า"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "การสมัครของคุณหมดอายุ แต่มันง่ายที่จะเชื่อมต่ออีกครั้ง"
+    "message": "การสมัครของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
   },
   "error_subscription_expired_benefits_title": {
     "message": "เหตุใดจึงต่ออายุ?"
@@ -332,7 +339,7 @@
     "message": "การสมัครสมาชิกหมดอายุแล้ว"
   },
   "error_upgrade_app_button_label": {
-    "message": "อัพเกรดตอนนี้"
+    "message": "อัปเดตตอนนี้"
   },
   "error_upgrade_app_header_title": {
     "message": "อัปเดตแอป "
@@ -359,7 +366,7 @@
     "message": "การเชื่อมต่อลดลงโดยไม่คาดหมาย เชื่อมต่อใหม่..."
   },
   "hint_reconnecting_network_lock_on_text": {
-    "message": "ขณะนี้ปริมาณการใช้อินเทอร์เน็ตถูกบล็อกเพื่อปกป้องความเป็นส่วนตัวของคุณ"
+    "message": "ขณะนี้การใช้อินเทอร์เน็ตถูกบล็อกเพื่อปกป้องความเป็นส่วนตัวของคุณ"
   },
   "hint_saved_text": {
     "message": "บันทึก "
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "เปลี่ยนสถานที่"
+  },
+  "home_report_issue_label": {
+    "message": "ข้อเสนอแนะ"
+  },
+  "home_report_issue_no": {
+    "message": "ไม่"
+  },
+  "home_report_issue_text": {
+    "message": "คุณประสบปัญหาขณะเชื่อมต่อหรือไม่?"
+  },
+  "home_report_issue_yes": {
+    "message": "ใช่"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "อธิบายปัญหาของคุณ"
+  },
+  "issue_reporter_header": {
+    "message": "เกิดอะไรขึ้น?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "คุณลองเชื่อมต่อกับเซิร์ฟเวอร์อื่นหรือไม่?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "ไม่สามารถส่ง โปรดตรวจสอบการเชื่อมต่อของคุณแล้วลองอีกครั้ง"
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "คุณได้ลองเชื่อมต่อกับที่ตั้งเซิร์ฟเวอร์ในประเทศที่ซึ่งคุณต้องการเข้าถึงบริการหรือไม่?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "คุณลองเชื่อมต่อกับเซิร์ฟเวอร์อื่นหรือเปลี่ยนโปรโตคอล VPN แล้วหรือยัง?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "หน้าหลัก"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "ต้องการความช่วยเหลือ?"
+  },
+  "issue_reporter_opt1": {
+    "message": "ฉันเห็นข้อผิดพลาดพร็อกซีในเว็บไซต์สตรีมมิ่งวิดีโอ"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN แสดงการเชื่อมต่อ แต่ฉันไม่สามารถเรียกดูได้"
+  },
+  "issue_reporter_opt3": {
+    "message": "ฉันไม่สามารถเข้าถึงบางเว็บไซต์ได้"
+  },
+  "issue_reporter_opt4": {
+    "message": "ฉันเห็นภาษาที่ไม่ถูกต้องบน Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "ฉันเห็น Google captchas มากเกินไป"
+  },
+  "issue_reporter_opt6": {
+    "message": "ความเร็ว VPN ช้ามาก"
+  },
+  "issue_reporter_opt7": {
+    "message": "ฉันถูกตัดการเชื่อมต่อ"
+  },
+  "issue_reporter_opt8": {
+    "message": "อื่นๆ"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "ส่งรายงานแล้ว"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "กำลังส่ง..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "ส่งรายงาน"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "แชร์เว็บไซต์ด้วย ExpressVPN"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "ขอขอบคุณที่ช่วยปรับปรุงบริการสำหรับลูกค้า ExpressVPN ทั้งหมด\n"
+  },
+  "issue_reporter_title": {
+    "message": "รายงานปัญหา"
+  },
+  "issue_reporter_website_label": {
+    "message": "เว็บไซต์"
+  },
+  "language_dropdown_danish": {
+    "message": "เดนมาร์ก (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "ดัตช์ (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "อังกฤษ (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "ฟินแลนด์ (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "ฝรั่งเศส (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "เยอรมัน (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "อิตาลี (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "ญี่ปุ่น (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "เกาหลี (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "นอร์เวย์ (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "โปแลนด์ (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "โปรตุเกส (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "รัสเซีย (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "สเปน (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "สวีเดน (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "ไทย (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "ตุรกี (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
@@ -398,10 +557,10 @@
     "message": "ตำแหน่ง VPN"
   },
   "location_picker_recent_locations_text": {
-    "message": "สถานที่ล่าสุด"
+    "message": "ตำแหน่งล่าสุด"
   },
   "location_picker_recommended_locations_text": {
-    "message": "สถานที่แนะนำ"
+    "message": "ตำแหน่งแนะนำ"
   },
   "location_picker_search_no_results_text": {
     "message": "ไม่มีผลลัพธ์"
@@ -410,25 +569,25 @@
     "message": "ค้นหาเมืองหรือประเทศ"
   },
   "location_picker_smart_location_text": {
-    "message": "สถานที่อัจฉริยะ"
+    "message": "ตำแหน่งอัจฉริยะ"
   },
   "location_picker_tab_all_text": {
-    "message": "สถานที่ทั้งหมด"
+    "message": "ตำแหน่งทั้งหมด"
   },
   "location_picker_tab_recommended_text": {
     "message": "แนะนำ"
   },
   "main_screen_current_location_text": {
-    "message": "สถานที่ปัจจุบัน"
+    "message": "ตำแหน่งปัจจุบัน"
   },
   "main_screen_recent_location_text": {
-    "message": "สถานที่ล่าสุด"
+    "message": "ตำแหน่งล่าสุด"
   },
   "main_screen_selected_location_text": {
     "message": "ตำแหน่งที่เลือก"
   },
   "main_screen_smart_location_text": {
-    "message": "สถานที่อัจฉริยะ"
+    "message": "ตำแหน่งอัจฉริยะ"
   },
   "main_screen_status_vpn_connected_text": {
     "message": "เชื่อมต่อแล้ว"
@@ -477,7 +636,7 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "เชื่อมต่อกับการเปิดเบราเซอร์"
+    "message": "เชื่อมต่อเมื่อเปิดเบราเซอร์"
   },
   "menu_desktop_notification_text": {
     "message": "แสดงการแจ้งเตือนบนเดสก์ท็อป"
@@ -489,10 +648,10 @@
     "message": "ความช่วยเหลือและการสนับสนุน"
   },
   "menu_item_acknowledgements_text": {
-    "message": "การแสดงความขอบคุณ"
+    "message": "คำประกาศ"
   },
   "menu_item_app_version_text": {
-    "message": "%OS% รุ่นของแอป: %VERSION%"
+    "message": "เวอร์ชันของแอปสำหรับ %OS%: %VERSION%"
   },
   "menu_item_contact_support_text": {
     "message": "ติดต่อฝ่ายสนับสนุน"
@@ -528,25 +687,10 @@
     "message": "บล็อก WebRTC"
   },
   "menu_privacy_enable_https_everywhere_text": {
-    "message": "HTTPS ทุกที่ "
+    "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
     "message": "หลอกล่อตำแหน่งของคุณ"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "ให้คะแนนระดับ 5 ดาว!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "บอกเราว่าจะทำอย่างไรให้ดีขึ้น"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "ครั้งหน้า"
-  },
-  "menu_ratevpn_text": {
-    "message": "เราหวังว่าคุณจะชอบใช้งาน ExpressVPN! คุณสามารถรีวิวให้เราได้หรือไม่?"
-  },
-  "menu_ratevpn_title": {
-    "message": "เพลิดเพลินกับ ExpressVPN หรือไม่?"
   },
   "menu_rate_expressvpn": {
     "message": "ให้คะแนน ExpressVPN"
@@ -564,7 +708,7 @@
     "message": "รายงานปัญหา"
   },
   "menu_section_support_title": {
-    "message": "ได้รับการติดต่อ"
+    "message": "ติดต่อเรา"
   },
   "menu_settings_general_header": {
     "message": "ทั่วไป"
@@ -617,26 +761,11 @@
   "menu_signout_text": {
     "message": "ออกจากระบบ"
   },
-  "message_item_rating1_title": {
-    "message": "เพลิดเพลินกับ ExpressVPN หรือไม่?"
-  },
-  "message_item_rating2_title": {
-    "message": "แจ้งให้เราทราบว่าเราสามารถปรับปรุงได้อย่างไร?"
-  },
-  "message_item_rating3_title": {
-    "message": "คุณสามารถรีวิวให้เราได้หรือไม่?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "ไม่เป็นไรขอบคุณ"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "ตกลง"
-  },
   "myaccount_account_active_p1_text": {
     "message": "แบ่งปัน ExpressVPN และรับบริการฟรี!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "สำหรับเพื่อนทุกคนที่สมัครใช้งาน เราจะให้พวกคุณฟรีทั้ง 30 วัน"
+    "message": "สำหรับเพื่อนทุกคนที่สมัครใช้งาน เราจะให้คุณทั้งคู่ฟรี 30 วัน"
   },
   "myaccount_account_expired_label": {
     "message": "หมดอายุ"
@@ -690,7 +819,7 @@
     "message": "ทำไมต้องต่ออายุ?"
   },
   "notification_extension_update_message": {
-    "message": "คลิกเพื่อดูว่ามีอะไรใหม่ในรุ่น %VERSION%"
+    "message": "คลิกเพื่อดูว่ามีอะไรใหม่ในเวอร์ชัน %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN อัปเดตแล้ว"
@@ -789,10 +918,37 @@
     "message": "การสมัครสมาชิกหมดอายุใน [hours] ชั่วโมง"
   },
   "promo_bar_subscription_expiring_soon_less_than_one_hour_text": {
-    "message": "การสมัครรับข้อมูลหมดอายุภายใน <1 ชั่วโมง"
+    "message": "การสมัครสมาชิกหมดอายุภายใน <1 ชั่วโมง"
   },
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "ต่ออายุตอนนี้"
+  },
+  "rating_improve_header": {
+    "message": "เราสามารถทำได้ดีกว่านี้อย่างไร?"
+  },
+  "rating_improve_report_button": {
+    "message": "รายงานปัญหา"
+  },
+  "rating_improve_suggest_button": {
+    "message": "แนะนำการปรับปรุง"
+  },
+  "rating_no_thanks_text": {
+    "message": "ไม่เป็นไร ขอบคุณ"
+  },
+  "rating_prompt_header": {
+    "message": "คุณชอบ ExpressVPN มากแค่ไหน?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "ตกลง"
+  },
+  "rating_thanks4_text": {
+    "message": "ขอบคุณสำหรับคะแนนของคุณ!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "ขอบคุณ! ให้คะแนนเราที่ Chrome Web Store หรือไม่?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "ขอบคุณ! ให้คะแนนเราที่ Firefox Add-on Store หรือไม่?"
   },
   "vpn_status_notification_connected_label": {
     "message": "เชื่อมต่อ VPN แล้ว"
@@ -810,13 +966,13 @@
     "message": "ไม่สามารถเชื่อมต่อกับ %s"
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "ไม่สามารถเชื่อมต่อกับ %s การจราจรทางอินเทอร์เน็ตถูกบล็อก"
+    "message": "ไม่สามารถเชื่อมต่อกับ %s \nการจราจรทางอินเทอร์เน็ตถูกบล็อก"
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "ถึงขีดจำกัดการเชื่อมต่อแล้ว"
   },
   "vpn_status_notification_connection_limit_text": {
-    "message": "โปรดถอดอุปกรณ์หรือซื้อการสมัครสมาชิกข้อมูลเพิ่มเติม"
+    "message": "โปรดยกเลิกการเชื่อมต่อกับอุปกรณ์หรือซื้อการสมัครสมาชิกเพิ่มเติม"
   },
   "vpn_status_notification_reconnecting_label": {
     "message": "กำลังเชื่อมต่อ VPN..."
@@ -837,7 +993,7 @@
     "message": "ส่วนขยาย ExpressVPN เป็นรีโมทคอนโทรลสำหรับแอปเดสก์ท็อป"
   },
   "welcome_screen2_p1_text": {
-    "message": "เมื่อคุณเชื่อมต่อกับ VPN มันจะปกป้องอุปกรณ์ทั้งหมดของคุณไม่ใช่เฉพาะเบราว์เซอร์"
+    "message": "เมื่อคุณเชื่อมต่อกับ VPN อุปกรณ์ทั้งหมดของคุณจะได้รับการปกป้อง ไม่ใช่เฉพาะเบราว์เซอร์"
   },
   "welcome_screen3_learn_more_text": {
     "message": "เรียนรู้เพิ่มเติม"
