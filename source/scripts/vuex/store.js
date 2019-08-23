@@ -18,8 +18,11 @@ const store = new Vuex.Store({
   state: {
     currentInfo: currentInfoModel,
     errorStates: [
-      'BAD_OS_VERSION', 'BAD_APP_VERSION', 'NOT_INSTALLED', 'iapError', 'not_activated', 'connection_error', 'fraudster', 'internal_error',
-      'network_error', 'subscription_expired', 'license_revoked', 'activation_error', 'duplicate_license_used', 'forced_signout',
+      // virtual states
+      'BAD_OS_VERSION', 'BAD_APP_VERSION', 'NOT_INSTALLED', 'iapError', 'subscription_expiring', 'subscription_expiring_autobill',
+      // real states returned by the engine
+      'not_activated', 'connection_error', 'fraudster', 'internal_error', 'network_error', 'subscription_expired',
+      'license_revoked', 'activation_error', 'duplicate_license_used', 'forced_signout',
     ],
     latestMessage: {},
     currentView: 'mainScreen',

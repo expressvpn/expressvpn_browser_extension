@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "プライバシー、セキュリティ、そしてスピード。Chromeから直接ExpressVPNアプリを操作して、あなたの場所を偽装し、どこからでもコンテンツにアクセスしましょう。",
+    "message": "Chromeから直接ExpressVPNアプリをコントロールし、実際のロケーションは隠し、全世界どこからでもコンテンツにアクセスできます。",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -40,7 +40,10 @@
     "message": "ExpressVPNの新規ユーザーですか？[はじめる]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "GoogleプレイストアからExpressVPNアプリをインストールしてください。"
+    "message": "Google Play ストアからExpressVPNアプリをインストールしてください。"
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "<b>Ubuntuソフトウェアセンター</b>からブラウザをインストールした場合、拡張機能はLinuxアプリと通信できません。[詳細]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "この拡張機能は、有効なサブスクリプションを持つLinux版ExpressVPNアプリが必要です。"
@@ -67,7 +70,7 @@
     "message": "新しいビジネス用のサブスクリプションを購入するにはアカウントの所有者にお問い合わせください。"
   },
   "error_business_subscription_expired_title": {
-    "message": "サブスクリプションが失効しています"
+    "message": "サブスクリプション失効済み"
   },
   "error_compatibility_error_@chrome@_hide_text": {
     "message": "または、アイコンを右クリックし、「Chromeメニューに隠す」を選択することで拡張機能を隠すことができます。"
@@ -79,7 +82,7 @@
     "message": "この拡張機能は現在<b>macOS 10.10 / Windows 7</b>、最新版のみで利用可能です。"
   },
   "error_compatibility_error_os_version_p2_text": {
-    "message": "拡張機能を使用するために、オペレーティングシステムをアップデートしてください。"
+    "message": "拡張機能を使用するには、オペレーティングシステムをアップデートしてください。"
   },
   "error_compatibility_error_os_version_update_button_label": {
     "message": "詳細"
@@ -94,10 +97,10 @@
     "message": "違う[VPNロケーション]を選択"
   },
   "error_connection_error_check_l3_text": {
-    "message": "問題が解決されない場合は、[サポートにご連絡ください]。"
+    "message": "問題が解決されない場合は、[サポートにご連絡ください]"
   },
   "error_connection_error_lock_on_text": {
-    "message": "プライバシー保護のためトラフィックは現在ブロックされています。"
+    "message": "プライバシー保護のためインターネットトラフィックは現在ブロックされています。"
   },
   "error_connection_error_return_home_button_label": {
     "message": "ホームに戻る"
@@ -112,7 +115,7 @@
     "message": "接続エラー"
   },
   "error_connection_error_to_location_text": {
-    "message": "<br>%LOCATION%に接続できません"
+    "message": "%LOCATION%に接続できません"
   },
   "error_connection_error_try_again_button_label": {
     "message": "再度試す"
@@ -139,10 +142,11 @@
     "message": "サブスクリプションを再有効化するには、以下のメールアドレス宛にメールしてください："
   },
   "error_fraudster_p2_text": {
-    "message": "題名： <span class='bold'>Billing Verification</span>。"
+    "message": "題名： <span class='bold'>Billing Verification</span>。",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
-    "message": "決済に使用したクレジットカードの写真を添付してください(カード番号の最後の4桁と名前のみ)。"
+    "message": "決済に使用したクレジットカードの写真を添付してください (カード番号の最後の4桁と名前のみ)。"
   },
   "error_fraudster_p4_text": {
     "message": "電話番号 (国コード含む) とご都合の良い日時をご記入ください。"
@@ -217,16 +221,16 @@
     "message": "ExpressVPNは、情報が更新された後30分以内に自動的に有効化されます。"
   },
   "error_not_activated_LINUX_text": {
-    "message": "デスクトップアプリをアクティベートするには、このコマンドをご使用の端末で実行してください："
+    "message": "デスクトップアプリを有効化するには、このコマンドをご使用の端末で実行してください："
   },
   "error_not_activated_text": {
     "message": "この拡張機能を使用するには、ExpressVPNのデスクトップアプリにサインインしてください。"
   },
   "error_not_activated_title": {
-    "message": "アプリが有効化されていません"
+    "message": "アプリの有効化が必要です"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "お使いのChromebookでプレイストアが利用不可能な場合は、[手動設定]手順に従ってください。"
+    "message": "お使いのChromebookでPlay ストアが利用不可能な場合は、[手動設定]手順に従ってください。"
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "ExpressVPNのインストール"
@@ -238,8 +242,11 @@
     "message": "Chrome OSはサポートされていません",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
   },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "アプリが見つかりません"
+  },
   "error_NOT_INSTALLED_primary_button": {
-    "message": "デスクトップアプリをインストール"
+    "message": "アプリをインストール"
   },
   "error_NOT_INSTALLED_secondary_button": {
     "message": "サブスクリプションを再購入"
@@ -275,7 +282,7 @@
     "message": "このサブスクリプションでのExpressVPNの接続上限を超えています。"
   },
   "error_simultaneous_connection_p2_text": {
-    "message": "デバイスを1台切断するか、「追加のサブスクリプション」をご購入ください。"
+    "message": "デバイスを1台切断するか、[追加のサブスクリプションをご購入ください]。"
   },
   "error_simultaneous_connection_title": {
     "message": "接続上限に達しています。"
@@ -350,16 +357,16 @@
     "message": "インターネット接続を検出できません。見つかり次第、VPNは接続されます。"
   },
   "hint_no_internet_ready_text": {
-    "message": "インターネット接続を検出できません。<br>VPNを使用できない場合があります。"
+    "message": "インターネット接続を検出できません。VPNを使用できない場合があります。"
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "インターネット接続がありません。<br>利用可能になり次第VPNは再接続されます。"
+    "message": "インターネット接続がありません。利用可能になり次第VPNは再接続されます。"
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "接続が予期せず切断されました。再接続中…"
   },
   "hint_reconnecting_network_lock_on_text": {
-    "message": "プライバシー保護のためインターネット通信はブロックされました。"
+    "message": "プライバシー保護のためインターネットトラフィックはブロックされました。"
   },
   "hint_saved_text": {
     "message": "保存しました"
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "ロケーションの変更"
+  },
+  "home_report_issue_label": {
+    "message": "フィードバック"
+  },
+  "home_report_issue_no": {
+    "message": "いいえ"
+  },
+  "home_report_issue_text": {
+    "message": "接続中に問題が発生しましたか？"
+  },
+  "home_report_issue_yes": {
+    "message": "はい"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "問題を説明してください"
+  },
+  "issue_reporter_header": {
+    "message": "どうしましたか？"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "別のサーバーロケーションに接続しようとしましたか？"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "送信できません。接続を確認して、もう一度やり直してください。"
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "アクセスしたいサービスのある国のサーバーロケーションに接続しようとしましたか？"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "別のサーバーロケーションに接続したり、VPNプロトコルを変更したりしたことがありますか？"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "ホーム"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "ヘルプが必要ですか？"
+  },
+  "issue_reporter_opt1": {
+    "message": "ビデオストリーミングのウェブサイトでプロキシエラーが表示される"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPNは接続されているが、閲覧できない"
+  },
+  "issue_reporter_opt3": {
+    "message": "特定のウェブサイトにアクセスできない"
+  },
+  "issue_reporter_opt4": {
+    "message": "Googleで間違った言語が表示される"
+  },
+  "issue_reporter_opt5": {
+    "message": "Googleのキャプチャが多すぎる"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN速度が非常に遅い"
+  },
+  "issue_reporter_opt7": {
+    "message": "切断を繰り返す"
+  },
+  "issue_reporter_opt8": {
+    "message": "その他"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "レポートが送信されました"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "送信中…"
+  },
+  "issue_reporter_send_button_label": {
+    "message": "レポートを送信"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "ExpressVPNでウェブサイトを共有する"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "サポートに問い合わせる"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "ExpressVPNのお客様サービス向上にご協力いただきありがとうございます。"
+  },
+  "issue_reporter_title": {
+    "message": "問題を報告する"
+  },
+  "issue_reporter_website_label": {
+    "message": "ウェブサイト"
+  },
+  "language_dropdown_danish": {
+    "message": "デンマーク語 (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "オランダ語 (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "英語 (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "フィンランド語 (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "フランス語 (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "ドイツ語 (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "イタリア語 (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "日本語 (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "韓国語 (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "ノルウェー語 (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "ポーランド語 (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "ポルトガル語 (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "ロシア語 (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "スペイン語 (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "スウェーデン語 (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "タイ語 (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "トルコ語 (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "24時間体制のカスタマーサポート"
@@ -513,7 +672,7 @@
     "message": "IPアドレスチェッカー"
   },
   "menu_item_webRTC_leak_test_text": {
-    "message": "WebRTC漏れテスト"
+    "message": "WebRTC漏洩テスト"
   },
   "menu_myaccount_title": {
     "message": "アカウント"
@@ -532,21 +691,6 @@
   },
   "menu_privacy_hide_location_text": {
     "message": "ロケーションを隠す"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "星5つをつける！"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "ご意見をお聞かせください"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "あとで"
-  },
-  "menu_ratevpn_text": {
-    "message": "ExpressVPNにご満足いただけましたか？レビューにご協力ください。"
-  },
-  "menu_ratevpn_title": {
-    "message": "ExpressVPNにご満足ですか？"
   },
   "menu_rate_expressvpn": {
     "message": "ExpressVPNの評価"
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "サインアウト"
   },
-  "message_item_rating1_title": {
-    "message": "ExpressVPNにご満足ですか？"
-  },
-  "message_item_rating2_title": {
-    "message": "改善にご協力いただけますか？"
-  },
-  "message_item_rating3_title": {
-    "message": "レビューを残していただけませんか？"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "いいえ"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
     "message": "ExpressVPNを紹介して無料サービスを獲得しましょう！"
   },
@@ -690,7 +819,7 @@
     "message": "更新するメリット"
   },
   "notification_extension_update_message": {
-    "message": "バージョン%VERSION%の最新情報を確認するにはクリック"
+    "message": "バージョン%VERSION%の最新情報を確認するにはクリックしてください。"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPNアップデート"
@@ -705,7 +834,7 @@
     "message": "無料トライアルは[days]日後に失効"
   },
   "promobar_free_trial_expiring_soon_expired_header": {
-    "message": "無料トライアル失効"
+    "message": "無料トライアルが失効しました"
   },
   "promobar_free_trial_expiring_soon_hours_header": {
     "message": "無料トライアルは[hours]時間後に失効"
@@ -717,7 +846,7 @@
     "message": "今すぐアップグレード"
   },
   "promobar_iap_failed_header": {
-    "message": "前回の支払い失敗"
+    "message": "前回のお支払い失敗"
   },
   "promobar_iap_failed_text": {
     "message": "お支払い方法を更新"
@@ -756,7 +885,7 @@
     "message": "無料トライアルは[days]日後に失効します"
   },
   "promo_bar_free_trial_expiring_soon_expired_text": {
-    "message": "無料トライアル失効"
+    "message": "無料トライアルが失効しました"
   },
   "promo_bar_free_trial_expiring_soon_hours_text": {
     "message": "無料トライアルは[hours]時間後に失効します"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "今すぐ更新"
   },
+  "rating_improve_header": {
+    "message": "改善すべき点はありますか？"
+  },
+  "rating_improve_report_button": {
+    "message": "問題を報告する"
+  },
+  "rating_improve_suggest_button": {
+    "message": "改善を提案する"
+  },
+  "rating_no_thanks_text": {
+    "message": "協力しない"
+  },
+  "rating_prompt_header": {
+    "message": "ExpressVPNをどれくらい評価しますか？"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "評価ありがとうございます！"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "ありがとうございます！Chromeウェブストアから評価していただけませんか？"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "ありがとうございます！Firefoxアドオンストアで評価していただけませんか？"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN接続完了"
   },
@@ -810,7 +966,7 @@
     "message": "%sに接続できません。"
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "%sに接続できません。インターネット通信はブロックされました。"
+    "message": "%sに接続できません。インターネットトラフィックはブロックされました。"
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "接続上限オーバー"
@@ -825,7 +981,7 @@
     "message": "%sに接続しています。"
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
-    "message": "%sに接続中です。インターネット通信はブロックされました。"
+    "message": "%sに接続中です。インターネットトラフィックはブロックされました。"
   },
   "welcome_continue_button_label": {
     "message": "続行"
@@ -834,7 +990,7 @@
     "message": "開始する"
   },
   "welcome_screen1_p1_text": {
-    "message": "ExpressVPNの拡張機能でデスクトップアプリの遠隔操作ができます。"
+    "message": "ExpressVPNの拡張機能でデスクトップアプリの遠隔操作が可能。"
   },
   "welcome_screen2_p1_text": {
     "message": "VPNに接続している間、ブラウザだけでなく、デバイス全体が保護されます。"

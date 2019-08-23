@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Personvern, sikkerhet og hastighet. Kontroller ExpressVPN-appen direkte fra Chrome, spoof plasseringen din og få tilgang til alt innhold hvor som helst.",
+    "message": "Kontroller ExpressVPN-appen direkte fra Chrome, spoof plasseringen din og få tilgang til alt.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -40,7 +40,10 @@
     "message": "Ny hos ExpressVPN? [Kom i gang]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "Vennligst installer ExpressVPN-appen fra Google Play-butikken."
+    "message": "Vennligst installer ExpressVPN-appen fra Google Play-Butikken."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Hvis du installerte nettleseren din fra <b>Ubuntu Software Center</b>, vil ikke utvidelsen være i stand til å kommunisere med Linux-appen. [Learn more]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Denne utvidelsen krever ExpressVPN-appen for Linux med et aktivt abonnement."
@@ -94,7 +97,7 @@
     "message": "Velg en annen [VPN-lokasjon]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Hvis alt annet feiler, [kontakt kundestøtte]."
+    "message": "Om dette ikke hjelper, [kontakt kundestøtte]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Internettrafikk er for øyeblikket blokkert for å beskytte personvernet ditt."
@@ -124,7 +127,7 @@
     "message": "Du har blitt logget ut fordi kontodetaljene dine ble oppdatert."
   },
   "error_forced_signout_p2_text": {
-    "message": "For å fortsette å bruke ExpressVPN, logg inn igjen."
+    "message": "For å fortsette å bruke ExpressVPN, vennligst logg inn igjen."
   },
   "error_forced_signout_signin_button_label": {
     "message": "Logg inn"
@@ -139,7 +142,8 @@
     "message": "For å reaktivere abonnementet ditt, <br/>vennligst send en e-post til <br/>"
   },
   "error_fraudster_p2_text": {
-    "message": "emnefelt: <span class='bold'>Billing Verification</span>."
+    "message": "emnefelt: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Vennligst inkluder et bilde av kredittkortet du brukte (med BARE de 4 siste sifrene og navnet synlig)"
@@ -148,7 +152,7 @@
     "message": "Vennligst oppgi telefonnummeret ditt (med landkode), og når på dagen vi kan ringe deg."
   },
   "error_fraudster_p5_text": {
-    "message": "Fakturaavdelingen vårt vil svare i løpet av 24–48 timer."
+    "message": "Fakturaavdelingen vår vil svare i løpet av 24–48 timer."
   },
   "error_fraudster_question1_text": {
     "message": "Betalte du med kredittkort?"
@@ -178,7 +182,7 @@
     "message": "160 lokasjoner verden over"
   },
   "error_free_trial_expired_l4_text": {
-    "message": "24/7 kundestøtte"
+    "message": "Kundestøtte døgnet rundt"
   },
   "error_free_trial_expired_l5_text": {
     "message": "Ubegrenset båndbredde"
@@ -208,13 +212,13 @@
     "message": "Logg ut"
   },
   "error_IAP_CONTINUE_USING_p1_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst oppdater betalingsinformasjonen i iTunes/App Store-kontoen din."
+    "message": "For å fortsette å bruke ExpressVPN, vennligst oppdater betalingsinformasjonen i iTunes- / App Store-kontoen din."
   },
   "error_IAP_MAIN_title": {
     "message": "Betalingen mislyktes"
   },
   "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
-    "message": "ExpressVPN vil aktiveres automatisk i løpet av 30 minutter fra du oppdaterer informasjonen."
+    "message": "ExpressVPN vil aktiveres automatisk i løpet av 30 minutter fra du oppdaterer informasjonen din."
   },
   "error_not_activated_LINUX_text": {
     "message": "Vennligst kjør denne kommandoen i terminalen din for å aktivere skrivebordsappen:"
@@ -226,7 +230,7 @@
     "message": "App ikke aktivert"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Hvis Play Store ikke er tilgjengelig på din Chromebook, vennligst følg våre instruksjoner for [manuell konfigurasjon]."
+    "message": "Hvis Play Butikk-appen ikke er tilgjengelig på din Chromebook, vennligst følg våre instruksjoner for [manuell konfigurasjon]."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "Installer ExpressVPN"
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "Chrome OS er ikke støttet",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "App ikke funnet"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Installer skrivebordsappen"
@@ -275,10 +282,10 @@
     "message": "Du har overskredet ExpressVPNs maksgrense for tilkoblede enheter for dette abonnementet."
   },
   "error_simultaneous_connection_p2_text": {
-    "message": "Vennligst koble fra en enhet eller [kjøp ytterligere et abonnement]."
+    "message": "Vennligst koble fra en enhet eller [kjøp et ytterligere abonnement]."
   },
   "error_simultaneous_connection_title": {
-    "message": ".Tilkoblingsgrensen er nådd"
+    "message": "Tilkoblingsgrensen er nådd."
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Oppdater betalingsinformasjon"
@@ -287,7 +294,7 @@
     "message": "Senere"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Abonnementet ditt er utløpt, men det er enkelt å koble til igjen."
+    "message": "Abonnementet ditt er utløpt, men det er enkelt å bli tilkoblet igjen."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Hvorfor fornye?"
@@ -308,7 +315,7 @@
     "message": "160 lokasjoner verden over"
   },
   "error_subscription_expired_l4_text": {
-    "message": "24/7 kundestøtte"
+    "message": "Kundestøtte døgnet rundt"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
     "message": "Skaff et nytt abonnement"
@@ -353,7 +360,7 @@
     "message": "Finner ingen internettilkobling.<br>VPN kan være utilgjengelig."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "Internettilkoblingen falt ut.<br>VPN vil koble til igjen når det er mulig."
+    "message": "Internettilkoblingen falt ut.<br>VPN vil koble til igjen når den er tilgjengelig."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Tilkoblingen falt uventet ut. Kobler til på nytt ..."
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "Bytt lokasjon"
+  },
+  "home_report_issue_label": {
+    "message": "Tilbakemelding"
+  },
+  "home_report_issue_no": {
+    "message": "Nei"
+  },
+  "home_report_issue_text": {
+    "message": "Opplevde du noen problemer mens du var tilkoblet?"
+  },
+  "home_report_issue_yes": {
+    "message": "Ja"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Beskriv problemet ditt"
+  },
+  "issue_reporter_header": {
+    "message": "Hva skjedde?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Har du prøvd å koble til en annen serverlokasjon?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Kan ikke sende. Vennligst sjekk tilkoblingen din og prøv igjen."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Har du prøvd å koble til en serverlokasjon i det landet hvor tjenesten du ønsker tilgang til er lokalisert?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Har du prøvd å koble til en annen serverlokasjon eller bytte VPN-protokoll?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Hjem"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Trenger du hjelp?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Jeg ser proxyfeil på videostrømmesider"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN vises som tilkoblet men jeg kan ikke surfe"
+  },
+  "issue_reporter_opt3": {
+    "message": "Jeg kan ikke få tilgang til et bestemt nettsted"
+  },
+  "issue_reporter_opt4": {
+    "message": "Jeg ser feil språk på Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "Jeg ser for mange Google captchas"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN-hastigheten er veldig treg"
+  },
+  "issue_reporter_opt7": {
+    "message": "Jeg blir frakoblet til stadighet"
+  },
+  "issue_reporter_opt8": {
+    "message": "Annet"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Rapport sendt"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Sender ..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Send rapport"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Del nettsted med ExpressVPN"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Kontakt kundestøtte"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Takk for at du hjelper oss med å forbedre tjenesten for alle ExpressVPN-kunder."
+  },
+  "issue_reporter_title": {
+    "message": "Rapporter et problem"
+  },
+  "issue_reporter_website_label": {
+    "message": "Nettsted"
+  },
+  "language_dropdown_danish": {
+    "message": "Dansk (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Nederlandsk (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Engelsk (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finsk (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Fransk (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Tysk (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italiensk (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japansk (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Koreansk (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norsk (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Polsk (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portugisisk (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russisk (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Spansk (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Svensk (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thai (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Tyrkisk (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "Kundestøtte døgnet rundt"
@@ -407,7 +566,7 @@
     "message": "INGEN RESULTATER"
   },
   "location_picker_search_placeholder_text": {
-    "message": "Søk etter en by eller et land"
+    "message": "Søk etter by eller land"
   },
   "location_picker_smart_location_text": {
     "message": "Smartlokasjon"
@@ -477,7 +636,7 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "Koble til ved oppstart av nettleseren"
+    "message": "Koble til ved oppstart av nettleser"
   },
   "menu_desktop_notification_text": {
     "message": "Vis skrivebordsvarslinger"
@@ -531,22 +690,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Simuler lokasjonen din"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "Gi oss en 5-stjerners vurdering!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Fortell oss hva vi kan gjøre bedre"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Senere"
-  },
-  "menu_ratevpn_text": {
-    "message": "Vi håper du liker å bruke ExpressVPN! Kan vi be deg om å gi oss en vurdering?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Liker du ExpressVPN?"
+    "message": "Spoof plasseringen din"
   },
   "menu_rate_expressvpn": {
     "message": "Vurder ExpressVPN"
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "Logg ut"
   },
-  "message_item_rating1_title": {
-    "message": "Liker du ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "La oss få vite hvordan vi kan forbedre oss?"
-  },
-  "message_item_rating3_title": {
-    "message": "Kunne du tenke deg å gi oss en vurdering?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Nei takk"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
     "message": "Del ExpressVPN og få gratis tjenester!"
   },
@@ -645,7 +774,7 @@
     "message": "Utløper"
   },
   "myaccount_account_renews_label": {
-    "message": "Fornyer"
+    "message": "Fornyes"
   },
   "myaccount_account_status_active_text": {
     "message": "Aktiv"
@@ -666,7 +795,7 @@
     "message": "Prøveperiode"
   },
   "myaccount_account_subscription_starts_label": {
-    "message": "Abonnementet begynner"
+    "message": "Abonnement begynner"
   },
   "myaccount_active_refer_button_label": {
     "message": "Verv venner"
@@ -711,7 +840,7 @@
     "message": "Gratis prøveperiode utløper om [hours] timer"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Gratis prøveperiode utløper om < 1 time"
+    "message": "Gratis prøveperiode utløper om <1 time"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Oppgrader nå"
@@ -762,7 +891,7 @@
     "message": "Gratis prøveperiode utløper om [hours] timer"
   },
   "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
-    "message": "Gratis prøveperiode utløper om < 1 time"
+    "message": "Gratis prøveperiode utløper om <1 time"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
     "message": "Oppgrader nå"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Forny nå"
   },
+  "rating_improve_header": {
+    "message": "Hva kan vi gjøre bedre?"
+  },
+  "rating_improve_report_button": {
+    "message": "Rapporter et problem"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Foreslå en forbedring"
+  },
+  "rating_no_thanks_text": {
+    "message": "Nei takk"
+  },
+  "rating_prompt_header": {
+    "message": "Hvor godt liker du ExpressVPN?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Takk for din vurdering!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Tusen takk! Vurder oss på Chrome nettmarked?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Tusen takk! Vurder oss på Firefox Add-ons Store?"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN tilkoblet"
   },
@@ -816,7 +972,7 @@
     "message": "Tilkoblingsgrensen er nådd"
   },
   "vpn_status_notification_connection_limit_text": {
-    "message": "Vennligst koble fra en enhet eller kjøp ytterligere et abonnement."
+    "message": "Vennligst koble fra en enhet eller kjøp et ytterligere abonnement."
   },
   "vpn_status_notification_reconnecting_label": {
     "message": "VPN kobler til på nytt ..."

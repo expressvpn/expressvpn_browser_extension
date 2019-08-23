@@ -39,13 +39,23 @@ Licensed GPL v2
         </div>
         <transition mode="out-in">
           <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText" :iconName="hintIcon" :type="hintType" />
-          
+
+          <div v-else-if="showIssueReporterPrompt && timesShownToday <= 2" class="location-box report-issue">
+            <div class="report-issue-label">{{ localize('home_report_issue_label') }}</div>
+            <div class="report-issue-holder">
+              <div class="report-issue-text">{{ localize('home_report_issue_text') }}</div>
+              <div class="report-issue-button icon icon-87-rate" @click="feedback(false)"></div>
+              <div class="report-issue-button icon icon-87-rate" @click="feedback(true)"></div>
+            </div>
+          </div>
+
           <div v-else-if="['ready', 'connected'].includes(currentInfo.state)" class="location-buttons">
             <div class="location-box" v-for="location in visibleLocations" v-bind:key="location.id" @click="connectToLocation(location)">
                 <div class="location-box-text-type">{{ localize(`main_screen_${location.type}_location_text`) }}</div>
                 <div class="location-box-text-name">{{ location.name }}</div>
             </div>
           </div>
+          
         </transition>
       </div>
 
@@ -83,9 +93,34 @@ export default {
       hintType: '',
       show4starHint: false,
       forceRatingPrompt: false,
+      forceIssueReporterPrompt: false,
+      NOW: 0,
+      hideFeedbackPrompt: false,
+      timesShownToday: 0,
     };
   },
+  watch: {
+    showIssueReporterPrompt: function(newVal, oldVal) {
+      if (newVal === true && oldVal === false) {
+        const today = (new Date()).getDate();
+        let timesShown = JSON.parse(localStorage.getItem('timesShown') || '{}');
+        this.timesShownToday = (parseInt(timesShown[today], 10) || 0) + 1;
+        timesShown[today] = this.timesShownToday;
+        localStorage.setItem('timesShown', JSON.stringify(timesShown));
+      }
+    },
+  },
   computed: {
+    showIssueReporterPrompt() {
+      let diffTime = this.NOW - this.currentInfo.hasCurrentStateSince;
+      return (
+        this.currentInfo.locale === 'en' &&
+        this.currentInfo.state === 'ready' &&
+        this.currentInfo.ratingData.previousConnectionTime < 5 * 60 &&
+        diffTime > 0 && diffTime < 10 * 1000 &&
+        this.hideFeedbackPrompt === false
+      ) || (this.forceIssueReporterPrompt === true);
+    },
     showRatingPrompt() {
       const requiredConnectionTime = (__IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 0 : 15 * 60;
       const rating = this.currentInfo.ratingData;
@@ -93,7 +128,6 @@ export default {
       if (rating) {
         const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || 0;
         const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || 0;
-        const NOW = (new Date()).getTime();
 
         return (
           rating.isSubscriber === true &&
@@ -101,8 +135,8 @@ export default {
           rating.previousConnectionTime >= requiredConnectionTime &&
           rating.everClickedMaxRating === false &&
           this.discardPrompt === false &&
-          this.daysBetween(NOW, lastDiscardDate) > 30 &&
-          this.daysBetween(NOW, lastFailedRateDate) > 10 &&
+          this.daysBetween(this.NOW, lastDiscardDate) > 30 &&
+          this.daysBetween(this.NOW, lastFailedRateDate) > 10 &&
           this.currentInfo.os !== 'LINUX' &&
           this.currentInfo.locale === 'en' &&
           this.currentInfo.state === 'connected'
@@ -120,7 +154,7 @@ export default {
       return this.localize(stringKey);
     },
     flagStyle() {
-      let filename = (this.selectedLocation.country_code ? this.selectedLocation.country_code : 'XV') + '.svg';
+      let filename = (this.selectedLocation.country_code ? this.selectedLocation.country_code.toUpperCase() : 'XV') + '.svg';
       return chrome.extension.getURL('/images/flags/' + filename);
     },
     visibleLocations() {
@@ -158,7 +192,7 @@ export default {
       } else if (this.currentInfo.state === 'reconnecting') {
         let networkLockStatus = this.currentInfo.preferences.traffic_guard_level ? 'on' : 'off';
         text = `hint_reconnecting_network_lock_${networkLockStatus}_text`;
-        this.hintIcon = null;
+        this.hintIcon = 'icon-56-information';
       } else if (this.show4starHint === true) {
         text = 'rating_thanks4_text';
         this.hintType = 'green';
@@ -168,6 +202,13 @@ export default {
     },
   },
   methods: {
+    feedback(hasFeedback) {
+      if (hasFeedback === false) {
+        this.hideFeedbackPrompt = true;
+      } else {
+        this.$store.dispatch('setCurrentContainer', 'issueReporter');
+      }
+    },
     onDiscardRatingPrompt() {
       localStorage.setItem('lastDiscardDate', (new Date()).getTime());
       this.discardPrompt = true; // trigger computed
@@ -194,7 +235,7 @@ export default {
           break;
         case 'connecting':
         case 'reconnecting':
-          if (parseInt(this.currentInfo.progress, 10) < 75) {
+          if ((parseInt(this.currentInfo.progress, 10) || 0) < 75) {
             chrome.runtime.sendMessage({ cancelConnection: true });
           }
           break;
@@ -266,6 +307,24 @@ export default {
         self.show4starHint = false;
       }, 4000);
     });
+
+    window.setInterval(function () {
+      self.NOW = Date.now();
+    }, 1000);
+
+    // Delete old issue reporter localStorage
+    let timesShown = JSON.parse(localStorage.getItem('timesShown') || '{}');
+    Object.keys(timesShown).forEach(day => parseInt(day, 10) === (new Date()).getDate() || delete timesShown[day]);
+    localStorage.setItem('timesShown', JSON.stringify(timesShown));
+
+    if (process.env.NODE_ENV === 'development') {
+      if (this.currentInfo.forceRatingPrompt) {
+        this.$root.$emit('show-rating-prompt');
+      } else if (this.currentInfo.forceIssueReporterPrompt) {
+        localStorage.removeItem('timesShown');
+        this.forceIssueReporterPrompt = true;
+      }
+    }
   },
 };
 </script>
@@ -273,6 +332,50 @@ export default {
 <style lang="scss" scoped>
 .no-highlight:hover, .no-highlight:active {
   color: inherit !important;
+}
+
+.report-issue {
+  margin-top: 10px;
+  height: 80px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &:hover {
+    background: $gray-50 !important;
+  }
+
+  &-label {
+    font-size: 12px;
+    color: $gray-20;
+  }
+  &-text {
+    font-family: ProximaNova-Semibold;
+    font-size: 16px;
+    color: $black-20;
+    line-height: 20px;
+    width: 175px;
+  }
+  &-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-button {
+    font-size: 35px;
+    color: $accent-20;
+    margin-top: -20px;
+
+    &:last-of-type {
+      transform: scaleX(-1) scaleY(-1);
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    &:hover {
+      color: $accent-30;
+    }
+  }
 }
 
 .content {

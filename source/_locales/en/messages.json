@@ -57,6 +57,9 @@
   "error_app_not_found_require_LINUX_text": {
     "message": "This extension requires the ExpressVPN app for Linux with an active subscription."
   },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "If you installed your browser from the <b>Ubuntu Software Center</b> the extension will not be able to communicate with the Linux app. [Learn more]"
+  },
   "error_app_not_found_require_MAC_text": {
     "message": "This extension requires the ExpressVPN app for Mac with an active subscription."
   },
@@ -71,6 +74,9 @@
   },
   "error_NOT_INSTALLED_title": {
     "message": "App Not Installed"
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "App Not Found"
   },
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "Chrome OS Not Supported"
@@ -139,6 +145,30 @@
     "message": "Update Payment Details"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_sub_button_label": {
+    "message": "Later"
+  },
+  "error_subscription_expiring_title": {
+    "message": "Subscription Expiring"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "To continue using ExpressVPN, please renew your subscription."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "Renew Now"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "Later"
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "Payment Failed"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "To continue using ExpressVPN, please update your payment details."
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "Update Payment Details"
+  },
+  "error_subscription_expiring_autobill_later_button_label": {
     "message": "Later"
   },
   "error_business_subscription_expired_status_text": {
@@ -274,19 +304,37 @@
   "error_open_app_title": {
     "message": "App Not Open"
   },
+  "error_simultaneous_connection_popup_title": {
+    "message": "Unblock Internet"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "Opening this link will unblock all internet traffic."
+  },
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "Cancel"
+  },
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "OK"
+  },
   "error_simultaneous_connection_cancel_button_label": {
     "message": "Cancel"
   },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "Learn More"
   },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "OK"
+  },
   "error_simultaneous_connection_p1_text": {
     "message": "You've exceeded ExpressVPN's device usage limit for this subscription."
   },
-  "error_simultaneous_connection_p2_text": {
+  "error_simultaneous_connection_iap_false_p2_text": {
     "message": "Please disconnect a device or [purchase an additional subscription]."
   },
-  "error_simultaneous_connection_title": {
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "Please disconnect a device."
+  },
+  "error_simultaneous_connection_hint": {
     "message": "Connection limit reached."
   },
   "error_subscription_expired_benefits_text": {
@@ -303,9 +351,6 @@
   },
   "error_subscription_expired_l1_text": {
     "message": "Apps for every device"
-  },
-  "error_subscription_expired_l2_text": {
-    "message": "Refer friends, get 30 days free"
   },
   "error_subscription_expired_l3_text": {
     "message": "160 locations worldwide"
@@ -457,24 +502,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Speed Test running"
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span> may contain dangerous software that could delete or steal personal information (e.g., bank details, photos, passwords, messages). [Learn&nbsp;more]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "Danger: Malware Ahead"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "Back to Safety"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "Proceed Anyway"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "I Understand the Risks"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "Are you sure?"
-  },
   "menu_cancel_text": {
     "message": "Cancel"
   },
@@ -526,9 +553,6 @@
   },
   "menu_my_account": {
     "message": "Account"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "Malware & phishing protection"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Block WebRTC"
@@ -587,9 +611,6 @@
   "menu_settings_help_button_label": {
     "message": "Help"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "Block scam sites and prevent ads that secretly mine cryptocurrency."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Prevent websites from discovering your true IP address and location while connected to VPN."
   },
@@ -638,6 +659,9 @@
   "myaccount_account_expired_label": {
     "message": "Expired"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "Payment due since"
+  },
   "myaccount_account_expiry_label": {
     "message": "Expires"
   },
@@ -680,11 +704,8 @@
   "myaccount_manage_button_label": {
     "message": "Manage Account"
   },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> may contain content or software designed to trick you into revealing personal information (e.g., bank details, photos, passwords, messages). [Learn&nbsp;more]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "Danger: Phishing Ahead"
+  "myaccount_manage_subscription_button_label": {
+    "message": "Manage Subscription"
   },
   "promo_bar_free_trial_expiring_soon_days_text": {
     "message": "Free trial expires in [days] days"
@@ -734,6 +755,12 @@
   "promobar_update_available_text": {
     "message": "Install now"
   },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "Your last payment failed"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "Update payment details"
+  },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome excluded from VPN"
   },
@@ -757,6 +784,9 @@
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
     "message": "Free trial expires in <1 hour"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "Your subscription is expiring"
   },
   "promobar_subscription_expiring_soon_renewable_false_text": {
     "message": "Get new subscription"
@@ -912,5 +942,133 @@
   },
   "rating_prompt_ok_button": {
     "message": "OK"
+  },
+  "home_report_issue_label": {
+    "message": "Feedback"
+  },
+  "home_report_issue_text": {
+    "message": "How was your connection?"
+  },
+  "issue_reporter_title": {
+    "message": "Report an Issue"
+  },
+  "issue_reporter_header": {
+    "message": "What happened?"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Report sent"
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Send Report"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Sending..."
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Thank you for helping improve service for all ExpressVPN customers."
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Need help?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Home"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Contact Support"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Unable to send. Please check your connection and try again."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Have you tried connecting to a server location in the country where the service you want to access is based?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Have you tried connecting to a different server location or changing VPN protocol?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Have you tried connecting to a different server location?"
+  },
+  "issue_reporter_opt1": {
+    "message": "I see proxy errors on video streaming websites"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN shows connected but I cannot browse"
+  },
+  "issue_reporter_opt3": {
+    "message": "I can't access a certain website"
+  },
+  "issue_reporter_opt4": {
+    "message": "I see incorrect language on Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "I see too many Google captchas"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN speed is very slow"
+  },
+  "issue_reporter_opt7": {
+    "message": "I keep getting disconnected"
+  },
+  "issue_reporter_opt8": {
+    "message": "Other"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Describe your issue"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Share website with ExpressVPN"
+  },
+  "issue_reporter_website_label": {
+    "message": "Website"
+  }
+
+
+
+
+  ,
+  "networkLock_header_connecting_text": {
+    "message": "Please Stand By"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "Please Stand By"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN Connected"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "Unable to Connect"
+  },
+  "networkLock_status_connecting_text": {
+    "message": "Connecting to <b>%LOCATION%</b>. Please stand by…"
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "Reconnecting to <b>%LOCATION%</b>. Please stand by…"
+  },
+  "networkLock_status_connected_text": {
+    "message": "Connected to <b>%LOCATION%</b>."
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "Unable to connect to <b>%LOCATION%</b>."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "Internet traffic is currently blocked to protect your privacy."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "Internet traffic is currently blocked to protect your privacy."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "Internet traffic is currently blocked to protect your privacy."
+  },
+  "networkLock_hint_connected_text": {
+    "message": "You will be redirected shortly."
+  },
+  "networkLock_cancel_button_label": {
+    "message": "Cancel"
+  },
+  "networkLock_try_again_button_label": {
+    "message": "Try Again"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "Unblock Internet"
   }
 }

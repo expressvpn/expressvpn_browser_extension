@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "개인 정보 보호, 보안 및 빠른 속도를 제공합니다. Chrome에서 바로 ExpressVPN 앱을 조정하여 위치를 스푸핑하고 어디서나 원하시는 컨텐츠에 액세스하세요.",
+    "message": "Chrome에서 바로 ExpressVPN 앱을 제어하세요. 위치를 스푸핑하고, 어디서나 컨텐츠에 액세스하세요.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -42,6 +42,9 @@
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "Google Play Store에서 ExpressVPN 앱을 설치해주세요."
   },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "<b>Ubuntu 소프트웨어 센터</b>에서 브라우저를 설치하셨다면, 확장 프로그램이 Linux 앱과 통신할 수 없을 것입니다."
+  },
   "error_app_not_found_require_LINUX_text": {
     "message": "이 확장 프로그램을 사용하시려면 활성화 정액제와  Linux용 ExpressVPN 앱이 필요합니다. "
   },
@@ -64,7 +67,7 @@
     "message": "만료 (%1)."
   },
   "error_business_subscription_expired_text": {
-    "message": "계정 소유자에게 새로운 비즈니스 정액제<br>구입을 요청하세요."
+    "message": "계정 소유자에게 새로운 비즈니스 정액제 구입을 요청하세요."
   },
   "error_business_subscription_expired_title": {
     "message": "정액제가 만료되었습니다"
@@ -94,7 +97,7 @@
     "message": "다른 [VPN 위치]를 선택해보세요"
   },
   "error_connection_error_check_l3_text": {
-    "message": "다른 모든 방법으로도 안 되면, [지원팀에 문의]하세요."
+    "message": "다른 모든 방법으로도 안 되면, [지원팀에 문의]하세요"
   },
   "error_connection_error_lock_on_text": {
     "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
@@ -121,10 +124,10 @@
     "message": "이미 가입하셨나요? [지금 업데이트]하세요."
   },
   "error_forced_signout_p1_text": {
-    "message": "고객님의 계정 정보가 업데이트되어<br>로그아웃되셨습니다."
+    "message": "고객님의 계정 정보가 업데이트되어 로그아웃되셨습니다."
   },
   "error_forced_signout_p2_text": {
-    "message": "ExpressVPN을 계속 사용하시려면,<br>다시 로그인해주세요."
+    "message": "ExpressVPN을 계속 사용하시려면, 다시 로그인해주세요."
   },
   "error_forced_signout_signin_button_label": {
     "message": "로그인"
@@ -139,7 +142,8 @@
     "message": "정액제를 재활성화하시려면,<br>이메일을 보내주세요"
   },
   "error_fraudster_p2_text": {
-    "message": "제목: <span class='bold'>Billing Verification</span>."
+    "message": "제목란: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "사용하신 신용 카드의 사진을 포함해주세요(마지막 4자리 숫자와 이름만 보이게 해주세요)"
@@ -238,6 +242,9 @@
     "message": "Chrome OS가 지원되지 않습니다",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
   },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "앱을 찾을 수 없음"
+  },
   "error_NOT_INSTALLED_primary_button": {
     "message": "데스크탑 앱 설치"
   },
@@ -272,7 +279,7 @@
     "message": "더 보기"
   },
   "error_simultaneous_connection_p1_text": {
-    "message": "이 정액제에 대한 ExpressVPN 장치 사용<br>제한을 초과하셨습니다."
+    "message": "이 정액제에 대한 ExpressVPN 장치 사용 제한을 초과하셨습니다."
   },
   "error_simultaneous_connection_p2_text": {
     "message": "장치의 연결을 해제하시거나, [추가 정액제를 구입해주세요]."
@@ -350,10 +357,10 @@
     "message": "인터넷 연결이 감지되지 않습니다.<br>인터넷이 연결되면 VPN에 연결됩니다."
   },
   "hint_no_internet_ready_text": {
-    "message": "인터넷 연결이 감지되지 않습니다.<br> VPN을 이용하실 수 없습니다."
+    "message": "인터넷 연결이 감지되지 않습니다.<br>VPN을 이용하실 수 없습니다."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "인터넷 연결이 끊어졌습니다.<br>인터넷이 연결되면 VPN에 다시<br>연결됩니다."
+    "message": "인터넷 연결이 끊어졌습니다.<br>인터넷이 연결되면 VPN에 다시 연결됩니다."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "연결이 예기치 않게 끊어져, 다시 연결하는 중입니다..."
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "위치 변경"
+  },
+  "home_report_issue_label": {
+    "message": "피드백"
+  },
+  "home_report_issue_no": {
+    "message": "아니요"
+  },
+  "home_report_issue_text": {
+    "message": "연결 되어 있는 동안 문제가 있었나요?"
+  },
+  "home_report_issue_yes": {
+    "message": "예"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "문제를 설명해주세요"
+  },
+  "issue_reporter_header": {
+    "message": "무슨일이 있었나요?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "다른 서버 위치에 연결애 보셨나요?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "전송할 수 없습니다. 연결을 확인하시고 다시 시도해주세요."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "사용을 원하시는 서비스가 기반으로 하는 국가의 서버 위치로 연결해 보셨나요?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "다른 서버 위치에 연결하거나 VPN 프로토콜을 변경해 보셨나요?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "홈"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "도움이 필요하신가요?"
+  },
+  "issue_reporter_opt1": {
+    "message": "동영상 스트리밍 웨사이트에서 프록시 에러가 발생합니다"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN은 연결된 것으로 보이나 브라우징할 수 없습니다"
+  },
+  "issue_reporter_opt3": {
+    "message": "특정 웹사이트에 엑세스할 수 없습니다"
+  },
+  "issue_reporter_opt4": {
+    "message": "Google에 올바르지 않은 언어가 표시됩니다"
+  },
+  "issue_reporter_opt5": {
+    "message": "Google 캡차가 너무 많이 나타납니다"
+  },
+  "issue_reporter_opt6": {
+    "message": "VPN 스피드가 매우 느립니다"
+  },
+  "issue_reporter_opt7": {
+    "message": "연결이 계속 끊어집니다"
+  },
+  "issue_reporter_opt8": {
+    "message": "기타"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "신고서 전송 완료"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "전송중..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "신고서 전송"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "ExpressVPN을 통한 웹사이트 공유"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "지원 문의"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "모든 ExpressVPN 고객님들을 위해 서비스를 개선할 수 있도록 도와주셔서 감사합니다."
+  },
+  "issue_reporter_title": {
+    "message": "문제 신고"
+  },
+  "issue_reporter_website_label": {
+    "message": "웹사이트"
+  },
+  "language_dropdown_danish": {
+    "message": "덴마크어(Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "네덜란드어(Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "영어(English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "핀란드어(Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "프랑스어(Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "독일어(Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "이탈리아어(Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "일본어(日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "한국어(한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "노르웨이어(Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "폴란드어(Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "포르투갈어(Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "러시아어(Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "스페인어(Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "스웨덴어(Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "태국어(ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "터키어(Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "연중무휴 고객 지원"
@@ -533,21 +692,6 @@
   "menu_privacy_hide_location_text": {
     "message": "위치 스푸핑"
   },
-  "menu_ratevpn_btn0": {
-    "message": "별 5개를 남겨주세요!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "개선 방법을 알려주세요"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "나중에"
-  },
-  "menu_ratevpn_text": {
-    "message": "고객님께서 ExpressVPN을 즐기고 계시길<br>바랍니다! 후기를 남겨 주시겠어요?"
-  },
-  "menu_ratevpn_title": {
-    "message": "ExpressVPN을 즐기고 계세요?"
-  },
   "menu_rate_expressvpn": {
     "message": "ExpressVPN 평가하기"
   },
@@ -588,13 +732,13 @@
     "message": "사기 사이트를 차단하고 비밀리에 암호화폐를 마인하는 광고를 막습니다."
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "VPN에 연결되어있는 동안 웹사이트가 고객님의 실제 IP<br>주소와 위치를 확인하지 못하도록 합니다."
+    "message": "VPN에 연결되어있는 동안 웹사이트가 고객님의 실제 IP 주소와 위치를 확인하지 못하도록 합니다."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "VPN에 연결되어있는 동안 HTML5 지오로케이션이<br>고객님의 실제 위치를 나타내지 않도록 합니다."
+    "message": "VPN에 연결되어있는 동안 HTML5 지오로케이션이 고객님의 실제 위치를 나타내지 않도록 합니다."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "가능한 경우 보다 안전한 HTTPS 웹사이트 버전에<br>자동으로 연결합니다."
+    "message": "가능한 경우 보다 안전한 HTTPS 웹사이트 버전에 자동으로 연결합니다."
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "더 보기"
@@ -617,23 +761,8 @@
   "menu_signout_text": {
     "message": "로그아웃"
   },
-  "message_item_rating1_title": {
-    "message": "ExpressVPN을 즐기고 계세요?"
-  },
-  "message_item_rating2_title": {
-    "message": "개선할 수 있는 방법을 알려주시겠어요?"
-  },
-  "message_item_rating3_title": {
-    "message": "후기를 남겨 주시겠어요?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "아니요"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "확인"
-  },
   "myaccount_account_active_p1_text": {
-    "message": "ExpressVPN을 공유하시고 무료 이용권을<br>받으세요!"
+    "message": "ExpressVPN을 공유하시고 무료 이용권을 받으세요!"
   },
   "myaccount_account_active_p2_text": {
     "message": "친구가 가입할 때마다, 두 분 모두에게 30일 무료 이용권이 지급됩니다."
@@ -642,7 +771,7 @@
     "message": "만료"
   },
   "myaccount_account_expiry_label": {
-    "message": "만료 일자"
+    "message": "만료일"
   },
   "myaccount_account_renews_label": {
     "message": "갱신"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "지금 갱신하세요"
   },
+  "rating_improve_header": {
+    "message": "저희가 어떻게 개선할 수 있을까요?"
+  },
+  "rating_improve_report_button": {
+    "message": "오류 신고"
+  },
+  "rating_improve_suggest_button": {
+    "message": "개선 사항 제안"
+  },
+  "rating_no_thanks_text": {
+    "message": "아니요"
+  },
+  "rating_prompt_header": {
+    "message": "ExpressVPN이 얼마나 마음에 드시나요?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "확인"
+  },
+  "rating_thanks4_text": {
+    "message": "평가해주셔서 감사합니다!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "감사합니다! Chrome Web Store에서 저희를 평가해주시겠어요?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "감사합니다! Firefox Add-ons에서 저희를 평가해주시겠어요?"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN이 연결되었습니다"
   },
@@ -834,7 +990,7 @@
     "message": "시작하기"
   },
   "welcome_screen1_p1_text": {
-    "message": "ExpressVPN 확장 프로그램으로<br>데스크탑 앱을 조종할 수 있습니다."
+    "message": "ExpressVPN 확장 프로그램으로 데스크탑 앱을 조종할 수 있습니다."
   },
   "welcome_screen2_p1_text": {
     "message": "VPN이 연결되면, 브라우저뿐만 아니라 기기 전체를 보호해줍니다. "

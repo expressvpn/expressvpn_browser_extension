@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Datenschutz, Sicherheit und Geschwindigkeit. Steuern Sie die ExpressVPN-App direkt von Chrome aus, täuschen Sie Ihren Standort und greifen Sie überall auf Inhalte zu.",
+    "message": "Bedienen Sie ExpressVPN direkt in Chrome und spoofen Sie Ihren Standort für freien Zugriff weltweit.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -42,14 +42,17 @@
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "Bitte laden Sie ExpressVPN im Google Play Store herunter."
   },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Wenn Sie Ihren Browser über das <b>Ubuntu Software Center</b> installiert haben, kann die Erweiterung nicht mit der Linux-App kommunizieren. [Mehr erfahren]"
+  },
   "error_app_not_found_require_LINUX_text": {
-    "message": "Für diese Erweiterung ist die ExpressVPN App für Linux mit einem aktiven Abonnement erforderlich."
+    "message": "Für diese Erweiterung ist die ExpressVPN-App für Linux mit einem aktiven Abonnement erforderlich."
   },
   "error_app_not_found_require_MAC_text": {
-    "message": "Für diese Erweiterung ist die ExpressVPN App für Mac mit einem aktiven Abonnement erforderlich."
+    "message": "Für diese Erweiterung ist die ExpressVPN-App für Mac mit einem aktiven Abonnement erforderlich."
   },
   "error_app_not_found_require_WINDOWS_text": {
-    "message": "Für diese Erweiterung ist die ExpressVPN App für Windows mit einem aktiven Abonnement erforderlich."
+    "message": "Für diese Erweiterung ist die ExpressVPN-App für Windows mit einem aktiven Abonnement erforderlich."
   },
   "error_btnReturnHome_default": {
     "message": "Zurück zum Start"
@@ -94,7 +97,7 @@
     "message": "Wählen Sie einen anderen [VPN-Standort]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Wenn nichts funktioniert, [kontaktieren Sie den Support]."
+    "message": "Wenn nichts funktioniert, [kontaktieren Sie den Support]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Der Internetverkehr ist derzeit gesperrt, um Ihre Privatsphäre zu schützen."
@@ -106,13 +109,13 @@
     "message": "Abbrechen"
   },
   "error_connection_error_return_home_button_label_network_lock_on": {
-    "message": "Internet freischalten"
+    "message": "Internet entsperren"
   },
   "error_connection_error_title": {
     "message": "Verbindung nicht möglich"
   },
   "error_connection_error_to_location_text": {
-    "message": "Verbindung mit <br>%LOCATION% nicht möglich"
+    "message": "Verbindung mit <br>%LOCATION% nicht möglich."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Erneut versuchen"
@@ -136,10 +139,11 @@
     "message": "Wir konnten Ihre Zahlungsdaten nicht verifizieren und haben die Zahlung storniert."
   },
   "error_fraudster_p1_text": {
-    "message": "Um Ihr Abonnement zu reaktivieren, <br>bitte senden Sie eine E-Mail an"
+    "message": "Um Ihr Abonnement zu reaktivieren, <br>senden Sie bitte eine E-Mail an"
   },
   "error_fraudster_p2_text": {
-    "message": "Betreff: <span class='bold'>Billing Verification</span>."
+    "message": "Betreff: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Bitte fügen Sie ein Foto der verwendeten Kreditkarte hinzu (NUR letzte 4 Ziffern & Name erkenntlich)."
@@ -208,7 +212,7 @@
     "message": "Abmelden"
   },
   "error_IAP_CONTINUE_USING_p1_text": {
-    "message": "Um ExpressVPN weiterhin nutzen zu können, aktualisieren Sie bitte die Zahlungsdaten in Ihrem Konto im iTunes / App Store."
+    "message": "Um ExpressVPN weiterhin nutzen zu können, aktualisieren Sie bitte die Zahlungsdaten in Ihrem Konto im iTunes/App Store."
   },
   "error_IAP_MAIN_title": {
     "message": "Zahlung fehlgeschlagen"
@@ -220,13 +224,13 @@
     "message": "Bitte führen Sie diesen Befehl in Ihrer Kommandozeile aus, um die Desktop-App zu aktivieren:"
   },
   "error_not_activated_text": {
-    "message": "Bitte melden Sie sich in der ExpressVPN Desktop-App an, um diese Erweiterung zu nutzen."
+    "message": "Bitte melden Sie sich in der ExpressVPN-Desktop-App an, um diese Erweiterung zu nutzen."
   },
   "error_not_activated_title": {
     "message": "App nicht aktiviert"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Ist Play Store auf Ihrem Chromebook nicht verfügbar, folgen Sie bitte unseren Anleitungen zur [manuellen Konfiguration]."
+    "message": "Ist der Play Store auf Ihrem Chromebook nicht verfügbar, folgen Sie bitte unseren Anleitungen zur [manuellen Konfiguration]."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "ExpressVPN-App installieren"
@@ -238,6 +242,9 @@
     "message": "Chrome OS nicht unterstützt",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
   },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "App nicht gefunden"
+  },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Desktop-App installieren"
   },
@@ -248,10 +255,10 @@
     "message": "App nicht installiert"
   },
   "error_open_app_@chrome@_text": {
-    "message": "Für diese Erweiterung muss die ExpressVPN App in Betrieb sein."
+    "message": "Für diese Erweiterung muss die ExpressVPN-App in Betrieb sein."
   },
   "error_open_app_@firefox@_text": {
-    "message": "Für diese Erweiterung muss die ExpressVPN App in Betrieb sein."
+    "message": "Für diese Erweiterung muss die ExpressVPN-App in Betrieb sein."
   },
   "error_open_app_contact_support_button_label": {
     "message": "Support kontaktieren"
@@ -260,7 +267,7 @@
     "message": "Desktop-App öffnen"
   },
   "error_open_app_title": {
-    "message": "App nicht aktiviert"
+    "message": "App nicht geöffnet"
   },
   "error_signout_button": {
     "message": "Abmelden"
@@ -275,7 +282,7 @@
     "message": "Sie haben ExpressVPNs Beschränkung zur Gerätenutzung für dieses Abonnement überschritten."
   },
   "error_simultaneous_connection_p2_text": {
-    "message": "Bitte trennen Sie ein Gerät oder [purchase an additional subscription]."
+    "message": "Bitte trennen Sie ein Gerät oder [erwerben Sie ein zusätzliches Abonnement]."
   },
   "error_simultaneous_connection_title": {
     "message": "Höchstgrenze erreicht."
@@ -338,7 +345,7 @@
     "message": "App aktualisieren"
   },
   "error_upgrade_app_text": {
-    "message": "Für diese Erweiterung wird die neueste Version der ExpressVPN App benötigt. "
+    "message": "Für diese Erweiterung wird die neueste Version der ExpressVPN-App benötigt. "
   },
   "general_contact_support_button_label": {
     "message": "Support kontaktieren"
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "Standort ändern"
+  },
+  "home_report_issue_label": {
+    "message": "Feedback"
+  },
+  "home_report_issue_no": {
+    "message": "Nein"
+  },
+  "home_report_issue_text": {
+    "message": "Hatten Sie Probleme bei bestehender Verbindung?"
+  },
+  "home_report_issue_yes": {
+    "message": "Ja"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Beschreiben Sie Ihr Problem"
+  },
+  "issue_reporter_header": {
+    "message": "Was ist passiert?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Haben Sie versucht, eine Verbindung zu einem anderen Serverstandort herzustellen?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Senden fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Haben Sie versucht, eine Verbindung zu einem Serverstandort in dem Land herzustellen, aus dem der gewünschte Service stammt?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Haben Sie versucht, eine Verbindung zu einem anderen Serverstandort herzustellen oder das VPN-Protokoll zu wechseln?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Startseite"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Sie benötigen Hilfe?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Mir werden Proxy-Fehlermeldungen auf Video-Streaming-Websites angezeigt"
+  },
+  "issue_reporter_opt2": {
+    "message": "ExpressVPN zeigt eine bestehende Verbindung an, ich kann aber nicht im Internet surfen"
+  },
+  "issue_reporter_opt3": {
+    "message": "Ich kann nicht auf eine bestimmte Website zugreifen"
+  },
+  "issue_reporter_opt4": {
+    "message": "Die falsche Sprache wird in Google angezeigt"
+  },
+  "issue_reporter_opt5": {
+    "message": "Zu viele Google-Captchas werden angezeigt"
+  },
+  "issue_reporter_opt6": {
+    "message": "Die VPN-Geschwindigkeit ist sehr langsam"
+  },
+  "issue_reporter_opt7": {
+    "message": "Die Verbindung wird immer wieder getrennt"
+  },
+  "issue_reporter_opt8": {
+    "message": "Sonstiges"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Bericht gesendet"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Sendet..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Bericht senden"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Webseite mit ExpressVPN teilen"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Support kontaktieren"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Danke, dass Sie uns helfen, den Service für alle ExpressVPN-Kunden zu verbessern."
+  },
+  "issue_reporter_title": {
+    "message": "Ein Problem melden"
+  },
+  "issue_reporter_website_label": {
+    "message": "Website"
+  },
+  "language_dropdown_danish": {
+    "message": "Dänisch (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Niederländisch (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Englisch (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finnisch (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Französisch (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Deutsch (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italienisch (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japanisch (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Koreanisch (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norwegisch (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Polnisch (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Portugiesisch (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russisch (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Spanisch (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Schwedisch (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Thailändisch (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Türkisch (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "Support rund um die Uhr"
@@ -428,7 +587,7 @@
     "message": "Ausgewählter Standort"
   },
   "main_screen_smart_location_text": {
-    "message": "Smart Location"
+    "message": "Auto-Standort"
   },
   "main_screen_status_vpn_connected_text": {
     "message": "Verbunden"
@@ -531,22 +690,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Standort vortäuschen"
-  },
-  "menu_ratevpn_btn0": {
-    "message": "Bewerten Sie mit 5 Sternen!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Sagen Sie uns, was wir besser machen können"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Später"
-  },
-  "menu_ratevpn_text": {
-    "message": "Wir hoffen, dass Sie mit der Nutzung von ExpressVPN zufrieden sind! Würden Sie eine Bewertung hinterlassen?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Ihnen gefällt ExpressVPN?"
+    "message": "Standort spoofen"
   },
   "menu_rate_expressvpn": {
     "message": "ExpressVPN bewerten"
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "Abmelden"
   },
-  "message_item_rating1_title": {
-    "message": "Ihnen gefällt ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "Wie können wir uns verbessern?"
-  },
-  "message_item_rating3_title": {
-    "message": "Würden Sie eine Bewertung hinterlassen?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Nein, danke"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
     "message": "Teilen Sie ExpressVPN mit Ihren Freunden und erhalten Sie kostenlosen Service."
   },
@@ -645,7 +774,7 @@
     "message": "Läuft ab"
   },
   "myaccount_account_renews_label": {
-    "message": "Verlängert"
+    "message": "Wird verlängert"
   },
   "myaccount_account_status_active_text": {
     "message": "Aktiv"
@@ -702,16 +831,16 @@
     "message": "Gefahr: Phishing im Anmarsch"
   },
   "promobar_free_trial_expiring_soon_days_header": {
-    "message": "Testversion läuft in [days] Tagen ab"
+    "message": "Probeversion läuft in [days] Tagen ab"
   },
   "promobar_free_trial_expiring_soon_expired_header": {
-    "message": "Kostenlose Testversion ist abgelaufen"
+    "message": "Kostenlose Probeversion ist abgelaufen"
   },
   "promobar_free_trial_expiring_soon_hours_header": {
-    "message": "Testversion läuft in [hours] Stunden ab"
+    "message": "Probeversion läuft in [hours] Stunden ab"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Testversion läuft in <1 Stunde ab"
+    "message": "Probeversion läuft in <1 Stunde ab"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Jetzt upgraden"
@@ -753,16 +882,16 @@
     "message": "Jetzt installieren"
   },
   "promo_bar_free_trial_expiring_soon_days_text": {
-    "message": "Testversion läuft in [days] Tagen ab"
+    "message": "Probeversion läuft in [days] Tagen ab"
   },
   "promo_bar_free_trial_expiring_soon_expired_text": {
-    "message": "Kostenlose Testversion ist abgelaufen"
+    "message": "Kostenlose Probeversion ist abgelaufen"
   },
   "promo_bar_free_trial_expiring_soon_hours_text": {
-    "message": "Testversion läuft in [hours] Stunden ab"
+    "message": "Probeversion läuft in [hours] Stunden ab"
   },
   "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
-    "message": "Testversion läuft in <1 Stunden ab"
+    "message": "Probeversion läuft in <1 Stunden ab"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
     "message": "Jetzt upgraden"
@@ -794,14 +923,41 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Jetzt verlängern"
   },
+  "rating_improve_header": {
+    "message": "Wie können wir uns verbessern?"
+  },
+  "rating_improve_report_button": {
+    "message": "Ein Problem melden"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Einen Verbesserungsvorschlag machen"
+  },
+  "rating_no_thanks_text": {
+    "message": "Nein, danke"
+  },
+  "rating_prompt_header": {
+    "message": "Wie sehr gefällt Ihnen ExpressVPN?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Danke für Ihre Bewertung!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Danke! Würden Sie uns im Chrome Web Store bewerten?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Danke! Würden Sie uns im Firefox Add-ons Store bewerten?"
+  },
   "vpn_status_notification_connected_label": {
-    "message": "Verbunden"
+    "message": "VPN ist Verbunden"
   },
   "vpn_status_notification_connected_text": {
     "message": "Verbunden mit %s."
   },
   "vpn_status_notification_connecting_label": {
-    "message": "Verbindet..."
+    "message": "VPN verbindet sich..."
   },
   "vpn_status_notification_connection_failed_label": {
     "message": "VPN kann sich nicht verbinden"
@@ -810,7 +966,7 @@
     "message": "Verbindung mit %s nicht möglich."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "Kann nicht mit %s verbinden. Internetverkehr gesperrt.\n"
+    "message": "Verbinden mit %s nicht möglich. Internetverkehr gesperrt.\n"
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Höchstgrenze erreicht"
@@ -819,7 +975,7 @@
     "message": "Bitte trennen Sie ein Gerät oder erwerben Sie ein zusätzliches Abonnement."
   },
   "vpn_status_notification_reconnecting_label": {
-    "message": "Verbindet..."
+    "message": "VPN verbindet sich..."
   },
   "vpn_status_notification_reconnecting_network_lock_off_text": {
     "message": "Verbindet mit %s."

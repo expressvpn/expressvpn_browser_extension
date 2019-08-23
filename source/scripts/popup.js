@@ -6,9 +6,12 @@ Licensed GPL v2
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
 import store from './vuex/store';
-import utils from './modules/utils';
-import App from '../components/app.vue';
+import * as utils from './modules/utils';
+import App from '../components/app';
 import mixin from './mixin';
+
+Vue.config.productionTip = false;
+Vue.config.devtools = false;
 
 Vue.mixin(mixin);
 const app = new Vue({
@@ -74,29 +77,23 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     // Set language list
     app.$store.dispatch('setlangList', [
-      /*
-        { code: 'da', label: app.localize('language_dropdown_danish') },
-        { code: 'de', label: app.localize('language_dropdown_german') },
-        */
+      { code: 'da', label: app.localize('language_dropdown_danish') },
+      { code: 'de', label: app.localize('language_dropdown_german') },
       { code: 'en', label: app.localize('language_dropdown_english') },
-      /*
-       { code: 'es', label: app.localize('language_dropdown_spanish') },
-       */
+      { code: 'es', label: app.localize('language_dropdown_spanish') },
       { code: 'fr', label: app.localize('language_dropdown_french') },
-      /*
-       { code: 'it', label: app.localize('language_dropdown_italian') },
-       { code: 'nl', label: app.localize('language_dropdown_dutch') },
-       { code: 'no', label: app.localize('language_dropdown_norwegian') },
-       { code: 'pl', label: app.localize('language_dropdown_polish') },
-       { code: 'pt', label: app.localize('language_dropdown_portuguese') },
-       { code: 'ru', label: app.localize('language_dropdown_russian') },
-       { code: 'fi', label: app.localize('language_dropdown_finnish') },
-       { code: 'sv', label: app.localize('language_dropdown_swedish') },
-       { code: 'th', label: app.localize('language_dropdown_thai') },
-       { code: 'tr', label: app.localize('language_dropdown_turkish') },
-       { code: 'ja', label: app.localize('language_dropdown_japanese') },
-       { code: 'ko', label: app.localize('language_dropdown_korean') },
-       */
+      { code: 'it', label: app.localize('language_dropdown_italian') },
+      { code: 'nl', label: app.localize('language_dropdown_dutch') },
+      { code: 'no', label: app.localize('language_dropdown_norwegian') },
+      { code: 'pl', label: app.localize('language_dropdown_polish') },
+      { code: 'pt_BR', label: app.localize('language_dropdown_portuguese') },
+      { code: 'ru', label: app.localize('language_dropdown_russian') },
+      { code: 'fi', label: app.localize('language_dropdown_finnish') },
+      { code: 'sv', label: app.localize('language_dropdown_swedish') },
+      { code: 'th', label: app.localize('language_dropdown_thai') },
+      { code: 'tr', label: app.localize('language_dropdown_turkish') },
+      { code: 'ja', label: app.localize('language_dropdown_japanese') },
+      { code: 'ko', label: app.localize('language_dropdown_korean') },
     ]);
   }
 });

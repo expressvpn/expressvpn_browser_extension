@@ -7,6 +7,7 @@ Licensed GPL v2
   <div class="active">
     <div v-if="isPaymentMethodIAP()">
       <div class="button-container">
+        <button v-if="isRenewable()" class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account` })">{{ localize('myaccount_manage_subscription_button_label') }}</button>
       </div>
     </div>
     <div v-else-if="subscription.plan_type === 'business'">
@@ -41,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 .active {
   color: $black-20;
-  font-family: ProximaNova-Regular;
+  font-family: ProximaNova;
   font-size: 18px;
 
   &-regular {

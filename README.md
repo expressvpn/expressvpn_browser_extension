@@ -1,5 +1,10 @@
 # ExpressVPN Browser Extension
 
+[![Chrome Web Store][chrome-version-image]][chrome-package-url] [![Chrome Web Store][chrome-rating-image]][chrome-package-url] [![Chrome Web Store][chrome-rating-count-image]][chrome-package-url] [![Chrome Web Store][chrome-download-image]][chrome-package-url]
+
+
+[![Firefox Add-ons][firefox-version-image]][firefox-package-url] [![Firefox Add-ons][firefox-rating-image]][firefox-package-url] [![Firefox Add-ons][firefox-download-image]][firefox-package-url]
+
 ## ExpressVPN
 
 One of the world’s largest providers of VPN services, ExpressVPN enables users to protect their privacy and security online with just a few clicks. The company’s award-winning apps for Windows, Mac, iOS, Android, Linux, routers, and browsers secure user information and identities with best-in-class encryption and leak-proofing. 
@@ -19,9 +24,72 @@ The ExpressVPN app has been comprehensively leak tested using our [open source t
 * HTTPS Everywhere
 * Block WebRTC
 
-## Notes
 
-We have not included the build scripts, tools, and tests necessary to build your own version of the ExpressVPN browser extension. Their inclusion would not enable a developer to build a working extension as the ExpressVPN apps verify that any extension is included in a whitelist prior to interfacing with it.
+### Requirements
+- Node.JS LTS
+
+
+### Pack it for the extension store:
+
+1. `cd xv_chrome`
+2. `npm install`
+
+3. Depending on the target browser
+    #### Firefox
+    `npm run build:prod -- --pack --browser=firefox`
+    #### Chrome
+    `npm run build:prod -- --pack --browser=chrome`
+
+A zipped store-ready version of the extension is created in the `dist/` directory
+
+
+### Watch
+
+Run `$ npm run watch` and load the `build/development/[BROWSER]/` directory.
+
+## Tasks
+
+### Build
+
+    $ npm run build
+
+Processes all files and copies them to the appropriate directory depending on the browser. It does not minify them
+
+    $ npm run build:prod
+
+Same as above but makes the code production ready (Minification, console.* removal, removes comment, etc.)
+
+| Option         | Description                                                                                                                                           |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--browser`    | Compile the extension for different browsers (chrome, firefox)  Default: chrome                                                                |
+
+
+### Pack (ie. extension store ready)
+
+Creates a zipped store-ready version of the extension in the `dist/` directory
+
+    $ npm run build:prod -- --pack --browser=[BROWSER]
+
+eg.:
+
+    $ npm run build:prod -- --pack --browser=
+
+| Option         | Description                                                                                                              |
+|----------------|--------------------------------------------------------------------------------------------------------------------------|
+| `--alpha`      | Updates the packed manifest to mention the Alpha keyword and specific key\application properties                         |
+| `--beta`       | Updates the packed manifest to mention the Beta keyword and specific key\application properties                          |
+
+
+[chrome-version-image]: https://img.shields.io/chrome-web-store/v/fgddmllnllkalaagkghckoinaemmogpe.svg?maxAge=25912&style=flat-square&color=4285F4
+[chrome-rating-count-image]: https://img.shields.io/chrome-web-store/rating-count/fgddmllnllkalaagkghckoinaemmogpe.svg?maxAge=25000&style=flat-square&color=4285F4
+[chrome-rating-image]: https://img.shields.io/chrome-web-store/rating/fgddmllnllkalaagkghckoinaemmogpe.svg?maxAge=25500&style=flat-square&color=4285F4
+[chrome-download-image]: https://img.shields.io/chrome-web-store/d/fgddmllnllkalaagkghckoinaemmogpe.svg?maxAge=245701&style=flat-square&color=4285F4
+[chrome-package-url]: https://chrome.google.com/webstore/detail/fgddmllnllkalaagkghckoinaemmogpe
+
+[firefox-version-image]: https://img.shields.io/amo/v/expressvpn.svg?maxAge=245701&style=flat-square&color=FF6611
+[firefox-rating-image]: https://img.shields.io/amo/rating/expressvpn.svg?maxAge=245701&style=flat-square&color=FF6611
+[firefox-download-image]: https://img.shields.io/amo/users/expressvpn.svg?maxAge=245701&style=flat-square&color=FF6611
+[firefox-package-url]: https://addons.mozilla.org/en-US/firefox/addon/expressvpn/
 
 ## License
 

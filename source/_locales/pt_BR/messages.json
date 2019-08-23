@@ -1,6 +1,6 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Privacidade, segurança e rapidez. Controle o aplicativo ExpressVPN diretamente do Chrome, falsifique sua localização e acesse conteúdo em qualquer lugar.",
+    "message": "Controle o app ExpressVPN direto do Chrome, falsifique o local, acesse conteúdo em qualquer lugar.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
@@ -41,6 +41,9 @@
   },
   "error_app_not_found_require_CHROMIUM_text": {
     "message": "Instale o aplicativo ExpressVPN da Google Play Store."
+  },
+  "error_app_not_found_require_LINUX_snap_text": {
+    "message": "Se você instalou seu navegador a partir do <b>Ubuntu Software Center</b>, a extensão não será capaz de se comunicar com o aplicativo Linux. [Saiba mais]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Essa extensão requer o aplicativo ExpressVPN para Linux com uma assinatura ativa."
@@ -91,13 +94,13 @@
     "message": "Verifique sua conexão com a Internet"
   },
   "error_connection_error_check_l2_text": {
-    "message": "Selecione uma [localização VPN} diferente"
+    "message": "Selecione uma [localização VPN] diferente"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Se nada mais der certo, [fale com o Suporte]."
+    "message": "Se nada mais der certo, [fale com o Suporte]"
   },
   "error_connection_error_lock_on_text": {
-    "message": "O tráfego de Internet está bloqueado no momento para proteger sua privacidade."
+    "message": "A Internet está bloqueada no momento para proteger a sua privacidade."
   },
   "error_connection_error_return_home_button_label": {
     "message": "Voltar para Início"
@@ -136,10 +139,11 @@
     "message": "Não foi possível verificar suas informações de faturamento, por isso cancelamos seu pagamento."
   },
   "error_fraudster_p1_text": {
-    "message": "Para reativar a sua assinatura,<br>envie um email"
+    "message": "Para reativar a sua assinatura,<br>envie um email para"
   },
   "error_fraudster_p2_text": {
-    "message": "linha do assunto: <span class='bold'>Billing Verification</span>."
+    "message": "linha do assunto: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
+    "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
     "message": "Inclua uma foto do cartão de crédito que usou (exibindo APENAS os últimos 4 dígitos e o nome)."
@@ -220,13 +224,13 @@
     "message": "Por favor, execute este comando em seu terminal para ativar o aplicativo de área de trabalho:"
   },
   "error_not_activated_text": {
-    "message": "Faça login no aplicativo desktop da ExpressVPN para usar esta extensão."
+    "message": "Faça login no aplicativo para desktop da ExpressVPN para usar a extensão."
   },
   "error_not_activated_title": {
     "message": "Aplicativo Não Ativado"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Se a Play Store não estiver disponível no Chromebook, siga as instruções [configuração manual]."
+    "message": "Se a Play Store não estiver disponível no Chromebook, siga as instruções  para [configuração manual]."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "Instalar a ExpressVPN"
@@ -237,6 +241,9 @@
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "O Chrome OS Não É Suportado",
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
+  },
+  "error_NOT_INSTALLED_linux_title": {
+    "message": "App não encontrado"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "Instalar  Aplicativo para Desktop"
@@ -350,7 +357,7 @@
     "message": "Não foi possível detectar uma conexão com a Internet. A VPN será conectada quando disponível."
   },
   "hint_no_internet_ready_text": {
-    "message": "Não foi possível detectar a conexão com a Internet.<br>A VPN pode estar indisponível."
+    "message": "Não foi possível detectar uma conexão com a Internet.<br>A VPN pode estar indisponível."
   },
   "hint_no_internet_reconnecting_text": {
     "message": "Conexão à Internet perdida.<br>A VPN reconectará quando disponível."
@@ -375,6 +382,158 @@
   },
   "home_change_location_popup_title": {
     "message": "Alterar Localização"
+  },
+  "home_report_issue_label": {
+    "message": "Feedback"
+  },
+  "home_report_issue_no": {
+    "message": "Não"
+  },
+  "home_report_issue_text": {
+    "message": "Você teve algum problema enquanto estava conectado?"
+  },
+  "home_report_issue_yes": {
+    "message": "Sim"
+  },
+  "issue_reporter_describe_textarea_label": {
+    "message": "Descreva seu problema"
+  },
+  "issue_reporter_header": {
+    "message": "O que aconteceu?"
+  },
+  "issue_reporter_hint_default_text": {
+    "message": "Você já tentou se conectar a um local de servidor diferente?"
+  },
+  "issue_reporter_hint_not_sent_text": {
+    "message": "Não foi possível enviar. Verifique sua conexão e tente novamente."
+  },
+  "issue_reporter_hint_opt3": {
+    "message": "Você já tentou conectar a um local de servidor no país onde o serviço que deseja acessar está baseado?"
+  },
+  "issue_reporter_hint_opt6": {
+    "message": "Você já tentou se conectar a um local de servidor diferente ou mudar o protocolo VPN?"
+  },
+  "issue_reporter_home_button_label": {
+    "message": "Página Inicial"
+  },
+  "issue_reporter_need_help_header": {
+    "message": "Precisa de ajuda?"
+  },
+  "issue_reporter_opt1": {
+    "message": "Eu vejo erros de proxy em sites de streaming de vídeo"
+  },
+  "issue_reporter_opt2": {
+    "message": "A ExpressVPN parece conectada mas não consigo navegar"
+  },
+  "issue_reporter_opt3": {
+    "message": "Não consigo acessar um site específico"
+  },
+  "issue_reporter_opt4": {
+    "message": "Eu vejo o idioma errado no Google"
+  },
+  "issue_reporter_opt5": {
+    "message": "Eu vejo muitos captchas do Google"
+  },
+  "issue_reporter_opt6": {
+    "message": "A velocidade da VPN é muito lenta"
+  },
+  "issue_reporter_opt7": {
+    "message": "Eu fico sendo desconectado"
+  },
+  "issue_reporter_opt8": {
+    "message": "Outros"
+  },
+  "issue_reporter_report_sent_header": {
+    "message": "Relatório enviado"
+  },
+  "issue_reporter_sending_button_label": {
+    "message": "Enviando..."
+  },
+  "issue_reporter_send_button_label": {
+    "message": "Enviar Relatório"
+  },
+  "issue_reporter_share_website_label": {
+    "message": "Compartilhar site com a ExpressVPN"
+  },
+  "issue_reporter_support_button_label": {
+    "message": "Contatar Suporte"
+  },
+  "issue_reporter_thank_you_message": {
+    "message": "Obrigado por ajudar a melhorar o serviço para todos os clientes da ExpressVPN."
+  },
+  "issue_reporter_title": {
+    "message": "Reportar uma falha"
+  },
+  "issue_reporter_website_label": {
+    "message": "Site"
+  },
+  "language_dropdown_danish": {
+    "message": "Dinamarquês (Dansk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_dutch": {
+    "message": "Holandês (Nederlands)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_english": {
+    "message": "Inglês (English)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_finnish": {
+    "message": "Finlandês (Suomi)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_french": {
+    "message": "Francês (Français)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_german": {
+    "message": "Alemão (Deutsch)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_italian": {
+    "message": "Italiano (Italiano)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_japanese": {
+    "message": "Japonês (日本語)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_korean": {
+    "message": "Coreano (한국어)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_norwegian": {
+    "message": "Norueguês (Norsk)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_polish": {
+    "message": "Polonês (Polski)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_portuguese": {
+    "message": "Português (Português)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_russian": {
+    "message": "Russo (Русский)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_spanish": {
+    "message": "Espanhol (Español)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_swedish": {
+    "message": "Sueco (Svenska)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_thai": {
+    "message": "Tailandês (ภาษาไทย)",
+    "description": "Do not translate the text between parentheses"
+  },
+  "language_dropdown_turkish": {
+    "message": "Turco (Türkçe)",
+    "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
     "message": "Suporte ao cliente 24/7"
@@ -533,21 +692,6 @@
   "menu_privacy_hide_location_text": {
     "message": "Falsificar sua localização "
   },
-  "menu_ratevpn_btn0": {
-    "message": "Deixe uma avaliação 5 estrelas!"
-  },
-  "menu_ratevpn_btn1": {
-    "message": "Como podemos melhorar?"
-  },
-  "menu_ratevpn_btn2": {
-    "message": "Mais tarde"
-  },
-  "menu_ratevpn_text": {
-    "message": "Esperamos que  esteja gostando de usar a ExpressVPN!  Você se importaria em dar sua opinião?"
-  },
-  "menu_ratevpn_title": {
-    "message": "Está Gostando da ExpressVPN?"
-  },
   "menu_rate_expressvpn": {
     "message": "Avalie a ExpressVPN"
   },
@@ -617,21 +761,6 @@
   "menu_signout_text": {
     "message": "Sair"
   },
-  "message_item_rating1_title": {
-    "message": "Está gostando da ExpressVPN?"
-  },
-  "message_item_rating2_title": {
-    "message": "Como podemos melhorar?"
-  },
-  "message_item_rating3_title": {
-    "message": "Gostaria de dar sua opinião?"
-  },
-  "message_item_rating_cancel_button_title": {
-    "message": "Não, Obrigado"
-  },
-  "message_item_rating_primary_button_title": {
-    "message": "OK"
-  },
   "myaccount_account_active_p1_text": {
     "message": "Compartilhe a ExpressVPN e ganhe serviço grátis!"
   },
@@ -645,7 +774,7 @@
     "message": "Expira"
   },
   "myaccount_account_renews_label": {
-    "message": "Renovar"
+    "message": "Renova"
   },
   "myaccount_account_status_active_text": {
     "message": "Ativa"
@@ -794,6 +923,33 @@
   "promo_bar_subscription_expiring_soon_renew_now_button_label": {
     "message": "Renovar agora"
   },
+  "rating_improve_header": {
+    "message": "Como podemos melhorar?"
+  },
+  "rating_improve_report_button": {
+    "message": "Informar um problema"
+  },
+  "rating_improve_suggest_button": {
+    "message": "Sugerir uma melhoria"
+  },
+  "rating_no_thanks_text": {
+    "message": "Não, obrigado"
+  },
+  "rating_prompt_header": {
+    "message": "O quanto você gosta da ExpressVPN?"
+  },
+  "rating_prompt_ok_button": {
+    "message": "OK"
+  },
+  "rating_thanks4_text": {
+    "message": "Obrigado por sua avaliação!"
+  },
+  "rating_thanks_@chrome@_text": {
+    "message": "Obrigado! Que tal nos avaliar na Chrome Web Store?"
+  },
+  "rating_thanks_@firefox@_text": {
+    "message": "Obrigado! Que tal nos avaliar na Add-ons Store do Firefox?"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN Conectada"
   },
@@ -834,10 +990,10 @@
     "message": "Começar Agora"
   },
   "welcome_screen1_p1_text": {
-    "message": "A extensão ExpressVPN é um controle remoto para o aplicativo da área de trabalho."
+    "message": "A extensão ExpressVPN é um controle remoto para o aplicativo para desktop."
   },
   "welcome_screen2_p1_text": {
-    "message": "Quando você está conectado à VPN, ele protege todo o seu dispositivo, não apenas o navegador."
+    "message": "Quando você está conectado à VPN, ela protege todo o seu dispositivo, não apenas o navegador."
   },
   "welcome_screen3_learn_more_text": {
     "message": "Saiba mais"

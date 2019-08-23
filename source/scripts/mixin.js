@@ -5,7 +5,7 @@ Licensed GPL v2
 */
 import UAParser from 'ua-parser-js';
 import { mapGetters } from 'vuex';
-import utils from './modules/utils';
+import * as utils from './modules/utils';
 import locationPicker from './modules/locationPicker';
 
 export default {
@@ -52,7 +52,7 @@ export default {
         }
       }
       if (currentLangObj !== null) {
-        dateStr = expiryDate.toLocaleDateString(this.currentInfo.locale, optionEl);
+        dateStr = expiryDate.toLocaleDateString(this.currentInfo.locale.replace('_', '-'), optionEl);
       } else {
         dateStr = expiryDate.toLocaleDateString('en-us', optionEl).replace(/[^ -~]/g, '');
       }

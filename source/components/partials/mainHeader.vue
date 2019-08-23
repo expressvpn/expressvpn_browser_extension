@@ -58,7 +58,11 @@ export default {
       if (subscriptionObj.status === 'ACTIVE' && this.utils.isLastInAppPurchasesFailure(subscriptionObj) &&
           this.utils.getTimeDelta(subscriptionObj.expiration_time).days > -10 && this.utils.getTimeDelta(subscriptionObj.expiration_time).days <= 1) {
         notification = 'iap_failed';
-      } else if (this.isRegularUser() && this.isExpiringSoon()) {
+      } else if (this.hasSubscriptionExpired() && !this.isRenewable()) {
+        notification = 'subscription_expired';
+      } else if (this.hasSubscriptionExpired() && this.isRenewable()) {
+        notification = 'subscription_expiring_autobill';
+      } else if (this.isRegularUser() && this.isExpiringSoon() && !this.isRenewable()) {
         notification = 'subscription_expiring_soon';
       } else if (subscriptionObj.status === 'FREE_TRIAL_ACTIVE' && !this.utils.isInAppPurchasesRenewable(subscriptionObj)) {
         notification = 'free_trial_expiring_soon';
@@ -96,6 +100,8 @@ export default {
       let locKey = `promobar_${this.currentNotification}_text`;
       if (this.currentNotification === 'subscription_expiring_soon') {
         locKey = 'promobar_subscription_expiring_soon_renewable_' + this.isRenewable().toString() + '_text';
+      } else if (this.currentNotification === 'subscription_expired') {
+        locKey = 'promo_bar_subscription_expiring_soon_renew_now_button_label';
       }
       return this.localize(locKey);
     },
@@ -135,6 +141,14 @@ export default {
               url += '?utm_campaign=renew_subscription&utm_content=promobar_renew_now_now&utm_medium=apps&utm_source=extension';
             }
           }
+          break;
+        case 'subscription_expired':
+          this.currentInfo.state = 'subscription_expiring';
+          this.$store.dispatch('updateCurrentInfo', this.currentInfo);
+          break;
+        case 'subscription_expiring_autobill':
+          this.currentInfo.state = 'subscription_expiring_autobill';
+          this.$store.dispatch('updateCurrentInfo', this.currentInfo);
           break;
         case 'free_trial_expiring_soon':
           url = this.currentInfo.website_url + '/order?source=free-trial&utm_campaign=free_trial&utm_content=promobar_free_trial_upgrade_now&utm_medium=apps&utm_source=extension';
@@ -188,7 +202,7 @@ export default {
     }
   }
 
-  &.iap_failed {
+  &.iap_failed, &.subscription_expired, &.subscription_expiring_autobill {
     background-color: $red-40;
     * {
       color: $red-10 !important;
