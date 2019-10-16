@@ -104,7 +104,7 @@ export default {
       self.isMounting = false;
     });
   },
-  mounted() {
+  created() {
     this.isMounting = true;
     let self = this;
     chrome.storage.local.get(null, function (storage) {
@@ -183,6 +183,7 @@ export default {
     label {
       color: $black-20;
       font-size: 18px;
+      width: calc(100% - 32px);
     }
 
     .select-container {

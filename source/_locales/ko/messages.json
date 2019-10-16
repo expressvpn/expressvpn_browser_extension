@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "취소"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "연결 제한에 도달했습니다."
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "장치의 연결을 해제하시거나 [추가 정액제를 구입해주세요]."
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "장치의 연결을 해제하세요."
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "더 보기"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "확인"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "이 정액제에 대한 ExpressVPN 장치 사용 제한을 초과하셨습니다."
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "장치의 연결을 해제하시거나, [추가 정액제를 구입해주세요]."
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "취소"
   },
-  "error_simultaneous_connection_title": {
-    "message": "연결 제한에 도달했습니다."
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "확인"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "이 링크를 열면 모든 인터넷 트래픽이 차단됩니다."
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "인터넷 차단 해제"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "결제 정보 업데이트"
@@ -338,6 +356,30 @@
   "error_subscription_expired_title": {
     "message": "정액제가 만료되었습니다"
   },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "다음에"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "ExpressVPN을 계속 사용하시려면, 결제 정보를 업데이트해주세요."
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "결제 실패"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "결제 정보 업데이트"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "다음에"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "ExpressVPN을 계속 사용하시려면, 정액제를 갱신해주세요."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "지금 갱신하세요"
+  },
+  "error_subscription_expiring_title": {
+    "message": "정액제 만료"
+  },
   "error_upgrade_app_button_label": {
     "message": "지금 업데이트"
   },
@@ -386,23 +428,17 @@
   "home_report_issue_label": {
     "message": "피드백"
   },
-  "home_report_issue_no": {
-    "message": "아니요"
-  },
   "home_report_issue_text": {
-    "message": "연결 되어 있는 동안 문제가 있었나요?"
-  },
-  "home_report_issue_yes": {
-    "message": "예"
+    "message": "연결이 어땠나요?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "문제를 설명해주세요"
   },
   "issue_reporter_header": {
-    "message": "무슨일이 있었나요?"
+    "message": "어떤 문제가 있었나요?"
   },
   "issue_reporter_hint_default_text": {
-    "message": "다른 서버 위치에 연결애 보셨나요?"
+    "message": "다른 서버 위치에 연결해 보셨나요?"
   },
   "issue_reporter_hint_not_sent_text": {
     "message": "전송할 수 없습니다. 연결을 확인하시고 다시 시도해주세요."
@@ -435,7 +471,7 @@
     "message": "Google 캡차가 너무 많이 나타납니다"
   },
   "issue_reporter_opt6": {
-    "message": "VPN 스피드가 매우 느립니다"
+    "message": "VPN 속도가 매우 느립니다"
   },
   "issue_reporter_opt7": {
     "message": "연결이 계속 끊어집니다"
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "속도 테스트 실행 중"
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span>에 개인 정보(예: 은행 세부 정보, 사진, 비밀번호, 메시지)를 삭제하거나 도용할 수 있는 위험한 소프트웨어가 포함되어있을 수 있습니다. [더 보기]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "위험: 멀웨어 위험이 있습니다"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "안전한 곳으로 돌아가기"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "그래도 진행"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "해당 위험성을 이해합니다"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "정말이세요?"
-  },
   "menu_beta_feedback": {
     "message": "베타 피드백 전송"
   },
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "WebRTC 유출 테스트"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "키보드 단축키로 열기"
+  },
   "menu_myaccount_title": {
     "message": "계정"
   },
   "menu_my_account": {
     "message": "계정"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "멀웨어 & 피싱 보호"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "WebRTC 차단"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "지원"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "사기 사이트를 차단하고 비밀리에 암호화폐를 마인하는 광고를 막습니다."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "VPN에 연결되어있는 동안 웹사이트가 고객님의 실제 IP 주소와 위치를 확인하지 못하도록 합니다."
   },
@@ -773,6 +788,9 @@
   "myaccount_account_expiry_label": {
     "message": "만료일"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "지불 기한이 지났습니다"
+  },
   "myaccount_account_renews_label": {
     "message": "갱신"
   },
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "계정 관리"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "정액제 관리"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "정액제를 구입해야 하는 이유"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "갱신해야 하는 이유"
   },
+  "networkLock_cancel_button_label": {
+    "message": "취소"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN 연결 완료"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "기다려주세요"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "연결할 수 없습니다"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "기다려주세요"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "잠시 후 다시 연결됩니다."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
+  },
+  "networkLock_status_connected_text": {
+    "message": "<b>%LOCATION%</b>에 연결되었습니다."
+  },
+  "networkLock_status_connecting_text": {
+    "message": "<b>%LOCATION%</b>에 연결중입니다. 기다려주세요..."
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "<b>%LOCATION%</b>에 연결할 수 없습니다."
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "<b>%LOCATION%</b>에 다시 연결중입니다. 기다려주세요..."
+  },
+  "networkLock_try_again_button_label": {
+    "message": "다시 시도"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "인터넷 차단 해제"
+  },
   "notification_extension_update_message": {
     "message": "클릭하여 %VERSION% 버전의 새로운 기능을 확인하세요"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN이 업데이트되었습니다"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span>에 사용자를 속여 개인 정보(예: 은행 세부 정보, 사진, 비밀번호, 메시지)를 노출하도록 고안된 소프트웨어나 컨텐츠가 포함되어있을 수 있습니다. [더 보기]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "위험: 피싱 위험이 있습니다"
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "무료 체험이 [days]일 내에 종료됩니다"
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "설정을 확인하세요"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "정액제가 곧 만료됩니다"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "마지막 결제가 실패했습니다"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "결제 정보 업데이트"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "정액제가 [days]일 내에 만료됩니다"

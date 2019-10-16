@@ -67,6 +67,8 @@ export default {
       }
     },
     requestUnblock(ev, caller) {
+      if (ev.target.tagName !== 'A' && caller === 'LINK') return;
+      
       if (this.lockStatus === 'on') {
         this.popupOptions = {
           id: 'error_simultaneous_connection_popup',

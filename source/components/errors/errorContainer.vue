@@ -39,7 +39,7 @@ export default {
       let allErrorComponents = getAllErrorComponents();
       let importName = this.currentInfo.state;
 
-      if (!this.isTrialUser() && this.isPaymentMethodIAP() && this.isLastInAppPurchasesFailure()) {
+      if (!this.isTrialUser() && this.isPaymentMethodIAP() && this.isLastInAppPurchasesFailure() && importName !== 'not_activated') {
         importName = 'iapError';
       } else if (Object.prototype.hasOwnProperty.call(allErrorComponents, importName) === false) {
         importName = 'defaultError';
@@ -82,6 +82,19 @@ export default {
 
   .bold {
     font-family: proximaNova-Semibold;
+  }
+
+  .code {
+    background: $gray-10;
+    border-radius: 4px;
+    height: 44px;
+    color: $gray-50;
+    font-family: CourierNewPS-BoldMT;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    user-select: text;
   }
 }
 

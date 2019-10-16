@@ -49,7 +49,7 @@ module.exports = {
         "allow": [
           "country_code", "is_smart_location", "is_country", "latest_version", "latest_version_url",
           "last_location", "website_url", "app_version", "include_default_location", "selected_location", 
-          "is_default"
+          "is_default", "is_auto_connect"
         ]
       }
     ],

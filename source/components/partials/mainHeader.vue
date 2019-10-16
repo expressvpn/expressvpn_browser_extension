@@ -99,7 +99,7 @@ export default {
     notificationBodyText() {
       let locKey = `promobar_${this.currentNotification}_text`;
       if (this.currentNotification === 'subscription_expiring_soon') {
-        locKey = 'promobar_subscription_expiring_soon_renewable_' + this.isRenewable().toString() + '_text';
+        locKey = 'promobar_subscription_expiring_soon_renewable_true_text';
       } else if (this.currentNotification === 'subscription_expired') {
         locKey = 'promo_bar_subscription_expiring_soon_renew_now_button_label';
       }

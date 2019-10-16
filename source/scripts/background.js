@@ -82,9 +82,6 @@ const MIN_APP_VERSION = {
     chrome.storage.sync.get('rating', (storage) => {
       if (typeof storage.rating !== 'undefined') {
         currentInfo.ratingData = storage.rating;
-        currentInfo.ratingData.activatedDate = (currentInfo.ratingData.activatedDate === 0) ? Date.now() / 1000 : currentInfo.ratingData.activatedDate;
-        currentInfo.ratingData.successfulConnections = (currentInfo.ratingData.successfulConnections > 0) ? currentInfo.ratingData.successfulConnections : 0;
-        chrome.storage.sync.set({ 'rating': currentInfo.ratingData });
       }
     });
   }
@@ -147,6 +144,11 @@ const MIN_APP_VERSION = {
     switch (name) {
       case 'WaitForNetworkReady':
         currentInfo.hasInternet = (data.result === 'has internet');
+        break;
+      case 'VPNClustersUpdated':
+      case 'SmartLocationChanged':
+        com.getLocationList();
+        com.getStatus();
         break;
       case 'ServiceStateChanged':
         switch (data.newstate) {
@@ -246,9 +248,6 @@ const MIN_APP_VERSION = {
           }
         }
         break;
-      case 'VPNClustersUpdated':
-        com.getLocationList();
-        break;
       default:
         break;
     }
@@ -273,7 +272,7 @@ const MIN_APP_VERSION = {
       if ((prefs['chrome.auto_connect'] === true) && (currentInfo.state === 'ready') && (currentInfo.recent_locations_ids.length > 0)) {
         let lastLocation = locationPicker.getLocationById(allLocationsList, currentInfo.recent_locations_ids[0]);
         com.selectLocation(lastLocation);
-        com.connectToLocation(lastLocation);
+        com.connectToLocation(lastLocation, { isAutoConnect: true });
       }
     } else {
       setTimeout(waitForCurrentInfo, 50);
@@ -367,9 +366,6 @@ const MIN_APP_VERSION = {
         default:
           break;
       }
-    } else if (message.clicked5star) {
-      currentInfo.ratingData.everClickedMaxRating = true;
-      setRatingConfig();
     } else if (message.customLocation) {
       com.openLocationPicker();
     } else if (message.getLocations) {
@@ -393,7 +389,7 @@ const MIN_APP_VERSION = {
         com.selectLocation(currentInfo.selectedLocation);
         com.connectToLocation(currentInfo.selectedLocation);
       } else if (currentInfo.state === 'connected') {
-        com.connectToLocation(currentInfo.selectedLocation, true);
+        com.connectToLocation(currentInfo.selectedLocation, { connectWhileConnected: true });
       }
     } else if (message.reconnect) {
       com.retryConnect();
@@ -456,11 +452,17 @@ const MIN_APP_VERSION = {
     }
   });
 
+  chrome.storage.onChanged.addListener(changes => {
+    if (changes.rating) {
+      setRatingConfig();
+    }
+  });
   chrome.webRequest.onBeforeRequest.addListener(details => {
     if (
       details.method === 'GET'
       && currentInfo.preferences.traffic_guard_level
       && ['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state)
+      && myBrowser.name !== 'Firefox'
     ) {
       return { redirectUrl: `${chrome.runtime.getURL('/html/networkLock.html')}?url=${details.url}` };
     }
@@ -476,7 +478,6 @@ const MIN_APP_VERSION = {
       return false;
     }
     const message = event.data;
-
     switch (message.method) {
       case 'updateLocationsData':
         recommendedLocationsList = utils.sortAndGroupBy(message.data.recommended || [], 'country', filterByProtocol);
@@ -548,9 +549,10 @@ const MIN_APP_VERSION = {
         }
         currentInfo.website_url = message.currentInfo.website_url || currentInfo.website_url;
         currentInfo.raw = message.currentInfo.raw;
-        if (currentInfo.raw.current_location && currentInfo.raw.connection) {
+        if (currentInfo.raw.state === 'connected' && currentInfo.raw.current_location && currentInfo.raw.connection) {
           currentInfo.previousConnection = { id: currentInfo.raw.current_location.id, protocol: currentInfo.raw.connection.protocol };
         }
+
         updateStatus('ServiceStateChanged', { newstate: message.currentInfo.state });
         break;
       case 'connectedToHelper':

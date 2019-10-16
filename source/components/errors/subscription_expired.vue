@@ -24,7 +24,7 @@ Licensed GPL v2
       <li>{{ localize(`error_${localeKey}_l4_text`) }}</li>
     </ul>
     <div class="button-container">
-      <button class="button-primary" @click="openLink">{{ localize(localeKey === 'subscription_expired' ? 'error_subscription_expired_buy_subscription_button_label' : 'error_free_trial_expired_upgrade_now_button_label') }}</button>
+      <button class="button-primary" @click="openLink">{{ localize(localeKey === 'subscription_expired' ? 'error_subscription_expired_buy_subscription_button_label' : 'error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label') }}</button>
       <button class="button-secondary" @click="resetState">{{ localize('error_signout_button') }}</button>
     </div>
   </div>

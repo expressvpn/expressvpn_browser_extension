@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "Cancelar"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "Limite de conexões atingido."
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "Desconecte um dispositivo ou [compre uma assinatura adicional]."
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "Desconecte um dispositivo."
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "Saiba Mais"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "OK"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "Você atingiu o limite de uso de dispositivos da ExpressVPN para esta assinatura."
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "Por favor, desconecte um dispositivo ou [adquira uma assinatura adicional]."
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "Cancelar"
   },
-  "error_simultaneous_connection_title": {
-    "message": "Limite de conexões atingido."
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "OK"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "Abrir este link irá desbloquear todo o tráfego da internet."
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "Desbloquear a Internet"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Atualizar Dados"
@@ -338,6 +356,30 @@
   "error_subscription_expired_title": {
     "message": "A assinatura expirou"
   },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "Mais tarde"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "Para continuar a usar a ExpressVPN, atualize seus dados de pagamento."
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "O Pagamento Falhou"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "Atualizar Dados de Pagamento"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "Mais tarde"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "Para continuar a usar a ExpressVPN, renove sua assinatura."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "Renovar Agora"
+  },
+  "error_subscription_expiring_title": {
+    "message": "Assinatura Expirando"
+  },
   "error_upgrade_app_button_label": {
     "message": "Atualizar Agora"
   },
@@ -386,14 +428,8 @@
   "home_report_issue_label": {
     "message": "Feedback"
   },
-  "home_report_issue_no": {
-    "message": "Não"
-  },
   "home_report_issue_text": {
-    "message": "Você teve algum problema enquanto estava conectado?"
-  },
-  "home_report_issue_yes": {
-    "message": "Sim"
+    "message": "Como estava sua conexão?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "Descreva seu problema"
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Teste de Velocidade em execução"
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span> pode conter softwares perigosos que podem excluir ou roubar informações pessoais (por exemplo, dados bancários, fotos, senhas, mensagens). [Saiba mais]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "Perigo: Malware à Frente"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "Voltar para a Segurança "
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "Prosseguir Mesmo Assim"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "Eu Entendo os Riscos"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "Tem certeza?"
-  },
   "menu_beta_feedback": {
     "message": "Enviar Feedback sobre Beta"
   },
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "Teste de Vazamento de WebRTC"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "Abrir com atalho do teclado"
+  },
   "menu_myaccount_title": {
     "message": "Conta"
   },
   "menu_my_account": {
     "message": "Conta"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "Proteção contra malware e phishing"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Bloquear WebRTC"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "Ajuda"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "Bloqueie sites fraudulentos e impeça anúncios que minam criptomoeda secretamente."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Impeça que os sites descubram o seu endereço IP e localização verdadeiros enquanto estiver conectado à VPN."
   },
@@ -773,6 +788,9 @@
   "myaccount_account_expiry_label": {
     "message": "Expira"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "Pagamento devido desde"
+  },
   "myaccount_account_renews_label": {
     "message": "Renova"
   },
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "Gerenciar Conta"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "Gerenciar Assinatura"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "Por que obter uma assinatura?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Por que renovar?"
   },
+  "networkLock_cancel_button_label": {
+    "message": "Cancelar"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN Conectada"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "Por Favor Aguarde"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "Não foi possível se conectar"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "Por Favor Aguarde"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "Você será redirecionado em breve."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "A Internet está bloqueada no momento para proteger a sua privacidade."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "A Internet está bloqueada no momento para proteger a sua privacidade."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "A Internet está bloqueada no momento para proteger a sua privacidade."
+  },
+  "networkLock_status_connected_text": {
+    "message": "Conectado a <b>%LOCATION%</b>."
+  },
+  "networkLock_status_connecting_text": {
+    "message": "Conectando a <b>%LOCATION%</b>. Por favor aguarde..."
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "Não foi possível se conectar a <b>%LOCATION%</b>."
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "Reconectando a <b>%LOCATION%</b>. Por favor aguarde..."
+  },
+  "networkLock_try_again_button_label": {
+    "message": "Tentar Novamente"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "Desbloquear a Internet"
+  },
   "notification_extension_update_message": {
     "message": "Clique para ver as novidades da versão %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN Atualizada"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> pode conter conteúdo ou software projetado para induzi-lo a revelar informações pessoais (por exemplo, dados bancários, fotos, senhas, mensagens). [Saiba mais]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "Perigo: Phishing à Frente"
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "A avaliação gratuita expira em [days] dias"
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "Revisar configurações"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "Sua assinatura está expirando"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "Falha no último pagamento"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "Atualizar dados de pagamento"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "A assinatura expira em [days] dias"

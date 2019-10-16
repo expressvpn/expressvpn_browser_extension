@@ -34,7 +34,7 @@ const app = new Vue({
           msgNumber = (msgNumber + 1 >= storage.messages.length) ? 0 : msgNumber + 1;
         }
         return message;
-      }()), 5 * 60 * 1000);
+      }()), 30 * 60 * 1000);
     });
   },
   computed: mapGetters([

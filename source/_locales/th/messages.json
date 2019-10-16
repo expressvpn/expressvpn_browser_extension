@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "ยกเลิก"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "ถึงขีดจำกัดการเชื่อมต่อแล้ว"
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "โปรดยกเลิกการเชื่อมต่ออุปกรณ์หรือ [ซื้อการสมัครสมาชิกเพิ่มเติม]"
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "กรุณาตัดการเชื่อมต่ออุปกรณ์"
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "เรียนรู้เพิ่มเติม"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "ตกลง"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "คุณได้ใช้เกินขีดจำกัดการใช้อุปกรณ์ ExpressVPN สำหรับการสมัครนี้แล้ว"
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "โปรดยกเลิกการเชื่อมต่ออุปกรณ์หรือ [ซื้อการสมัครสมาชิกเพิ่มเติม]"
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "ยกเลิก"
   },
-  "error_simultaneous_connection_title": {
-    "message": "ถึงขีดจำกัดการเชื่อมต่อแล้ว"
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "ตกลง"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "การเปิดลิงค์นี้จะเป็นการปลดบล็อคการรับส่งข้อมูลทางอินเทอร์เน็ตทั้งหมด"
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "ปลดบล็อกอินเทอร์เน็ต"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "อัปเดตรายละเอียดการชำระเงิน"
@@ -338,6 +356,30 @@
   "error_subscription_expired_title": {
     "message": "การสมัครสมาชิกหมดอายุแล้ว"
   },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "ครั้งหน้า"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดอัปเดตรายละเอียดการชำระเงินของคุณ"
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "การชำระเงินล้มเหลว"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "อัปเดตรายละเอียดการชำระเงิน"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "ครั้งหน้า"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดต่ออายุการสมัครของคุณ"
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "ต่ออายุตอนนี้"
+  },
+  "error_subscription_expiring_title": {
+    "message": "การสมัครสมาชิกกำลังหมดอายุ"
+  },
   "error_upgrade_app_button_label": {
     "message": "อัปเดตตอนนี้"
   },
@@ -386,14 +428,8 @@
   "home_report_issue_label": {
     "message": "ข้อเสนอแนะ"
   },
-  "home_report_issue_no": {
-    "message": "ไม่"
-  },
   "home_report_issue_text": {
-    "message": "คุณประสบปัญหาขณะเชื่อมต่อหรือไม่?"
-  },
-  "home_report_issue_yes": {
-    "message": "ใช่"
+    "message": "การเชื่อมต่อของคุณเป็นอย่างไร?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "อธิบายปัญหาของคุณ"
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "กำลังใช้งานการทดสอบความเร็ว..."
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span> อาจมีซอฟต์แวร์อันตรายที่สามารถลบหรือขโมยข้อมูลส่วนบุคคล (อาทิเช่น รายละเอียด ธนาคาร รูปภาพ รหัสผ่าน ข้อความ)[เรียนรู้&nbsp;เพิ่มเติม]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "อันตราย: มัลแวร์ล่วงหน้า"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "กลับสู่ความปลอดภัย"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "ดำเนินการต่อ"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "ฉันเข้าใจถึงความเสี่ยง"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "คุณแน่ใจหรือไม่?"
-  },
   "menu_beta_feedback": {
     "message": "ส่งข้อเสนอแนะเบต้า"
   },
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "การทดสอบการรั่วไหล WebRTC"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "เปิดด้วยแป้นพิมพ์ลัด"
+  },
   "menu_myaccount_title": {
     "message": "บัญชี"
   },
   "menu_my_account": {
     "message": "บัญชี"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "การป้องกันมัลแวร์และฟิชชิ่ง"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "บล็อก WebRTC"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "ช่วยเหลือ"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "บล็อกไซต์ที่หลอกลวงและป้องกันไม่ให้โฆษณาแอบขุด cryptocurrency"
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "ป้องกันไม่ให้เว็บไซต์ค้นพบที่อยู่ IP จริงและตำแหน่งของคุณในขณะที่เชื่อมต่อกับ VPN"
   },
@@ -773,6 +788,9 @@
   "myaccount_account_expiry_label": {
     "message": "หมดอายุ"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "ครบกำหนดชำระเงินตั้งแต่"
+  },
   "myaccount_account_renews_label": {
     "message": "ต่ออายุ"
   },
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "จัดการบัญชี"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "จัดการการสมัครสมาชิก"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "ทำไมต้องสมัครสมาชิก?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "ทำไมต้องต่ออายุ?"
   },
+  "networkLock_cancel_button_label": {
+    "message": "ยกเลิก"
+  },
+  "networkLock_header_connected_text": {
+    "message": "เชื่อมต่อ VPN แล้ว"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "กรุณาเตรียมพร้อม"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "ไม่สามารถเชื่อมต่อ"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "กรุณาเตรียมพร้อม"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "คุณจะถูกเปลี่ยนเส้นทางในไม่ช้า"
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "ปัจจุบันการใช้งานอินเทอร์เน็ตถูกบล็อกเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "ปัจจุบันการใช้งานอินเทอร์เน็ตถูกบล็อกเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "ปัจจุบันการใช้งานอินเทอร์เน็ตถูกบล็อกเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
+  },
+  "networkLock_status_connected_text": {
+    "message": "เชื่อมต่อกับ <b>%LOCATION%</b>"
+  },
+  "networkLock_status_connecting_text": {
+    "message": "เชื่อมต่อกับ <b>%LOCATION%</b> กรุณาเตรียมพร้อม…"
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "ไม่สามารถเชื่อมต่อกับ<br>%LOCATION%"
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "กำลังเชื่อมต่อใหม่กับ <b>%LOCATION%</b> กรุณาเตรียมพร้อม…"
+  },
+  "networkLock_try_again_button_label": {
+    "message": "ลองอีกครั้ง"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "ปลดบล็อกอินเทอร์เน็ต"
+  },
   "notification_extension_update_message": {
     "message": "คลิกเพื่อดูว่ามีอะไรใหม่ในเวอร์ชัน %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN อัปเดตแล้ว"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> อาจมีเนื้อหาหรือซอฟต์แวร์ที่ออกแบบมาเพื่อหลอกลวงให้คุณเปิดเผยข้อมูลส่วนบุคคล (อาทิเช่น รายละเอียด ธนาคาร รูปภาพ รหัสผ่าน ข้อความ) [เรียนรู้&nbsp;เพิ่มเติม]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "อันตราย: ฟิชชิ่งล่วงหน้า"
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "การทดลองใช้ฟรีหมดอายุในอีก [days] วัน"
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "ตรวจสอบการตั้งค่า"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "การสมัครของคุณใกล้จะหมดอายุ"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "การชำระเงินครั้งล่าสุดของคุณล้มเหลว"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "อัปเดตรายละเอียดการชำระเงิน"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "การสมัครสมาชิกหมดอายุใน [days] วัน "

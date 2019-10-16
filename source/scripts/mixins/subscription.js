@@ -102,7 +102,7 @@ export default {
 
       if (this.getTimeToExpiry().rawDifference < 0) {
         accountState = 'expired';
-      } else if (this.getTimeToExpiry().days < this.DAYS_TO_EXPIRING_STATE && !this.isRenewable()) {
+      } else if (this.getTimeToExpiry().days < this.DAYS_TO_EXPIRING_STATE && !this.isRenewable() && this.subscription.plan_type !== 'business') {
         accountState = 'expiring';
       } else {
         accountState = 'active';

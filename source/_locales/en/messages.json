@@ -114,6 +114,9 @@
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
     "message": "Get Subscription"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Get Subscription"
+  },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_sub_button_label": {
     "message": "Sign Out"
   },
@@ -352,6 +355,9 @@
   "error_subscription_expired_l1_text": {
     "message": "Apps for every device"
   },
+  "error_subscription_expired_l2_text": {
+    "message": "Refer friends, get 30 days free"
+  },
   "error_subscription_expired_l3_text": {
     "message": "160 locations worldwide"
   },
@@ -402,6 +408,9 @@
   },
   "error_forced_signout_p2_text": {
     "message": "To continue using ExpressVPN, please sign in again."
+  },
+  "error_forced_signout_p2_linux_text": {
+    "message": "To continue using ExpressVPN, please run this command in your terminal to sign in again:"
   },
   "error_forced_signout_signin_button_label": {
     "message": "Sign In"
@@ -998,7 +1007,7 @@
     "message": "I can't access a certain website"
   },
   "issue_reporter_opt4": {
-    "message": "I see incorrect language on Google"
+    "message": "Website displays incorrect language or currency"
   },
   "issue_reporter_opt5": {
     "message": "I see too many Google captchas"
@@ -1020,12 +1029,7 @@
   },
   "issue_reporter_website_label": {
     "message": "Website"
-  }
-
-
-
-
-  ,
+  },
   "networkLock_header_connecting_text": {
     "message": "Please Stand By"
   },
@@ -1039,10 +1043,10 @@
     "message": "Unable to Connect"
   },
   "networkLock_status_connecting_text": {
-    "message": "Connecting to <b>%LOCATION%</b>. Please stand by…"
+    "message": "Connecting to <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Reconnecting to <b>%LOCATION%</b>. Please stand by…"
+    "message": "Reconnecting to <b>%LOCATION%</b>."
   },
   "networkLock_status_connected_text": {
     "message": "Connected to <b>%LOCATION%</b>."
