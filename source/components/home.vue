@@ -109,12 +109,23 @@ export default {
         localStorage.setItem('timesShown', JSON.stringify(timesShown));
       }
     },
+    showRatingPrompt: function(newVal, oldVal) {
+      if (newVal === true && oldVal === false) {
+        chrome.storage.sync.get('rating', (storage) => {
+          if (typeof storage.rating !== 'undefined') {
+            let ratingData = storage.rating;
+            ratingData.lastFailedRateDate = (new Date()).getTime();
+            chrome.storage.sync.set({ 'rating': ratingData });
+            this.forceRatingPrompt = true;
+          }
+        });
+      }
+    },
   },
   computed: {
     showIssueReporterPrompt() {
       let diffTime = this.NOW - this.currentInfo.hasCurrentStateSince;
       return (
-        this.currentInfo.locale === 'en' &&
         this.currentInfo.state === 'ready' &&
         this.currentInfo.ratingData.previousConnectionTime < 5 * 60 &&
         diffTime > 0 && diffTime < 10 * 1000 &&
@@ -126,8 +137,8 @@ export default {
       const rating = this.currentInfo.ratingData;
 
       if (rating) {
-        const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || 0;
-        const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || 0;
+        const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || rating.lastDiscardDate;
+        const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || rating.lastFailedRateDate;
 
         return (
           rating.isSubscriber === true &&
@@ -138,7 +149,6 @@ export default {
           this.daysBetween(this.NOW, lastDiscardDate) > 30 &&
           this.daysBetween(this.NOW, lastFailedRateDate) > 10 &&
           this.currentInfo.os !== 'LINUX' &&
-          this.currentInfo.locale === 'en' &&
           this.currentInfo.state === 'connected'
         ) || (this.forceRatingPrompt === true);
       }
@@ -164,7 +174,7 @@ export default {
       }
 
       for (let location of this.locationPicker.getRecentLocations(this.currentInfo.allLocationsList, this.currentInfo.recent_locations_ids)) {
-        if (location.id !== this.selectedLocation.id && location.id !== this.currentInfo.smartLocation.id) {
+        if (location && location.id !== this.selectedLocation.id && location.id !== this.currentInfo.smartLocation.id) {
           locationList.push(Object.assign({}, location, { type: 'recent' }));
         }
       }
@@ -210,7 +220,6 @@ export default {
       }
     },
     onDiscardRatingPrompt() {
-      localStorage.setItem('lastDiscardDate', (new Date()).getTime());
       this.discardPrompt = true; // trigger computed
       this.forceRatingPrompt = false;
     },

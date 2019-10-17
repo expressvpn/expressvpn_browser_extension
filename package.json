@@ -1,13 +1,14 @@
 {
   "name": "xv_chrome",
-  "version": "4.4.0",
+  "version": "4.5.1",
   "description": "ExpressVPN browser extension",
   "author": "ExpressVPN",
   "license": "GPLv2",
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack --hide-modules",
     "build": "cross-env NODE_ENV=development webpack --hide-modules",
-    "watch": "cross-env HMR=true npm run build -- --watch"
+    "watch": "cross-env HMR=true npm run build -- --watch",
+    "screenshots": "node test/screenshots/index.js"
   },
   "dependencies": {
     "timeago.js": "^4.0.0-beta.2",

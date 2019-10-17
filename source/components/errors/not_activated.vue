@@ -57,15 +57,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.code {
-  background: $gray-10;
-  border-radius: 4px;
-  height: 44px;
-  color: $gray-50;
-  font-family: CourierNewPS-BoldMT;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding-left: 15px;
-}
 </style>

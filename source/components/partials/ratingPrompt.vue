@@ -56,15 +56,21 @@ export default {
       } else if (currentBrowser === 'Firefox') {
         url = 'https://addons.mozilla.org/en-US/firefox/addon/expressvpn/';
       }
-      chrome.runtime.sendMessage({ clicked5star: true });
-      this.createTab({ url: url });
+
+      chrome.storage.sync.get('rating', (storage) => {
+        if (typeof storage.rating !== 'undefined') {
+          let ratingData = storage.rating;
+          ratingData.everClickedMaxRating = true;
+          chrome.storage.sync.set({ 'rating': ratingData });
+        }
+        this.createTab({ url: url });
+      });
     },
     closeIt() {
-      localStorage.removeItem('lastFailedRateDate');
       this.discardPrompt();
     },
     handleRating(value) {
-      localStorage.removeItem('lastFailedRateDate');
+      this.setReviewDates();
       switch (value) {
         case 1:
         case 2:
@@ -96,11 +102,19 @@ export default {
       }
       this.createTab({ url });
     },
+    setReviewDates() {
+      chrome.storage.sync.get('rating', (storage) => {
+        if (typeof storage.rating !== 'undefined') {
+          let ratingData = storage.rating;
+          ratingData.lastDiscardDate = (new Date()).getTime();
+          ratingData.lastFailedRateDate = 0; // resetting it
+          chrome.storage.sync.set({ 'rating': ratingData });
+        }
+      });
+    }
   },
-  mounted() {
-    setTimeout(() => {
-      localStorage.setItem('lastFailedRateDate', (new Date()).getTime());
-    }, 1500);
+  beforeDestroy() {
+    this.setReviewDates();
   },
   props: {
     discardPrompt: {
@@ -209,7 +223,7 @@ export default {
       border: 1px solid $gray-30;
       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
       height: 30px;
-      width: 50px;
+      min-width: 50px;
       font-family: ProximaNova-Semibold;
       font-size: 16px;
       line-height: 28px;

@@ -5,7 +5,7 @@ Licensed GPL v2
 */
 
 const defaultRatingData = {
-  'activatedDate': 0,
+  'activatedDate': Date.now() / 1000,
   'currentConnectionStartTime': 0,
   'lastConnectionStartTime': 0,
   'successfulConnections': 0,
@@ -13,6 +13,8 @@ const defaultRatingData = {
   'previousConnectionTime': 0,
   'isSuccessfulConnection': false,
   'everClickedMaxRating': false,
+  'lastDiscardDate': 0,
+  'lastFailedRateDate': 0,
 };
 
 function checkIfSubscriber(ratingData) {

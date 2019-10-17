@@ -20,6 +20,7 @@ Licensed GPL v2
         <menuItem :model="menuModels['acknowledgements']" />
         <div class="version-info">{{ extensionVersion }}</div>
         <div class="version-info">{{ appVersion }}</div>
+        <div class="version-info">{{ hasProxy }}</div>
       </div>
     </div>
   </div>
@@ -32,6 +33,8 @@ export default {
   name: 'helpScreen',
   data: function () {
     return {
+      isProxyControllable: false,
+      hasProxy: '',
       menuModels: {
         report: {
           icon: 'icon-17-bugs',
@@ -89,6 +92,12 @@ export default {
   components: {
     secondaryHeader,
     menuItem,
+  },
+  created() {
+    const self = this;
+    chrome.proxy.settings.get({}, config => {
+      self.isProxyControllable = config.levelOfControl === 'controllable_by_this_extension';
+    });
   },
 };
 </script>

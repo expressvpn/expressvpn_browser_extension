@@ -164,7 +164,7 @@
     "message": "Compte suspendu"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "Votre essai gratuit est arrivé à expiration mais il est facile de vous reconnecter."
+    "message": "Votre essai gratuit est arrivé à expiration, mais vous pouvez vous reconnecter facilement."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "Pourquoi s'abonner ?"
@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "Annuler"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "Limite de connexions atteinte"
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "Veuillez déconnecter un appareil ou [prendre un abonnement supplémentaire]."
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "Veuillez déconnecter un appareil."
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "En savoir plus"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "OK"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "Vous avez dépassé la limite d'appareils connectés pour cet abonnement."
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "Veuillez déconnecter un appareil ou [acheter un abonnement supplémentaire]."
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "Annuler"
   },
-  "error_simultaneous_connection_title": {
-    "message": "Trop d'appareils connectés."
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "OK"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "Ouvrir ce lien débloquera tout le trafic Internet."
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "Débloquer Internet"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Mettre à jour"
@@ -294,7 +312,7 @@
     "message": "Plus tard"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Votre abonnement est arrivé à expiration, mais il est facile de vous reconnecter."
+    "message": "Votre abonnement est arrivé à expiration, mais vous pouvez vous reconnecter facilement."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Pourquoi se réabonner ?"
@@ -337,6 +355,30 @@
   },
   "error_subscription_expired_title": {
     "message": "Abonnement expiré"
+  },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "Plus tard"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "Pour continuer à utiliser ExpressVPN, veuillez mettre à jour vos informations de paiement."
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "Le paiement a échoué"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "Mettre à jour les informations paiement"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "Plus tard"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "Pour continuer à utiliser ExpressVPN, veuillez renouveler votre abonnement."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "Renouveler maintenant"
+  },
+  "error_subscription_expiring_title": {
+    "message": "Expiration de l'abonnement"
   },
   "error_upgrade_app_button_label": {
     "message": "Mettre à jour maintenant"
@@ -386,14 +428,8 @@
   "home_report_issue_label": {
     "message": "Avis"
   },
-  "home_report_issue_no": {
-    "message": "Non"
-  },
   "home_report_issue_text": {
-    "message": "Avez-vous rencontré des problèmes lors de votre connexion ?"
-  },
-  "home_report_issue_yes": {
-    "message": "Oui"
+    "message": "Comment était votre connexion ?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "Décrivez votre problème"
@@ -426,7 +462,7 @@
     "message": "ExpressVPN s'affiche comme connecté, mais je ne peux pas naviguer"
   },
   "issue_reporter_opt3": {
-    "message": "Je ne peux pas accéder à un certain site Web"
+    "message": "Je ne peux pas accéder à un certain site web"
   },
   "issue_reporter_opt4": {
     "message": "Je vois un langage incorrect sur Google"
@@ -438,7 +474,7 @@
     "message": "La vitesse du VPN est très lente"
   },
   "issue_reporter_opt7": {
-    "message": "Je suis tout le temps déconnecté"
+    "message": "Je suis tout le temps déconnecté(e)"
   },
   "issue_reporter_opt8": {
     "message": "Autre"
@@ -465,7 +501,7 @@
     "message": "Signaler un problème"
   },
   "issue_reporter_website_label": {
-    "message": "Site Web"
+    "message": "Site web"
   },
   "language_dropdown_danish": {
     "message": "Danois (Dansk)",
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Test de vitesse lancé"
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span> peut contenir un logiciel dangereux qui supprime ou dérobe des informations personnelles (infos bancaires, photos, mots de passe, messages). [En savoir&nbsp;plus]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "Danger : risque de malware"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "Retour en sécurité"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "Continuer tout de même"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "J'ai compris les risques"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "Êtes-vous sûr ?"
-  },
   "menu_beta_feedback": {
     "message": "Avis sur la version Beta"
   },
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "Test de fuite WebRTC"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "Ouvrir avec le raccourci clavier"
+  },
   "menu_myaccount_title": {
     "message": "Compte"
   },
   "menu_my_account": {
     "message": "Compte"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "Protection anti-malware et phishing"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Bloquer WebRTC"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "Aide"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "Bloque les arnaques et les pubs qui se cachent derrière les crypto-monnaies."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Empêche WebRTC de révéler votre véritable adresse IP quand connecté au VPN."
   },
@@ -773,6 +788,9 @@
   "myaccount_account_expiry_label": {
     "message": "Expire le"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "Paiement dû depuis le"
+  },
   "myaccount_account_renews_label": {
     "message": "Renouvellement"
   },
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "Gérer votre abonnement"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "Gérer l'abonnement"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "Pourquoi acheter un abonnement ?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Pourquoi renouveler ?"
   },
+  "networkLock_cancel_button_label": {
+    "message": "Annuler"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN connecté"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "Veuillez patienter"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "Connexion impossible"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "Veuillez patienter"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "Vous allez être redirigé sous peu."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+  },
+  "networkLock_status_connected_text": {
+    "message": "Connecté à <b>%LOCATION%</b>."
+  },
+  "networkLock_status_connecting_text": {
+    "message": "Connexion à <b>%LOCATION%</b> en cours. Veuillez patienter..."
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "Connexion à <b>%LOCATION%</b> impossible."
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "Reconnexion à <b>%LOCATION%</b>. Veuillez patienter..."
+  },
+  "networkLock_try_again_button_label": {
+    "message": "Réessayer"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "Débloquer Internet"
+  },
   "notification_extension_update_message": {
     "message": "Découvrez les nouveautés contenues dans la version %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN mis à jour"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> peut contenir un logiciel ou contenu conçu pour vous soutirer des informations personnelles (infos bancaires, photos, mots de passe, messages). [En savoir&nbsp;plus]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "Danger : risque de phishing"
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "L'essai gratuit expire dans [days] jours"
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "Vérifier les réglages"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "Votre abonnement arrive à expiration"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "Votre dernier paiement a échoué"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "Mettre à jour les informations paiement"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Expire dans [days] jours"
@@ -936,7 +1005,7 @@
     "message": "Non merci"
   },
   "rating_prompt_header": {
-    "message": "À quel point appréciez-vous ExpressVPN ?"
+    "message": "À quel point aimez-vous ExpressVPN ?"
   },
   "rating_prompt_ok_button": {
     "message": "OK"

@@ -22,3 +22,5 @@ report/*
 debug.log
 
 tests/screenshots/extension/*
+
+.vscode

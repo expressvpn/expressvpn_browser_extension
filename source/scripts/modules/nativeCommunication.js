@@ -81,8 +81,9 @@ export default (function () {
           currentInfo.selectedLocation = msg.info.current_location;
         }
         window.top.postMessage({ method: 'currentState', currentInfo }, '*');
-      } else if (msg.name && msg.data) {
-        window.top.postMessage({ method: 'updateStatus', name: msg.name, data: msg.data[`${msg.name}Data`] }, '*');
+      } else if (msg.name) {
+        let data = msg.data ? msg.data[`${msg.name}Data`] : {};
+        window.top.postMessage({ method: 'updateStatus', name: msg.name, data }, '*');
       } else if (msg.Preferences) {
         window.top.postMessage({ method: 'updatePreferences', data: msg.Preferences }, '*');
       } else if (msg.locations) {
@@ -211,7 +212,8 @@ export default (function () {
    * Connects to the location passed in the parameter
    * returns the stringified request made to the watchdog so this method can be tested
   * */
-  const connectToLocation = (location, connectWhileConnected = false) => {
+  const connectToLocation = (location, options = {}) => {
+    const { connectWhileConnected, isAutoConnect } = options;
     let connectionData = {};
     if (location.is_country) {
       connectionData.country = location.name;
@@ -219,8 +221,9 @@ export default (function () {
       connectionData.name = location.name;
       connectionData.is_default = location.is_smart_location;
       connectionData.id = location.id;
-      connectionData.change_connected_location = connectWhileConnected; // eslint-disable-line camelcase
+      connectionData.change_connected_location = !!connectWhileConnected; // eslint-disable-line camelcase
     }
+    connectionData.is_auto_connect = !!isAutoConnect;
     return sendNativeMessage(buildRequest('XVPN.Connect', connectionData));
   };
 

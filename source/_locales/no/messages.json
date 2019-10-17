@@ -43,7 +43,7 @@
     "message": "Vennligst installer ExpressVPN-appen fra Google Play-Butikken."
   },
   "error_app_not_found_require_LINUX_snap_text": {
-    "message": "Hvis du installerte nettleseren din fra <b>Ubuntu Software Center</b>, vil ikke utvidelsen være i stand til å kommunisere med Linux-appen. [Learn more]"
+    "message": "Hvis du installerte nettleseren din fra <b>Ubuntu Software Center</b>, vil ikke utvidelsen være i stand til å kommunisere med Linux-appen. [Les mer]"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "Denne utvidelsen krever ExpressVPN-appen for Linux med et aktivt abonnement."
@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "Avbryt"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "Tilkoblingsgrensen er nådd."
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "Vennligst koble fra en enhet eller [kjøp et ytterligere abonnement]."
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "Vennligst koble fra en enhet."
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "Les mer"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "OK"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "Du har overskredet ExpressVPNs maksgrense for tilkoblede enheter for dette abonnementet."
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "Vennligst koble fra en enhet eller [kjøp et ytterligere abonnement]."
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "Avbryt"
   },
-  "error_simultaneous_connection_title": {
-    "message": "Tilkoblingsgrensen er nådd."
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "OK"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "Å åpne denne lenken vil åpne all internettrafikk."
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "Fjern blokkering av internett"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Oppdater betalingsinformasjon"
@@ -338,6 +356,30 @@
   "error_subscription_expired_title": {
     "message": "Abonnementet er utløpt"
   },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "Senere"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "For å fortsette å bruke ExpressVPN, vennligst oppdater betalingsinformasjonen din."
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "Betalingen feilet"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "Oppdater betalingsinformasjon"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "Senere"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "For å fortsette å bruke ExpressVPN, vennligst forny abonnementet ditt."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "Forny nå"
+  },
+  "error_subscription_expiring_title": {
+    "message": "Abonnementet utløper"
+  },
   "error_upgrade_app_button_label": {
     "message": "Oppdater nå"
   },
@@ -386,14 +428,8 @@
   "home_report_issue_label": {
     "message": "Tilbakemelding"
   },
-  "home_report_issue_no": {
-    "message": "Nei"
-  },
   "home_report_issue_text": {
-    "message": "Opplevde du noen problemer mens du var tilkoblet?"
-  },
-  "home_report_issue_yes": {
-    "message": "Ja"
+    "message": "Hvordan var tilkoblingen din?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "Beskriv problemet ditt"
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Hastighetstest kjører"
   },
-  "malware_alert_dialog_content": {
-    "message": "%s<span>%s</span> kan inneholde farlig programvare som kan slette eller stjele personlig informasjon (f.eks. bankdetaljer, bilder, passord, meldinger). [Lær&nbsp;mer]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "Fare: Malware videre fremover"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "Tilbake til sikkerhet"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "Gå videre likevel"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "Jeg forstår risikoen"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "Er du sikker?"
-  },
   "menu_beta_feedback": {
     "message": "Send beta-tilbakemelding"
   },
@@ -660,7 +678,7 @@
     "message": "Diagnostikkinformasjon"
   },
   "menu_item_DNS_leak_test_text": {
-    "message": "DNS lekkasjetest"
+    "message": "DNS-lekkasjetest"
   },
   "menu_item_extension_version_text": {
     "message": "Utvidelseversjon: %VERSION%"
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "WebRTC lekkasjetest"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "Åpne med tastatursnarvei"
+  },
   "menu_myaccount_title": {
     "message": "Konto"
   },
   "menu_my_account": {
     "message": "Konto"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "Malware- og phishing-beskyttelse"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Blokker WebRTC"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "Hjelp"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "Blokkerer falske nettsteder og forhindrer annonser som utvinner kryptovaluta i hemmelighet."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Forhindrer nettsteder i å oppdage din virkelige IP-adresse og plassering mens du er tilkoblet VPN."
   },
@@ -738,7 +753,7 @@
     "message": "Stopp HTML5 geolokasjon fra å avsløre det fysiske oppholdsstedet ditt mens du er koblet til VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "Koble automatisk til den mer sikre HTTPS-versjonen av nettsteder hvor det er tilgjengelig."
+    "message": "Koble automatisk til den sikrere HTTPS-versjonen av nettsteder hvor det er tilgjengelig."
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "Les mer"
@@ -772,6 +787,9 @@
   },
   "myaccount_account_expiry_label": {
     "message": "Utløper"
+  },
+  "myaccount_account_payment_due_label": {
+    "message": "Betaling forfalt"
   },
   "myaccount_account_renews_label": {
     "message": "Fornyes"
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "Administrer konto"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "Administrer abonnement"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "Hvorfor skaffe et abonnement?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Hvorfor fornye?"
   },
+  "networkLock_cancel_button_label": {
+    "message": "Avbryt"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN tilkoblet"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "Vennligst vent"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "Kunne ikke koble til"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "Vennligst vent"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "Du vil bli omdirigert om kort tid."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "Internettrafikk er for øyeblikket blokkert for å beskytte personvernet ditt."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "Internettrafikk er for øyeblikket blokkert for å beskytte personvernet ditt."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "Internettrafikk er for øyeblikket blokkert for å beskytte personvernet ditt."
+  },
+  "networkLock_status_connected_text": {
+    "message": "Koblet til <b>%LOCATION%</b>."
+  },
+  "networkLock_status_connecting_text": {
+    "message": "Kobler til <b>%LOCATION%</b>. Vennligst vent …"
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "Kunne ikke koble til <b>%LOCATION%</b>."
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "Kobler til <b>%LOCATION%</b> på nytt. Vennligst vent …"
+  },
+  "networkLock_try_again_button_label": {
+    "message": "Prøv på nytt"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "Opphev internettblokkering"
+  },
   "notification_extension_update_message": {
     "message": "Klikk for å se hva som er nytt i versjon %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN oppdatert"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> kan inneholde innhold eller programvare utformet for å lure deg til å avsløre personlig informasjon (f.eks. bankdetaljer, bilder, passord, meldinger). [Lær&nbsp;mer]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "Fare: Phishing videre fremover"
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "Gratis prøveperiode utløper om [days] dager"
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "Gå gjennom innstillinger"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "Abonnementet ditt utløper"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "Din forrige betaling mislyktes"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "Oppdater betalingsinformasjon"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Abonnementet utløper om [days] dager"

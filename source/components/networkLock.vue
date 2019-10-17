@@ -2,7 +2,7 @@
   <div class="nl">
     <div class="nl-content">
       <img class="logo" src="/images/logo-header.png" />
-      <div v-if="['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state)">
+      <div v-if="['connecting', 'reconnecting', 'connection_error', 'connected'].includes(currentInfo.state)">
         <h1>{{ localize(`networkLock_header_${currentInfo.state}_text`) }}</h1>
         <hint :stringKey="`networkLock_hint_${currentInfo.state}_text`" :iconName="icons[currentInfo.state]" />
         <div class="status" v-html="localize(`networkLock_status_${currentInfo.state}_text`).replace('%LOCATION%', currentInfo.selectedLocation.name)"></div>
@@ -28,9 +28,8 @@ export default {
   },
   watch:{
     'currentInfo.state': function (newVal, oldVal) {
-      if (newVal === 'connected' || !['connecting', 'reconnecting', 'connected'].includes(this.currentInfo.state)) {
-        window.location.replace(this.urlParams.get('url'));
-
+      if (['connected', 'ready'].includes(this.currentInfo.state)) {
+        this.openWebsite();
       }
     },
  },
@@ -49,12 +48,11 @@ export default {
     openWebsite() {
       const self = this;
       window.setTimeout(() => {
-        self.currentInfo.state = 'connected';
-      }, 100); // give it enough time for the lock to disengage
+        window.location.replace(this.urlParams.get('url'));
+      }, 500); // give it enough time for the lock to disengage if needed
     },
     onCancel() {
       chrome.runtime.sendMessage({ cancelConnection: true });
-      this.openWebsite();
     },
     reconnect: function (event) {
       chrome.runtime.sendMessage({ reconnect: true });
@@ -98,7 +96,7 @@ export default {
     .status {
       color: $black-20;
       font-size: 18px;
-      font-family: ProximaNova-Regular;
+      font-family: ProximaNova;
       line-height: 23px;
       margin-top: 15px;
     }

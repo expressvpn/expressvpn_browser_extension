@@ -275,17 +275,35 @@
   "error_simultaneous_connection_cancel_button_label": {
     "message": "Отмена"
   },
+  "error_simultaneous_connection_hint": {
+    "message": "Превышен лимит подключений."
+  },
+  "error_simultaneous_connection_iap_false_p2_text": {
+    "message": "Пожалуйста, отключите устройство или купите дополнительную подписку."
+  },
+  "error_simultaneous_connection_iap_true_p2_text": {
+    "message": "Пожалуйста, отключите устройство."
+  },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "Подробнее"
+  },
+  "error_simultaneous_connection_ok_button_label": {
+    "message": "OK"
   },
   "error_simultaneous_connection_p1_text": {
     "message": "Вы превысили максимально возможное количество устройств для этой подписки."
   },
-  "error_simultaneous_connection_p2_text": {
-    "message": "Пожалуйста, отключите устройство или [купите дополнительную подписку]."
+  "error_simultaneous_connection_popup_btn0": {
+    "message": "Отмена"
   },
-  "error_simultaneous_connection_title": {
-    "message": "Превышен лимит подключений."
+  "error_simultaneous_connection_popup_btn1": {
+    "message": "OK"
+  },
+  "error_simultaneous_connection_popup_text": {
+    "message": "Переход по этой ссылке разблокирует весь интернет-трафик."
+  },
+  "error_simultaneous_connection_popup_title": {
+    "message": "Разблокировать Интернет"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Обновить платежные данные"
@@ -338,6 +356,30 @@
   "error_subscription_expired_title": {
     "message": "Подписка истекла"
   },
+  "error_subscription_expiring_autobill_later_button_label": {
+    "message": "Напомнить позже"
+  },
+  "error_subscription_expiring_autobill_p1_text": {
+    "message": "Чтобы продолжить использовать ExpressVPN, пожалуйста, обновите свои платежные данные."
+  },
+  "error_subscription_expiring_autobill_title": {
+    "message": "Ошибка платежа"
+  },
+  "error_subscription_expiring_autobill_update_payment_button_label": {
+    "message": "Обновить платежные данные"
+  },
+  "error_subscription_expiring_later_button_label": {
+    "message": "Напомнить позже"
+  },
+  "error_subscription_expiring_p1_text": {
+    "message": "Чтобы продолжить использовать ExpressVPN, пожалуйста, обновите подписку."
+  },
+  "error_subscription_expiring_renew_button_label": {
+    "message": "Продлить сейчас"
+  },
+  "error_subscription_expiring_title": {
+    "message": "Срок подписки истекает"
+  },
   "error_upgrade_app_button_label": {
     "message": "Обновить сейчас"
   },
@@ -386,14 +428,8 @@
   "home_report_issue_label": {
     "message": "Обратная связь"
   },
-  "home_report_issue_no": {
-    "message": "Нет"
-  },
   "home_report_issue_text": {
-    "message": "У вас были проблемы во время подключения?"
-  },
-  "home_report_issue_yes": {
-    "message": "Да"
+    "message": "Как вы оцениваете качество подключения?"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "Опишите проблему"
@@ -423,7 +459,7 @@
     "message": "Я вижу ошибки прокси-сервера на сайтах с потоковым видео"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN подключен, но я не могу просматривать страницы"
+    "message": "Сеть ExpressVPN подключена, но страницы не открываются"
   },
   "issue_reporter_opt3": {
     "message": "Не могу получить доступ к определенному сайту"
@@ -453,13 +489,13 @@
     "message": "Отправить отчет"
   },
   "issue_reporter_share_website_label": {
-    "message": "Сообщить ExpressVPN имя сайта"
+    "message": "Введите адрес сайта"
   },
   "issue_reporter_support_button_label": {
     "message": "Связаться с нами"
   },
   "issue_reporter_thank_you_message": {
-    "message": "Благодарим за помощь в улучшении сервиса для всех клиентов ExpressVPN."
+    "message": "Благодарим за помощь в улучшении сервиса для всех пользователей ExpressVPN."
   },
   "issue_reporter_title": {
     "message": "Сообщить о проблеме"
@@ -607,24 +643,6 @@
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Выполняется тест скорости"
   },
-  "malware_alert_dialog_content": {
-    "message": "<span>%s</span> может содержать опасное ПО, способное удалить или украсть персональные данные (например, банковские реквизиты, фотографии, пароли, сообщения). [Подробнее]"
-  },
-  "malware_alert_dialog_title": {
-    "message": "Угроза: вредоносная программа"
-  },
-  "malware_phishing_alert_dialog_back_to_safety_button_label": {
-    "message": "Назад под защиту"
-  },
-  "malware_phishing_alert_dialog_proceed_anyway_button_label": {
-    "message": "Продолжить"
-  },
-  "malware_phishing_alert_dialog_proceed_confirm_button_label": {
-    "message": "Я понимаю риск"
-  },
-  "malware_phishing_alert_dialog_proceed_question_label": {
-    "message": "Вы уверены?"
-  },
   "menu_beta_feedback": {
     "message": "Отправить отзыв о бета-версии"
   },
@@ -674,14 +692,14 @@
   "menu_item_webRTC_leak_test_text": {
     "message": "Проверка на утечку через WebRTC"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "Открывать сочетанием клавиш"
+  },
   "menu_myaccount_title": {
     "message": "Учетная запись"
   },
   "menu_my_account": {
     "message": "Уч. запись"
-  },
-  "menu_privacy_block_malwarephishing_text": {
-    "message": "Защита от вредоносных программ и фишинга"
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Заблокировать WebRTC"
@@ -728,9 +746,6 @@
   "menu_settings_help_button_label": {
     "message": "Справка"
   },
-  "menu_settings_privacy_block_malwarephishing_description_text": {
-    "message": "Заблокируйте мошеннические сайты и защитите себя от рекламы, которая тайно майнит криптовалюту."
-  },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Не позволяет веб-сайтам обнаружить ваш настоящий IP-адрес и местоположение при подключении к VPN."
   },
@@ -773,6 +788,9 @@
   "myaccount_account_expiry_label": {
     "message": "Срок истекает"
   },
+  "myaccount_account_payment_due_label": {
+    "message": "Срок оплаты наступил"
+  },
   "myaccount_account_renews_label": {
     "message": "Обновится"
   },
@@ -812,23 +830,65 @@
   "myaccount_manage_button_label": {
     "message": "Управление учетной записью"
   },
+  "myaccount_manage_subscription_button_label": {
+    "message": "Управление подпиской"
+  },
   "myaccount_why_get_subscription_subheader_text": {
     "message": "Зачем нужна подписка?"
   },
   "myaccount_why_renew_subheader_text": {
     "message": "Зачем продлевать подписку?"
   },
+  "networkLock_cancel_button_label": {
+    "message": "Отмена"
+  },
+  "networkLock_header_connected_text": {
+    "message": "VPN-соединение установлено"
+  },
+  "networkLock_header_connecting_text": {
+    "message": "Пожалуйста, подождите"
+  },
+  "networkLock_header_connection_error_text": {
+    "message": "Не удается подключиться"
+  },
+  "networkLock_header_reconnecting_text": {
+    "message": "Пожалуйста, подождите"
+  },
+  "networkLock_hint_connected_text": {
+    "message": "Скоро вы будете перенаправлены."
+  },
+  "networkLock_hint_connecting_text": {
+    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+  },
+  "networkLock_hint_connection_error_text": {
+    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+  },
+  "networkLock_hint_reconnecting_text": {
+    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+  },
+  "networkLock_status_connected_text": {
+    "message": "Вы подключены к <b>%LOCATION%</b>."
+  },
+  "networkLock_status_connecting_text": {
+    "message": "Выполняется подключение к <b>%LOCATION%</b>..."
+  },
+  "networkLock_status_connection_error_text": {
+    "message": "Не удается подключиться к <b>%LOCATION%</b>."
+  },
+  "networkLock_status_reconnecting_text": {
+    "message": "Выполняется повторное подключение к <b>%LOCATION%</b>..."
+  },
+  "networkLock_try_again_button_label": {
+    "message": "Повторить попытку"
+  },
+  "networkLock_unblock_internet_button_label": {
+    "message": "Разблокировать Интернет"
+  },
   "notification_extension_update_message": {
     "message": "Нажмите, чтобы узнать, что нового в версии %VERSION%"
   },
   "notification_extension_update_title": {
     "message": "Вышло обновление ExpressVPN"
-  },
-  "phishing_alert_dialog_content": {
-    "message": "<span>%s</span> может содержать контент или ПО, побуждающее вас раскрыть личную информацию (например, банковские реквизиты, фотографии, пароли, сообщения). [Подробнее]"
-  },
-  "phishing_alert_dialog_title": {
-    "message": "Угроза: фишинг "
   },
   "promobar_free_trial_expiring_soon_days_header": {
     "message": "Пробный период истекает через [days] дн."
@@ -859,6 +919,15 @@
   },
   "promobar_splittunneling_text": {
     "message": "Проверьте настройки"
+  },
+  "promobar_subscription_expired_header": {
+    "message": "Срок действия подписки истекает"
+  },
+  "promobar_subscription_expiring_autobill_header": {
+    "message": "Платеж не прошел"
+  },
+  "promobar_subscription_expiring_autobill_text": {
+    "message": "Обновить платежные данные"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Подписка истекает через [days] дн."
