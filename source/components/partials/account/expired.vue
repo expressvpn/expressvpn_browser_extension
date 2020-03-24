@@ -15,7 +15,7 @@ Licensed GPL v2
         <li>{{ localize(`list_item_247_support`) }}</li>
       </ul>
       <div class="button-container">
-        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?utm_source=browser_extensions&utm_medium=apps&utm_campaign=myaccount&utm_content=subscriptionexpired_buynewsubscription` })">{{ localize('error_free_trial_expired_upgrade_now_button_label') }}</button>
+        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?utm_source=browser_extension&utm_medium=apps&utm_campaign=myaccount&utm_content=subscriptionexpired_buynewsubscription` })">{{ localize('error_free_trial_expired_upgrade_now_button_label') }}</button>
       </div>
     </div>
     <div v-else-if="(isPaymentMethodIAP() && isRenewable() && hasSubscriptionExpired())">
@@ -26,7 +26,7 @@ Licensed GPL v2
         <li>{{ localize(`list_item_247_support`) }}</li>
       </ul>
       <div class="button-container">
-        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?payment_method=ios-iap&utm_content=expiring_account_screen&utm_medium=browser_extension&utm_source=extension` })">{{ localize('myaccount_expiring_renew_button_label') }}</button>
+        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?payment_method=ios-iap&utm_content=expiring_account_screen&utm_medium=apps&utm_source=browser_extension` })">{{ localize('myaccount_expiring_renew_button_label') }}</button>
       </div>
     </div>
     <div v-else-if="subscription.plan_type === 'business' || (isPaymentMethodIAP() && isRenewable())">
@@ -41,7 +41,7 @@ Licensed GPL v2
         <li>{{ localize(`list_item_247_support`) }}</li>
       </ul>
       <div class="button-container">
-        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?${isPaymentMethodIAP() ? 'payment_method=ios-iap&' : ''}utm_content=expiring_account_screen&utm_medium=browser_extension&utm_source=extension` })">{{ localize('myaccount_expiring_renew_button_label') }}</button>
+        <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/order?${isPaymentMethodIAP() ? 'payment_method=ios-iap&' : ''}utm_content=expiring_account_screen&utm_medium=apps&utm_source=browser_extension` })">{{ localize('myaccount_expiring_renew_button_label') }}</button>
       </div>
     </div>
   </div>

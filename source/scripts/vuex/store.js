@@ -10,7 +10,7 @@ import actions from './actions';
 import mutations from './mutations';
 import getters from './getters';
 
-import { currentInfo as currentInfoModel } from '../modules/utils';
+import { currentInfo as currentInfoModel, defaultPreferences } from '../modules/utils';
 
 Vue.use(Vuex);
 
@@ -30,6 +30,8 @@ const store = new Vuex.Store({
     currentContainer: '',
     ignoringStateUpdates: false,
     langList: [],
+    extensionPreferences: defaultPreferences,
+    imageSuffix: '',
   },
   getters: getters,
   mutations: mutations,

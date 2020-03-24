@@ -10,6 +10,7 @@ import rating from './modules/rating';
 import coords from './modules/locations.json';
 import bk from './modules/backgroundHelper';
 import locationPicker from './modules/locationPicker';
+import localStorage2 from './modules/localStorage2';
 
 const { ICONS } = utils;
 const badStates = ['BAD_OS_VERSION', 'BAD_APP_VERSION'];
@@ -80,8 +81,10 @@ const MIN_APP_VERSION = {
 
   function setRatingConfig() {
     chrome.storage.sync.get('rating', (storage) => {
-      if (typeof storage.rating !== 'undefined') {
+      if (typeof storage.rating === 'object' && Object.keys(storage.rating).length > 0) {
         currentInfo.ratingData = storage.rating;
+      } else {
+        currentInfo.ratingData = rating.defaultRatingData;
       }
     });
   }
@@ -103,7 +106,7 @@ const MIN_APP_VERSION = {
       type: 'basic',
       title: '',
       message: '',
-      iconUrl: '/images/' + state + '.svg',
+      iconUrl: `/images/${state}.svg`,
     };
     let key = '';
     switch (state) {
@@ -116,6 +119,7 @@ const MIN_APP_VERSION = {
         key = currentInfo.preferences.traffic_guard_level ? 'vpn_status_notification_reconnecting_network_lock_on_text' :
           'vpn_status_notification_reconnecting_network_lock_off_text';
         options.message = localize(key).replace('%s', currentInfo.selectedLocation.name);
+        options.iconUrl = '/images/connecting.svg';
         break;
       case 'connection_error':
         options.title = localize('vpn_status_notification_connection_failed_label');
@@ -126,6 +130,7 @@ const MIN_APP_VERSION = {
       case 'duplicate_license_used':
         options.title = localize('vpn_status_notification_connection_limit_label');
         options.message = localize('vpn_status_notification_connection_limit_text');
+        options.iconUrl = '/images/connection_error.svg';
         break;
       default:
         options.title = '';
@@ -143,7 +148,7 @@ const MIN_APP_VERSION = {
   function updateStatus(name, data) {
     switch (name) {
       case 'WaitForNetworkReady':
-        currentInfo.hasInternet = (data.result === 'has internet');
+        currentInfo.networkStatus = data.result;
         break;
       case 'VPNClustersUpdated':
       case 'SmartLocationChanged':
@@ -422,6 +427,20 @@ const MIN_APP_VERSION = {
     } else if (message.proceedAnyway) {
       whiteList.push({ 'tabId': message.tabId, 'url': message.url });
       chrome.tabs.update(message.tabId, { url: message.url });
+    } else if (message.telemetry) {
+      if (prefs.helpImprove === true && !localStorage2.get('GA_' + message.category)) {
+        // Standard Google Universal Analytics code - https://developers.google.com/analytics/devguides/collection/analyticsjs
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ // eslint-disable-line
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), // eslint-disable-line
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) // eslint-disable-line
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); // eslint-disable-line
+
+        window.ga('create', (__IS_BETA__ || __IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 'UA-29468734-12' : 'UA-29468734-11', 'auto');
+        window.ga('set', 'checkProtocolTask', null); // Removes failing protocol - http://stackoverflow.com/a/22152353/1958200
+        window.ga('send', 'event', message.category);
+        const today = new Date();
+        localStorage2.set('GA_' + message.category, true, (new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)));
+      }
     }
   });
 
@@ -437,6 +456,10 @@ const MIN_APP_VERSION = {
       if (currentVersionMatches.length === 1 && previousVersionMatches.length === 1 && previousVersionMatches[0] !== currentVersionMatches[0]) {
         setTimeout(() => { // Allow the strings used in localize() to be created
           showUpdateNotification(currentVersion);
+          if (!localStorage.getItem('hasSeenHelpImproveScreen')) {
+            currentInfo.showWelcome = true;
+            currentInfo.forceShowHelpImproveScreen = true;
+          }
         }, 100);
       }
     }

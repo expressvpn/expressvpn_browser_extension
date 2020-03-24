@@ -1,4 +1,4 @@
-<!-- 
+<!--
 ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
@@ -12,14 +12,14 @@ Licensed GPL v2
       <div class="button-container">
         <button class="button-secondary" @click="resetState">{{ localize('menu_signout_text') }}</button>
       </div>
-       -->
+      -->
     </div>
   </div>
 </template>
 <script>
 import UAParser from 'ua-parser-js';
-import mainHeader from './partials/mainHeader.vue';
-import menuItem from './partials/menuItem.vue';
+import mainHeader from './partials/mainHeader';
+import menuItem from './partials/menuItem';
 
 export default {
   name: 'menuScreen',
@@ -102,10 +102,11 @@ export default {
     },
     canRateExtension() {
       return (
-        this.isAvailableRateVPN && 
-        this.currentInfo.ratingData && 
-        this.currentInfo.ratingData.everClickedMaxRating === false && 
-        !__IS_BETA__) || (__IS_ALPHA__ || (process.env.NODE_ENV === 'development'));
+        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
+        && this.isAvailableRateVPN
+        && this.currentInfo.ratingData
+        && this.currentInfo.ratingData.everClickedMaxRating === false
+        && !__IS_BETA__) || (__IS_ALPHA__ || (process.env.NODE_ENV === 'development'));
     },
     canSetupOtherDevices() {
       return this.utils.isRegularUser(this.currentInfo.subscription);
@@ -139,7 +140,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .menu-container {
-  background: $gray-50;
+  background: var(--gray50);
   padding: 20px 15px;
   height: 100vh;
 }

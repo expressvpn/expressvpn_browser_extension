@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Sie wurden abgemeldet, weil Ihre Kontodaten aktualisiert wurden."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "Um ExpressVPN weiterhin zu nutzen, führen Sie bitte diesen Befehl in Ihrem Terminal aus, um sich erneut anzumelden:"
+  },
   "error_forced_signout_p2_text": {
     "message": "Um ExpressVPN weiterhin nutzen zu können, melden Sie sich bitte erneut an."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Aktivierungscode eingeben"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Abo erwerben"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Apps für jedes Gerät"
   },
@@ -395,14 +401,38 @@
   "hint_connection_delay_text": {
     "message": "Verbindet..."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Bitte melden Sie sich im WLAN-Netzwerk an, um das VPN zu verwenden."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Bitte warten Sie, bis Ihr Netzwerk betriebsbereit ist."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Keine Internetverbindung erkannt. VPN verbindet bei Verfügbarkeit neu."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Keine Internetverbindung erkannt. VPN eventuell nicht verfügbar."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Keine Internetverbindung erkannt. VPN verbindet bei Verfügbarkeit neu."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Die Internetverbindung kann nicht erkannt werden.<br>Das VPN verbindet sich, sobald dies möglich ist."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Die Internetverbindung kann nicht erkannt werden.<br> Das VPN ist möglicherweise nicht verfügbar."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Die Internetverbindung wurde unterbrochen. <br>Das VPN verbindet sich wieder, sobald dies möglich ist."
+  },
   "hint_no_internet_connecting_text": {
     "message": "Die Internetverbindung kann nicht erkannt werden.<br>Das VPN verbindet sich, sobald dies möglich ist."
   },
   "hint_no_internet_ready_text": {
-    "message": "Die Internetverbindung kann nicht erkannt werden.<br>VPN ist möglicherweise nicht verfügbar."
+    "message": "Die Internetverbindung kann nicht erkannt werden.<br> Das VPN ist möglicherweise nicht verfügbar."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "Die Internetverbindung wurde unterbrochen. <br>Das VPN verbindet sich wieder, sobald dies möglich ist."
+    "message": "Die Internetverbindung wurde unterbrochen.<br>Das VPN verbindet sich wieder, sobald dies möglich ist."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Verbindung unerwartet abgebrochen. Verbindet..."
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Startseite"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Mein Standort"
+  },
   "issue_reporter_need_help_header": {
     "message": "Sie benötigen Hilfe?"
   },
   "issue_reporter_opt1": {
-    "message": "Mir werden Proxy-Fehlermeldungen auf Video-Streaming-Websites angezeigt"
+    "message": "Probleme beim Streamen"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN zeigt eine bestehende Verbindung an, ich kann aber nicht im Internet surfen"
+    "message": "Zugriff auf Webseiten nicht möglich"
   },
   "issue_reporter_opt3": {
-    "message": "Ich kann nicht auf eine bestimmte Website zugreifen"
+    "message": "Zugriff auf eine bestimmte Webseite nicht möglich"
   },
   "issue_reporter_opt4": {
-    "message": "Die falsche Sprache wird in Google angezeigt"
+    "message": "Falsche Sprache oder falsche Währung"
   },
   "issue_reporter_opt5": {
-    "message": "Zu viele Google-Captchas werden angezeigt"
+    "message": "Zu viele Google-Captchas"
   },
   "issue_reporter_opt6": {
-    "message": "Die VPN-Geschwindigkeit ist sehr langsam"
+    "message": "Langsame Internetverbindung"
   },
   "issue_reporter_opt7": {
-    "message": "Die Verbindung wird immer wieder getrennt"
+    "message": "Verbindung wird immer wieder getrennt"
   },
   "issue_reporter_opt8": {
     "message": "Sonstiges"
@@ -678,7 +711,7 @@
     "message": "Diagnosedaten"
   },
   "menu_item_DNS_leak_test_text": {
-    "message": "DNS-Lecktest"
+    "message": "DNS-Leak-Test"
   },
   "menu_item_extension_version_text": {
     "message": "Version der Erweiterung: %VERSION%"
@@ -690,7 +723,7 @@
     "message": "IP-Adressprüfung"
   },
   "menu_item_webRTC_leak_test_text": {
-    "message": "WebRTC-Lecktest"
+    "message": "WebRTC-Leak-Test"
   },
   "menu_keyboard_shortcut_text": {
     "message": "Mit Tastenkombination öffnen"
@@ -727,6 +760,12 @@
   },
   "menu_section_support_title": {
     "message": "Kontakt"
+  },
+  "menu_settings_general_display_header": {
+    "message": "Anzeigeeinstellungen"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Anzeigemodus"
   },
   "menu_settings_general_header": {
     "message": "Allgemein"
@@ -870,13 +909,13 @@
     "message": "Verbunden mit <b>%LOCATION%</b>."
   },
   "networkLock_status_connecting_text": {
-    "message": "Verbindet mit <b>%LOCATION%</b>. Bitte haben Sie Geduld..."
+    "message": "Verbindet mit <b>%LOCATION%</b>."
   },
   "networkLock_status_connection_error_text": {
     "message": "Verbunden mit <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Verbindung mit <b>%LOCATION%</b> wird wiederhergestellt. Bitte warten …"
+    "message": "Verbindung mit <b>%LOCATION%</b> wird wiederhergestellt."
   },
   "networkLock_try_again_button_label": {
     "message": "Erneut versuchen"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Danke! Würden Sie uns im Firefox Add-ons Store bewerten?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Geräteeinstellungen anpassen"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Dark"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Light"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Teilen Sie Absturzberichte, Geschwindigkeitstests, Nutzungsdiagnosen und ob VPN-Verbindungsversuche erfolgreich sind. Diese Berichte enthalten niemals personenbezogene Daten."
+  },
+  "settings_general_help_improve_label": {
+    "message": "ExpressVPN verbessern"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN ist verbunden"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Los geht's"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "ExpressVPN verbessern"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Nein, danke"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Teilen Sie Absturzberichte, Geschwindigkeitstests, Nutzungsdiagnosen und ob VPN-Verbindungsversuche erfolgreich sind. Diese Berichte enthalten niemals personenbezogene Daten."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Starten Sie risikofrei"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Abonnieren Sie ab 8,32 USD/Monat"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Sie sind bereits Kunde?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "ExpressVPN nutzen"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Sichere VPN-Standorte weltweit"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Schnelle Geschwindigkeiten & unbegrenzte Bandbreite"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "Support rund um die Uhr"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30-Tage Geld-zurück-Garantie"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "Ein VPN schützt Ihre Privatsphäre durch die Verschleierung Ihrer IP-Adresse"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Streamen Sie alle Ihre Lieblingsinhalte ohne Einschränkungen"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Verbinden Sie sich sicher mit öffentlichem WLAN in Hotels, Cafés und Flughäfen"
   },
   "welcome_screen1_p1_text": {
     "message": "Die ExpressVPN-Erweiterung ist eine Fernbedienung für die Desktop-App."

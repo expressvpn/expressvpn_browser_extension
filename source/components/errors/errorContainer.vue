@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss">
 .error-container {
-  background-color: $gray-50;
+  background-color: var(--gray50);
   height: calc(600px - 60px); // total height - header
   padding: 25px 15px;
   overflow-y: auto;
@@ -60,7 +60,7 @@ export default {
   h1 {
     font-family: ProximaNova-Light;
     font-size: 24px;
-    color: $black-20;
+    color: var(--black20);
     text-align: center;
     font-weight: normal;
     margin: 0;
@@ -68,7 +68,7 @@ export default {
 
   p {
     margin-top: 25px;    
-    color: $black-20;
+    color: var(--black20);
   }
 
   a, p, span, li {
@@ -85,10 +85,10 @@ export default {
   }
 
   .code {
-    background: $gray-10;
+    background: var(--gray10);
     border-radius: 4px;
     height: 44px;
-    color: $gray-50;
+    color: var(--gray50);
     font-family: CourierNewPS-BoldMT;
     font-size: 16px;
     display: flex;

@@ -55,7 +55,7 @@ export default {
 <style lang="scss">
 .category-header {
   font-size: 16px;
-  color: #1E1E1E;
+  color: var(--black20);
   display: flex;
   justify-content: space-between;
   align-items: center;

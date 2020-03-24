@@ -12,4 +12,5 @@ export default {
   previousView: state => state.previousView,
   ignoringStateUpdates: state => state.ignoringStateUpdates,
   langList: state => state.langList,
+  extensionPreferences: state => state.extensionPreferences,
 };

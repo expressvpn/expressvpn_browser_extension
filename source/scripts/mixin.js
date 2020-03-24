@@ -10,9 +10,28 @@ import locationPicker from './modules/locationPicker';
 
 export default {
   methods: {
-    createTab: (opts, event) => {
+    createTab: function (opts, event) {
+      let websiteUrl = new URL(this.currentInfo.website_url);
+      let url = new URL(opts.url);
+
       if (event) {
         event.stopPropagation();
+      }
+      if (this.currentInfo.locale !== 'en' && url.host === websiteUrl.host) { // Only localize our website
+        let localeMap = {
+          'pt_BR': 'pt',
+          'ja': 'jp',
+          'sv': 'se',
+          'da': 'dk',
+          'ko': 'kr',
+        };
+        let locale = localeMap[this.currentInfo.locale] ? localeMap[this.currentInfo.locale] : this.currentInfo.locale;
+        let allUrlsLocales = ['fr', 'de', 'es', 'pt', 'it', 'nl'];
+        if ((url.pathname === '/support/' && allUrlsLocales.includes(locale)) || (url.pathname !== '/support/')) {
+          url.pathname = '/' + locale + url.pathname;
+          // eslint-disable-next-line no-param-reassign
+          opts.url = url.href;
+        }
       }
       chrome.tabs.create(opts);
       window.close(); // Firefox doesn't always close the popup...
@@ -27,6 +46,7 @@ export default {
     openApp: () => {
       chrome.runtime.sendMessage({ openApp: true });
     },
+    getUrl: (path) => chrome.extension.getURL(path),
     localize: function (localeKey) {
       let strings = this.currentInfo.localizedStrings || {};
 

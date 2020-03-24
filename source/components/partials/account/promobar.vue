@@ -48,17 +48,17 @@ export default {
   align-items: center;
 
   &-warning {
-    background: $yellow-40;
+    background: var(--yellow40);
 
     i, span {
-      color: $yellow-10;
+      color: var(--yellow10);
     }
   }
   &-error {
-    background: $red-40;
+    background: var(--red40);
 
     i, span {
-      color: $red-10;
+      color: var(--red10);
     }
   }
 

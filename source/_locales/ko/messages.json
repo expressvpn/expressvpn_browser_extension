@@ -115,7 +115,7 @@
     "message": "연결할 수 없습니다"
   },
   "error_connection_error_to_location_text": {
-    "message": "<br>%LOCATION%에 연결할 수 없습니다."
+    "message": "%LOCATION%에 연결할 수 없습니다."
   },
   "error_connection_error_try_again_button_label": {
     "message": "다시 시도"
@@ -125,6 +125,9 @@
   },
   "error_forced_signout_p1_text": {
     "message": "고객님의 계정 정보가 업데이트되어 로그아웃되셨습니다."
+  },
+  "error_forced_signout_p2_linux_text": {
+    "message": "ExpressVPN을 계속 사용하시려면, 터미널에서 아래 명령을 실행한 후 다시 로그인해주세요."
   },
   "error_forced_signout_p2_text": {
     "message": "ExpressVPN을 계속 사용하시려면, 다시 로그인해주세요."
@@ -221,7 +224,7 @@
     "message": "정보 업데이트 후 30분 내에 ExpressVPN이 자동으로 활성화됩니다."
   },
   "error_not_activated_LINUX_text": {
-    "message": "데스크탑 앱을 활성화하시려면 컴퓨터에서 이 명령을 실행해주세요:"
+    "message": "데스크탑 앱을 활성화하시려면 터미널에서 아래 명령을 실행해주세요."
   },
   "error_not_activated_text": {
     "message": "이 확장 프로그램을 사용하시려면 ExpressVPN 데스크탑 앱에 로그인해주세요."
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "활성화 코드 입력"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "정액제 구입"
+  },
   "error_subscription_expired_l1_text": {
     "message": "모든 기기에서 이용 가능한 앱"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "아직 연결 중입니다."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "VPN을 사용하시려면 와이파이 네트워크에 로그인해주세요."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "네트워크가 복구될 때까지 기다려주세요."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "인터넷 연결이 감지되지 않습니다. 인터넷이 연결되면 VPN에 연결됩니다."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "인터넷 연결이 감지되지 않습니다. VPN을 이용하실 수 없습니다."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "인터넷 연결이 감지되지 않습니다. 인터넷이 연결되면 VPN에 연결됩니다."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "인터넷 연결이 감지되지 않습니다.<br>인터넷이 연결되면 VPN에 연결됩니다."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "인터넷 연결이 감지되지 않습니다.<br>VPN을 이용하실 수 없습니다."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "인터넷 연결이 끊어졌습니다.<br>인터넷이 연결되면 VPN에 다시 연결됩니다."
+  },
   "hint_no_internet_connecting_text": {
     "message": "인터넷 연결이 감지되지 않습니다.<br>인터넷이 연결되면 VPN에 연결됩니다."
   },
@@ -452,26 +482,29 @@
   "issue_reporter_home_button_label": {
     "message": "홈"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "내 위치"
+  },
   "issue_reporter_need_help_header": {
     "message": "도움이 필요하신가요?"
   },
   "issue_reporter_opt1": {
-    "message": "동영상 스트리밍 웨사이트에서 프록시 에러가 발생합니다"
+    "message": "스트리밍 오류"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN은 연결된 것으로 보이나 브라우징할 수 없습니다"
+    "message": "웹사이트에 전혀 접속할 수 없습니다"
   },
   "issue_reporter_opt3": {
-    "message": "특정 웹사이트에 엑세스할 수 없습니다"
+    "message": "특정 웹사이트에 접속할 수 없습니다"
   },
   "issue_reporter_opt4": {
-    "message": "Google에 올바르지 않은 언어가 표시됩니다"
+    "message": "언어 또는 통화가 올바르지 않습니다"
   },
   "issue_reporter_opt5": {
-    "message": "Google 캡차가 너무 많이 나타납니다"
+    "message": "CAPTCHA 테스트가 너무 많이 나타납니다"
   },
   "issue_reporter_opt6": {
-    "message": "VPN 속도가 매우 느립니다"
+    "message": "VPN 연결이 느립니다"
   },
   "issue_reporter_opt7": {
     "message": "연결이 계속 끊어집니다"
@@ -480,13 +513,13 @@
     "message": "기타"
   },
   "issue_reporter_report_sent_header": {
-    "message": "신고서 전송 완료"
+    "message": "보고서 전송 완료"
   },
   "issue_reporter_sending_button_label": {
     "message": "전송중..."
   },
   "issue_reporter_send_button_label": {
-    "message": "신고서 전송"
+    "message": "보고서 전송"
   },
   "issue_reporter_share_website_label": {
     "message": "ExpressVPN을 통한 웹사이트 공유"
@@ -498,7 +531,7 @@
     "message": "모든 ExpressVPN 고객님들을 위해 서비스를 개선할 수 있도록 도와주셔서 감사합니다."
   },
   "issue_reporter_title": {
-    "message": "문제 신고"
+    "message": "문제 보고"
   },
   "issue_reporter_website_label": {
     "message": "웹사이트"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "지원"
   },
+  "menu_settings_general_display_header": {
+    "message": "디스플레이 설정"
+  },
+  "menu_settings_general_display_label": {
+    "message": "디스플레이 모드"
+  },
   "menu_settings_general_header": {
     "message": "일반"
   },
@@ -870,13 +909,13 @@
     "message": "<b>%LOCATION%</b>에 연결되었습니다."
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b>에 연결중입니다. 기다려주세요..."
+    "message": "<b>%LOCATION%</b>에 연결중입니다."
   },
   "networkLock_status_connection_error_text": {
     "message": "<b>%LOCATION%</b>에 연결할 수 없습니다."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b>에 다시 연결중입니다. 기다려주세요..."
+    "message": "<b>%LOCATION%</b>에 다시 연결중입니다."
   },
   "networkLock_try_again_button_label": {
     "message": "다시 시도"
@@ -996,7 +1035,7 @@
     "message": "저희가 어떻게 개선할 수 있을까요?"
   },
   "rating_improve_report_button": {
-    "message": "오류 신고"
+    "message": "오류 보고"
   },
   "rating_improve_suggest_button": {
     "message": "개선 사항 제안"
@@ -1018,6 +1057,21 @@
   },
   "rating_thanks_@firefox@_text": {
     "message": "감사합니다! Firefox Add-ons에서 저희를 평가해주시겠어요?"
+  },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "기기 설정에 따름"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "다크"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "라이트"
+  },
+  "settings_general_help_improve_description": {
+    "message": "충돌 보고서, 속도 테스트,  유용성 진단 및 VPN 연결 시도 성공 여부를 공유합니다. 개인 식별 정보는 공개되지 않습니다."
+  },
+  "settings_general_help_improve_label": {
+    "message": "ExpressVPN 개선 지원"
   },
   "vpn_status_notification_connected_label": {
     "message": "VPN이 연결되었습니다"
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "시작하기"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "ExpressVPN 개선 지원"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "아니요"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "확인"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "충돌 보고서, 속도 테스트,  유용성 진단 및 VPN 연결 시도 성공 여부를 공유합니다. 개인 식별 정보는 공개되지 않습니다."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "위험 부담 없이 시작하세요"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "최저 8.32 USD/월에 가입하세요"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "기존 사용자"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "ExpressVPN 가입"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "전 세계 보안 VPN 위치"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "빠른 속도 & 무제한 대역폭"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "연중무휴 지원"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30일 환불 보장"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPN은 사용자의 IP 주소를 숨겨 개인 정보를 보호합니다"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "좋아하는 모든 컨텐츠를 제한 없이 스트리밍하세요"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "호텔, 까페 또는 공항에서 공용 와이파이에 안전하게 연결하세요"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPN 확장 프로그램으로 데스크탑 앱을 조종할 수 있습니다."

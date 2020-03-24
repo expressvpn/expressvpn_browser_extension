@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Hesabınızdan çıkış yapıldı çünkü hesap bilgileriniz güncellendi."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "ExpressVPN'i kullanmaya devam etmek için lütfen bu komutu tekrar giriş yapmak için terminalinizde çalıştırın:"
+  },
   "error_forced_signout_p2_text": {
     "message": "ExpressVPN'i kullanmaya devam etmek için lütfen tekrar giriş yapın."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Aktivasyon kodu'nu girin"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Abonelik Edinin"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Her cihaz için uygulama"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "Hala bağlanmaya çalışıyor."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "VPN'i kullanmak için lütfen Wi-Fi ağına bağlanın."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Ağınız hazırlanırken lütfen bekleyin."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "İnternet bağlantısı algılanamıyor. VPN bağlantı olduğunda bağlanacak."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "İnternet bağlantısı algılanamadı. VPN kullanılamayabilir."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "İnternet bağlantısı algılanamıyor. VPN bağlantı olduğunda bağlanacak."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "İnternet bağlantısı algılanamıyor.<br>VPN bağlantı olduğunda bağlanacak."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "İnternet bağlantısı algılanamıyor.<br>VPN kullanım dışı olabilir."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "İnternet bağlantısı koptu.<br>VPN bağlantı olduğunda tekrar bağlanacak."
+  },
   "hint_no_internet_connecting_text": {
     "message": "İnternet bağlantısı algılanamıyor.<br>VPN bağlantı olduğunda bağlanacak."
   },
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Ana Sayfa"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Konumum"
+  },
   "issue_reporter_need_help_header": {
     "message": "Yardıma ihtiyacınız mı var?"
   },
   "issue_reporter_opt1": {
-    "message": "Video izleme web sitelerinde proxy hataları alıyorum"
+    "message": "Video izleme sorunları"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN bağlı gösteriyor ama kullanamıyorum"
+    "message": "Hiçbir web sitesine bağlanamıyorum"
   },
   "issue_reporter_opt3": {
     "message": "Belirli bir web sitesine erişemiyorum"
   },
   "issue_reporter_opt4": {
-    "message": "Google'da yanlış dili görüyorum"
+    "message": "Yanlış dil veya para birimi"
   },
   "issue_reporter_opt5": {
-    "message": "Çok fazla Google captcha görüyorum"
+    "message": "Çok fazla CAPTCHA testi var"
   },
   "issue_reporter_opt6": {
-    "message": "VPN hızı çok yavaş"
+    "message": "Yavaş internet bağlantısı"
   },
   "issue_reporter_opt7": {
-    "message": "Bağlantım sürekli kopuyor"
+    "message": "Sürekli kopma"
   },
   "issue_reporter_opt8": {
     "message": "Diğer"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "İletişime geçin"
   },
+  "menu_settings_general_display_header": {
+    "message": "Görünüm tercihleri"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Görünüm modu"
+  },
   "menu_settings_general_header": {
     "message": "Genel"
   },
@@ -741,7 +780,7 @@
     "message": "Ayarlar"
   },
   "menu_settings_general_open_app_settings_button_label": {
-    "message": "Masaüstü Uygulama Ayarlarını Yapılandırın"
+    "message": "Masaüstü Ayarlarını Yapılandırın"
   },
   "menu_settings_help_button_label": {
     "message": "Yardım"
@@ -780,7 +819,7 @@
     "message": "ExpressVPN'i paylaşın ve ücretsiz hizmet edinin!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Bir abonelik satın alan her arkadaşınız için her ikinize de ücretsiz 30 gün veriyoruz."
+    "message": "Abonelik satın alan her arkadaşınız için her ikinize de 30 gün veriyoruz."
   },
   "myaccount_account_expired_label": {
     "message": "Sona eriş tarihi"
@@ -870,13 +909,13 @@
     "message": "<b>%LOCATION%</b> konumuna bağlandı."
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b> konumuna bağlanıyor. Lütfen bekleyin…"
+    "message": "<b>%LOCATION%</b> konumuna bağlanıyor."
   },
   "networkLock_status_connection_error_text": {
     "message": "<b>%LOCATION%</b> konumuna bağlanılamadı."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b> konumuna tekrar bağlanıyor. Lütfen bekleyin…"
+    "message": "<b>%LOCATION%</b> konumuna yeniden bağlanıyor."
   },
   "networkLock_try_again_button_label": {
     "message": "Tekrar Deneyin"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Teşekkür ederiz! Bizi Firefox Eklenti Mağazasında oylamak ister misiniz?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Cihaz Ayarları ile Eşleştir"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Koyu"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Açık"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgileri içermez."
+  },
+  "settings_general_help_improve_label": {
+    "message": "ExpressVPN'i İyileştirin"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN Bağlandı"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Başlayın"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "ExpressVPN'i İyileştirin"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Hayır Teşekkürler"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "Tamam"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgileri içermez."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Risksiz başlayın"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Aylık 8,32 ABD dolarından başlayan fiyatlar ile abone olun."
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Zaten müşterimiz misiniz?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "ExpressVPN Edinin"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Dünya çapında güvenli VPN konumları"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Yüksek hız ve sınırsız bant genişliği"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "7/24 Destek"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30 günlük para iade garantisi"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPN, IP adresinizi gizleyerek gizliliğinizi korur"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Sevdiğiniz tüm içerikleri sınırlama olmadan izleyin"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Otellerde, kafelerde ve havalimanlarında herkese açık Wi-Fi ağlarına güvenli bir şekilde bağlanın"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPN eklentisi masaüstü uygulaması için bir uzaktan kontrol aracıdır."

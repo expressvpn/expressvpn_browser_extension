@@ -28,9 +28,9 @@ export default {
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 82px;
-  background-color: $green-40;
-  color: $green-10;
+  bottom: 30px;
+  background-color: var(--green40);
+  color: var(--green10);
   font-size: 16px;
   font-family: ProximaNova-Semibold;
   display: flex;
@@ -38,7 +38,7 @@ export default {
   justify-content: center;
 
   .icon {
-    color: $green-10;
+    color: var(--green10);
     margin-right: 15px;
     font-size: 24px;
   }

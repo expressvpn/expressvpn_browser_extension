@@ -36,7 +36,7 @@ Licensed GPL v2
       </div>
 
       <div class="button-container">
-        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/vpn-setup/expressvpn-browser-extension?utm_source=extension&utm_medium=browser_extension` })">{{ localize('menu_settings_privacy_learn_more_button_label') }}</button>
+        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/vpn-setup/expressvpn-browser-extension?utm_source=browser_extension&utm_medium=apps` })">{{ localize('menu_settings_privacy_learn_more_button_label') }}</button>
       </div>
     </div>
     
@@ -46,7 +46,6 @@ Licensed GPL v2
   </div>
 </template>
 <script>
-import timeago from 'timeago.js';
 import secondaryHeader from '../partials/secondaryHeader.vue';
 import toggleSwitch from './ToggleSwitch.vue';
 import toast from './toast.vue';
@@ -107,9 +106,6 @@ export default {
       if (typeof storage.prefs === 'object') {
         self.prefs = Object.assign({}, self.utils.defaultPreferences, storage.prefs);
       }
-      if (storage['last-checked']) {
-        self.lastHttpsCheck = timeago().format(parseInt(storage['last-checked'], 10) * 1000, self.selectedLanguage);
-      }
     });
   },
 };
@@ -124,13 +120,13 @@ export default {
   &-description {
     font-size: 12px;
     line-height: 15px;
-    color: $black-20;
+    color: var(--black20);
     margin-top: 5px;
     width: 275px;
   }
 
   &-container {
-    background: $gray-50;
+    background: var(--gray50);
     padding: 25px 15px;
     height: 100vh;
     border-top: 1px solid #DEDEDE;
@@ -143,7 +139,7 @@ export default {
   }
 
   &-header {
-    color: $black-20;
+    color: var(--black20);
     font-family: ProximaNova-Light;
     font-size: 24px;
   }
@@ -163,12 +159,12 @@ export default {
     }
 
     label {
-      color: $black-20;
+      color: var(--black20);
       font-size: 18px;
     }
 
     .select-container {
-      border: 1px solid $black-20;
+      border: 1px solid var(--black20);
       border-radius: 4px;
       position: relative;
       padding: 6px 15px;
@@ -177,13 +173,13 @@ export default {
 
       label {
         font-size: 12px;
-        color: $gray-20;
+        color: var(--gray20);
         position: absolute;
       }
       select {
-        background: $gray-50;
+        background: var(--gray50);
         border: 0;
-        color: $black-20;
+        color: var(--black20);
         font-size: 20px;
         width: 100%;
         -webkit-appearance: none;

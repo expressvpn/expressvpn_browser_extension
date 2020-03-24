@@ -25,4 +25,7 @@ export default {
   setlangList({ commit }, langList) {
     commit('SET_LANG_LIST', langList);
   },
+  setExtensionPreferences({ commit }, extensionPreferences) {
+    commit('SET_EXTENSION_PREFERENCES', extensionPreferences);
+  },
 };

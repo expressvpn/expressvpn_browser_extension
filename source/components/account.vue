@@ -83,7 +83,7 @@ export default {
 
 <style lang="scss">
 .sub-header {
-  color: $black-20;
+  color: var(--black20);
   font-family: ProximaNova-Light;
   font-size: 24px;
 }
@@ -97,7 +97,7 @@ export default {
     position: relative;
 
     .icon {
-      color: $accent-20;
+      color: var(--accent20);
       font-size: 24px;
     }
 
@@ -107,18 +107,18 @@ export default {
       margin-left: calc(24px + 10px);
     }
     &-label {
-      color: $black-20;
+      color: var(--black20);
       font-family: ProximaNova-Semibold;
       margin-left: 10px;    
     }
     &-value {
-      color: $gray-20;
+      color: var(--gray20);
       position: absolute;
       right: 0;
     }
   
     &-container {
-      background: $gray-40;
+      background: var(--gray40);
       padding: 0px 15px;
       height: 105px;
     }
@@ -126,7 +126,7 @@ export default {
 
   &-extra-info {
     border-top: 1px solid #DEDEDE;
-    background: $gray-50;
+    background: var(--gray50);
     height: 100vh;
     padding: 25px 15px;
   }

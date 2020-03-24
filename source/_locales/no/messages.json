@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Du har blitt logget ut fordi kontodetaljene dine ble oppdatert."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "For å fortsette å bruke ExpressVPN, vennligst kjør denne kommandoen i terminalen din for å logge inn igjen:"
+  },
   "error_forced_signout_p2_text": {
     "message": "For å fortsette å bruke ExpressVPN, vennligst logg inn igjen."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Legg inn aktiveringskode"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Skaff et abonnement"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Apper for alle enheter"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "Prøver fortsatt å koble til."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Vennligst logg inn på Wi-Fi-nettverket for å bruke VPN."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Vennligst vent mens nettverket ditt blir klart."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Finner ingen internettilkobling. VPN vil koble til når den er tilgjengelig."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Finner ingen internettilkobling. VPN kan være utilgjengelig."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Finner ingen internettilkobling. VPN vil koble til når den er tilgjengelig."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Finner ingen internettilkobling.<br>VPN vil koble til når den er tilgjengelig."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Finner ingen internettilkobling.<br>VPN kan være utilgjengelig."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Internettilkoblingen falt ut.<br>VPN vil koble til igjen når den er tilgjengelig."
+  },
   "hint_no_internet_connecting_text": {
     "message": "Finner ingen internettilkobling.<br>VPN vil koble til når den er tilgjengelig."
   },
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Hjem"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Min lokasjon"
+  },
   "issue_reporter_need_help_header": {
     "message": "Trenger du hjelp?"
   },
   "issue_reporter_opt1": {
-    "message": "Jeg ser proxyfeil på videostrømmesider"
+    "message": "Strømmeproblemer"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN vises som tilkoblet men jeg kan ikke surfe"
+    "message": "Kan ikke få tilgang til noen nettsteder"
   },
   "issue_reporter_opt3": {
-    "message": "Jeg kan ikke få tilgang til et bestemt nettsted"
+    "message": "Kan ikke få tilgang til et bestemt nettsted"
   },
   "issue_reporter_opt4": {
-    "message": "Jeg ser feil språk på Google"
+    "message": "Feil språk eller valuta"
   },
   "issue_reporter_opt5": {
-    "message": "Jeg ser for mange Google captchas"
+    "message": "For mange CAPTCHA-tester"
   },
   "issue_reporter_opt6": {
-    "message": "VPN-hastigheten er veldig treg"
+    "message": "Treg internettilkobling"
   },
   "issue_reporter_opt7": {
-    "message": "Jeg blir frakoblet til stadighet"
+    "message": "Blir ofte frakoblet"
   },
   "issue_reporter_opt8": {
     "message": "Annet"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "Ta kontakt"
   },
+  "menu_settings_general_display_header": {
+    "message": "Skjermvalg"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Skjermmodus"
+  },
   "menu_settings_general_header": {
     "message": "Generelt"
   },
@@ -870,13 +909,13 @@
     "message": "Koblet til <b>%LOCATION%</b>."
   },
   "networkLock_status_connecting_text": {
-    "message": "Kobler til <b>%LOCATION%</b>. Vennligst vent …"
+    "message": "Kobler til <b>%LOCATION%</b>."
   },
   "networkLock_status_connection_error_text": {
     "message": "Kunne ikke koble til <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Kobler til <b>%LOCATION%</b> på nytt. Vennligst vent …"
+    "message": "Kobler til <b>%LOCATION%</b> på nytt."
   },
   "networkLock_try_again_button_label": {
     "message": "Prøv på nytt"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Tusen takk! Vurder oss på Firefox Add-ons Store?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Tilpass til enhetsinstillinger"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Mørk"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Lys"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Del krasjrapporter, hastighetstester, brukervennlighetsdiagnostikk og om forsøk på VPN-tilkobling lykkes. Disse rapportene inneholder aldri personlig identifiserbar informasjon."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Bidra til å forbedre ExpressVPN"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN tilkoblet"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Kom i gang"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Bidra til å forbedre ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Nei takk"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Del krasjrapporter, hastighetstester, brukervennlighetsdiagnostikk og om forsøk på VPN-tilkobling lykkes. Disse rapportene inneholder aldri personlig identifiserbar informasjon."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Kom i gang uten risiko"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Abonner fra USD 8,32 per måned"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Allerede kunde?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Skaff ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Sikre VPN-lokasjoner verden over"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Rask og ubegrenset båndbredde"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "Kundestøtte døgnet rundt"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30-dagers pengene-tilbake-garanti"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "Et VPN beskytter personvernet ditt ved å forkle IP-adressen din"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Strøm alt innholdet du elsker uten begrensninger"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Koble trygt til offentlige trådløse nettverk på hoteller, kafeer og flyplasser"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPNs nettleserutvidelse er en fjernkontroll for skrivebordsappen."

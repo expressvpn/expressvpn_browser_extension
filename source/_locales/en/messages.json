@@ -403,6 +403,30 @@
   "error_forced_signout_title": {
     "message": "Sign In to ExpressVPN"
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Please sign in to the Wi-Fi network to use the VPN."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Cannot detect internet connection. VPN may be unavailable."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Cannot detect internet connection. VPN will connect when available."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Cannot detect internet connection. VPN will connect when available."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Please wait while your network gets ready."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Cannot detect internet connection.<br>VPN will connect when available."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Cannot detect internet connection.<br>VPN may be unavailable."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Internet connection lost.<br>VPN will reconnect when available."
+  },
   "error_forced_signout_p1_text": {
     "message": "You have been signed out because your account details were updated."
   },
@@ -433,8 +457,23 @@
   "welcome_continue_button_label": {
     "message": "Continue"
   },
-  "welcome_get_started_button_label": {
-    "message": "Get Started"
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Help Improve ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Share crash reports, speed tests, usability diagnostics, and whether VPN connection attempts succeed. These reports never contain personally identifiable information."
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "No Thanks"
+  },
+  "settings_general_help_improve_label": {
+    "message": "Help improve ExpressVPN"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Share crash reports, speed tests, usability diagnostics, and whether VPN connection attempts succeed. These reports never contain personally identifiable information."
   },
   "hint_saved_text": {
     "message": "Saved"
@@ -524,6 +563,9 @@
   "menu_desktop_notification_text": {
     "message": "Show desktop notifications"
   },
+  "menu_keyboard_shortcut_text": {
+    "message": "Open with keyboard shortcut"
+  },
   "menu_get_30_days_free": {
     "message": "Get 30 Days Free"
   },
@@ -605,11 +647,23 @@
   "menu_settings_general_header": {
     "message": "General"
   },
-  "menu_settings_general_language_header": {
-    "message": "Extension language"
+  "menu_settings_general_display_header": {
+    "message": "Display preferences"
   },
   "menu_settings_general_language_label": {
     "message": "Language"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Display mode"
+  },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Match Device Settings"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Light"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Dark"
   },
   "menu_settings_general_name": {
     "message": "Settings"
@@ -988,6 +1042,39 @@
   "issue_reporter_hint_not_sent_text": {
     "message": "Unable to send. Please check your connection and try again."
   },
+  "welcome_not_installed_scene_1_text": {
+    "message": "A VPN protects your privacy by disguising your IP address"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Stream all the content you love without restrictions"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Safely connect to public Wi-Fi in hotels, cafés, and airports"
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Get started risk-free"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Subscribe from 8.32 USD/month"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Get ExpressVPN"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Existing Customer?"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Secure VPN locations worldwide"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Fast speeds & unlimited bandwidth"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "24/7 support"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30-day money-back guarantee"
+  },
   "issue_reporter_hint_opt3": {
     "message": "Have you tried connecting to a server location in the country where the service you want to access is based?"
   },
@@ -998,25 +1085,25 @@
     "message": "Have you tried connecting to a different server location?"
   },
   "issue_reporter_opt1": {
-    "message": "I see proxy errors on video streaming websites"
+    "message": "Streaming issues"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN shows connected but I cannot browse"
+    "message": "Can't access any websites"
   },
   "issue_reporter_opt3": {
-    "message": "I can't access a certain website"
+    "message": "Can't access a specific website"
   },
   "issue_reporter_opt4": {
-    "message": "Website displays incorrect language or currency"
+    "message": "Incorrect language or currency"
   },
   "issue_reporter_opt5": {
-    "message": "I see too many Google captchas"
+    "message": "Too many CAPTCHA tests"
   },
   "issue_reporter_opt6": {
-    "message": "VPN speed is very slow"
+    "message": "Slow internet connection"
   },
   "issue_reporter_opt7": {
-    "message": "I keep getting disconnected"
+    "message": "Frequent disconnects"
   },
   "issue_reporter_opt8": {
     "message": "Other"
@@ -1024,8 +1111,8 @@
   "issue_reporter_describe_textarea_label": {
     "message": "Describe your issue"
   },
-  "issue_reporter_share_website_label": {
-    "message": "Share website with ExpressVPN"
+  "issue_reporter_location_placeholder": {
+    "message": "My location"
   },
   "issue_reporter_website_label": {
     "message": "Website"

@@ -9,7 +9,7 @@ Licensed GPL v2
     <h1>{{ localize('error_upgrade_app_header_title') }}</h1>
     <p>{{ localize(`error_upgrade_app_text`) }}</p>
     <div class="button-container">
-      <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/setup?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=desktop_app_too_old` })">{{ localize('error_upgrade_app_button_label') }}</button>
+      <button class="button-primary" @click="createTab({ url: `${currentInfo.website_url}/setup?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=desktop_app_too_old` })">{{ localize('error_upgrade_app_button_label') }}</button>
     </div>
   </div>
 </template>

@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 .header-secondary {
   height: 60px;
-  background-color: $gray-40;
+  background-color: var(--gray40);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ export default {
 
   .icon {
     position: absolute;
-    color: #000;
+    color: var(--black20);
 
     &:first-of-type {
       left: 15px;
@@ -68,10 +68,10 @@ export default {
     }
 
     &:hover {
-      color: $gray-20;
+      color: var(--gray20);
     }
     &:active {
-      color: $black-30;
+      color: var(--black30);
     }
   }
 

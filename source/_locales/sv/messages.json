@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Du har loggats ut eftersom dina kontouppgifter uppdaterades."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "För att fortsätta använda ExpressVPN, kör följande kommande i din terminal för att logga in igen:"
+  },
   "error_forced_signout_p2_text": {
     "message": "För att fortsätta använda ExpressVPN, vänligen logga in igen."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Ange aktiveringskoden"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Skaffa abonnemang"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Appar till alla enheter"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "Försöker fortfarande ansluta."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Vänligen logga in på wifi-nätverket för att använda VPN."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Vänligen vänta medan ditt nätverk förbereds."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Kan inte hitta internetuppkoppling. VPN ansluter när en är tillgänglig."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Kan inte hitta internetuppkoppling. VPN kan vara otillgängligt."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Kan inte hitta internetuppkoppling. VPN ansluter när en är tillgänglig."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Kunde inte hitta någon internetuppkoppling.<br>VPN kopplar upp när en anslutning hittas."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Kunde inte hitta någon internetuppkoppling.<br>VPN kan vara otillgängligt."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Internetanslutningen tappades.<br>VPN kommer återansluta så fort det går."
+  },
   "hint_no_internet_connecting_text": {
     "message": "Kunde inte hitta någon internetuppkoppling.<br>VPN kopplar upp när en anslutning hittas."
   },
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Hem"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Min position"
+  },
   "issue_reporter_need_help_header": {
     "message": "Behöver du hjälp?"
   },
   "issue_reporter_opt1": {
-    "message": "Jag ser proxyfel på streaming-hemsidor"
+    "message": "Streamingfel"
   },
   "issue_reporter_opt2": {
-    "message": "Jag kan inte surfa trots att det står att ExpressVPN är anslutet"
+    "message": "Kan inte komma åt hemsidor"
   },
   "issue_reporter_opt3": {
-    "message": "Jag kan inte komma åt en särskild hemsida"
+    "message": "Kan inte komma åt en specifik hemsida"
   },
   "issue_reporter_opt4": {
-    "message": "Jag ser fel språk på Google"
+    "message": "Inkorrekt språk eller valuta"
   },
   "issue_reporter_opt5": {
-    "message": "Jag ser för många Google captchas"
+    "message": "För många CAPTCHA-tester"
   },
   "issue_reporter_opt6": {
-    "message": "VPN-hastigheten är väldigt långsam"
+    "message": "Långsam internetuppkoppling"
   },
   "issue_reporter_opt7": {
-    "message": "Jag blir frånkopplad hela tiden"
+    "message": "Frekvent frånkoppling"
   },
   "issue_reporter_opt8": {
     "message": "Annat"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "Kontakta oss"
   },
+  "menu_settings_general_display_header": {
+    "message": "Visningsinställningar"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Visningsläge"
+  },
   "menu_settings_general_header": {
     "message": "Allmänt"
   },
@@ -870,13 +909,13 @@
     "message": "Ansluten till <b>%LOCATION%</b>."
   },
   "networkLock_status_connecting_text": {
-    "message": "Ansluter till <b>%LOCATION%</b>. Vänligen vänta…"
+    "message": "Ansluter till <b>%LOCATION%</b>."
   },
   "networkLock_status_connection_error_text": {
     "message": "Kunde inte ansluta till <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Återansluter till <b>%LOCATION%</b>. Vänligen vänta…"
+    "message": "Återansluter till <b>%LOCATION%</b>."
   },
   "networkLock_try_again_button_label": {
     "message": "Försök igen"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Tack! Ge oss ett betyg i Firefox Add-ons Store?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Matcha enhetsinställningar"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Mörk"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Ljus"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Dela kraschrapporter, hastighetstester, användbarhetsdiagnostik, samt om VPN-anslutningsförsök lyckats. Rapporterna kan inte användas för att identifiera dig."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Hjälp oss förbättra ExpressVPN"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN anslutet"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Kom igång"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Hjälp oss förbättra ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Nej, tack"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "Tillåt"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Dela kraschrapporter, hastighetstester, användbarhetsdiagnostik, samt om VPN-anslutningsförsök lyckats. Rapporterna kan inte användas för att identifiera dig."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Kom igång riskfritt"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Prenumerera från 8.32 USD/månad"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Befintlig kund?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Skaffa ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Säkra VPN-positioner världen över"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Snabba hastigheter & obegränsad bandbredd"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "Support dygnet runt"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30 dagars pengarna-tillbaka-garanti"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "Ett VPN skyddar din integritet genom att dölja din IP-adress"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Streama vad du vill utan begränsningar"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Anslut säkert till offentligt wi-fi på hotell, kaféer och flygplatser"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPN-tillägget är en fjärrkontroll för skrivbordsappen."

@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "คุณได้ออกจากระบบเนื่องจากรายละเอียดบัญชีของคุณได้รับการอัปเดต"
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดเรียกใช้คำสั่งนี้ในเทอร์มินัลของคุณเพื่อลงชื่อเข้าใช้อีกครั้ง:"
+  },
   "error_forced_signout_p2_text": {
     "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดลงชื่อเข้าใช้อีกครั้ง"
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "กรอกรหัสการเปิดใช้งาน"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "สมัครสมาชิก"
+  },
   "error_subscription_expired_l1_text": {
     "message": "แอปสำหรับทุกอุปกรณ์"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "ยังคงพยายามเชื่อมต่อ"
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "โปรดลงชื่อเข้าใช้เครือข่าย Wi-Fi เพื่อใช้ VPN"
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "โปรดรอในขณะที่เครือข่ายของคุณพร้อมใช้งาน"
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต VPN จะเชื่อมต่อเมื่อพร้อมใช้งาน"
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต VPN อาจไม่พร้อมใช้งาน"
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต VPN จะเชื่อมต่อเมื่อพร้อมใช้งาน"
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต <br> VPN จะเชื่อมต่อเมื่อพร้อมใช้งาน"
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต <br> VPN อาจใช้งานไม่ได้"
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "การเชื่อมต่ออินเทอร์เน็ตขาดหายไป <br> VPN จะเชื่อมต่อใหม่เมื่อพร้อมใช้งาน"
+  },
   "hint_no_internet_connecting_text": {
     "message": "ตรวจไม่พบการเชื่อมต่ออินเทอร์เน็ต <br> VPN จะเชื่อมต่อเมื่อพร้อมใช้งาน"
   },
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "หน้าหลัก"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "ตำแหน่งของฉัน"
+  },
   "issue_reporter_need_help_header": {
     "message": "ต้องการความช่วยเหลือ?"
   },
   "issue_reporter_opt1": {
-    "message": "ฉันเห็นข้อผิดพลาดพร็อกซีในเว็บไซต์สตรีมมิ่งวิดีโอ"
+    "message": "ปัญหาการสตรีม"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN แสดงการเชื่อมต่อ แต่ฉันไม่สามารถเรียกดูได้"
+    "message": "ไม่สามารถเข้าถึงเว็บไซต์ใด ๆ"
   },
   "issue_reporter_opt3": {
-    "message": "ฉันไม่สามารถเข้าถึงบางเว็บไซต์ได้"
+    "message": "ไม่สามารถเข้าถึงเว็บไซต์เฉพาะ"
   },
   "issue_reporter_opt4": {
-    "message": "ฉันเห็นภาษาที่ไม่ถูกต้องบน Google"
+    "message": "ภาษาหรือสกุลเงินไม่ถูกต้อง"
   },
   "issue_reporter_opt5": {
-    "message": "ฉันเห็น Google captchas มากเกินไป"
+    "message": "มีการทดสอบ CAPTCHA มากเกินไป"
   },
   "issue_reporter_opt6": {
-    "message": "ความเร็ว VPN ช้ามาก"
+    "message": "การเชื่อมต่ออินเทอร์เน็ตล่าช้า"
   },
   "issue_reporter_opt7": {
-    "message": "ฉันถูกตัดการเชื่อมต่อ"
+    "message": "ยกเลิกการเชื่อมต่อถี่"
   },
   "issue_reporter_opt8": {
     "message": "อื่นๆ"
@@ -605,7 +638,7 @@
     "message": "ค้นหาเมืองหรือประเทศ"
   },
   "location_picker_smart_location_text": {
-    "message": "ตำแหน่งอัจฉริยะ"
+    "message": "สถานที่อัจฉริยะ"
   },
   "location_picker_tab_all_text": {
     "message": "ตำแหน่งทั้งหมด"
@@ -623,7 +656,7 @@
     "message": "ตำแหน่งที่เลือก"
   },
   "main_screen_smart_location_text": {
-    "message": "ตำแหน่งอัจฉริยะ"
+    "message": "สถานที่อัจฉริยะ"
   },
   "main_screen_status_vpn_connected_text": {
     "message": "เชื่อมต่อแล้ว"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "ติดต่อเรา"
   },
+  "menu_settings_general_display_header": {
+    "message": "แสดงการตั้งค่า"
+  },
+  "menu_settings_general_display_label": {
+    "message": "โหมดการแสดงผล"
+  },
   "menu_settings_general_header": {
     "message": "ทั่วไป"
   },
@@ -759,7 +798,7 @@
     "message": "เรียนรู้เพิ่มเติม"
   },
   "menu_settings_privacy_security_name": {
-    "message": "ความเป็นส่วนตัวและความปลอดภัย"
+    "message": "ส่วนตัวและปลอดภัย"
   },
   "menu_settings_settings_general_title": {
     "message": "การตั้งค่า"
@@ -870,13 +909,13 @@
     "message": "เชื่อมต่อกับ <b>%LOCATION%</b>"
   },
   "networkLock_status_connecting_text": {
-    "message": "เชื่อมต่อกับ <b>%LOCATION%</b> กรุณาเตรียมพร้อม…"
+    "message": "เชื่อมต่อกับ <b>%LOCATION%</b> "
   },
   "networkLock_status_connection_error_text": {
     "message": "ไม่สามารถเชื่อมต่อกับ<br>%LOCATION%"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "กำลังเชื่อมต่อใหม่กับ <b>%LOCATION%</b> กรุณาเตรียมพร้อม…"
+    "message": "กำลังเชื่อมต่อใหม่กับ <b>%LOCATION%</b> "
   },
   "networkLock_try_again_button_label": {
     "message": "ลองอีกครั้ง"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "ขอบคุณ! ให้คะแนนเราที่ Firefox Add-on Store หรือไม่?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "จับคู่การตั้งค่าอุปกรณ์"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "มืด"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "สว่าง"
+  },
+  "settings_general_help_improve_description": {
+    "message": "แบ่งปันรายงานข้อขัดข้อง การทดสอบความเร็ว การวินิจฉัยการใช้งาน และความพยายามในการเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลที่สามารถระบุตัวบุคคลได้"
+  },
+  "settings_general_help_improve_label": {
+    "message": "ช่วยปรับปรุง ExpressVPN"
+  },
   "vpn_status_notification_connected_label": {
     "message": "เชื่อมต่อ VPN แล้ว"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "เริ่มต้น"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "ช่วยปรับปรุง ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "ไม่เป็นไร ขอบคุณ"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "ตกลง"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "แบ่งปันรายงานข้อขัดข้อง การทดสอบความเร็ว การวินิจฉัยการใช้งาน และความพยายามในการเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลที่สามารถระบุตัวบุคคลได้"
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "เริ่มต้นโดยปราศจากความเสี่ยง"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "สมัครสมาชิกที่ 8.32 USD/เดือน"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "เป็นลูกค้าเดิม?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "รับ ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "รักษาความปลอดภัย VPN ทั่วโลก"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "ความรวดเร็วและแบนด์วิดท์ไม่จำกัด"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "สนับสนุนทุกวันตลอด 24 ชั่วโมง"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "รับประกันคืนเงินใน 30 วัน"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPN ปกป้องความส่วนตัวของคุณ\nโดยการปิดบังที่อยู่ IP ของคุณ"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "สตรีมเนื้อหาทั้งหมดที่คุณรักโดยไม่มีข้อจำกัด"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "เชื่อมต่อ Wi-Fi สาธารณะอย่างปลอดภัยในโรงแรม คาเฟ่ และสนามบิน"
   },
   "welcome_screen1_p1_text": {
     "message": "ส่วนขยาย ExpressVPN เป็นรีโมทคอนโทรลสำหรับแอปเดสก์ท็อป"

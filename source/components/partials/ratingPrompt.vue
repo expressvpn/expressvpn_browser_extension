@@ -58,7 +58,7 @@ export default {
       }
 
       chrome.storage.sync.get('rating', (storage) => {
-        if (typeof storage.rating !== 'undefined') {
+        if (typeof storage.rating === 'object' && Object.keys(storage.rating).length > 0) {
           let ratingData = storage.rating;
           ratingData.everClickedMaxRating = true;
           chrome.storage.sync.set({ 'rating': ratingData });
@@ -91,7 +91,7 @@ export default {
       let url;
       switch (type) {
         case 'report':
-          url = `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=rating_report`;
+          url = `${this.currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=contact_support&utm_content=rating_report`;
           break;
         case 'suggest':
           const systemInfo = UAParser(window.navigator.userAgent);
@@ -104,7 +104,7 @@ export default {
     },
     setReviewDates() {
       chrome.storage.sync.get('rating', (storage) => {
-        if (typeof storage.rating !== 'undefined') {
+        if (typeof storage.rating === 'object' && Object.keys(storage.rating).length > 0) {
           let ratingData = storage.rating;
           ratingData.lastDiscardDate = (new Date()).getTime();
           ratingData.lastFailedRateDate = 0; // resetting it
@@ -112,6 +112,9 @@ export default {
         }
       });
     }
+  },
+  created() {
+    chrome.runtime.sendMessage({ telemetry: true, category: 'prompt_rating' });
   },
   beforeDestroy() {
     this.setReviewDates();
@@ -127,9 +130,9 @@ export default {
 
 <style lang="scss" scoped>
 .popup {
-  background: $gray-50;
+  background: var(--gray50);
   width: 320px;
-  height: 267px;
+  min-height: 267px;
   padding: 15px 15px 30px 15px;
   border-radius: 4px;
   display: flex;
@@ -147,14 +150,14 @@ export default {
     margin-left: auto;
 
     &:hover {
-      color: $gray-20;
+      color: var(--gray20);
     }
   }
 
   &-header {
     margin-top: 25px;
     font-family: ProximaNova-Light;
-    color: $black-20;
+    color: var(--black20);
     font-size: 24px;
     text-align: center;
   }
@@ -180,7 +183,7 @@ export default {
     display: inline-block;
     position: relative;
     width: 1.1em;
-    color: $yellow-40;
+    color: var(--yellow40);
     font-size: 35px;
   }
 
@@ -188,7 +191,7 @@ export default {
   .rating > span:hover ~ span:before {
     font-family: "xv-fonticon";
     content: "\54";
-    color: $yellow-20;
+    color: var(--yellow20);
   }
 
   .logo {
@@ -197,13 +200,13 @@ export default {
     margin-top: -10px;
 
     &.icon-113-tips {
-      color: $green-30;
+      color: var(--green30);
       font-size: 55px;
     }
 
     &.icon-110-thanks {
       margin-top: -25px;
-      color: $primary-30;
+      color: var(--primary30);
       font-size: 55px;
       animation: pulse 1s ease infinite;
     }
@@ -220,7 +223,7 @@ export default {
     button {
       margin-left: 25px;
       border-radius: 4px;
-      border: 1px solid $gray-30;
+      border: 1px solid var(--gray30);
       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
       height: 30px;
       min-width: 50px;
@@ -234,11 +237,11 @@ export default {
   a {
       font-family: ProximaNova-Semibold;
       font-size: 16px;
-      color: $primary-20;
+      color: var(--primary20);
       display: block;
 
       &:hover {
-        color: $primary-30;
+        color: var(--primary30);
       }
 
       &:nth-of-type(n+2) {

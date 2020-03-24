@@ -56,25 +56,25 @@
   // box-sizing: content-box;
 
   &.information {
-    background-color: $blue-40;
-    color: $blue-10;
+    background-color: var(--blue40);
+    color: var(--blue10);
     .icon { // cleanup
-      color: $blue-10;
+      color: var(--blue10);
     }
   }
   &.error {
-    background-color: $red-40;
-    color: $red-10;
+    background-color: var(--red40);
+    color: var(--red10);
     .icon {
-      color: $red-10;
+      color: var(--red10);
     }
   }
 
   &.green {
-    background-color: $green-40;
-    color: $green-10;
+    background-color: var(--green40);
+    color: var(--green10);
     .icon {
-      color: $green-10;
+      color: var(--green10);
     }
   }
 

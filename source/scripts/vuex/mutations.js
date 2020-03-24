@@ -35,4 +35,7 @@ export default {
   SET_LANG_LIST(state, langList) {
     state.langList = langList;
   },
+  SET_EXTENSION_PREFERENCES(state, extensionPreferences) {
+    state.extensionPreferences = extensionPreferences;
+  },
 };

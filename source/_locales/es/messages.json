@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Se ha cerrado la sesión porque se actualizaron los detalles de su cuenta."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "Para seguir usando ExpressVPN, por favor ejecute este comando en su terminal para iniciar sesión nuevamente:"
+  },
   "error_forced_signout_p2_text": {
     "message": "Para seguir usando ExpressVPN, por favor vuelva a iniciar sesión."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Introducir código de activación"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Comprar suscripción"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Apps para todos los dispositivos"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "Aún intentando conectar."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Inicie sesión en la red Wi-Fi para usar la VPN."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Por favor espere mientras se prepara su red."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "No hay conexión a internet. La VPN se conectará cuando haya una disponible."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "No hay conexión a internet. La VPN podría no estar disponible."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "No hay conexión a internet. La VPN se conectará cuando haya una disponible."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Imposible detectar una conexión a internet.<br>La VPN se conectará cuando haya una disponible."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Imposible detectar una conexión a internet.<br>La VPN podría no estar disponible."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Se ha perdido la conexión.<br>La VPN se reconectará cuando esté disponible."
+  },
   "hint_no_internet_connecting_text": {
     "message": "Imposible detectar una conexión a internet.<br>La VPN se conectará cuando haya una disponible."
   },
@@ -402,7 +432,7 @@
     "message": "Imposible detectar una conexión a internet.<br>La VPN podría no estar disponible."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "Se ha perdido la conexión.<br>La VPN se reconectará cuando esté disponible."
+    "message": "Se ha perdido la conexión a internet.<br>La VPN se reconectará cuando esté disponible."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "La conexión se ha interrumpido. Reconectando..."
@@ -452,26 +482,29 @@
   "issue_reporter_home_button_label": {
     "message": "Inicio"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Mi ubicación"
+  },
   "issue_reporter_need_help_header": {
     "message": "¿Necesita ayuda?"
   },
   "issue_reporter_opt1": {
-    "message": "Veo errores de proxy en páginas web de streaming de video"
+    "message": "Errores de streaming"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN aparece como \"conectada\", pero no puedo navegar"
+    "message": "No puedo acceder a ninguna página web"
   },
   "issue_reporter_opt3": {
-    "message": "No puedo acceder a cierta página web"
+    "message": "No puedo acceder a una página web específica"
   },
   "issue_reporter_opt4": {
-    "message": "Veo un idioma incorrecto en Google"
+    "message": "Idioma o moneda incorrectos"
   },
   "issue_reporter_opt5": {
-    "message": "Veo demasiados captchas de Google"
+    "message": "Veo demasiados CAPTCHA"
   },
   "issue_reporter_opt6": {
-    "message": "La velocidad de la VPN es muy baja"
+    "message": "Conexión lenta a internet"
   },
   "issue_reporter_opt7": {
     "message": "Mi conexión se interrumpe una y otra vez"
@@ -693,7 +726,7 @@
     "message": "Prueba de fugas de WebRTC"
   },
   "menu_keyboard_shortcut_text": {
-    "message": "Abrir con método abreviado de teclado"
+    "message": "Abrir con método abreviado"
   },
   "menu_myaccount_title": {
     "message": "Cuenta"
@@ -727,6 +760,12 @@
   },
   "menu_section_support_title": {
     "message": "Póngase en contacto "
+  },
+  "menu_settings_general_display_header": {
+    "message": "Preferencias de visualización"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Modo de visualización"
   },
   "menu_settings_general_header": {
     "message": "General"
@@ -870,13 +909,13 @@
     "message": "Conectada a <b>%LOCATION%</b>"
   },
   "networkLock_status_connecting_text": {
-    "message": "Conectando a <b>%LOCATION%</b>. Por favor espere..."
+    "message": "Conectando a <b>%LOCATION%</b>."
   },
   "networkLock_status_connection_error_text": {
     "message": "Imposible conectarse a <b>%LOCATION%</b>"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Reconectando a <b>%LOCATION%</b>. Por favor espere..."
+    "message": "Reconectando a <b>%LOCATION%</b>."
   },
   "networkLock_try_again_button_label": {
     "message": "Probar de nuevo"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "¡Gracias! ¿Nos calificaría en la tienda de complementos de Firefox?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Configurar como el dispositivo"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Oscuro"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Claro"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Compartir informes de errores, test de velocidad, diagnósticos de uso y si los intentos de conexión a la VPN funcionan. Estos informes nunca contienen información personal identificable."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Ayudar a mejorar ExpressVPN"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN conectada"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Comenzar"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Ayudar a mejorar ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "No, gracias"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "Aceptar"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Compartir informes de errores, test de velocidad, diagnósticos de uso y si los intentos de conexión a la VPN funcionan. Estos informes nunca contienen información personal identificable."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Comience sin riesgo alguno"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Suscríbase desde 8,32 USD/mes"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "¿Ya es cliente?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Comprar ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Ubicaciones seguras de VPN en todo el mundo"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Alta velocidad y ancho de banda ilimitado"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "Soporte técnico 24/7"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "Garantía de reembolso a 30 días"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "Una VPN protege su privacidad ocultando su dirección IP"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Haga streaming de todos sus contenidos favoritos sin restricciones"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Conéctese con seguridad a redes Wi-Fi públicas en hoteles, cafés y aeropuertos"
   },
   "welcome_screen1_p1_text": {
     "message": "La extensión de ExpressVPN es un control remoto para la aplicación de escritorio."

@@ -48,7 +48,7 @@ Licensed GPL v2
       background-color: rgba(81, 158, 93, 0.5);
     }
     &:checked + .handler:before { /*handler - checked*/
-      background-color: $green-20;
+      background-color: var(--green20);
       left: 15px;
     }
   }
@@ -69,12 +69,19 @@ Licensed GPL v2
       height: 20px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: $gray-40;
+      background-color: var(--gray40);
       border-radius: 50%;
       box-shadow: 0 1px 2px rgba(0,0,0,0.2);
       transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.2s;
       right: 15px;
     }
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .toggle .handler:before {
+    background-color: var(--gray30);
   }
 }
 </style>

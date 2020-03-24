@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "U bent uitgelogd omdat uw accountgegevens geüpdatet zijn."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "Als u ExpressVPN wilt blijven gebruiken, voert u dit commando in op uw terminal om opnieuw in te loggen:"
+  },
   "error_forced_signout_p2_text": {
     "message": "Log opnieuw in om ExpressVPN te blijven gebruiken."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Voer activatiecode in"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Abonnement nemen"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Apps voor elk apparaat"
   },
@@ -395,6 +401,30 @@
   "hint_connection_delay_text": {
     "message": "Er wordt nog naar een verbinding gezocht."
   },
+  "hint_network_state_captive_portal_text": {
+    "message": "Log in op het wifi netwerk om de VPN te gebruiken."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Wacht terwijl uw netwerk zich voorbereidt."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Kan geen internetverbinding vinden. VPN maakt opnieuw verbinding zodra er weer internet is."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Kan geen internetverbinding vinden. VPN is mogelijk niet beschikbaar."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Kan geen internetverbinding vinden. VPN maakt opnieuw verbinding zodra er weer internet is."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Kan geen internetverbinding vinden. <br>VPN maakt verbinding zodra deze weer beschikbaar is."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Kan geen internetverbinding vinden. <br>VPN is mogelijk niet beschikbaar."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Geen internetverbinding. <br>VPN maakt verbinding zodra deze weer beschikbaar is."
+  },
   "hint_no_internet_connecting_text": {
     "message": "Kan geen internetverbinding vinden. <br>VPN maakt verbinding zodra deze weer beschikbaar is."
   },
@@ -402,7 +432,7 @@
     "message": "Kan geen internetverbinding vinden. <br>VPN is mogelijk niet beschikbaar."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "Geen internetverbinding. <br>VPN maakt weer verbinding zodra deze beschikbaar is."
+    "message": "Internetverbinding verbroken. <br>VPN maakt verbinding zodra deze weer beschikbaar is."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Verbinding onverwachts verbroken. Bezig met herstellen..."
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Startscherm"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Mijn locatie"
+  },
   "issue_reporter_need_help_header": {
     "message": "Hulp nodig?"
   },
   "issue_reporter_opt1": {
-    "message": "Ik zie proxyfouten op video streaming websites"
+    "message": "Streaming fouten"
   },
   "issue_reporter_opt2": {
-    "message": "Ik zie dat ExpressVPN verbonden is maar ik kan niet surfen"
+    "message": "Kan geen websites bezoeken"
   },
   "issue_reporter_opt3": {
-    "message": "Ik kan een bepaalde website niet bezoeken"
+    "message": "Kan een bepaalde website niet bezoeken"
   },
   "issue_reporter_opt4": {
-    "message": "Ik zie onjuiste taal op Google"
+    "message": "Onjuiste taal of valuta"
   },
   "issue_reporter_opt5": {
-    "message": "Ik zie teveel Google captchas"
+    "message": "Teveel Google CAPTCHA's"
   },
   "issue_reporter_opt6": {
-    "message": "VPN snelheid is erg traag"
+    "message": "Trage internetverbinding"
   },
   "issue_reporter_opt7": {
-    "message": "De verbinding wordt constant verbroken"
+    "message": "Verbinding wordt regelmatig verbroken"
   },
   "issue_reporter_opt8": {
     "message": "Anders"
@@ -693,7 +726,7 @@
     "message": "WebRTC lektest"
   },
   "menu_keyboard_shortcut_text": {
-    "message": "Met toetsenbord-snelkoppeling openen"
+    "message": "Met toets snelkoppeling openen"
   },
   "menu_myaccount_title": {
     "message": "Account"
@@ -727,6 +760,12 @@
   },
   "menu_section_support_title": {
     "message": "Contacteren"
+  },
+  "menu_settings_general_display_header": {
+    "message": "Voorkeuren weergave"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Weergavemodus"
   },
   "menu_settings_general_header": {
     "message": "Algemeen"
@@ -870,13 +909,13 @@
     "message": "Verbonden met <b>%LOCATION%</b>."
   },
   "networkLock_status_connecting_text": {
-    "message": "Verbinding aan het maken met <b>%LOCATION%</b>. Een ogenblik geduld..."
+    "message": "Verbindt met <b>%LOCATION%</b>. "
   },
   "networkLock_status_connection_error_text": {
     "message": "Kan geen verbinding maken met <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Opnieuw verbinding aan het maken met <b>%LOCATION%</b>. Een ogenblik geduld..."
+    "message": "Verbindt opnieuw met <b>%LOCATION%</b>. "
   },
   "networkLock_try_again_button_label": {
     "message": "Probeer opnieuw"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Bedankt! Wilt u ons beoordelen in de Firefox Add-ons Store? "
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Instellingen passend apparaat"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Donker"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Licht"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Deel foutrapporten, snelheidstests, bruikbaarheidsdiagnostiek en het slagen van VPN verbindingspogingen. Deze rapporten bevatten nooit informatie die naar personen te herleiden is."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Help ExpressVPN verbeteren"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN verbonden"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Nu aan de slag"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Help ExpressVPN verbeteren"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Liever niet"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Deel foutrapporten, snelheidstests, bruikbaarheidsdiagnostiek en het slagen van VPN verbindingspogingen. Deze rapporten bevatten nooit informatie die naar personen te herleiden is."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Ga aan de slag zonder risico's"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Meld u aan vanaf 8,32 USD per maand"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Bent u al klant?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Neem ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Veilige VPN locaties wereldwijd"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Hoge snelheden en onbeperkte bandbreedte"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "24/7 helpdesk"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30-dagen geld-terug garantie"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "Een VPN beschermt uw privacy door uw IP adres te verbergen"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Stream al uw favoriete content zonder beperkingen"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Gebruik veilig publieke wifi in hotels, cafés en op vliegvelden"
   },
   "welcome_screen1_p1_text": {
     "message": "De ExpressVPN extensie is een afstandsbediening voor de desktop app."

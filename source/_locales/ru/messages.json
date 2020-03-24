@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Из-за обновления учетной записи был произведен выход из системы."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "Чтобы продолжить использовать ExpressVPN, снова войдите в уч. запись, запустив эту команду в терминале:"
+  },
   "error_forced_signout_p2_text": {
     "message": "Чтобы продолжить использовать ExpressVPN, войдите в учетную запись еще раз."
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Ввести код активации"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Купить подписку"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Приложения для всех устройств"
   },
@@ -395,14 +401,38 @@
   "hint_connection_delay_text": {
     "message": "Идет подключение."
   },
-  "hint_no_internet_connecting_text": {
+  "hint_network_state_captive_portal_text": {
+    "message": "Чтобы использовать VPN, подключитесь к сети Wi-Fi."
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "Пожалуйста, подождите, пока сеть будет готова."
+  },
+  "hint_network_state_not_sure_connecting_text": {
     "message": "VPN подключится, когда будет интернет-соединение."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Нет интернет-соединения. VPN\nможет быть недоступна."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "VPN подключится, когда будет интернет-соединение."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "VPN подключится, когда будет интернет-соединение."
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "Нет интернет-соединения.<br>VPN может быть недоступна."
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "VPN-соединение восстановится после подключения к Интернету."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "VPN подключится, когда<br>будет интернет-соединение."
   },
   "hint_no_internet_ready_text": {
     "message": "Нет интернет-соединения.<br>VPN может быть недоступна."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "VPN-соединение восстановится после подключения к Интернету."
+    "message": "VPN-соединение восстановится<br>после подключения к Интернету."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Соединение прервалось. Повторное подключение..."
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "На главную"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Моя локация"
+  },
   "issue_reporter_need_help_header": {
     "message": "Нужна помощь?"
   },
   "issue_reporter_opt1": {
-    "message": "Я вижу ошибки прокси-сервера на сайтах с потоковым видео"
+    "message": "Проблемы со стримингом"
   },
   "issue_reporter_opt2": {
-    "message": "Сеть ExpressVPN подключена, но страницы не открываются"
+    "message": "Веб-сайты не открываются"
   },
   "issue_reporter_opt3": {
-    "message": "Не могу получить доступ к определенному сайту"
+    "message": "Нет доступа к определенному сайту"
   },
   "issue_reporter_opt4": {
-    "message": "Я вижу неправильный язык в Google"
+    "message": "Неправильный язык или валюта"
   },
   "issue_reporter_opt5": {
-    "message": "Я вижу слишком много Google captcha"
+    "message": "Слишком много Google captcha"
   },
   "issue_reporter_opt6": {
-    "message": "Скорость VPN очень медленная"
+    "message": "Медленное интернет-соединение"
   },
   "issue_reporter_opt7": {
-    "message": "Приложение всё время отключается"
+    "message": "Частые отключения"
   },
   "issue_reporter_opt8": {
     "message": "Другое"
@@ -516,7 +549,7 @@
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_finnish": {
-    "message": "Финнский (Suomi)",
+    "message": "Финский (Suomi)",
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_french": {
@@ -693,7 +726,7 @@
     "message": "Проверка на утечку через WebRTC"
   },
   "menu_keyboard_shortcut_text": {
-    "message": "Открывать сочетанием клавиш"
+    "message": "Открыть сочетанием клавиш"
   },
   "menu_myaccount_title": {
     "message": "Учетная запись"
@@ -727,6 +760,12 @@
   },
   "menu_section_support_title": {
     "message": "Связаться с нами"
+  },
+  "menu_settings_general_display_header": {
+    "message": "Настройки отображения"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Режим отображения"
   },
   "menu_settings_general_header": {
     "message": "Общие"
@@ -780,7 +819,7 @@
     "message": "Порекомендуйте ExpressVPN и получите бесплатное обслуживание!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "За каждого друга, оформившего подписку, мы подарим вам обоим 30 дней обслуживания!"
+    "message": "30 дней в подарок за каждого друга, оформившего подписку!"
   },
   "myaccount_account_expired_label": {
     "message": "Срок истек"
@@ -858,25 +897,25 @@
     "message": "Скоро вы будете перенаправлены."
   },
   "networkLock_hint_connecting_text": {
-    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+    "message": "Интернет-трафик заблокирован для защиты конфиденциальности."
   },
   "networkLock_hint_connection_error_text": {
-    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+    "message": "Интернет-трафик заблокирован для защиты конфиденциальности."
   },
   "networkLock_hint_reconnecting_text": {
-    "message": "Интернет-трафик заблокирован для защиты вашей конфиденциальности."
+    "message": "Интернет-трафик заблокирован для защиты конфиденциальности."
   },
   "networkLock_status_connected_text": {
     "message": "Вы подключены к <b>%LOCATION%</b>."
   },
   "networkLock_status_connecting_text": {
-    "message": "Выполняется подключение к <b>%LOCATION%</b>..."
+    "message": "Выполняется подключение к <b>%LOCATION%</b>."
   },
   "networkLock_status_connection_error_text": {
     "message": "Не удается подключиться к <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Выполняется повторное подключение к <b>%LOCATION%</b>..."
+    "message": "Повторное подключение к <b>%LOCATION%</b>."
   },
   "networkLock_try_again_button_label": {
     "message": "Повторить попытку"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Спасибо! Хотите оценить нас в магазине Firefox Add-ons?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "По настройкам устройства"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Темная тема"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Светлая тема"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Отправлять отчеты о сбоях, успешных VPN-подключениях, диагностических данных и результатах теста скорости. Отчеты не содержат личной информации."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Помочь улучшить ExpressVPN"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN-соединение установлено"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Начать"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Помощь в улучшении ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Не сейчас"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Отправлять отчеты о сбоях, успешных VPN-подключениях, диагностических данных и результатах теста скорости. Отчеты не содержат личной информации."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Начать без риска"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Стоимость подписки: от 8,32$ в месяц"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Уже есть подписка?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Купить ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Защищенные VPN-локации по всему миру"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Высокая скорость без ограничений"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "Техподдержка 24/7"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "Гарантия возврата денег 30 дн."
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPN защищает вашу конфиденциальность, скрывая ваш IP-адрес"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Смотрите онлайн всё, что вам нравится, без ограничений"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Безопасно подключайтесь к публичным Wi-Fi-сетям в отелях, кафе и аэропортах"
   },
   "welcome_screen1_p1_text": {
     "message": "Расширение ExpressVPN — это пульт управления для настольного приложения."

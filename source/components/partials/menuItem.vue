@@ -45,10 +45,10 @@ export default {
           this.$store.dispatch('setCurrentView', 'helpScreen');
           break;
         case 'other_devices':
-          url = this.currentInfo.website_url + '/setup?utm_source=extension&utm_medium=browser_extension&utm_campaign=browser_extension_links&utm_content=install_vpn_apps';
+          url = this.currentInfo.website_url + '/setup?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=install_vpn_apps';
           break;
         case 'get_free':
-          url = this.currentInfo.subscription.referral_url + '&utm_source=extension&utm_medium=browser_extension&utm_campaign=refer_friends&utm_content=bob_hamburger_referfriends';
+          url = this.currentInfo.subscription.referral_url + '&utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=bob_hamburger_referfriends';
           break;
         default:
           break;
@@ -66,22 +66,22 @@ export default {
 
 <style lang="scss" scoped>
 .primary-20 {
-  color: $primary-20 !important;
+  color: var(--primary20) !important;
 }
 .accent-20 {
-  color: $accent-20 !important;
+  color: var(--accent20) !important;
 }
 .information-20 {
-  color: $blue-20 !important;
+  color: var(--blue20) !important;
 }
 .purple-20 {
-  color: $purple-20 !important;
+  color: var(--purple20) !important;
 }
 .menu-item {
   height: 45px;
   display: flex;
   align-items: center;
-  color: $black-20;
+  color: var(--black20);
 
   span {    
     font-size: 16px;
@@ -97,7 +97,7 @@ export default {
   }
 }
 .divider {
-  border-bottom: 1px solid $gray-30;
+  border-bottom: 1px solid var(--gray30);
   margin: 10px 0;
 }
 </style>

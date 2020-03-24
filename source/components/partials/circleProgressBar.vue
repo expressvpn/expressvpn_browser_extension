@@ -24,7 +24,7 @@
     },
     computed: {
       showInfiniteAnimation() {
-        return (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.hasInternet === false);
+        return (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && ['no internet', 'captive portal', 'not sure', 'not ready'].includes(this.currentInfo.networkStatus));
       },
       radius() {
         return (this.size / 2) - (this.strokeWidth / 2);
@@ -54,11 +54,11 @@
   }
 
   &-background {
-    stroke: $gray-30;
-    fill: $gray-50;
+    stroke: var(--gray30);
+    fill: var(--gray50);
 
     &-ready {
-      stroke: $red-20;
+      stroke: var(--red20);
     }
   }
   
@@ -66,11 +66,11 @@
     fill: none;
 
     &-connecting, &-reconnecting {
-      stroke: $green-30;
+      stroke: var(--green30);
       transition: stroke-dashoffset 1s linear;
     }
     &-connected {
-      stroke: $green-30;
+      stroke: var(--green30);
       stroke-dashoffset: 0;
     }
 

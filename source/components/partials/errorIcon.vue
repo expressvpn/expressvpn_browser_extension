@@ -30,7 +30,7 @@
 </script>
 <style lang="scss" scoped>
 .icon {
-    color: $gray-50;
+    color: var(--gray50);
 
     &:before {
       line-height: 75px !important;
@@ -44,7 +44,7 @@
     }
 
     &-bubble {
-      background: $accent-10;
+      background: var(--accent10);
       height: 100px;
       width: 100px;
       border-radius: 50%;
@@ -55,4 +55,11 @@
       font-size: 60px;
     }
   }
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .icon-bubble {
+    background: var(--gray20);
+  }
+}
 </style>

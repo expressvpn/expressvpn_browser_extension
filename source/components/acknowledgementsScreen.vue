@@ -588,7 +588,7 @@ export default {
 .acknowledgements {
 
   &-container {
-    background: $gray-50;
+    background: var(--gray50);
     padding: 25px 15px;
     height: calc(600px - 60px);
     width: 100vw;
