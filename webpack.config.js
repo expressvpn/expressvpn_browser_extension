@@ -3,6 +3,7 @@
 /* eslint-disable quote-props */
 const webpack = require('webpack');
 const path = require('path');
+const fs = require('fs');
 const argv = require('minimist')(process.argv.slice(2));
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtensionReloader = require('webpack-extension-reloader');
@@ -10,16 +11,21 @@ const TerserPlugin = require('terser-webpack-plugin');
 const ZipPlugin = require('zip-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
-const version = require('./package.json').version + (process.env.CIRCLE_BUILD_NUM ? '.' + process.env.CIRCLE_BUILD_NUM : '');
+let version = require('./package.json').version;
 
 const supportedBrowsers = ['chrome', 'firefox'];
 const browser = argv.browser || 'chrome';
 
-if ((argv.alpha || argv.beta) && (!process.env.XVCHROME_ALPHA_KEY || !process.env.XVCHROME_BETA_KEY)) {
+if ((argv.alpha || argv.beta) && (!process.env.XVCHROME_ALPHA_KEY || !process.env.XVCHROME_BETA_KEY) && browser === 'chrome') {
   console.error('Alpha or Beta keys are missing!');
   process.exit(-1);
 }
 
+if (process.env.CIRCLE_BUILD_NUM) {
+  version += '.' + process.env.CIRCLE_BUILD_NUM;
+} else if (fs.existsSync('VERSION')) {
+  version = fs.readFileSync('VERSION', 'utf8').trim();
+}
 const config = {
   mode: process.env.NODE_ENV,
   context: path.join(__dirname, 'source'),
@@ -28,7 +34,6 @@ const config = {
     'scripts/popup': './scripts/popup.js',
     'scripts/networkLock': './scripts/networkLock.js',
   },
-  devtool: 'inline-source-map',
   output: {
     path: path.join(__dirname, 'build', argv.beta || argv.alpha ? (argv.beta ? 'beta' : 'alpha') : process.env.NODE_ENV, browser),
     filename: '[name].js',
@@ -43,6 +48,7 @@ const config = {
       '@': path.resolve(__dirname, 'source'),
     },
   },
+  devtool: browser === 'firefox' ? '' : 'cheap-source-map',
   module: {
     rules: [
       {
@@ -66,7 +72,7 @@ const config = {
           {
             loader: 'sass-loader',
             options: {
-              data: '@import "@/styles/shared/scss/xv_style.scss";',
+              prependData: '@import "@/styles/shared/scss/xv_style.scss";',
             },
           },
         ],
@@ -128,6 +134,7 @@ const config = {
       },
       { from: 'html/**/*', to: 'html/[name].[ext]' },
       { from: 'styles/shared/fonts/**/*', to: 'fonts/[name].[ext]' },
+      { from: 'styles/shared/icons/**/*', to: 'images/icons/[name].[ext]' },
       { from: 'fonts/**/*', to: 'fonts/[name].[ext]' },
       { from: 'scripts/content/**/*', to: 'scripts/content/[name].[ext]' },
       // { from: 'scripts/modules/https/**/*', to: 'scripts/modules/https/[name].[ext]' },
@@ -177,8 +184,8 @@ const config = {
       },
     ]),
     ...(argv.pack ? [new ZipPlugin({
-      path: path.join(__dirname, 'dist', browser),
-      filename: `${argv.beta || argv.alpha ? (argv.beta ? 'BETA-' : 'ALPHA-') : ''}ExpressVPN-v${version}.zip`,
+      path: path.join(__dirname, 'dist'),
+      filename: `expressvpn_extension_${version}_${argv.beta || argv.alpha ? (argv.beta ? 'beta' : 'alpha') : 'release'}_${browser}.zip`,
     })] : []),
   ],
 };

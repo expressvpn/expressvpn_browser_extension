@@ -40,9 +40,9 @@ export default {
     contactSupport: function (event) {
       let targetUrl = this.currentInfo.website_url;
       if (this.currentInfo.os === 'LINUX') {
-        targetUrl += '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_activated_linux';
+        targetUrl += '/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_activated_linux';
       } else {
-        targetUrl += '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_activated_contact_support';
+        targetUrl += '/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=app_not_activated_contact_support';
       }
       this.createTab({ url: targetUrl });
     },

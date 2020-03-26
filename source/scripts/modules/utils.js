@@ -28,7 +28,7 @@ const currentInfo = {
     browser: {},
     os: {},
   },
-  hasInternet: true,
+  networkStatus: 'has internet',
   showWelcome: false,
   recommendedLocationsList: [],
   allLocationsList: [],
@@ -54,6 +54,8 @@ const defaultPreferences = {
   'httpsPeriodicity': 86400,
   'language': '',
   'hideLocation': true,
+  'displayMode': 'auto',
+  'helpImprove': false,
 };
 
 const ICONS = {

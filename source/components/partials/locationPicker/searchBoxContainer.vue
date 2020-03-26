@@ -49,20 +49,20 @@ export default {
 <style lang="scss" scoped>
 .search-input {
   width: 100%;
-  background-color: $gray-50;
-  color: $black-20;
+  background-color: var(--gray50);
+  color: var(--black20);
   font-size: 18px;
   line-height: 23px;
   border: 0;
   padding: 0 0 0 0;
-
+  
   &::placeholder {
-    color: $gray-20;
+    color: var(--gray20);
   }
 
   &-container {
     height: 52px;
-    background-color: $gray-50;
+    background-color: var(--gray50);
     box-shadow: 0 1.5px 4px 2px rgba(0, 0, 0, 0.1);
     margin: 15px 0;
     padding: 14px 16px 13px 54px;
@@ -77,16 +77,27 @@ export default {
 
       &.icon-96-search {
         left: 15px;
-        color: #000;
+        color: var(--gray30);
       }
       &.icon-18-cancel {
-        color: $gray-30;
+        color: var(--gray30);
         right: 16px;
 
         &:hover {
-          color: $black-20;
+          color: var(--black20);
         }
       }
+    }
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .search-input {
+    background-color: var(--gray40);
+
+    &-container {
+      background-color: var(--gray40);
     }
   }
 }

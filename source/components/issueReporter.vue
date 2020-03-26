@@ -1,4 +1,4 @@
-<!-- 
+<!--
 ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
@@ -10,9 +10,9 @@ Licensed GPL v2
       <hint stringKey="issue_reporter_hint_not_sent_text" iconName="icon-41-error" type="error" v-if="reportStatus === 'ERROR'" style="margin: 0 0 15px 0;" />
       <span class="reporter-header">{{ localize(reportStatus === 'SENT' ? 'issue_reporter_report_sent_header' : 'issue_reporter_header') }}</span>
       <div class="issue-list" v-if="!issueType">
-        <div class="issue" v-for="i in 8" :key="i">
-          <input type="radio" v-model="issueType" :value="i" :id="`issue_reporter_opt${i}`" />
-          <label :for="`issue_reporter_opt${i}`">{{ localize('issue_reporter_opt' + i) }}</label>
+        <div class="issue" v-for="i in 8" :key="i" @click="issueType = i">
+          <img v-svg-inline class="issue-icon" :src="`/images/icons/${issueIcons[i]}.svg`" />
+          <span class="issue-category">{{ localize('issue_reporter_opt' + i) }}</span>
         </div>
       </div>
       <div v-else>
@@ -25,7 +25,7 @@ Licensed GPL v2
           </div>
           <div class="button-container">
             <button class="button-primary" @click="sideBackBtnClick">{{ localize('issue_reporter_home_button_label') }}</button>
-            <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=issue-reporter`})">{{ localize('issue_reporter_support_button_label') }}</button>
+            <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=issue-reporter`})">{{ localize('issue_reporter_support_button_label') }}</button>
           </div>
         </div>
         <div v-else>
@@ -37,29 +37,280 @@ Licensed GPL v2
             <label>{{ localize('issue_reporter_describe_textarea_label') }}</label>
             <textarea maxlength="500" autofocus="true" v-model="issueUserDescription" :disabled="reportStatus === 'SENDING'"></textarea>
           </div>
-          <div class="separator"></div>
-          <div class="issue-website-share">
-            <input type="checkbox" id="issue_reporter_share_website_label" v-model="shareWebsite" :disabled="reportStatus === 'SENDING'" />
-            <label for="issue_reporter_share_website_label">{{ localize('issue_reporter_share_website_label') }}</label>
-          </div>
-          <div class="issue-website-input" v-if="shareWebsite">
+          <div class="issue-website-input">
             <label>{{ localize('issue_reporter_website_label') }}</label>
             <input type="text" v-model="website" :disabled="reportStatus === 'SENDING'" />
           </div>
+          <div class="issue-location-holder">
+            <select v-model="userLocation" class="issue-location" required :disabled="reportStatus === 'SENDING'">
+              <option value="" disabled selected>{{ localize('issue_reporter_location_placeholder') }}</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Åland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia</option>
+              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="CV">Cabo Verde</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">Congo, Democratic Republic of</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curaçao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czechia</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="SZ">Eswatini</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and McDonald Islands</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Laos</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao</option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia</option>
+              <option value="MD">Moldova</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MK">North Macedonia</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="KP">North Korea</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestine, State of</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RE">Réunion</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russia</option>
+              <option value="RW">Rwanda</option>
+              <option value="BL">Saint Barthélemy</option>
+              <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+              <option value="KN">Saint Kitts and Nevis</option>
+              <option value="LC">Saint Lucia</option>
+              <option value="MF">Saint Martin (French part)</option>
+              <option value="PM">Saint Pierre and Miquelon</option>
+              <option value="VC">Saint Vincent and the Grenadines</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="ST">Sao Tome and Principe</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten (Dutch part)</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">South Georgia and the South Sandwich Islands</option>
+              <option value="KR">South Korea</option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syria</option>
+              <option value="TW">Taiwan</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad and Tobago</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks and Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="UM">United States Minor Outlying Islands</option>
+              <option value="US">United States</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VA">Vatican City</option>
+              <option value="VE">Venezuela</option>
+              <option value="VN">Vietnam</option>
+              <option value="VG">Virgin Islands (British)</option>
+              <option value="VI">Virgin Islands (U.S.)</option>
+              <option value="WF">Wallis and Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="button-container">
-        <button v-if="reportStatus !== 'SENT'" :disabled="!issueType || reportStatus === 'SENDING'" class="button-primary" @click="sendReport()">{{ localize(`issue_reporter_send${reportStatus === 'SENDING' ? 'ing': ''}_button_label`) }}</button>
+        <div class="button-container">
+          <button v-if="reportStatus !== 'SENT'" :disabled="!issueType || reportStatus === 'SENDING'" class="button-primary" @click="sendReport()">{{ localize(`issue_reporter_send${reportStatus === 'SENDING' ? 'ing': ''}_button_label`) }}</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import secondaryHeader from './partials/secondaryHeader.vue';
-import hint from './partials/hint.vue';
+import secondaryHeader from './partials/secondaryHeader';
+import hint from './partials/hint';
+import mixinLocation from '@/scripts/mixins/location';
 
 export default {
   name: 'issueReporter',
+  mixins: [mixinLocation],
   components: {
     secondaryHeader,
     hint,
@@ -69,9 +320,10 @@ export default {
       hasError: false,
       reportStatus: 'STANDBY',
       issueType: 0,
-      shareWebsite: true,
       website: '',
       issueUserDescription: '',
+      userLocation: '',
+      issueIcons: ['', 'buffer', 'safari', 'block', 'language', 'captcha', 'speed-test', 'connect', 'edit'],
     };
   },
   computed: {
@@ -91,7 +343,7 @@ export default {
           break;
       }
       return localeKey;
-    }
+    },
   },
   methods: {
     sideBackBtnClick: function (event) {
@@ -105,7 +357,7 @@ export default {
       this.reportStatus = 'SENDING';
       let body = {
         category: this.issueType,
-        cluster_id: parseInt(ci.previousConnection.id, 10) || 0,
+        cluster_id: parseInt(this.recentLocations[0] ? this.recentLocations[0].id : 0, 10),
         protocol: ci.previousConnection.protocol,
         client_version: ci.app.version,
         os_name: ci.system.os.name,
@@ -113,17 +365,15 @@ export default {
         browser_name: ci.system.browser.name,
         browser_version: ci.system.browser.version,
         extension_version: chrome.runtime.getManifest().version,
+        domain: this.website,
+        location: this.userLocation,
         comment: this.issueUserDescription,
       };
-
-      if (this.shareWebsite === true) {
-        body.domain = this.website;
-      }
 
       const timeout = function (ms, promise) {
         return new Promise((resolve, reject) => {
           const timeoutId = setTimeout(() => {
-            reject(new Error("promise timeout"))
+            reject(new Error('promise timeout'));
           }, ms);
           promise.then(
             (res) => {
@@ -133,37 +383,37 @@ export default {
             (err) => {
               clearTimeout(timeoutId);
               reject(err);
-            }
+            },
           );
-        })
+        });
       };
 
-      const fetchIt = fetch('https://report.expressapisv2.net/issue_report', { 
+      const fetchIt = fetch('https://report.expressapisv2.net/issue_report', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       });
 
       timeout(15000, fetchIt).then(response => {
         self.reportStatus = response.status === 204 ? 'SENT' : 'ERROR';
-      }).catch(function(error) {
+      }).catch(function (error) {
         console.error(error);
         self.reportStatus = 'ERROR';
       });
     },
     returnToIssueType() {
       if (this.reportStatus === 'STANDBY') {
-        this.issueType = 0
+        this.issueType = 0;
       }
-    }
+    },
   },
   mounted() {
     const self = this;
     this.$store.dispatch('setIgnoreStateUpdates', true); // Prevent state updates from overwriting this screen
-    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       let activeTabUrl = tabs[0].url;
       try {
         self.website = (new URL(activeTabUrl)).host.replace('www.', '');
@@ -171,7 +421,7 @@ export default {
         console.error(ex);
         self.website = '';
       }
-    })
+    });
   },
 };
 </script>
@@ -186,62 +436,63 @@ p {
   line-height: 23px;
 }
 
-input[type="radio"], input[type="checkbox"] {
-  display:none; 
-}
-    
-input[type="radio"] ~ label:before, input[type="checkbox"] ~ label:before {
-  font-family: "xv-fonticon";
-  letter-spacing: 12px;
-  color: #000;
-  font-size: 20px;
-  position: relative;
-  top: -5px;
-}
-input[type="radio"] ~ label:before {
-  content: "\5b";
-}
-input[type="checkbox"] ~ label:before {
-  content: "\70";
-}
-input[type="checkbox"]:disabled ~ label:before {
-  color: $gray-20 !important;
-}
-
-input[type="checkbox"]:checked ~ label:before {
-  content: "\6e";
-  font-size: 20px;
-  color: $primary-20;
-  letter-spacing: 12px;
-}
-
-input[type="radio"]:checked ~ label:before {
-  content: "\40";
-  font-size: 20px;
-  color: $primary-20;
-  letter-spacing: 5px;
-}
-
-
-
-
 .reporter {
   &-container {
-    background: $gray-50;
+    background: var(--gray50);
     padding: 25px 15px;
     height: 100vh;
-    border-top: 1px solid $gray-30;
+    border-top: 1px solid var(--gray30);
 
     button:disabled {
-      background: $gray-30;
-      color: $gray-10;
+      background: var(--gray30);
+      color: var(--gray10);
       box-shadow: none;
       border: 0;
     }
 
     .issue {
-      margin-bottom: 11px;
       display: flex;
+      align-items: center;
+      padding: 10px 0;
+      color: var(--black20);
+      
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--gray30);
+      }
+      &:hover {
+        color: var(--primary10);
+      }
+
+      &-category {
+        margin-left: 14px;
+        font-family: ProximaNova-Regular;
+        font-size: 18px;
+        //line-height: 46px;
+      }
+
+      &-location {
+        height: 100%;
+        width: 100%;
+        font-size: 18px;
+        background: var(--gray50);
+        color: var(--black20);
+        border: 0;
+
+        &:invalid {
+          color: var(--gray20);
+        }
+        
+
+        &-holder {
+          margin-top: 10px;
+          height: 50px;
+          width: 100%;
+          border: 1px solid var(--gray20);
+          background: var(--gray50);
+          border-radius: 4px;
+          padding: 0px 10px 0px 5px;
+        }
+      }
 
       &-website {
         &-input {
@@ -249,7 +500,7 @@ input[type="radio"]:checked ~ label:before {
           position: relative;
 
           label {
-            color: $gray-20;
+            color: var(--gray20);
             font-size: 12px;
             position: absolute;
             top: 8px;
@@ -260,13 +511,13 @@ input[type="radio"]:checked ~ label:before {
             width: 100%;
             padding: 22px 15px 5px 15px;
             font-size: 18px;
-            background: $gray-50;
-            color: $black-20;
-            border: 1px solid $black-20;
+            background: var(--gray50);
+            color: var(--black20);
+            border: 1px solid var(--gray20);
             border-radius: 4px;
 
             &:disabled {
-              background: $gray-40;
+              background: var(--gray40);
               border-color: #dddddd;
             }
           }
@@ -285,7 +536,7 @@ input[type="radio"]:checked ~ label:before {
 
       &-description {
         position: relative;
-        border: 1px solid $black-20;
+        border: 1px solid var(--black20);
         height: 100px;
         width: 100%;
         margin-top: 10px;
@@ -293,7 +544,7 @@ input[type="radio"]:checked ~ label:before {
         padding: 6px 15px 5px 15px;
 
         &.disabled {
-          background: $gray-40;
+          background: var(--gray40);
           border-color: #dddddd;
         }
 
@@ -303,18 +554,18 @@ input[type="radio"]:checked ~ label:before {
           font-size: 18px;
           width: 100%;
           border: none;
-          background: $gray-50;
-          color: $black-20;
+          background: var(--gray50);
+          color: var(--black20);
           margin-top: 2px;
           height: calc(100% - 20px);
           padding: 0;
 
           &:disabled {
-            background: $gray-40;
+            background: var(--gray40);
           }
         }
         label {
-          color: $gray-20;
+          color: var(--gray20);
           font-size: 12px;
         }
       }
@@ -338,17 +589,17 @@ input[type="radio"]:checked ~ label:before {
 
         .icon {
           margin-top: -6px;
-          color: $primary-20;
+          color: var(--primary20);
           margin-right: 10px;
 
           &:hover {
-            color: $primary-30;
+            color: var(--primary30);
           }
           &:active {
-            color: $primary-10;
+            color: var(--primary10);
           }
           &.disabled {
-            color: $gray-20;
+            color: var(--gray20);
           }
         }
       }
@@ -362,6 +613,23 @@ input[type="radio"]:checked ~ label:before {
   &-header {
     font-family: ProximaNova-Light;
     font-size: 24px;
+  }
+}
+</style>
+<style lang="scss">
+.issue {
+  &-icon path {
+    fill: var(--gray20);
+  }
+  &:hover {
+    .issue-icon path {
+        fill: var(--primary30);
+    }
+  }
+}
+[data-theme="dark"] {
+  input[type="radio"] ~ label:before, input[type="checkbox"] ~ label:before {
+    color: #f7f7f7;
   }
 }
 </style>

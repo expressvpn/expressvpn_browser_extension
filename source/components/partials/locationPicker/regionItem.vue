@@ -30,19 +30,35 @@ export default {
 .region-item {
 
   &.expanded {
-    background: $accent-20;
+    background: var(--accent20);
+
     .location-item-content, .location-expand .icon {
-      color: $gray-50;
+      color: var(--gray50);
     }
 
     &:hover {
-      background: $accent-10;
+      background: var(--accent10);
     }
     &:active {
-      background: $accent-20;
+      background: var(--accent20);
       box-shadow: none;
     }
   }
   
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .region-item {
+    &.expanded {
+      background: var(--accent10);
+      &:hover {
+        background-color: var(--accent20);
+      }
+      .location-item-content, .location-expand .icon {
+        color: var(--gray20);
+      }
+    }
+  }
 }
 </style>

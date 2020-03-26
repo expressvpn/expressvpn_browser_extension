@@ -32,18 +32,18 @@ export default {
 
 <style lang="scss" scoped>
 .popup {
-  background: $gray-50;
+  background: var(--gray50);
   width: 320px;
   height: auto;
   padding: 12px 14px 15px 14px;
   border-radius: 4px;
 
   &-header {
-    color: $black-20;
+    color: var(--black20);
     font-size: 20px;
   }
   &-text {
-    color: $gray-10;
+    color: var(--gray10);
     font-family: ProximaNova-Semibold;
     font-size: 16px;
     border-top: 1px solid #DDDDDD;
@@ -76,43 +76,59 @@ export default {
     }
 
     button {
-      background: $gray-50;
+      background: var(--gray50);
       border-radius: 4px;
       border: 1px solid #D0D6DA;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
       height: 34px;
-      color: $accent-20;
+      color: var(--accent20);
       font-family: ProximaNova-Semibold;
       font-size: 16px;
       display: block;
       width: 100%;
 
       &.highlight {
-        background: $accent-20;
+        background: var(--accent20);
         color: #FFFFFF;
 
         &:hover {
-          background: $accent-30;
+          background: var(--accent30);
           color: #FFF;
         }
         &:active {
-          background: $accent-10;
+          background: var(--accent10);
           color: #FFF;
         }
       }
 
       &:not(.highlight) {
         &:hover {
-          color: $accent-30;
+          color: var(--accent30);
         }
         &:active {
-          color: $accent-20;
+          color: var(--accent20);
         }
       }
 
       &:nth-of-type(n+2) {
         margin-top: 10px;
       }
+    }
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  button {
+    &.highlight {
+      border: none;
+      color: var(--gray10);
+      &:hover {
+        background: var(--accent10);
+      }
+    }
+    &:not(.highlight) {
+      color: var(--gray10);
     }
   }
 }

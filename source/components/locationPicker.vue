@@ -164,27 +164,36 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid $gray-30;
+  border-bottom: 1px solid var(--gray30);
 
   &.active {
-    color: $primary-20;
-    border-bottom: 4px solid $primary-20;
+    color: var(--primary20);
+    border-bottom: 4px solid var(--primary20);
   }
 
   &-container {
     height: 45px;
     width: 100%;
-    background-color: $gray-40;
+    background-color: var(--gray40);
     display: flex;
     align-items: center;
   }
 }
 
 .location-list-container {
-  background: $gray-50;
+  background: var(--gray50);
   padding: 0px 15px 10px 15px;
   height: calc(600px - 60px - 45px); // Total popup height - secondary header's height - location-tab-container's height 
   overflow-y: auto;
+}
+
+@supports (-moz-appearance:none) {
+  // Workaround for Firefox's bug ignoring padding-bottom - https://bugzilla.mozilla.org/show_bug.cgi?id=748518
+  .location-list-container:after {
+    content: '';
+    height: 10px;
+    display: block;
+  }
 }
 
 .location-item {
@@ -195,9 +204,9 @@ export default {
   justify-content: space-between;
   padding: 8px 10px 8px 10px; // set to 10px to remove existing padding from the icon
   cursor: pointer;
-  color: $black-20;
+  color: var(--black20);
   border-radius: 4px;
-  background-color: $gray-40;
+  background-color: var(--gray40);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10px;
 
@@ -209,19 +218,19 @@ export default {
   }
 
   &:hover {
-    background-color: $gray-30;
+    background-color: var(--gray30);
 
     .location-expand {
-      border-color: $gray-10;
+      border-color: var(--gray10);
     }
   }
 
   &:active {
-    background-color: $gray-40;
+    background-color: var(--gray40);
     box-shadow: none;
 
     .location-expand {
-      border-color: $gray-30;
+      border-color: var(--gray30);
     }
   }
   
@@ -232,8 +241,18 @@ export default {
   }
 
   .location-expand {
-    border-left: 1px solid $gray-30;
+    border-left: 1px solid var(--gray30);
     padding-left: 10px;
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .location-item:hover {
+    background-color: var(--black10);
+  }
+  .location-tab:not(.active) {
+    color: var(--gray10);
   }
 }
 </style>

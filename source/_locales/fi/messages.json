@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "Olet kirjautunut ulos, koska tilitietosi on päivitetty."
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "Jatka ExpressVPN:n käyttöä suorita tämä komento päätteelläsi kirjautuaksesi uudelleen sisään:"
+  },
   "error_forced_signout_p2_text": {
     "message": "Jos haluat jatkaa ExpressVPN:n käyttöä, kirjaudu uudelleen sisään."
   },
@@ -221,7 +224,7 @@
     "message": "ExpressVPN aktivoituu automaattisesti 30 minuutin kuluessa tietojen päivittämisestä."
   },
   "error_not_activated_LINUX_text": {
-    "message": "Käynnistä tämä komento päätelaitteessasi aktivoidaksesi työpöydän sovelluksen:"
+    "message": "Käynnistä tämä komento päätelaitteessasi aktivoidaksesi työpöytäsovelluksen:"
   },
   "error_not_activated_text": {
     "message": "Ole hyvä ja kirjaudu ExpressVPN:n työpöytäsovellukseen tämän laajennuksen käyttämiseksi."
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "Syötä aktivointikoodi"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "Tee tilaus"
+  },
   "error_subscription_expired_l1_text": {
     "message": "Sovellukset joka laitteelle"
   },
@@ -395,14 +401,38 @@
   "hint_connection_delay_text": {
     "message": "Yhteyden muodostamista yritetään yhä."
   },
-  "hint_no_internet_connecting_text": {
-    "message": "Internet-yhteyttä ei löydy. <br> VPN yhdistää, kun se on käytettävissä."
+  "hint_network_state_captive_portal_text": {
+    "message": "Kirjaudu Wi-Fi-verkkoon käyttääksesi VPN:ää."
   },
-  "hint_no_internet_ready_text": {
+  "hint_network_state_not_ready_text": {
+    "message": "Odota hetki, kunnes verkko on käytettävissäsi."
+  },
+  "hint_network_state_not_sure_connecting_text": {
+    "message": "Ei internet-yhteyttä. VPN yhdistää, kun internet-yhteys havaitaan."
+  },
+  "hint_network_state_not_sure_ready_text": {
+    "message": "Internet-yhteyttä ei löydy. VPN ei ehkä ole käytettävissä."
+  },
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "Ei internet-yhteyttä. VPN yhdistää, kun internet-yhteys havaitaan."
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "Internet-yhteyttä ei löydy. <br> VPN yhdistää, kun yhteys havaitaan."
+  },
+  "hint_network_state_no_internet_ready_text": {
     "message": "Internet-yhteyttä ei löydy. <br> VPN ei ehkä ole käytettävissä."
   },
+  "hint_network_state_no_internet_reconnecting_text": {
+    "message": "Internet-yhteys on katkennut. <br>VPN yhdistää uudelleen, kun yhteys havaitaan."
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "Ei internet-yhteyttä.<br>VPN yhdistää, kun internet-yhteys havaitaan."
+  },
+  "hint_no_internet_ready_text": {
+    "message": "Internet-yhteyttä ei löydy.<br>VPN ei ehkä ole käytettävissä."
+  },
   "hint_no_internet_reconnecting_text": {
-    "message": "Internet-yhteys on katkennut. <br>VPN yhdistyy uudelleen, kun se on käytettävissä."
+    "message": "Internet-yhteys katkesi.<br>VPN yhdistää, kun yhteys havaitaan."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Yhteys on katkennut yllättäin. Yhdistetään uudelleen ..."
@@ -452,29 +482,32 @@
   "issue_reporter_home_button_label": {
     "message": "Kotisivu"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "Sijaintini"
+  },
   "issue_reporter_need_help_header": {
     "message": "Tarvitsetko apua?"
   },
   "issue_reporter_opt1": {
-    "message": "Näen välityspalvelinvirheitä videoiden suoratoistosivustoilla"
+    "message": "Ongelmia suoratoistossa"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPN näyttää yhteyden, mutta en voi selata"
+    "message": "En pääse millekään verkkosivustoille"
   },
   "issue_reporter_opt3": {
-    "message": "En pääse tiettyyn verkkosivustoon"
+    "message": "En pääse tietylle verkkosivustolle"
   },
   "issue_reporter_opt4": {
-    "message": "Näen väärän kielen Googlessa"
+    "message": "Väärä kieli tai valuutta"
   },
   "issue_reporter_opt5": {
-    "message": "Näen liian monta Google captchaa"
+    "message": "CAPTCHA-testejä liian usein"
   },
   "issue_reporter_opt6": {
-    "message": "VPN-nopeus on erittäin hidas"
+    "message": "Hidas internet-yhteys"
   },
   "issue_reporter_opt7": {
-    "message": "Yhteyteni katkeilee"
+    "message": "Yhteys katkeaa toistuvasti"
   },
   "issue_reporter_opt8": {
     "message": "Muu"
@@ -635,7 +668,7 @@
     "message": "Katkaistaan yhteyttä..."
   },
   "main_screen_status_vpn_ready_text": {
-    "message": "VPN on POIS PÄÄLTÄ"
+    "message": "Ei yhdistetty"
   },
   "main_screen_status_vpn_reconnecting_text": {
     "message": "Yhdistetään uudelleen"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "Pyydä apua"
   },
+  "menu_settings_general_display_header": {
+    "message": "Näytön asetukset"
+  },
+  "menu_settings_general_display_label": {
+    "message": "Näyttötila"
+  },
   "menu_settings_general_header": {
     "message": "Yleistä"
   },
@@ -744,7 +783,7 @@
     "message": "Määritä työpöydän sovellusasetukset"
   },
   "menu_settings_help_button_label": {
-    "message": "Apua"
+    "message": "Tuki"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
     "message": "Estä sivustoja näkemästä todellista IP-osoitettasi ja sijaintiasi ollessasi yhteydessä VPN:ään."
@@ -876,7 +915,7 @@
     "message": "Yhteyttä ei voitu muodostaa kohteeseen <b>%LOCATION%</b>."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Muodostetaan uudelleen yhteyttä kohteeseen <b>%LOCATION%</b>. Ole hyvä ja odota..."
+    "message": "Yhdistetään uudelleen <b>%LOCATION%</b>."
   },
   "networkLock_try_again_button_label": {
     "message": "Yritä uudelleen"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "Kiitos! Arvioi meidät Firefoxin lisäosien myymälässä?"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "Sovita laiteasetukset"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "Tumma"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "Valo"
+  },
+  "settings_general_help_improve_description": {
+    "message": "Jaa kaatumisraportit, nopeustestit, käyttödiagnostiikka ja tietoja siitä, onko VPN-yhteyksien luominen onnistunut. Nämä raportit eivät sisällä koskaan henkilökohtaisia tietoja."
+  },
+  "settings_general_help_improve_label": {
+    "message": "Parannetaan ExpressVPN:ää"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN-yhteys muodostettu"
   },
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "Aloita"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "Parannetaan ExpressVPN:ää"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "Ei kiitos"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "Jaa kaatumisraportit, nopeustestit, käyttödiagnostiikka ja tietoja siitä, onko VPN-yhteyksien luominen onnistunut. Nämä raportit eivät sisällä koskaan henkilökohtaisia tietoja."
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "Tee riskitön tilaus"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "Tilaa alkaen 8,32 USD/kk"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "Oletko jo asiakas?"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "Hanki ExpressVPN"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "Turvallisia VPN-sijainteja ympäri maailmaa"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "Nopeus ja rajoittamaton kaistanleveys"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "24/7-asiakastuki"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30 päivän rahat takaisin -takuu"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPN suojaa yksityisyyttäsi piilottamalla todellisen IP-osoitteesi"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "Suoratoista kaikkea lempisisältöäsi ilman rajoituksia"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "Yhdistä turvallisesti julkisiin Wi-Fi-verkkoihin hotelleissa, kahviloissa ja lentokentillä"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPN-laajennus on työpöytäsovelluksen kaukosäädin."

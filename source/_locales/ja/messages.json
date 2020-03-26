@@ -126,6 +126,9 @@
   "error_forced_signout_p1_text": {
     "message": "アカウント情報が更新されたためサインアウトしました。"
   },
+  "error_forced_signout_p2_linux_text": {
+    "message": "ExpressVPNを使用し続けるには、再度サインインするためにご使用のターミナルでこのコマンドを実行してください："
+  },
   "error_forced_signout_p2_text": {
     "message": "ExpressVPNを使用し続けるには再度サインインしてください。"
   },
@@ -323,6 +326,9 @@
   "error_subscription_expired_enter_new_code_button_label": {
     "message": "アクティベーションコードを入力"
   },
+  "error_subscription_expired_get_subscription_button_label": {
+    "message": "サブスクリプションを購入"
+  },
   "error_subscription_expired_l1_text": {
     "message": "全デバイスに対応のアプリ"
   },
@@ -395,14 +401,38 @@
   "hint_connection_delay_text": {
     "message": "しばらくお待ちください…"
   },
-  "hint_no_internet_connecting_text": {
+  "hint_network_state_captive_portal_text": {
+    "message": "VPNを使用するには、Wi-Fiネットワークにサインインしてください。"
+  },
+  "hint_network_state_not_ready_text": {
+    "message": "ネットワークの準備が整うまでお待ちください。"
+  },
+  "hint_network_state_not_sure_connecting_text": {
     "message": "インターネット接続を検出できません。見つかり次第、VPNは接続されます。"
   },
-  "hint_no_internet_ready_text": {
+  "hint_network_state_not_sure_ready_text": {
     "message": "インターネット接続を検出できません。VPNを使用できない場合があります。"
   },
-  "hint_no_internet_reconnecting_text": {
+  "hint_network_state_not_sure_reconnecting_text": {
+    "message": "インターネット接続を検出できません。見つかり次第、VPNは接続されます。"
+  },
+  "hint_network_state_no_internet_connecting_text": {
+    "message": "インターネット接続を検出できません。見つかり次第、VPNは接続されます。"
+  },
+  "hint_network_state_no_internet_ready_text": {
+    "message": "インターネット接続を検出できません。VPNを使用できない場合があります。"
+  },
+  "hint_network_state_no_internet_reconnecting_text": {
     "message": "インターネット接続がありません。利用可能になり次第VPNは再接続されます。"
+  },
+  "hint_no_internet_connecting_text": {
+    "message": "インターネット接続を検出できません。<br>見つかり次第、VPNは接続されます。"
+  },
+  "hint_no_internet_ready_text": {
+    "message": "インターネット接続を検出できません。<br>VPNを使用できない場合があります。"
+  },
+  "hint_no_internet_reconnecting_text": {
+    "message": "インターネット接続がありません。<br>利用可能になり次第VPNは再接続されます。"
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "接続が予期せず切断されました。再接続中…"
@@ -452,26 +482,29 @@
   "issue_reporter_home_button_label": {
     "message": "ホーム"
   },
+  "issue_reporter_location_placeholder": {
+    "message": "マイロケーション"
+  },
   "issue_reporter_need_help_header": {
     "message": "ヘルプが必要ですか？"
   },
   "issue_reporter_opt1": {
-    "message": "ビデオストリーミングのウェブサイトでプロキシエラーが表示される"
+    "message": "ストリーミングイシュー"
   },
   "issue_reporter_opt2": {
-    "message": "ExpressVPNは接続されているが、閲覧できない"
+    "message": "ウェブサイトにアクセスできない"
   },
   "issue_reporter_opt3": {
     "message": "特定のウェブサイトにアクセスできない"
   },
   "issue_reporter_opt4": {
-    "message": "Googleで間違った言語が表示される"
+    "message": "正しくない言語または通貨が表示される"
   },
   "issue_reporter_opt5": {
-    "message": "Googleのキャプチャが多すぎる"
+    "message": "キャプチャテストが多すぎる"
   },
   "issue_reporter_opt6": {
-    "message": "VPN速度が非常に遅い"
+    "message": "インターネット接続が遅い"
   },
   "issue_reporter_opt7": {
     "message": "切断を繰り返す"
@@ -654,7 +687,7 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "ブラウザ起動に接続"
+    "message": "ブラウザ起動時に接続"
   },
   "menu_desktop_notification_text": {
     "message": "デスクトップ通知を表示"
@@ -728,6 +761,12 @@
   "menu_section_support_title": {
     "message": "お問い合わせ"
   },
+  "menu_settings_general_display_header": {
+    "message": "ディスプレイリファレンス"
+  },
+  "menu_settings_general_display_label": {
+    "message": "ディスプレイモード"
+  },
   "menu_settings_general_header": {
     "message": "一般"
   },
@@ -741,7 +780,7 @@
     "message": "設定"
   },
   "menu_settings_general_open_app_settings_button_label": {
-    "message": "デスクトップアプリの設定を構成"
+    "message": "デスクトップアプリの設定"
   },
   "menu_settings_help_button_label": {
     "message": "ヘルプ"
@@ -780,7 +819,7 @@
     "message": "ExpressVPNを紹介して無料サービスを獲得しましょう！"
   },
   "myaccount_account_active_p2_text": {
-    "message": "お友達が登録する毎に、30日間無料サービスをプレゼントします！"
+    "message": "登録毎に無料の30日間をプレゼント！"
   },
   "myaccount_account_expired_label": {
     "message": "失効"
@@ -870,13 +909,13 @@
     "message": "<b>%LOCATION%</b>に接続しています。"
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b>に接続しています。しばらくお待ちください。"
+    "message": "<b>%LOCATION%</b>に接続しています。"
   },
   "networkLock_status_connection_error_text": {
     "message": "<b>%LOCATION%</b>に接続できません。"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b>に接続しています。しばらくお待ちください。"
+    "message": "<b>%LOCATION%</b>に再接続しています。"
   },
   "networkLock_try_again_button_label": {
     "message": "やり直す"
@@ -1019,6 +1058,21 @@
   "rating_thanks_@firefox@_text": {
     "message": "ありがとうございます！Firefoxアドオンストアで評価する"
   },
+  "settings_general_display_dropdown_auto_label": {
+    "message": "デバイス設定を合わせる"
+  },
+  "settings_general_display_dropdown_dark_label": {
+    "message": "ダーク"
+  },
+  "settings_general_display_dropdown_light_label": {
+    "message": "ライト"
+  },
+  "settings_general_help_improve_description": {
+    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続が成功したかを共有します。これらのレポートは個人の特定に繋がる情報を絶対に含みません。"
+  },
+  "settings_general_help_improve_label": {
+    "message": "ExpressVPNの改善に協力"
+  },
   "vpn_status_notification_connected_label": {
     "message": "VPN接続完了"
   },
@@ -1047,7 +1101,7 @@
     "message": "VPN接続中…"
   },
   "vpn_status_notification_reconnecting_network_lock_off_text": {
-    "message": "%sに接続しています。"
+    "message": "%sに再接続しています。"
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
     "message": "%sに接続中です。インターネットトラフィックはブロックされました。"
@@ -1057,6 +1111,51 @@
   },
   "welcome_get_started_button_label": {
     "message": "開始する"
+  },
+  "welcome_help_improve_expressvpn_header": {
+    "message": "ExpressVPNの改善に協力"
+  },
+  "welcome_help_improve_expressvpn_no_button_label": {
+    "message": "協力しない"
+  },
+  "welcome_help_improve_expressvpn_ok_button_label": {
+    "message": "OK"
+  },
+  "welcome_help_improve_expressvpn_p1_text": {
+    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続が成功したかを共有します。これらのレポートは個人の特定に繋がる情報を絶対に含みません。"
+  },
+  "welcome_not_installed_buy_header": {
+    "message": "リスクなしに始める"
+  },
+  "welcome_not_installed_buy_text": {
+    "message": "月額料金8.32米ドルから"
+  },
+  "welcome_not_installed_existing_button_label": {
+    "message": "ユーザー登録済みですか？"
+  },
+  "welcome_not_installed_get_button_label": {
+    "message": "ExpressVPNを購入"
+  },
+  "welcome_not_installed_reasons_li_1_text": {
+    "message": "全世界にある安全なVPNロケーション"
+  },
+  "welcome_not_installed_reasons_li_2_text": {
+    "message": "速い通信速度＆無制限の帯域幅"
+  },
+  "welcome_not_installed_reasons_li_3_text": {
+    "message": "年中無休、24時間サポート"
+  },
+  "welcome_not_installed_reasons_li_4_text": {
+    "message": "30日間返金保証"
+  },
+  "welcome_not_installed_scene_1_text": {
+    "message": "VPNはIPアドレスを偽装することによってプライバシーを保護します"
+  },
+  "welcome_not_installed_scene_2_text": {
+    "message": "無制限にすべてのお気に入りコンテンツをストリーミング"
+  },
+  "welcome_not_installed_scene_3_text": {
+    "message": "ホテル、カフェ、空港の無料Wi-Fiに安全に接続しましょう"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPNの拡張機能でデスクトップアプリの遠隔操作が可能。"

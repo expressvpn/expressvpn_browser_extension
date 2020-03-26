@@ -94,7 +94,7 @@ export default {
       show4starHint: false,
       forceRatingPrompt: false,
       forceIssueReporterPrompt: false,
-      NOW: 0,
+      NOW: Date.now(),
       hideFeedbackPrompt: false,
       timesShownToday: 0,
     };
@@ -112,7 +112,7 @@ export default {
     showRatingPrompt: function(newVal, oldVal) {
       if (newVal === true && oldVal === false) {
         chrome.storage.sync.get('rating', (storage) => {
-          if (typeof storage.rating !== 'undefined') {
+          if (typeof storage.rating === 'object' && Object.keys(storage.rating).length > 0) {
             let ratingData = storage.rating;
             ratingData.lastFailedRateDate = (new Date()).getTime();
             chrome.storage.sync.set({ 'rating': ratingData });
@@ -126,32 +126,36 @@ export default {
     showIssueReporterPrompt() {
       let diffTime = this.NOW - this.currentInfo.hasCurrentStateSince;
       return (
-        this.currentInfo.state === 'ready' &&
-        this.currentInfo.ratingData.previousConnectionTime < 5 * 60 &&
-        diffTime > 0 && diffTime < 10 * 1000 &&
-        this.hideFeedbackPrompt === false
+        this.currentInfo.state === 'ready'
+        && this.currentInfo.ratingData.previousConnectionTime > 0
+        && this.currentInfo.ratingData.previousConnectionTime < 5 * 60
+        && diffTime > 0 && diffTime < 10 * 1000
+        && this.hideFeedbackPrompt === false
       ) || (this.forceIssueReporterPrompt === true);
     },
     showRatingPrompt() {
       const requiredConnectionTime = (__IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 0 : 15 * 60;
       const rating = this.currentInfo.ratingData;
 
-      if (rating) {
-        const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || rating.lastDiscardDate;
-        const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || rating.lastFailedRateDate;
-
-        return (
-          rating.isSubscriber === true &&
-          rating.isSuccessfulConnection === true &&
-          rating.previousConnectionTime >= requiredConnectionTime &&
-          rating.everClickedMaxRating === false &&
-          this.discardPrompt === false &&
-          this.daysBetween(this.NOW, lastDiscardDate) > 30 &&
-          this.daysBetween(this.NOW, lastFailedRateDate) > 10 &&
-          this.currentInfo.os !== 'LINUX' &&
-          this.currentInfo.state === 'connected'
-        ) || (this.forceRatingPrompt === true);
+      if (!rating) {
+        return false;
       }
+
+      const lastDiscardDate = parseInt(localStorage.getItem('lastDiscardDate'), 10) || rating.lastDiscardDate;
+      const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || rating.lastFailedRateDate;
+
+      return (
+        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
+        && rating.isSubscriber === true
+        && rating.isSuccessfulConnection === true
+        && rating.previousConnectionTime >= requiredConnectionTime
+        && rating.everClickedMaxRating === false
+        && this.discardPrompt === false
+        && this.daysBetween(this.NOW, lastDiscardDate) > 30
+        && this.daysBetween(this.NOW, lastFailedRateDate) > 10
+        && this.currentInfo.os !== 'LINUX'
+        && this.currentInfo.state === 'connected'
+      ) || (this.forceRatingPrompt === true);
     },
     selectedLocation() {
       return this.currentInfo.selectedLocation || {};
@@ -188,17 +192,35 @@ export default {
 
       // Check for delayed connection
       if (
-        nConnections === 5 && // Make sure there 4 connections in the history + the current connection
-        this.currentInfo.state === 'connecting' && // It's still connecting
-        this.utils.getTimeDelta(connectingTimes[nConnections - 1].startTime) > 10 && // it’s been more than 10 seconds
-        this.utils.getTimeDelta(connectingTimes[nConnections - 1].startTime) > this.getAverageTopConnectionTime(2) * 1.25 &&
-        this.discardHint === false// If the user already discarded the hint
+        nConnections === 5 // Make sure there 4 connections in the history + the current connection
+        && this.currentInfo.state === 'connecting' // It's still connecting
+        && this.utils.getTimeDelta(connectingTimes[nConnections - 1].startTime) > 10 // it’s been more than 10 seconds
+        && this.utils.getTimeDelta(connectingTimes[nConnections - 1].startTime) > this.getAverageTopConnectionTime(2) * 1.25
+        && this.discardHint === false// If the user already discarded the hint
       ) {
         text = 'hint_connection_delay_text';
         this.hintIcon = null;
-      } else if (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.hasInternet === false) { // GIVEN the user is NOT connected to the VPN and their internet connection is unavailable
-        text = `hint_no_internet_${this.currentInfo.state}_text`;
-        this.hintIcon = 'icon-13-block';
+      } else if (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.networkStatus !== 'has internet') { // GIVEN the user is NOT connected to the VPN and their internet connection is not clear
+        switch (this.currentInfo.networkStatus) {
+          case 'no internet':
+            text = `hint_network_state_no_internet_${this.currentInfo.state}_text`;
+            this.hintIcon = 'icon-13-block';
+            break;
+          case 'captive portal':
+            text = 'hint_network_state_captive_portal_text';
+            this.hintIcon = 'icon-77-password';
+            break;
+          case 'not sure':
+            text = `hint_network_state_not_sure_${this.currentInfo.state}_text`;
+            this.hintIcon = 'icon-13-block';
+            break;
+          case 'not ready':
+            text = 'hint_network_state_not_ready_text';
+            this.hintIcon = 'icon-112-timer';
+            break;
+          default:
+            break;
+        }
       } else if (this.currentInfo.state === 'reconnecting') {
         let networkLockStatus = this.currentInfo.preferences.traffic_guard_level ? 'on' : 'off';
         text = `hint_reconnecting_network_lock_${networkLockStatus}_text`;
@@ -244,7 +266,7 @@ export default {
           break;
         case 'connecting':
         case 'reconnecting':
-          if ((parseInt(this.currentInfo.progress, 10) || 0) < 75) {
+          if ((parseInt(this.currentInfo.progress, 10) || 0) < 75 || this.currentInfo.state === 'reconnecting') {
             chrome.runtime.sendMessage({ cancelConnection: true });
           }
           break;
@@ -352,17 +374,17 @@ export default {
   justify-content: space-around;
 
   &:hover {
-    background: $gray-50 !important;
+    background: $gray-50;
   }
 
   &-label {
     font-size: 12px;
-    color: $gray-20;
+    color: var(--gray20);
   }
   &-text {
     font-family: ProximaNova-Semibold;
     font-size: 16px;
-    color: $black-20;
+    color: var(--black20);
     line-height: 20px;
     width: 175px;
   }
@@ -373,16 +395,22 @@ export default {
   }
   &-button {
     font-size: 35px;
-    color: $accent-20;
     margin-top: -20px;
 
+    &:nth-of-type(2) {
+      color: #519e5d;
+      &:hover {
+        color: #88ce92;
+      }
+    }
     &:last-of-type {
       transform: scaleX(-1) scaleY(-1);
       margin-right: 15px;
       margin-left: 15px;
-    }
-    &:hover {
-      color: $accent-30;
+      color: #e4583f;
+      &:hover {
+        color: #fe7158;
+      }
     }
   }
 }
@@ -391,13 +419,13 @@ export default {
 
   .visual-state {
     g {
-      fill: $gray-30;
+      fill: var(--gray30);
       fill-opacity: 0.4;
       transition: fill-opacity 0.1s ease-in-out;
     }
 
     &-connected g {
-      fill: $green-40;
+      fill: var(--green40);
       fill-opacity: 1;
       transition: fill-opacity 0.1s ease-in-out;
     }
@@ -427,14 +455,14 @@ export default {
       margin: auto;
 
       &-23-close {
-        color: $gray-30;
+        color: var(--gray30);
       }
 
       &:hover {
-        color: $gray-20;
+        color: var(--gray20);
       }
       &:active {
-        color: $black-30;
+        color: var(--black30);
       }
     }
   }
@@ -443,7 +471,7 @@ export default {
     text-align: center;
     font-size: 16px;
     margin-top: 16px;
-    color: $gray-10;
+    color: var(--gray10);
   }
 
   .locations-container {
@@ -451,26 +479,27 @@ export default {
     padding: 0 15px;
 
     .location-box {
-      background: $gray-50;
+      background: var(--gray50);
       box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
 
       &-text-type {
         font-size: 12px;
-        color: $gray-20;
+        color: var(--gray20);
       }
 
       &-text-name {
         font-family: ProximaNova-Semibold;
-        color: $black-20;
+        color: var(--black20);
         font-size: 16px;
       }
 
       &:hover {
-        background: $gray-40;
+        background: var(--gray40);
+        box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.1);
 
         .current-location-more-icon {
-          color: $gray-20;
+          color: var(--gray20);
         }
       }
 
@@ -478,7 +507,7 @@ export default {
         box-shadow: none;
 
         &:hover {
-          background: $gray-50;
+          background: var(--gray50);
         }
       }
     }
@@ -499,7 +528,7 @@ export default {
         font-size: 20px;
 
         &-disabled, &-disabled:hover {
-          color: $gray-30;
+          color: var(--gray30);
         }
       }
 
@@ -540,6 +569,30 @@ export default {
     height: 85px;
     bottom: 0;
     width: 100%;
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .content .visual-state-connected g {
+    fill-opacity: 0.5;
+  }
+  .content .locations-container .location-box {
+    background: var(--gray40);
+
+    &:hover {
+      background: var(--black10);
+    }
+  }
+  .power-button {
+    .icon {
+      &:hover {
+        color: var(--gray30) !important;
+      }
+      &:active {
+        color: var(--gray40) !important;
+      }
+    }
   }
 }
 </style>

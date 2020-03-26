@@ -1,0 +1,111 @@
+:root {
+  --primary10: #{$primary-10};
+  --primary20: #{$primary-20};
+  --primary30: #{$primary-30};
+
+  --accent10: #{$accent-10};
+  --accent20: #{$accent-20};
+  --accent30: #{$accent-30};
+
+  --black10: #{$black-10};
+  --black20: #{$black-20};
+  --black30: #{$black-30};
+
+  --gray10: #{$gray-10};
+  --gray20: #{$gray-20};
+  --gray30: #{$gray-30};
+  --gray40: #{$gray-40};
+  --gray50: #{$gray-50};
+
+  --red10: #{$red-10};
+  --red20: #{$red-20};
+  --red30: #{$red-30};
+  --red40: #{$red-40};
+
+  --yellow10: #{$yellow-10};
+  --yellow20: #{$yellow-20};
+  --yellow30: #{$yellow-30};
+  --yellow40: #{$yellow-40};
+
+  --green10: #{$green-10};
+  --green20: #{$green-20};
+  --green30: #{$green-30};
+  --green40: #{$green-40};
+
+  --blue10: #{$blue-10};
+  --blue20: #{$blue-20};
+  --blue30: #{$blue-30};
+  --blue40: #{$blue-40};
+
+  --purple10: #{$purple-10};
+  --purple20: #{$purple-20};
+  --purple30: #{$purple-30};
+  --purple40: #{$purple-40};
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --primary10: #{$primary-10};
+  --primary20: #{$primary-20};
+  --primary30: #{$primary-30};
+
+  --accent10: #{$accent-10};
+  --accent20: #{$accent-30};//#356488;
+  --accent30: #{$accent-30};
+
+  --black10: #050506;
+  --black20: #dedede;
+  --black30: #919191;
+
+  --gray10: #dedede;
+  --gray20: #dedede;
+  --gray30: #919191;
+  --gray40: #1b1d22;
+  --gray50: #353638;
+
+  --red10: #ffc7bd;
+  --red20: #{$red-20};
+  --red30: #{$red-30};
+  --red40: #c04630;
+
+  --yellow10: #ffe6bd;
+  --yellow20: #ffe6bd;
+  --yellow30: #{$yellow-30};
+  --yellow40: #a56f18;
+
+  --green10: #{$green-10};
+  --green20: #{$green-20};
+  --green30: #{$green-30};
+  --green40: #88ce92;
+
+  --blue10: #bde2ff;
+  --blue20: #6cb3ea;
+  --blue30: #{$blue-30};
+  --blue40: #356488;
+
+  --purple10: #{$purple-10};
+  --purple20: #{$purple-20};
+  --purple30: #{$purple-30};
+  --purple40: #{$purple-40};
+
+  // custom dark styles
+  body {
+    color: var(--gray20);
+    background: var(--gray50);
+  }
+
+  .button {
+    &-container {
+      button {
+        border-color: #5e5e5e;
+      }
+    }
+
+    &-primary {
+      color: #f7f7f7;
+    }
+    &-secondary {
+      color: var(--black20);
+    }
+  }
+}

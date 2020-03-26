@@ -7,7 +7,7 @@ Licensed GPL v2
   <div class="active">
     <div v-if="isPaymentMethodIAP()">
       <div class="button-container">
-        <button v-if="isRenewable()" class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account` })">{{ localize('myaccount_manage_subscription_button_label') }}</button>
+        <button v-if="isRenewable()" class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account` })">{{ localize('myaccount_manage_subscription_button_label') }}</button>
       </div>
     </div>
     <div v-else-if="subscription.plan_type === 'business'">
@@ -17,8 +17,8 @@ Licensed GPL v2
       <img src="/images/gift.svg" />
       <span id="p2">{{ localize('myaccount_account_active_p2_text') }}</span>
       <div class="button-container">
-        <button class="button-primary" @click="createTab({ url: `${currentInfo.subscription.referral_url}&utm_source=extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_active_refer_button_label') }}</button>
-        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_manage_button_label') }}</button>
+        <button class="button-primary" @click="createTab({ url: `${currentInfo.subscription.referral_url}&utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_active_refer_button_label') }}</button>
+        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_manage_button_label') }}</button>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .active {
-  color: $black-20;
+  color: var(--black20);
   font-family: ProximaNova;
   font-size: 18px;
 

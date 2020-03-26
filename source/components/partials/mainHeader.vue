@@ -5,7 +5,7 @@ Licensed GPL v2
 -->
 <template>
   <div :class="['header', currentNotification]" :style="hideIcon ? 'border:0' : ''">
-    <img v-if="!currentNotification" class="logo" src="/images/logo-header.png" />
+    <img v-if="!currentNotification" class="logo" :src="logoPath" />
     <div v-else class="promobar" @click="onPromoBarClick">
       <div class="promobar-header">{{ notificationHeaderText }}</div>
       <div class="promobar-text">{{ notificationBodyText }}</div>
@@ -55,6 +55,7 @@ export default {
         return null;
       }
 
+      const standardizedVersion = this.currentInfo.app.latest_version ? this.currentInfo.app.latest_version.match(/(?:\d+\.)(?:\d+\.)(?:\d+)/g)[0] : '1.0.0';
       if (subscriptionObj.status === 'ACTIVE' && this.utils.isLastInAppPurchasesFailure(subscriptionObj) &&
           this.utils.getTimeDelta(subscriptionObj.expiration_time).days > -10 && this.utils.getTimeDelta(subscriptionObj.expiration_time).days <= 1) {
         notification = 'iap_failed';
@@ -66,7 +67,7 @@ export default {
         notification = 'subscription_expiring_soon';
       } else if (subscriptionObj.status === 'FREE_TRIAL_ACTIVE' && !this.utils.isInAppPurchasesRenewable(subscriptionObj)) {
         notification = 'free_trial_expiring_soon';
-      } else if (this.currentInfo.app.version && this.utils.versionCompare(this.currentInfo.app.version, this.currentInfo.app.latest_version) < 0) {
+      } else if (this.currentInfo.app.version && this.utils.versionCompare(this.currentInfo.app.version, standardizedVersion) < 0) {
         notification = 'update_available';
       } else if (typeof this.currentInfo.preferences === 'object') {
         let splittunnel = this.currentInfo.preferences.split_tunnel || {};
@@ -122,6 +123,12 @@ export default {
       }
       return '';
     },
+    imageSuffix() {
+      return this.$store.state.imageSuffix;
+    },
+    logoPath() {
+      return `/images/logo-header${this.imageSuffix}.png`;
+    },
   },
   methods: {
     showMenu() {
@@ -136,9 +143,9 @@ export default {
           } else {
             url = this.currentInfo.website_url + '/users/sign_in';
             if (this.isTimeElapsed()) {
-              url += '?utm_campaign=renew_subscription&utm_content=promobar_expired&utm_medium=apps&utm_source=extension';
+              url += '?utm_campaign=renew_subscription&utm_content=promobar_expired&utm_medium=apps&utm_source=browser_extension';
             } else {
-              url += '?utm_campaign=renew_subscription&utm_content=promobar_renew_now_now&utm_medium=apps&utm_source=extension';
+              url += '?utm_campaign=renew_subscription&utm_content=promobar_renew_now_now&utm_medium=apps&utm_source=browser_extension';
             }
           }
           break;
@@ -151,7 +158,7 @@ export default {
           this.$store.dispatch('updateCurrentInfo', this.currentInfo);
           break;
         case 'free_trial_expiring_soon':
-          url = this.currentInfo.website_url + '/order?source=free-trial&utm_campaign=free_trial&utm_content=promobar_free_trial_upgrade_now&utm_medium=apps&utm_source=extension';
+          url = this.currentInfo.website_url + '/order?source=free-trial&utm_campaign=free_trial&utm_content=promobar_free_trial_upgrade_now&utm_medium=apps&utm_source=browser_extension';
           if (this.utils.isPaymentMethodIAP(this.currentInfo.subscription)) {
             url += '&payment_method=ios-iap';
           }
@@ -182,30 +189,30 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 60px;
-  background-color: $gray-40;
+  background-color: var(--gray40);
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  border-bottom: 1px solid $gray-30;
+  border-bottom: 1px solid var(--gray30);
 
   &.update_available {
-    background-color: $blue-40;
+    background-color: var(--blue40);
     * {
-      color: $blue-10 !important;
+      color: var(--blue10) !important;
     }
   }
   &.free_trial_expiring_soon, &.subscription_expiring_soon, &.splittunneling {
-    background-color: $yellow-40;
+    background-color: var(--yellow40);
     * {
-      color: $yellow-10 !important;
+      color: var(--yellow10) !important;
     }
   }
 
   &.iap_failed, &.subscription_expired, &.subscription_expiring_autobill {
-    background-color: $red-40;
+    background-color: var(--red40);
     * {
-      color: $red-10 !important;
+      color: var(--red10) !important;
     }
   }
 
@@ -234,14 +241,14 @@ export default {
   }
 
   .icon {
-    color: $black-20;
+    color: var(--black20);
     margin-right: 15px;
 
     &:hover {
-      color: $gray-20;
+      color: var(--gray20);
     }
     &:active {
-      color: $black-30;
+      color: var(--black30);
     }
   }
 }

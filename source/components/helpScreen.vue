@@ -77,10 +77,10 @@ export default {
       this.$store.dispatch('setCurrentView', 'menuScreen');
     },
     contactSupport() {
-      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=menu_contact_support` });
+      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=contact_support&utm_content=menu_contact_support` });
     },
     talkToUs() {
-      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=extension&utm_medium=browser_extension&utm_campaign=contact_support&utm_content=menu_contact_support#open-chat` });
+      this.createTab({ url: `${this.currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=contact_support&utm_content=menu_contact_support#open-chat` });
     },
     suggestImprovements() {
       this.createTab({ url: 'https://expressv.typeform.com/to/Jla85o' });
@@ -109,7 +109,7 @@ export default {
 }
 .version-info {
   margin-top: 25px;
-  color: $gray-20;
+  color: var(--gray20);
   font-family: ProximaNova-Semibold;
   font-size: 16px;
   height: 20px;
@@ -118,7 +118,7 @@ export default {
 }
 .help {
   &-container {
-    background: $gray-50;
+    background: var(--gray50);
     padding: 0 15px;
     height: 100vh;
     border-top: 1px solid #DEDEDE;
@@ -128,7 +128,7 @@ export default {
       &-header {
         margin-top: 25px;
         margin-bottom: 15px;
-        color: $black-20;
+        color: var(--black20);
         font-family: ProximaNova-Light;
         font-size: 24px;
       }

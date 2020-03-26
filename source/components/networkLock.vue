@@ -1,7 +1,7 @@
 <template>
   <div class="nl">
     <div class="nl-content">
-      <img class="logo" src="/images/logo-header.png" />
+      <img class="logo" :src="logoPath" />
       <div v-if="['connecting', 'reconnecting', 'connection_error', 'connected'].includes(currentInfo.state)">
         <h1>{{ localize(`networkLock_header_${currentInfo.state}_text`) }}</h1>
         <hint :stringKey="`networkLock_hint_${currentInfo.state}_text`" :iconName="icons[currentInfo.state]" />
@@ -32,7 +32,7 @@ export default {
         this.openWebsite();
       }
     },
- },
+  },
   data: function () {
     return {
       urlParams: new URLSearchParams(window.location.search),
@@ -43,6 +43,17 @@ export default {
         'connection_error': 'icon-56-information',
       }
     };
+  },
+  computed: {
+    extensionPreferences() {
+      return this.$store.getters.extensionPreferences;
+    },
+    imageSuffix() {
+      return this.$store.state.imageSuffix;
+    },
+    logoPath() {
+      return `/images/logo-header${this.imageSuffix}.png`;
+    },
   },
   methods: {
     openWebsite() {
@@ -61,6 +72,32 @@ export default {
       this.resetState();
       this.openWebsite();
     },
+    setTheme: function () {
+      this.$store.state.imageSuffix = (this.extensionPreferences.displayMode === 'dark' || this.extensionPreferences.displayMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? '_dark' : '';
+      switch (this.extensionPreferences.displayMode) {
+          case 'light':
+          case 'dark':
+            document.documentElement.setAttribute('data-theme', this.extensionPreferences.displayMode);
+            break;
+          case 'auto':
+            document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            break;
+          default:
+            break;
+        }
+    },
+  },
+  created() {
+    let self = this;
+    chrome.storage.local.get('prefs', function (storage) {
+      if (typeof storage.prefs === 'object') {
+        self.$store.dispatch('setExtensionPreferences', Object.assign({}, self.utils.defaultPreferences, storage.prefs));
+        self.setTheme();
+      }
+    });
+    window.matchMedia("(prefers-color-scheme: dark)").addListener((ev) => {
+      self.setTheme();
+    });
   },
 };
 </script>
@@ -72,21 +109,21 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: $gray-40;
+  background: var(--gray40);
   display: flex;
   align-items: center;
   justify-content: center;
 
   &-content {
     width: 370px;
-    background: #fff;
+    background: var(--gray50);
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 25px 30px;
     position: relative;
 
     h1 {
-      color: $black-20;
+      color: var(--black20);
       font-size: 28px;
       font-family: ProximaNova-Semibold;
       line-height: 35px;
@@ -94,7 +131,7 @@ export default {
     }
 
     .status {
-      color: $black-20;
+      color: var(--black20);
       font-size: 18px;
       font-family: ProximaNova;
       line-height: 23px;

@@ -34,7 +34,7 @@ export default {
   box-shadow: inset 0px 4px 6px 0px rgba(100, 100, 100, 0.1);
 
   &-text {
-    color: $gray-10;
+    color: var(--gray10);
   }
 }
 </style>

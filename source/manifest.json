@@ -12,6 +12,14 @@
     "48": "images/toolbar-icon-48.png",
     "128": "images/toolbar-icon-128.png"
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Shift+Ctrl+X",
+        "mac": "Shift+Command+O"
+      }
+    }
+  },
   "default_locale": "en",
   "background": {
     "scripts": [
@@ -21,7 +29,7 @@
   "__firefox__applications": {
     "gecko": {
       "id": "firefox-addon@expressvpn.com",
-      "strict_min_version": "55.0"
+      "strict_min_version": "60.0"
     }
   },
   "permissions": [
@@ -46,6 +54,7 @@
     "images/*",
     "html/*"
   ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

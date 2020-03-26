@@ -7,7 +7,7 @@ Licensed GPL v2
   <div>
     <hint stringKey="error_simultaneous_connection_hint" iconName="icon-41-error" type="error"></hint>
     <p >{{ localize('error_simultaneous_connection_p1_text') }}</p>
-    <p v-html="$parent.addAnchor(`error_simultaneous_connection_iap_${(isPaymentMethodIAP() || isBusinessUser()).toString()}_p2_text`, '/subscriptions?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=deviceusagelimit')" @click="requestUnblock($event, 'LINK')"></p>
+    <p v-html="$parent.addAnchor(`error_simultaneous_connection_iap_${(isPaymentMethodIAP() || isBusinessUser()).toString()}_p2_text`, '/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=deviceusagelimit')" @click="requestUnblock($event, 'LINK')"></p>
     <p>{{ localize(`error_connection_error_lock_${lockStatus}_text`) }}</p>
     <div class="button-container" v-if="isBusinessUser() || isPaymentMethodIAP()">
       <button class="button-primary button-top" @click="resetState">{{ localize('error_simultaneous_connection_ok_button_label') }}</button>
@@ -57,7 +57,7 @@ export default {
       this.resetState();
       switch (caller) {
         case 'BUTTON':
-          this.createTab({ url: `${this.currentInfo.website_url}/features/simultaneous-device-policy?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=deviceusagelimit` });
+          this.createTab({ url: `${this.currentInfo.website_url}/features/simultaneous-device-policy?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=deviceusagelimit` });
           break;
         case 'LINK':
           this.$parent.checkForLinks(ev);

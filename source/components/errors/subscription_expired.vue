@@ -9,7 +9,7 @@ Licensed GPL v2
     <error-icon iconName="icon-2-account" />
     <h1>{{ localize(`error_business_subscription_expired_title`) }}</h1>
     <p>{{ localize('error_business_subscription_expired_text') }}</p>
-    <p v-html="$parent.addAnchor('error_business_subscription_expired_contact_support_text', '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=license_revoked_contact_support')" @click="$parent.checkForLinks"></p>
+    <p v-html="$parent.addAnchor('error_business_subscription_expired_contact_support_text', '/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=license_revoked_contact_support')" @click="$parent.checkForLinks"></p>
     <div class="button-container">
       <button class="button-primary" @click="resetState">{{ localize('error_business_subscription_expired_signout_button_label') }}</button>
     </div>
@@ -24,7 +24,7 @@ Licensed GPL v2
       <li>{{ localize(`error_${localeKey}_l4_text`) }}</li>
     </ul>
     <div class="button-container">
-      <button class="button-primary" @click="openLink">{{ localize(localeKey === 'subscription_expired' ? 'error_subscription_expired_buy_subscription_button_label' : 'error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label') }}</button>
+      <button class="button-primary" @click="openLink">{{ localize(isTrialUser() ? 'error_subscription_expired_get_subscription_button_label' : 'error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label') }}</button>
       <button class="button-secondary" @click="resetState">{{ localize('error_signout_button') }}</button>
     </div>
   </div>
@@ -58,7 +58,7 @@ export default {
         url += 'payment_method=ios-iap&';
       }
       if (this.localeKey === 'subscription_expired') {
-        url += 'utm_source=browser_extensions&utm_medium=apps&utm_campaign=reactivation&utm_content=subscriptionexpired_buynewsubscription';
+        url += 'utm_source=browser_extension&utm_medium=apps&utm_campaign=reactivation&utm_content=subscriptionexpired_buynewsubscription';
       } else {
         url += 'source=free-trial&utm_campaign=free_trial&utm_content=free_trial_expired&utm_medium=apps&utm_source=browser_extension';
       }

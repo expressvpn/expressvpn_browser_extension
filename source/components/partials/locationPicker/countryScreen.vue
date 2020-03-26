@@ -69,7 +69,7 @@ export default {
     align-items: center;
     font-size: 16px;
     text-transform: uppercase;
-    color: #1E1E1E;
+    color: var(--black20);
     height: 29px;
     margin: 23px 0 18px 0;
     padding: 5px 0;
@@ -85,15 +85,15 @@ export default {
     }
 
     .back-container {
-      border-right: 1px solid $gray-30;
+      border-right: 1px solid var(--gray30);
       margin-right: 15px;
 
       .icon {
         &:hover {
-          color: $gray-20;
+          color: var(--gray20);
         }
         &:active {
-          color: $black-30;
+          color: var(--black30);
         }
       }
     }

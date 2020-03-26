@@ -9,7 +9,7 @@ Licensed GPL v2
     <ol>
       <li>{{ localize('error_connection_error_check_l1_text') }}</li>
       <li @click="checkForAction" v-html="addActionLink('error_connection_error_check_l2_text')"></li>
-      <li @click="$parent.checkForLinks" v-html="$parent.addAnchor('error_connection_error_check_l3_text', '/support/?utm_source=extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=connection_failed_contact_support')"></li>
+      <li @click="$parent.checkForLinks" v-html="$parent.addAnchor('error_connection_error_check_l3_text', '/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=connection_failed_contact_support')"></li>
     </ol>
     <p v-if="$parent.lockStatus === 'on'">{{ localize('error_connection_error_lock_on_text') }}</p>
     <div class="button-container">
@@ -82,8 +82,8 @@ ol {
       display: inline-block;
       border-radius: 50%;
       width: 24px;
-      background: $accent-20;
-      color: $gray-50;
+      background: var(--accent20);
+      color: var(--gray50);
       text-align: center; 
       font-size: 16px;
     }

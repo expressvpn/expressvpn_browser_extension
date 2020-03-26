@@ -5,6 +5,7 @@ Licensed GPL v2
 */
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
+import VueSvgInlinePlugin from 'vue-svg-inline-plugin';
 import store from './vuex/store';
 import * as utils from './modules/utils';
 import App from '../components/app';
@@ -12,7 +13,12 @@ import mixin from './mixin';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
-
+Vue.use(VueSvgInlinePlugin, {
+  cache: {
+    version: '1.0',
+    persistent: false,
+  },
+});
 Vue.mixin(mixin);
 const app = new Vue({
   el: '#app',
@@ -97,3 +103,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     ]);
   }
 });
+
+chrome.runtime.sendMessage({ telemetry: true, category: 'has_opened' });

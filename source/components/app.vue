@@ -31,6 +31,9 @@ export default {
     currentView() {
       return this.$store.getters.currentView;
     },
+    extensionPreferences() {
+      return this.$store.getters.extensionPreferences;
+    },
     previousView() {
       return this.$store.getters.previousView;
     },
@@ -57,6 +60,32 @@ export default {
         this.$emit('discard-hint');
       }
     },
+    setTheme: function () {
+      this.$store.state.imageSuffix = (this.extensionPreferences.displayMode === 'dark' || this.extensionPreferences.displayMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? '_dark' : '';
+      switch (this.extensionPreferences.displayMode) {
+          case 'light':
+          case 'dark':
+            document.documentElement.setAttribute('data-theme', this.extensionPreferences.displayMode);
+            break;
+          case 'auto':
+            document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            break;
+          default:
+            break;
+        }
+    }
+  },
+  created() {
+    let self = this;
+    chrome.storage.local.get('prefs', function (storage) {
+      if (typeof storage.prefs === 'object') {
+        self.$store.dispatch('setExtensionPreferences', Object.assign({}, self.utils.defaultPreferences, storage.prefs));
+        self.setTheme();
+      }
+    });
+    window.matchMedia("(prefers-color-scheme: dark)").addListener((ev) => {
+      self.setTheme();
+    });
   },
 };
 </script>
