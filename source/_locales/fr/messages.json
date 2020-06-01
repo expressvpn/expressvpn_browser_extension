@@ -522,7 +522,7 @@
     "message": "Envoyer un rapport"
   },
   "issue_reporter_share_website_label": {
-    "message": "Partager le site Web avec ExpressVPN"
+    "message": "Partager le site web avec ExpressVPN"
   },
   "issue_reporter_support_button_label": {
     "message": "Contacter le Support client"
@@ -1068,7 +1068,7 @@
     "message": "Clair"
   },
   "settings_general_help_improve_description": {
-    "message": "Partagez les rapports de crash, les tests de vitesse, les diagnostics d'accessibilité et si les tentatives de connexion VPN réussissent ou non. Ces rapports ne contiennent jamais d'informations permettant de vous identifier."
+    "message": "Partager les rapports de crash, les tests de vitesse, les diagnostics d'accessibilité et si les tentatives de connexion VPN réussissent ou non. Ces rapports ne contiennent jamais d'informations permettant de vous identifier."
   },
   "settings_general_help_improve_label": {
     "message": "Contribuez à améliorer ExpressVPN"
@@ -1122,7 +1122,7 @@
     "message": "OK"
   },
   "welcome_help_improve_expressvpn_p1_text": {
-    "message": "Partagez les rapports de crash, les tests de vitesse, les diagnostics d'accessibilité et si les tentatives de connexion VPN réussissent ou non. Ces rapports ne contiennent jamais d'informations permettant de vous identifier."
+    "message": "Partager les rapports de crash, les tests de vitesse, les diagnostics d'accessibilité et si les tentatives de connexion VPN réussissent ou non. Ces rapports ne contiennent jamais d'informations permettant de vous identifier."
   },
   "welcome_not_installed_buy_header": {
     "message": "Commencer sans risque"

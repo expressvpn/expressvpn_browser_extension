@@ -40,7 +40,7 @@ Licensed GPL v2
         <transition mode="out-in">
           <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText" :iconName="hintIcon" :type="hintType" />
 
-          <div v-else-if="showIssueReporterPrompt && timesShownToday <= 2" class="location-box report-issue">
+          <div v-else-if="isIssueReporterPromptVisible" class="location-box report-issue">
             <div class="report-issue-label">{{ localize('home_report_issue_label') }}</div>
             <div class="report-issue-holder">
               <div class="report-issue-text">{{ localize('home_report_issue_text') }}</div>
@@ -123,12 +123,19 @@ export default {
     },
   },
   computed: {
+    isIssueReporterPromptVisible() {
+      const shouldBeVisible = (this.showIssueReporterPrompt && this.timesShownToday <= 2);
+      if (shouldBeVisible === true) {
+        chrome.runtime.sendMessage({ telemetry: true, category: 'issue_reporter_prompt_shown' });
+      }
+      return shouldBeVisible;
+    },
     showIssueReporterPrompt() {
       let diffTime = this.NOW - this.currentInfo.hasCurrentStateSince;
       return (
         this.currentInfo.state === 'ready'
         && this.currentInfo.ratingData.previousConnectionTime > 0
-        && this.currentInfo.ratingData.previousConnectionTime < 5 * 60
+        && this.currentInfo.ratingData.previousConnectionTime < 10 * 60
         && diffTime > 0 && diffTime < 10 * 1000
         && this.hideFeedbackPrompt === false
       ) || (this.forceIssueReporterPrompt === true);
@@ -145,7 +152,7 @@ export default {
       const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || rating.lastFailedRateDate;
 
       return (
-        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
+        ['Firefox'].includes(this.browserInfo.name)
         && rating.isSubscriber === true
         && rating.isSuccessfulConnection === true
         && rating.previousConnectionTime >= requiredConnectionTime
@@ -240,6 +247,7 @@ export default {
       } else {
         this.$store.dispatch('setCurrentContainer', 'issueReporter');
       }
+      chrome.runtime.sendMessage({ telemetry: true, category: `issue_reporter_prompt_thumb_${hasFeedback ? 'down' : 'up'}` });
     },
     onDiscardRatingPrompt() {
       this.discardPrompt = true; // trigger computed

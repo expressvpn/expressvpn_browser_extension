@@ -10,7 +10,7 @@ Licensed GPL v2
       <hint stringKey="issue_reporter_hint_not_sent_text" iconName="icon-41-error" type="error" v-if="reportStatus === 'ERROR'" style="margin: 0 0 15px 0;" />
       <span class="reporter-header">{{ localize(reportStatus === 'SENT' ? 'issue_reporter_report_sent_header' : 'issue_reporter_header') }}</span>
       <div class="issue-list" v-if="!issueType">
-        <div class="issue" v-for="i in 8" :key="i" @click="issueType = i">
+        <div class="issue" v-for="i in 8" :key="i" @click="setIssueType(i)">
           <img v-svg-inline class="issue-icon" :src="`/images/icons/${issueIcons[i]}.svg`" />
           <span class="issue-category">{{ localize('issue_reporter_opt' + i) }}</span>
         </div>
@@ -346,6 +346,10 @@ export default {
     },
   },
   methods: {
+    setIssueType: function (i) {
+      this.issueType = i;
+      chrome.runtime.sendMessage({ telemetry: true, category: `issue_reporter_category_${i}_selected` });
+    },
     sideBackBtnClick: function (event) {
       this.$store.dispatch('setIgnoreStateUpdates', false);
       this.$store.dispatch('setCurrentView', 'mainScreen');
@@ -403,6 +407,7 @@ export default {
         console.error(error);
         self.reportStatus = 'ERROR';
       });
+      chrome.runtime.sendMessage({ telemetry: true, category: `issue_reporter_category_${this.issueType}_sent` });
     },
     returnToIssueType() {
       if (this.reportStatus === 'STANDBY') {

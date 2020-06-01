@@ -1,6 +1,6 @@
 {
   "name": "xv_chrome",
-  "version": "4.9.0",
+  "version": "4.9.2",
   "description": "ExpressVPN browser extension",
   "author": "ExpressVPN",
   "license": "GPLv2",
@@ -13,6 +13,7 @@
   "dependencies": {
     "lottie-web": "^5.6.3",
     "ua-parser-js": "^0.7.21",
+    "uuid": "^8.0.0",
     "vue": "^2.6.11",
     "vuex": "^3.1.2"
   },

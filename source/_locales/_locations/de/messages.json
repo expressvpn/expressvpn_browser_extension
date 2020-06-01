@@ -1,0 +1,539 @@
+{
+  "Albania": {
+    "message": "Albanien"
+  },
+  "Algeria": {
+    "message": "Algerien"
+  },
+  "Americas": {
+    "message": "Amerika"
+  },
+  "Andorra": {
+    "message": "Andorra"
+  },
+  "Argentina": {
+    "message": "Argentinien"
+  },
+  "Armenia": {
+    "message": "Armenien"
+  },
+  "Asia Pacific": {
+    "message": "Asien-Pazifik"
+  },
+  "Australia": {
+    "message": "Australien"
+  },
+  "Australia - Brisbane": {
+    "message": "Australien - Brisbane"
+  },
+  "Australia - Melbourne": {
+    "message": "Australien - Melbourne"
+  },
+  "Australia - Perth": {
+    "message": "Australien - Perth"
+  },
+  "Australia - Sydney": {
+    "message": "Australien - Sydney"
+  },
+  "Australia - Sydney - 2": {
+    "message": "Australien - Sydney - 2"
+  },
+  "Australia - Sydney - 3": {
+    "message": "Australien - Sydney - 3"
+  },
+  "Austria": {
+    "message": "Österreich"
+  },
+  "Azerbaijan": {
+    "message": "Aserbaidschan"
+  },
+  "Bahamas": {
+    "message": "Bahamas"
+  },
+  "Bangladesh": {
+    "message": "Bangladesch"
+  },
+  "Belarus": {
+    "message": "Weißrussland"
+  },
+  "Belgium": {
+    "message": "Belgien"
+  },
+  "Bhutan": {
+    "message": "Bhutan"
+  },
+  "Bosnia and Herzegovina": {
+    "message": "Bosnien & Herzegovina"
+  },
+  "Brazil": {
+    "message": "Brasilien"
+  },
+  "Brazil - 2": {
+    "message": "Brasilien - 2"
+  },
+  "Brunei": {
+    "message": "Brunei"
+  },
+  "Brunei Darussalam": {
+    "message": "Brunei Darussalam"
+  },
+  "Bulgaria": {
+    "message": "Bulgarien"
+  },
+  "Cambodia": {
+    "message": "Kambodscha"
+  },
+  "Canada": {
+    "message": "Kanada"
+  },
+  "Canada - Montreal": {
+    "message": "Kanada - Montreal"
+  },
+  "Canada - Montreal - 2": {
+    "message": "Kanada - Montreal - 2"
+  },
+  "Canada - Toronto": {
+    "message": "Kanada - Toronto"
+  },
+  "Canada - Toronto - 2": {
+    "message": "Kanada - Toronto - 2"
+  },
+  "Canada - Vancouver": {
+    "message": "Kanada - Vancouver"
+  },
+  "Chile": {
+    "message": "Chile"
+  },
+  "Colombia": {
+    "message": "Kolumbien"
+  },
+  "Costa Rica": {
+    "message": "Costa Rica"
+  },
+  "Croatia": {
+    "message": "Kroatien"
+  },
+  "Cyprus": {
+    "message": "Zypern"
+  },
+  "Czech Republic": {
+    "message": "Tschechische Republik"
+  },
+  "Denmark": {
+    "message": "Dänemark"
+  },
+  "Ecuador": {
+    "message": "Ecuador"
+  },
+  "Egypt": {
+    "message": "Ägypten"
+  },
+  "Estonia": {
+    "message": "Estland"
+  },
+  "Europe": {
+    "message": "Europa"
+  },
+  "Finland": {
+    "message": "Finnland"
+  },
+  "France": {
+    "message": "Frankreich"
+  },
+  "France - Paris - 1": {
+    "message": "Frankreich - Paris - 1"
+  },
+  "France - Paris - 2": {
+    "message": "Frankreich - Paris - 2"
+  },
+  "France - Strasbourg": {
+    "message": "Frankreich - Straßburg"
+  },
+  "Georgia": {
+    "message": "Georgien"
+  },
+  "Germany": {
+    "message": "Deutschland"
+  },
+  "Germany - Frankfurt - 1": {
+    "message": "Deutschland - Frankfurt - 1"
+  },
+  "Germany - Frankfurt - 2": {
+    "message": "Deutschland - Frankfurt - 2"
+  },
+  "Germany - Frankfurt - 3": {
+    "message": "Deutschland - Frankfurt - 3"
+  },
+  "Germany - Nuremberg": {
+    "message": "Deutschland - Nürnberg"
+  },
+  "Greece": {
+    "message": "Griechenland"
+  },
+  "Guatemala": {
+    "message": "Guatemala"
+  },
+  "Hong Kong": {
+    "message": "Hongkong"
+  },
+  "Hong Kong - 2": {
+    "message": "Hongkong - 2"
+  },
+  "Hong Kong - 3": {
+    "message": "Hongkong - 3"
+  },
+  "Hong Kong - 4": {
+    "message": "Hongkong - 4"
+  },
+  "Hungary": {
+    "message": "Ungarn"
+  },
+  "Iceland": {
+    "message": "Island"
+  },
+  "India": {
+    "message": "Indien"
+  },
+  "India (via UK)": {
+    "message": "Indien (über UK)"
+  },
+  "India - Chennai": {
+    "message": "Indien - Chennai"
+  },
+  "India - Mumbai - 1": {
+    "message": "Indien - Mumbai - 1"
+  },
+  "Indonesia": {
+    "message": "Indonesien"
+  },
+  "Ireland": {
+    "message": "Irland"
+  },
+  "Isle of Man": {
+    "message": "Isle of Man"
+  },
+  "Israel": {
+    "message": "Israel"
+  },
+  "Italy": {
+    "message": "Italien"
+  },
+  "Italy - Cosenza": {
+    "message": "Italien - Cosenza"
+  },
+  "Italy - Milan": {
+    "message": "Italien - Mailand"
+  },
+  "Japan": {
+    "message": "Japan"
+  },
+  "Japan - Tokyo": {
+    "message": "Japan - Tokio",
+    "description": "Japan - Tokyo"
+  },
+  "Japan - Tokyo - 1": {
+    "message": "Japan - Tokio - 1"
+  },
+  "Japan - Tokyo - 2": {
+    "message": "Japan - Tokio - 2"
+  },
+  "Japan - Tokyo - 3": {
+    "message": "Japan - Tokio - 3"
+  },
+  "Japan - Yokohama": {
+    "message": "Japan - Yokohama",
+    "description": "Japan - Yokohama"
+  },
+  "Jersey": {
+    "message": "Jersey"
+  },
+  "Kazakhstan": {
+    "message": "Kasachstan"
+  },
+  "Kenya": {
+    "message": "Kenia"
+  },
+  "Kyrgyzstan": {
+    "message": "Kirgisistan"
+  },
+  "Laos": {
+    "message": "Laos"
+  },
+  "Latvia": {
+    "message": "Lettland"
+  },
+  "Liechtenstein": {
+    "message": "Liechtenstein"
+  },
+  "Lithuania": {
+    "message": "Litauen"
+  },
+  "Luxembourg": {
+    "message": "Luxemburg"
+  },
+  "Macau": {
+    "message": "Macau"
+  },
+  "Malaysia": {
+    "message": "Malaysien"
+  },
+  "Malta": {
+    "message": "Malta"
+  },
+  "Mexico": {
+    "message": "Mexiko"
+  },
+  "Middle East and Africa": {
+    "message": "Mittlerer Osten & Afrika"
+  },
+  "Moldova": {
+    "message": "Moldawien"
+  },
+  "Monaco": {
+    "message": "Monaco"
+  },
+  "Mongolia": {
+    "message": "Mongolei"
+  },
+  "Montenegro": {
+    "message": "Montenegro"
+  },
+  "Myanmar": {
+    "message": "Myanmar"
+  },
+  "Nepal": {
+    "message": "Nepal"
+  },
+  "Netherlands": {
+    "message": "Niederlande"
+  },
+  "Netherlands - Amsterdam": {
+    "message": "Niederlande - Amsterdam"
+  },
+  "Netherlands - Amsterdam - 2": {
+    "message": "Niederlande - Amsterdam - 2"
+  },
+  "Netherlands - Rotterdam": {
+    "message": "Niederlande - Rotterdam"
+  },
+  "Netherlands - The Hague": {
+    "message": "Niederlande - Den Haag"
+  },
+  "New Zealand": {
+    "message": "Neuseeland"
+  },
+  "North Macedonia": {
+    "message": "Nordmakedonien"
+  },
+  "Norway": {
+    "message": "Norwegen"
+  },
+  "Pakistan": {
+    "message": "Pakistan"
+  },
+  "Panama": {
+    "message": "Panama"
+  },
+  "Peru": {
+    "message": "Peru"
+  },
+  "Philippines": {
+    "message": "Philippinen"
+  },
+  "Philippines (via Singapore)": {
+    "message": "Philippinen (über Singapur)"
+  },
+  "Poland": {
+    "message": "Polen"
+  },
+  "Portugal": {
+    "message": "Portugal"
+  },
+  "Romania": {
+    "message": "Rumänien"
+  },
+  "Serbia": {
+    "message": "Serbien"
+  },
+  "Singapore": {
+    "message": "Singapur"
+  },
+  "Singapore - CBD": {
+    "message": "Singapur - CBD"
+  },
+  "Singapore - Jurong": {
+    "message": "Singapur - Jurong"
+  },
+  "Singapore - Marina Bay": {
+    "message": "Singapur - Marina Bay"
+  },
+  "Singapore - Sentosa": {
+    "message": "Singapur - Sentosa",
+    "description": "Singapore - Sentosa"
+  },
+  "Slovakia": {
+    "message": "Slowakei"
+  },
+  "Slovenia": {
+    "message": "Slowenien"
+  },
+  "South Africa": {
+    "message": "Südafrika"
+  },
+  "South Korea": {
+    "message": "Südkorea"
+  },
+  "South Korea - 2": {
+    "message": "Südkorea - 2"
+  },
+  "Spain": {
+    "message": "Spanien"
+  },
+  "Spain - Barcelona": {
+    "message": "Spanien - Barcelona"
+  },
+  "Spain - Madrid": {
+    "message": "Spanien - Madrid"
+  },
+  "Sri Lanka": {
+    "message": "Sri Lanka"
+  },
+  "Sweden": {
+    "message": "Schweden"
+  },
+  "Switzerland": {
+    "message": "Schweiz"
+  },
+  "Switzerland - 2": {
+    "message": "Schweiz - 2"
+  },
+  "Taiwan": {
+    "message": "Taiwan"
+  },
+  "Taiwan - 3": {
+    "message": "Taiwan - 3"
+  },
+  "Thailand": {
+    "message": "Thailand"
+  },
+  "Turkey": {
+    "message": "Türkei"
+  },
+  "UK - Docklands": {
+    "message": "UK - Docklands"
+  },
+  "UK - East London": {
+    "message": "UK - East London"
+  },
+  "UK - Kent": {
+    "message": "UK - Kent"
+  },
+  "UK - London": {
+    "message": "UK - London"
+  },
+  "UK - Wembley": {
+    "message": "UK - Wembley"
+  },
+  "Ukraine": {
+    "message": "Ukraine"
+  },
+  "United Kingdom": {
+    "message": "Großbritannien"
+  },
+  "United States": {
+    "message": "USA"
+  },
+  "Uruguay": {
+    "message": "Uruguay"
+  },
+  "USA - Atlanta": {
+    "message": "USA - Atlanta"
+  },
+  "USA - Chicago": {
+    "message": "USA - Chicago"
+  },
+  "USA - Dallas": {
+    "message": "USA - Dallas"
+  },
+  "USA - Dallas - 2": {
+    "message": "USA - Dallas - 2"
+  },
+  "USA - Denver": {
+    "message": "USA - Denver"
+  },
+  "USA - Hollywood": {
+    "message": "USA - Hollywood"
+  },
+  "USA - Los Angeles": {
+    "message": "USA - Los Angeles"
+  },
+  "USA - Los Angeles - 1": {
+    "message": "USA - Los Angeles - 1"
+  },
+  "USA - Los Angeles - 2": {
+    "message": "USA - Los Angeles - 2"
+  },
+  "USA - Los Angeles - 3": {
+    "message": "USA - Los Angeles - 3"
+  },
+  "USA - Los Angeles - 4": {
+    "message": "USA - Los Angeles - 4"
+  },
+  "USA - Los Angeles - 5": {
+    "message": "USA - Los Angeles - 5"
+  },
+  "USA - Miami": {
+    "message": "USA - Miami"
+  },
+  "USA - Miami - 2": {
+    "message": "USA - Miami - 2"
+  },
+  "USA - New Jersey - 1": {
+    "message": "USA - New Jersey - 1"
+  },
+  "USA - New Jersey - 2": {
+    "message": "USA - New Jersey - 2"
+  },
+  "USA - New Jersey - 3": {
+    "message": "USA - New Jersey - 3"
+  },
+  "USA - New York": {
+    "message": "USA - New York"
+  },
+  "USA - New York - 2": {
+    "message": "USA - New York - 2"
+  },
+  "USA - Salt Lake City": {
+    "message": "USA - Salt Lake City"
+  },
+  "USA - San Francisco": {
+    "message": "USA - San Francisco"
+  },
+  "USA - San Jose": {
+    "message": "USA - San Jose"
+  },
+  "USA - Santa Monica": {
+    "message": "USA - Santa Monica"
+  },
+  "USA - Seattle": {
+    "message": "USA - Seattle"
+  },
+  "USA - Tampa - 1": {
+    "message": "USA - Tampa - 1"
+  },
+  "USA - Washington DC": {
+    "message": "USA - Washington DC"
+  },
+  "USA - Washington DC - 2": {
+    "message": "USA - Washington DC - 2"
+  },
+  "Uzbekistan": {
+    "message": "Usbekistan"
+  },
+  "Venezuela": {
+    "message": "Venezuela"
+  },
+  "Vietnam": {
+    "message": "Vietnam"
+  }
+}

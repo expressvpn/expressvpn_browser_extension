@@ -7,7 +7,7 @@ Licensed GPL v2
   <div class="searchResultContainer">
       <div class="search-no-result" v-if="searchItemCount < 1">
         {{ localize('location_picker_search_no_results_text') }}
-      </div>      
+      </div>
       <location-item
         v-for="matchData in searchMatchedLocations"
         :key="`all-${matchData.locationObj.id}`"
@@ -15,11 +15,11 @@ Licensed GPL v2
         category="all"
         :type="matchData.isCountry ? 'country' : 'location'"
       >
-      </location-item>       
+      </location-item>
   </div>
 </template>
 <script>
-import locationItem from './locationItem.vue';
+import locationItem from './locationItem';
 
 export default {
   computed: {
@@ -27,10 +27,11 @@ export default {
       return Object.keys(this.searchMatchedLocations).length;
     },
     searchMatchedLocations: function () {
+      const cleanText = (str) => (str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       let filteredLocations = [];
       let regionObj = [];
-      let rxSearch = new RegExp(this.utils.escapeRegExp(this.searchText.replace(/ +(?= )/g, '')), 'i');
-      if (!this.searchText.trim()) {
+      let rxSearch = new RegExp(this.utils.escapeRegExp(cleanText(this.searchText).replace(/ +(?= )/g, '')), 'i');
+      if (!cleanText(this.searchText).trim()) {
         rxSearch = new RegExp(/(?:)/, 'i');
       }
       // In case we're inside the country screen, show only matches for given country
@@ -39,7 +40,7 @@ export default {
           let countryObj = this.locationPicker.filterLocationsByProtocol(this.currentInfo.allLocationsList[regionName], this.currentInfo.preferences.preferred_protocol)[this.$parent.currentCountry.name];
           if (countryObj) {
             countryObj.forEach(function (locationObj) {
-              if (rxSearch.test(locationObj.name)) {
+              if (rxSearch.test(cleanText(locationObj.name))) {
                 filteredLocations.push({ isCountry: false, locationObj: locationObj });
               }
             });
@@ -50,11 +51,11 @@ export default {
           regionObj = this.locationPicker.filterLocationsByProtocol(this.currentInfo.allLocationsList[region], this.currentInfo.preferences.preferred_protocol);
           for (let country in regionObj) {
             // Allow search by partial country name and by country code
-            if (rxSearch.test(country) || regionObj[country].some((el) => el.country_code === this.searchText.toUpperCase())) {
+            if (rxSearch.test(cleanText(country)) || regionObj[country].some((el) => el.country_code === this.searchText.toUpperCase())) {
               if (regionObj[country].length > 1) {
                 if (this.currentCountry) {
                   regionObj[country].forEach(function (locationObj) {
-                    if (rxSearch.test(locationObj.name)) {
+                    if (rxSearch.test(cleanText(locationObj.name))) {
                       filteredLocations.push({ isCountry: false, locationObj: locationObj });
                     }
                   });
@@ -67,7 +68,7 @@ export default {
               }
             } else {
               regionObj[country].forEach(function (locationObj) {
-                if (rxSearch.test(locationObj.name)) {
+                if (rxSearch.test(cleanText(locationObj.name))) {
                   filteredLocations.push({ isCountry: false, locationObj: locationObj });
                 }
               });

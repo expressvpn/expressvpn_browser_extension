@@ -54,7 +54,6 @@
     "images/*",
     "html/*"
   ],
-  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

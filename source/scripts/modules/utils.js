@@ -248,6 +248,22 @@ const localize = (localeKey) => {
   return '';
 };
 
+const localizeLocation = (_location) => {
+  if (!_location) {
+    return;
+  }
+  let location;
+  if (typeof _location === 'object') {
+    location = { ..._location };
+    if (_location.name) location.name = localize('_locationName_' + _location.name.replace(/[ \-()]/g, '_')) || _location.name;
+    if (_location.country) location.country = localize('_locationName_' + _location.country.replace(/[ \-()]/g, '_')) || _location.country;
+    if (_location.region) location.region = localize('_locationName_' + _location.region.replace(/[ \-()]/g, '_')) || _location.region;
+  } else {
+    location = localize('_locationName_' + _location.replace(/[ \-()]/g, '_')) || _location;
+  }
+  return location;
+};
+
 /**
  * Group collection items by certain predicate and sort groups by min value of given factor per group.
 */
@@ -375,6 +391,7 @@ export {
   currentInfo,
   setLanguage,
   localize,
+  localizeLocation,
   isRegularUser,
   defaultPreferences,
   ICONS,
