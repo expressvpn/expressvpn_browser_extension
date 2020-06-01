@@ -4,6 +4,7 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
 import UAParser from 'ua-parser-js';
+import { v4 as uuidv4 } from 'uuid';
 import com from './modules/nativeCommunication';
 import * as utils from './modules/utils';
 import rating from './modules/rating';
@@ -64,16 +65,25 @@ const MIN_APP_VERSION = {
     });
   }
 
-  function updateExtensionSettings() {
+  function updateExtensionSettings(skipMimic) {
     chrome.storage.local.get('prefs', (storage) => {
       if (typeof storage.prefs === 'object') {
         prefs = Object.assign({}, prefs, storage.prefs); // make sure new options are added
       }
       chrome.storage.local.set({ prefs });
       utils.setLanguage(prefs.language).then(langObj => {
+        window.localizedStrings = langObj.strings; // utils.localize background compatibility
         currentInfo.localizedStrings = langObj.strings;
         currentInfo.locale = langObj.locale;
-        chrome.runtime.sendMessage({ state: true, data: currentInfo });
+
+        // Mimic popup startup API calls
+        if (!skipMimic) {
+          com.getStatus();
+          // eslint-disable-next-line no-use-before-define
+          updatePopupState();
+          com.getLocationList();
+          com.getMessages();
+        }
       });
       setWebrtcOption();
     });
@@ -230,7 +240,7 @@ const MIN_APP_VERSION = {
         break;
       case 'ConnectionProgress':
         currentInfo.state = 'connecting';
-        currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, data.current_location);
+        currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, utils.localizeLocation(data.current_location));
         if (currentInfo.smartLocation.id === currentInfo.selectedLocation.id) {
           currentInfo.selectedLocation.is_smart_location = true;
         }
@@ -241,13 +251,13 @@ const MIN_APP_VERSION = {
       case 'SelectedLocationChanged':
         if (data.is_country === true) {
           currentInfo.selectedLocation = {
-            name: data.name,
+            name: utils.localizeLocation(data.name),
             id: 0,
             is_country: true,
             is_smart_location: false,
           };
         } else {
-          currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, data.name);
+          currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, utils.localizeLocation(data.name));
           if (currentInfo.smartLocation.id === currentInfo.selectedLocation.id) {
             currentInfo.selectedLocation.is_smart_location = true;
           }
@@ -340,6 +350,26 @@ const MIN_APP_VERSION = {
       com.getStatus();
     });
   }
+
+  function sendData(category) {
+    if (!localStorage.getItem('uuid')) {
+      localStorage.setItem('uuid', uuidv4()); // generate random uuid
+    }
+    // https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid
+    const fetchOptions = {
+      method: 'POST',
+      body: new URLSearchParams({
+        'v': 1,
+        'tid': (__IS_BETA__ || __IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 'UA-29468734-12' : 'UA-29468734-11',
+        'cid': localStorage.getItem('uuid'),
+        'aip': 1,
+        't': 'event',
+        'ec': category,
+      }),
+    };
+    fetch('https://www.google-analytics.com/collect', fetchOptions);
+  }
+
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.mock && process.env.NODE_ENV === 'development') {
       console.log('Got mock', message);
@@ -429,15 +459,7 @@ const MIN_APP_VERSION = {
       chrome.tabs.update(message.tabId, { url: message.url });
     } else if (message.telemetry) {
       if (prefs.helpImprove === true && !localStorage2.get('GA_' + message.category)) {
-        // Standard Google Universal Analytics code - https://developers.google.com/analytics/devguides/collection/analyticsjs
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ // eslint-disable-line
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), // eslint-disable-line
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) // eslint-disable-line
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); // eslint-disable-line
-
-        window.ga('create', (__IS_BETA__ || __IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 'UA-29468734-12' : 'UA-29468734-11', 'auto');
-        window.ga('set', 'checkProtocolTask', null); // Removes failing protocol - http://stackoverflow.com/a/22152353/1958200
-        window.ga('send', 'event', message.category);
+        sendData(message.category);
         const today = new Date();
         localStorage2.set('GA_' + message.category, true, (new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)));
       }
@@ -554,6 +576,10 @@ const MIN_APP_VERSION = {
 
         currentInfo.recent_locations_ids = message.data.recent_locations_ids; // eslint-disable-line camelcase
 
+        if ((typeof currentInfo.selectedLocation !== 'undefined') && !currentInfo.selectedLocation.id) {
+          currentInfo.selectedLocation.id = locationsData[currentInfo.selectedLocation.name].id;
+        }
+
         updatePopupState();
         break;
       case 'updateStatus':
@@ -654,7 +680,7 @@ const MIN_APP_VERSION = {
   if (errorState) {
     currentInfo.state = errorState;
   } else {
-    updateExtensionSettings();
+    updateExtensionSettings(true);
     setRatingConfig();
     com.connect();
   }

@@ -127,9 +127,25 @@ const config = {
       {
         from: '_locales',
         to: '_locales',
-        transform: (content) => {
-          let rx = new RegExp(`_@${browser}@`, 'gi');
-          return content.toString().replace(rx, '');
+        ignore: ['_locations/**/*'],
+        transform(content, filePath) {
+          const rx = new RegExp(`_@${browser}@`, 'gi');
+          const originalMessage = content.toString().replace(rx, '');
+          let locations = {};
+          let prependedLocations = {};
+          try {
+            // eslint-disable-next-line import/no-dynamic-require
+            locations = require(filePath.replace('_locales', '_locales/_locations'));
+          } catch (ex) {
+            // Throw again so we know which file is invalid
+            throw new Error('Invalid JSON location file:' + filePath);
+          }
+
+          for (let key in locations) {
+            prependedLocations['_locationName_' + key.replace(/[ \-()]/g, '_')] = locations[key];
+          }
+
+          return JSON.stringify({ ...JSON.parse(originalMessage), ...prependedLocations });
         },
       },
       { from: 'html/**/*', to: 'html/[name].[ext]' },

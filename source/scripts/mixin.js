@@ -110,6 +110,7 @@ export default {
       browserDict: {
         'Google Chrome': 'Chrome',
         'Firefox': 'Firefox',
+        'Microsoft Edge': 'Edge',
       },
     };
   },

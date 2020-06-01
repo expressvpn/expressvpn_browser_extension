@@ -12,7 +12,11 @@ Licensed GPL v2
       </div>
     </div>
     <div class="scene" v-else>
-      <img class="svg-icon replay" :src="getUrl('/images/icons/replay.svg')" @click="resetAnimations()" />
+      <div @click="resetAnimations()" v-if="scene === 4">
+        <span> <!-- v-svg-inline cannot have parent with @click (?) -->
+          <img v-svg-inline class="svg-icon replay" src="/images/icons/replay.svg"/>
+        </span>
+      </div>
       <div class="scene-header">{{ localize('welcome_not_installed_buy_header') }}</div>
       <div class="scene-header-secondary">{{ localize('welcome_not_installed_buy_text') }}</div>
       <div class="animation-container list">
@@ -39,10 +43,9 @@ export default {
   },
   methods: {
     resetAnimations() {
-      const self = this;
       this.scene = 1;
       setTimeout(() => {
-        self.loadAnimation();
+        this.loadAnimation();
       }, 10); // Give time for DOM to re-render
     },
     loadAnimation() {
@@ -127,6 +130,13 @@ export default {
       padding: 25px 15px;
       justify-content: center !important;
     }
+  }
+}
+</style>
+<style lang="scss">
+[data-theme="dark"] {
+  .replay path {
+    fill: var(--gray20);
   }
 }
 </style>

@@ -1059,7 +1059,7 @@
     "message": "ありがとうございます！Firefoxアドオンストアで評価する"
   },
   "settings_general_display_dropdown_auto_label": {
-    "message": "デバイス設定を合わせる"
+    "message": "デバイス設定に合わせる"
   },
   "settings_general_display_dropdown_dark_label": {
     "message": "ダーク"
@@ -1068,7 +1068,7 @@
     "message": "ライト"
   },
   "settings_general_help_improve_description": {
-    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続が成功したかを共有します。これらのレポートは個人の特定に繋がる情報を絶対に含みません。"
+    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続状況を共有します。レポートは個人の特定に繋がる情報を絶対に含みません。"
   },
   "settings_general_help_improve_label": {
     "message": "ExpressVPNの改善に協力"

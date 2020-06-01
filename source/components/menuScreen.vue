@@ -102,7 +102,7 @@ export default {
     },
     canRateExtension() {
       return (
-        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
+        ['Firefox'].includes(this.browserInfo.name)
         && this.isAvailableRateVPN
         && this.currentInfo.ratingData
         && this.currentInfo.ratingData.everClickedMaxRating === false
