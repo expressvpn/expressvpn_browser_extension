@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "ExpressVPN uygulamasını doğrudan Chrome üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere erişin.",
+    "message": "Yüksek hızla çevrimiçi olun. ExpressVPN uygulamasını Chrome'da kontrol edin, konumunuzu gizleyin ve her yerden içeriklere erişin.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Gizlilik, güvenlik ve hız. ExpressVPN uygulamasını doğrudan Firefox üzerinden kontrol edin, konumunuzu gizleyin ve içeriklere her yerden erişin.",
+    "message": "Yüksek hızda daha güvenli bir şekilde çevrimiçi olun. Konumunuzu gizleyin, içeriklere her yerden erişin ve ExpressVPN uygulamasını doğrudan Firefox üzerinden kontrol edin.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: her şeye engeli kaldırmak için VPN vekili",
+    "message": "ExpressVPN: Daha iyi internet için VPN proxy",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -109,13 +109,13 @@
     "message": "İptal"
   },
   "error_connection_error_return_home_button_label_network_lock_on": {
-    "message": "İnternet'e Engeli Kaldırın"
+    "message": "İnternete Engeli Kaldırın"
   },
   "error_connection_error_title": {
     "message": "Bağlanamadı"
   },
   "error_connection_error_to_location_text": {
-    "message": "%LOCATION%<br>konumuna bağlanılamadı."
+    "message": "%LOCATION% konumuna bağlanılamadı."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Tekrar Deneyin"
@@ -158,16 +158,16 @@
     "message": "Fatura Ekibi 24–48 saat içinde yanıt verecektir."
   },
   "error_fraudster_question1_text": {
-    "message": "Bir kredi kartı ile mi ödediniz?"
+    "message": "Kredi kartı ile mi ödediniz?"
   },
   "error_fraudster_question2_text": {
-    "message": "Bir kredi kartı ile ödemediniz mi?"
+    "message": "Kredi kartı ile ödemediniz mi?"
   },
   "error_fraudster_title": {
     "message": "Hesap askıya alındı"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "Ücretsiz denemeniz sona erdi, ancak tekrar bağlanmak çok kolay."
+    "message": "Denemeniz sona erdi, ama tekrar bağlanmak çok kolay."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "Neden yükseltmeli?"
@@ -187,14 +187,14 @@
   "error_free_trial_expired_l4_text": {
     "message": "7/24 müşteri desteği"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Sınırsız bant genişliği"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30 günlük para iade garantisi"
   },
   "error_free_trial_expired_status_text": {
     "message": "Sona erdi (%1)."
   },
   "error_free_trial_expired_title": {
-    "message": "Ücretsiz Deneme sona erdi"
+    "message": "Ücretsiz deneme sona erdi"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
     "message": "Hemen Yükseltin"
@@ -206,7 +206,7 @@
     "message": "Çıkış Yap"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Ücretsiz Deneme Sona Erdi"
+    "message": "Korunmaya devam edin"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "Ödeme Bilgilerini Güncelleyin"
@@ -221,10 +221,10 @@
     "message": "Ödeme Başarısız Oldu"
   },
   "error_IAP_WILL_AUTO_ACTIVATE_p2_text": {
-    "message": "Bilgilerinizi güncellediğinizde, ExpressVPN 30 dakika içinde otomatik olarak aktif hale gelecektir."
+    "message": "Bilgilerinizi güncellediğinizde, ExpressVPN 30 dakika içinde otomatik olarak aktif hâle gelecektir."
   },
   "error_not_activated_LINUX_text": {
-    "message": "Masaüstü uygulamasını aktif hale getirmek için lütfen şu komutu terminalde çalıştırın:"
+    "message": "Masaüstü uygulamasını aktif hâle getirmek için lütfen şu komutu terminalde çalıştırın:"
   },
   "error_not_activated_text": {
     "message": "Bu eklentiyi kullanmak için lütfen ExpressVPN masaüstü uygulamasında giriş yapın."
@@ -306,7 +306,7 @@
     "message": "Bu bağlantıyı açmak internet trafiğinizin tamamına engeli kaldıracaktır."
   },
   "error_simultaneous_connection_popup_title": {
-    "message": "İnternet'e Engeli Kaldırın"
+    "message": "İnternete Engeli Kaldırın"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Ödeme Bilgilerini Güncelleyin"
@@ -330,13 +330,13 @@
     "message": "Abonelik Edinin"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Her cihaz için uygulama"
+    "message": "Sevdiğiniz tüm içeriklere erişin"
   },
   "error_subscription_expired_l2_text": {
-    "message": "Arkadaşlara önerin, ücretsiz 30 gün edinin"
+    "message": "Çevrimiçi iken güvende ve anonim olun"
   },
   "error_subscription_expired_l3_text": {
-    "message": "Dünya genelinde 160 konum"
+    "message": "7/24 destek"
   },
   "error_subscription_expired_l4_text": {
     "message": "7/24 müşteri desteği"
@@ -360,7 +360,7 @@
     "message": "Sona erdi (%1)."
   },
   "error_subscription_expired_title": {
-    "message": "Abonelik sona erdi"
+    "message": "Abonelik Sona Erdi"
   },
   "error_subscription_expiring_autobill_later_button_label": {
     "message": "Daha sonra"
@@ -399,7 +399,7 @@
     "message": "Destek ile İletişime Geçin"
   },
   "hint_connection_delay_text": {
-    "message": "Hala bağlanmaya çalışıyor."
+    "message": "Hâlâ bağlanmaya çalışıyor."
   },
   "hint_network_state_captive_portal_text": {
     "message": "VPN'i kullanmak için lütfen Wi-Fi ağına bağlanın."
@@ -521,9 +521,6 @@
   "issue_reporter_send_button_label": {
     "message": "Raporu Gönderin"
   },
-  "issue_reporter_share_website_label": {
-    "message": "Web sitesini ExpressVPN ile paylaş"
-  },
   "issue_reporter_support_button_label": {
     "message": "Destek ile İletişime Geçin"
   },
@@ -626,13 +623,13 @@
     "message": "VPN Konumları"
   },
   "location_picker_recent_locations_text": {
-    "message": "Önceki̇ Konumlar"
+    "message": "Son Konumlar"
   },
   "location_picker_recommended_locations_text": {
     "message": "Önerilen Konumlar"
   },
   "location_picker_search_no_results_text": {
-    "message": "SONUÇ YOK"
+    "message": "Sonuç yok"
   },
   "location_picker_search_placeholder_text": {
     "message": "Bir şehir veya ülke ara"
@@ -650,7 +647,7 @@
     "message": "Geçerli Konum"
   },
   "main_screen_recent_location_text": {
-    "message": "Önceki Konum"
+    "message": "Son Konum"
   },
   "main_screen_selected_location_text": {
     "message": "Seçilen Konum"
@@ -695,11 +692,14 @@
   "menu_get_30_days_free": {
     "message": "Ücretsiz 30 Gün Edinin"
   },
+  "menu_header": {
+    "message": "Seçenekler"
+  },
   "menu_help_support": {
     "message": "Yardım ve Destek"
   },
   "menu_item_acknowledgements_text": {
-    "message": "Referanslar"
+    "message": "Beyanlar"
   },
   "menu_item_app_version_text": {
     "message": "%OS% uygulama versiyonu: %VERSION%"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Görünüm tercihleri"
   },
-  "menu_settings_general_display_label": {
-    "message": "Görünüm modu"
-  },
   "menu_settings_general_header": {
     "message": "Genel"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Eklenti dili"
   },
   "menu_settings_general_language_label": {
     "message": "Dil"
@@ -906,22 +900,22 @@
     "message": "İnternet trafiği gizliliğinizi korumak amacıyla şu anda engellenmektedir."
   },
   "networkLock_status_connected_text": {
-    "message": "<b>%LOCATION%</b> konumuna bağlandı."
+    "message": "%LOCATION% konumuna bağlandı."
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b> konumuna bağlanıyor."
+    "message": "%LOCATION% konumuna bağlanıyor."
   },
   "networkLock_status_connection_error_text": {
-    "message": "<b>%LOCATION%</b> konumuna bağlanılamadı."
+    "message": "%LOCATION% konumuna bağlanılamadı."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b> konumuna yeniden bağlanıyor."
+    "message": "%LOCATION% konumuna yeniden bağlanıyor."
   },
   "networkLock_try_again_button_label": {
     "message": "Tekrar Deneyin"
   },
   "networkLock_unblock_internet_button_label": {
-    "message": "İnternet'e Engeli Kaldırın"
+    "message": "İnternete Engeli Kaldırın"
   },
   "notification_extension_update_message": {
     "message": "%VERSION% versiyonundaki yenilikleri görmek için tıklayın"
@@ -948,7 +942,7 @@
     "message": "Son ödemeniz başarısız oldu"
   },
   "promobar_iap_failed_text": {
-    "message": "Ödeme yöntemini güncelleyin"
+    "message": "Bilgileri Güncelleyin"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome VPN'in dışında bırakılmış"
@@ -966,7 +960,7 @@
     "message": "Son ödemeniz başarısız oldu"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Ödeme bilgilerini güncelleyin"
+    "message": "Bilgileri Güncelleyin"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Abonelik [days] gün içinde sona eriyor"
@@ -1035,13 +1029,13 @@
     "message": "Nasıl daha iyi olabiliriz?"
   },
   "rating_improve_report_button": {
-    "message": "Bir sorun bildirin"
+    "message": "Bir Sorun Bildirin"
   },
   "rating_improve_suggest_button": {
-    "message": "Bir iyileştirme önerin"
+    "message": "Bir İyileştirme Önerin"
   },
   "rating_no_thanks_text": {
-    "message": "Hayır teşekkürler"
+    "message": "Hayır Teşekkürler"
   },
   "rating_prompt_header": {
     "message": "ExpressVPN'i ne kadar seviyorsunuz?"
@@ -1058,17 +1052,8 @@
   "rating_thanks_@firefox@_text": {
     "message": "Teşekkür ederiz! Bizi Firefox Eklenti Mağazasında oylamak ister misiniz?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Cihaz Ayarları ile Eşleştir"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Koyu"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Açık"
-  },
   "settings_general_help_improve_description": {
-    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgileri içermez."
+    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgiler içermez."
   },
   "settings_general_help_improve_label": {
     "message": "ExpressVPN'i İyileştirin"
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "İlerle"
   },
-  "welcome_get_started_button_label": {
-    "message": "Başlayın"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPN'i İyileştirin"
   },
@@ -1122,7 +1104,7 @@
     "message": "Tamam"
   },
   "welcome_help_improve_expressvpn_p1_text": {
-    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgileri içermez."
+    "message": "Çökme raporlarını, hız testlerini, kullanılabilirlik tanılarını ve VPN'e bağlanmaya çalışmanın başarılı olup olmadığını paylaşın. Bu raporlar hiçbir zaman kişisel bilgiler içermez."
   },
   "welcome_not_installed_buy_header": {
     "message": "Risksiz başlayın"
@@ -1149,10 +1131,10 @@
     "message": "30 günlük para iade garantisi"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "VPN, IP adresinizi gizleyerek gizliliğinizi korur"
+    "message": "Gizliliğinizin kontrolünü elinize alın ve verilerinizi çevrimiçiyken koruyun"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Sevdiğiniz tüm içerikleri sınırlama olmadan izleyin"
+    "message": "Favori programlarınızı ve uygulamalarınızı her yerde kullanın"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Otellerde, kafelerde ve havalimanlarında herkese açık Wi-Fi ağlarına güvenli bir şekilde bağlanın"
@@ -1161,7 +1143,7 @@
     "message": "ExpressVPN eklentisi masaüstü uygulaması için bir uzaktan kontrol aracıdır."
   },
   "welcome_screen2_p1_text": {
-    "message": "VPN'e bağlı olduğunuzda sadece tarayıcınızı değil, cihazınızın tamamını korur."
+    "message": "VPN'e bağlı olduğunuzda, VPN sadece tarayıcınızı değil, cihazınızın tamamını korur."
   },
   "welcome_screen3_learn_more_text": {
     "message": "Daha fazlasını öğrenin"

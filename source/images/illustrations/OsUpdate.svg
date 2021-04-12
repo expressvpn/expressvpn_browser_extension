@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="310px" height="140px" viewBox="0 0 310 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F16D3D17-B9EA-4B9D-A448-E10E493AE2B8@0.5x</title>
+    <defs>
+        <linearGradient x1="23.2138242%" y1="33.9662417%" x2="116.188261%" y2="88.8391782%" id="linearGradient-1">
+            <stop stop-color="#7E0F53" stop-opacity="0" offset="0.0273164336%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="24.4897959%" x2="100%" y2="91.8704358%" id="linearGradient-2">
+            <stop stop-color="#7E0F53" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="112" height="80" rx="4"></rect>
+        <linearGradient x1="0%" y1="28.1183432%" x2="100%" y2="71.8816568%" id="linearGradient-5">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#7E0F53" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="52" height="34.4" rx="1.6"></rect>
+        <rect id="path-8" x="0" y="0" width="52" height="34.4" rx="1.6"></rect>
+    </defs>
+    <g id="Errors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Error---Update-OS" transform="translate(-20.000000, -30.000000)">
+            <g id="Error---App-not-activated-2" transform="translate(20.000000, 30.000000)">
+                <g id="v2" transform="translate(77.000000, 0.000000)">
+                    <circle id="Oval" fill="#7E0F53" cx="78" cy="70" r="70"></circle>
+                    <g id="Group-5" transform="translate(0.000000, 14.000000)">
+                        <path d="M35.2,17.6 L152,17.6 C154.209139,17.6 156,19.390861 156,21.6 L156,106.4 C156,108.609139 154.209139,110.4 152,110.4 L35.2,110.4 C32.990861,110.4 31.2,108.609139 31.2,106.4 L31.2,21.6 C31.2,19.390861 32.990861,17.6 35.2,17.6 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                        <path d="M41.6,24 L145.6,24 C147.809139,24 149.6,25.790861 149.6,28 L149.6,100 C149.6,102.209139 147.809139,104 145.6,104 L41.6,104 C39.390861,104 37.6,102.209139 37.6,100 L37.6,28 C37.6,25.790861 39.390861,24 41.6,24 Z" id="Rectangle" stroke="#F0EACF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14.4"></path>
+                        <g id="Group">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Rectangle" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                            <g id="Group-4" mask="url(#mask-4)">
+                                <g transform="translate(17.600000, 11.200000)">
+                                    <mask id="mask-7" fill="white">
+                                        <use xlink:href="#path-6"></use>
+                                    </mask>
+                                    <use id="Rectangle" stroke="none" fill="url(#linearGradient-5)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                    <rect id="Rectangle" stroke="none" fill="#7E0F53" fill-rule="evenodd" mask="url(#mask-7)" x="0" y="0" width="52" height="4"></rect>
+                                </g>
+                            </g>
+                            <g id="Group-3" mask="url(#mask-4)">
+                                <g transform="translate(42.400000, 23.200000)">
+                                    <mask id="mask-9" fill="white">
+                                        <use xlink:href="#path-8"></use>
+                                    </mask>
+                                    <use id="Rectangle" stroke="none" fill="url(#linearGradient-5)" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                    <rect id="Rectangle" stroke="none" fill="#7E0F53" fill-rule="evenodd" mask="url(#mask-9)" x="0" y="0" width="52" height="4"></rect>
+                                </g>
+                            </g>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="17.6" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="32" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="46.4" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="60.8" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="75.2" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                            <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-4)" x="89.6" y="67.2" width="4.8" height="4.8" rx="1.6"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

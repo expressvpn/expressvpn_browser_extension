@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Extension Onboarding - Linux</title>
+    <defs>
+        <linearGradient x1="-6.00541383%" y1="72.0483592%" x2="100%" y2="31.9274194%" id="linearGradient-1">
+            <stop stop-color="#001D2F" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="96.4702073" height="57.9987047" rx="2.91450777"></rect>
+        <linearGradient x1="0%" y1="48.595916%" x2="50%" y2="51.2842177%" id="linearGradient-4">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="12.7558054%" y1="9.87197342%" x2="83.2823219%" y2="86.4577456%" id="linearGradient-5">
+            <stop stop-color="#0F866C" stop-opacity="0.70036604" offset="0%"></stop>
+            <stop stop-color="#D4E300" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="58.5" height="43.5" rx="1.875"></rect>
+        <linearGradient x1="0%" y1="49.3343195%" x2="100%" y2="50.6656805%" id="linearGradient-8">
+            <stop stop-color="#D4E300" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="11.7361155%" x2="50%" y2="127.711323%" id="linearGradient-9">
+            <stop stop-color="#F9F8F2" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-10" x="0" y="0" width="23.3160622" height="34.9740933" rx="1.45725389"></rect>
+        <rect id="path-12" x="0" y="0" width="23.3160622" height="13.2124352"></rect>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-14">
+            <stop stop-color="#0F866C" offset="0%"></stop>
+            <stop stop-color="#D4E300" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Extension-Onboarding---Linux" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(53.000000, 0.000000)">
+            <circle id="Oval" fill="#D4E300" cx="87" cy="70" r="70"></circle>
+            <g id="firefox-hero" transform="translate(0.000000, 24.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="1.0658141e-14" y="11.7007772" width="96.4702073" height="57.9987047" rx="2.91450777"></rect>
+                <g id="Group-4" transform="translate(4.371762, 7.329016)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Rectangle" fill="#F0EACF" xlink:href="#path-2"></use>
+                    <rect id="Rectangle" fill="#001D2F" mask="url(#mask-3)" x="6.12046632" y="17.4870466" width="53.3354922" height="2.33160622" rx="1.16580311"></rect>
+                    <rect id="Rectangle-Copy-8" fill="#001D2F" mask="url(#mask-3)" x="6.12046632" y="23.3160622" width="53.3354922" height="2.33160622" rx="1.16580311"></rect>
+                    <rect id="Rectangle-Copy-9" fill="#001D2F" mask="url(#mask-3)" x="6.12046632" y="32.9339378" width="39.3458549" height="2.33160622" rx="1.16580311"></rect>
+                    <rect id="Rectangle-Copy-13" fill="#001D2F" mask="url(#mask-3)" x="6.12046632" y="38.7629534" width="27.3963731" height="2.33160622" rx="1.16580311"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-4)" mask="url(#mask-3)" x="0" y="0" width="96.4702073" height="8.16062176"></rect>
+                </g>
+                <path d="M83.1878238,0 L101.617673,0 C103.852885,-7.51602922e-15 106.037433,0.665842268 107.892642,1.91258793 L170.60966,44.0599563 C171.79126,44.8540202 172.5,46.1842227 172.5,47.6078503 L172.5,85.7215026 C172.5,87.43845 171.108139,88.8303109 169.391192,88.8303109 L117.522839,88.8303109 C115.33748,88.8303109 113.312566,87.6830149 112.189342,85.8084052 L82.3704517,36.0420269 C81.9517284,35.3431967 81.7305699,34.5438045 81.7305699,33.7291311 L81.7305699,1.45725389 C81.7305699,0.652434788 82.3830047,3.69887475e-16 83.1878238,0 Z" id="Rectangle" fill="url(#linearGradient-5)"></path>
+                <g id="Group-3" transform="translate(114.000000, 45.330311)">
+                    <g id="Group-24">
+                        <mask id="mask-7" fill="white">
+                            <use xlink:href="#path-6"></use>
+                        </mask>
+                        <use id="Rectangle" fill="#001D2F" xlink:href="#path-6"></use>
+                        <rect id="Rectangle" fill="url(#linearGradient-8)" mask="url(#mask-7)" x="0" y="0" width="58.5" height="6.75"></rect>
+                    </g>
+                    <polyline id="Path-6" stroke="#F0EACF" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" points="4.5 10.5 6.75006598 12.750066 4.5 15.000132"></polyline>
+                    <rect id="Rectangle" fill="#F0EACF" x="8.625" y="14.625" width="6.375" height="1.125" rx="0.5625"></rect>
+                </g>
+                <g id="Group-14" transform="translate(81.730570, 0.000000)">
+                    <mask id="mask-11" fill="white">
+                        <use xlink:href="#path-10"></use>
+                    </mask>
+                    <use id="Rectangle" fill="url(#linearGradient-9)" xlink:href="#path-10"></use>
+                    <g id="Group" mask="url(#mask-11)">
+                        <mask id="mask-13" fill="white">
+                            <use xlink:href="#path-12"></use>
+                        </mask>
+                        <use id="Rectangle" fill="#0F866C" xlink:href="#path-12"></use>
+                        <circle id="Oval" fill="url(#radialGradient-14)" mask="url(#mask-13)" cx="11.6580311" cy="13.2124352" r="17.0984456"></circle>
+                        <circle id="Oval" fill="url(#radialGradient-14)" mask="url(#mask-13)" cx="11.6580311" cy="13.2124352" r="9.71502591"></circle>
+                    </g>
+                    <circle id="Oval" fill="#FFFFFF" mask="url(#mask-11)" cx="11.6580311" cy="13.4067358" r="4.08031088"></circle>
+                    <g id="Connect-icon" mask="url(#mask-11)">
+                        <g transform="translate(8.840674, 10.492228)" id="power-copy">
+                            <g transform="translate(0.939119, 0.704339)">
+                                <path d="M0.549860382,1.00824239 C0.641349979,0.916357991 0.790003977,0.916037939 0.881888379,1.00752754 C0.973772782,1.09901713 0.974092834,1.24767113 0.882603237,1.33955553 C0.331989444,1.89254539 0.332086671,2.78934303 0.882820213,3.34221238 C1.4330388,3.89456478 2.32466747,3.89456478 2.87488605,3.34221238 C3.4256196,2.78934303 3.42571682,1.89254539 2.87510303,1.33955553 C2.78361343,1.24767113 2.78393349,1.09901713 2.87581789,1.00752754 C2.96770229,0.916037939 3.11635629,0.916357991 3.20784589,1.00824239 C3.94091006,1.74446996 3.94078072,2.93753048 3.20755678,3.67359795 C2.47381788,4.41018238 1.28388839,4.41018238 0.550149491,3.67359795 C-0.18307445,2.93753048 -0.183203796,1.74446996 0.549860382,1.00824239 Z" id="Path" fill="#0F866C" fill-rule="nonzero"></path>
+                                <path d="M1.87816149,-2.75328442e-10 C1.99856498,-3.93983391e-05 2.09782933,0.0905625508 2.11142962,0.207323179 L2.11301812,0.234702944 L2.11363293,2.11294129 C2.11367536,2.24260658 2.00859528,2.34775547 1.87892998,2.34779793 C1.7585265,2.34783733 1.65926215,2.25723538 1.64566185,2.14047475 L1.64407335,2.11309498 L1.64345855,0.234856642 C1.64341612,0.10519135 1.7484962,4.24551026e-05 1.87816149,-2.75328442e-10 Z" id="Path" fill="#0F866C" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

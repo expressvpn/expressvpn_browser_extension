@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Chromeから直接ExpressVPNアプリをコントロールし、実際のロケーションは隠し、全世界どこからでもコンテンツにアクセスできます。",
+    "message": "超高速で安全にオンラインを使いましょう。ChromeからExpressVPNアプリをコントロールし、実際のロケーションは隠したままで、全世界どこからでもコンテンツにアクセスできます。",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "プライバシー、セキュリティ、そしてスピード。Firefoxから直接ExpressVPNアプリを操作して、あなたの場所を偽装し、どこからでもコンテンツにアクセスしましょう。",
+    "message": "超高速で安全にオンラインを使いましょう。Firefoxから直接ExpressVPNアプリをコントロールし、実際のロケーションは隠したままで、全世界どこからでもコンテンツにアクセスできます。",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN：すべてのブロックを解除するVPNプロキシ",
+    "message": "ExpressVPN：より良いインターネットのためのVPNプロキシ",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -94,7 +94,7 @@
     "message": "インターネット接続を確認"
   },
   "error_connection_error_check_l2_text": {
-    "message": "違う[VPNロケーション]を選択"
+    "message": "別の[VPNロケーション]を選択"
   },
   "error_connection_error_check_l3_text": {
     "message": "問題が解決されない場合は、[サポートにご連絡ください]"
@@ -115,7 +115,7 @@
     "message": "接続エラー"
   },
   "error_connection_error_to_location_text": {
-    "message": "%LOCATION%に接続できません"
+    "message": "%LOCATION%に接続できません。"
   },
   "error_connection_error_try_again_button_label": {
     "message": "再度試す"
@@ -145,7 +145,7 @@
     "message": "サブスクリプションを再有効化するには、以下のメールアドレス宛にメールしてください："
   },
   "error_fraudster_p2_text": {
-    "message": "題名： <span class='bold'>Billing Verification</span>。",
+    "message": "件名： <span class='bold'>Billing Verification</span>",
     "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
@@ -167,7 +167,7 @@
     "message": "アカウントの一時停止"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "無料トライアルの有効期限が切れていますが、簡単に再度接続できます。"
+    "message": "無料トライアルの有効期限が切れていますが、簡単に再接続できます。"
   },
   "error_free_trial_expired_benefits_title": {
     "message": "アップグレードするメリット"
@@ -182,13 +182,13 @@
     "message": "30日間返金保証"
   },
   "error_free_trial_expired_l3_text": {
-    "message": "全世界160ヵ所のロケーション"
+    "message": "全世界160ヶ所のロケーション"
   },
   "error_free_trial_expired_l4_text": {
     "message": "24時間カスタマーサポート"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "無制限の帯域幅"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30日間返金保証"
   },
   "error_free_trial_expired_status_text": {
     "message": "失効(%1)。"
@@ -206,7 +206,7 @@
     "message": "サインアウト"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "無料トライアル終了"
+    "message": "保護を維持"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "お支払い情報を更新"
@@ -330,13 +330,13 @@
     "message": "サブスクリプションを購入"
   },
   "error_subscription_expired_l1_text": {
-    "message": "全デバイスに対応のアプリ"
+    "message": "全てのお気に入りコンテンツにアクセスする"
   },
   "error_subscription_expired_l2_text": {
-    "message": "お友達を紹介して、30日間無料サービスを獲得"
+    "message": "オンライン上の安全性と匿名性を維持する"
   },
   "error_subscription_expired_l3_text": {
-    "message": "全世界160ヵ所のロケーション"
+    "message": "年中無休24時間体制のサポート"
   },
   "error_subscription_expired_l4_text": {
     "message": "24時間カスタマーサポート"
@@ -360,7 +360,7 @@
     "message": "失効 (%1)。"
   },
   "error_subscription_expired_title": {
-    "message": "失効したサブスクリプション"
+    "message": "サブスクリプション失効済み"
   },
   "error_subscription_expiring_autobill_later_button_label": {
     "message": "あとで"
@@ -459,7 +459,7 @@
     "message": "フィードバック"
   },
   "home_report_issue_text": {
-    "message": "接続状況は如何でしたか？"
+    "message": "接続状況はいかがでしたか？"
   },
   "issue_reporter_describe_textarea_label": {
     "message": "問題を説明してください"
@@ -489,7 +489,7 @@
     "message": "ヘルプが必要ですか？"
   },
   "issue_reporter_opt1": {
-    "message": "ストリーミングイシュー"
+    "message": "ストリーミングの問題"
   },
   "issue_reporter_opt2": {
     "message": "ウェブサイトにアクセスできない"
@@ -520,9 +520,6 @@
   },
   "issue_reporter_send_button_label": {
     "message": "レポートを送信"
-  },
-  "issue_reporter_share_website_label": {
-    "message": "ExpressVPNでウェブサイトを共有"
   },
   "issue_reporter_support_button_label": {
     "message": "サポートに問い合わせる"
@@ -614,7 +611,7 @@
     "message": "すべてのデバイスに対応のアプリ"
   },
   "list_item_locations_worldwide": {
-    "message": "全世界160カ所のロケーション"
+    "message": "全世界160ヶ所のロケーション"
   },
   "list_item_refer_frieds": {
     "message": "お友達を紹介して、30日間無料サービスを獲得"
@@ -695,6 +692,9 @@
   "menu_get_30_days_free": {
     "message": "30日間無料サービスを獲得"
   },
+  "menu_header": {
+    "message": "オプション"
+  },
   "menu_help_support": {
     "message": "ヘルプ＆サポート"
   },
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "ディスプレイリファレンス"
   },
-  "menu_settings_general_display_label": {
-    "message": "ディスプレイモード"
-  },
   "menu_settings_general_header": {
     "message": "一般"
-  },
-  "menu_settings_general_language_header": {
-    "message": "拡張機能言語"
   },
   "menu_settings_general_language_label": {
     "message": "言語"
@@ -786,10 +780,10 @@
     "message": "ヘルプ"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "VPNに接続中に、ウェブサイトが実際のIPアドレスやアクセス場所を見つけるのを防止します。"
+    "message": "VPNに接続中に、ウェブサイトが実際のIPアドレスやアクセス場所を見つけられないようにします。"
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "VPNに接続中にHTML5ジオロケーションが実際のアクセス場所を公開することを防止します。"
+    "message": "VPNに接続中にHTML5ジオロケーションが実際のアクセス場所を明らかにしないようにします。"
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "安全性が高いHTTPSバージョンのウェブサイトに自動で接続します。"
@@ -819,7 +813,7 @@
     "message": "ExpressVPNを紹介して無料サービスを獲得しましょう！"
   },
   "myaccount_account_active_p2_text": {
-    "message": "登録毎に無料の30日間をプレゼント！"
+    "message": "登録毎に無料で30日間プレゼント！"
   },
   "myaccount_account_expired_label": {
     "message": "失効"
@@ -894,7 +888,7 @@
     "message": "お待ちください"
   },
   "networkLock_hint_connected_text": {
-    "message": "すぐにリダイレクトが開始します。"
+    "message": "すぐに切り替えられます。"
   },
   "networkLock_hint_connecting_text": {
     "message": "プライバシー保護のためインターネットトラフィックは現在ブロックされています。"
@@ -906,16 +900,16 @@
     "message": "プライバシー保護のためインターネットトラフィックは現在ブロックされています。"
   },
   "networkLock_status_connected_text": {
-    "message": "<b>%LOCATION%</b>に接続しています。"
+    "message": "%LOCATION%に接続済み。"
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b>に接続しています。"
+    "message": "%LOCATION%に再接続しています。"
   },
   "networkLock_status_connection_error_text": {
-    "message": "<b>%LOCATION%</b>に接続できません。"
+    "message": "%LOCATION%に接続できません。"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b>に再接続しています。"
+    "message": "%LOCATION%に再接続しています。"
   },
   "networkLock_try_again_button_label": {
     "message": "やり直す"
@@ -948,7 +942,7 @@
     "message": "前回のお支払い：失敗"
   },
   "promobar_iap_failed_text": {
-    "message": "お支払い方法を更新"
+    "message": "お支払い情報の更新"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "ChromeはVPNから除外されました"
@@ -1041,10 +1035,10 @@
     "message": "改善を提案する"
   },
   "rating_no_thanks_text": {
-    "message": "協力しない"
+    "message": "いいえ"
   },
   "rating_prompt_header": {
-    "message": "ExpressVPNをどれくらい評価しますか？"
+    "message": "あなたのExpressVPNの評価は？"
   },
   "rating_prompt_ok_button": {
     "message": "OK"
@@ -1058,17 +1052,8 @@
   "rating_thanks_@firefox@_text": {
     "message": "ありがとうございます！Firefoxアドオンストアで評価する"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "デバイス設定に合わせる"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "ダーク"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "ライト"
-  },
   "settings_general_help_improve_description": {
-    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続状況を共有します。レポートは個人の特定に繋がる情報を絶対に含みません。"
+    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続状況を共有します。レポートは個人の特定に繋がる情報を一切含みません。"
   },
   "settings_general_help_improve_label": {
     "message": "ExpressVPNの改善に協力"
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "続行"
   },
-  "welcome_get_started_button_label": {
-    "message": "開始する"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPNの改善に協力"
   },
@@ -1122,10 +1104,10 @@
     "message": "OK"
   },
   "welcome_help_improve_expressvpn_p1_text": {
-    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続が成功したかを共有します。これらのレポートは個人の特定に繋がる情報を絶対に含みません。"
+    "message": "クラッシュレポート、速度テスト、ユーザービリティ診断情報、VPN接続がうまく行ったかどうかを共有します。これらのレポートは個人の特定に繋がる情報を一切含みません。"
   },
   "welcome_not_installed_buy_header": {
-    "message": "リスクなしに始める"
+    "message": "リスクフリーで始める"
   },
   "welcome_not_installed_buy_text": {
     "message": "月額料金8.32米ドルから"
@@ -1149,13 +1131,13 @@
     "message": "30日間返金保証"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "VPNはIPアドレスを偽装することによってプライバシーを保護します"
+    "message": "オンラインでのプライバシーを制御、データを保護"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "無制限にすべてのお気に入りコンテンツをストリーミング"
+    "message": "どこにいてもお気に入りの番組やアプリを楽しむ"
   },
   "welcome_not_installed_scene_3_text": {
-    "message": "ホテル、カフェ、空港の無料Wi-Fiに安全に接続しましょう"
+    "message": "ホテル、カフェ、空港の無料Wi-Fiに安全に接続"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPNの拡張機能でデスクトップアプリの遠隔操作が可能。"
@@ -1167,7 +1149,7 @@
     "message": "詳細"
   },
   "welcome_screen3_p1_text": {
-    "message": "拡張機能はどこにいてもHTTPSを含み、あなたの場所を偽装し、WebRTCをブロックします。"
+    "message": "拡張機能は、どこにいてもあなたの場所を偽装し、WebRTCをブロックし、HTTPS Everywhere。"
   },
   "welcome_skip_button_label": {
     "message": "スキップ"

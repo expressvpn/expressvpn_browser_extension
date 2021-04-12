@@ -176,6 +176,9 @@
   "Hong Kong": {
     "message": "Hongkong"
   },
+  "Hong Kong - 1": {
+    "message": "Hongkong - 1"
+  },
   "Hong Kong - 2": {
     "message": "Hongkong - 2"
   },
@@ -195,7 +198,7 @@
     "message": "Intia"
   },
   "India (via UK)": {
-    "message": "Intia (via Yhdistynyt kuningaskunta)"
+    "message": "Intia (via Iso-Britannia)"
   },
   "India - Chennai": {
     "message": "Intia - Chennai"
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "Espanja - Barcelona"
   },
+  "Spain - Barcelona - 2": {
+    "message": "Espanja - Barcelona - 2"
+  },
   "Spain - Madrid": {
     "message": "Espanja - Madrid"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "Ruotsi"
+  },
+  "Sweden - 2": {
+    "message": "Ruotsi - 2"
   },
   "Switzerland": {
     "message": "Sveitsi"
@@ -420,25 +429,25 @@
     "message": "Turkki"
   },
   "UK - Docklands": {
-    "message": "Yhdistynyt kuningaskunta - Docklands"
+    "message": "Iso-Britannia - Docklands"
   },
   "UK - East London": {
-    "message": "Yhdistynyt kuningaskunta - Itä-Lontoo"
+    "message": "Iso-Britannia - Itä-Lontoo"
   },
   "UK - Kent": {
-    "message": "Yhdistynyt kuningaskunta - Kent"
+    "message": "Iso-Britannia - Kent"
   },
   "UK - London": {
-    "message": "Yhdistynyt kuningaskunta - Lontoo"
+    "message": "Iso-Britannia - Lontoo"
   },
   "UK - Wembley": {
-    "message": "Yhdistynyt kuningaskunta - Wembley"
+    "message": "Iso-Britannia - Wembley"
   },
   "Ukraine": {
     "message": "Ukraina"
   },
   "United Kingdom": {
-    "message": "Yhdistynyt kuningaskunta"
+    "message": "Iso-Britannia"
   },
   "United States": {
     "message": "Yhdysvallat"

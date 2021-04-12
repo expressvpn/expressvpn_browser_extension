@@ -176,6 +176,9 @@
   "Hong Kong": {
     "message": "Hong Kong"
   },
+  "Hong Kong - 1": {
+    "message": "Hong Kong - 1"
+  },
   "Hong Kong - 2": {
     "message": "Hong Kong - 2"
   },
@@ -195,7 +198,7 @@
     "message": "India"
   },
   "India (via UK)": {
-    "message": "India (tramite Regno Unito)"
+    "message": "India (via Regno Unito)"
   },
   "India - Chennai": {
     "message": "India - Chennai"
@@ -341,7 +344,7 @@
     "message": "Filippine"
   },
   "Philippines (via Singapore)": {
-    "message": "Filippine (tramite Singapore)"
+    "message": "Filippine (via Singapore)"
   },
   "Poland": {
     "message": "Polonia"
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "Spagna - Barcellona"
   },
+  "Spain - Barcelona - 2": {
+    "message": "Spagna - Barcellona - 2"
+  },
   "Spain - Madrid": {
     "message": "Spagna - Madrid"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "Svezia"
+  },
+  "Sweden - 2": {
+    "message": "Svezia - 2"
   },
   "Switzerland": {
     "message": "Svizzera"

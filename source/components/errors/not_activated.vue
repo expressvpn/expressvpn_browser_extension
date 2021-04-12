@@ -5,13 +5,13 @@ Licensed GPL v2
 -->
 <template lang="html">
   <div>
-    <error-icon :iconName="currentInfo.os === 'LINUX' ? 'icon-66-linux' : 'icon-2-account'" />
+    <error-icon iconName="Laptop4" />
     <h1>{{ localize('error_not_activated_title') }}</h1>
     <p>{{ localize(`error_not_activated${currentInfo.os === 'LINUX' ? '_LINUX' : ''}_text`) }}</p>
     <div v-if="currentInfo.os === 'LINUX'" class="code">expressvpn activate</div>
     <div class="button-container">
-      <button class="button-primary" @click="openApp" v-if="currentInfo.os !== 'LINUX'">{{ localize('error_open_app_open_app_button_label') }}</button>
-      <button class="button-secondary" @click="contactSupport">{{ localize('error_open_app_contact_support_button_label') }}</button>
+      <button class="primary" @click="openApp" v-if="currentInfo.os !== 'LINUX'">{{ localize('error_open_app_open_app_button_label') }}</button>
+      <button class="secondary" @click="contactSupport">{{ localize('error_open_app_contact_support_button_label') }}</button>
     </div>
   </div>
 </template>

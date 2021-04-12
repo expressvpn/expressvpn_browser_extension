@@ -5,20 +5,15 @@ Licensed GPL v2
 -->
 <template>
   <div>
-    <main-header icon="icon-23-close" :iconClickCallback="backToMainScreen"></main-header>
+    <secondary-header stringkey="menu_header" :onBackClick="backToMainScreen" />
     <div class="menu-container">
       <menu-item v-for="item in menuItems" :key="item.id" :model="item" />
-      <!--
-      <div class="button-container">
-        <button class="button-secondary" @click="resetState">{{ localize('menu_signout_text') }}</button>
-      </div>
-      -->
     </div>
   </div>
 </template>
 <script>
 import UAParser from 'ua-parser-js';
-import mainHeader from './partials/mainHeader';
+import secondaryHeader from './partials/secondaryHeader';
 import menuItem from './partials/menuItem';
 
 export default {
@@ -29,20 +24,17 @@ export default {
         {
           id: 'settings_general',
           localeKey: 'menu_settings_general_name',
-          icon: 'icon-99-settings',
-          classColor: 'primary-20',
+          icon: 'settings',
         },
         {
           id: 'settings_privacy',
           localeKey: 'menu_settings_privacy_security_name',
-          icon: 'icon-97-security',
-          classColor: 'primary-20',
+          icon: 'security',
         },
         {
           id: 'myAccount',
           localeKey: 'menu_my_account',
-          icon: 'icon-2-account',
-          classColor: 'primary-20',
+          icon: 'account',
         },
         {
           isDivider: true,
@@ -50,8 +42,7 @@ export default {
         {
           id: 'help_support',
           localeKey: 'menu_help_support',
-          icon: 'icon-53-help',
-          classColor: 'accent-20',
+          icon: 'help',
         },
         {
           isDivider: true,
@@ -60,31 +51,27 @@ export default {
           id: 'other_devices',
           localeKey: 'menu_setup_other_devices',
           isVisible: this.canSetupOtherDevices,
-          icon: 'icon-34-devices',
-          classColor: 'information-20',
+          icon: 'devices',
         },
         {
           id: 'get_free',
           localeKey: 'menu_get_30_days_free',
           isVisible: this.canGetFreeTrial,
-          icon: 'icon-91-refer',
-          classColor: 'information-20',
+          icon: 'refer',
         },
         {
           id: 'rate_vpn',
           localeKey: 'menu_rate_expressvpn',
           isVisible: this.canRateExtension,
-          icon: 'icon-87-rate',
+          icon: 'rate',
           callback: this.rateMenuItemClick,
-          classColor: 'information-20',
         },
         {
           id: 'beta_feedback',
           localeKey: 'menu_beta_feedback',
           isVisible: () => __IS_BETA__,
-          icon: 'icon-17-bugs',
+          icon: 'bugs',
           callback: this.sendBetaFeedback,
-          classColor: 'purple-20',
         },
       ],
       isAvailableRateVPN: false,
@@ -93,7 +80,7 @@ export default {
   computed: {
   },
   components: {
-    mainHeader,
+    secondaryHeader,
     menuItem,
   },
   methods: {
@@ -102,7 +89,7 @@ export default {
     },
     canRateExtension() {
       return (
-        ['Firefox'].includes(this.browserInfo.name)
+        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
         && this.isAvailableRateVPN
         && this.currentInfo.ratingData
         && this.currentInfo.ratingData.everClickedMaxRating === false
@@ -140,8 +127,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .menu-container {
-  background: var(--gray50);
-  padding: 20px 15px;
-  height: 100vh;
+  padding: 0px 20px;
 }
 </style>

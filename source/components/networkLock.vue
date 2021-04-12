@@ -1,19 +1,26 @@
 <template>
   <div class="nl">
     <div class="nl-content">
-      <img class="logo" :src="logoPath" />
-      <div v-if="['connecting', 'reconnecting', 'connection_error', 'connected'].includes(currentInfo.state)">
-        <h1>{{ localize(`networkLock_header_${currentInfo.state}_text`) }}</h1>
-        <hint :stringKey="`networkLock_hint_${currentInfo.state}_text`" :iconName="icons[currentInfo.state]" />
-        <div class="status" v-html="localize(`networkLock_status_${currentInfo.state}_text`).replace('%LOCATION%', currentInfo.selectedLocation.name)"></div>
-        <div class="button-container" v-if="currentInfo.state !== 'connected'">
-          <button v-if="currentInfo.state === 'connection_error'" class="button-primary" @click="reconnect()">{{ localize('networkLock_try_again_button_label') }}</button>
-          <button v-if="currentInfo.state === 'connection_error'" class="button-secondary" @click="unblock()">{{ localize('networkLock_unblock_internet_button_label') }}</button>
-          <button v-if="['connecting', 'reconnecting'].includes(currentInfo.state)" class="button-secondary" @click="onCancel()">{{ localize('networkLock_cancel_button_label') }}</button>
-        </div>
+      <img v-svg-inline class="logo" src='/images/logo.svg' height="48" width="38" viewbox="0 0 128 128" />
+      <div v-if="!['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state) && !isNonceValid">
+        <p><b>Warning:</b> an unexpected redirect was detected. Only continue if you recognise the link below</p>
+        <p>Please <a target="_blank" :href="`${currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=network-lock-nonce`">contact Support</a> if this issue persists.</p>
+        <a :href="urlParams.get('url')">{{ urlParams.get('url') }}</a>
       </div>
       <div v-else>
-        <hint stringKey="networkLock_hint_connected_text" iconName="icon-64-link" />
+        <div v-if="['connecting', 'reconnecting', 'connection_error', 'connected'].includes(currentInfo.state)">
+          <div class="status-header">{{ localize(`networkLock_header_${currentInfo.state}_text`) }}</div>
+          <div class="status" v-html="localize(`networkLock_status_${currentInfo.state}_text`).replace('%LOCATION%', currentInfo.selectedLocation.name)"></div>
+          <hint :stringKey="`networkLock_hint_${currentInfo.state}_text`" :iconName="icons[currentInfo.state]" :type="currentInfo.state === 'connected' ? 'green' : 'information'" />
+          <div class="button-container" v-if="currentInfo.state !== 'connected'">
+            <button v-if="currentInfo.state === 'connection_error'" class="primary" @click="reconnect()">{{ localize('networkLock_try_again_button_label') }}</button>
+            <button v-if="currentInfo.state === 'connection_error'" class="secondary" @click="unblock()">{{ localize('networkLock_unblock_internet_button_label') }}</button>
+            <button v-if="['connecting', 'reconnecting'].includes(currentInfo.state)" class="secondary" @click="onCancel()">{{ localize('networkLock_cancel_button_label') }}</button>
+          </div>
+        </div>
+        <div v-else>
+          <hint stringKey="networkLock_hint_connected_text" iconName="link" type="green" />
+        </div>
       </div>
     </div>
   </div>
@@ -26,9 +33,9 @@ export default {
   components: {
     Hint,
   },
-  watch:{
+  watch: {
     'currentInfo.state': function (newVal, oldVal) {
-      if (['connected', 'ready'].includes(this.currentInfo.state)) {
+      if (['connected', 'ready'].includes(this.currentInfo.state) && this.isNonceValid) {
         this.openWebsite();
       }
     },
@@ -36,28 +43,22 @@ export default {
   data: function () {
     return {
       urlParams: new URLSearchParams(window.location.search),
+      isNonceValid: false,
       icons: {
-        'connected': 'icon-64-link',
-        'connecting': 'icon-89-reconnect',
-        'reconnecting': 'icon-89-reconnect',
-        'connection_error': 'icon-56-information',
-      }
+        'connected': 'link',
+        'connecting': 'reconnect',
+        'reconnecting': 'reconnect',
+        'connection_error': 'error',
+      },
     };
   },
   computed: {
     extensionPreferences() {
       return this.$store.getters.extensionPreferences;
     },
-    imageSuffix() {
-      return this.$store.state.imageSuffix;
-    },
-    logoPath() {
-      return `/images/logo-header${this.imageSuffix}.png`;
-    },
   },
   methods: {
     openWebsite() {
-      const self = this;
       window.setTimeout(() => {
         window.location.replace(this.urlParams.get('url'));
       }, 500); // give it enough time for the lock to disengage if needed
@@ -72,31 +73,16 @@ export default {
       this.resetState();
       this.openWebsite();
     },
-    setTheme: function () {
-      this.$store.state.imageSuffix = (this.extensionPreferences.displayMode === 'dark' || this.extensionPreferences.displayMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? '_dark' : '';
-      switch (this.extensionPreferences.displayMode) {
-          case 'light':
-          case 'dark':
-            document.documentElement.setAttribute('data-theme', this.extensionPreferences.displayMode);
-            break;
-          case 'auto':
-            document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            break;
-          default:
-            break;
-        }
-    },
   },
   created() {
-    let self = this;
+    let self = this; 
+    if (this.urlParams.get('nonce') === localStorage['nonce']) {
+      this.isNonceValid = true;
+    }
     chrome.storage.local.get('prefs', function (storage) {
       if (typeof storage.prefs === 'object') {
         self.$store.dispatch('setExtensionPreferences', Object.assign({}, self.utils.defaultPreferences, storage.prefs));
-        self.setTheme();
       }
-    });
-    window.matchMedia("(prefers-color-scheme: dark)").addListener((ev) => {
-      self.setTheme();
     });
   },
 };
@@ -109,48 +95,77 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: var(--gray40);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
 
+  .logo {
+    margin-bottom: 30px;
+  }
+
   &-content {
-    width: 370px;
-    background: var(--gray50);
-    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 25px 30px;
+    width: 480px;
+    //height: 424px;
+    background: var(--popup-bg);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
     position: relative;
 
-    h1 {
-      color: var(--black20);
-      font-size: 28px;
-      font-family: ProximaNova-Semibold;
-      line-height: 35px;
-      margin: 30px 0 25px 0;
-    }
-
     .status {
-      color: var(--black20);
-      font-size: 18px;
-      font-family: ProximaNova;
-      line-height: 23px;
-      margin-top: 15px;
-    }
+      //font-family: Inter-Regular;
+      font-size: 16px;
+      //font-weight: normal;
+      height: 28px;
+      letter-spacing: 0px;
+      line-height: 28px;
+      margin: 15px 0 30px 0;
 
-    .logo {
-      width: 170px;
-      height: 35px;
+      &-header {
+        font-family: FSKimText-Medium;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        line-height: 40px;
+      }
     }
 
     .button-container {
       position: relative;
       bottom: 0;
       margin-top: 30px;
-      
+
       button {
         width: 100%;
+
+        &:nth-of-type(n+2) {
+          margin-top: 15px;
+        }
       }
+    }
+
+    .hint {
+      padding: 15px 20px;
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+@media (prefers-color-scheme: light) {
+  .nl {
+    --bg: #{$eds-color-sand-30};
+    --popup-bg: #{$eds-color-white};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .nl {
+    --bg: #{$eds-color-midnight};
+    --popup-bg: #{$eds-color-grey-10};
+
+    .logo path {
+      fill: $eds-color-grey-40;
     }
   }
 }

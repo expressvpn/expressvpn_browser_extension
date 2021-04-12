@@ -20,7 +20,6 @@ Licensed GPL v2
         <menuItem :model="menuModels['acknowledgements']" />
         <div class="version-info">{{ extensionVersion }}</div>
         <div class="version-info">{{ appVersion }}</div>
-        <div class="version-info">{{ hasProxy }}</div>
       </div>
     </div>
   </div>
@@ -33,32 +32,30 @@ export default {
   name: 'helpScreen',
   data: function () {
     return {
-      isProxyControllable: false,
-      hasProxy: '',
       menuModels: {
         report: {
-          icon: 'icon-17-bugs',
+          icon: 'bugs',
           localeKey: 'menu_section_support_report_menu_label',
-          classColor: 'accent-20',
           callback: this.contactSupport,
+          showChevron: true,
         },
         improvements: {
-          icon: 'icon-113-tips',
+          icon: 'tips',
           localeKey: 'menu_section_support_improvements_menu_label',
-          classColor: 'accent-20',
           callback: this.suggestImprovements,
+          showChevron: true,
         },
         talk: {
-          icon: 'icon-67-live-chat',
+          icon: 'live-chat',
           localeKey: 'menu_section_support_chat_menu_label',
-          classColor: 'accent-20',
           callback: this.talkToUs,
+          showChevron: true,
         },
         acknowledgements: {
-          icon: 'icon-3-acknowledge',
+          icon: 'acknowledge',
           localeKey: 'menu_item_acknowledgements_text',
-          classColor: 'accent-20',
           callback: this.acknowledgementsButtonClick,
+          showChevron: true,
         },
       },
     };
@@ -93,45 +90,39 @@ export default {
     secondaryHeader,
     menuItem,
   },
-  created() {
-    const self = this;
-    chrome.proxy.settings.get({}, config => {
-      self.isProxyControllable = config.levelOfControl === 'controllable_by_this_extension';
-    });
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 .divider {
-  border-bottom: 1px solid #DEDEDE;
   margin-top: 25px;
 }
 .version-info {
-  margin-top: 25px;
-  color: var(--gray20);
-  font-family: ProximaNova-Semibold;
+  margin-top: 15px;
+  color: $eds-color-grey-20;
   font-size: 16px;
-  height: 20px;
-  line-height: 20px;
+  line-height: 28px;
   user-select: text;
 }
 .help {
   &-container {
-    background: var(--gray50);
-    padding: 0 15px;
+    padding: 10px 20px;
     height: 100vh;
-    border-top: 1px solid #DEDEDE;
+
+    p:first-child {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
   }
   &-section {
-
       &-header {
-        margin-top: 25px;
-        margin-bottom: 15px;
-        color: var(--black20);
-        font-family: ProximaNova-Light;
-        font-size: 24px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        line-height: 26px;
+        margin-bottom: 10px;
       }
     }
 }
+
 </style>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Refer a Friend</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="273.65115%" id="linearGradient-1">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#DA3940" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="273.65115%" id="linearGradient-2">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#DA3940" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="15.0462832%" x2="50%" y2="264.557394%" id="linearGradient-3">
+            <stop stop-color="#DA3940" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="445.742619%" id="linearGradient-4">
+            <stop stop-color="#DA3940" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-72.9717028%" x2="50%" y2="16.4771151%" id="linearGradient-5">
+            <stop stop-color="#DA3940" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Refer-a-Friend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(42.000000, 9.000000)">
+            <g id="Group" transform="translate(113.000000, 46.000000)">
+                <path d="M50,0 C53.3137085,-6.08718376e-16 56,2.6862915 56,6 L56,6 L56,6 L44,6 C44,2.6862915 46.6862915,6.08718376e-16 50,0 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                <path d="M32,0 C35.3137085,-6.08718376e-16 38,2.6862915 38,6 L38,6 L38,6 L26,6 C26,2.6862915 28.6862915,6.08718376e-16 32,0 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                <rect id="Rectangle" fill="url(#linearGradient-2)" x="37" y="2" width="8" height="8" rx="4"></rect>
+                <path d="M3,18 L80,18 L80,73.4774775 C80,74.8706282 78.8706282,76 77.4774775,76 L5.52252252,76 C4.1293718,76 3,74.8706282 3,73.4774775 L3,18 L3,18 Z" id="Rectangle" fill="url(#linearGradient-3)"></path>
+                <rect id="Rectangle" fill="url(#linearGradient-4)" x="0" y="6" width="83" height="12" rx="1.26126126"></rect>
+                <rect id="Rectangle" fill="#F0EACF" x="35" y="6" width="12" height="12"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-5)" x="35" y="18" width="12" height="58"></rect>
+            </g>
+            <g id="Group-3" transform="translate(0.000000, -0.000000)" fill-rule="nonzero">
+                <path d="M22.6565217,0 L89.3695652,0 C101.880719,0 112.023686,10.1410204 112.026087,22.6521739 C112.026087,35.1650254 101.882417,45.3086957 89.3695652,45.3086957 L89.3695652,63.773913 L70.9043478,45.3086957 L22.6652174,45.3086957 C16.6548277,45.3110025 10.8898186,42.9250013 6.63901566,38.6758292 C2.38821273,34.4266571 -4.54747351e-13,28.662564 -4.54747351e-13,22.6521739 C0.00240091224,10.1410204 10.145368,0 22.6565217,0 Z" id="Path" fill="#DA3940"></path>
+                <g id="solid/[Favourite]-" transform="translate(44.000000, 12.000000)" fill="#F0EACF">
+                    <g id="icon-(outlines)" transform="translate(0.000000, 0.333333)">
+                        <path d="M16.4473467,0.00755464552 C14.8071737,0.0943735612 13.2518254,0.784432922 12.0848485,1.95195773 L12,2.036 L11.9149303,1.95173641 C9.31094615,-0.65224761 5.08905385,-0.652247579 2.4850698,1.95173647 C-0.118914246,4.55572052 -0.118914277,8.77761282 2.48506973,11.3815969 L11.057191,19.9537181 C11.57789,20.4744172 12.42211,20.4744172 12.942809,19.9537181 L21.5149303,11.3815969 C22.7656284,10.1314858 23.468437,8.43531882 23.468437,6.66666667 C23.468437,4.89801451 22.7656284,3.20184751 21.5147089,1.95151515 C20.2648192,0.701038293 18.5686522,-0.00177029934 16.8,-0.00177029934 L16.4473467,0.00755464552 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

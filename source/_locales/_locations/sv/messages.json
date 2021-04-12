@@ -174,16 +174,19 @@
     "message": "Guatemala"
   },
   "Hong Kong": {
-    "message": "Hong Kong"
+    "message": "Hongkong"
+  },
+  "Hong Kong - 1": {
+    "message": "Hongkong - 1"
   },
   "Hong Kong - 2": {
-    "message": "Hong Kong - 2"
+    "message": "Hongkong - 2"
   },
   "Hong Kong - 3": {
-    "message": "Hong Kong - 3"
+    "message": "Hongkong - 3"
   },
   "Hong Kong - 4": {
-    "message": "Hong Kong - 4"
+    "message": "Hongkong - 4"
   },
   "Hungary": {
     "message": "Ungern"
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "Spanien - Barcelona"
   },
+  "Spain - Barcelona - 2": {
+    "message": "Spanien - Barcelona - 2"
+  },
   "Spain - Madrid": {
     "message": "Spanien - Madrid"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "Sverige"
+  },
+  "Sweden - 2": {
+    "message": "Sverige - 2"
   },
   "Switzerland": {
     "message": "Schweiz"

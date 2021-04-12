@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Extension Onboarding - Desktop 2</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F4A377" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-15.1861815%" x2="50%" y2="136.783947%" id="linearGradient-2">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#F4A377" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1.99052955,0.0460472675 L86.6577914,0.0460472675 C87.2935941,0.0460472675 87.8560847,0.458053871 88.0478754,1.06423985 L106.969666,60.8696836 L106.969666,60.8696836 L19.2439356,60.8696836 L0.600445581,1.94385468 C0.357546653,1.17613251 0.782999957,0.356862229 1.55072213,0.1139633 C1.69298558,0.0689526973 1.84131547,0.0460472675 1.99052955,0.0460472675 Z" id="path-3"></path>
+    </defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="App-Installed---Onboarding-2" transform="translate(-35.000000, -84.000000)">
+            <g id="Extension-Onboarding---Desktop-2" transform="translate(35.000000, 84.000000)">
+                <g id="Group-2" transform="translate(67.000000, 0.000000)">
+                    <circle id="Oval" fill="#F4A377" cx="73" cy="70" r="70"></circle>
+                    <circle id="Oval" fill="url(#linearGradient-1)" cx="73" cy="70" r="58"></circle>
+                    <g id="Windows-Laptop" transform="translate(0.000000, 34.000000)">
+                        <path d="M24.0347525,63.5389773 L143.522494,63.5389773 C143.92511,63.5389773 144.251494,63.8653617 144.251494,64.2679773 L144.251494,68.04 C144.251494,70.0530779 142.619572,71.685 140.606494,71.685 L24.0347525,71.685 L24.0347525,71.685 L24.0347525,63.5389773 Z" id="Body" fill="#001D2F"></path>
+                        <path d="M2.97507974,0 L91.5332213,0 C92.4896936,3.37701257e-15 93.3352054,0.621541095 93.6205974,1.5344434 L114.663397,68.8454434 C115.023794,69.9982694 114.381404,71.224979 113.228578,71.5853761 C113.017352,71.6514095 112.797328,71.685 112.576021,71.685 L24.0178796,71.685 C23.0614073,71.685 22.2158955,71.0634589 21.9305035,70.1505566 L0.88770366,2.8395566 C0.527306604,1.68673062 1.16969717,0.460020978 2.32252314,0.0996239222 C2.53374856,0.033590522 2.75377319,-8.47525067e-16 2.97507974,0 Z" id="Bezels" fill="#001D2F"></path>
+                        <g id="Screen" transform="translate(3.707783, 2.669294)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

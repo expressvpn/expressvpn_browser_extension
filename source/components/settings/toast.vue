@@ -5,7 +5,7 @@ Licensed GPL v2
 -->
 <template lang="html">
   <div class="toast">
-    <i class="icon icon-20-check" />
+     <img v-svg-inline src='/images/icons/check.svg' width="24" height="24" class="icon" />
     <span>{{ localize(message) }}</span>
   </div>
 </template>
@@ -22,25 +22,30 @@ export default {
   width: fit-content;
   width: -moz-fit-content;
   height: 44px;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 15px 10px;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
   bottom: 30px;
-  background-color: var(--green40);
-  color: var(--green10);
-  font-size: 16px;
-  font-family: ProximaNova-Semibold;
+  background-color: $eds-color-success-50;
+  color: $eds-color-success-10;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 22px;
 
   .icon {
-    color: var(--green10);
     margin-right: 15px;
-    font-size: 24px;
   }
+}
+</style>
+<style lang="scss">
+.toast .icon path {
+  fill: $eds-color-success-20;
 }
 </style>

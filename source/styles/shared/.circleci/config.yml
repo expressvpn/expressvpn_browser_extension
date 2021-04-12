@@ -1,0 +1,53 @@
+version: 2.1
+
+executors:
+  ruby-2-5:
+    docker:
+      - image: circleci/ruby:2.5.8-node-browsers
+        environment:
+          BUNDLE_JOBS: "4"
+          BUNDLE_PATH: vendor/bundle
+
+commands:
+  bundle:
+    description: Get dependencies and cache them
+    steps:
+      - restore_cache:
+          keys:
+            - vx-cs-eds-bundle-v1-{{ checksum "Gemfile" }}
+            - vx-cs-eds-bundle-v1-
+      - run:
+          name: Bundle Install
+          command: |
+            gem install bundler -v 1.17.3
+            bundle check || bundle install && bundle clean --force
+      - save_cache:
+          key: vx-cs-eds-bundle-v1-{{ checksum "Gemfile" }}-{{ checksum "xv_cs_eds2.gemspec" }}
+          paths:
+            - vendor/bundle
+  spec:
+    steps:
+      - run:
+          name: rspec
+          command: |
+            bundle exec rspec --profile 10 \
+                              --format RspecJunitFormatter \
+                              --out test_results/rspec.xml \
+                              --format documentation \
+                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+      - store_test_results:
+            path: test_results
+
+jobs:
+  test:
+    executor: ruby-2-5
+    steps:
+      - checkout
+      - bundle
+      - spec
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - test

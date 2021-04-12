@@ -1,10 +1,10 @@
 {
   "app_description_@chrome@_text": {
-    "message": "ควบคุมแอป ExpressVPN ได้โดยตรงจาก Chrome ซ่อนตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
+    "message": "โลดแล่นบนโลกออนไลน์ด้วยความเร็วสูงสุด ซ่อนตำแหน่งของคุณ เข้าถึงเนื้อหาได้ทุกที่ พร้อมควบคุมแอป ExpressVPN โดยตรงจาก Chrome",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "ความเป็นส่วนตัว ความปลอดภัย และความเร็ว ควบคุมแอป ExpressVPN ได้โดยตรงจาก Firefox ปิดบังตำแหน่งของคุณและเข้าถึงเนื้อหาได้ทุกที่",
+    "message": "โลดแล่นบนโลกออนไลน์ด้วยความเร็วสูงสุด ซ่อนตำแหน่งของคุณ เข้าถึงเนื้อหาได้ทุกที่ พร้อมควบคุมแอป ExpressVPN โดยตรงจาก Firefox",
     "description": "The description of the application"
   },
   "app_name_title": {
@@ -115,7 +115,7 @@
     "message": "ไม่สามารถเชื่อมต่อ"
   },
   "error_connection_error_to_location_text": {
-    "message": "ไม่สามารถเชื่อมต่อกับ<br>%LOCATION%"
+    "message": "ไม่สามารถเชื่อมต่อกับ %LOCATION%"
   },
   "error_connection_error_try_again_button_label": {
     "message": "ลองอีกครั้ง"
@@ -167,7 +167,7 @@
     "message": "บัญชีถูกระงับ"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "การทดลองใช้ฟรีของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ\n\n"
+    "message": "การทดลองใช้ฟรีของคุณหมดอายุแต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
   },
   "error_free_trial_expired_benefits_title": {
     "message": "ทำไมต้องอัปเกรด?"
@@ -187,14 +187,14 @@
   "error_free_trial_expired_l4_text": {
     "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "แบนด์วิดท์ไม่จำกัด"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "รับประกันคืนเงินภายใน 30 วัน"
   },
   "error_free_trial_expired_status_text": {
     "message": "หมดอายุ (%1)"
   },
   "error_free_trial_expired_title": {
-    "message": "การทดลองใช้ฟรีหมดอายุแล้ว"
+    "message": "การทดลองใช้ฟรีหมดอายุ"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
     "message": "อัปเกรดตอนนี้"
@@ -206,7 +206,7 @@
     "message": "ออกจากระบบ"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "การทดลองใช้ฟรีหมดอายุ"
+    "message": "รับการปกป้องตลอดเวลา"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "อัปเดตรายละเอียดการชำระเงิน"
@@ -215,7 +215,7 @@
     "message": "ออกจากระบบ"
   },
   "error_IAP_CONTINUE_USING_p1_text": {
-    "message": "หากต้องการใช้ ExpressVPN ต่อไปโปรดอัปเดตรายละเอียดการชำระเงินในบัญชี iTunes / App Store ของคุณ"
+    "message": "หากต้องการใช้ ExpressVPN ต่อไป โปรดอัปเดตรายละเอียดการชำระเงินในบัญชี iTunes / App Store ของคุณ"
   },
   "error_IAP_MAIN_title": {
     "message": "การชำระเงินล้มเหลว"
@@ -315,7 +315,7 @@
     "message": "ครั้งหน้า"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "การสมัครของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
+    "message": "การสมัครสมาชิกของคุณหมดอายุแต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
   },
   "error_subscription_expired_benefits_title": {
     "message": "เหตุใดจึงต่ออายุ?"
@@ -330,13 +330,13 @@
     "message": "สมัครสมาชิก"
   },
   "error_subscription_expired_l1_text": {
-    "message": "แอปสำหรับทุกอุปกรณ์"
+    "message": "เข้าถึงเนื้อหาทั้งหมดที่คุณชื่นชอบ"
   },
   "error_subscription_expired_l2_text": {
-    "message": "แนะนำเพื่อน รับ 30 วันฟรี"
+    "message": "ออนไลน์อย่างปลอดภัยพร้อมปิดบังตัวตน"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 ตำแหน่งทั่วโลก"
+    "message": "บริการสนับสนุนทุกวันตลอด 24 ชั่วโมง"
   },
   "error_subscription_expired_l4_text": {
     "message": "การสนับสนุนลูกค้าตลอด 24 ชั่วโมงทุกวัน"
@@ -360,7 +360,7 @@
     "message": "หมดอายุ (%1)"
   },
   "error_subscription_expired_title": {
-    "message": "การสมัครสมาชิกหมดอายุแล้ว"
+    "message": "การสมัครสมาชิกหมดอายุ"
   },
   "error_subscription_expiring_autobill_later_button_label": {
     "message": "ครั้งหน้า"
@@ -450,7 +450,7 @@
     "message": "ดำเนินการต่อ"
   },
   "home_change_location_popup_text": {
-    "message": "การสมัครของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
+    "message": "ข้อมูลการใช้งานของคุณอาจจะไม่ปลอดภัยระหว่างการเชื่อมต่อใหม่"
   },
   "home_change_location_popup_title": {
     "message": "เปลี่ยนสถานที่"
@@ -492,10 +492,10 @@
     "message": "ปัญหาการสตรีม"
   },
   "issue_reporter_opt2": {
-    "message": "ไม่สามารถเข้าถึงเว็บไซต์ใด ๆ"
+    "message": "ไม่สามารถเข้าถึงเว็บไซต์ใดได้เลย"
   },
   "issue_reporter_opt3": {
-    "message": "ไม่สามารถเข้าถึงเว็บไซต์เฉพาะ"
+    "message": "ไม่สามารถเข้าถึงเฉพาะบางเว็บไซต์"
   },
   "issue_reporter_opt4": {
     "message": "ภาษาหรือสกุลเงินไม่ถูกต้อง"
@@ -520,9 +520,6 @@
   },
   "issue_reporter_send_button_label": {
     "message": "ส่งรายงาน"
-  },
-  "issue_reporter_share_website_label": {
-    "message": "แชร์เว็บไซต์ด้วย ExpressVPN"
   },
   "issue_reporter_support_button_label": {
     "message": "ติดต่อฝ่ายสนับสนุน"
@@ -687,13 +684,16 @@
     "description": "Settings startup header"
   },
   "menu_connection_startup_text": {
-    "message": "เชื่อมต่อเมื่อเปิดเบราเซอร์"
+    "message": "เชื่อมต่อเมื่อเปิดเบราว์เซอร์"
   },
   "menu_desktop_notification_text": {
     "message": "แสดงการแจ้งเตือนบนเดสก์ท็อป"
   },
   "menu_get_30_days_free": {
     "message": "รับฟรี 30 วัน"
+  },
+  "menu_header": {
+    "message": "ตัวเลือก"
   },
   "menu_help_support": {
     "message": "ความช่วยเหลือและการสนับสนุน"
@@ -741,7 +741,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "หลอกล่อตำแหน่งของคุณ"
+    "message": "ปลอมตำแหน่งของคุณ"
   },
   "menu_rate_expressvpn": {
     "message": "ให้คะแนน ExpressVPN"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "แสดงการตั้งค่า"
   },
-  "menu_settings_general_display_label": {
-    "message": "โหมดการแสดงผล"
-  },
   "menu_settings_general_header": {
     "message": "ทั่วไป"
-  },
-  "menu_settings_general_language_header": {
-    "message": "ภาษาส่วนขยาย"
   },
   "menu_settings_general_language_label": {
     "message": "ภาษา"
@@ -792,13 +786,13 @@
     "message": "หยุดการกำหนดตำแหน่ง HTML5 จากการเปิดเผยสถานที่ที่มีอยู่จริงของคุณในขณะที่เชื่อมต่อกับ VPN"
   },
   "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "เชื่อมต่อกับเว็บไซต์ HTTPS ที่มีความปลอดภัยมากขึ้นในกรณีที่มี"
+    "message": "เชื่อมต่อกับเว็บไซต์ HTTPS เวอร์ชันที่มีความปลอดภัยมากขึ้นเมื่อมีโอกาส"
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "เรียนรู้เพิ่มเติม"
   },
   "menu_settings_privacy_security_name": {
-    "message": "ส่วนตัวและปลอดภัย"
+    "message": "ความเป็นส่วนตัวและความปลอดภัย"
   },
   "menu_settings_settings_general_title": {
     "message": "การตั้งค่า"
@@ -906,16 +900,16 @@
     "message": "ปัจจุบันการใช้งานอินเทอร์เน็ตถูกบล็อกเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ"
   },
   "networkLock_status_connected_text": {
-    "message": "เชื่อมต่อกับ <b>%LOCATION%</b>"
+    "message": "เชื่อมต่อกับ %LOCATION%"
   },
   "networkLock_status_connecting_text": {
-    "message": "เชื่อมต่อกับ <b>%LOCATION%</b> "
+    "message": "เชื่อมต่อกับ %LOCATION%"
   },
   "networkLock_status_connection_error_text": {
-    "message": "ไม่สามารถเชื่อมต่อกับ<br>%LOCATION%"
+    "message": "ไม่สามารถเชื่อมต่อกับ %LOCATION%"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "กำลังเชื่อมต่อใหม่กับ <b>%LOCATION%</b> "
+    "message": "กำลังเชื่อมต่อใหม่กับ %LOCATION%"
   },
   "networkLock_try_again_button_label": {
     "message": "ลองอีกครั้ง"
@@ -948,7 +942,7 @@
     "message": "การชำระเงินครั้งล่าสุดของคุณล้มเหลว"
   },
   "promobar_iap_failed_text": {
-    "message": "อัปเดตวิธีการชำระเงิน"
+    "message": "อัปเดตรายละเอียด"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome ถูกแยกออกจาก VPN"
@@ -966,7 +960,7 @@
     "message": "การชำระเงินครั้งล่าสุดของคุณล้มเหลว"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "อัปเดตรายละเอียดการชำระเงิน"
+    "message": "อัปเดตรายละเอียด"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "การสมัครสมาชิกหมดอายุใน [days] วัน "
@@ -984,7 +978,7 @@
     "message": "ต่ออายุตอนนี้"
   },
   "promobar_update_available_header": {
-    "message": "อัปเดตพร้อมใช้งาน!"
+    "message": "มีการอัปเดต!"
   },
   "promobar_update_available_text": {
     "message": "ติดตั้งตอนนี้"
@@ -1032,7 +1026,7 @@
     "message": "ต่ออายุตอนนี้"
   },
   "rating_improve_header": {
-    "message": "เราสามารถทำได้ดีกว่านี้อย่างไร?"
+    "message": "เราจะสามารถทำดีกว่านี้ได้อย่างไร?"
   },
   "rating_improve_report_button": {
     "message": "รายงานปัญหา"
@@ -1058,17 +1052,8 @@
   "rating_thanks_@firefox@_text": {
     "message": "ขอบคุณ! ให้คะแนนเราที่ Firefox Add-on Store หรือไม่?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "จับคู่การตั้งค่าอุปกรณ์"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "มืด"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "สว่าง"
-  },
   "settings_general_help_improve_description": {
-    "message": "แบ่งปันข้อขัดข้อง การทดสอบความเร็ว การใช้งาน และการ\nเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลที่สามารถระบุตัวบุคคลได้"
+    "message": "แบ่งปันรายงานข้อขัดข้อง การทดสอบความเร็ว การวินิจฉัย\nการใช้งาน และความสำเร็จในการเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลส่วนบุคคลที่สามารถระบุตัวตนได้"
   },
   "settings_general_help_improve_label": {
     "message": "ช่วยปรับปรุง ExpressVPN"
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "ดำเนินการต่อ"
   },
-  "welcome_get_started_button_label": {
-    "message": "เริ่มต้น"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "ช่วยปรับปรุง ExpressVPN"
   },
@@ -1122,7 +1104,7 @@
     "message": "ตกลง"
   },
   "welcome_help_improve_expressvpn_p1_text": {
-    "message": "แบ่งปันรายงานข้อขัดข้อง การทดสอบความเร็ว การวินิจฉัยการใช้งาน และความพยายามในการเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลที่สามารถระบุตัวบุคคลได้"
+    "message": "แบ่งปันรายงานข้อขัดข้อง การทดสอบความเร็ว การวินิจฉัยการใช้งาน และความสำเร็จในการเชื่อมต่อ VPN รายงานเหล่านี้ไม่มีข้อมูลที่สามารถระบุตัวบุคคลได้"
   },
   "welcome_not_installed_buy_header": {
     "message": "เริ่มต้นโดยปราศจากความเสี่ยง"
@@ -1149,10 +1131,10 @@
     "message": "รับประกันคืนเงินใน 30 วัน"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "VPN ปกป้องความส่วนตัวของคุณ\nโดยการปิดบังที่อยู่ IP ของคุณ"
+    "message": "ควบคุมความเป็นส่วนตัวและปกป้องข้อมูลออนไลน์ของคุณ"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "สตรีมเนื้อหาทั้งหมดที่คุณรักโดยไม่มีข้อจำกัด"
+    "message": "เพลิดเพลินกับโชว์และแอปโปรด ไม่ว่าคุณจะอยู่ที่ใดก็ตาม"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "เชื่อมต่อ Wi-Fi สาธารณะอย่างปลอดภัยในโรงแรม คาเฟ่ และสนามบิน"
@@ -1167,7 +1149,7 @@
     "message": "เรียนรู้เพิ่มเติม"
   },
   "welcome_screen3_p1_text": {
-    "message": "ส่วนขยายจะหลอกลวงตำแหน่งของคุณบล็อก WebRTC และรวม HTTPS ทุกที่"
+    "message": "ส่วนขยายจะปลอมตำแหน่งของคุณ บล็อก WebRTC และรวม HTTPS Everywhere"
   },
   "welcome_skip_button_label": {
     "message": "ข้าม"

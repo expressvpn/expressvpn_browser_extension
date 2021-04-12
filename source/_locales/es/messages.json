@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Maneje la app de ExpressVPN desde Chrome, oculte su ubicación y acceda a contenidos en donde sea.",
+    "message": "Navegue de forma segura y a gran velocidad. Oculte su ubicación, acceda a sus contenidos y maneje la app de ExpressVPN desde Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Privacidad, seguridad y velocidad. Controle la aplicación ExpressVPN directamente desde Firefox, falsifique su ubicación y acceda al contenido desde cualquier lugar.",
+    "message": "Navegue por internet de manera segura y a máxima velocidad. Oculte su ubicación, acceda a contenidos desde cualquier parte y controle la aplicación de ExpressVPN directamente desde Firefox.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: un proxy VPN para desbloquear todo",
+    "message": "ExpressVPN: proxy VPN para una mejor internet",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -187,8 +187,8 @@
   "error_free_trial_expired_l4_text": {
     "message": "Soporte técnico 24/7"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Ancho de banda ilimitado"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "Garantía de devolución de dinero a 30 días"
   },
   "error_free_trial_expired_status_text": {
     "message": "Caducada (%1)."
@@ -206,7 +206,7 @@
     "message": "Cerrar sesión"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Prueba Gratuita Expirada"
+    "message": "Manténgase protegido"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "Actualizar detalles de pago"
@@ -330,13 +330,13 @@
     "message": "Comprar suscripción"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Apps para todos los dispositivos"
+    "message": "Acceda a todos los contenidos que le encantan"
   },
   "error_subscription_expired_l2_text": {
-    "message": "1 amigo = 30 días gratis"
+    "message": "Proteja su seguridad y anonimato en línea"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 ubicaciones a nivel mundial "
+    "message": "Soporte técnico 24/7"
   },
   "error_subscription_expired_l4_text": {
     "message": "Soporte técnico 24/7"
@@ -492,7 +492,7 @@
     "message": "Errores de streaming"
   },
   "issue_reporter_opt2": {
-    "message": "No puedo acceder a ninguna página web"
+    "message": "No tengo acceso a ninguna página web"
   },
   "issue_reporter_opt3": {
     "message": "No puedo acceder a una página web específica"
@@ -520,9 +520,6 @@
   },
   "issue_reporter_send_button_label": {
     "message": "Enviar informe"
-  },
-  "issue_reporter_share_website_label": {
-    "message": "Compartir la página web con ExpressVPN"
   },
   "issue_reporter_support_button_label": {
     "message": "Contactar al soporte técnico"
@@ -632,7 +629,7 @@
     "message": "Ubicaciones recomendadas"
   },
   "location_picker_search_no_results_text": {
-    "message": "NO HAY RESULTADOS"
+    "message": "No hay resultados"
   },
   "location_picker_search_placeholder_text": {
     "message": "Buscar ciudad o país"
@@ -694,6 +691,9 @@
   },
   "menu_get_30_days_free": {
     "message": "Obtenga 30 días gratis"
+  },
+  "menu_header": {
+    "message": "Opciones"
   },
   "menu_help_support": {
     "message": "Ayuda y soporte técnico"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Preferencias de visualización"
   },
-  "menu_settings_general_display_label": {
-    "message": "Modo de visualización"
-  },
   "menu_settings_general_header": {
     "message": "General"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Idioma de la extensión"
   },
   "menu_settings_general_language_label": {
     "message": "Idioma"
@@ -906,7 +900,7 @@
     "message": "El tráfico de internet está bloqueado para proteger su privacidad."
   },
   "networkLock_status_connected_text": {
-    "message": "Conectada a <b>%LOCATION%</b>"
+    "message": "Conectado a <b>%LOCATION%</b>"
   },
   "networkLock_status_connecting_text": {
     "message": "Conectando a <b>%LOCATION%</b>."
@@ -948,7 +942,7 @@
     "message": "Su último pago ha fallado"
   },
   "promobar_iap_failed_text": {
-    "message": "Actualizar el método de pago"
+    "message": "Actualizar detalles"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome excluido de la VPN"
@@ -966,7 +960,7 @@
     "message": "Su último pago ha fallado"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Actualizar detalles de pago"
+    "message": "Actualizar detalles"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "La suscripción caducará en [days] días"
@@ -1058,15 +1052,6 @@
   "rating_thanks_@firefox@_text": {
     "message": "¡Gracias! ¿Nos calificaría en la tienda de complementos de Firefox?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Configurar como el dispositivo"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Oscuro"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Claro"
-  },
   "settings_general_help_improve_description": {
     "message": "Compartir informes de errores, test de velocidad, diagnósticos de uso y si los intentos de conexión a la VPN funcionan. Estos informes nunca contienen información personal identificable."
   },
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "Continuar"
   },
-  "welcome_get_started_button_label": {
-    "message": "Comenzar"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "Ayudar a mejorar ExpressVPN"
   },
@@ -1137,7 +1119,7 @@
     "message": "Comprar ExpressVPN"
   },
   "welcome_not_installed_reasons_li_1_text": {
-    "message": "Ubicaciones seguras de VPN en todo el mundo"
+    "message": "Ubicaciones VPN en todo el mundo"
   },
   "welcome_not_installed_reasons_li_2_text": {
     "message": "Alta velocidad y ancho de banda ilimitado"
@@ -1149,10 +1131,10 @@
     "message": "Garantía de reembolso a 30 días"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "Una VPN protege su privacidad ocultando su dirección IP"
+    "message": "Controle su privacidad y proteja sus datos en línea"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Haga streaming de todos sus contenidos favoritos sin restricciones"
+    "message": "Sus programas y aplicaciones preferidos, esté donde esté"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Conéctese con seguridad a redes Wi-Fi públicas en hoteles, cafés y aeropuertos"
@@ -1164,7 +1146,7 @@
     "message": "Cuando esté conectado a la VPN, esta protegerá a todo su dispositivo, y no solamente al navegador."
   },
   "welcome_screen3_learn_more_text": {
-    "message": "Conozca más "
+    "message": "Más información"
   },
   "welcome_screen3_p1_text": {
     "message": "La extensión oculta su ubicación, bloquea WebRTC e incluye HTTPS Everywhere."

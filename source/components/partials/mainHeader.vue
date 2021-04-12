@@ -4,13 +4,14 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div :class="['header', currentNotification]" :style="hideIcon ? 'border:0' : ''">
-    <img v-if="!currentNotification" class="logo" :src="logoPath" />
-    <div v-else class="promobar" @click="onPromoBarClick">
-      <div class="promobar-header">{{ notificationHeaderText }}</div>
-      <div class="promobar-text">{{ notificationBodyText }}</div>
+  <div :class="['header', currentNotification ? 'promobar' : '', currentNotification]">
+    <div class="menu-holder" @click="showMenu()">
+      <img v-svg-inline class="menu-holder-icon" src='/images/icons/menu.svg' />
     </div>
-    <div :class="['icon', ' icon-medium', icon]" :style="hideIcon ? 'visibility: hidden;' : ''" @click="iconClickCallback ? iconClickCallback() : showMenu()"></div>
+    <div v-if="currentNotification" class="promobar-content">
+      <div class="promobar-content-text">{{ notificationHeaderText }}</div>
+      <div :class="['promobar-content-button', `promobar-content-button-${buttonType}`]" @click="onPromoBarClick">{{ notificationBodyText }}</div>
+    </div>
   </div>
 </template>
 <script>
@@ -20,20 +21,6 @@ export default {
   name: 'mainHeader',
   mixins: [mixinSubscription],
   props: {
-    hideIcon: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-    icon: {
-      type: String,
-      required: false,
-      default: 'icon-128-menu',
-    },
-    iconClickCallback: {
-      type: Function,
-      required: false,
-    },
     canShowPromobar: {
       type: Boolean,
       required: false,
@@ -41,6 +28,9 @@ export default {
     },
   },
   computed: {
+    buttonType() {
+      return ['splittunneling', 'update_available'].includes(this.currentNotification) ? 'info' : 'warning';
+    },
     currentNotification() {
       let notification = '';
 
@@ -107,27 +97,26 @@ export default {
       return this.localize(locKey);
     },
     notificationHeaderText() {
+      let text = '';
       if (this.currentNotification) {
         if (!this.currentNotification.includes('_expiring_soon')) {
           return this.localize(`promobar_${this.currentNotification}_header`);
         }
         const remainingTime = this.getTimeToExpiry().rawDifference / 1000;
         if (remainingTime <= 0) {
-          return this.localize(`promobar_${this.currentNotification}_expired_header`);
+          text = this.localize(`promobar_${this.currentNotification}_expired_header`);
         } else if (remainingTime < 60 * 60) {
-          return this.localize(`promobar_${this.currentNotification}_less_than_one_hour_header`);
+          text = this.localize(`promobar_${this.currentNotification}_less_than_one_hour_header`);
         } else if (remainingTime < 24 * 60 * 60) {
-          return this.localize(`promobar_${this.currentNotification}_hours_header`).replace('[hours]', `${Math.ceil(remainingTime / (60 * 60))}`);
+          text = this.localize(`promobar_${this.currentNotification}_hours_header`).replace('[hours]', `${Math.ceil(remainingTime / (60 * 60))}`);
+        } else {
+          text = this.localize(`promobar_${this.currentNotification}_days_header`).replace('[days]', `${Math.ceil(remainingTime / (24 * 60 * 60))}`);
         }
-        return this.localize(`promobar_${this.currentNotification}_days_header`).replace('[days]', `${Math.ceil(remainingTime / (24 * 60 * 60))}`);
       }
-      return '';
+      return text;
     },
     imageSuffix() {
       return this.$store.state.imageSuffix;
-    },
-    logoPath() {
-      return `/images/logo-header${this.imageSuffix}.png`;
     },
   },
   methods: {
@@ -188,67 +177,121 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header {
-  height: 60px;
-  background-color: var(--gray40);
+  height: 64px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--gray30);
+  position: absolute;
 
-  &.update_available {
-    background-color: var(--blue40);
-    * {
-      color: var(--blue10) !important;
-    }
-  }
-  &.free_trial_expiring_soon, &.subscription_expiring_soon, &.splittunneling {
-    background-color: var(--yellow40);
-    * {
-      color: var(--yellow10) !important;
-    }
+  .menu-holder {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
   }
 
-  &.iap_failed, &.subscription_expired, &.subscription_expiring_autobill {
-    background-color: var(--red40);
-    * {
-      color: var(--red10) !important;
-    }
-  }
-
-  .promobar {
-    display: flex;
-    flex-direction: column;
+  &.promobar {
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.1);
+    background-color: rgba($eds-color-midnight, 0.55);
     justify-content: center;
-    margin-left: 15px;
-    height: 100%;
-    width: 80%; // leave some space to allow the user to click the settings button
 
-    &-header {
-      font-family: ProximaNova-Semibold;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-    &-text {
+    .promobar-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 12px;
+      //font-family: Inter-Medium;
+
+      &-text {
+        color: $eds-color-white;
+        letter-spacing: 0px;
+        text-align: right;
+        //width: 170px;
+      }
+      &-button {
+        border-radius: 15px;
+        padding: 5px 12px;
+        text-align: center;
+        margin-left: 15px;
+        white-space: nowrap;
+
+        &-warning {
+          background: $eds-color-white;
+          color: $eds-color-midnight;
+          border: 2px solid transparent;
+
+          &:hover {
+            border: 2px solid $eds-color-white;
+            background: transparent;
+            color: $eds-color-white;
+          }
+          &:active {
+            background: $eds-color-white;
+            color: $eds-color-midnight;
+          }
+        }
+        &-info {
+          border: 2px solid $eds-color-white;
+          background: transparent;
+          color: $eds-color-white;
+
+          &:hover {
+            background: $eds-color-white;
+            color: $eds-color-midnight;
+          }
+          &:active {
+            background: transparent;
+            color: $eds-color-white;
+          }
+        }
+      }
     }
   }
-
-  .logo {
-    width: 150px;
-    height: 30px;
-    margin-left: 15px;
-  }
-
-  .icon {
-    color: var(--black20);
-    margin-right: 15px;
-
+}
+</style>
+<style lang="scss">
+.header {
+  .menu-holder {
+    &-icon path {
+      fill: var(--main-header-menu-icon-default);
+    }
     &:hover {
-      color: var(--gray20);
+      .menu-holder-icon path { // ToDo: can this be improved?
+        fill: var(--main-header-menu-icon-hover);
+      }
     }
     &:active {
-      color: var(--black30);
+      .menu-holder-icon path {
+        fill: var(--main-header-menu-icon-active);
+      }
+    }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .header {
+    --main-header-menu-icon-default: #{$eds-color-midnight};
+    --main-header-menu-icon-hover: #{$eds-color-grey-20};
+    --main-header-menu-icon-active: #{$eds-color-midnight};
+
+    &.promobar {
+      --main-header-menu-icon-default: #{$eds-color-white};
+      --main-header-menu-icon-hover: #{$eds-color-grey-30};
+      --main-header-menu-icon-active: #{$eds-color-white};
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .header {
+    --main-header-menu-icon-default: #{$eds-color-grey-40};
+    --main-header-menu-icon-hover: #{$eds-color-grey-30};
+    --main-header-menu-icon-active: #{$eds-color-grey-40};
+
+    &.promobar {
+      --main-header-menu-icon-default: #{$eds-color-white};
+      --main-header-menu-icon-hover: #{$eds-color-grey-30};
+      --main-header-menu-icon-active: #{$eds-color-white};
     }
   }
 }

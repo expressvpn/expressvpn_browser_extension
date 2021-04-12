@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Chrome에서 바로 ExpressVPN 앱을 제어하세요. 위치를 스푸핑하고, 어디서나 컨텐츠에 액세스하세요.",
+    "message": "엄청나게 빠른 속도로 인터넷을 안전하게 즐기세요. 위치를 속여 어디서나 컨텐츠에 액세스하고Chrome에서 ExpressVPN 앱을 제어하세요.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "개인 정보 보호, 보안 및 빠른 속도를 제공합니다. Firefox에서 바로 ExpressVPN 앱을 조정하여 위치를 스푸핑하고 어디서나 원하시는 컨텐츠에 액세스하세요.",
+    "message": "안전하게 초고속으로 온라인에 접속하세요. 위치를 스푸핑하고, 어디서나 콘텐츠에 액세스하고, Firefox에서 바로 ExpressVPN 앱을 제어하세요.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: 모든 차단을 해제하는 VPN 프록시",
+    "message": "ExpressVPN: VPN 프록시로 더 나은 인터넷 즐기기",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -167,7 +167,7 @@
     "message": "계정이 일시 중지되었습니다"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "무료 체험이 종료되었으나, 쉽게 다시 이용하실 수 있습니다."
+    "message": "무료 체험이 종료되었으나, \n쉽게 다시 이용하실 수 있습니다."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "업그레이드해야 하는 이유"
@@ -187,8 +187,8 @@
   "error_free_trial_expired_l4_text": {
     "message": "연중무휴 고객 지원"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "무제한 대역폭"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30일 환불 보장"
   },
   "error_free_trial_expired_status_text": {
     "message": "만료 (%1)."
@@ -206,7 +206,7 @@
     "message": "로그아웃"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "무료 체험이 종료되었습니다"
+    "message": "보안을 유지하세요"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "결제 정보 업데이트"
@@ -246,7 +246,7 @@
     "description": "Context: This message shows to users on Chromebook (operating Chrome OS). The ExpressVPN app does not work for Chromebook users, for now.  "
   },
   "error_NOT_INSTALLED_linux_title": {
-    "message": "앱을 찾을 수 없음"
+    "message": "앱을 찾을 수 없습니다"
   },
   "error_NOT_INSTALLED_primary_button": {
     "message": "데스크탑 앱 설치"
@@ -315,7 +315,7 @@
     "message": "나중에"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "정액제가 만료되었으나, 쉽게 다시 이용하실 수 있습니다."
+    "message": "정액제가 만료되었으나, \n쉽게 다시 이용하실 수 있습니다."
   },
   "error_subscription_expired_benefits_title": {
     "message": "갱신해야 하는 이유"
@@ -330,13 +330,13 @@
     "message": "정액제 구입"
   },
   "error_subscription_expired_l1_text": {
-    "message": "모든 기기에서 이용 가능한 앱"
+    "message": "모든 콘텐츠 이용 가능"
   },
   "error_subscription_expired_l2_text": {
-    "message": "친구 추천 시 30일 무료 이용권 제공"
+    "message": "온라인 보안 및 익명성 유지"
   },
   "error_subscription_expired_l3_text": {
-    "message": "전 세계 160개 위치"
+    "message": "연중무휴 지원"
   },
   "error_subscription_expired_l4_text": {
     "message": "연중무휴 고객 지원"
@@ -521,9 +521,6 @@
   "issue_reporter_send_button_label": {
     "message": "보고서 전송"
   },
-  "issue_reporter_share_website_label": {
-    "message": "ExpressVPN을 통한 웹사이트 공유"
-  },
   "issue_reporter_support_button_label": {
     "message": "지원 문의"
   },
@@ -659,7 +656,7 @@
     "message": "Smart Location"
   },
   "main_screen_status_vpn_connected_text": {
-    "message": "ON"
+    "message": "연결됨"
   },
   "main_screen_status_vpn_connecting_text": {
     "message": "연결 중"
@@ -668,7 +665,7 @@
     "message": "연결 해제 중"
   },
   "main_screen_status_vpn_ready_text": {
-    "message": "OFF"
+    "message": "연결되지 않음"
   },
   "main_screen_status_vpn_reconnecting_text": {
     "message": "재연결 중"
@@ -694,6 +691,9 @@
   },
   "menu_get_30_days_free": {
     "message": "30일 무료 이용권 받기"
+  },
+  "menu_header": {
+    "message": "옵션"
   },
   "menu_help_support": {
     "message": "지원"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "디스플레이 설정"
   },
-  "menu_settings_general_display_label": {
-    "message": "디스플레이 모드"
-  },
   "menu_settings_general_header": {
     "message": "일반"
-  },
-  "menu_settings_general_language_header": {
-    "message": "확장 프로그램 언어"
   },
   "menu_settings_general_language_label": {
     "message": "언어"
@@ -828,7 +822,7 @@
     "message": "만료일"
   },
   "myaccount_account_payment_due_label": {
-    "message": "지불 기한이 지났습니다"
+    "message": "지불 기한 만료일"
   },
   "myaccount_account_renews_label": {
     "message": "갱신"
@@ -906,16 +900,16 @@
     "message": "개인 정보 보호를 위해 현재 인터넷 트래픽이 차단되었습니다."
   },
   "networkLock_status_connected_text": {
-    "message": "<b>%LOCATION%</b>에 연결되었습니다."
+    "message": "%LOCATION%에 연결되었습니다."
   },
   "networkLock_status_connecting_text": {
-    "message": "<b>%LOCATION%</b>에 연결중입니다."
+    "message": "<b>%LOCATION%</b>에 연결하는 중입니다."
   },
   "networkLock_status_connection_error_text": {
-    "message": "<b>%LOCATION%</b>에 연결할 수 없습니다."
+    "message": "%LOCATION%에 연결할 수 없습니다."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "<b>%LOCATION%</b>에 다시 연결중입니다."
+    "message": "%LOCATION%에 연결되었습니다."
   },
   "networkLock_try_again_button_label": {
     "message": "다시 시도"
@@ -948,7 +942,7 @@
     "message": "최종 결제에 실패했습니다"
   },
   "promobar_iap_failed_text": {
-    "message": "결제 수단을 업데이트해주세요"
+    "message": "결제 정보를 업데이트해주세요"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome이 VPN에서 제외되었습니다"
@@ -1058,15 +1052,6 @@
   "rating_thanks_@firefox@_text": {
     "message": "감사합니다! Firefox Add-ons에서 저희를 평가해주시겠어요?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "기기 설정에 따름"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "다크"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "라이트"
-  },
   "settings_general_help_improve_description": {
     "message": "충돌 보고서, 속도 테스트,  유용성 진단 및 VPN 연결 시도 성공 여부를 공유합니다. 개인 식별 정보는 공개되지 않습니다."
   },
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "계속"
   },
-  "welcome_get_started_button_label": {
-    "message": "시작하기"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPN 개선 지원"
   },
@@ -1149,10 +1131,10 @@
     "message": "30일 환불 보장"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "VPN은 사용자의 IP 주소를 숨겨 개인 정보를 보호합니다"
+    "message": "온라인에서 데이터와 개인 정보를 보호하세요"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "좋아하는 모든 컨텐츠를 제한 없이 스트리밍하세요"
+    "message": "좋아하는 프로그램과  앱을 어디서든 즐기세요"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "호텔, 까페 또는 공항에서 공용 와이파이에 안전하게 연결하세요"
@@ -1164,7 +1146,7 @@
     "message": "VPN이 연결되면, 브라우저뿐만 아니라 기기 전체를 보호해줍니다. "
   },
   "welcome_screen3_learn_more_text": {
-    "message": "더 보기"
+    "message": "자세히 알아보세요."
   },
   "welcome_screen3_p1_text": {
     "message": "확장 프로그램은 위치를 스푸핑하고 WebRTC를 차단하며 HTTPS Everywhere를 포함합니다."

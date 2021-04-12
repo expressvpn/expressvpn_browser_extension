@@ -36,7 +36,7 @@ Licensed GPL v2
       </div>
 
       <div class="button-container">
-        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/vpn-setup/expressvpn-browser-extension?utm_source=browser_extension&utm_medium=apps` })">{{ localize('menu_settings_privacy_learn_more_button_label') }}</button>
+        <button class="secondary" @click="createTab({ url: `${currentInfo.website_url}/support/vpn-setup/expressvpn-browser-extension?utm_source=browser_extension&utm_medium=apps` })">{{ localize('menu_settings_privacy_learn_more_button_label') }}</button>
       </div>
     </div>
     
@@ -111,26 +111,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.divider {
-  border-bottom: 1px solid #DEDEDE;
-  margin: 25px 0;
-}
 .setting {
 
   &-description {
+    margin-top: 10px;
     font-size: 12px;
-    line-height: 15px;
-    color: var(--black20);
-    margin-top: 5px;
-    width: 275px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 22px;
   }
 
   &-container {
-    background: var(--gray50);
-    padding: 25px 15px;
-    height: 100vh;
-    border-top: 1px solid #DEDEDE;
-    
+    padding: 0px 20px 20px 20px;
+    height: calc(100vh - 60px - 20px);
+    position: relative;
 
     .toggle {
       right: 0;
@@ -139,62 +133,39 @@ export default {
   }
 
   &-header {
-    color: var(--black20);
-    font-family: ProximaNova-Light;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 26px;
   }
 
-  &-group {
-
-  }
 
   &-option-container {
-    height: 23px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: space-between;
 
-    &:nth-child(n+2) {
-
+    &>label {
+      max-width: 85%;
     }
-
     label {
-      color: var(--black20);
-      font-size: 18px;
-    }
-
-    .select-container {
-      border: 1px solid var(--black20);
-      border-radius: 4px;
-      position: relative;
-      padding: 6px 15px;
-      height: 52px;
-      width: 100%;
-
-      label {
-        font-size: 12px;
-        color: var(--gray20);
-        position: absolute;
-      }
-      select {
-        background: var(--gray50);
-        border: 0;
-        color: var(--black20);
-        font-size: 20px;
-        width: 100%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        margin-top: calc(22px - 6px); // - 6px from padding in the container
-      }
-      .icon {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        pointer-events: none;
-        transform: translateY(-50%);
-      }
+      //width: calc(100% - 32px);
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0px;
+      line-height: 28px;
     }
   }
 }
+.button-container {
+    bottom: 20px;
+    width: 100%;
+    position: absolute;
+    padding-left: inherit;
+    padding-right: inherit;
+    right: 0;
+    left: 0;
+  }
 </style>

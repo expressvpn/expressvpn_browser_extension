@@ -176,6 +176,9 @@
   "Hong Kong": {
     "message": "홍콩"
   },
+  "Hong Kong - 1": {
+    "message": "홍콩 - 1"
+  },
   "Hong Kong - 2": {
     "message": "홍콩 - 2"
   },
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "스페인 - 바르셀로나"
   },
+  "Spain - Barcelona - 2": {
+    "message": "스페인 - 바르셀로나 - 2"
+  },
   "Spain - Madrid": {
     "message": "스페인 - 마드리드"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "스웨덴"
+  },
+  "Sweden - 2": {
+    "message": "스웨덴 - 2"
   },
   "Switzerland": {
     "message": "스위스"

@@ -5,12 +5,12 @@ Licensed GPL v2
 -->
 <template lang="html">
   <div>
-    <error-icon iconName="icon-41-error" />
+    <error-icon iconName="OsUpdate" />
     <h1>{{ localize('error_compatibility_error_title') }}</h1>
     <p v-html="localize('error_compatibility_error_os_version_p1_text')"></p>
     <p>{{ localize(`error_compatibility_error_os_version_p2_text`) }}</p>
     <div class="button-container">
-      <button class="button-primary" @click="updateOS">{{ localize('error_compatibility_error_os_version_update_button_label') }}</button>
+      <button class="primary" @click="updateOS">{{ localize('error_compatibility_error_os_version_update_button_label') }}</button>
     </div>
   </div>
 </template>

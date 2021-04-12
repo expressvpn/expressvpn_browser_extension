@@ -1,65 +1,40 @@
 <template>
   <div class="icon-container">
-    <div class="icon-bubble">
-      <span :class="['icon', 'icon-xxl', iconName]"></span>
-    </div>
-    </div>
+    <img v-svg-inline class="error-icon" :src="`/images/illustrations/${iconName}.svg`" />
+  </div>
 </template>
 <script>
-  export default {
-    name: 'errorIcon',
-    props: {
-      iconName: {
-        type: String,
-        required: true,
-      },
+export default {
+  name: 'errorIcon',
+  props: {
+    iconName: {
+      type: String,
+      required: true,
     },
-    data() {
-      return {
-      };
-    },
-    computed: {
-    },
-    methods: {
-    },
-    components: {
-    },
-    mounted() {
-    },
-  };
+  },
+};
 </script>
 <style lang="scss" scoped>
-.icon {
-    color: var(--gray50);
-
-    &:before {
-      line-height: 75px !important;
-    }
-  
+.error-icon {
     &-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 25px;
     }
-
-    &-bubble {
-      background: var(--accent10);
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      text-align: center;
-    }
-
-    &-xxl {
-      font-size: 60px;
-    }
   }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .icon-bubble {
-    background: var(--gray20);
+@media (prefers-color-scheme: light) {
+  .popup {
+    --popup-bk: #{$eds-color-white};
+    --icon-close-default: #{$eds-color-grey-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .popup {
+    --popup-bk: #{$eds-color-grey-10};
+    --icon-close-default: #{$eds-color-grey-40};
   }
 }
 </style>

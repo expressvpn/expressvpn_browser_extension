@@ -37,7 +37,8 @@ const MIN_APP_VERSION = {
   };
 
   console.info('Loaded!', new Date());
-
+  // Generates and saves a random nonce to be used in the network lock page to make that page was meant to be shown by the extension
+  localStorage.setItem('nonce', crypto.getRandomValues( (new Uint32Array(3))).join(''));
 
   require('./modules/https/https.js');
 
@@ -116,7 +117,7 @@ const MIN_APP_VERSION = {
       type: 'basic',
       title: '',
       message: '',
-      iconUrl: `/images/${state}.svg`,
+      iconUrl: `/images/${state}.png`,
     };
     let key = '';
     switch (state) {
@@ -502,6 +503,7 @@ const MIN_APP_VERSION = {
       setRatingConfig();
     }
   });
+
   chrome.webRequest.onBeforeRequest.addListener(details => {
     if (
       details.method === 'GET'
@@ -509,7 +511,7 @@ const MIN_APP_VERSION = {
       && ['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state)
       && myBrowser.name !== 'Firefox'
     ) {
-      return { redirectUrl: `${chrome.runtime.getURL('/html/networkLock.html')}?url=${details.url}` };
+      return { redirectUrl: `${chrome.runtime.getURL('/html/networkLock.html')}?nonce=${localStorage.getItem('nonce')}&url=${details.url}` };
     }
   }, {
     urls: ['http://*/*', 'https://*/*'],

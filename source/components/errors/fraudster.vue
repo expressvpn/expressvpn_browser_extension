@@ -6,7 +6,7 @@ Licensed GPL v2
 <template lang="html">
   <div>
     <h1>{{ localize(`error_fraudster_title`) }}</h1>
-    <hint stringKey="error_fraudster_hint" iconName="icon-41-error" type="error"></hint>
+    <hint stringKey="error_fraudster_hint" iconName="error" type="error"></hint>
     <span v-html="localize('error_fraudster_p1_text')"></span>
     <a href="mailto:support@expressvpn.zendesk.com?subject=Billing Verification" target="_blank">support@expressvpn.zendesk.com</a>
     <span v-html="localize('error_fraudster_p2_text')"></span>
@@ -23,29 +23,8 @@ import hint from '../partials/hint.vue';
 
 export default {
   name: 'fraudster',
-  // share common functionality with component mixins
-  mixins: [],
-  // component properties/variables
-  props: {
-  },
-  // variables
-  data: function () {
-    return {
-    };
-  },
-  computed: {
-  },
-  // when component uses other components
   components: {
     hint,
-  },
-  // methods
-  watch: {},
-  methods: {
-  },
-  // component Lifecycle hooks
-  beforeCreate() {},
-  mounted() {
   },
 };
 </script>
@@ -63,5 +42,8 @@ span {
 }
 a {
   margin-top: 3px;
+}
+.bold {
+  font-weight: bold;
 }
 </style>
