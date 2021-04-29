@@ -1,36 +1,39 @@
 <!--
 ExpressVPN Browser Extension:
-Copyright 2017-2019 Express VPN International Ltd
+Copyright 2017-2020 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
   <div>
-    <secondary-header stringkey="issue_reporter_title" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
+    <secondary-header stringkey="issue_reporter_title" :onBackClick="sideBackBtnClick" />
     <div class="reporter-container">
-      <hint stringKey="issue_reporter_hint_not_sent_text" iconName="icon-41-error" type="error" v-if="reportStatus === 'ERROR'" style="margin: 0 0 15px 0;" />
+      <hint stringKey="issue_reporter_hint_not_sent_text" iconName="error" type="error" v-if="reportStatus === 'ERROR'" style="margin: 0 0 15px 0;" />
       <span class="reporter-header">{{ localize(reportStatus === 'SENT' ? 'issue_reporter_report_sent_header' : 'issue_reporter_header') }}</span>
       <div class="issue-list" v-if="!issueType">
         <div class="issue" v-for="i in 8" :key="i" @click="setIssueType(i)">
-          <img v-svg-inline class="issue-icon" :src="`/images/icons/${issueIcons[i]}.svg`" />
+          <img v-svg-inline class="icon" :src="`/images/icons/${issueIcons[i]}.svg`" viewbox="0 0 24 24" width="24" height="24" />
           <span class="issue-category">{{ localize('issue_reporter_opt' + i) }}</span>
+          <img v-svg-inline class="icon chevron" :src="`/images/icons/chevron-right.svg`" viewbox="0 0 24 24" width="24" height="24" />
         </div>
       </div>
       <div v-else>
-        <div v-if="reportStatus === 'SENT'">
+        <div class="final-container" v-if="reportStatus === 'SENT'">
           <p>{{ localize('issue_reporter_thank_you_message') }}</p>
           <div v-if="supportHint" style="margin-top:15px;">
             <div class="separator"></div>
             <span class="reporter-header">{{ localize('issue_reporter_need_help_header') }}</span>
-            <hint :stringKey="supportHint" iconName="icon-113-tips" />
+            <hint :stringKey="supportHint" iconName="tips" />
           </div>
-          <div class="button-container">
-            <button class="button-primary" @click="sideBackBtnClick">{{ localize('issue_reporter_home_button_label') }}</button>
-            <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=issue-reporter`})">{{ localize('issue_reporter_support_button_label') }}</button>
+          <div :class="['button-container', { 'button-container-bottom': ['SENT', 'ERROR'].includes(reportStatus) }]">
+            <button class="primary" @click="sideBackBtnClick">{{ localize('issue_reporter_home_button_label') }}</button>
+            <button class="secondary" @click="createTab({ url: `${currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=issue-reporter`})">{{ localize('issue_reporter_support_button_label') }}</button>
           </div>
         </div>
         <div v-else>
           <div class="issue-holder">
-            <span :class="['icon', 'icon-medium', 'icon-12-back', { 'disabled': reportStatus === 'SENDING'}]" @click="returnToIssueType()"></span>
+            <div :class="['icon-back-container', { 'disabled': reportStatus === 'SENDING'}]" @click="returnToIssueType()">
+              <img v-svg-inline class="icon back" :src="`/images/icons/chevron-left.svg`" viewbox="0 0 24 24" width="24" height="24" />
+            </div>
             <span>{{ localize('issue_reporter_opt' + issueType) }}</span>
           </div>
           <div :class="['issue-description', { 'disabled': reportStatus === 'SENDING'}]">
@@ -41,7 +44,7 @@ Licensed GPL v2
             <label>{{ localize('issue_reporter_website_label') }}</label>
             <input type="text" v-model="website" :disabled="reportStatus === 'SENDING'" />
           </div>
-          <div class="issue-location-holder">
+          <div :class="['issue-location-holder', , { 'disabled': reportStatus === 'SENDING'}]">
             <select v-model="userLocation" class="issue-location" required :disabled="reportStatus === 'SENDING'">
               <option value="" disabled selected>{{ localize('issue_reporter_location_placeholder') }}</option>
               <option value="AF">Afghanistan</option>
@@ -297,16 +300,16 @@ Licensed GPL v2
           </div>
         </div>
         <div class="button-container">
-          <button v-if="reportStatus !== 'SENT'" :disabled="!issueType || reportStatus === 'SENDING'" class="button-primary" @click="sendReport()">{{ localize(`issue_reporter_send${reportStatus === 'SENDING' ? 'ing': ''}_button_label`) }}</button>
+          <button v-if="reportStatus !== 'SENT'" :disabled="!issueType || reportStatus === 'SENDING'" class="primary" @click="sendReport()">{{ localize(`issue_reporter_send${reportStatus === 'SENDING' ? 'ing': ''}_button_label`) }}</button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import mixinLocation from '@/scripts/mixins/location';
 import secondaryHeader from './partials/secondaryHeader';
 import hint from './partials/hint';
-import mixinLocation from '@/scripts/mixins/location';
 
 export default {
   name: 'issueReporter',
@@ -437,75 +440,104 @@ export default {
   margin: 15px 0px;
 }
 p {
-  font-size: 18px;
-  line-height: 23px;
+  //font-family: Inter-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 28px;
 }
 
 .reporter {
   &-container {
-    background: var(--gray50);
-    padding: 25px 15px;
+    padding: 15px 20px;
     height: 100vh;
-    border-top: 1px solid var(--gray30);
 
-    button:disabled {
-      background: var(--gray30);
-      color: var(--gray10);
-      box-shadow: none;
-      border: 0;
+    .button-container {
+      width: 100%;
+      margin-top: 35px;
+
+      &-bottom {
+        position: absolute;
+        bottom: 15px;
+      }
+
+      button:nth-of-type(n+2) {
+        margin-top: 15px;
+      }
     }
 
     .issue {
       display: flex;
       align-items: center;
       padding: 10px 0;
-      color: var(--black20);
-      
-      &:not(:last-of-type) {
-        border-bottom: 1px solid var(--gray30);
+      position: relative;
+      color: var(--issue-default-color);
+
+      .chevron {
+        position: absolute;
+        right: 0;
       }
+
       &:hover {
-        color: var(--primary10);
+        color: var(--issue-hover-color)
       }
 
       &-category {
-        margin-left: 14px;
-        font-family: ProximaNova-Regular;
-        font-size: 18px;
-        //line-height: 46px;
+        margin-left: 15px;
+        //font-family: Inter-Regular;
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 24px;
+        width: 240px;
       }
 
       &-location {
         height: 100%;
         width: 100%;
-        font-size: 18px;
-        background: var(--gray50);
-        color: var(--black20);
+        background: var(--input-bg);
         border: 0;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 28px;
 
         &:invalid {
-          color: var(--gray20);
+          //font-family: Inter-Regular;
+          font-size: 16px;
+          font-weight: normal;
+          color: var(--label-color);
+          letter-spacing: 0px;
+          line-height: 28px;
         }
-        
+
+        &:disabled {
+          background: var(--input-bg-disabled);
+        }
 
         &-holder {
-          margin-top: 10px;
+          margin-top: 15px;
           height: 50px;
           width: 100%;
-          border: 1px solid var(--gray20);
-          background: var(--gray50);
-          border-radius: 4px;
-          padding: 0px 10px 0px 5px;
+          border: 1px solid var(--input-border);
+          background: var(--input-bg);
+          border-radius: 5px;
+          padding: 0px 20px 0px 13px;
+
+          &.disabled {
+            border-color: #ddd;
+            background: var(--input-bg-disabled);
+          }
         }
       }
 
       &-website {
         &-input {
-          margin-top: 10px;
+          margin-top: 15px;
           position: relative;
 
           label {
-            color: var(--gray20);
+            color: var(--label-color);
             font-size: 12px;
             position: absolute;
             top: 8px;
@@ -515,41 +547,34 @@ p {
             height: 50px;
             width: 100%;
             padding: 22px 15px 5px 15px;
-            font-size: 18px;
-            background: var(--gray50);
-            color: var(--black20);
-            border: 1px solid var(--gray20);
-            border-radius: 4px;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            line-height: 28px;
 
             &:disabled {
-              background: var(--gray40);
+              background: var(--input-bg-disabled);
               border-color: #dddddd;
             }
-          }
-        }
-
-        &-share {
-          font-size: 18px;
-          display: flex;
-          line-height: 20px;
-
-          label {
-            display: flex;
           }
         }
       }
 
       &-description {
         position: relative;
-        border: 1px solid var(--black20);
+        border: 1px solid var(--input-border);
+        background: var(--input-bg);
         height: 100px;
         width: 100%;
-        margin-top: 10px;
-        border-radius: 4px;
+        margin-top: 15px;
+        border-radius: 5px;
         padding: 6px 15px 5px 15px;
 
         &.disabled {
-          background: var(--gray40);
+          background: var(--input-bg-disabled);
           border-color: #dddddd;
         }
 
@@ -559,18 +584,22 @@ p {
           font-size: 18px;
           width: 100%;
           border: none;
-          background: var(--gray50);
-          color: var(--black20);
+          background: var(--input-bg);
           margin-top: 2px;
           height: calc(100% - 20px);
           padding: 0;
+          //font-family: Inter-Regular;
+          font-size: 16px;
+          font-weight: normal;
+          letter-spacing: 0px;
+          line-height: 28px;
 
           &:disabled {
-            background: var(--gray40);
+            background: var(--input-bg-disabled);
           }
         }
         label {
-          color: var(--gray20);
+          color: var(--label-color);
           font-size: 12px;
         }
       }
@@ -583,29 +612,19 @@ p {
       }
 
       &-holder {
-        font-family: ProximaNova;
-        font-size: 20px;
-        margin-top: 16px;
         display: flex;
+        align-items: center;
+        margin-top: 15px;
+        //font-family: Inter-Regular;
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 24px;
 
-        span {
-          line-height: 25px;
-        }
-
-        .icon {
-          margin-top: -6px;
-          color: var(--primary20);
-          margin-right: 10px;
-
-          &:hover {
-            color: var(--primary30);
-          }
-          &:active {
-            color: var(--primary10);
-          }
-          &.disabled {
-            color: var(--gray20);
-          }
+        .icon-back-container {
+          width: 24px;
+          height: 24px;
+          margin-right: 15px;
         }
       }
 
@@ -616,25 +635,57 @@ p {
   }
 
   &-header {
-    font-family: ProximaNova-Light;
-    font-size: 24px;
+    //font-family: Inter-Bold;
+    font-size: 18px;
+    font-weight: bold;
+    height: 26px;
+    letter-spacing: 0px;
+    line-height: 26px;
   }
+}
+.final-container {
+  position: relative;
+  height: calc(100vh - 120px);
 }
 </style>
 <style lang="scss">
-.issue {
-  &-icon path {
-    fill: var(--gray20);
+.reporter-container {
+  .issue {
+    .icon path {
+      fill: var(--issue-default-color);
+    }
+    &:hover {
+      .icon path {
+        fill: var(--issue-hover-color);
+      }
+    }
   }
-  &:hover {
-    .issue-icon path {
-        fill: var(--primary30);
+  .icon-back-container {
+    .icon path {
+      fill: $eds-color-mint-20;
+    }
+    &:hover {
+      .icon path {
+        fill: $eds-color-mint-10;
+      }
     }
   }
 }
-[data-theme="dark"] {
-  input[type="radio"] ~ label:before, input[type="checkbox"] ~ label:before {
-    color: #f7f7f7;
+
+@media (prefers-color-scheme: light) {
+  .reporter-container {
+    --issue-default-color: #{$eds-color-midnight};
+    --issue-hover-color: #{$eds-color-mint-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .reporter-container {
+    --issue-default-color: #{$eds-color-grey-40};
+    --issue-hover-color: #{$eds-color-neon};
+
+    .logo path {
+      fill: $eds-color-grey-40;
+    }
   }
 }
 </style>

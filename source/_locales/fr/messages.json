@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Contrôlez l'appli ExpressVPN depuis Chrome, masquez votre localisation et accédez à du contenu.",
+    "message": "Navigation sécurisée. Masquez votre localisation, accédez à vos contenus partout et contrôlez l'appli ExpressVPN depuis Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Confidentialité, sécurité et rapidité. Contrôlez l'appli ExpressVPN directement depuis Firefox, masquez votre localisation et accédez à du contenu depuis n'importe où dans le monde.",
+    "message": "Naviguez en toute sécurité sur Internet avec une vitesse élevée. Masquez votre localisation, accédez à vos contenus préférés partout et contrôlez l'application ExpressVPN depuis Firefox.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN : un proxy VPN qui vous donne accès à tout",
+    "message": "ExpressVPN : proxy VPN pour une connexion Internet sécurisée",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -79,7 +79,7 @@
     "message": "Vous pouvez aussi masquer l'extension par un clic droit sur l'icône puis en sélectionant \"Retirer de la barre de tâches\" ou \"Déplacer dans le menu\"."
   },
   "error_compatibility_error_os_version_p1_text": {
-    "message": "Actuellement, cette extension est disponible uniquement sur <b>macOS 10.10 / Windows 7</b> et les versions plus récentes."
+    "message": "Cette extension est disponible uniquement sur <b>macOS 10.10 / Windows 7</b> et les versions plus récentes."
   },
   "error_compatibility_error_os_version_p2_text": {
     "message": "Veuillez mettre à jour votre système d'exploitation pour utiliser cette extension."
@@ -167,7 +167,7 @@
     "message": "Compte suspendu"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "Votre essai gratuit est arrivé à expiration, mais vous pouvez vous reconnecter facilement."
+    "message": "Votre essai gratuit a expiré, mais vous pouvez vous reconnecter facilement."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "Pourquoi s'abonner ?"
@@ -185,10 +185,10 @@
     "message": "160 localisations dans le monde"
   },
   "error_free_trial_expired_l4_text": {
-    "message": "Support client 24/7"
+    "message": "Support client 24h/24 et 7j/7"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Bande passante illimitée"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "Garantie 30 jours satisfait ou remboursé"
   },
   "error_free_trial_expired_status_text": {
     "message": "Expiré (%1)."
@@ -315,7 +315,7 @@
     "message": "Plus tard"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Votre abonnement est arrivé à expiration, mais vous pouvez vous reconnecter facilement."
+    "message": "Votre abonnement a expiré, mais vous pouvez vous reconnecter facilement."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Pourquoi se réabonner ?"
@@ -330,16 +330,16 @@
     "message": "Souscrire à un abonnement"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Des applis pour tous les appareils"
+    "message": "Accédez à tous les contenus que vous aimez"
   },
   "error_subscription_expired_l2_text": {
-    "message": "Parrainez des amis et gagnez 30 jours gratuits"
+    "message": "Restez sécurisé et anonyme en ligne"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 localisations dans le monde"
+    "message": "Support client 24h/24 et 7j/7"
   },
   "error_subscription_expired_l4_text": {
-    "message": "Support technique 24/7"
+    "message": "Support client 24h/24 et 7j/7"
   },
   "error_SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF_main_button_label": {
     "message": "Acheter un nouvel abonnement"
@@ -521,9 +521,6 @@
   "issue_reporter_send_button_label": {
     "message": "Envoyer un rapport"
   },
-  "issue_reporter_share_website_label": {
-    "message": "Partager le site web avec ExpressVPN"
-  },
   "issue_reporter_support_button_label": {
     "message": "Contacter le Support client"
   },
@@ -605,7 +602,7 @@
     "description": "Do not translate the text between parentheses"
   },
   "list_item_247_support": {
-    "message": "Support client 24/7"
+    "message": "Support client 24h/24 et 7j/7"
   },
   "list_item_30day_guarantee": {
     "message": "Garantie 30 jours satisfait ou remboursé"
@@ -632,7 +629,7 @@
     "message": "Localisations recommandées"
   },
   "location_picker_search_no_results_text": {
-    "message": "AUCUN RÉSULTAT"
+    "message": "Aucun résultat"
   },
   "location_picker_search_placeholder_text": {
     "message": "Chercher une localisation"
@@ -694,6 +691,9 @@
   },
   "menu_get_30_days_free": {
     "message": "Obtenez 30 jours gratuits"
+  },
+  "menu_header": {
+    "message": "Options"
   },
   "menu_help_support": {
     "message": "Aide et Support"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Préférences d'affichage"
   },
-  "menu_settings_general_display_label": {
-    "message": "Mode d'affichage"
-  },
   "menu_settings_general_header": {
     "message": "Général"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Langue de l'extension"
   },
   "menu_settings_general_language_label": {
     "message": "Langue"
@@ -906,13 +900,13 @@
     "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
   },
   "networkLock_status_connected_text": {
-    "message": "Connecté à <b>%LOCATION%</b>."
+    "message": "Connecté à %LOCATION%."
   },
   "networkLock_status_connecting_text": {
     "message": "Connexion à <b>%LOCATION%</b> en cours. "
   },
   "networkLock_status_connection_error_text": {
-    "message": "Connexion à <b>%LOCATION%</b> impossible."
+    "message": "Échec de connexion à %LOCATION%."
   },
   "networkLock_status_reconnecting_text": {
     "message": "Reconnexion à <b>%LOCATION%</b>."
@@ -966,7 +960,7 @@
     "message": "Votre dernier paiement a échoué"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Mettre à jour les informations paiement"
+    "message": "Mettre à jour le mode de paiement"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Expire dans [days] jours"
@@ -1058,15 +1052,6 @@
   "rating_thanks_@firefox@_text": {
     "message": "Merci ! Pourriez-vous nous laisser un avis sur le Add-ons Store de Firefox ?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Adapter aux réglages de l'appareil"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Foncé"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Clair"
-  },
   "settings_general_help_improve_description": {
     "message": "Partager les rapports de crash, les tests de vitesse, les diagnostics d'accessibilité et si les tentatives de connexion VPN réussissent ou non. Ces rapports ne contiennent jamais d'informations permettant de vous identifier."
   },
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "Continuer"
   },
-  "welcome_get_started_button_label": {
-    "message": "Démarrer"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "Contribuez à améliorer ExpressVPN"
   },
@@ -1149,10 +1131,10 @@
     "message": "Garantie 30 jours satisfait ou remboursé"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "Un VPN protège votre vie privée en masquant votre adresse IP"
+    "message": "Prenez le contrôle de votre vie privée et protégez vos données"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Regardez tous les contenus que vous aimez sans restrictions"
+    "message": "Profitez de vos émissions et applis favorites où que vous soyez"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Connectez-vous au Wi-Fi public des hôtels, cafés et aéroports en toute sécurité"

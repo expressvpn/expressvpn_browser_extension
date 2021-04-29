@@ -1,29 +1,26 @@
 /*
 ExpressVPN Browser Extension:
-Copyright 2017-2019 Express VPN International Ltd
+Copyright 2017-2020 Express VPN International Ltd
 Licensed GPL v2
 */
 function hookGeo() {
   //<![CDATA[
-  window.getCurrentPositionX = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
-  window.watchPositionX = navigator.geolocation.watchPosition.bind(navigator.geolocation);
-  let WAIT_TIME = 100;
-
-  
-  if (!['http:', 'https:'].includes(window.location.protocol)) {
-    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
-    window.fakeGeo = true;
-    window.genLat = 38.883333;
-    window.genLon = -77.000;
-  }
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
 
   function waitGetCurrentPosition() {
-    if ((typeof window.fakeGeo !== 'undefined')) {
-      if (window.fakeGeo === true) {
-        window.tmp_successCallback({
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
           coords: {
-            latitude: window.genLat,
-            longitude: window.genLon,
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
             accuracy: 10,
             altitude: null,
             altitudeAccuracy: null,
@@ -33,7 +30,7 @@ function hookGeo() {
           timestamp: new Date().getTime(),
         });
       } else {
-        window.getCurrentPositionX(window.tmp_successCallback, window.tmp_errorCallback, window.tmp_options);
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
       }
     } else {
       setTimeout(waitGetCurrentPosition, WAIT_TIME);
@@ -41,28 +38,28 @@ function hookGeo() {
   }
 
   function waitWatchPosition() {
-    if ((typeof window.fakeGeo !== 'undefined')) {
-      if (window.fakeGeo === true) {
-        navigator.getCurrentPosition(window.tmp2_successCallback, window.tmp2_errorCallback, window.tmp2_options);
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
         return Math.floor(Math.random() * 10000); // random id
       } else {
-        window.watchPositionX(window.tmp2_successCallback, window.tmp2_errorCallback, window.tmp2_options);
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
       }
     } else {
       setTimeout(waitWatchPosition, WAIT_TIME);
     }
   }
 
-  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
-    window.tmp_successCallback = successCallback;
-    window.tmp_errorCallback = errorCallback;
-    window.tmp_options = options;
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
     waitGetCurrentPosition();
   };
-  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
-    window.tmp2_successCallback = successCallback;
-    window.tmp2_errorCallback = errorCallback;
-    window.tmp2_options = options;
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
     waitWatchPosition();
   };
 
@@ -129,19 +126,17 @@ function hookGeo() {
     return secureBlob;
   }(Blob);
 
-  Object.freeze(navigator.geolocation);
-
   window.addEventListener('message', function (event) {
     if (event.source !== window) {
       return;
     }
     const message = event.data;
     switch (message.method) {
-      case 'updateLocationX':
+      case 'updateLocation':
         if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
-          window.genLat = message.info.coords.lat;
-          window.genLon = message.info.coords.lon;
-          window.fakeGeo = message.info.fakeIt;
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
         }
         break;
       default:
@@ -151,32 +146,8 @@ function hookGeo() {
   //]]>
 }
 
-function getRandomString(N) {
-  let alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  return Array(N)
-    .join()
-    .split(',')
-    .map(function () { return alpha.charAt(Math.floor(Math.random() * alpha.length)); })
-    .join('');// 6 characters random string
-}
-
 pref_hideLocation = true;
- domain = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
- mapNames = { // randomize variable names
-  genLat: getRandomString(5),
-  genLon: getRandomString(5),
-  fakeGeo: getRandomString(5),
-  getCurrentPositionX: getRandomString(7),
-  watchPositionX: getRandomString(7),
-  updateLocationX: getRandomString(7),
-  hookGeo: getRandomString(5),
-  tmp_successCallback: getRandomString(7),
-  tmp_errorCallback: getRandomString(7),
-  tmp_options: getRandomString(5),
-  tmp2_successCallback: getRandomString(7),
-  tmp2_errorCallback: getRandomString(7),
-  tmp2_options: getRandomString(5),
-};
+domain = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
 
 function sendLocation(currentInfo) {
   let injectStates = ['connected', 'connecting', 'disconnecting', 'reconnecting', 'connection_error'];
@@ -193,7 +164,7 @@ function sendLocation(currentInfo) {
     info.fakeIt = ((injectStates.indexOf(currentInfo.state) > -1) && pref_hideLocation);
   }
   if (['http:', 'https:'].includes((new URL(domain).protocol))) { // It's not possible to reliably set the origin with non-http(s) protocol, so let's try to not trigger any errors
-    window.postMessage({ method: mapNames.updateLocationX, info: info }, domain);
+    window.postMessage({ method: 'updateLocation', info: info }, domain);
   }
 }
 
@@ -208,17 +179,14 @@ function inject(storage) {
     if (changes.prefs) {
       pref_hideLocation = changes.prefs.hideLocation;
     }
-    sendLocation(changes.currentInfo);
-  });
-
-  let re = new RegExp(Object.keys(mapNames).join('|'), 'gi');
-  let func = hookGeo.toString().replace(re, function (matched) {
-    return mapNames[matched];
+    if (changes.currentInfo && changes.currentInfo.newValue) {
+      sendLocation(changes.currentInfo.newValue);
+    }
   });
 
   let injectedCode = '(function(){' +
-    func +
-    mapNames.hookGeo + '();' +
+    hookGeo.toString() +
+    'hookGeo();' +
   '})()';
 
   // Inserting the script inline will make sure it will be executed first

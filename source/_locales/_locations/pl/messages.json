@@ -176,6 +176,9 @@
   "Hong Kong": {
     "message": "Hong Kong"
   },
+  "Hong Kong - 1": {
+    "message": "Hongkong - 1"
+  },
   "Hong Kong - 2": {
     "message": "Hong Kong- 2"
   },
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "Hiszpania - Barcelona"
   },
+  "Spain - Barcelona - 2": {
+    "message": "Hiszpania - Barcelona - 2"
+  },
   "Spain - Madrid": {
     "message": "Hiszpania - Madryt"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "Szwecja"
+  },
+  "Sweden - 2": {
+    "message": "Szwecja - 2"
   },
   "Switzerland": {
     "message": "Szwajcaria"
@@ -492,7 +501,7 @@
     "message": "USA - New Jersey - 1"
   },
   "USA - New Jersey - 2": {
-    "message": "USA - New JerseyJersey - 2"
+    "message": "USA - New Jersey - 2"
   },
   "USA - New Jersey - 3": {
     "message": "USA - New Jersey - 3"

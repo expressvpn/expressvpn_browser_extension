@@ -33,7 +33,6 @@
     }
   },
   "permissions": [
-    "alarms",
     "cookies",
     "nativeMessaging",
     "privacy",
@@ -43,7 +42,6 @@
     "tabs",
     "unlimitedStorage",
     "notifications",
-    "proxy",
     "<all_urls>"
   ],
   "browser_action": {
@@ -52,7 +50,7 @@
   },
   "web_accessible_resources": [
     "images/*",
-    "html/*"
+    "html/networkLock.html"
   ],
   "content_scripts": [
     {

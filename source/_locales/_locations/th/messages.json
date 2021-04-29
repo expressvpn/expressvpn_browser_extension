@@ -159,7 +159,7 @@
     "message": "เยอรมนี - แฟรงค์เฟิร์ต - 1"
   },
   "Germany - Frankfurt - 2": {
-    "message": "เยอรมนี - แฟรงค์เฟิร์ต - 2\n"
+    "message": "เยอรมนี - แฟรงค์เฟิร์ต - 2"
   },
   "Germany - Frankfurt - 3": {
     "message": "เยอรมนี - แฟรงค์เฟิร์ต - 3"
@@ -175,6 +175,9 @@
   },
   "Hong Kong": {
     "message": "ฮ่องกง"
+  },
+  "Hong Kong - 1": {
+    "message": "ฮ่องกง - 1"
   },
   "Hong Kong - 2": {
     "message": "ฮ่องกง - 2"
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "สเปน - บาร์เซโลนา"
   },
+  "Spain - Barcelona - 2": {
+    "message": "สเปน - บาร์เซโลนา - 2"
+  },
   "Spain - Madrid": {
     "message": "สเปน - มาดริด"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "สวีเดน"
+  },
+  "Sweden - 2": {
+    "message": "สวีเดน - 2"
   },
   "Switzerland": {
     "message": "สวิสเซอร์แลนด์"
@@ -447,85 +456,85 @@
     "message": "อุรุกวัย"
   },
   "USA - Atlanta": {
-    "message": "สหรัฐอเมริกา - แอตแลนตา"
+    "message": "สหรัฐ - แอตแลนตา"
   },
   "USA - Chicago": {
-    "message": "สหรัฐอเมริกา - ชิคาโก"
+    "message": "สหรัฐ - ชิคาโก"
   },
   "USA - Dallas": {
-    "message": "สหรัฐอเมริกา - ดัลลัส"
+    "message": "สหรัฐ - ดัลลัส"
   },
   "USA - Dallas - 2": {
-    "message": "สหรัฐอเมริกา - ดัลลัส - 2"
+    "message": "สหรัฐ - ดัลลัส - 2"
   },
   "USA - Denver": {
-    "message": "สหรัฐอเมริกา - เดนเวอร์"
+    "message": "สหรัฐ - เดนเวอร์"
   },
   "USA - Hollywood": {
-    "message": "สหรัฐอเมริกา - ฮอลลีวูด"
+    "message": "สหรัฐ - ฮอลลีวูด"
   },
   "USA - Los Angeles": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส "
+    "message": "สหรัฐ - ลอสแองเจลิส "
   },
   "USA - Los Angeles - 1": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส - 1"
+    "message": "สหรัฐ - ลอสแองเจลิส - 1"
   },
   "USA - Los Angeles - 2": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส - 2\n"
+    "message": "สหรัฐ - ลอสแองเจลิส - 2"
   },
   "USA - Los Angeles - 3": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส - 3"
+    "message": "สหรัฐ - ลอสแองเจลิส - 3"
   },
   "USA - Los Angeles - 4": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส - 4"
+    "message": "สหรัฐ - ลอสแองเจลิส - 4"
   },
   "USA - Los Angeles - 5": {
-    "message": "สหรัฐอเมริกา - ลอสแองเจลิส - 5"
+    "message": "สหรัฐ - ลอสแองเจลิส - 5"
   },
   "USA - Miami": {
-    "message": "สหรัฐอเมริกา - ไมอามี"
+    "message": "สหรัฐ - ไมอามี"
   },
   "USA - Miami - 2": {
-    "message": "สหรัฐอเมริกา - ไมอามี - 2"
+    "message": "สหรัฐ - ไมอามี - 2"
   },
   "USA - New Jersey - 1": {
-    "message": "สหรัฐอเมริกา - นิวเจอร์ซีย์ - 1"
+    "message": "สหรัฐ - นิวเจอร์ซีย์ - 1"
   },
   "USA - New Jersey - 2": {
-    "message": "สหรัฐอเมริกา - นิวเจอร์ซีย์ - 2"
+    "message": "สหรัฐ - นิวเจอร์ซีย์ - 2"
   },
   "USA - New Jersey - 3": {
-    "message": "สหรัฐอเมริกา - นิวเจอร์ซีย์ - 3"
+    "message": "สหรัฐ - นิวเจอร์ซีย์ - 3"
   },
   "USA - New York": {
-    "message": "สหรัฐอเมริกา - นิวยอร์ก  "
+    "message": "สหรัฐ - นิวยอร์ก  "
   },
   "USA - New York - 2": {
-    "message": "สหรัฐอเมริกา - นิวยอร์ก - 2"
+    "message": "สหรัฐ - นิวยอร์ก - 2"
   },
   "USA - Salt Lake City": {
-    "message": "สหรัฐอเมริกา - ซอลต์เลกซิตี"
+    "message": "สหรัฐ - ซอลต์เลกซิตี"
   },
   "USA - San Francisco": {
-    "message": "สหรัฐอเมริกา - ซานฟรานซิสโก"
+    "message": "สหรัฐ - ซานฟรานซิสโก"
   },
   "USA - San Jose": {
-    "message": "สหรัฐอเมริกา - ซานโฮเซ่"
+    "message": "สหรัฐ - ซานโฮเซ่"
   },
   "USA - Santa Monica": {
-    "message": "สหรัฐอเมริกา - ซานตาโมนิกา"
+    "message": "สหรัฐ - ซานตาโมนิกา"
   },
   "USA - Seattle": {
-    "message": "สหรัฐอเมริกา - ซีแอตเทิล"
+    "message": "สหรัฐ - ซีแอตเทิล"
   },
   "USA - Tampa - 1": {
-    "message": "สหรัฐอเมริกา - แทมปา - 1"
+    "message": "สหรัฐ - แทมปา - 1"
   },
   "USA - Washington DC": {
-    "message": "สหรัฐอเมริกา - วอชิงตันดีซี"
+    "message": "สหรัฐ - วอชิงตันดีซี"
   },
   "USA - Washington DC - 2": {
-    "message": "สหรัฐอเมริกา - วอชิงตันดีซี - 2"
+    "message": "สหรัฐ - วอชิงตันดีซี - 2"
   },
   "Uzbekistan": {
     "message": "อุซเบกิสถาน"

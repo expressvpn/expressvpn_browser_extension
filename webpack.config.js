@@ -72,7 +72,7 @@ const config = {
           {
             loader: 'sass-loader',
             options: {
-              prependData: '@import "@/styles/shared/scss/xv_style.scss";',
+              prependData: '@import "@/styles/shared/vendor/assets/stylesheets/eds/core/_variables.scss";',
             },
           },
         ],
@@ -149,8 +149,8 @@ const config = {
         },
       },
       { from: 'html/**/*', to: 'html/[name].[ext]' },
-      { from: 'styles/shared/fonts/**/*', to: 'fonts/[name].[ext]' },
-      { from: 'styles/shared/icons/**/*', to: 'images/icons/[name].[ext]' },
+      { from: 'styles/shared/vendor/assets/fonts/eds/**/*', to: 'fonts/[name].[ext]' },
+      { from: '**/*', to: 'images/[path][name].[ext]', context: 'styles/shared/vendor/assets/images/eds/' },
       { from: 'fonts/**/*', to: 'fonts/[name].[ext]' },
       { from: 'scripts/content/**/*', to: 'scripts/content/[name].[ext]' },
       // { from: 'scripts/modules/https/**/*', to: 'scripts/modules/https/[name].[ext]' },
@@ -193,6 +193,10 @@ const config = {
             }
           } else if (browser === 'chrome') {
             manifestObj.key = '';
+          }
+
+          if (config.mode === 'development') {
+            manifestObj.web_accessible_resources.push('html/*');
           }
 
           return JSON.stringify(manifestObj, null, 2);

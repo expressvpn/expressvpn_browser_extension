@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Privat, sikker og hurtigt. Styr ExpressVPN-app direkte fra Chrome, skjul din placering og se indhold hvor som helst.",
+    "message": "Gå sikkert online med lynhurtig hastighed. Slør din placering, få adgang til indhold overalt, og styr ExpressVPN-appen fra Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Privat, sikkert og hurtigt. Kontroller ExpressVPN-app direkte fra Firefox, skjul din placering og få adgang til indhold hvor som helst.",
+    "message": "Gå online sikkert og lynhurtigt. Skjul din placering, få adgang til indhold overalt, og tjek ExpressVPN-appen direkte fra Firefox.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: VPN-proxy fjerner blokering fra alt",
+    "message": "ExpressVPN: VPN-proxy til et bedre internet",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -115,7 +115,7 @@
     "message": "Kan ikke oprette forbindelse"
   },
   "error_connection_error_to_location_text": {
-    "message": "Kan ikke få forbindelse til<br>%LOCATION%."
+    "message": "Kan ikke få forbindelse til %LOCATION%."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Prøv igen"
@@ -187,8 +187,8 @@
   "error_free_trial_expired_l4_text": {
     "message": "Kundesupport 24/7"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Ubegrænset båndbredde"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30-dages pengene-tilbage-garanti"
   },
   "error_free_trial_expired_status_text": {
     "message": "Udløbet (%1)."
@@ -206,7 +206,7 @@
     "message": "Log ud"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Gratis prøveperiode udløbet"
+    "message": "Forbliv beskyttet"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "Opdater betalingsoplysninger"
@@ -330,13 +330,13 @@
     "message": "Få abonnement"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Apps til enhver enhed"
+    "message": "Få adgang til alt det indhold, du elsker"
   },
   "error_subscription_expired_l2_text": {
-    "message": "Henvis venner, få 30 dage gratis "
+    "message": "Forbliv sikker og anonym online"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 placeringer verden over"
+    "message": "Support 24/7"
   },
   "error_subscription_expired_l4_text": {
     "message": "Kundesupport 24/7"
@@ -521,9 +521,6 @@
   "issue_reporter_send_button_label": {
     "message": "Send rapport"
   },
-  "issue_reporter_share_website_label": {
-    "message": "Del hjemmeside med ExpressVPN"
-  },
   "issue_reporter_support_button_label": {
     "message": "Kontakt support"
   },
@@ -632,7 +629,7 @@
     "message": "Anbefalede placeringer"
   },
   "location_picker_search_no_results_text": {
-    "message": "INGEN RESULTATER"
+    "message": "Ingen resultater"
   },
   "location_picker_search_placeholder_text": {
     "message": "Søg efter by eller land"
@@ -694,6 +691,9 @@
   },
   "menu_get_30_days_free": {
     "message": "Få 30 dage gratis"
+  },
+  "menu_header": {
+    "message": "Valgmuligheder"
   },
   "menu_help_support": {
     "message": "Hjælp & support"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Displaypræferencer"
   },
-  "menu_settings_general_display_label": {
-    "message": "Displaytilstand"
-  },
   "menu_settings_general_header": {
     "message": "Generelt"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Udvidelsessprog"
   },
   "menu_settings_general_language_label": {
     "message": "Sprog"
@@ -906,16 +900,16 @@
     "message": "Internettrafik er i øjeblikket blokeret for at beskytte dit privatliv."
   },
   "networkLock_status_connected_text": {
-    "message": "Forbundet til <b>%LOCATION%</b>."
+    "message": "Forbundet til %LOCATION%."
   },
   "networkLock_status_connecting_text": {
-    "message": "Forbinder til <b>%LOCATION%</b>."
+    "message": "Forbinder til %LOCATION%."
   },
   "networkLock_status_connection_error_text": {
-    "message": "Kan ikke få forbindelse til <b>%LOCATION%</b>."
+    "message": "Kan ikke få forbindelse til %LOCATION%."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Genforbinder til <b>%LOCATION%</b>."
+    "message": "Genforbinder til %LOCATION%."
   },
   "networkLock_try_again_button_label": {
     "message": "Prøv igen"
@@ -1058,15 +1052,6 @@
   "rating_thanks_@firefox@_text": {
     "message": "Tak! Bedøm os i Firefox Add-ons Store?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Match enhedsindstillinger"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Mørk"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Lys"
-  },
   "settings_general_help_improve_description": {
     "message": "Del crash-rapporter, hastighedstests, diagnostik om brugervenlighed, og om VPN-forbindelsesforsøg lykkes. Disse rapporter indeholder aldrig personligt identificerbare oplysninger."
   },
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "Fortsæt"
   },
-  "welcome_get_started_button_label": {
-    "message": "Kom i gang"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "Hjælp med at forbedre ExpressVPN"
   },
@@ -1149,10 +1131,10 @@
     "message": "30-dages pengene-tilbage-garanti"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "En VPN beskytter dit privatliv ved at skjule din IP-adresse"
+    "message": "Tag kontrol af dit privatliv og beskyt dine data online"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Stream alt det indhold, du elsker, uden begrænsninger"
+    "message": "Nyd dine yndlingsshows og -apps, hvorend du er"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Opret sikker forbindelse til offentlig wi-fi i hoteller, på caféer og i lufthavne"

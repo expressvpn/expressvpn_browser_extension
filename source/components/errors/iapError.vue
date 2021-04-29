@@ -5,7 +5,7 @@ Licensed GPL v2
 -->
 <template>
   <div>
-    <error-icon iconName="icon-41-error" v-if="!['FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED', 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF'].includes(IAPstate)"/>
+    <error-icon iconName="Laptop2" v-if="!['FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED', 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF'].includes(IAPstate)"/>
     
     <div v-if="['FREE_TRIAL_IAP_RENEWAL_FAILED', 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON', 'SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED'].includes(IAPstate)">
       <h1>{{ localize('error_IAP_MAIN_title') }}</h1>
@@ -14,7 +14,7 @@ Licensed GPL v2
     </div>
     <div v-else-if="IAPstate == 'FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED'">
       <h1>{{ localize(`error_${IAPstate}_title`) }}</h1>
-      <p>{{ localize('error_free_trial_expired_benefits_text') }}</p>
+      <p v-html="localize('error_free_trial_expired_benefits_text')" />
       <ul class="check-list">
         <li>{{ localize('error_free_trial_expired_l1_text') }}</li>
         <li>{{ localize('error_free_trial_expired_l3_text') }}</li>
@@ -23,7 +23,7 @@ Licensed GPL v2
     </div>
     <div v-else-if="IAPstate == 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF'">
       <h1>{{ localize(`error_${IAPstate}_title`) }}</h1>
-      <p>{{ localize('error_subscription_expired_benefits_text') }}</p>
+      <p v-html="localize('error_subscription_expired_benefits_text')" />
       <ul class="check-list">
         <li>{{ localize('error_subscription_expired_l1_text') }}</li>
         <li>{{ localize('error_subscription_expired_l3_text') }}</li>
@@ -32,8 +32,8 @@ Licensed GPL v2
     </div>
 
     <div class="button-container">
-      <button class="button-primary" @click="handleMainAction">{{ localize(`error_${IAPstate}_main_button_label`) }}</button>
-      <button class="button-secondary" @click="handleSubAction">{{ localize(`error_${IAPstate}_sub_button_label`) }}</button>
+      <button class="primary" @click="handleMainAction">{{ localize(`error_${IAPstate}_main_button_label`) }}</button>
+      <button class="secondary" @click="handleSubAction">{{ localize(`error_${IAPstate}_sub_button_label`) }}</button>
     </div>
   </div>
 </template>

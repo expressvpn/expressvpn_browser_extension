@@ -19,7 +19,7 @@ Licensed GPL v2
           category="all"
           :type="locations.length > 1 ? 'country' : 'location'"
         >
-        </location-item>        
+        </location-item>
       </div>
     </template>
   </div>
@@ -49,4 +49,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

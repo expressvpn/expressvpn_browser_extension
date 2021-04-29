@@ -19,6 +19,10 @@ Vue.use(VueSvgInlinePlugin, {
     persistent: false,
   },
 });
+Vue.directive('visible', (el, binding) => {
+  // eslint-disable-next-line no-param-reassign, no-extra-boolean-cast
+  el.style.visibility = !!binding.value ? 'visible' : 'hidden';
+});
 Vue.mixin(mixin);
 const app = new Vue({
   el: '#app',

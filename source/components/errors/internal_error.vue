@@ -5,12 +5,12 @@ Licensed GPL v2
 -->
 <template lang="html">
   <div :class="currentInfo.state">
-    <error-icon iconName="icon-61-launch" />
+    <error-icon iconName="AppNotOpen" />
     <h1>{{ localize(currentInfo.os === 'LINUX' ? 'error_activate_app_LINUX_title' : 'error_open_app_title') }}</h1>
     <p v-html="localize(currentInfo.os === 'LINUX' ? 'error_activate_app_LINUX_text' : 'error_open_app_text')"></p>
     <div class="button-container">
-      <button :class="['button-primary', { invisible: (currentInfo.os === 'LINUX') }]" @click="openApp">{{ localize('error_open_app_open_app_button_label') }}</button>
-      <button class="button-secondary" @click="contactSupport">{{ localize('error_open_app_contact_support_button_label') }}</button>
+      <button :class="['primary', { invisible: (currentInfo.os === 'LINUX') }]" @click="openApp">{{ localize('error_open_app_open_app_button_label') }}</button>
+      <button class="secondary" @click="contactSupport">{{ localize('error_open_app_contact_support_button_label') }}</button>
     </div>
   </div>
 </template>

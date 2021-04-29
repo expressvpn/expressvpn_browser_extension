@@ -1,9 +1,8 @@
 /*
 ExpressVPN Browser Extension:
-Copyright 2017-2019 Express VPN International Ltd
+Copyright 2017-2020 Express VPN International Ltd
 Licensed GPL v2
 */
-import * as styles from '@/styles/shared/scss/_variables.scss';
 import rating from './rating';
 
 const currentInfo = {
@@ -54,18 +53,17 @@ const defaultPreferences = {
   'httpsPeriodicity': 86400,
   'language': '',
   'hideLocation': true,
-  'displayMode': 'auto',
   'helpImprove': false,
 };
 
 const ICONS = {
   connected: {
     text: '✓',
-    color: styles.success20,
+    color: '#0f866c',
   },
   connecting: {
     text: '···',
-    color: styles.alert20,
+    color: '#fd9b3f',
   },
   default: {
     text: '',
@@ -73,7 +71,7 @@ const ICONS = {
   },
   error: {
     text: '✕',
-    color: styles.border20,
+    color: '#cf1369',
   },
 };
 

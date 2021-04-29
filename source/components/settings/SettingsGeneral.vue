@@ -1,4 +1,4 @@
-<!-- 
+<!--
 ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
@@ -29,7 +29,7 @@ Licensed GPL v2
         </div>
       </div>
 
-      <button v-if="currentInfo.os !== 'LINUX'" @click="openAppSettings" id="openAppSettings">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
+      <button v-if="currentInfo.os !== 'LINUX'" @click="openAppSettings" id="openAppSettings" class="secondary">{{ localize('menu_settings_general_open_app_settings_button_label') }}</button>
 
       <div class="divider"></div>
 
@@ -43,18 +43,7 @@ Licensed GPL v2
                 {{ lang.label }}
               </option>
             </select>
-            <i class="icon icon-38-dropdown" />
-          </div>
-        </div>
-        <div class="setting-option-container">
-          <div class="select-container">
-            <label for="displayMode">{{ localize('menu_settings_general_display_label') }}</label>
-            <select id="displayMode" v-model="extensionPreferences.displayMode">
-              <option value="auto">{{ localize('settings_general_display_dropdown_auto_label') }}</option>
-              <option value="light">{{ localize('settings_general_display_dropdown_light_label') }}</option>
-              <option value="dark">{{ localize('settings_general_display_dropdown_dark_label') }}</option>
-            </select>
-            <i class="icon icon-38-dropdown" />
+            <img v-svg-inline src='/images/icons/chevron-down.svg' width="24" height="24" class="icon" />
           </div>
         </div>
       </div>
@@ -109,19 +98,6 @@ export default {
       handler: function (newVal, oldVal) {
         if (this.isMounting === true) { // skip the semi-initial assignment
           return;
-        }
-        
-        this.$store.state.imageSuffix = (newVal.displayMode === 'dark' || newVal.displayMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? '_dark' : '';
-        switch (newVal.displayMode) {
-          case 'light':
-          case 'dark':
-            document.documentElement.setAttribute('data-theme', newVal.displayMode);
-            break;
-          case 'auto':
-            document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            break;
-          default:
-            break;
         }
 
         this.triggerSaveAnimation();
@@ -195,7 +171,7 @@ export default {
           }
         }
       }
-      
+
       self.$nextTick(function () {
         self.isMounting = false;
       });
@@ -203,42 +179,29 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.linkOption {
-  font-size: 18px;
-  right: 0;
-  position: absolute;
-}
+<style lang="scss" scoped>
 #openAppSettings {
-  height: 34px;
-  background: var(--gray50);
-  border: 1px solid #D0D6DA;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 100%;
   margin-top: 15px;
-  color: var(--primary20);
-  font-family: ProximaNova-Semibold;
+  margin-bottom: 30px;
+}
+.linkOption {
+  position: absolute;
+  right: 0;
   font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 28px;
+  text-align: center;
+  color: $eds-color-info-20;
+}
 
-  &:hover {
-    color: var(--primary30);
-  }
-  &:active {
-    color: var(--primary10);
-  }
-}
-.divider {
-  border-bottom: 1px solid #DEDEDE;
-  margin: 25px 0;
-}
 input[type="text"] {
   background: #fff;
   border-radius: 4px;
-  border: 1px solid $gray-20;
+  border: 1px solid var(--gray20);
   height: 28px;
   width: 82px;
-  color: $black-20;
+  color: var(--black20);
   font-size: 12px;
   padding: 6px 5px;
 }
@@ -247,13 +210,14 @@ input[type="text"] {
   &-description {
     margin-top: 10px;
     font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 22px;
   }
 
   &-container {
-    background: var(--gray50);
-    padding: 25px 15px;
+    padding: 0px 20px;
     height: 100vh;
-    border-top: 1px solid #DEDEDE;
 
     .toggle {
       right: 0;
@@ -262,17 +226,15 @@ input[type="text"] {
   }
 
   &-header {
-    color: var(--black20);
-    font-family: ProximaNova-Light;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 26px;
   }
 
-  &-group {
-
-  }
 
   &-option-container {
-    margin-top: 16px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     position: relative;
@@ -282,51 +244,51 @@ input[type="text"] {
       max-width: 85%;
     }
     label {
-      color: var(--black20);
-      font-size: 18px;
-      width: calc(100% - 32px);
+      //width: calc(100% - 32px);
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0px;
+      line-height: 28px;
     }
 
     .select-container {
-      border: 1px solid var(--black20);
-      border-radius: 4px;
+      border: 1px solid var(--input-border);
+      background: var(--input-bg);
+      border-radius: 5px;
       position: relative;
       padding: 6px 15px;
-      height: 52px;
+      height: 60px;
       width: 100%;
 
-      label {
-        font-size: 12px;
-        color: var(--gray20);
-        position: absolute;
-      }
-      select {
-        background: var(--gray50);
-        border: 0;
-        color: var(--black20);
-        font-size: 18px;
-        width: 100%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        margin-top: calc(22px - 7px); // - 6px from padding in the container (+ 1 extra pixel because of Windows Chrome renedering bug)
-      }
       .icon {
         position: absolute;
-        right: 15px;
+        right: 20px;
         top: 50%;
         pointer-events: none;
         transform: translateY(-50%);
+
+        path {
+          fill: var(--font-color)
+        }
+      }
+
+      label {
+        font-size: 12px;
+        color: var(--label-color);
+        position: absolute;
+        pointer-events: none;
+      }
+      select {
+        background: var(--input-bg);
+        border: 0;
+        color: var(--font-color);
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+        appearance: none;
+        padding-top: 20px;
       }
     }
   }
 }
 </style>
-<style lang="scss">
-[data-theme="dark"] {
-  #openAppSettings {
-    color: var(--black20);
-  }
-}
-</style>
-

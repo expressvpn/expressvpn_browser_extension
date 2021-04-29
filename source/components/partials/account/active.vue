@@ -6,19 +6,21 @@ Licensed GPL v2
 <template>
   <div class="active">
     <div v-if="isPaymentMethodIAP()">
-      <div class="button-container">
-        <button v-if="isRenewable()" class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account` })">{{ localize('myaccount_manage_subscription_button_label') }}</button>
+      <div class="button-container" style="bottom: 15px;">
+        <button v-if="isRenewable()" class="secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account` })">{{ localize('myaccount_manage_subscription_button_label') }}</button>
       </div>
     </div>
     <div v-else-if="subscription.plan_type === 'business'">
     </div>
     <div v-else class="active-regular">
-      <span id="p1">{{ localize('myaccount_account_active_p1_text') }}</span>
-      <img src="/images/gift.svg" />
-      <span id="p2">{{ localize('myaccount_account_active_p2_text') }}</span>
+      <div id="p1">{{ localize('myaccount_account_active_p1_text') }}</div>
+      <div class="img-container">
+        <img class="gift" src="/images/illustrations/Gift.svg" />
+      </div>
+      <div id="p2">{{ localize('myaccount_account_active_p2_text') }}</div>
       <div class="button-container">
-        <button class="button-primary" @click="createTab({ url: `${currentInfo.subscription.referral_url}&utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_active_refer_button_label') }}</button>
-        <button class="button-secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_manage_button_label') }}</button>
+        <button class="primary" @click="createTab({ url: `${currentInfo.subscription.referral_url}&utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_active_refer_button_label') }}</button>
+        <button class="secondary" @click="createTab({ url: `${currentInfo.website_url}/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=refer_friends&utm_content=account_referfriends` })">{{ localize('myaccount_manage_button_label') }}</button>
       </div>
     </div>
   </div>
@@ -29,31 +31,26 @@ import subscriptionMixin from '@/scripts/mixins/subscription';
 
 export default {
   name: 'active',
-  computed: {
-  },
   mixins: [subscriptionMixin],
-  methods: {
-  },
-  mounted() {
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 .active {
-  color: var(--black20);
-  font-family: ProximaNova;
-  font-size: 18px;
+  //font-family: Inter-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
 
-  &-regular {
-    display: flex;
-    flex-direction: column;
-
-    img {
-      width: 125px;
-      height: 125px;
-      margin: 25px auto;
-    }
+  .img-container {
+    margin: 5px 0;
+    text-align: center;
+  }
+  &-regular .button-container {
+    margin-bottom: 15px;
   }
 }
 </style>

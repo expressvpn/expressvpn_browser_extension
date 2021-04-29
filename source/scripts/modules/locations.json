@@ -370,7 +370,7 @@
   "Kyrgyzstan": {
     "default": {"lat": 42.86666667, "lon": 74.6 }
   },
-  "Lao People's Democratic Republic": {
+  "Laos": {
     "default": {"lat": 17.96666667, "lon": 102.6 }
   },
   "Latvia": {
@@ -400,7 +400,7 @@
   "Macau": {
     "default": {"lat": 22.210928, "lon": 113.552971 }
   },
-  "Macedonia": {
+  "North Macedonia": {
     "default": {"lat": 42, "lon": 21.433333 }
   },
   "Madagascar": {
@@ -433,7 +433,7 @@
   "Mexico": {
     "default": {"lat": 19.43333333, "lon": -99.133333 }
   },
-  "Moldova, Republic of": {
+  "Moldova": {
     "default": {"lat": 47, "lon": 28.85 }
   },
   "Monaco": {
@@ -628,7 +628,7 @@
   "South Georgia and South Sandwich Islands": {
     "default": {"lat": -54.283333, "lon": -36.5 }
   },
-  "Korea, Republic of": {
+  "South Korea": {
     "default": {"lat": 37.55, "lon": 126.983333 }
   },
   "South Sudan": {

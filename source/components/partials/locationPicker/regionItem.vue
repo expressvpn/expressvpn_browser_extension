@@ -8,8 +8,8 @@ Licensed GPL v2
     <div class="location-item-content">
       {{ name }}
     </div>
-    <div class="location-expand">
-      <div :class="['icon', 'icon-medium', (expanded ? 'icon-120-up' : 'icon-36-down')]"></div>
+    <div :class="['location-expand', `${expanded ? 'up' : 'down'}`]">
+      <img class="icon" v-svg-inline src='/images/icons/chevron-right.svg' width="24" height="24" />
     </div>
   </div>
 </template>
@@ -29,36 +29,42 @@ export default {
 <style lang="scss">
 .region-item {
 
-  &.expanded {
-    background: var(--accent20);
+  &:nth-child(n + 2):before {
+    content: '';
+    border-top: 1px solid var(--location-item-border-color);
+    top: 0;
+    width: 100%;
+    opacity: 0.4;
+    position: absolute;
+  }
+  &.expanded .location-item-content {
+    font-weight: bold;
+  }
 
-    .location-item-content, .location-expand .icon {
-      color: var(--gray50);
-    }
+  .location-expand {
+    &.up {
+      transform: rotate(-90deg);
 
-    &:hover {
-      background: var(--accent10);
+      .icon path {
+        fill: var(--font-color-highlight);
+      }
     }
-    &:active {
-      background: var(--accent20);
-      box-shadow: none;
+    &.down {
+      transform: rotate(90deg);
     }
   }
-  
+
+  &:hover {
+    .icon path {
+      fill: var(--font-color-highlight);
+    }
+  }
+  &:active {
+    .icon path {
+      fill: var(--font-color);
+    }
+  }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .region-item {
-    &.expanded {
-      background: var(--accent10);
-      &:hover {
-        background-color: var(--accent20);
-      }
-      .location-item-content, .location-expand .icon {
-        color: var(--gray20);
-      }
-    }
-  }
-}
 </style>

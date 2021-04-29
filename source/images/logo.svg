@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Logo/2-color/Badge</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <circle id="path-1" cx="60" cy="60" r="60"></circle>
-    </defs>
-    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home---VPN---Rating---1" transform="translate(-290.000000, -383.000000)">
-            <g id="Modal" transform="translate(30.000000, 333.000000)">
-                <g id="Logo/2-color/Badge" transform="translate(260.000000, 50.000000)">
-                    <g id="icon">
-                        <g id="Group">
-                            <mask id="mask-2" fill="white">
-                                <use xlink:href="#path-1"></use>
-                            </mask>
-                            <g id="Oval" fill-rule="nonzero"></g>
-                            <g id="Border/40" mask="url(#mask-2)" fill="#FCFCFC">
-                                <g id="Border">
-                                    <polygon id="Shape" points="0 0 120 0 120 120 0 120"></polygon>
-                                </g>
-                            </g>
-                            <path d="M60,120 C26.862915,120 0,93.137085 0,60 C0,26.862915 26.862915,0 60,0 C93.137085,0 120,26.862915 120,60 C120,93.137085 93.137085,120 60,120 Z M84.9180212,28.4131091 L69.5772977,75.0338446 L57.979727,40.9311995 L21.1847978,40.9311995 L21.1847978,48.8610875 L47.2743976,48.8610875 L49.8637145,56.1467686 L27.7722831,56.1467686 L27.7722831,64.0933524 L52.6898763,64.0933524 L54.8089494,70.0534478 L20.644691,70.0534478 L20.644691,78.0038118 L57.6335448,78.0038118 L62.3976999,91.4070961 L75.900682,91.4070961 L98.3370424,28.4131091 L84.9180212,28.4131091 Z" id="Combined-Shape" fill="#C8252C" mask="url(#mask-2)"></path>
-                        </g>
-                    </g>
-                </g>
-            </g>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>toolbar</title>
+    <g id="Browser-Icon-&amp;-Menus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo/ExpressVPN/Badge/Brand" fill="#DA3940" transform="translate(0.000000, 13.000000)">
+            <path d="M33.0895902,102 C18.7914676,102 9.66774786,93.9957258 9.66774786,82.8724535 C9.66774786,79.2115523 10.7578493,74.7357594 14.9791803,65.6476792 L1.5158245e-14,65.6476792 L13.7520492,36.3482464 L109.480546,36.3482464 C111.660749,36.3482464 113.157849,34.7225373 113.157849,32.8238396 C113.157849,30.9251418 111.660749,29.2973955 109.480546,29.2973955 L32.0015339,29.2973955 L38.8080211,14.7862108 C43.0293521,5.83258768 52.1530718,0 62.0928337,0 L94.6383958,0 C113.429863,0 127.320987,12.8854758 127.320987,29.7048414 C127.320987,49.6432052 108.936518,65.6476792 87.694879,65.6476792 L24.7839578,65.6476792 C22.875769,69.5836063 25.0559719,72.7026045 29.6843014,72.7026045 L79.7962451,72.7026045 C88.1018774,72.7026045 94.5013661,78.5331549 94.5013661,85.9955261 C94.5013661,94.5396661 86.197779,102 76.8,102 L33.0895902,102 L33.0895902,102 Z" id="Path"></path>
         </g>
     </g>
 </svg>

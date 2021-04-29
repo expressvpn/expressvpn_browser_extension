@@ -20,7 +20,7 @@ Licensed GPL v2
         </div>
 
         <country-screen v-if="showCountryScreen && searchTypingStatus === false" :country="currentCountry"/>
-        
+
         <div v-if="showCountryScreen === false && searchTypingStatus === false">
           <recommended-locations v-if="activeTab === 'recommended'" />
           <all-locations v-else :expandRegion="currentExpandedRegion" />
@@ -109,7 +109,7 @@ export default {
             },
           ],
           isVisible: true,
-          style: 'horizontal',
+          style: 'vertical',
         };
       }
     });
@@ -156,34 +156,41 @@ export default {
 
 <style lang="scss">
 .location-tab {
-  font-size: 16px;
-  font-family: ProximaNova-Semibold;
-  color: #6D6D6D;
+  //font-family: Inter-SemiBold;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--tab-header-unselected);
   height: 100%;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--gray30);
+  border-bottom: 2px solid var(--tab-header-unselected-border);
 
   &.active {
-    color: var(--primary20);
-    border-bottom: 4px solid var(--primary20);
+    color: var(--font-color-highlight);
+    border-bottom: 2px solid var(--font-color-highlight);
+  }
+  &:hover {
+    color: var(--font-color-highlight);
   }
 
   &-container {
     height: 45px;
     width: 100%;
-    background-color: var(--gray40);
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
   }
 }
 
 .location-list-container {
-  background: var(--gray50);
-  padding: 0px 15px 10px 15px;
-  height: calc(600px - 60px - 45px); // Total popup height - secondary header's height - location-tab-container's height 
+  padding: 0px 20px 10px 20px;
+  height: calc(600px - 60px - 50px); // Total popup height - secondary header's height - location-tab-container's height
   overflow-y: auto;
 }
 
@@ -196,12 +203,26 @@ export default {
   }
 }
 
+
+.category-container .location-item:nth-child(n + 2):before {
+  content: '';
+  border-top: 1px solid var(--location-item-border-color);
+  top: 0;
+  width: calc(100% - 24px - 15px; // flag.width = 24px; flag.marginRight = 15px;
+  left: calc(24px + 15px);
+  opacity: 0.4;
+  position: absolute;
+}
 .location-item {
   height: 45px;
   width: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
+
+  /*
   padding: 8px 10px 8px 10px; // set to 10px to remove existing padding from the icon
   cursor: pointer;
   color: var(--black20);
@@ -209,50 +230,70 @@ export default {
   background-color: var(--gray40);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10px;
+  */
 
   &-content {
     display: flex;
     align-items: center;
-    font-size: 16px;
-    font-family: ProximaNova-Semibold;
+    //font-family: Inter-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
   }
 
-  &:hover {
-    background-color: var(--gray30);
-
-    .location-expand {
-      border-color: var(--gray10);
-    }
-  }
-
-  &:active {
-    background-color: var(--gray40);
-    box-shadow: none;
-
-    .location-expand {
-      border-color: var(--gray30);
-    }
-  }
-  
   .flag-icon {
-    width: 29px;
-    height: 29px;
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
   }
 
   .location-expand {
-    border-left: 1px solid var(--gray30);
-    padding-left: 10px;
+    width: 24px;
+    height: 24px;
   }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .location-item:hover {
-    background-color: var(--black10);
+.location-expand {
+  &:hover {
+     .icon path {
+       fill: var(--font-color-highlight);
+     }
   }
-  .location-tab:not(.active) {
-    color: var(--gray10);
+  &:active {
+     .icon path {
+       fill: var(--font-color);
+     }
+  }
+  .icon path {
+    fill: var(--font-color);
+  }
+}
+.location-item {
+  &:hover {
+    color: var(--font-color-highlight);
+  }
+
+  &:active {
+    color: var(--font-color);
+  }
+}
+@media (prefers-color-scheme: light) {
+  #locationPicker {
+    --tab-header-unselected: #{$eds-color-grey-20};
+    --tab-header-unselected-border: #{$eds-color-grey-40};
+    --location-item-border-color: #{$eds-color-grey-40};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #locationPicker {
+    --tab-header-unselected: #{$eds-color-grey-40};
+    --tab-header-unselected-border: #{$eds-color-grey-40};
+    --location-item-border-color: #{$eds-color-grey-40};
+
+    .logo path {
+      fill: $eds-color-grey-40;
+    }
   }
 }
 </style>

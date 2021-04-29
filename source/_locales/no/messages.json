@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Kontroller ExpressVPN-appen direkte fra Chrome, spoof plasseringen din og få tilgang til alt.",
+    "message": "Bruk internett sikkert med lynrask hastighet. Spoof plasseringen din, få tilgang til alt og kontroller ExpressVPN-appen fra Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Personvern, sikkerhet og hastighet. Kontroller ExpressVPN-appen direkte fra Firefox, spoof plasseringen din og få tilgang til alt innhold hvor som helst.",
+    "message": "Gå trygt på nett med lynraske hastigheter. Spoof plasseringen din, få tilgang til innhold hvor som helst og kontroller ExpressVPN-appen direkte fra Firefox.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: VPN-proxy som avblokkerer alt",
+    "message": "ExpressVPN: VPN-proxy for et bedre internett",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -115,7 +115,7 @@
     "message": "Kunne ikke koble til"
   },
   "error_connection_error_to_location_text": {
-    "message": "Kunne ikke koble til<br>%LOCATION%."
+    "message": "Kunne ikke koble til %LOCATION%."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Prøv på nytt"
@@ -179,7 +179,7 @@
     "message": "Apper for alle enheter"
   },
   "error_free_trial_expired_l2_text": {
-    "message": "30 dagers pengene-tilbake-garanti"
+    "message": "30-dagers pengene-tilbake-garanti"
   },
   "error_free_trial_expired_l3_text": {
     "message": "160 lokasjoner verden over"
@@ -187,14 +187,14 @@
   "error_free_trial_expired_l4_text": {
     "message": "Kundestøtte døgnet rundt"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Ubegrenset båndbredde"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30-dagers pengene-tilbake-garanti"
   },
   "error_free_trial_expired_status_text": {
     "message": "Utløpt (%1)."
   },
   "error_free_trial_expired_title": {
-    "message": "Gratis prøveperiode utløpt"
+    "message": "Prøveperiode utløpt"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
     "message": "Oppgrader nå"
@@ -206,7 +206,7 @@
     "message": "Logg ut"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Gratis prøveperiode er utløpt"
+    "message": "Hold deg beskyttet"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "Oppdater betalingsinformasjon"
@@ -330,13 +330,13 @@
     "message": "Skaff et abonnement"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Apper for alle enheter"
+    "message": "Få tilgang til alt innholdet du elsker"
   },
   "error_subscription_expired_l2_text": {
-    "message": "Verv venner, få 30 dagers gratis bruk"
+    "message": "Forbli sikker og anonym på nett"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 lokasjoner verden over"
+    "message": "Kundestøtte døgnet rundt"
   },
   "error_subscription_expired_l4_text": {
     "message": "Kundestøtte døgnet rundt"
@@ -360,7 +360,7 @@
     "message": "Utløpt (%1)."
   },
   "error_subscription_expired_title": {
-    "message": "Abonnementet er utløpt"
+    "message": "Abonnement utløpt"
   },
   "error_subscription_expiring_autobill_later_button_label": {
     "message": "Senere"
@@ -492,10 +492,10 @@
     "message": "Strømmeproblemer"
   },
   "issue_reporter_opt2": {
-    "message": "Kan ikke få tilgang til noen nettsteder"
+    "message": "Har ikke tilgang til noen nettsteder"
   },
   "issue_reporter_opt3": {
-    "message": "Kan ikke få tilgang til et bestemt nettsted"
+    "message": "Har ikke tilgang til et bestemt nettsted"
   },
   "issue_reporter_opt4": {
     "message": "Feil språk eller valuta"
@@ -520,9 +520,6 @@
   },
   "issue_reporter_send_button_label": {
     "message": "Send rapport"
-  },
-  "issue_reporter_share_website_label": {
-    "message": "Del nettsted med ExpressVPN"
   },
   "issue_reporter_support_button_label": {
     "message": "Kontakt kundestøtte"
@@ -608,7 +605,7 @@
     "message": "Kundestøtte døgnet rundt"
   },
   "list_item_30day_guarantee": {
-    "message": "30 dagers pengene-tilbake-garanti"
+    "message": "30-dagers pengene-tilbake-garanti"
   },
   "list_item_apps_for_every_device": {
     "message": "Apper for alle enheter"
@@ -617,7 +614,7 @@
     "message": "160 lokasjoner verden over"
   },
   "list_item_refer_frieds": {
-    "message": "Verv venner, få 30 dagers gratis bruk"
+    "message": "Verv venner, få 30-dagers gratis bruk"
   },
   "list_item_unlimited_bandwidth": {
     "message": "Ubegrenset båndbredde"
@@ -632,7 +629,7 @@
     "message": "Anbefalte lokasjoner"
   },
   "location_picker_search_no_results_text": {
-    "message": "INGEN RESULTATER"
+    "message": "Ingen resultater"
   },
   "location_picker_search_placeholder_text": {
     "message": "Søk etter by eller land"
@@ -693,16 +690,19 @@
     "message": "Vis skrivebordsvarslinger"
   },
   "menu_get_30_days_free": {
-    "message": "Få 30 dagers gratis bruk"
+    "message": "Få 30-dagers gratis bruk"
+  },
+  "menu_header": {
+    "message": "Alternativer"
   },
   "menu_help_support": {
     "message": "Hjelp og kundestøtte"
   },
   "menu_item_acknowledgements_text": {
-    "message": "Bekreftelser"
+    "message": "Takk til"
   },
   "menu_item_app_version_text": {
-    "message": "%OS% appversjon: %VERSION%"
+    "message": "%OS%-appversjon: %VERSION%"
   },
   "menu_item_contact_support_text": {
     "message": "Kontakt kundestøtte"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Skjermvalg"
   },
-  "menu_settings_general_display_label": {
-    "message": "Skjermmodus"
-  },
   "menu_settings_general_header": {
     "message": "Generelt"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Utvidelsens språk"
   },
   "menu_settings_general_language_label": {
     "message": "Språk"
@@ -816,10 +810,10 @@
     "message": "Logg ut"
   },
   "myaccount_account_active_p1_text": {
-    "message": "Del ExpressVPN og få gratis tjenester!"
+    "message": "Del ExpressVPN og få gratis tjeneste!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "For hver venn som kjøper et abonnement, gir vi dere begge 30 dagers gratis bruk!"
+    "message": "For hver venn som registrerer seg, gir vi dere begge 30 dager gratis"
   },
   "myaccount_account_expired_label": {
     "message": "Utløpt"
@@ -906,16 +900,16 @@
     "message": "Internettrafikk er for øyeblikket blokkert for å beskytte personvernet ditt."
   },
   "networkLock_status_connected_text": {
-    "message": "Koblet til <b>%LOCATION%</b>."
+    "message": "Tilkoblet %LOCATION%"
   },
   "networkLock_status_connecting_text": {
-    "message": "Kobler til <b>%LOCATION%</b>."
+    "message": "Kobler til %LOCATION%."
   },
   "networkLock_status_connection_error_text": {
-    "message": "Kunne ikke koble til <b>%LOCATION%</b>."
+    "message": "Kunne ikke koble til %LOCATION%"
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Kobler til <b>%LOCATION%</b> på nytt."
+    "message": "Kobler til %LOCATION% på nytt."
   },
   "networkLock_try_again_button_label": {
     "message": "Prøv på nytt"
@@ -930,16 +924,16 @@
     "message": "ExpressVPN oppdatert"
   },
   "promobar_free_trial_expiring_soon_days_header": {
-    "message": "Gratis prøveperiode utløper om [days] dager"
+    "message": "Prøveperioden utløper om [days] dager"
   },
   "promobar_free_trial_expiring_soon_expired_header": {
     "message": "Din gratis prøveperiode er utløpt"
   },
   "promobar_free_trial_expiring_soon_hours_header": {
-    "message": "Gratis prøveperiode utløper om [hours] timer"
+    "message": "Prøveperioden utløper om [hours] timer"
   },
   "promobar_free_trial_expiring_soon_less_than_one_hour_header": {
-    "message": "Gratis prøveperiode utløper om <1 time"
+    "message": "Prøveperioden utløper om <1 time"
   },
   "promobar_free_trial_expiring_soon_text": {
     "message": "Oppgrader nå"
@@ -948,7 +942,7 @@
     "message": "Din forrige betaling mislyktes"
   },
   "promobar_iap_failed_text": {
-    "message": "Oppdater betalingsmetode"
+    "message": "Oppdater informasjon"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome er ekskludert fra VPN"
@@ -966,7 +960,7 @@
     "message": "Din forrige betaling mislyktes"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Oppdater betalingsinformasjon"
+    "message": "Oppdater informasjon"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Abonnementet utløper om [days] dager"
@@ -990,16 +984,16 @@
     "message": "Installer nå"
   },
   "promo_bar_free_trial_expiring_soon_days_text": {
-    "message": "Gratis prøveperiode utløper om [days] dager"
+    "message": "Prøveperioden utløper om [days] dager"
   },
   "promo_bar_free_trial_expiring_soon_expired_text": {
     "message": "Din gratis prøveperiode er utløpt"
   },
   "promo_bar_free_trial_expiring_soon_hours_text": {
-    "message": "Gratis prøveperiode utløper om [hours] timer"
+    "message": "Prøveperioden utløper om [hours] timer"
   },
   "promo_bar_free_trial_expiring_soon_less_than_one_hour_text": {
-    "message": "Gratis prøveperiode utløper om <1 time"
+    "message": "Prøveperioden utløper om <1 time"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
     "message": "Oppgrader nå"
@@ -1058,15 +1052,6 @@
   "rating_thanks_@firefox@_text": {
     "message": "Tusen takk! Vurder oss på Firefox Add-ons Store?"
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Tilpass til enhetsinstillinger"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Mørk"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Lys"
-  },
   "settings_general_help_improve_description": {
     "message": "Del krasjrapporter, hastighetstester, brukervennlighetsdiagnostikk og om forsøk på VPN-tilkobling lykkes. Disse rapportene inneholder aldri personlig identifiserbar informasjon."
   },
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "Fortsett"
   },
-  "welcome_get_started_button_label": {
-    "message": "Kom i gang"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "Bidra til å forbedre ExpressVPN"
   },
@@ -1149,13 +1131,13 @@
     "message": "30-dagers pengene-tilbake-garanti"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "Et VPN beskytter personvernet ditt ved å forkle IP-adressen din"
+    "message": "Ta kontroll over personvernet og beskytt dine data på nett"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Strøm alt innholdet du elsker uten begrensninger"
+    "message": "Nyt favorittseriene og -appene dine uansett hvor du er"
   },
   "welcome_not_installed_scene_3_text": {
-    "message": "Koble trygt til offentlige trådløse nettverk på hoteller, kafeer og flyplasser"
+    "message": "Koble trygt til offentlige trådløse nettverk på hoteller, kaféer og flyplasser"
   },
   "welcome_screen1_p1_text": {
     "message": "ExpressVPNs nettleserutvidelse er en fjernkontroll for skrivebordsappen."

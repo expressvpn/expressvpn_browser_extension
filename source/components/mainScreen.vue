@@ -4,7 +4,7 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-<div id="mainScreen" :class="currentContainer">
+<div id="mainScreen" :class="currentContainer" class="container">
   <component :is="currentContainer"></component>
 </div>
 </template>

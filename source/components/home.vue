@@ -8,22 +8,10 @@ Licensed GPL v2
     <main-header :canShowPromobar="true" />
     <div class="content">
 
-      <svg width="365" height="123" :class="['visual-state', `visual-state-${currentInfo.state}`]">
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g>
-            <path d="M4.9801292898673495,0 L359.56533472842267,0 C362.3157839392382,-3.7065467329393714e-16 364.54546401829,1.4994273396804243 364.54546401829,3.3490647005667635 L364.54546401829,103.25080635319058 C303.7878866819083,116.13411403325709 243.0303093455267,122.57576804074355 182.27273200914496,122.57576804074355 C121.51515467276334,122.57576804074355 60.75757733638167,116.13411403325709 0,103.25080635319058 L0,3.3490647005667635 C-3.46548584986422e-16,1.4994273396804243 2.2296798300452827,3.7065467329393714e-16 4.9801292898673495,0 z" id="Ripple"/>
-          </g>
-        </g>
-      </svg>
+      <visual-state />
 
-      <div class="power-button-container">
-        <div class="power-button" @click="onPowerButtonClick">
-          <circle-progress-bar :value="currentInfo.progress"></circle-progress-bar>
-          <div v-if="['ready', 'connected', 'disconnecting'].includes(currentInfo.state)" :class="['icon', 'icon-large', 'icon-26-connect', { 'no-highlight': (currentInfo.state === 'disconnecting')}]"></div>
-          <div v-else :class="['icon', 'icon-large', 'icon-23-close', { 'no-highlight': (parseInt(currentInfo.progress, 10) >= 75) }]"></div>
-        </div>
-      </div>
-      
+      <power-button />
+
       <div class="engine-state">{{ localize(`main_screen_status_vpn_${currentInfo.state}_text`) }}</div>
 
 
@@ -34,28 +22,36 @@ Licensed GPL v2
             <div class="location-box-text-type">{{ currentLocationTypeText }}</div>
             <div class="location-box-text-name">{{ selectedLocation.name }}</div>
           </div>
-          <div v-if="['ready', 'connected'].includes(currentInfo.state)" class="icon icon-133-more-circle current-location-more-icon"></div>
+          <img v-if="['ready', 'connected'].includes(currentInfo.state)" v-svg-inline class="current-location-more-icon" src='/images/icons/more.svg' />
           <div v-else class="icon icon-73-more icon-disabled"></div>
         </div>
         <transition mode="out-in">
           <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText" :iconName="hintIcon" :type="hintType" />
 
           <div v-else-if="isIssueReporterPromptVisible" class="location-box report-issue">
-            <div class="report-issue-label">{{ localize('home_report_issue_label') }}</div>
-            <div class="report-issue-holder">
+            <div class="report-issue-left">
+              <div class="report-issue-label">{{ localize('home_report_issue_label') }}</div>
               <div class="report-issue-text">{{ localize('home_report_issue_text') }}</div>
-              <div class="report-issue-button icon icon-87-rate" @click="feedback(false)"></div>
-              <div class="report-issue-button icon icon-87-rate" @click="feedback(true)"></div>
+            </div>
+            <div class="report-issue-right">
+              <div class="report-issue-button" @click="feedback(false)">
+                <img v-svg-inline class="rate-icon" src='/images/icons/rate.svg' width="40" height="40" viewbox="0 0 24 24" />
+              </div>
+              <div class="report-issue-button" @click="feedback(true)">
+                <img v-svg-inline class="rate-icon" src='/images/icons/rate.svg' width="40" height="40" viewbox="0 0 24 24" />
+              </div>
             </div>
           </div>
 
           <div v-else-if="['ready', 'connected'].includes(currentInfo.state)" class="location-buttons">
             <div class="location-box" v-for="location in visibleLocations" v-bind:key="location.id" @click="connectToLocation(location)">
                 <div class="location-box-text-type">{{ localize(`main_screen_${location.type}_location_text`) }}</div>
-                <div class="location-box-text-name">{{ location.name }}</div>
+                <div class="location-box-text-name">
+                  <span>{{ location.name }}</span>
+                </div>
+                <img v-svg-inline class="recent-icon" :src="`/images/icons/${location.type === 'smart' ? 'smart-location' : 'recent'}.svg`" width="24" height="24" viewbox="0 0 24 24" />
             </div>
           </div>
-          
         </transition>
       </div>
 
@@ -65,24 +61,32 @@ Licensed GPL v2
 
       <popup :options="popupOptions"></popup>
 
-      <div class="message-container">
-        <message-item />
-      </div>
+      <message-item />
     </div>
   </div>
 </template>
 <script>
 import mixinLocation from '@/scripts/mixins/location';
-import CircleProgressBar from './partials/circleProgressBar.vue';
 import Hint from './partials/hint.vue';
 import messageItem from './partials/messageItem.vue';
 import popup from './partials/popup.vue';
 import ratingPrompt from './partials/ratingPrompt.vue';
 import mainHeader from './partials/mainHeader.vue';
+import visualState from './partials/visualState.vue';
+import powerButton from './partials/powerButton.vue';
 
 export default {
   name: 'home',
   mixins: [mixinLocation],
+  components: {
+    Hint,
+    messageItem,
+    popup,
+    mainHeader,
+    ratingPrompt,
+    visualState,
+    powerButton,
+  },
   data() {
     return {
       transitionDelay: '2s',
@@ -152,7 +156,7 @@ export default {
       const lastFailedRateDate = parseInt(localStorage.getItem('lastFailedRateDate'), 10) || rating.lastFailedRateDate;
 
       return (
-        ['Firefox'].includes(this.browserInfo.name)
+        ['Chrome', 'Firefox'].includes(this.browserInfo.name)
         && rating.isSubscriber === true
         && rating.isSuccessfulConnection === true
         && rating.previousConnectionTime >= requiredConnectionTime
@@ -196,6 +200,7 @@ export default {
       let connectingTimes = this.currentInfo.connectingTimes;
       let nConnections = this.currentInfo.connectingTimes.length;
       this.hintType = 'information';
+      this.hintIcon = 'error';
 
       // Check for delayed connection
       if (
@@ -206,24 +211,20 @@ export default {
         && this.discardHint === false// If the user already discarded the hint
       ) {
         text = 'hint_connection_delay_text';
-        this.hintIcon = null;
+        this.hintIcon = 'timer';
       } else if (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.networkStatus !== 'has internet') { // GIVEN the user is NOT connected to the VPN and their internet connection is not clear
         switch (this.currentInfo.networkStatus) {
           case 'no internet':
             text = `hint_network_state_no_internet_${this.currentInfo.state}_text`;
-            this.hintIcon = 'icon-13-block';
             break;
           case 'captive portal':
             text = 'hint_network_state_captive_portal_text';
-            this.hintIcon = 'icon-77-password';
             break;
           case 'not sure':
             text = `hint_network_state_not_sure_${this.currentInfo.state}_text`;
-            this.hintIcon = 'icon-13-block';
             break;
           case 'not ready':
             text = 'hint_network_state_not_ready_text';
-            this.hintIcon = 'icon-112-timer';
             break;
           default:
             break;
@@ -231,11 +232,10 @@ export default {
       } else if (this.currentInfo.state === 'reconnecting') {
         let networkLockStatus = this.currentInfo.preferences.traffic_guard_level ? 'on' : 'off';
         text = `hint_reconnecting_network_lock_${networkLockStatus}_text`;
-        this.hintIcon = 'icon-56-information';
       } else if (this.show4starHint === true) {
         text = 'rating_thanks4_text';
         this.hintType = 'green';
-        this.hintIcon = 'icon-110-thanks';
+        this.hintIcon = 'favourite';
       }
       return text;
     },
@@ -267,27 +267,6 @@ export default {
         chrome.runtime.sendMessage({ connectToSelectedLocation: true });
       }
     },
-    onPowerButtonClick: function () {
-      switch (this.currentInfo.state) {
-        case 'ready':
-          chrome.runtime.sendMessage({ connectToSelectedLocation: true });
-          break;
-        case 'connecting':
-        case 'reconnecting':
-          if ((parseInt(this.currentInfo.progress, 10) || 0) < 75 || this.currentInfo.state === 'reconnecting') {
-            chrome.runtime.sendMessage({ cancelConnection: true });
-          }
-          break;
-        case 'connected':
-          chrome.runtime.sendMessage({ disconnect: true });
-          break;
-        case 'speedtesting':
-          chrome.runtime.sendMessage({ cancelSpeedTest: true });
-          break;
-        default:
-          break;
-      }
-    },
     connectToLocation: function (location) {
       if (this.currentInfo.state === 'ready' || localStorage.getItem('hasCWCbefore')) {
         this.updateLocationAndConnect(location);
@@ -308,7 +287,7 @@ export default {
             },
           ],
           isVisible: true,
-          style: 'horizontal',
+          style: 'vertical',
         };
       }
     },
@@ -318,14 +297,6 @@ export default {
         iconEl.src = chrome.extension.getURL('/images/flags/XV.svg');
       }
     },
-  },
-  components: {
-    CircleProgressBar,
-    Hint,
-    messageItem,
-    popup,
-    mainHeader,
-    ratingPrompt,
   },
   created() {
     let self = this;
@@ -375,148 +346,93 @@ export default {
 
 .report-issue {
   margin-top: 10px;
-  height: 80px;
-  padding: 10px 15px;
+  height: 72px;
+  padding: 6px 16px 12px 14px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  &:hover {
-    background: $gray-50;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 192px;
+    padding-top: 2px;
+  }
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div:first-of-type {
+      margin-right: 8px;
+    }
   }
 
   &-label {
     font-size: 12px;
-    color: var(--gray20);
   }
   &-text {
-    font-family: ProximaNova-Semibold;
-    font-size: 16px;
-    color: var(--black20);
-    line-height: 20px;
-    width: 175px;
+    //font-family: Inter-Medium;
+    font-size: 12px;
+    width: 105px;
+    font-weight: 500;
+    letter-spacing: 0px;
   }
-  &-holder {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &-button {
-    font-size: 35px;
-    margin-top: -20px;
 
-    &:nth-of-type(2) {
-      color: #519e5d;
-      &:hover {
-        color: #88ce92;
-      }
-    }
-    &:last-of-type {
-      transform: scaleX(-1) scaleY(-1);
-      margin-right: 15px;
-      margin-left: 15px;
-      color: #e4583f;
-      &:hover {
-        color: #fe7158;
-      }
-    }
+  &-button:last-of-type {
+    transform: scaleX(-1) scaleY(-1);
   }
 }
 
 .content {
 
-  .visual-state {
-    g {
-      fill: var(--gray30);
-      fill-opacity: 0.4;
-      transition: fill-opacity 0.1s ease-in-out;
-    }
-
-    &-connected g {
-      fill: var(--green40);
-      fill-opacity: 1;
-      transition: fill-opacity 0.1s ease-in-out;
-    }
-  }
-
-  .power-button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 114px;
-    width: 114px;
-
-    &-container {
-      position: relative;
-      text-align: center;
-      height: 54px;
-    }
-
-    .icon {
-      position: absolute;
-      top: 10px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-
-      &-23-close {
-        color: var(--gray30);
-      }
-
-      &:hover {
-        color: var(--gray20);
-      }
-      &:active {
-        color: var(--black30);
-      }
-    }
-  }
-
   .engine-state {
+    margin-top: 10px;
     text-align: center;
-    font-size: 16px;
-    margin-top: 16px;
-    color: var(--gray10);
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-family: Inter;
   }
 
   .locations-container {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 0 15px;
 
     .location-box {
-      background: var(--gray50);
-      box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
+      position: relative;
+      background: var(--location-box-bg);
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 
       &-text-type {
         font-size: 12px;
-        color: var(--gray20);
       }
 
       &-text-name {
-        font-family: ProximaNova-Semibold;
-        color: var(--black20);
-        font-size: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        width: 96px;
+
+        span {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          width: 100px;
+        }
+      }
+      .recent-icon {
+        position: absolute;
+        right: 14px;
+        bottom: 13px;
       }
 
-      &:hover {
-        background: var(--gray40);
+      &:hover:not(.report-issue):not(.location-box-connecting) {
+        background: var(--location-box-bg-hover);
         box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.1);
-
-        .current-location-more-icon {
-          color: var(--gray20);
-        }
       }
-
-      &-connecting, &-reconnecting, &-disconnecting, &-speedtesting {
-        box-shadow: none;
-
-        &:hover {
-          background: var(--gray50);
-        }
+      &:active {
+        background: var(--location-box-bg);
       }
     }
 
@@ -526,10 +442,11 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-radius: 25px;
 
       img {
-        width: 29px;
-        height: 29px;
+        width: 24px;
+        height: 24px;
       }
 
       .icon {
@@ -547,6 +464,11 @@ export default {
         margin-right: auto;
         margin-left: 10px;
         justify-content: space-evenly;
+
+        .location-box-text-name {
+          width: auto;
+          font-size: 14px;
+        }
       }
     }
 
@@ -555,52 +477,79 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      
+
       .location-box {
         width: 155px;
-        height: 80px;
-        padding: 10px 15px;
+        height: 72px;
+        padding: 8px 17px 12px 14px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &:last-of-type {
+          margin-left: 10px; // Prevents the location box from moving during the transition
+        }
 
         &-text-name { // do check for -webkit-line-clamp in the future
-          margin-top: 5px;
-          overflow: hidden;
-          position: relative; 
-          line-height: 20px;
-          max-height: 40px; 
+          max-height: 40px;
+          margin: 0;
+          height: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
       }
     }
   }
-
-  .message-container {
-    position: absolute;
-    height: 85px;
-    bottom: 0;
-    width: 100%;
-  }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .content .visual-state-connected g {
-    fill-opacity: 0.5;
+.current-location {
+  .current-location-more-icon path {
+    fill: var(--more-icon-color);
   }
-  .content .locations-container .location-box {
-    background: var(--gray40);
+}
 
-    &:hover {
-      background: var(--black10);
+.recent-icon path {
+  fill: $eds-color-grey-30;
+}
+
+.report-issue {
+  &-button {
+    .rate-icon path {
+      fill: $eds-color-success-30;
     }
-  }
-  .power-button {
-    .icon {
-      &:hover {
-        color: var(--gray30) !important;
+    &:hover {
+      .rate-icon path {
+        fill: $eds-color-success-40;
       }
-      &:active {
-        color: var(--gray40) !important;
+    }
+
+    &:last-of-type {
+      .rate-icon path {
+        fill: $eds-color-error-30;
+      }
+      &:hover {
+        .rate-icon path {
+          fill: $eds-color-error-40;
+        }
       }
     }
   }
 }
+@media (prefers-color-scheme: light) {
+  .content {
+    --location-box-bg: #{$eds-color-white};
+    --location-box-bg-hover: #{$eds-color-grey-50};
+    --more-icon-color: #{$eds-color-grey-10};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .content {
+    --location-box-bg: #{$eds-color-grey-10};
+    --location-box-bg-hover: #{$eds-color-grey-20};
+    --more-icon-color: #{$eds-color-grey-40};
+  }
+}
+
 </style>

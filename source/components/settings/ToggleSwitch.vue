@@ -1,4 +1,4 @@
-<!-- 
+<!--
 ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
@@ -11,45 +11,46 @@ Licensed GPL v2
 </template>
 
 <script type="text/javascript">
-  export default {
-    name: 'ToggleSwitch',
-    // share common functionality with component mixins
-    mixins: [],
-    // component properties/variables
-    props: ['id', 'value'],
-    // variables
-    data: function () {
-      return {
-      };
-    },
-    computed: {
-    },
-    // when component uses other components
-    components: {},
-    // methods
-    watch: {},
-    methods: {},
-    // component Lifecycle hooks
-    beforeCreate() {},
-    mounted() {
-    },
+export default {
+  name: 'ToggleSwitch',
+  // share common functionality with component mixins
+  mixins: [],
+  // component properties/variables
+  props: ['id', 'value'],
+  // variables
+  data: function () {
+    return {
+    };
+  },
+  computed: {
+  },
+  // when component uses other components
+  components: {},
+  // methods
+  watch: {},
+  methods: {},
+  // component Lifecycle hooks
+  beforeCreate() {},
+  mounted() {
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .toggle {
-  width: 32px;
-  height: 14px;
-  
+  width: 40px;
+  height: 20px;
+  border-radius: 14.5px;
+
   input {
     opacity: 0;
-    
+
     &:checked + .handler {
-      background-color: rgba(81, 158, 93, 0.5);
+      background-color: $eds-color-success-50;
     }
     &:checked + .handler:before { /*handler - checked*/
-      background-color: var(--green20);
-      left: 15px;
+      background-color: #3aa48a;
+      left: 20px;
     }
   }
   .handler {
@@ -59,9 +60,9 @@ Licensed GPL v2
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(109, 109, 109, 0.5);
+    background-color: $eds-color-grey-30;
     border-radius: 50px;
-    
+
     &:before {
       position: absolute;
       content: "";
@@ -69,19 +70,26 @@ Licensed GPL v2
       height: 20px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: var(--gray40);
+      background-color: $eds-color-white;
       border-radius: 50%;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
       transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.2s;
-      right: 15px;
+      right: 20px;
     }
   }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .toggle .handler:before {
-    background-color: var(--gray30);
+@media (prefers-color-scheme: light) {
+  .header-secondary {
+    --icon-back-default: #{$eds-color-midnight};
+    --icon-back-hover: #{$eds-color-mint-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .header-secondary {
+    --icon-back-default: #{$eds-color-grey-40};
+    --icon-back-hover: #{$eds-color-neon};
   }
 }
 </style>

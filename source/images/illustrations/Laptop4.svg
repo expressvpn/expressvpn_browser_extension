@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="310px" height="140px" viewBox="0 0 310 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0FFEC2CA-D606-4284-9A6D-E33D99827C6C@0.5x</title>
+    <defs>
+        <linearGradient x1="50%" y1="-287.414351%" x2="50%" y2="151.178714%" id="linearGradient-1">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-287.414351%" x2="50%" y2="151.178714%" id="linearGradient-2">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="28.4348616%" x2="100%" y2="87.6451246%" id="linearGradient-3">
+            <stop stop-color="#F0EACF" offset="0.0491695804%"></stop>
+            <stop stop-color="#365996" offset="99.9426355%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="-2.55795385e-14" y="-8.31335001e-14" width="120.870404" height="79.38"></rect>
+        <rect id="path-6" x="0" y="0" width="32.4" height="54" rx="2.62305699"></rect>
+    </defs>
+    <g id="Errors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Error---App-not-activated---Mac-Win" transform="translate(-20.000000, -30.000000)">
+            <g id="Error---App-not-activated-2" transform="translate(20.000000, 30.000000)">
+                <g id="v2" transform="translate(65.000000, 0.000000)">
+                    <circle id="Oval" fill="#365996" cx="90" cy="70" r="70"></circle>
+                    <g id="Group-3" transform="translate(0.000000, 13.000000)">
+                        <rect id="Rectangle" fill="#F0EACF" x="29.7" y="102.6" width="127.8" height="7.2"></rect>
+                        <g id="laptop-install-lilac">
+                            <g id="Body" transform="translate(0.000000, 85.860000)" fill="#001D2F">
+                                <polygon id="Rectangle" points="26.7699552 0 154.130045 0 180.9 21.06 0 21.06"></polygon>
+                                <path d="M0,21.06 L180.9,21.06 L180.9,24.948 C180.9,26.3795221 179.739522,27.54 178.308,27.54 L2.592,27.54 C1.16047793,27.54 -1.60104595e-15,26.3795221 0,24.948 L0,21.06 L0,21.06 Z" id="Rectangle"></path>
+                            </g>
+                            <path d="M61.8721561,97.2 L119.027844,97.2 C119.170596,97.2 119.309354,97.2471386 119.422566,97.3340947 L128.280987,104.138095 C128.564809,104.356093 128.61817,104.7629 128.400171,105.046722 C128.277522,105.206404 128.087614,105.3 127.886265,105.3 L53.0137346,105.3 C52.6558541,105.3 52.3657346,105.009881 52.3657346,104.652 C52.3657346,104.450652 52.4593308,104.260744 52.6190128,104.138095 L61.4774343,97.3340947 C61.5906461,97.2471386 61.7294036,97.2 61.8721561,97.2 Z" id="Trackpad" fill="url(#linearGradient-1)"></path>
+                            <path d="M30.2386543,87.48 L150.661346,87.48 C150.806378,87.48 150.947218,87.5286541 151.061324,87.6181754 L160.766355,95.2321754 C161.047923,95.4530775 161.097103,95.8604102 160.876201,96.1419786 C160.753361,96.2985537 160.565387,96.39 160.366376,96.39 L20.5336238,96.39 C20.1757432,96.39 19.8856238,96.0998805 19.8856238,95.742 C19.8856238,95.5429891 19.9770701,95.3550151 20.1336452,95.2321754 L29.8386757,87.6181754 C29.9527823,87.5286541 30.093622,87.48 30.2386543,87.48 Z" id="Keyboard" fill="url(#linearGradient-2)"></path>
+                            <path d="M29.3619552,0 L151.538045,0 C152.969567,-2.62966338e-16 154.130045,1.16047793 154.130045,2.592 L154.130045,85.86 L154.130045,85.86 L26.7699552,85.86 L26.7699552,2.592 C26.7699552,1.16047793 27.9304331,-1.06930129e-15 29.3619552,0 Z" id="Bezels" fill="#001D2F"></path>
+                            <g id="Group-2" transform="translate(30.014798, 3.240000)">
+                                <mask id="mask-5" fill="white">
+                                    <use xlink:href="#path-4"></use>
+                                </mask>
+                                <use id="Screen" fill="url(#linearGradient-3)" xlink:href="#path-4"></use>
+                                <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-5)" x="15.8852018" y="24.66" width="45" height="5.4" rx="1.8"></rect>
+                                <rect id="Rectangle" fill="#F0EACF" mask="url(#mask-5)" x="15.8852018" y="34.56" width="45" height="5.4" rx="1.8"></rect>
+                                <rect id="Rectangle" fill="#365996" mask="url(#mask-5)" x="15.8852018" y="47.16" width="27" height="7.2" rx="3.6"></rect>
+                                <g id="Group" mask="url(#mask-5)">
+                                    <g transform="translate(70.785202, 12.960000)">
+                                        <mask id="mask-7" fill="white">
+                                            <use xlink:href="#path-6"></use>
+                                        </mask>
+                                        <use id="Rectangle" stroke="none" fill="#F0EACF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                        <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-7)">
+                                            <g transform="translate(5.400000, 15.930000)" id="solid/[Account]">
+                                                <g id="Group" opacity="0.2">
+                                                    <rect id="Rectangle" x="0" y="0" width="21.6" height="21.6"></rect>
+                                                </g>
+                                                <g id="icon-(outlines)" transform="translate(3.154023, 2.715301)" fill="#001D2F" fill-rule="nonzero">
+                                                    <path d="M11.025,10.125 L4.275,10.125 C1.91398269,10.125 0,12.0389827 0,14.4 L0,15.2724526 C0,15.7695089 0.402943725,16.1724526 0.9,16.1724526 L14.4,16.1724526 C14.8970563,16.1724526 15.3,15.7695089 15.3,15.2724526 L15.3,14.4 C15.3,12.0389827 13.3860173,10.125 11.025,10.125 Z" id="Path"></path>
+                                                    <path d="M7.65,0 C5.28898269,0 3.375,1.91398269 3.375,4.275 C3.375,6.63601731 5.28898269,8.55 7.65,8.55 C10.0110173,8.55 11.925,6.63601731 11.925,4.275 C11.925,1.91398269 10.0110173,0 7.65,0 Z" id="Oval"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

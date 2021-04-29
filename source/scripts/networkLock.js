@@ -1,10 +1,17 @@
 import Vue from 'vue';
+import VueSvgInlinePlugin from 'vue-svg-inline-plugin';
 import store from './vuex/store';
 import networkLock from '../components/networkLock';
 import * as utils from './modules/utils';
 import mixin from './mixin';
 
 Vue.mixin(mixin);
+Vue.use(VueSvgInlinePlugin, {
+  cache: {
+    version: '1.0',
+    persistent: false,
+  },
+});
 
 // eslint-disable-next-line no-new
 const app = new Vue({

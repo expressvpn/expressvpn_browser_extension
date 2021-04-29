@@ -5,7 +5,7 @@ Licensed GPL v2
 -->
 <template>
   <div>
-    <secondary-header stringkey="menu_item_acknowledgements_text" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
+    <secondary-header stringkey="menu_item_acknowledgements_text" :onBackClick="sideBackBtnClick" />
     <div class="acknowledgements-container">
         <p>ExpressVPN browser extension is made possible by several open source libraries.</p>
         <p>HTTPS Everywhere is released under GPLv2+ by EFF.</p>
@@ -586,16 +586,15 @@ export default {
 
 <style lang="scss" scoped>
 .acknowledgements {
-
   &-container {
-    background: var(--gray50);
-    padding: 25px 15px;
+    padding: 0px 20px;
     height: calc(600px - 60px);
     width: 100vw;
-    border-top: 1px solid #DEDEDE;
     overflow: hidden auto;
-    font-size: 17.5px;
-    line-height: 23px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 28px;
   }
 }
 pre {

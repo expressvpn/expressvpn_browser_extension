@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="310px" height="140px" viewBox="0 0 310 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Error - App not activated 2</title>
+    <defs>
+        <linearGradient x1="-6.00541383%" y1="72.265868%" x2="100%" y2="31.7491319%" id="linearGradient-1">
+            <stop stop-color="#001D2F" offset="0%"></stop>
+            <stop stop-color="#F0EACF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="5.68434189e-14" width="153.6" height="92.7979275" rx="4.66321244"></rect>
+        <linearGradient x1="0%" y1="48.4617448%" x2="50%" y2="51.4069348%" id="linearGradient-4">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="69.447335%" y1="-16.9987169%" x2="30.552665%" y2="106.373968%" id="linearGradient-5">
+            <stop stop-color="#F0EACF" offset="0%"></stop>
+            <stop stop-color="#D4E300" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0" y="0" width="46.4" height="74.4" rx="2.33160622"></rect>
+    </defs>
+    <g id="Errors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Error---App-not-open" transform="translate(-20.000000, -30.000000)">
+            <g id="Error---App-not-activated-2" transform="translate(20.000000, 30.000000)">
+                <g id="Group-2" transform="translate(70.000000, 0.000000)">
+                    <circle id="Oval" fill="#D4E300" cx="86" cy="70" r="70"></circle>
+                    <g id="Group-3" transform="translate(0.000000, 11.000000)">
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="24.8" width="153.6" height="92.8" rx="4.66321244"></rect>
+                        <g id="Group-4" transform="translate(6.400000, 17.600000)">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <use id="Rectangle" fill="#F0EACF" xlink:href="#path-2"></use>
+                            <rect id="Rectangle" fill="#001D2F" mask="url(#mask-3)" x="9.79274611" y="27.9792746" width="85.3367876" height="3.73056995" rx="1.86528497"></rect>
+                            <rect id="Rectangle-Copy-8" fill="#001D2F" mask="url(#mask-3)" x="9.79274611" y="37.3056995" width="85.3367876" height="3.73056995" rx="1.86528497"></rect>
+                            <rect id="Rectangle-Copy-9" fill="#001D2F" mask="url(#mask-3)" x="9.79274611" y="52.6943005" width="62.9533679" height="3.73056995" rx="1.86528497"></rect>
+                            <rect id="Rectangle-Copy-13" fill="#001D2F" mask="url(#mask-3)" x="9.79274611" y="62.0207254" width="43.8341969" height="3.73056995" rx="1.86528497"></rect>
+                            <rect id="Rectangle" fill="url(#linearGradient-4)" mask="url(#mask-3)" x="0" y="0" width="153.6" height="13.6"></rect>
+                        </g>
+                        <g id="Group" transform="translate(123.200000, 0.000000)">
+                            <mask id="mask-7" fill="white">
+                                <use xlink:href="#path-6"></use>
+                            </mask>
+                            <use id="Rectangle" fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                            <g mask="url(#mask-7)" id="solid/[Launch]-">
+                                <g transform="translate(8.800000, 22.400000)">
+                                    <g id="Group" opacity="0.2">
+                                        <rect id="Rectangle" x="0" y="0" width="28.8" height="28.8"></rect>
+                                    </g>
+                                    <g id="icon-(outlines)" transform="translate(2.800000, 2.800000)" fill="#001D2F" fill-rule="nonzero">
+                                        <path d="M5.96217307,2.08 C6.62491477,2.08 7.16217307,2.6172583 7.16217307,3.28 C7.16217307,3.89540301 6.69892484,4.40260859 6.10211842,4.47192672 L5.96217307,4.48 L3.99111111,4.48 C3.59391238,4.48 3.26508232,4.77272108 3.20857768,5.15420651 L3.2,5.27111111 L3.2,19.2088889 C3.2,19.6060876 3.49272108,19.9349177 3.87420651,19.9914223 L3.99111111,20 L17.9288889,20 C18.3260876,20 18.6549177,19.7072789 18.7114223,19.3257935 L18.72,19.2088889 L18.72,17.2305698 C18.72,16.5678281 19.2572583,16.0305698 19.92,16.0305698 C20.535403,16.0305698 21.0426086,16.493818 21.1119267,17.0906244 L21.12,17.2305698 L21.12,19.2088889 C21.12,20.9035062 19.7990781,22.2896057 18.1306998,22.3937219 L17.9288889,22.4 L3.99111111,22.4 C2.2964938,22.4 0.910394329,21.0790781 0.806278123,19.4106998 L0.8,19.2088889 L0.8,5.27111111 C0.8,3.5764938 2.12092188,2.19039433 3.78930022,2.08627812 L3.99111111,2.08 L5.96217307,2.08 Z" id="Path"></path>
+                                        <g id="Group-2" transform="translate(9.642667, 0.000000)">
+                                            <path d="M10.7088052,1.15147186 C11.1774343,0.682842712 11.9372323,0.682842712 12.4058615,1.15147186 C12.8384422,1.58405262 12.8717177,2.26472988 12.5056878,2.73547933 L12.4058615,2.84852814 L2.84852814,12.4058615 C2.37989899,12.8744906 1.62010101,12.8744906 1.15147186,12.4058615 C0.718891109,11.9732807 0.685615666,11.2926034 1.05164553,10.821854 L1.15147186,10.7088052 L10.7088052,1.15147186 Z" id="Path"></path>
+                                            <path d="M11.5573333,0.8 C12.1727363,0.8 12.6799419,1.26324823 12.7492601,1.86005465 L12.7573333,2 L12.7573333,11.5573333 C12.7573333,12.220075 12.220075,12.7573333 11.5573333,12.7573333 C10.9419303,12.7573333 10.4347247,12.2940851 10.3654066,11.6972787 L10.3573333,11.5573333 L10.3568,3.2 L2,3.2 C1.38459699,3.2 0.877391407,2.73675177 0.808073278,2.13994535 L0.8,2 C0.8,1.38459699 1.26324823,0.877391407 1.86005465,0.808073278 L2,0.8 L11.5573333,0.8 Z" id="Path"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

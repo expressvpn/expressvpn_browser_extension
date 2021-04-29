@@ -10,7 +10,7 @@ Licensed GPL v2
       {{ (type === 'country' ? model.country : model.name) }}
     </div>
     <div v-if="type === 'country'" class="location-expand" @click="countryClick">
-      <div class="icon icon-medium icon-49-forward"></div>
+      <img class="icon" v-svg-inline src='/images/icons/chevron-right.svg' width="24" height="24" />
     </div>
   </div>
 </template>

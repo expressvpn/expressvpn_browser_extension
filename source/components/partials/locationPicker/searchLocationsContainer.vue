@@ -91,6 +91,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.search-no-result {
+  //font-family: Inter-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  line-height: 28px;
+  text-align: center;
+}
 </style>

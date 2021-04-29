@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="310px" height="140px" viewBox="0 0 310 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Error - Update app</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="118.516222%" id="linearGradient-1">
+            <stop stop-color="#F0EACF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="-7.34910572%" x2="0%" y2="111.405908%" id="linearGradient-2">
+            <stop stop-color="#D4E300" offset="0%"></stop>
+            <stop stop-color="#001D2F" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="64" height="108" rx="4"></rect>
+    </defs>
+    <g id="Error---Update-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="v2" transform="translate(85.000000, 0.000000)">
+            <circle id="Oval" fill="#D4E300" cx="70" cy="70" r="70"></circle>
+            <g id="Group-4" transform="translate(14.000000, 0.000000)">
+                <path d="M38.4,0 L107.2,0 C109.409139,-8.25425059e-15 111.2,1.790861 111.2,4 L111.2,116.8 C111.2,119.009139 109.409139,120.8 107.2,120.8 L38.4,120.8 C36.190861,120.8 34.4,119.009139 34.4,116.8 L34.4,4 C34.4,1.790861 36.190861,4.05812251e-16 38.4,0 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                <path d="M44.8,6.4 L100.8,6.4 C103.009139,6.4 104.8,8.190861 104.8,10.4 L104.8,110.4 C104.8,112.609139 103.009139,114.4 100.8,114.4 L44.8,114.4 C42.590861,114.4 40.8,112.609139 40.8,110.4 L40.8,10.4 C40.8,8.190861 42.590861,6.4 44.8,6.4 Z" id="Rectangle" stroke="#F0EACF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12"></path>
+                <g id="Group" transform="translate(0.000000, 20.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Rectangle" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                    <g id="ExpressVPN/Badge/White" mask="url(#mask-4)">
+                        <g transform="translate(20.000000, 44.800000)" id="Logo/ExpressVPN/Badge/Red">
+                            <path d="M6.20429815,19.2 C3.52340018,19.2 1.81270272,17.6933131 1.81270272,15.5995207 C1.81270272,14.9104098 2.01709675,14.0679076 2.80859631,12.3572102 L2.84217094e-15,12.3572102 L2.57850923,6.84202285 L20.5276025,6.84202285 C20.9363905,6.84202285 21.2170967,6.53600703 21.2170967,6.1786051 C21.2170967,5.82120316 20.9363905,5.51480387 20.5276025,5.51480387 L6.00028761,5.51480387 L7.27650395,2.78328673 C8.06800352,1.09789886 9.77870097,0 11.6424063,0 L17.7446992,0 C21.2680994,0 23.8726851,2.42550132 23.8726851,5.59149956 C23.8726851,9.34460334 20.4255972,12.3572102 16.4427898,12.3572102 L4.64699209,12.3572102 C4.28920668,13.0980906 4.69799473,13.6851961 5.5658065,13.6851961 L14.961796,13.6851961 C16.519102,13.6851961 17.7190062,14.7827115 17.7190062,16.1873931 C17.7190062,17.7957018 16.1620836,19.2 14.4,19.2 L6.20429815,19.2 L6.20429815,19.2 Z" id="Path" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

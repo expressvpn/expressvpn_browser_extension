@@ -4,17 +4,17 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template lang="html">
-  <div>
-    <hint stringKey="error_simultaneous_connection_hint" iconName="icon-41-error" type="error"></hint>
+  <div class="duplicate_license_used">
+    <hint stringKey="error_simultaneous_connection_hint" iconName="error" type="error"></hint>
     <p >{{ localize('error_simultaneous_connection_p1_text') }}</p>
     <p v-html="$parent.addAnchor(`error_simultaneous_connection_iap_${(isPaymentMethodIAP() || isBusinessUser()).toString()}_p2_text`, '/subscriptions?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=deviceusagelimit')" @click="requestUnblock($event, 'LINK')"></p>
     <p>{{ localize(`error_connection_error_lock_${lockStatus}_text`) }}</p>
     <div class="button-container" v-if="isBusinessUser() || isPaymentMethodIAP()">
-      <button class="button-primary button-top" @click="resetState">{{ localize('error_simultaneous_connection_ok_button_label') }}</button>
+      <button class="primary button-top" @click="resetState">{{ localize('error_simultaneous_connection_ok_button_label') }}</button>
     </div>
     <div class="button-container" v-else>
-      <button class="button-primary" @click="requestUnblock($event, 'BUTTON')">{{ localize('error_simultaneous_connection_learn_more_button_label') }}</button>
-      <button class="button-secondary" @click="resetState">{{ localize(`error_connection_error_return_home_button_label_network_lock_${lockStatus}`) }}</button>
+      <button class="primary" @click="requestUnblock($event, 'BUTTON')">{{ localize('error_simultaneous_connection_learn_more_button_label') }}</button>
+      <button class="secondary" @click="resetState">{{ localize(`error_connection_error_return_home_button_label_network_lock_${lockStatus}`) }}</button>
     </div>
     <popup :options="popupOptions"></popup>
   </div>
@@ -68,7 +68,7 @@ export default {
     },
     requestUnblock(ev, caller) {
       if (ev.target.tagName !== 'A' && caller === 'LINK') return;
-      
+
       if (this.lockStatus === 'on') {
         this.popupOptions = {
           id: 'error_simultaneous_connection_popup',
@@ -85,13 +85,12 @@ export default {
             },
           ],
           isVisible: true,
-          style: 'horizontal',
+          style: 'vertical',
         };
       } else {
         this.handleClick(ev, caller);
       }
-      
-    }
+    },
   },
   // component Lifecycle hooks
   beforeCreate() {},
@@ -101,4 +100,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.duplicate_license_used {
+  p {
+    margin-top: 30px;
+  }
+}
 </style>

@@ -5,12 +5,12 @@ Licensed GPL v2
 -->
 <template lang="html">
   <div>
-    <error-icon iconName="icon-2-account" />
+    <error-icon iconName="Desktop" />
     <h1>{{ localize(`error_business_subscription_expired_title`) }}</h1>
     <p>{{ localize('error_business_subscription_expired_text') }}</p>
     <p v-html="$parent.addAnchor('error_business_subscription_expired_contact_support_text', '/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=license_revoked_contact_support')" @click="$parent.checkForLinks"></p>
     <div class="button-container">
-      <button class="button-primary" @click="resetState">{{ localize('error_business_subscription_expired_signout_button_label') }}</button>
+      <button class="primary" @click="resetState">{{ localize('error_business_subscription_expired_signout_button_label') }}</button>
     </div>
   </div>
 </template>

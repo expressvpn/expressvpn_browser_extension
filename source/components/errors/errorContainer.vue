@@ -5,7 +5,6 @@ Licensed GPL v2
 -->
 <template>
   <div :class="currentInfo.state">
-    <main-header :hideIcon="true"></main-header>
     <div class="error-container">
       <component :is="currentErrorComponent"></component>
     </div>
@@ -13,7 +12,6 @@ Licensed GPL v2
 </template>
 
 <script>
-import mainHeader from '../partials/mainHeader.vue';
 import mixinError from '../../scripts/mixins/error';
 import mixinSubscription from '../../scripts/mixins/subscription';
 
@@ -33,7 +31,7 @@ const getAllErrorComponents = () => {
 export default {
   name: 'errorContainer',
   mixins: [mixinError, mixinSubscription],
-  components: Object.assign({}, getAllErrorComponents(), { 'mainHeader': mainHeader }),
+  components: getAllErrorComponents(),
   computed: {
     currentErrorComponent() {
       let allErrorComponents = getAllErrorComponents();
@@ -52,43 +50,44 @@ export default {
 
 <style lang="scss">
 .error-container {
-  background-color: var(--gray50);
-  height: calc(600px - 60px); // total height - header
-  padding: 25px 15px;
-  overflow-y: auto;
+  height: 600px;
+  padding: 30px 20px 20px 20px;
+
+  &>div {
+    position: relative;
+    height: 100%;
+  }
 
   h1 {
-    font-family: ProximaNova-Light;
-    font-size: 24px;
-    color: var(--black20);
-    text-align: center;
-    font-weight: normal;
-    margin: 0;
+    // font-family: Inter-Bold;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 26px;
   }
 
   p {
-    margin-top: 25px;    
-    color: var(--black20);
+    margin-top: 10px;
   }
 
   a, p, span, li {
-    font-size: 18px;
-    line-height: 23px;
+    //font-family: Inter-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    //height: 56px;
+    letter-spacing: 0px;
+    line-height: 28px;
   }
 
   .hint-container {
     padding: 0 !important;
   }
 
-  .bold {
-    font-family: proximaNova-Semibold;
-  }
-
   .code {
-    background: var(--gray10);
+    background: #5e5e5e;
     border-radius: 4px;
     height: 44px;
-    color: var(--gray50);
+    color: #fcfcfc;
     font-family: CourierNewPS-BoldMT;
     font-size: 16px;
     display: flex;
@@ -96,6 +95,59 @@ export default {
     padding-left: 15px;
     user-select: text;
   }
+
+  .button-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    button:nth-of-type(n+2) {
+      margin-top: 15px;
+    }
+  }
+}
+ol {
+  counter-reset: item;
+  margin: 30px 0 0 0;
+  padding-left: 33px;
+
+  &>li {
+    list-style: none inside;
+    counter-increment: item;
+    margin-bottom: 10px;
+
+    &:before {
+      content: counter(item);
+      font-family: FSKimText-Medium;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0px;
+      line-height: 25px;
+      margin: 0 10px 0 -35px;
+      padding: 1px;
+      display: inline-block;
+      border-radius: 50%;
+      width: 28px;
+      background: var(--ol-bullet-bg);
+      color: var(--ol-bullet-font);
+      text-align: center;
+    }
+  }
+}
+.fraudster {
+  overflow: auto;
 }
 
+@media (prefers-color-scheme: light) {
+  .error-container {
+    --ol-bullet-bg: #{$eds-color-midnight};
+    --ol-bullet-font: #{$eds-color-white};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .error-container {
+    --ol-bullet-bg: #{$eds-color-grey-10};
+    --ol-bullet-font: #{$eds-color-white};
+  }
+}
 </style>

@@ -8,14 +8,14 @@ Licensed GPL v2
     <secondary-header stringkey="menu_myaccount_title" :onBackClick="sideBackBtnClick" :showSearchOption="false" />
     <div class="account-container">
       <div class="account-info-container">
+        <hint v-if="expiryWarning" :text="expiryWarning" iconName="error" :type="state === 'expiring' ? 'warning' : 'error'" />
         <div class="account-info">
-          <i class="icon icon-2-account" />
+          <img v-svg-inline class="icon chevron" :src="`/images/icons/account.svg`" viewbox="0 0 24 24" width="24" height="24" />
           <div class="account-info-label">{{ localize('myaccount_account_status_label') }}</div>
           <div class="account-info-value">{{ localize(`myaccount_account_status_${this.getAccountStatus()}_text`) }}</div>
         </div>
-        <div class="account-info-separator"></div>
         <div class="account-info">
-          <i class="icon icon-45-expiry" />
+          <img v-svg-inline class="icon chevron" :src="`/images/icons/expiry.svg`" viewbox="0 0 24 24" width="24" height="24" />
           <div class="account-info-label" id="account_expiry">{{ localize(`myaccount_account_${this.getExpiryType()}_label`) }}</div>
           <div class="account-info-value">{{ getExpirationDate() }}</div>
         </div>
@@ -32,6 +32,7 @@ import secondaryHeader from './partials/secondaryHeader.vue';
 import activeView from './partials/account/active.vue';
 import expiringView from './partials/account/expiring.vue';
 import expiredView from './partials/account/expired.vue';
+import hint from './partials/hint';
 
 export default {
   name: 'account',
@@ -40,10 +41,36 @@ export default {
     activeView,
     expiringView,
     expiredView,
+    hint,
   },
   computed: {
     currentAccountView() {
       return `${this.state}View`;
+    },
+    expiryWarning() {
+      let warning = '';
+
+      if (this.state === 'expiring') {
+        let expiringWhat = this.isTrialUser() ? 'free_trial' : 'subscription';
+        let remainingTime = this.currentInfo.subscription.expiration_time - (Date.now() / 1000);
+        if (remainingTime <= 0) {
+          warning = this.localize(`promo_bar_${expiringWhat}_expiring_soon_expired_text`);
+        } else if (remainingTime < 60 * 60) {
+          warning = this.localize(`promo_bar_${expiringWhat}_expiring_soon_less_than_one_hour_text`);
+        } else if (remainingTime < 24 * 60 * 60) {
+          warning = this.localize(`promo_bar_${expiringWhat}_expiring_soon_hours_text`).replace('[hours]', `${Math.ceil(remainingTime / (60 * 60))}`);
+        } else {
+          warning = this.localize(`promo_bar_${expiringWhat}_expiring_soon_days_text`).replace('[days]', `${Math.ceil(remainingTime / (24 * 60 * 60))}`);
+        }
+      } else if (this.state === 'expired') {
+        if (this.isTrialUser()) {
+          warning = this.localize('promo_bar_free_trial_expiring_soon_expired_text');
+        } else if (!this.isPaymentMethodIAP()) {
+          warning = this.localize('promo_bar_subscription_expiring_soon_expired_text');
+        }
+      }
+
+      return warning;
     },
   },
   mixins: [subscriptionMixin],
@@ -52,17 +79,19 @@ export default {
       this.$store.dispatch('setCurrentView', 'menuScreen');
     },
     getExpiryType: function () {
+      let expiryType = '';
       if (this.hasSubscriptionExpired() && this.isRenewable() && this.isPaymentMethodIAP() && !this.isLastInAppPurchasesFailure()) {
-        return 'payment_due';
+        expiryType = 'payment_due';
       } else if (this.hasSubscriptionExpired()) {
-        return 'expired';
+        expiryType = 'expired';
       } else if (this.subscription.status === 'FREE_TRIAL_ACTIVE' && this.subscription.auto_bill === true) {
-        return 'subscription_starts';
+        expiryType = 'subscription_starts';
       } else if (this.subscription.auto_bill === true) {
-        return 'renews';
+        expiryType = 'renews';
       } else if (this.subscription.plan_type === 'business' || this.subscription.status === 'FREE_TRIAL_ACTIVE' || !this.subscription.auto_bill) {
-        return 'expiry';
+        expiryType = 'expiry';
       }
+      return expiryType;
     },
     getAccountStatus() {
       let accountStatus = this.subscription.status.toLowerCase();
@@ -83,52 +112,70 @@ export default {
 
 <style lang="scss">
 .sub-header {
-  color: var(--black20);
-  font-family: ProximaNova-Light;
-  font-size: 24px;
+  //font-family: Inter-Bold;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+  line-height: 26px;
 }
 
 .account {
-
+  &-container {
+    padding: 0 20px;
+  }
   &-info {
     display: flex;
     align-items: center;
-    font-size: 16px;
     position: relative;
+    //font-family: Inter-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 28px;
+    margin-top: 20px;
 
-    .icon {
-      color: var(--accent20);
-      font-size: 24px;
+    &:last-of-type {
+      margin-top: 15px;
     }
 
-    &-separator {
-      border-bottom: 1px solid #DEDEDE;
-      margin: 12px 0px;
-      margin-left: calc(24px + 10px);
-    }
     &-label {
-      color: var(--black20);
-      font-family: ProximaNova-Semibold;
-      margin-left: 10px;    
+      margin-left: 10px;
     }
     &-value {
-      color: var(--gray20);
       position: absolute;
       right: 0;
+      color: $eds-color-grey-20;
     }
-  
-    &-container {
-      background: var(--gray40);
-      padding: 0px 15px;
-      height: 105px;
+
+    .icon path {
+      fill: var(--icon-color);
     }
   }
 
   &-extra-info {
-    border-top: 1px solid #DEDEDE;
-    background: var(--gray50);
     height: 100vh;
-    padding: 25px 15px;
+    margin-top: 30px;
+
+    .button-container {
+      width: calc(100% - 40px);
+      position: absolute;
+      bottom: 0;
+
+      button:nth-of-type(n+2) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .account-container {
+    --icon-color: #{$eds-color-grey-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .account-container {
+    --icon-color: #{$eds-color-grey-30};
   }
 }
 </style>

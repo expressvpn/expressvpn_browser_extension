@@ -1,14 +1,14 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Kontroluj aplikację ExpressVPN z Chrome, pozoruj lokalizację i uzyskaj dostęp do wszystkiego.",
+    "message": "Korzystaj z Internetu z błyskawiczną prędkością. Pozoruj lokalizację, mej dostęp do wszystkiego i kontroluj ExpressVPN z Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Prywatność, bezpieczeństwo i prędkość. Kontroluj aplikację ExpressVPN bezpośrednio z Firefoxa, pozoruj swoją lokalizację i uzyskuj dostęp do kontentu z dowolnego miejsca. ",
+    "message": "Przejdź do trybu online z błyskawiczną prędkością. Sfałszuj swoją lokalizację, uzyskaj dostęp do dowolnych treści i kontroluj aplikację ExpressVPN bezpośrednio z Firefoxa.",
     "description": "The description of the application"
   },
   "app_name_title": {
-    "message": "ExpressVPN: proxy VPN, aby odblokować wszystko",
+    "message": "ExpressVPN: Proxy VPN dla lepszego Internetu",
     "description": "The name of the application"
   },
   "app_short_name_title": {
@@ -25,7 +25,7 @@
     "message": "Wykup subskrypcję"
   },
   "error_app_not_found_contact_support_text": {
-    "message": "Potrzebujesz pomocy? [skontaktuj się z pomocą techniczną]."
+    "message": "Potrzebujesz pomocy? [Skontaktuj się z pomocą techniczną]."
   },
   "error_app_not_found_download_LINUX_button_label": {
     "message": "Pobierz aplikację dla Linuxa"
@@ -43,7 +43,7 @@
     "message": "Zainstaluj aplikację ExpressVPN z Google Play Store.\n"
   },
   "error_app_not_found_require_LINUX_snap_text": {
-    "message": "Jeśli zainstalowałeś swoją przeglądarkę z <b>Centrum oprogramowania Ubuntu</b>, to rozszerzenie nie będzie w stanie komunikować się z aplikacją Linuxa. [Dowiedz się więcej]\n"
+    "message": "Jeśli zainstalowałeś przeglądarkę z <b>Centrum oprogramowania Ubuntu</b>, rozszerzenie nie będzie komunikować się z aplikacją Linuxa. [Więcej info]\n"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "To rozszerzenie wymaga aplikacji ExpressVPN dla Linuxa z aktywną subskrypcją. "
@@ -115,7 +115,7 @@
     "message": "Błąd połączenia"
   },
   "error_connection_error_to_location_text": {
-    "message": "Błąd połączenia z<br>%LOCATION%."
+    "message": "Błąd połączenia z %LOCATION%."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Spróbuj ponownie"
@@ -167,7 +167,7 @@
     "message": "Twoje konto zostało zawieszone"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "Twoja darmowa wersja próbna wygasła, ale możesz z łatwością ponownie się połączyć."
+    "message": "Wersja próbna wygasła, ale możesz łatwo połączyć się znowu."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "Dlaczego warto zaktualizować?"
@@ -176,7 +176,7 @@
     "message": "Wprowadź kod aktywacyjny"
   },
   "error_free_trial_expired_l1_text": {
-    "message": "Aplikacje dla każdego urządzenia"
+    "message": "Aplikacje na każde urządzenie"
   },
   "error_free_trial_expired_l2_text": {
     "message": "30-dniowa gwarancja zwrotu pieniędzy"
@@ -187,8 +187,8 @@
   "error_free_trial_expired_l4_text": {
     "message": "Pomoc techniczna 24/7"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Nieograniczony transfer"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30-dniowa gwarancja zwrotu pieniędzy"
   },
   "error_free_trial_expired_status_text": {
     "message": "Wygasła (%1)."
@@ -206,7 +206,7 @@
     "message": "Wyloguj się"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Darmowa wersja próbna wygasła"
+    "message": "Zapewnij sobie ochronę"
   },
   "error_FREE_TRIAL_IAP_RENEWAL_FAILED_main_button_label": {
     "message": "Zaktualizuj szczegóły płatności"
@@ -315,7 +315,7 @@
     "message": "Później"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Twoja subskrypcja wygasła, ale możesz z łatwością ponownie się połączyć."
+    "message": "Subskrypcja wygasła, ale możesz łatwo połączyć się znowu."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Dlaczego warto odnowić?"
@@ -330,13 +330,13 @@
     "message": "Zdobądź subskrypcję"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Aplikacje dla każdego urządzenia"
+    "message": "Dostęp do wszystkich Twoich ulubionych treści"
   },
   "error_subscription_expired_l2_text": {
-    "message": "30 darmowych dni w przypadku polecenia aplikacji znajomym"
+    "message": "Zapewnij sobie bezpieczeństwo i anonimowość online"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 lokalizacji na całym świecie"
+    "message": "Pomoc techniczna 24/7"
   },
   "error_subscription_expired_l4_text": {
     "message": "Pomoc techniczna 24/7"
@@ -492,10 +492,10 @@
     "message": "Problemy ze streamingiem "
   },
   "issue_reporter_opt2": {
-    "message": "Nie mogę uzyskać dostępu do żadnej strony www"
+    "message": "Brak dostępu do wszystkich stron www"
   },
   "issue_reporter_opt3": {
-    "message": "Nie mogę uzyskać dostępu do określonej strony www"
+    "message": "Brak dostępu do określonej strony www"
   },
   "issue_reporter_opt4": {
     "message": "Nieprawidłowy język lub waluta"
@@ -520,9 +520,6 @@
   },
   "issue_reporter_send_button_label": {
     "message": "Wyślij raport"
-  },
-  "issue_reporter_share_website_label": {
-    "message": "Udostępnij stronę www ExpressVPN"
   },
   "issue_reporter_support_button_label": {
     "message": "Skontaktuj się z pomocą techniczną"
@@ -611,7 +608,7 @@
     "message": "30-dniowa gwarancja zwrotu pieniędzy"
   },
   "list_item_apps_for_every_device": {
-    "message": "Aplikacje dla każdego urządzenia"
+    "message": "Aplikacje na każde urządzenie"
   },
   "list_item_locations_worldwide": {
     "message": "160 lokalizacji na całym świecie"
@@ -632,7 +629,7 @@
     "message": "Polecane lokalizacje"
   },
   "location_picker_search_no_results_text": {
-    "message": "BRAK WYNIKÓW"
+    "message": "Brak wyników"
   },
   "location_picker_search_placeholder_text": {
     "message": "Szukaj miasta lub kraju"
@@ -674,7 +671,7 @@
     "message": "Ponowne łączenie "
   },
   "main_screen_status_vpn_speedtesting_text": {
-    "message": "Test prędkości trwa"
+    "message": "Trwa test prędkości"
   },
   "menu_beta_feedback": {
     "message": "Wyślij feedback Beta"
@@ -694,6 +691,9 @@
   },
   "menu_get_30_days_free": {
     "message": "Zdobądź 30 darmowych dni"
+  },
+  "menu_header": {
+    "message": "Opcje"
   },
   "menu_help_support": {
     "message": "Pomoc techniczna"
@@ -764,14 +764,8 @@
   "menu_settings_general_display_header": {
     "message": "Preferencje wyświetlania"
   },
-  "menu_settings_general_display_label": {
-    "message": "Tryb wyświetlania"
-  },
   "menu_settings_general_header": {
     "message": "Ogólne"
-  },
-  "menu_settings_general_language_header": {
-    "message": "Język rozszerzenia"
   },
   "menu_settings_general_language_label": {
     "message": "Język"
@@ -819,7 +813,7 @@
     "message": "Podziel się ExpressVPN i otrzymaj darmową usługę!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Jeśli znajomy się zarejestruje - otrzymacie oboje 30 darmowych dni."
+    "message": "Gdy Twój znajomy zarejestruje się, oboje otrzymacie 30 darmowych dni."
   },
   "myaccount_account_expired_label": {
     "message": "Wygasło"
@@ -885,13 +879,13 @@
     "message": "Połączono z VPN"
   },
   "networkLock_header_connecting_text": {
-    "message": "Proszę czekać"
+    "message": "Zaczekaj"
   },
   "networkLock_header_connection_error_text": {
     "message": "Błąd połączenia"
   },
   "networkLock_header_reconnecting_text": {
-    "message": "Proszę czekać"
+    "message": "Zaczekaj"
   },
   "networkLock_hint_connected_text": {
     "message": "Wkrótce nastąpi przekierowanie."
@@ -906,16 +900,16 @@
     "message": "Ruch internetowy jest obecnie zablokowany w celu ochrony Twojej prywatności. "
   },
   "networkLock_status_connected_text": {
-    "message": "Połączono z <b>%LOCATION%</b>."
+    "message": "Połączono z %LOCATION%."
   },
   "networkLock_status_connecting_text": {
-    "message": "Łączenie się z <b>%LOCATION%</b>. "
+    "message": "Łączenie się z %LOCATION%. "
   },
   "networkLock_status_connection_error_text": {
-    "message": "Błąd połączenia z <b>%LOCATION%</b>."
+    "message": "Błąd połączenia z %LOCATION%."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Ponowne łączenie się z <b>%LOCATION%</b>. "
+    "message": "Ponowne łączenie się z %LOCATION%. "
   },
   "networkLock_try_again_button_label": {
     "message": "Spróbuj ponownie"
@@ -966,7 +960,7 @@
     "message": "Ostatnia płatność nie powiodła się"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Zaktualizuj szczegóły płatności"
+    "message": "Zaktualizuj metodę płatności"
   },
   "promobar_subscription_expiring_soon_days_header": {
     "message": "Subskrypcja wygaśnie w ciągu [days] dni"
@@ -1058,17 +1052,8 @@
   "rating_thanks_@firefox@_text": {
     "message": "Dziękujemy! Oceń nas na Firefox Add-ons Store! "
   },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Dopasuj ustawienia urządzenia"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Ciemny"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Jasny"
-  },
   "settings_general_help_improve_description": {
-    "message": "Udostępniaj raporty o awariach, testach prędkości, użyteczności oraz informuj nas, czy próby połączenia z VPN są udane. Raporty te nigdy nie zawierają informacji umożliwiających identyfikację użytkownika."
+    "message": "Udostępniaj raporty o awariach, testach prędkości oraz o udanych próbach połączenia z VPN. Raporty te nigdy nie zawierają informacji identyfikowalnych. "
   },
   "settings_general_help_improve_label": {
     "message": "Pomóż ulepszyć ExpressVPN"
@@ -1109,9 +1094,6 @@
   "welcome_continue_button_label": {
     "message": "Kontynuuj"
   },
-  "welcome_get_started_button_label": {
-    "message": "Rozpocznij"
-  },
   "welcome_help_improve_expressvpn_header": {
     "message": "Pomóż ulepszyć ExpressVPN"
   },
@@ -1122,7 +1104,7 @@
     "message": "OK"
   },
   "welcome_help_improve_expressvpn_p1_text": {
-    "message": "Udostępniaj raporty o awariach, testach prędkości, użyteczności oraz informuj nas, czy próby połączenia z VPN są udane. Raporty te nigdy nie zawierają informacji umożliwiających identyfikację użytkownika."
+    "message": "Udostępniaj raporty o awariach, testach prędkości oraz o udanych próbach połączenia z VPN. Raporty te nigdy nie zawierają informacji identyfikowalnych. "
   },
   "welcome_not_installed_buy_header": {
     "message": "Zacznij już dziś bez ryzyka"
@@ -1137,10 +1119,10 @@
     "message": "Zdobądź ExpressVPN"
   },
   "welcome_not_installed_reasons_li_1_text": {
-    "message": "Bezpieczne lokalizacje VPN na całym świecie"
+    "message": "Bezpieczne lokalizacje VPN"
   },
   "welcome_not_installed_reasons_li_2_text": {
-    "message": "Szybkie prędkości i nieograniczony transfer"
+    "message": "Szybko i bez ograniczeń"
   },
   "welcome_not_installed_reasons_li_3_text": {
     "message": "Pomoc techniczna 24/7"
@@ -1149,10 +1131,10 @@
     "message": "30-dniowa gwarancja zwrotu pieniędzy"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "VPN chroni Twoją prywatność, ukrywając Twój adres IP"
+    "message": "Przejmij kontrolę nad prywatnością i chroń swoje dane online"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Streamuj ulubione treści bez ograniczeń"
+    "message": "Twoje ulubione programy i aplikacje z dowolnego miejsca"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Bezpiecznie dołączaj do publicznych sieci Wi-Fi w hotelach, kawiarniach i na lotniskach"

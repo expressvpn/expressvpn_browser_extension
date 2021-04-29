@@ -176,6 +176,9 @@
   "Hong Kong": {
     "message": "Гонконг"
   },
+  "Hong Kong - 1": {
+    "message": "Гонконг - 1"
+  },
   "Hong Kong - 2": {
     "message": "Гонконг - 2"
   },
@@ -195,7 +198,7 @@
     "message": "Индия"
   },
   "India (via UK)": {
-    "message": "Индия (через Великобританию)"
+    "message": "Индия (через Британию)"
   },
   "India - Chennai": {
     "message": "Индия - Ченнаи"
@@ -359,7 +362,7 @@
     "message": "Сингапур"
   },
   "Singapore - CBD": {
-    "message": "Сингапур - Центральный деловой район"
+    "message": "Сингапур - Центр"
   },
   "Singapore - Jurong": {
     "message": "Сингапур - Джуронг"
@@ -392,6 +395,9 @@
   "Spain - Barcelona": {
     "message": "Испания - Барселона"
   },
+  "Spain - Barcelona - 2": {
+    "message": "Испания - Барселона - 2"
+  },
   "Spain - Madrid": {
     "message": "Испания - Мадрид"
   },
@@ -400,6 +406,9 @@
   },
   "Sweden": {
     "message": "Швеция"
+  },
+  "Sweden - 2": {
+    "message": "Швеция - 2"
   },
   "Switzerland": {
     "message": "Швейцария"

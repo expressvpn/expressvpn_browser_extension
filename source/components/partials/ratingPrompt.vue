@@ -1,37 +1,35 @@
-
-<!-- 
+<!--
 ExpressVPN Browser Extension:
-Copyright 2017-2019 Express VPN International Ltd
+Copyright 2017-2020 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
   <div class="popup-container">
     <div class="popup">
-      <span class="icon icon-23-close" @click="closeIt"></span>
-      <div v-if="ratingState === 'start'">
-        <img class="logo" src="/images/logo.svg" />
+      <div class="icon-close-holder" @click="closeIt">
+        <img v-svg-inline class="icon-close" src='/images/icons/close.svg' width="20" height="20" viewbox="0 0 24 24" />
+      </div>
+      <div v-show="ratingState === 'start'"> <!-- using v-show because v-svg-inline . Should be removed in the future-->
+        <img v-svg-inline class="logo" src='/images/logo.svg' width="48" height="38" viewbox="0 0 128 128" />
         <span class="popup-header">{{ localize('rating_prompt_header') }}</span>
         <div class="rating">
-          <span v-for="value in 5" :key="value" class="icon icon-47-favourite" @click="handleRating(6 - value)" />
+          <div class="star" v-for="value in 5" :key="value" @click="handleRating(6 - value)" />
         </div>
       </div>
-      <div v-else-if="ratingState === '3star'">
-        <div class="logo icon icon-113-tips"></div>
+      <div v-show="ratingState === '3star'">
         <span class="popup-header">{{ localize('rating_improve_header') }}</span>
-        <div class="star3-links">
-          <a @click="improve('report')">{{ localize('rating_improve_report_button') }}</a>
-          <a @click="improve('suggest')">{{ localize('rating_improve_suggest_button') }}</a>
+        <div class="button-container">
+          <button class="primary" @click="improve('report')">{{ localize('rating_improve_report_button') }}</button>
+          <button class="secondary" @click="improve('suggest')">{{ localize('rating_improve_suggest_button') }}</button>
         </div>
       </div>
-      <div v-else-if="ratingState === '5star'">
-        <div class="logo icon icon-110-thanks"></div>
+      <div v-show="ratingState === '5star'">
         <span class="popup-header">{{ localize('rating_thanks_text') }}</span>
-        <div class="star5-links">
-          <a @click="discardPrompt">{{ localize('rating_no_thanks_text') }}</a>
-          <button @click="openWebStore">{{ localize('rating_prompt_ok_button') }}</button>
+        <div class="button-container">
+          <button class="primary" @click="openWebStore">{{ localize('rating_prompt_ok_button') }}</button>
+          <button class="secondary" @click="discardPrompt">{{ localize('rating_no_thanks_text') }}</button>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -111,7 +109,7 @@ export default {
           chrome.storage.sync.set({ 'rating': ratingData });
         }
       });
-    }
+    },
   },
   created() {
     chrome.runtime.sendMessage({ telemetry: true, category: 'prompt_rating' });
@@ -130,13 +128,17 @@ export default {
 
 <style lang="scss" scoped>
 .popup {
-  background: var(--gray50);
-  width: 320px;
-  min-height: 267px;
-  padding: 15px 15px 30px 15px;
-  border-radius: 4px;
+  background: var(--popup-bg);
+  width: 310px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+
+  .logo {
+    margin-top: 25px;
+  }
 
   &>div {
     display: flex;
@@ -144,110 +146,67 @@ export default {
     align-items: center;
     position: relative;
   }
-  
 
-  .icon-23-close {
-    margin-left: auto;
-
-    &:hover {
-      color: var(--gray20);
+  .icon-close {
+    &-holder {
+      margin-left: auto;
     }
   }
 
   &-header {
     margin-top: 25px;
-    font-family: ProximaNova-Light;
-    color: var(--black20);
     font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 32px;
     text-align: center;
   }
   &-container {
     position: absolute;
     background: rgba(27, 29, 34, 0.4);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
   }
 
   .rating {
-    margin-top: 25px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 267px;
     unicode-bidi: bidi-override;
     direction: rtl;
 
   }
-  .rating > span {
-    display: inline-block;
-    position: relative;
-    width: 1.1em;
-    color: var(--yellow40);
-    font-size: 35px;
+  .rating > .star {
+    background: url(/images/star_unfilled.png) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+    content: '';
   }
 
-  .rating > span:hover:before,
-  .rating > span:hover ~ span:before {
-    font-family: "xv-fonticon";
-    content: "\54";
-    color: var(--yellow20);
+  .rating > .star:hover,
+  .rating > .star:hover ~ .star {
+    background: url(/images/star_filled.png) center / contain no-repeat;
+    width: 40px;
+    height: 40px;
+    content: '';
   }
 
-  .logo {
-    width: 60px;
-    height: 60px;
-    margin-top: -10px;
+  .button-container {
+    margin: 30px 0;
+    width: 282px;
 
-    &.icon-113-tips {
-      color: var(--green30);
-      font-size: 55px;
-    }
-
-    &.icon-110-thanks {
-      margin-top: -25px;
-      color: var(--primary30);
-      font-size: 55px;
-      animation: pulse 1s ease infinite;
+    button:nth-of-type(n+2) {
+      margin-top: 15px;
     }
   }
-  .star3-links {
-    margin-top: 31px;
-    text-align: center;
-  }
-  .star5-links {
-    margin-top: 33px;
-    display: flex;
-    align-items: center;
-
-    button {
-      margin-left: 25px;
-      border-radius: 4px;
-      border: 1px solid var(--gray30);
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-      height: 30px;
-      min-width: 50px;
-      font-family: ProximaNova-Semibold;
-      font-size: 16px;
-      line-height: 28px;
-      color: #C8252C;
-    }
-  }
-
-  a {
-      font-family: ProximaNova-Semibold;
-      font-size: 16px;
-      color: var(--primary20);
-      display: block;
-
-      &:hover {
-        color: var(--primary30);
-      }
-
-      &:nth-of-type(n+2) {
-        margin-top: 25px;
-      }
-    }
 }
 
 @keyframes pulse {
@@ -255,4 +214,40 @@ export default {
   50% { transform: scale(1.3); }
   100% { transform: scale(1); }
 }
+</style>
+
+<style lang="scss">
+.icon-close {
+  path {
+    fill: var(--icon-close-default)
+  }
+}
+.icon-star {
+  path {
+    fill: $eds-color-grey-30;
+  }
+
+  &:hover {
+    path {
+      fill: $eds-color-warning-30;
+    }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .popup-container {
+    --popup-bg: #{$eds-color-white};
+    --icon-close-default: #{$eds-color-grey-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .popup-container {
+    --popup-bg: #{$eds-color-grey-10};
+    --icon-close-default: #{$eds-color-grey-40};
+
+    .logo path {
+      fill: $eds-color-grey-40;
+    }
+  }
+}
+
 </style>

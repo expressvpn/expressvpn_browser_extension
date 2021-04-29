@@ -4,9 +4,10 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div :class="['menu-item', { [model.classColor]: hover }]" @click="menuClick" v-if="isVisible && !model.isDivider" @mouseover="hover = true" @mouseleave="hover = false">
-    <i :class="['icon', 'icon-medium', model.icon, model.classColor]"></i>
+  <div class="menu-item" @click="menuClick" v-if="isVisible && !model.isDivider">
+    <img v-svg-inline class="icon" :src="`/images/icons/${model.icon}.svg`" width="24" height="24" viewbox="0 0 24 24" />
     <span :id="model.id">{{ localize(model.localeKey) }}</span>
+    <img v-if="model.showChevron" v-svg-inline class="icon chevron" :src="`/images/icons/chevron-right.svg`" viewbox="0 0 24 24" width="24" height="24" />
   </div>
   <div class="divider" v-else-if="model.isDivider"></div>
 </template>
@@ -16,11 +17,6 @@ export default {
     model: {
       type: Object,
     },
-  },
-  data() {
-    return {
-      hover: false,
-    };
   },
   computed: {
     isVisible() {
@@ -65,39 +61,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.primary-20 {
-  color: var(--primary20) !important;
-}
-.accent-20 {
-  color: var(--accent20) !important;
-}
-.information-20 {
-  color: var(--blue20) !important;
-}
-.purple-20 {
-  color: var(--purple20) !important;
-}
 .menu-item {
   height: 45px;
   display: flex;
   align-items: center;
-  color: var(--black20);
 
-  span {    
+  span {
     font-size: 16px;
-    font-family: ProximaNova-Semibold;
   }
 
   &:hover {
-
+    color: var(--font-color-highlight);
   }
 
   .icon {
-    margin-right: 10px;
+    margin-right: 15px;
+
+    &.chevron {
+      margin-right: 0;
+      margin-left: auto;
+      order: 2;
+    }
   }
 }
 .divider {
-  border-bottom: 1px solid var(--gray30);
-  margin: 10px 0;
+  height: 20px;
+}
+</style>
+<style lang="scss">
+.menu-item {
+  .icon path {
+    fill: var(--font-color);
+  }
+  &:hover {
+    .icon path {
+      fill: var(--font-color-highlight);
+    }
+  }
 }
 </style>

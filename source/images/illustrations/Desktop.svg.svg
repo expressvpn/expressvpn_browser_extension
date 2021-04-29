@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="280" height="140" viewBox="0 0 280 140">
+  <defs>
+    <linearGradient id="error---switch-accounts@1x7-a" x1="-30.812%" x2="78.7%" y1="-36.432%" y2="83.803%">
+      <stop offset="0%" stop-color="#F0EACF"/>
+      <stop offset="100%" stop-color="#001D2F"/>
+    </linearGradient>
+    <rect id="error---switch-accounts@1x7-b" width="112.491" height="76.869" x="0" y="0" rx="3.614"/>
+    <linearGradient id="error---switch-accounts@1x7-e" x1="90.9%" x2="9.256%" y1="17.806%" y2="69.431%">
+      <stop offset="0%" stop-color="#F0EACF"/>
+      <stop offset="100%" stop-color="#365996"/>
+    </linearGradient>
+    <rect id="error---switch-accounts@1x7-d" width="104.408" height="57.652" x="0" y="0" rx=".904"/>
+    <linearGradient id="error---switch-accounts@1x7-f" x1="69.208%" x2="42.869%" y1="40.092%" y2="48.433%">
+      <stop offset="0%" stop-color="#B6BFC8"/>
+      <stop offset="100%" stop-color="#4A74B2"/>
+    </linearGradient>
+    <linearGradient id="error---switch-accounts@1x7-i" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#365996"/>
+      <stop offset="100%" stop-color="#F0EACF"/>
+    </linearGradient>
+    <path id="error---switch-accounts@1x7-h" d="M1.23230029,0.0287296998 L53.8852914,0.0287296998 C54.2796343,0.0287296998 54.628428,0.284471895 54.7470147,0.660561646 L66.5136524,37.9776659 L66.5136524,37.9776659 L11.9658637,37.9776659 L0.370577028,1.20398995 C0.220513445,0.728073338 0.484669519,0.220616125 0.960586133,0.0705525416 C1.04849406,0.0428338641 1.14012583,0.0287296998 1.23230029,0.0287296998 Z"/>
+    <linearGradient id="error---switch-accounts@1x7-j" x1="30.546%" x2="30.546%" y1="22.223%" y2="79.416%">
+      <stop offset="0%" stop-color="#6B8FB8"/>
+      <stop offset="100%" stop-color="#F0EDDA"/>
+    </linearGradient>
+    <filter id="error---switch-accounts@1x7-l">
+      <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(56)">
+    <circle cx="84" cy="70" r="70" fill="#F0EACF"/>
+    <g transform="translate(0 25)">
+      <g transform="translate(20.33 11.294)">
+        <rect width="17.538" height="11.48" x="5.067" y="1.355" stroke="#001D2F" stroke-width="2.711" rx="4.518"/>
+        <rect width="28.01" height="71.627" y="7.433" fill="#001D2E"/>
+        <g fill="url(#error---switch-accounts@1x7-a)" transform="translate(3.375 10.812)">
+          <ellipse cx="2.025" cy="2.027" rx="2.025" ry="2.027"/>
+          <ellipse cx="4.725" cy="7.095" rx="2.025" ry="2.027"/>
+          <ellipse cx="4.725" cy="17.231" rx="2.025" ry="2.027"/>
+          <ellipse cx="2.025" cy="12.163" rx="2.025" ry="2.027"/>
+          <ellipse cx="2.025" cy="22.299" rx="2.025" ry="2.027"/>
+          <ellipse cx="7.762" cy="2.027" rx="2.025" ry="2.027"/>
+          <ellipse cx="10.462" cy="7.095" rx="2.025" ry="2.027"/>
+          <ellipse cx="10.462" cy="17.231" rx="2.025" ry="2.027"/>
+          <ellipse cx="7.762" cy="12.163" rx="2.025" ry="2.027"/>
+          <ellipse cx="7.762" cy="22.299" rx="2.025" ry="2.027"/>
+          <ellipse cx="13.499" cy="2.027" rx="2.025" ry="2.027"/>
+          <ellipse cx="16.199" cy="7.095" rx="2.025" ry="2.027"/>
+          <ellipse cx="16.199" cy="17.231" rx="2.025" ry="2.027"/>
+          <ellipse cx="13.499" cy="12.163" rx="2.025" ry="2.027"/>
+          <ellipse cx="13.499" cy="22.299" rx="2.025" ry="2.027"/>
+          <ellipse cx="19.236" cy="2.027" rx="2.025" ry="2.027"/>
+          <ellipse cx="19.236" cy="12.163" rx="2.025" ry="2.027"/>
+          <ellipse cx="19.236" cy="22.299" rx="2.025" ry="2.027"/>
+        </g>
+      </g>
+      <g transform="translate(55.116)">
+        <rect width="27.618" height="2.697" x="42.437" y="87.657" fill="#001D2F"/>
+        <polygon fill="#001D2F" points="49.84 71.148 62.651 69.8 62.651 92.703 49.84 91.356" transform="rotate(90 56.246 81.252)"/>
+        <mask id="error---switch-accounts@1x7-c" fill="#fff">
+          <use xlink:href="#error---switch-accounts@1x7-b"/>
+        </mask>
+        <use fill="#001D2F" xlink:href="#error---switch-accounts@1x7-b"/>
+        <rect width="112.491" height="11.126" y="65.743" fill="#365996" mask="url(#error---switch-accounts@1x7-c)"/>
+        <g transform="translate(4.042 4.046)">
+          <mask id="error---switch-accounts@1x7-g" fill="#fff">
+            <use xlink:href="#error---switch-accounts@1x7-d"/>
+          </mask>
+          <use fill="url(#error---switch-accounts@1x7-e)" xlink:href="#error---switch-accounts@1x7-d"/>
+          <path fill="url(#error---switch-accounts@1x7-f)" d="M-56.6340653,54.19564 C-50.5362817,54.19564 -36.8406686,48.7173177 -24.5864632,64.0573727 C-12.3322579,79.3974278 -12.0538669,62.0345083 4.78260698,38.4344236 C21.6190809,14.8343389 45.9761297,14.4971949 45.9761297,34.3886948 C45.9761297,54.2801948 83.5696589,20.9029321 93.0264668,41.8058643 C102.483275,62.7087964 118.242609,34.3886948 122.657601,32.3658304 C127.072594,30.342966 121.163022,124.538621 9.89659926,101.870661 C-101.369824,79.2027002 -62.7318489,54.19564 -56.6340653,54.19564 Z" mask="url(#error---switch-accounts@1x7-g)"/>
+        </g>
+      </g>
+      <g transform="translate(0 45.63)">
+        <path fill="#001D2F" d="M3.68367539,0 L55.9203087,0 C57.1067593,-5.2083588e-15 58.1553335,0.771595003 58.508251,1.90434138 L71.3017152,42.9670643 C71.5243679,43.6817048 71.125533,44.4415312 70.4108925,44.6641839 C70.2803728,44.7048485 70.1444518,44.7255319 70.007744,44.7255319 L15.2643972,44.7255319 C14.4734301,44.7255319 13.7743806,44.2111352 13.5391024,43.455971 L1.0957331,3.51693522 C0.65042761,2.08765416 1.44809741,0.568001506 2.87737847,0.122696015 C3.13841793,0.0413667998 3.41025987,1.38249324e-15 3.68367539,0 Z"/>
+        <path fill="#365996" d="M14.2493639,40.9984043 L88.340144,40.9984043 C89.0886661,40.9984043 89.6954632,41.6052013 89.6954632,42.3537234 L89.6954632,42.8619681 C89.6954632,43.891186 88.8611172,44.7255319 87.8318994,44.7255319 L15.2093816,44.7255319 C14.1801637,44.7255319 13.3458178,43.891186 13.3458178,42.8619681 L13.3458178,41.9019504 C13.3458178,41.4029356 13.7503492,40.9984043 14.2493639,40.9984043 Z"/>
+        <g transform="translate(2.305 1.665)">
+          <mask id="error---switch-accounts@1x7-k" fill="#fff">
+            <use xlink:href="#error---switch-accounts@1x7-h"/>
+          </mask>
+          <use fill="url(#error---switch-accounts@1x7-i)" xlink:href="#error---switch-accounts@1x7-h"/>
+          <path fill="url(#error---switch-accounts@1x7-j)" d="M-2.45137244e-13,10.7863054 C6.09622439,10.7863054 19.7883355,5.2805914 32.0394073,20.6973467 C44.2904792,36.114102 44.568799,18.664368 61.4009678,-5.05371711 C78.2331365,-28.7718022 102.583957,-29.110632 102.583957,-9.11967456 C102.583957,10.8712829 140.167873,-22.672866 149.622263,-1.66541924 C159.076653,19.3420276 174.831958,-9.11967456 179.245821,-11.1526533 C183.659684,-13.185632 177.751624,81.4810014 66.5136524,58.6997011 C-44.7243194,35.9184008 -6.09622439,10.7863054 -2.45137244e-13,10.7863054 Z" mask="url(#error---switch-accounts@1x7-k)"/>
+        </g>
+      </g>
+      <g transform="translate(96 20)">
+        <rect width="32" height="32" opacity=".2"/>
+        <g filter="url(#error---switch-accounts@1x7-l)">
+          <path fill="#001D2F" fill-rule="nonzero" d="M16.3333333 15L6.33333333 15C2.83552992 15 0 17.8355299 0 21.3333333L0 22.6258557C0 23.3622354.596953667 23.959189 1.33333333 23.959189L21.3333333 23.959189C22.069713 23.959189 22.6666667 23.3622354 22.6666667 22.6258557L22.6666667 21.3333333C22.6666667 17.8355299 19.8311367 15 16.3333333 15zM11.3333333 0C7.83552992 0 5 2.83552992 5 6.33333333 5 9.83113675 7.83552992 12.6666667 11.3333333 12.6666667 14.8311367 12.6666667 17.6666667 9.83113675 17.6666667 6.33333333 17.6666667 2.83552992 14.8311367 0 11.3333333 0z" transform="translate(4.673 4.023)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

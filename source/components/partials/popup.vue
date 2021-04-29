@@ -6,10 +6,15 @@ Licensed GPL v2
 <template>
   <div class="popup-container" v-if="options.isVisible">
     <div class="popup" :class='options.style'>
+      <!--
+        <div class="icon-close-holder" @click="options = {}">
+          <img v-svg-inline class="icon-close" src='/images/icons/close.svg' width="20" height="20" viewbox="0 0 24 24" />
+        </div>
+        -->
         <div class="popup-header">{{ localize(options.id + '_title') }}</div>
         <div class="popup-text">{{ localize(options.id + '_text') }}</div>
         <div :class="['popup-button-container', options.style]">
-          <button v-for="(buttonEl, key) in options.buttons" :class="buttonEl.highlightIt ? 'highlight' : ''" @click="buttonEl.callback" :key="key" >
+          <button v-for="(buttonEl, key) in options.buttons" :class="buttonEl.highlightIt ? 'primary' : 'secondary'" @click="buttonEl.callback" :key="key" >
             {{ localize(options.id + '_btn' + key) }}
           </button>
         </div>
@@ -32,29 +37,43 @@ export default {
 
 <style lang="scss" scoped>
 .popup {
-  background: var(--gray50);
-  width: 320px;
+  background: var(--popup-bk);
+  width: 310px;
   height: auto;
-  padding: 12px 14px 15px 14px;
-  border-radius: 4px;
+  padding: 40px 15px 30px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  .icon-close-holder {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 
   &-header {
-    color: var(--black20);
-    font-size: 20px;
+    //font-family: Inter-Bold;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 15px;
   }
   &-text {
-    color: var(--gray10);
-    font-family: ProximaNova-Semibold;
+    //font-family: Inter-Regular;
     font-size: 16px;
-    border-top: 1px solid #DDDDDD;
-    margin: 13px 0;
-    padding-top: 13px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 28px;
+    text-align: center;
   }
   &-container {
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     background: rgba(27, 29, 34, 0.4);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     display: flex;
@@ -62,74 +81,44 @@ export default {
     justify-content: center;
   }
   &-button-container {
+    display: flex;
+    flex-direction: column;
 
     &.horizontal {
-      display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-
-      button {
-        width: 138px;
-        margin: 0 !important;
-      }
     }
 
     button {
-      background: var(--gray50);
-      border-radius: 4px;
-      border: 1px solid #D0D6DA;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-      height: 34px;
-      color: var(--accent20);
-      font-family: ProximaNova-Semibold;
-      font-size: 16px;
-      display: block;
-      width: 100%;
+      margin-top: 15px;
 
-      &.highlight {
-        background: var(--accent20);
-        color: #FFFFFF;
-
-        &:hover {
-          background: var(--accent30);
-          color: #FFF;
-        }
-        &:active {
-          background: var(--accent10);
-          color: #FFF;
-        }
+      &.primary {
+        order: 1;
       }
-
-      &:not(.highlight) {
-        &:hover {
-          color: var(--accent30);
-        }
-        &:active {
-          color: var(--accent20);
-        }
-      }
-
-      &:nth-of-type(n+2) {
-        margin-top: 10px;
+      &.secondary {
+        order: 2;
       }
     }
   }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  button {
-    &.highlight {
-      border: none;
-      color: var(--gray10);
-      &:hover {
-        background: var(--accent10);
-      }
-    }
-    &:not(.highlight) {
-      color: var(--gray10);
-    }
+.icon-close {
+  path {
+    fill: var(--icon-close-default)
+  }
+}
+@media (prefers-color-scheme: light) {
+  .popup {
+    --popup-bk: #{$eds-color-white};
+    --icon-close-default: #{$eds-color-grey-20};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .popup {
+    --popup-bk: #{$eds-color-grey-10};
+    --icon-close-default: #{$eds-color-grey-40};
   }
 }
 </style>

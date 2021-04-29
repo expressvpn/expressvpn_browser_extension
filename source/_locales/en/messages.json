@@ -109,7 +109,7 @@
     "message": "Sign Out"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_title": {
-    "message": "Free Trial Expired"
+    "message": "Stay protected"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
     "message": "Get Subscription"
@@ -226,7 +226,7 @@
     "message": "Unable to connect"
   },
   "error_connection_error_to_location_text": {
-    "message": "Unable to connect to<br>%LOCATION%."
+    "message": "Unable to connect to %LOCATION%."
   },
   "error_connection_error_try_again_button_label": {
     "message": "Try Again"
@@ -260,7 +260,7 @@
     "message": "Account suspended"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "Your free trial has expired, but it's easy to get connected again."
+    "message": "Your free trial has expired, but it’s easy to get connected again."
   },
   "error_free_trial_expired_benefits_title": {
     "message": "Why Upgrade?"
@@ -280,14 +280,14 @@
   "error_free_trial_expired_l4_text": {
     "message": "24/7 customer support"
   },
-  "error_free_trial_expired_l5_text": {
-    "message": "Unlimited bandwidth"
+  "error_free_trial_expired_noIAP_l3_text": {
+    "message": "30-day money-back guarantee"
   },
   "error_free_trial_expired_status_text": {
     "message": "Expired (%1)."
   },
   "error_free_trial_expired_title": {
-    "message": "Free Trial expired"
+    "message": "Free Trial Expired"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
     "message": "Upgrade Now"
@@ -341,7 +341,7 @@
     "message": "Connection limit reached."
   },
   "error_subscription_expired_benefits_text": {
-    "message": "Your subscription has expired, but it's easy to get connected again."
+    "message": "Your subscription has expired, but it’s easy to get connected again."
   },
   "error_subscription_expired_benefits_title": {
     "message": "Why renew?"
@@ -353,13 +353,13 @@
     "message": "Enter activation code"
   },
   "error_subscription_expired_l1_text": {
-    "message": "Apps for every device"
+    "message": "Access all the content you love"
   },
   "error_subscription_expired_l2_text": {
-    "message": "Refer friends, get 30 days free"
+    "message": "Stay secure and anonymous online"
   },
   "error_subscription_expired_l3_text": {
-    "message": "160 locations worldwide"
+    "message": "24/7 support"
   },
   "list_item_locations_worldwide": {
     "message": "160 locations worldwide"
@@ -386,7 +386,7 @@
     "message": "Expired (%1)."
   },
   "error_subscription_expired_title": {
-    "message": "Subscription expired"
+    "message": "Subscription Expired"
   },
   "error_upgrade_app_button_label": {
     "message": "Update Now"
@@ -503,7 +503,7 @@
     "message": "Recommended Locations"
   },
   "location_picker_search_no_results_text": {
-    "message": "NO RESULTS"
+    "message": "No results"
   },
   "location_picker_search_placeholder_text": {
     "message": "Search for a city or country"
@@ -549,6 +549,9 @@
   },
   "main_screen_status_vpn_speedtesting_text": {
     "message": "Speed Test running"
+  },
+  "menu_header": {
+    "message": "Options"
   },
   "menu_cancel_text": {
     "message": "Cancel"
@@ -652,18 +655,6 @@
   },
   "menu_settings_general_language_label": {
     "message": "Language"
-  },
-  "menu_settings_general_display_label": {
-    "message": "Display mode"
-  },
-  "settings_general_display_dropdown_auto_label": {
-    "message": "Match Device Settings"
-  },
-  "settings_general_display_dropdown_light_label": {
-    "message": "Light"
-  },
-  "settings_general_display_dropdown_dark_label": {
-    "message": "Dark"
   },
   "menu_settings_general_name": {
     "message": "Settings"
@@ -822,7 +813,7 @@
     "message": "Your last payment failed"
   },
   "promobar_subscription_expiring_autobill_text": {
-    "message": "Update payment details"
+    "message": "Update Details"
   },
   "promobar_splittunneling_@chrome@_header": {
     "message": "Chrome excluded from VPN"
@@ -870,7 +861,7 @@
     "message": "Your last payment failed"
   },
   "promobar_iap_failed_text":{
-    "message":"Update payment method"
+    "message":"Update Details"
   },
   "notification_extension_update_title": {
     "message": "ExpressVPN Updated"
@@ -986,10 +977,10 @@
     "message": "How can we do better?"
   },
   "rating_improve_report_button": {
-    "message": "Report a problem"
+    "message": "Report a Problem"
   },
   "rating_improve_suggest_button": {
-    "message": "Suggest an improvement"
+    "message": "Suggest an Improvement"
   },
   "rating_thanks4_text": {
     "message": "Thanks for your rating!"
@@ -1001,7 +992,7 @@
     "message": "Thank you! Rate us on Firefox Add-ons Store?"
   },
   "rating_no_thanks_text": {
-    "message": "No thanks"
+    "message": "No Thanks"
   },
   "rating_prompt_ok_button": {
     "message": "OK"
@@ -1043,10 +1034,10 @@
     "message": "Unable to send. Please check your connection and try again."
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "A VPN protects your privacy by disguising your IP address"
+    "message": "Take control of your privacy and protect your data online"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Stream all the content you love without restrictions"
+    "message": "Enjoy your favorite shows and apps wherever you are"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Safely connect to public Wi-Fi in hotels, cafés, and airports"
@@ -1130,16 +1121,16 @@
     "message": "Unable to Connect"
   },
   "networkLock_status_connecting_text": {
-    "message": "Connecting to <b>%LOCATION%</b>."
+    "message": "Connecting to %LOCATION%."
   },
   "networkLock_status_reconnecting_text": {
-    "message": "Reconnecting to <b>%LOCATION%</b>."
+    "message": "Reconnecting to %LOCATION%."
   },
   "networkLock_status_connected_text": {
-    "message": "Connected to <b>%LOCATION%</b>."
+    "message": "Connected to %LOCATION%."
   },
   "networkLock_status_connection_error_text": {
-    "message": "Unable to connect to <b>%LOCATION%</b>."
+    "message": "Unable to connect to %LOCATION%."
   },
   "networkLock_hint_connecting_text": {
     "message": "Internet traffic is currently blocked to protect your privacy."

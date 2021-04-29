@@ -1,13 +1,14 @@
-<!-- 
+<!--
 ExpressVPN Browser Extension:
-Copyright 2017-2019 Express VPN International Ltd
+Copyright 2017-2020 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
   <div class="search-input-container">
-    <div class="icon icon-medium icon-96-search"></div>
     <input v-model="searchText" v-on:input="updateInput()" :placeholder="localize('location_picker_search_placeholder_text')" class="search-input" :style="isTyping ? 'padding-right: 35px;' : ''" autofocus>
-    <div class="icon icon-medium icon-18-cancel" @click="cancelSearch()"></div>
+    <div class="icon icon-cancel-container" @click="cancelSearch()">
+      <img v-svg-inline class="icon-cancel" src='/images/icons/cancel.svg' height="24" width="24" viewbox="0 0 24 24" />
+    </div>
   </div>
 </template>
 
@@ -39,7 +40,8 @@ export default {
   mounted() {
     if (process.env.NODE_ENV === 'development') {
       let self = this;
-      document.querySelector('.search-input-container').insertAdjacentHTML('afterend', '<button class="mock-button" id="mockSearch"></button>');
+      console.log("here")
+      document.querySelector('.search-input-container').insertAdjacentHTML('afterend', '<button id="mockSearch"></button>');
       document.getElementById('mockSearch').addEventListener('click', () => { self.searchText = 'q'; self.updateInput(); });
     }
   },
@@ -49,56 +51,65 @@ export default {
 <style lang="scss" scoped>
 .search-input {
   width: 100%;
-  background-color: var(--gray50);
-  color: var(--black20);
-  font-size: 18px;
-  line-height: 23px;
+  background-color: var(--input-bk);
+  font-size: 16px;
   border: 0;
   padding: 0 0 0 0;
-  
+
   &::placeholder {
-    color: var(--gray20);
+    color: var(--placeholder-color);
+    //font-family: Inter-Regular;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 28px;
   }
 
   &-container {
-    height: 52px;
-    background-color: var(--gray50);
-    box-shadow: 0 1.5px 4px 2px rgba(0, 0, 0, 0.1);
-    margin: 15px 0;
-    padding: 14px 16px 13px 54px;
-    border-radius: 4px;
+    height: 60px;
+    background-color: var(--input-bk);
+    margin-bottom: 15px;
+    padding: 15px 40px 15px 20px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     position: relative;
+    border: 1px solid var(--font-color);
 
-    .icon {
+    .icon-cancel {
       position: absolute;
-      font-size: 29px;
+      right: 15px;
 
-      &.icon-96-search {
-        left: 15px;
-        color: var(--gray30);
-      }
-      &.icon-18-cancel {
-        color: var(--gray30);
-        right: 16px;
-
-        &:hover {
-          color: var(--black20);
-        }
+      &-container {
+        width: 24px;
+        height: 24px;
       }
     }
   }
 }
 </style>
 <style lang="scss">
-[data-theme="dark"] {
-  .search-input {
-    background-color: var(--gray40);
-
-    &-container {
-      background-color: var(--gray40);
-    }
+#mockSearch {
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+}
+.search-input-container .icon-cancel path {
+  fill: var(--font-color);
+}
+@media (prefers-color-scheme: light) {
+  .search-input-container {
+    --input-bk: #{$eds-color-white};
+    --placeholder-color: #{$eds-color-grey-20};
+    
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .search-input-container {
+    --input-bk: #{$eds-color-grey-10};
+    --placeholder-color: #{$eds-color-grey-40};
   }
 }
 </style>
