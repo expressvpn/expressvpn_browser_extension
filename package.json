@@ -12,7 +12,7 @@
     "screenshots": "node test/screenshots/index.js"
   },
   "dependencies": {
-    "ua-parser-js": "^0.7.22",
+    "ua-parser-js": "^0.7.24",
     "uuid": "^8.0.0",
     "vue": "^2.6.11",
     "vue-inline-svg": "^2.0.0",
