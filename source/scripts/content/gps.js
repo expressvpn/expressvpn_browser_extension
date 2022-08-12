@@ -40,7 +40,7 @@ function hookGeo() {
   function waitWatchPosition() {
     if ((typeof hookedObj.fakeGeo !== 'undefined')) {
       if (hookedObj.fakeGeo === true) {
-        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        navigator.geolocation.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
         return Math.floor(Math.random() * 10000); // random id
       } else {
         hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
