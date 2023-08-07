@@ -3,6 +3,7 @@ ExpressVPN Browser Extension:
 Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
+import * as LDClient from 'launchdarkly-js-client-sdk';
 import UAParser from 'ua-parser-js';
 import { v4 as uuidv4 } from 'uuid';
 import com from './modules/nativeCommunication';
@@ -35,6 +36,8 @@ const MIN_APP_VERSION = {
     prevNotificationId: '',
     prevState: '',
   };
+  let subscriptionId;
+  let ldClient; // Launch Darkly client
 
   console.info('Loaded!', new Date());
   // Generates and saves a random nonce to be used in the network lock page to make that page was meant to be shown by the extension
@@ -43,23 +46,37 @@ const MIN_APP_VERSION = {
   require('./modules/https/https.js');
 
   function setWebrtcOption() {
-    let enableStates = ['connecting', 'reconnecting', 'connected', 'disconnecting', 'connection_error'];
     // checking if the current browser supports chrome.privacy
     if (typeof chrome.privacy === 'undefined') {
       return;
     }
+    const enableStates = ['connecting', 'reconnecting', 'connected', 'disconnecting', 'connection_error'];
+    const isEnabled = (prefs['chrome.prevent_webrtc_leaks'] && (enableStates.includes(currentInfo.state)));
     // update webRTCIPHandlingPolicy setting
     // first get the setting access permission and usage details
     chrome.privacy.network.webRTCIPHandlingPolicy.get({}, (details) => {
       // check if we can modify it
       if ((details) && ((details.levelOfControl === 'controllable_by_this_extension') || (details.levelOfControl === 'controlled_by_this_extension'))) {
-        let isEnabled = (prefs['chrome.prevent_webrtc_leaks'] && (enableStates.includes(currentInfo.state)));
-        let settingValue = isEnabled ? 'disable_non_proxied_udp' : 'default';
+        const settingValue = isEnabled ? 'disable_non_proxied_udp' : 'default';
         chrome.privacy.network.webRTCIPHandlingPolicy.set({ value: settingValue }, () => {
           // check if we managed to change the setting successfuly.
           // Not sure when this can ever fail if we passed the 'controllable_by_this_extension' check
-          if (chrome.runtime.lastError !== undefined) {
-            // console.error(chrome.runtime.lastError);
+          if (chrome.runtime.lastError) {
+            console.error('[Not able to set webRTCIPHandlingPolicy]', chrome.runtime.lastError);
+          }
+        });
+      }
+    });
+    // update peerConnectionEnabled setting (required on Firefox to fully block WebRTC)
+    // eslint-disable-next-line no-unused-expressions
+    chrome.privacy.network.peerConnectionEnabled?.get({}, (details) => {
+      // check if we can modify it
+      if ((details) && ((details.levelOfControl === 'controllable_by_this_extension') || (details.levelOfControl === 'controlled_by_this_extension'))) {
+        const settingValue = !isEnabled;
+        chrome.privacy.network.peerConnectionEnabled.set({ value: settingValue }, () => {
+          // check if we managed to change the setting successfuly
+          if (chrome.runtime.lastError) {
+            console.error('[Not able to set peerConnectionEnabled]', chrome.runtime.lastError);
           }
         });
       }
@@ -179,6 +196,14 @@ const MIN_APP_VERSION = {
             break;
           case 'connected':
             updateIcon(ICONS.connected);
+            if (data.oldstate === 'connecting' && myBrowser.name !== 'Firefox') {
+              // Allow new DNS and whatnot to settle in and then send telemetry event if the user allows them
+              setTimeout(() => {
+                // Part of the Google captcha metrics collection described below in the webRequest's section.
+                // If the user allows it, count a successful connection
+                sendTelemetry('captcha', 'connection_success', true);
+              }, 1500);
+            }
             break;
           case 'disconnecting':
             updateIcon(ICONS.connecting);
@@ -258,9 +283,17 @@ const MIN_APP_VERSION = {
             is_smart_location: false,
           };
         } else {
-          currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, utils.localizeLocation(data.name));
-          if (currentInfo.smartLocation.id === currentInfo.selectedLocation.id) {
-            currentInfo.selectedLocation.is_smart_location = true;
+          // Since the new protocol's SelectedLocationChanged event contains the full selected location object,
+          // we can just use it. We cannot just check for currentInfo.isNewProtocol since this event might
+          // get sent before the first status message is received from the engine.
+          // eslint-disable-next-line no-lonely-if
+          if (['name', 'id', 'is_smart_location', 'country_code'].every(key => key in data)) {
+            currentInfo.selectedLocation = data;
+          } else {
+            currentInfo.selectedLocation = locationPicker.getLocationByName(allLocationsList, utils.localizeLocation(data.name));
+            if (currentInfo.smartLocation.id === currentInfo.selectedLocation.id) {
+              currentInfo.selectedLocation.is_smart_location = true;
+            }
           }
         }
         break;
@@ -307,7 +340,7 @@ const MIN_APP_VERSION = {
         com.getEnginePreferences();
       }
       if ((typeof currentInfo.selectedLocation !== 'undefined') && (currentInfo.selectedLocation.name !== '')) {
-        currentInfo.selectedLocation.country_code = locationsData[currentInfo.selectedLocation.name].country_code;
+        currentInfo.selectedLocation.country_code = locationsData[currentInfo.selectedLocation.name]?.country_code;
       }
       currentInfo.recommendedLocationsList = recommendedLocationsList;
       currentInfo.allLocationsList = allLocationsList;
@@ -352,10 +385,21 @@ const MIN_APP_VERSION = {
     });
   }
 
-  function sendData(category) {
-    if (!localStorage.getItem('uuid')) {
-      localStorage.setItem('uuid', uuidv4()); // generate random uuid
+  /**
+   * Posts an event to GA
+   * @param {string} category
+   * @param {string?} action
+   * @param {boolean?} attachAppInfo - If we should attach the app's version and state to the event, defaults to false
+   */
+  function sendTelemetry(category, action, attachAppInfo = false) {
+    // Only send telemetry data if the user opted in
+    if (!prefs.helpImprove) {
+      return;
     }
+    if (!localStorage.getItem('uuid')) {
+      localStorage.setItem('uuid', uuidv4()); // generate random uuid to identify this as a unique, yet unknown user
+    }
+
     // https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid
     const fetchOptions = {
       method: 'POST',
@@ -368,8 +412,27 @@ const MIN_APP_VERSION = {
         'ec': category,
       }),
     };
+    if (action) {
+      fetchOptions.body.append('ea', action);
+    }
+    if (attachAppInfo) {
+      const dimensions = [
+        { name: 'desktop_app_version', index: 1, value: currentInfo.app.version }, // ExpressVPN desktop app version
+        { name: 'extension_version', index: 2, value: chrome.runtime.getManifest().version }, // ExpressVPN extension's version
+        { name: 'connection_state', index: 3, value: (currentInfo.state === 'connected' ? 'use_vpn' : 'not_connected') }, // If the user is currently connected to a VPN server
+      ];
+      dimensions.forEach(el => fetchOptions.body.append(`cd${el.index}`, el.value));
+    }
+
     fetch('https://www.google-analytics.com/collect', fetchOptions);
   }
+
+  chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => {
+    sendResponse({
+      coords: currentInfo.selectedLocation?.coords,
+      fakeIt: ['connected', 'connecting', 'disconnecting', 'reconnecting', 'connection_error'].includes(currentInfo.state) && prefs.hideLocation,
+    });
+  });
 
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.mock && process.env.NODE_ENV === 'development') {
@@ -458,9 +521,11 @@ const MIN_APP_VERSION = {
     } else if (message.proceedAnyway) {
       whiteList.push({ 'tabId': message.tabId, 'url': message.url });
       chrome.tabs.update(message.tabId, { url: message.url });
+    } else if (message.telemetry2) { // ToDo: Merge both telemetry calls...
+      sendTelemetry(message.category, message.action);
     } else if (message.telemetry) {
-      if (prefs.helpImprove === true && !localStorage2.get('GA_' + message.category)) {
-        sendData(message.category);
+      if (!localStorage2.get('GA_' + message.category)) {
+        sendTelemetry(message.category);
         const today = new Date();
         localStorage2.set('GA_' + message.category, true, (new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)));
       }
@@ -504,6 +569,44 @@ const MIN_APP_VERSION = {
     }
   });
 
+  async function initializeLaunchDarkly() {
+    const userInfo = {
+      key: await utils.sha256(subscriptionId),
+      custom: {
+        app_version: currentInfo.app.version,
+        extension_version: `${__BROWSER__}_${chrome.runtime.getManifest().version}`,
+        client_os: currentInfo.os,
+      },
+    };
+    console.log(`[LD] Initialized with key: ${__LD_ID__} and userInfo:`, userInfo);
+    ldClient = LDClient.initialize(__LD_ID__, userInfo, { bootstrap: 'localStorage' });
+    ldClient.on('ready', () => {
+      // noop
+    });
+  }
+
+  /**
+   * Attempt to detect if a Google's Captcha is shown to the user when using our service
+   *
+   * The frequency of Google captcha hits by users is an important quality metric that will help us improve the user experience when using Google services.
+   * We are making improvements to reduce the number of Captchas that our users are seeing in their day-to-day.
+   * We are only interested in captchas shown when using a Google service. This metric is only collected if the user has the "Help Improve" option enabled.
+   * No user private data, or any data about the online activity is collected in the metric.
+   * You can read more about our commitment to privacy in our Privacy policy: https://www.expressvpn.com/privacy-policy
+   */
+  if (myBrowser.name !== 'Firefox') {
+    chrome.webRequest.onCompleted.addListener(({ tabId }) => {
+      chrome.tabs.get(tabId, ({ url }) => {
+        // Confirm the URL that uses the recaptcha is the Google's internal "unusual traffic" page
+        if (url.startsWith('https://www.google.com/sorry/')) {
+          console.log('[captcha debug] CAPTCHA DETECTED!');
+          // The following method will check if the user allows telemetry and if so, count this event.
+          sendTelemetry('captcha', 'captcha_seen', true);
+        }
+      });
+    }, { urls: ['https://www.google.com/recaptcha/api2/anchor?*'] }); // Only interested when recaptcha is used which we later filter to just Google "unusual traffic" page
+  }
+
   chrome.webRequest.onBeforeRequest.addListener(details => {
     if (
       details.method === 'GET'
@@ -519,7 +622,7 @@ const MIN_APP_VERSION = {
   }, ['blocking']);
 
   // message listener for background communication
-  window.addEventListener('message', (event) => {
+  window.addEventListener('message', async (event) => {
     if (event.origin !== chrome.extension.getURL('/').slice(0, -1)) {
       // console.error('Bad origin', event.origin);
       return false;
@@ -599,12 +702,21 @@ const MIN_APP_VERSION = {
           currentInfo.ratingData.isRegularUser = utils.isRegularUser(currentInfo.subscription);
         }
         currentInfo.website_url = message.currentInfo.website_url || currentInfo.website_url;
+        currentInfo.isNewProtocol = message.currentInfo.isNewProtocol;
         currentInfo.raw = message.currentInfo.raw;
         if (currentInfo.raw.state === 'connected' && currentInfo.raw.current_location && currentInfo.raw.connection) {
           currentInfo.previousConnection = { id: currentInfo.raw.current_location.id, protocol: currentInfo.raw.connection.protocol };
         }
 
         updateStatus('ServiceStateChanged', { newstate: message.currentInfo.state });
+        if (currentInfo.subscription.subscription_id !== subscriptionId) {
+          subscriptionId = currentInfo.subscription.subscription_id;
+          // Shutdown any existing instance of the LD client
+          await ldClient?.close();
+          if (subscriptionId) {
+            initializeLaunchDarkly();
+          }
+        }
         break;
       case 'connectedToHelper':
         com.getStatus();

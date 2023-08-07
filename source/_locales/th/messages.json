@@ -7,9 +7,15 @@
     "message": "โลดแล่นบนโลกออนไลน์ด้วยความเร็วสูงสุด ซ่อนตำแหน่งของคุณ เข้าถึงเนื้อหาได้ทุกที่ พร้อมควบคุมแอป ExpressVPN โดยตรงจาก Firefox",
     "description": "The description of the application"
   },
+  "app_description_text_beta": {
+    "message": "ExpressVPN Beta มีไว้สำหรับผู้ที่ชื่นชอบการใช้ชีวิตที่ล้ำสมัย ร่วมเป็นคนแรกที่ได้รับคุณสมบัติล่าสุด"
+  },
   "app_name_title": {
-    "message": "ExpressVPN: VPN พร็อกซีเพื่อปลดบล็อกทุกอย่าง",
+    "message": "ExpressVPN: พร็อกซี VPN อินเทอร์เน็ตที่ดีกว่า",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN อินเทอร์เน็ตที่ดีกว่า"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -58,7 +64,7 @@
     "message": "กลับสู่หน้าหลัก"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "หากคุณมีคำถามใดๆ โปรด [ติดต่อฝ่ายสนับสนุน]"
+    "message": "หากคุณมีคำถามใด ๆ โปรด [ติดต่อฝ่ายสนับสนุน]"
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "ออกจากระบบ"
@@ -167,7 +173,7 @@
     "message": "บัญชีถูกระงับ"
   },
   "error_free_trial_expired_benefits_text": {
-    "message": "การทดลองใช้ฟรีของคุณหมดอายุแต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
+    "message": "การทดลองใช้ฟรีของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่าย ๆ"
   },
   "error_free_trial_expired_benefits_title": {
     "message": "ทำไมต้องอัปเกรด?"
@@ -315,7 +321,7 @@
     "message": "ครั้งหน้า"
   },
   "error_subscription_expired_benefits_text": {
-    "message": "การสมัครสมาชิกของคุณหมดอายุแต่การเชื่อมต่ออีกครั้งทำได้ง่ายๆ"
+    "message": "การสมัครสมาชิกของคุณหมดอายุ แต่การเชื่อมต่ออีกครั้งทำได้ง่าย ๆ"
   },
   "error_subscription_expired_benefits_title": {
     "message": "เหตุใดจึงต่ออายุ?"
@@ -510,7 +516,7 @@
     "message": "ยกเลิกการเชื่อมต่อถี่"
   },
   "issue_reporter_opt8": {
-    "message": "อื่นๆ"
+    "message": "อื่น ๆ"
   },
   "issue_reporter_report_sent_header": {
     "message": "ส่งรายงานแล้ว"
@@ -532,6 +538,27 @@
   },
   "issue_reporter_website_label": {
     "message": "เว็บไซต์"
+  },
+  "keys_adoption_header_v1": {
+    "message": "ต้องการประหยัดเวลาหรือไม่?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "เบื่อกับการลืมรหัสผ่านใช่หรือไม่?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "เพิ่มลงใน Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "ไม่ใช่ตอนนี้"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys เป็นเครื่องมือจัดการรหัสผ่านฟรีที่ปลอดภัย ซึ่งสามารถบันทึกและป้อนข้อมูลการเข้าสู่ระบบของคุณในเว็บไซต์ใดก็ได้ด้วยการคลิกเพียงครั้งเดียว"
+  },
+  "keys_adoption_text_v2": {
+    "message": "ทดลองใช้ ExpressVPN Keys ตัวจัดการรหัสผ่านฟรีที่สามารถบันทึกและป้อนข้อมูลการเข้าสู่ระบบได้ไม่จำกัดโดยอัตโนมัติและปลอดภัย"
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
   },
   "language_dropdown_danish": {
     "message": "เดนมาร์ก (Dansk)",
@@ -783,7 +810,7 @@
     "message": "ป้องกันไม่ให้เว็บไซต์ค้นพบที่อยู่ IP จริงและตำแหน่งของคุณในขณะที่เชื่อมต่อกับ VPN"
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "หยุดการกำหนดตำแหน่ง HTML5 จากการเปิดเผยสถานที่ที่มีอยู่จริงของคุณในขณะที่เชื่อมต่อกับ VPN"
+    "message": "หยุดการระบุตำแหน่งทางภูมิศาสตร์ HTML5 บนเว็บไซต์ส่วนใหญ่ ปิดบังตำแหน่งทางกายภาพของคุณในขณะที่เชื่อมต่อกับ VPN"
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "เชื่อมต่อกับเว็บไซต์ HTTPS เวอร์ชันที่มีความปลอดภัยมากขึ้นเมื่อมีโอกาส"
@@ -801,7 +828,7 @@
     "message": "การตั้งค่าความเป็นส่วนตัว"
   },
   "menu_setup_other_devices": {
-    "message": "ตั้งค่าอุปกรณ์อื่นๆ"
+    "message": "ตั้งค่าอุปกรณ์อื่น ๆ"
   },
   "menu_signout_p1_text": {
     "message": "คุณแน่ใจใช่หรือไม่? คุณจะลงชื่อออกจากแอปเดสก์ท็อป"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "ช่วยปรับปรุง ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "เรียนรู้เพิ่มเติม"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "ไม่เป็นไร ขอบคุณ"
   },
@@ -1149,7 +1179,7 @@
     "message": "เรียนรู้เพิ่มเติม"
   },
   "welcome_screen3_p1_text": {
-    "message": "ส่วนขยายจะปลอมตำแหน่งของคุณ บล็อก WebRTC และรวม HTTPS Everywhere"
+    "message": "ส่วนขยายนี้หลอกตำแหน่งของคุณบนเว็บไซต์ส่วนใหญ่ บล็อก WebRTC และรวมถึง HTTPS Everywhere"
   },
   "welcome_skip_button_label": {
     "message": "ข้าม"

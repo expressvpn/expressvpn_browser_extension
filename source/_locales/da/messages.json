@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Gå sikkert online med lynhurtig hastighed. Slør din placering, få adgang til indhold overalt, og styr ExpressVPN-appen fra Chrome.",
+    "message": "Gå online sikkert og lynhurtigt. Skjul din placering, få adgang til indhold overalt, og tjek ExpressVPN-appen direkte fra Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
     "message": "Gå online sikkert og lynhurtigt. Skjul din placering, få adgang til indhold overalt, og tjek ExpressVPN-appen direkte fra Firefox.",
     "description": "The description of the application"
   },
+  "app_description_text_beta": {
+    "message": "ExpressVPN's betaversion er til dem, som gerne vil prøve noget nyt. Vær den første til at få de nyeste funktioner."
+  },
   "app_name_title": {
     "message": "ExpressVPN: VPN-proxy til et bedre internet",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN's betaprogram: VPN til bedre net"
   },
   "app_short_name_title": {
     "message": "ExpressVPN ",
@@ -179,7 +185,7 @@
     "message": "Apps til enhver enhed"
   },
   "error_free_trial_expired_l2_text": {
-    "message": "30-dages pengene-tilbage-garanti "
+    "message": "30 dages fuld returret"
   },
   "error_free_trial_expired_l3_text": {
     "message": "160 placeringer verden over"
@@ -188,7 +194,7 @@
     "message": "Kundesupport 24/7"
   },
   "error_free_trial_expired_noIAP_l3_text": {
-    "message": "30-dages pengene-tilbage-garanti"
+    "message": "30 dages fuld returret"
   },
   "error_free_trial_expired_status_text": {
     "message": "Udløbet (%1)."
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Hjemmeside"
   },
+  "keys_adoption_header_v1": {
+    "message": "Vil du spare tid?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Træt af at glemme adgangskoder?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Føj til Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Ikke nu"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys er en gratis, sikker adgangskodeadministrator, der kan gemme og automatisk udfylde dine logins på enhver hjemmeside med ét enkelt klik."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Prøv ExpressVPN Keys, en gratis adgangskodeadministrator, der sikkert og automatisk kan gemme og udfylde et ubegrænset antal logins."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Dansk (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -605,7 +632,7 @@
     "message": "Kundesupport 24/7"
   },
   "list_item_30day_guarantee": {
-    "message": "30-dages pengene-tilbage garanti "
+    "message": "30 dages fuld returret"
   },
   "list_item_apps_for_every_device": {
     "message": "Apps til enhver enhed"
@@ -674,7 +701,7 @@
     "message": "Hastighedstest kører"
   },
   "menu_beta_feedback": {
-    "message": "Send betafeedback"
+    "message": "Send feedback om betaversion "
   },
   "menu_cancel_text": {
     "message": "Annuller"
@@ -696,7 +723,7 @@
     "message": "Valgmuligheder"
   },
   "menu_help_support": {
-    "message": "Hjælp & support"
+    "message": "Hjælp og support"
   },
   "menu_item_acknowledgements_text": {
     "message": "Anerkendelser"
@@ -711,7 +738,7 @@
     "message": "Diagnostiske oplysninger "
   },
   "menu_item_DNS_leak_test_text": {
-    "message": "DNS-lækagetest"
+    "message": "DNS-brudtest"
   },
   "menu_item_extension_version_text": {
     "message": "Udvidelsesversion: %VERSION%"
@@ -783,7 +810,7 @@
     "message": "Forhindr internetsider i at opdage din sande IP-adresse og placering, når du er forbundet til VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Stop HTML5-geoplacering i at afsløre dit fysiske opholdssted, når du er forbundet til VPN."
+    "message": "Stop sporingen af HTML5-geoplacering på de fleste sider, så du kan skjule din fysiske placering, når du er forbundet til VPN'en."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Genopret automatisk forbindelsen til den mere sikre HTTPS-version af hjemmesider, når de er tilgængelige."
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Hjælp med at forbedre ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Lær mere"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nej tak"
   },
@@ -1128,7 +1158,7 @@
     "message": "Support 24/7"
   },
   "welcome_not_installed_reasons_li_4_text": {
-    "message": "30-dages pengene-tilbage-garanti"
+    "message": "30 dages fuld returret"
   },
   "welcome_not_installed_scene_1_text": {
     "message": "Tag kontrol af dit privatliv og beskyt dine data online"
@@ -1149,7 +1179,7 @@
     "message": "Lær mere"
   },
   "welcome_screen3_p1_text": {
-    "message": "Udvidelsen skjuler din placering, blokerer WebRTC og inkluderer HTTPS Everywhere."
+    "message": "Udvidelsen skjuler din placering på de fleste sider, blokerer WebRTC og inkluderer HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Spring over"

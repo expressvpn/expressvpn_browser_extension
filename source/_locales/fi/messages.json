@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Selaa nettiä huippunopeasti. Hallinnoi ExpressVPN-sovellustasi Chromessa, muuta sijaintiasi ja hanki pääsy sisältöön missä tahansa.",
+    "message": "Selaa nettiä nopeasti ja turvallisesti. Käytä ExpressVPN:ää Chromen kautta, muuta sijaintia ja hanki pääsy sisältöön missä vain.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Surffaile verkossa turvallisesti ja erinomaisilla nopeuksilla. Kätke sijaintisi, katso sisältöä missä vain ja käytä ExpressVPN-sovellusta suoraan Firefoxista.",
+    "message": "Surffaa turvallisesti ja huippunopeuksilla. Kätke sijaintisi, katso sisältöä missä vain ja käytä ExpressVPN:ää suoraan Firefoxista.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "ExpressVPN:n beta-versio sopii niille, jotka haluavat olla edellä aikaa. Kokeile uusia ominaisuuksia ensimmäisenä."
   },
   "app_name_title": {
     "message": "ExpressVPN: VPN-proxy parempaan internettiin",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta – parempi netti VPN:n avulla"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -176,7 +182,7 @@
     "message": "Syötä aktivointikoodi"
   },
   "error_free_trial_expired_l1_text": {
-    "message": "Sovellukset joka laitteelle"
+    "message": "Sovellus kaikille laitteille"
   },
   "error_free_trial_expired_l2_text": {
     "message": "30 päivän rahat takaisin -takuu"
@@ -533,12 +539,33 @@
   "issue_reporter_website_label": {
     "message": "Verkkosivusto"
   },
+  "keys_adoption_header_v1": {
+    "message": "Haluatko säästää aikaa?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Kyllästynyt salasanojen unohteluun?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Lisää Chromeen"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Ei nyt"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys on ilmainen ja turvallinen salasanaohjelma, joka tallentaa ja täyttää salasanat puolestasi."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Kokeile ExpressVPN Keysiä, ilmaista salasanaohjelmaa, joka tallentaa ja täyttää kirjautumistiedot turvallisesti."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Tanska (Dansk)",
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_dutch": {
-    "message": "Hollanti (Alankomaat)",
+    "message": "Hollanti (Nederlands)",
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_english": {
@@ -546,7 +573,7 @@
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_finnish": {
-    "message": "Finnish (Suomi)",
+    "message": "Suomi (Suomi)",
     "description": "Do not translate the text between parentheses"
   },
   "language_dropdown_french": {
@@ -608,7 +635,7 @@
     "message": "30 päivän rahat takaisin -takuu"
   },
   "list_item_apps_for_every_device": {
-    "message": "Sovellukset jokaiselle laitteelle"
+    "message": "Sovellus kaikille laitteille"
   },
   "list_item_locations_worldwide": {
     "message": "160 sijaintia ympäri maailmaa"
@@ -783,7 +810,7 @@
     "message": "Estä sivustoja näkemästä todellista IP-osoitettasi ja sijaintiasi ollessasi yhteydessä VPN:ään."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Estä HTML5-geosijaintia paljastamasta fyysistä sijaintiasi ollessasi yhteydessä VPN:ään."
+    "message": "Estää HTML5-geosijaintia paljastamasta fyysistä sijaintiasi useimmilla sivustoilla ollessasi yhteydessä VPN:ään."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Muodosta yhteys automaattisesti sivustojen turvallisempaan HTTPS-versioon, kun sellainen on saatavilla."
@@ -813,7 +840,7 @@
     "message": "Suosittele ExpressVPN:ää – saat ilmaispäiviä!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Tarjoamme sinulle 30 ilmaispäivää jokaisesta tilauksen tekevästä ystävästä!"
+    "message": "30 päivää uudesta tilaajasta."
   },
   "myaccount_account_expired_label": {
     "message": "Vanhentunut"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Paranna ExpressVPN:ää"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Lue lisää"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Ei kiitos"
   },
@@ -1149,7 +1179,7 @@
     "message": "Lue lisää"
   },
   "welcome_screen3_p1_text": {
-    "message": "Laajennus piilottaa sijaintisi, estää WebRTC:n ja käyttää HTTPS Everywhereä."
+    "message": "Laajennus piilottaa sijaintisi useimmilla sivustoilla, estää WebRTC:n ja käyttää HTTPS Everywhereä."
   },
   "welcome_skip_button_label": {
     "message": "Ohita"

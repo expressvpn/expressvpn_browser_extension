@@ -23,6 +23,9 @@
   "Australia": {
     "message": "Avustralya"
   },
+  "Australia - Adelaide": {
+    "message": "Avustralya - Adelaide"
+  },
   "Australia - Brisbane": {
     "message": "Avustralya - Brisbane"
   },
@@ -36,10 +39,13 @@
     "message": "Avustralya - Sydney"
   },
   "Australia - Sydney - 2": {
-    "message": "Avustralya - Sydeny - 2"
+    "message": "Avustralya - Sydney - 2"
   },
   "Australia - Sydney - 3": {
-    "message": "Avustralya - Sydeny - 3"
+    "message": "Avustralya - Sydney - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Avustralya - Woolloomooloo"
   },
   "Austria": {
     "message": "Avusturya"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "Butan"
+  },
+  "Bolivia": {
+    "message": "Bolivya"
   },
   "Bosnia and Herzegovina": {
     "message": "Bosna-Hersek"
@@ -140,6 +149,12 @@
   "France": {
     "message": "Fransa"
   },
+  "France - Alsace": {
+    "message": "Fransa - Alsas"
+  },
+  "France - Marseille": {
+    "message": "Fransa - Marsilya"
+  },
   "France - Paris - 1": {
     "message": "Fransa - Paris - 1"
   },
@@ -197,8 +212,11 @@
   "India": {
     "message": "Hindistan"
   },
+  "India (via Singapore)": {
+    "message": "Hindistan (Singapur'dan)"
+  },
   "India (via UK)": {
-    "message": "Hindistan (Britanya'dan)"
+    "message": "Hindistan (BK'dan)"
   },
   "India - Chennai": {
     "message": "Hindistan - Chennai"
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "İtalya - Milan"
   },
+  "Italy - Naples": {
+    "message": "İtalya - Napoli"
+  },
   "Japan": {
     "message": "Japonya"
+  },
+  "Japan - Shibuya": {
+    "message": "Japonya - Shibuya"
   },
   "Japan - Tokyo": {
     "message": "Japonya - Tokyo",
@@ -346,6 +370,9 @@
   "Philippines (via Singapore)": {
     "message": "Filipinler (Singapur'dan)"
   },
+  "Pick for Me": {
+    "message": "Benim için Seç"
+  },
   "Poland": {
     "message": "Polonya"
   },
@@ -393,7 +420,7 @@
     "message": "İspanya"
   },
   "Spain - Barcelona": {
-    "message": "İspanya - Barcelona"
+    "message": "İspanya - Barselona"
   },
   "Spain - Barcelona - 2": {
     "message": "İspanya - Barselona - 2"
@@ -429,31 +456,37 @@
     "message": "Türkiye"
   },
   "UK - Docklands": {
-    "message": "Britanya - Docklands"
+    "message": "BK - Docklands"
   },
   "UK - East London": {
-    "message": "Britanya - Doğu Londra"
+    "message": "BK - Doğu Londra"
   },
   "UK - Kent": {
-    "message": "Britanya - Kent"
+    "message": "BK - Kent"
   },
   "UK - London": {
-    "message": "Britanya - Londra"
+    "message": "BK - Londra"
+  },
+  "UK - Midlands": {
+    "message": "BK - Midlands"
   },
   "UK - Wembley": {
-    "message": "Britanya - Wembley"
+    "message": "BK - Wembley"
   },
   "Ukraine": {
     "message": "Ukrayna"
   },
   "United Kingdom": {
-    "message": "Britanya"
+    "message": "Birleşik Krallık"
   },
   "United States": {
     "message": "ABD"
   },
   "Uruguay": {
     "message": "Uruguay"
+  },
+  "USA - Albuquerque": {
+    "message": "ABD - Albuquerque"
   },
   "USA - Atlanta": {
     "message": "ABD - Atlanta"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "ABD - Hollywood"
+  },
+  "USA - Lincoln Park": {
+    "message": "ABD - Lincoln Park"
   },
   "USA - Los Angeles": {
     "message": "ABD - Los Angeles"
@@ -511,6 +547,9 @@
   },
   "USA - New York - 2": {
     "message": "ABD - New York - 2"
+  },
+  "USA - Phoenix": {
+    "message": "ABD - Phoenix"
   },
   "USA - Salt Lake City": {
     "message": "ABD - Salt Lake City"

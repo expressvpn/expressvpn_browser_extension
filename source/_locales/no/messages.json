@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Bruk internett sikkert med lynrask hastighet. Spoof plasseringen din, få tilgang til alt og kontroller ExpressVPN-appen fra Chrome.",
+    "message": "Bruk internett sikkert med lynrask hastighet. Spoof plasseringen din, få tilgang overalt og kontroller ExpressVPN-appen fra Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Gå trygt på nett med lynraske hastigheter. Spoof plasseringen din, få tilgang til innhold hvor som helst og kontroller ExpressVPN-appen direkte fra Firefox.",
+    "message": "Bruk internett sikkert med lynrask hastighet. Spoof plasseringen din, få tilgang overalt og kontroller ExpressVPN-appen fra Firefox.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "ExpressVPNs betaversjon er for folk som liker å være i fremkant. Vær først med å få de nyeste funksjonene."
   },
   "app_name_title": {
     "message": "ExpressVPN: VPN-proxy for et bedre internett",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN for et bedre internett"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -25,7 +31,7 @@
     "message": "Kjøp et abonnement"
   },
   "error_app_not_found_contact_support_text": {
-    "message": "Trenger du hjelp? Vennligst [kontakt kundestøtte]."
+    "message": "Trenger du hjelp? [Kontakt kundestøtte]."
   },
   "error_app_not_found_download_LINUX_button_label": {
     "message": "Last ned Linux-appen"
@@ -40,7 +46,7 @@
     "message": "Ny hos ExpressVPN? [Kom i gang]"
   },
   "error_app_not_found_require_CHROMIUM_text": {
-    "message": "Vennligst installer ExpressVPN-appen fra Google Play-Butikken."
+    "message": "Installer ExpressVPN-appen fra Google Play Butikk."
   },
   "error_app_not_found_require_LINUX_snap_text": {
     "message": "Hvis du installerte nettleseren din fra <b>Ubuntu Software Center</b>, vil ikke utvidelsen være i stand til å kommunisere med Linux-appen. [Les mer]"
@@ -58,7 +64,7 @@
     "message": "Tilbake til hjem"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "Hvis du har spørsmål, vennligst [kontakt kundestøtte]."
+    "message": "Hvis du har spørsmål, [kontakt kundestøtte]."
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "Logg ut"
@@ -67,7 +73,7 @@
     "message": "Utløpt (%1)."
   },
   "error_business_subscription_expired_text": {
-    "message": "Vennligst kontakt kontoeieren for å kjøpe et nytt bedriftsabonnement."
+    "message": "Kontakt kontoeieren for å kjøpe et nytt bedriftsabonnement."
   },
   "error_business_subscription_expired_title": {
     "message": "Abonnementet er utløpt"
@@ -82,7 +88,7 @@
     "message": "Denne utvidelsen er kun tilgjengelig for <b>macOS 10.10 / Windows 7</b> og nyere."
   },
   "error_compatibility_error_os_version_p2_text": {
-    "message": "Vennligst oppdater operativsystemet ditt for å bruke utvidelsen."
+    "message": "Oppdater operativsystemet ditt for å bruke utvidelsen."
   },
   "error_compatibility_error_os_version_update_button_label": {
     "message": "Les mer"
@@ -127,10 +133,10 @@
     "message": "Du har blitt logget ut fordi kontodetaljene dine ble oppdatert."
   },
   "error_forced_signout_p2_linux_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst kjør denne kommandoen i terminalen din for å logge inn igjen:"
+    "message": "For å fortsette å bruke ExpressVPN, kjør denne kommandoen i terminalen din for å logge inn igjen:"
   },
   "error_forced_signout_p2_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst logg inn igjen."
+    "message": "Logg inn igjen for å fortsette å bruke ExpressVPN."
   },
   "error_forced_signout_signin_button_label": {
     "message": "Logg inn"
@@ -142,17 +148,17 @@
     "message": "Vi kunne ikke bekrefte fakturainformasjonen din, så vi har kansellert betalingen din."
   },
   "error_fraudster_p1_text": {
-    "message": "For å reaktivere abonnementet ditt, <br/>vennligst send en e-post til <br/>"
+    "message": "For å reaktivere abonnementet ditt, <br>send en e-post til"
   },
   "error_fraudster_p2_text": {
     "message": "emnefelt: <span class='bold DO_NOT_TRANSLATE'>Billing Verification</span>.",
     "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
-    "message": "Vennligst inkluder et bilde av kredittkortet du brukte (med BARE de 4 siste sifrene og navnet synlig)"
+    "message": "Legg ved et bilde av kredittkortet du brukte (med KUN de 4 siste sifrene og navnet ditt synlig)."
   },
   "error_fraudster_p4_text": {
-    "message": "Vennligst oppgi telefonnummeret ditt (med landkode), og når på dagen vi kan ringe deg."
+    "message": "Oppgi telefonnummeret ditt (med landkode), og når på dagen vi kan ringe deg."
   },
   "error_fraudster_p5_text": {
     "message": "Fakturaavdelingen vår vil svare i løpet av 24–48 timer."
@@ -215,7 +221,7 @@
     "message": "Logg ut"
   },
   "error_IAP_CONTINUE_USING_p1_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst oppdater betalingsinformasjonen i iTunes- / App Store-kontoen din."
+    "message": "Oppdater betalingsinformasjonen på iTunes- / App Store-kontoen din for å fortsette å bruke ExpressVPN."
   },
   "error_IAP_MAIN_title": {
     "message": "Betalingen mislyktes"
@@ -224,16 +230,16 @@
     "message": "ExpressVPN vil aktiveres automatisk i løpet av 30 minutter fra du oppdaterer informasjonen din."
   },
   "error_not_activated_LINUX_text": {
-    "message": "Vennligst kjør denne kommandoen i terminalen din for å aktivere skrivebordsappen:"
+    "message": "Kjør denne kommandoen i terminalen din for å aktivere skrivebordsappen:"
   },
   "error_not_activated_text": {
-    "message": "Vennligst logg inn på ExpressVPNs skrivebordsapp for å bruke denne utvidelsen."
+    "message": "Logg inn på ExpressVPNs skrivebordsapp for å bruke denne utvidelsen."
   },
   "error_not_activated_title": {
     "message": "App ikke aktivert"
   },
   "error_NOT_INSTALLED_chromeOS_manual": {
-    "message": "Hvis Play Butikk-appen ikke er tilgjengelig på din Chromebook, vennligst følg våre instruksjoner for [manuell konfigurasjon]."
+    "message": "Hvis Play Butikk-appen ikke er tilgjengelig på din Chromebook, kan du følge våre instruksjoner for [manuell konfigurasjon]."
   },
   "error_NOT_INSTALLED_chromeOS_primary_button": {
     "message": "Installer ExpressVPN"
@@ -282,10 +288,10 @@
     "message": "Tilkoblingsgrensen er nådd."
   },
   "error_simultaneous_connection_iap_false_p2_text": {
-    "message": "Vennligst koble fra en enhet eller [kjøp et ytterligere abonnement]."
+    "message": "Koble fra en enhet eller [kjøp et ytterligere abonnement]."
   },
   "error_simultaneous_connection_iap_true_p2_text": {
-    "message": "Vennligst koble fra en enhet."
+    "message": "Koble fra en enhet."
   },
   "error_simultaneous_connection_learn_more_button_label": {
     "message": "Les mer"
@@ -366,7 +372,7 @@
     "message": "Senere"
   },
   "error_subscription_expiring_autobill_p1_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst oppdater betalingsinformasjonen din."
+    "message": "Oppdater betalingsinformasjonen din for å fortsette å bruke ExpressVPN."
   },
   "error_subscription_expiring_autobill_title": {
     "message": "Betalingen feilet"
@@ -378,7 +384,7 @@
     "message": "Senere"
   },
   "error_subscription_expiring_p1_text": {
-    "message": "For å fortsette å bruke ExpressVPN, vennligst forny abonnementet ditt."
+    "message": "Forny abonnementet ditt for å fortsette å bruke ExpressVPN."
   },
   "error_subscription_expiring_renew_button_label": {
     "message": "Forny nå"
@@ -402,10 +408,10 @@
     "message": "Prøver fortsatt å koble til."
   },
   "hint_network_state_captive_portal_text": {
-    "message": "Vennligst logg inn på Wi-Fi-nettverket for å bruke VPN."
+    "message": "Logg inn på Wi-Fi-nettverket for å bruke VPN."
   },
   "hint_network_state_not_ready_text": {
-    "message": "Vennligst vent mens nettverket ditt blir klart."
+    "message": "Vent litt mens nettverket ditt klargjøres."
   },
   "hint_network_state_not_sure_connecting_text": {
     "message": "Finner ingen internettilkobling. VPN vil koble til når den er tilgjengelig."
@@ -471,7 +477,7 @@
     "message": "Har du prøvd å koble til en annen serverlokasjon?"
   },
   "issue_reporter_hint_not_sent_text": {
-    "message": "Kan ikke sende. Vennligst sjekk tilkoblingen din og prøv igjen."
+    "message": "Kan ikke sende. Kontroller tilkoblingen din og prøv igjen."
   },
   "issue_reporter_hint_opt3": {
     "message": "Har du prøvd å koble til en serverlokasjon i det landet hvor tjenesten du ønsker tilgang til er lokalisert?"
@@ -532,6 +538,27 @@
   },
   "issue_reporter_website_label": {
     "message": "Nettsted"
+  },
+  "keys_adoption_header_v1": {
+    "message": "Vil du spare tid?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Lei av å glemme passord?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Legg til i Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Ikke nå"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys er en gratis, sikker passordlagring som kan lagre og fylle inn påloggingene dine med bare ett klikk."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Prøv ExpressVPN Keys, en gratis passordlagring som kan lagre og fylle i pålogginger automatisk og sikkert."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
   },
   "language_dropdown_danish": {
     "message": "Dansk (Dansk)",
@@ -783,7 +810,7 @@
     "message": "Forhindrer nettsteder i å oppdage din virkelige IP-adresse og plassering mens du er tilkoblet VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Stopp HTML5 geolokasjon fra å avsløre det fysiske oppholdsstedet ditt mens du er koblet til VPN."
+    "message": "Stopp HTML5-geolokalisering på de fleste nettsteder, skjul den fysiske plasseringen din mens du er koblet til VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Koble automatisk til den sikrere HTTPS-versjonen av nettsteder hvor det er tilgjengelig."
@@ -879,13 +906,13 @@
     "message": "VPN tilkoblet"
   },
   "networkLock_header_connecting_text": {
-    "message": "Vennligst vent"
+    "message": "Vent litt"
   },
   "networkLock_header_connection_error_text": {
     "message": "Kunne ikke koble til"
   },
   "networkLock_header_reconnecting_text": {
-    "message": "Vennligst vent"
+    "message": "Vent litt"
   },
   "networkLock_hint_connected_text": {
     "message": "Du vil bli omdirigert om kort tid."
@@ -1080,7 +1107,7 @@
     "message": "Tilkoblingsgrensen er nådd"
   },
   "vpn_status_notification_connection_limit_text": {
-    "message": "Vennligst koble fra en enhet eller kjøp et ytterligere abonnement."
+    "message": "Koble fra en enhet eller kjøp et ytterligere abonnement."
   },
   "vpn_status_notification_reconnecting_label": {
     "message": "VPN kobler til på nytt ..."
@@ -1096,6 +1123,9 @@
   },
   "welcome_help_improve_expressvpn_header": {
     "message": "Bidra til å forbedre ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Les mer"
   },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nei takk"

@@ -13,7 +13,6 @@ import { mapGetters } from 'vuex';
 import home from './home.vue';
 import errorContainer from './errors/errorContainer.vue';
 import welcome from './welcome.vue';
-import issueReporter from './issueReporter.vue';
 
 export default {
   name: 'mainScreen',
@@ -29,7 +28,6 @@ export default {
     home,
     errorContainer,
     welcome,
-    issueReporter,
   },
   computed: {
     ...mapGetters([

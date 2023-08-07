@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Приватность, защита и скорость. Скройте местоположение и получите свободный доступ к контенту с приложением ExpressVPN для Chrome.",
+    "message": "Безопасность и скорость. Скройте местоположение и получите свободный доступ к контенту, управляя приложением ExpressVPN из Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Используйте Интернет безопасно и на высокой скорости. Вы можете скрыть местоположение и получить свободный доступ к контенту отовсюду, управляя приложением ExpressVPN прямо из Firefox.",
+    "message": "Безопасность и скорость. Скройте местоположение и получите свободный доступ к контенту, управляя приложением ExpressVPN из Firefox.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "Бета-версия ExpressVPN предназначена для тех, кто хочет идти в ногу с прогрессом. Получите первыми доступ к новейшим функциям."
   },
   "app_name_title": {
     "message": "ExpressVPN: VPN-прокси для лучшего Интернета",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "Бета-версия ExpressVPN для лучшего Интернета"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Сайт"
   },
+  "keys_adoption_header_v1": {
+    "message": "Хотите сэкономить время?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Опять забыли свой пароль?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Добавить в Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Не сейчас"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys — это бесплатный менеджер паролей, который поможет быстро сохранять и заполнять логины."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Попробуйте ExpressVPN Keys для безопасного хранения и автоподстановки логинов."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Датский (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -741,7 +768,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Скрыть местоположение"
+    "message": "заменить местоположение"
   },
   "menu_rate_expressvpn": {
     "message": "Оценить ExpressVPN"
@@ -783,7 +810,7 @@
     "message": "Не позволяет веб-сайтам обнаружить ваш настоящий IP-адрес и местоположение при подключении к VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Не позволяет HTML5 Geolocation раскрывать ваше физическое местонахождение при подключении к VPN."
+    "message": "Отключает функцию геолокации HTML5 на большинстве сайтов, маскируя ваше физическое местонахождение при подключении к VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Автоматическое подключение к более безопасной HTTPS-версии веб-сайтов, если такая имеется."
@@ -813,7 +840,7 @@
     "message": "Порекомендуйте ExpressVPN и получите бесплатное обслуживание!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "30 дней в подарок за каждого друга, оформившего подписку!"
+    "message": "30 дн. в подарок за подписку друга."
   },
   "myaccount_account_expired_label": {
     "message": "Срок истек"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Помощь в улучшении ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Подробнее"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Не сейчас"
   },
@@ -1149,7 +1179,7 @@
     "message": "Подробнее"
   },
   "welcome_screen3_p1_text": {
-    "message": "Расширение скрывает ваше местоположение, блокирует WebRTC и включает HTTPS Everywhere."
+    "message": "Расширение заменяет ваше местоположение на большинстве сайтов, блокирует WebRTC и включает HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Пропустить"

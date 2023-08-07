@@ -23,6 +23,9 @@
   "Australia": {
     "message": "Australia"
   },
+  "Australia - Adelaide": {
+    "message": "Australia - Adelaide"
+  },
   "Australia - Brisbane": {
     "message": "Australia - Brisbane"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "Australia - Sydney - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Australia - Woolloomooloo"
   },
   "Austria": {
     "message": "Itävalta"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "Bhutan"
+  },
+  "Bolivia": {
+    "message": "Bolivia"
   },
   "Bosnia and Herzegovina": {
     "message": "Bosnia ja Hertsegovina"
@@ -140,6 +149,12 @@
   "France": {
     "message": "Ranska"
   },
+  "France - Alsace": {
+    "message": "Ranska - Alsace"
+  },
+  "France - Marseille": {
+    "message": "Ranska - Marseille"
+  },
   "France - Paris - 1": {
     "message": "Ranska - Pariisi - 1"
   },
@@ -197,6 +212,9 @@
   "India": {
     "message": "Intia"
   },
+  "India (via Singapore)": {
+    "message": "Intia (Singaporen kautta)"
+  },
   "India (via UK)": {
     "message": "Intia (via Iso-Britannia)"
   },
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "Italia - Milano"
   },
+  "Italy - Naples": {
+    "message": "Italia - Napoli"
+  },
   "Japan": {
     "message": "Japani"
+  },
+  "Japan - Shibuya": {
+    "message": "Japani - Shibuya"
   },
   "Japan - Tokyo": {
     "message": "Japani - Tokio",
@@ -257,7 +281,7 @@
     "message": "Kenia"
   },
   "Kyrgyzstan": {
-    "message": "Kirgistan"
+    "message": "Kirgisia"
   },
   "Laos": {
     "message": "Laos"
@@ -345,6 +369,9 @@
   },
   "Philippines (via Singapore)": {
     "message": "Filippiinit (via Singapore)"
+  },
+  "Pick for Me": {
+    "message": "Valitse puolestani"
   },
   "Poland": {
     "message": "Puola"
@@ -440,6 +467,9 @@
   "UK - London": {
     "message": "Iso-Britannia - Lontoo"
   },
+  "UK - Midlands": {
+    "message": "Iso-Britannia - Midlands"
+  },
   "UK - Wembley": {
     "message": "Iso-Britannia - Wembley"
   },
@@ -450,91 +480,100 @@
     "message": "Iso-Britannia"
   },
   "United States": {
-    "message": "Yhdysvallat"
+    "message": "USA"
   },
   "Uruguay": {
     "message": "Uruguay"
   },
+  "USA - Albuquerque": {
+    "message": "USA - Albuquerque"
+  },
   "USA - Atlanta": {
-    "message": "Yhdysvallat - Atlanta"
+    "message": "USA - Atlanta"
   },
   "USA - Chicago": {
-    "message": "Yhdysvallat - Chicago"
+    "message": "USA - Chicago"
   },
   "USA - Dallas": {
-    "message": "Yhdysvallat - Dallas"
+    "message": "USA - Dallas"
   },
   "USA - Dallas - 2": {
-    "message": "Yhdysvallat - Dallas - 2"
+    "message": "USA - Dallas - 2"
   },
   "USA - Denver": {
-    "message": "Yhdysvallat - Denver"
+    "message": "USA - Denver"
   },
   "USA - Hollywood": {
-    "message": "Yhdysvallat - Hollywood"
+    "message": "USA - Hollywood"
+  },
+  "USA - Lincoln Park": {
+    "message": "USA - Lincoln Park"
   },
   "USA - Los Angeles": {
-    "message": "Yhdysvallat - Los Angeles"
+    "message": "USA - Los Angeles"
   },
   "USA - Los Angeles - 1": {
-    "message": "Yhdysvallat - Los Angeles - 1"
+    "message": "USA - Los Angeles - 1"
   },
   "USA - Los Angeles - 2": {
-    "message": "Yhdysvallat - Los Angeles - 2"
+    "message": "USA - Los Angeles - 2"
   },
   "USA - Los Angeles - 3": {
-    "message": "Yhdysvallat - Los Angeles - 3"
+    "message": "USA - Los Angeles - 3"
   },
   "USA - Los Angeles - 4": {
-    "message": "Yhdysvallat - Los Angeles - 4"
+    "message": "USA - Los Angeles - 4"
   },
   "USA - Los Angeles - 5": {
-    "message": "Yhdysvallat - Los Angeles - 5"
+    "message": "USA - Los Angeles - 5"
   },
   "USA - Miami": {
-    "message": "Yhdysvallat - Miami"
+    "message": "USA - Miami"
   },
   "USA - Miami - 2": {
-    "message": "Yhdysvallat - Miami - 2"
+    "message": "USA - Miami - 2"
   },
   "USA - New Jersey - 1": {
-    "message": "Yhdysvallat - New Jersey - 1"
+    "message": "USA - New Jersey - 1"
   },
   "USA - New Jersey - 2": {
-    "message": "Yhdysvallat - New Jersey - 2"
+    "message": "USA - New Jersey - 2"
   },
   "USA - New Jersey - 3": {
-    "message": "Yhdysvallat - New Jersey - 3"
+    "message": "USA - New Jersey - 3"
   },
   "USA - New York": {
-    "message": "Yhdysvallat - New York"
+    "message": "USA - New York"
   },
   "USA - New York - 2": {
-    "message": "Yhdysvallat - New York - 2"
+    "message": "USA - New York - 2"
+  },
+  "USA - Phoenix": {
+    "message": "USA - Phoenix"
   },
   "USA - Salt Lake City": {
-    "message": "Yhdysvallat - Salt Lake City"
+    "message": "USA - Salt Lake City"
   },
   "USA - San Francisco": {
-    "message": "Yhdysvallat - San Francisco"
+    "message": "USA - San Francisco"
   },
   "USA - San Jose": {
-    "message": "Yhdysvallat - San Jose"
+    "message": "USA - San Jose"
   },
   "USA - Santa Monica": {
-    "message": "Yhdysvallat - Santa Monica"
+    "message": "USA - Santa Monica"
   },
   "USA - Seattle": {
-    "message": "Yhdysvallat - Seattle"
+    "message": "USA - Seattle"
   },
   "USA - Tampa - 1": {
-    "message": "Yhdysvallat - Tampa - 1"
+    "message": "USA - Tampa - 1"
   },
   "USA - Washington DC": {
-    "message": "Yhdysvallat - Washington DC"
+    "message": "USA - Washington DC"
   },
   "USA - Washington DC - 2": {
-    "message": "Yhdysvallat - Washington DC - 2"
+    "message": "USA - Washington DC - 2"
   },
   "Uzbekistan": {
     "message": "Uzbekistan"

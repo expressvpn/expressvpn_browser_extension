@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Yüksek hızla çevrimiçi olun. ExpressVPN uygulamasını Chrome'da kontrol edin, konumunuzu gizleyin ve her yerden içeriklere erişin.",
+    "message": "Yüksek hızla çevrimiçi olun. Konumunuzu gizleyin, içeriklere her yerden erişin ve ExpressVPN uygulamasını Chrome'dan kontrol edin.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Yüksek hızda daha güvenli bir şekilde çevrimiçi olun. Konumunuzu gizleyin, içeriklere her yerden erişin ve ExpressVPN uygulamasını doğrudan Firefox üzerinden kontrol edin.",
+    "message": "Yüksek hızla çevrimiçi olun. Konumunuzu gizleyin, içeriklere her yerden erişin ve ExpressVPN uygulamasını Firefox'tan kontrol edin.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "ExpressVPN beta, üstün teknoloji ile yaşamayı seven kişiler içindir. En yeni özellikleri önce siz edinin."
   },
   "app_name_title": {
     "message": "ExpressVPN: Daha iyi internet için VPN proxy",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: Daha iyi internet için VPN"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Web sitesi"
   },
+  "keys_adoption_header_v1": {
+    "message": "Zaman kazanmak ister misiniz?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Şifreleri unutmaktan sıkıldınız mı?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Chrome'a Ekle"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Şimdi Değil"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys, giriş bilgilerinizi tek tıkla her web sitesinde kaydedebilip doldurabilen ücretsiz, güvenli bir şifre yöneticisidir."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Sınırsız sayıda giriş bilgisini güvenle otomatik şekilde kaydedip doldurabilen ücretsiz şifre yöneticisi ExpressVPN Keys'i deneyin."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Danimarkaca (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "VPN'e bağlı iken web sitelerinin gerçek IP adresinizi ve konumunuzu öğrenmelerini önleyin."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "VPN'e bağlı iken HTML5 konum belirlemenin nerede olduğunuzu ortaya çıkarmasını önleyin."
+    "message": "VPN'e bağlı iken çoğu sitede HTML5 konum belirlemeyi durdurarak fiziksel konumunuzu gizleyin."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Uygun olduğunda web sitelerinin daha güvenli HTTPS versiyonlarına otomatik olarak bağlanın."
@@ -810,10 +837,10 @@
     "message": "Çıkış Yap"
   },
   "myaccount_account_active_p1_text": {
-    "message": "ExpressVPN'i paylaşın ve ücretsiz hizmet edinin!"
+    "message": "ExpressVPN'i paylaş ve ücretsiz hizmet edin!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Abonelik satın alan her arkadaşınız için her ikinize de 30 gün veriyoruz."
+    "message": "Kaydolan her arkadaş için ikinize de ücretsiz 30 gün veriyoruz."
   },
   "myaccount_account_expired_label": {
     "message": "Sona eriş tarihi"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPN'i İyileştirin"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Daha fazlasını öğrenin"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Hayır Teşekkürler"
   },
@@ -1149,7 +1179,7 @@
     "message": "Daha fazlasını öğrenin"
   },
   "welcome_screen3_p1_text": {
-    "message": "Bu eklenti konumunuzu gizler, WebRTC'yi engeller ve HTTPS Everywhere'i içerir."
+    "message": "Bu eklenti çoğu sitede konumunuzu gizler, WebRTC'yi engeller ve HTTPS Everywhere'i içerir."
   },
   "welcome_skip_button_label": {
     "message": "Atla"

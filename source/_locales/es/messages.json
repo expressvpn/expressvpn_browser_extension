@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Navegue de forma segura y a gran velocidad. Oculte su ubicación, acceda a sus contenidos y maneje la app de ExpressVPN desde Chrome.",
+    "message": "Navegue con seguridad y a gran velocidad. Oculte su ubicación, acceda a sus contenidos y maneje la app de ExpressVPN desde Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Navegue por internet de manera segura y a máxima velocidad. Oculte su ubicación, acceda a contenidos desde cualquier parte y controle la aplicación de ExpressVPN directamente desde Firefox.",
+    "message": "Navegue con seguridad y a velocidades increíbles. Oculte su ubicación, acceda a sus contenidos desde cualquier parte y maneje la app de ExpressVPN desde Firefox.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "La beta de ExpressVPN es para los que disfrutan de la tecnología de punta. Sea el primero en probar las últimas funcionalidades."
   },
   "app_name_title": {
     "message": "ExpressVPN: proxy VPN para una mejor internet",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN para una mejor internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Página web"
   },
+  "keys_adoption_header_v1": {
+    "message": "¿Quiere ahorrarse tiempo?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "¿Ya está cansado de olvidar sus contraseñas?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Agregar a Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Ahora no"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys: un gestor de contraseñas gratuito y seguro. Almacene y rellene sus credenciales en un clic."
+  },
+  "keys_adoption_text_v2": {
+    "message": "ExpressVPN Keys: un gestor de contraseñas gratuito y seguro. Almacene y rellene todas sus credenciales."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Danés (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "Evitar que las páginas web descubran su verdadera ubicación y dirección IP mientras esté conectado a la VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Evitar que la geolocalización de HTML5 revele su ubicación física mientras esté conectado a la VPN."
+    "message": "Evite la geolocalización de HTML5 en la mayoría de las páginas web, enmascarando su ubicación física al estar conectado a la VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Conectarse automáticamente a la versión HTTPS, más segura, de las páginas web cuando esté disponible."
@@ -810,7 +837,7 @@
     "message": "Cerrar sesión"
   },
   "myaccount_account_active_p1_text": {
-    "message": "¡Comparta ExpressVPN para obtener  servicio gratis!"
+    "message": "¡Servicio gratis de ExpressVPN!"
   },
   "myaccount_account_active_p2_text": {
     "message": "¡Por cada amigo suyo que se suscriba, ambos recibirán 30 días gratis!"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Ayudar a mejorar ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Más información"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "No, gracias"
   },
@@ -1149,7 +1179,7 @@
     "message": "Más información"
   },
   "welcome_screen3_p1_text": {
-    "message": "La extensión oculta su ubicación, bloquea WebRTC e incluye HTTPS Everywhere."
+    "message": "La extensión oculta su ubicación en la mayoría de las páginas web, bloquea WebRTC e incluye HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Omitir"

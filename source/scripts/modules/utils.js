@@ -36,12 +36,16 @@ const currentInfo = {
     latest_version: '',
     latest_version_url: '',
   },
-  preferences: {},
+  preferences: {
+    preferred_protocol: 'auto',
+  },
   subscription: {},
   website_url: 'https://www.ujsrxts.com',
   connectingTimes: [],
   localizedStrings: {},
   ratingData: rating.defaultRatingData,
+  isNewProtocol: false,
+  flags: {},
   raw: {},
 };
 
@@ -377,6 +381,18 @@ const getLastIAPFatalError = (subscriptionObj) => {
   return iapStatus;
 };
 
+/**
+* Returns a sha256 string of the parameter (https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
+* @param {String} message
+*/
+const sha256 = async (message) => {
+  const msgBuffer = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex;
+};
+
 export {
   isNullOrEmpty,
   fixedEncodeURIComponent,
@@ -400,4 +416,5 @@ export {
   isInGracePeriod,
   getLastIAPFatalError,
   isSubscriptionExpired,
+  sha256,
 };

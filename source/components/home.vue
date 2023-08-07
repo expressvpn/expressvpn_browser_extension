@@ -28,21 +28,6 @@ Licensed GPL v2
         <transition mode="out-in">
           <hint v-if="!utils.isNullOrEmpty(hintText)" :stringKey="hintText" :iconName="hintIcon" :type="hintType" />
 
-          <div v-else-if="isIssueReporterPromptVisible" class="location-box report-issue">
-            <div class="report-issue-left">
-              <div class="report-issue-label">{{ localize('home_report_issue_label') }}</div>
-              <div class="report-issue-text">{{ localize('home_report_issue_text') }}</div>
-            </div>
-            <div class="report-issue-right">
-              <div class="report-issue-button" @click="feedback(false)">
-                <img v-svg-inline class="rate-icon" src='/images/icons/rate.svg' width="40" height="40" viewbox="0 0 24 24" />
-              </div>
-              <div class="report-issue-button" @click="feedback(true)">
-                <img v-svg-inline class="rate-icon" src='/images/icons/rate.svg' width="40" height="40" viewbox="0 0 24 24" />
-              </div>
-            </div>
-          </div>
-
           <div v-else-if="['ready', 'connected'].includes(currentInfo.state)" class="location-buttons">
             <div class="location-box" v-for="location in visibleLocations" v-bind:key="location.id" @click="connectToLocation(location)">
                 <div class="location-box-text-type">{{ localize(`main_screen_${location.type}_location_text`) }}</div>
@@ -97,22 +82,10 @@ export default {
       hintType: '',
       show4starHint: false,
       forceRatingPrompt: false,
-      forceIssueReporterPrompt: false,
       NOW: Date.now(),
-      hideFeedbackPrompt: false,
-      timesShownToday: 0,
     };
   },
   watch: {
-    showIssueReporterPrompt: function(newVal, oldVal) {
-      if (newVal === true && oldVal === false) {
-        const today = (new Date()).getDate();
-        let timesShown = JSON.parse(localStorage.getItem('timesShown') || '{}');
-        this.timesShownToday = (parseInt(timesShown[today], 10) || 0) + 1;
-        timesShown[today] = this.timesShownToday;
-        localStorage.setItem('timesShown', JSON.stringify(timesShown));
-      }
-    },
     showRatingPrompt: function(newVal, oldVal) {
       if (newVal === true && oldVal === false) {
         chrome.storage.sync.get('rating', (storage) => {
@@ -127,23 +100,6 @@ export default {
     },
   },
   computed: {
-    isIssueReporterPromptVisible() {
-      const shouldBeVisible = (this.showIssueReporterPrompt && this.timesShownToday <= 2);
-      if (shouldBeVisible === true) {
-        chrome.runtime.sendMessage({ telemetry: true, category: 'issue_reporter_prompt_shown' });
-      }
-      return shouldBeVisible;
-    },
-    showIssueReporterPrompt() {
-      let diffTime = this.NOW - this.currentInfo.hasCurrentStateSince;
-      return (
-        this.currentInfo.state === 'ready'
-        && this.currentInfo.ratingData.previousConnectionTime > 0
-        && this.currentInfo.ratingData.previousConnectionTime < 10 * 60
-        && diffTime > 0 && diffTime < 10 * 1000
-        && this.hideFeedbackPrompt === false
-      ) || (this.forceIssueReporterPrompt === true);
-    },
     showRatingPrompt() {
       const requiredConnectionTime = (__IS_ALPHA__ || process.env.NODE_ENV === 'development') ? 0 : 15 * 60;
       const rating = this.currentInfo.ratingData;
@@ -241,14 +197,6 @@ export default {
     },
   },
   methods: {
-    feedback(hasFeedback) {
-      if (hasFeedback === false) {
-        this.hideFeedbackPrompt = true;
-      } else {
-        this.$store.dispatch('setCurrentContainer', 'issueReporter');
-      }
-      chrome.runtime.sendMessage({ telemetry: true, category: `issue_reporter_prompt_thumb_${hasFeedback ? 'down' : 'up'}` });
-    },
     onDiscardRatingPrompt() {
       this.discardPrompt = true; // trigger computed
       this.forceRatingPrompt = false;
@@ -321,20 +269,6 @@ export default {
     window.setInterval(function () {
       self.NOW = Date.now();
     }, 1000);
-
-    // Delete old issue reporter localStorage
-    let timesShown = JSON.parse(localStorage.getItem('timesShown') || '{}');
-    Object.keys(timesShown).forEach(day => parseInt(day, 10) === (new Date()).getDate() || delete timesShown[day]);
-    localStorage.setItem('timesShown', JSON.stringify(timesShown));
-
-    if (process.env.NODE_ENV === 'development') {
-      if (this.currentInfo.forceRatingPrompt) {
-        this.$root.$emit('show-rating-prompt');
-      } else if (this.currentInfo.forceIssueReporterPrompt) {
-        localStorage.removeItem('timesShown');
-        this.forceIssueReporterPrompt = true;
-      }
-    }
   },
 };
 </script>
@@ -342,46 +276,6 @@ export default {
 <style lang="scss" scoped>
 .no-highlight:hover, .no-highlight:active {
   color: inherit !important;
-}
-
-.report-issue {
-  margin-top: 10px;
-  height: 72px;
-  padding: 6px 16px 12px 14px;
-  display: flex;
-  justify-content: space-between;
-
-  &-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 192px;
-    padding-top: 2px;
-  }
-  &-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    div:first-of-type {
-      margin-right: 8px;
-    }
-  }
-
-  &-label {
-    font-size: 12px;
-  }
-  &-text {
-    //font-family: Inter-Medium;
-    font-size: 12px;
-    width: 105px;
-    font-weight: 500;
-    letter-spacing: 0px;
-  }
-
-  &-button:last-of-type {
-    transform: scaleX(-1) scaleY(-1);
-  }
 }
 
 .content {
@@ -427,7 +321,7 @@ export default {
         bottom: 13px;
       }
 
-      &:hover:not(.report-issue):not(.location-box-connecting) {
+      &:hover:not(.location-box-connecting) {
         background: var(--location-box-bg-hover);
         box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.1);
       }
@@ -514,29 +408,6 @@ export default {
   fill: $eds-color-grey-30;
 }
 
-.report-issue {
-  &-button {
-    .rate-icon path {
-      fill: $eds-color-success-30;
-    }
-    &:hover {
-      .rate-icon path {
-        fill: $eds-color-success-40;
-      }
-    }
-
-    &:last-of-type {
-      .rate-icon path {
-        fill: $eds-color-error-30;
-      }
-      &:hover {
-        .rate-icon path {
-          fill: $eds-color-error-40;
-        }
-      }
-    }
-  }
-}
 @media (prefers-color-scheme: light) {
   .content {
     --location-box-bg: #{$eds-color-white};

@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Ga veilig en supersnel online. Verander uw locatie, krijg overal toegang tot content, en bedien de ExpressVPN app vanuit Chrome.",
+    "message": "Ga veilig en supersnel online. Spoof uw locatie, krijg overal toegang tot content en bedien de ExpressVPN app vanuit Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Ga veilig online, en supersnel. Verander uw locatie, krijg overal toegang tot content, en bedien de ExpressVPN app rechtstreeks vanuit Firefox.",
+    "message": "Ga veilig en supersnel online. Spoof uw locatie, krijg overal toegang tot content en bedien de ExpressVPN app rechtstreeks vanuit Firefox.",
     "description": "The description of the application"
   },
+  "app_description_text_beta": {
+    "message": "De ExpressVPN bèta is voor iedereen die graag voorloper is. Word de eerste die de nieuwste functies krijgt."
+  },
   "app_name_title": {
-    "message": "ExpressVPN: VPN proxy voor een beter internet",
+    "message": "ExpressVPN: VPN-proxy voor een beter internet",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN bèta: VPN voor een beter internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -477,7 +483,7 @@
     "message": "Hebt u al geprobeerd verbinding te maken met een server locatie in het land waar de dienst waar u toegang tot wilt zich bevindt?"
   },
   "issue_reporter_hint_opt6": {
-    "message": "Hebt u al geprobeerd verbinding te maken met een andere serverlocatie of VPN protocol?"
+    "message": "Hebt u al geprobeerd verbinding te maken met een andere serverlocatie of VPN-protocol?"
   },
   "issue_reporter_home_button_label": {
     "message": "Startscherm"
@@ -532,6 +538,27 @@
   },
   "issue_reporter_website_label": {
     "message": "Website"
+  },
+  "keys_adoption_header_v1": {
+    "message": "Wil je tijd besparen?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Wachtwoorden niet meer vergeten?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Aan Chrome toevoegen"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Niet nu"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys is een veilige gratis wachtwoordmanager die je logins overal met één klik opslaat en invult."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Probeer ExpressVPN Keys, de gratis wachtwoordmanager die automatisch veilig al je logins opslaat en invult."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
   },
   "language_dropdown_danish": {
     "message": "Deens (Dansk)",
@@ -620,7 +647,7 @@
     "message": "Onbeperkte bandbreedte"
   },
   "location_picker_locations_title": {
-    "message": "VPN locaties"
+    "message": "VPN-locaties"
   },
   "location_picker_recent_locations_text": {
     "message": "Recente locaties"
@@ -702,7 +729,7 @@
     "message": "Erkenningen"
   },
   "menu_item_app_version_text": {
-    "message": "%OS% app versie: %VERSION%"
+    "message": "%OS% app-versie: %VERSION%"
   },
   "menu_item_contact_support_text": {
     "message": "Naar de helpdesk"
@@ -723,7 +750,7 @@
     "message": "IP adrescontrole"
   },
   "menu_item_webRTC_leak_test_text": {
-    "message": "WebRTC lektest"
+    "message": "WebRTC-lektest"
   },
   "menu_keyboard_shortcut_text": {
     "message": "Met toets snelkoppeling openen"
@@ -780,10 +807,10 @@
     "message": "Hulp"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Voorkom dat websites achter uw echte IP adres en locatie komen wanneer u verbonden bent met VPN."
+    "message": "Voorkom dat websites achter uw echte IP-adres en locatie komen wanneer u verbonden bent met VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Belet HTML5 geolocatie uw fysieke locatie te delen wanneer u verbonden bent met VPN."
+    "message": "Verhinder HTML5 geolocatie op de meeste websites en maskeer je fysieke locatie zolang je verbonden bent met VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Maak automatisch verbinding met de beter beveiligde HTTPS-versie van websites indien beschikbaar."
@@ -813,7 +840,7 @@
     "message": "Deel ExpressVPN met uw vrienden en ontvang gratis diensten!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Voor iedere vriend die zich aanmeldt ontvangt u ieder 30 dagen gratis."
+    "message": "Voor elke vriend ieder 30 dagen gratis."
   },
   "myaccount_account_expired_label": {
     "message": "Verlopen"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Help ExpressVPN verbeteren"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Meer lezen"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Liever niet"
   },
@@ -1119,7 +1149,7 @@
     "message": "Neem ExpressVPN"
   },
   "welcome_not_installed_reasons_li_1_text": {
-    "message": "Veilige VPN locaties wereldwijd"
+    "message": "Veilige VPN-locaties wereldwijd"
   },
   "welcome_not_installed_reasons_li_2_text": {
     "message": "Hoge snelheden en onbeperkte bandbreedte"
@@ -1149,7 +1179,7 @@
     "message": "Meer informatie"
   },
   "welcome_screen3_p1_text": {
-    "message": "De extensie verbergt uw locatie, blokkeert WebRTC en gebruikt HTTPS Everywhere."
+    "message": "De extensie verbergt op de meeste websitest je locatie, blokkeert WebRTC en gebruikt HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Overslaan"

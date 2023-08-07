@@ -1,9 +1,13 @@
 {
   "name": "xv_chrome",
-  "version": "5.0.1",
+  "version": "5.2.6",
   "description": "ExpressVPN browser extension",
   "author": "ExpressVPN",
-  "license": "GPLv2",
+  "license": "GPL-2.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expressvpn/expressvpn_browser_extension.git"
+  },
   "private": true,
   "scripts": {
     "build:prod": "cross-env NODE_ENV=production webpack --hide-modules",
@@ -12,6 +16,7 @@
     "screenshots": "node test/screenshots/index.js"
   },
   "dependencies": {
+    "launchdarkly-js-client-sdk": "^2.24.2",
     "ua-parser-js": "^0.7.22",
     "uuid": "^8.0.0",
     "vue": "^2.6.11",

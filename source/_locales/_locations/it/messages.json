@@ -23,6 +23,9 @@
   "Australia": {
     "message": "Australia"
   },
+  "Australia - Adelaide": {
+    "message": "Australia - Adelaide"
+  },
   "Australia - Brisbane": {
     "message": "Australia - Brisbane"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "Australia - Sydney - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Australia - Woolloomooloo"
   },
   "Austria": {
     "message": "Austria"
@@ -62,6 +68,9 @@
   "Bhutan": {
     "message": "Bhutan"
   },
+  "Bolivia": {
+    "message": "Bolivia"
+  },
   "Bosnia and Herzegovina": {
     "message": "Bosnia ed Erzegovina"
   },
@@ -75,7 +84,7 @@
     "message": "Brunei"
   },
   "Brunei Darussalam": {
-    "message": "Brunei"
+    "message": "Brunei Darussalam"
   },
   "Bulgaria": {
     "message": "Bulgaria"
@@ -140,6 +149,12 @@
   "France": {
     "message": "Francia"
   },
+  "France - Alsace": {
+    "message": "Francia - Alsazia"
+  },
+  "France - Marseille": {
+    "message": "Francia - Marsiglia"
+  },
   "France - Paris - 1": {
     "message": "Francia - Parigi - 1"
   },
@@ -197,6 +212,9 @@
   "India": {
     "message": "India"
   },
+  "India (via Singapore)": {
+    "message": "India (via Singapore)"
+  },
   "India (via UK)": {
     "message": "India (via Regno Unito)"
   },
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "Italia - Milano"
   },
+  "Italy - Naples": {
+    "message": "Italia - Napoli"
+  },
   "Japan": {
     "message": "Giappone"
+  },
+  "Japan - Shibuya": {
+    "message": "Giappone - Shibuya"
   },
   "Japan - Tokyo": {
     "message": "Giappone - Tokyo",
@@ -263,7 +287,7 @@
     "message": "Laos"
   },
   "Latvia": {
-    "message": "Lituania"
+    "message": "Lettonia"
   },
   "Liechtenstein": {
     "message": "Liechtenstein"
@@ -320,7 +344,7 @@
     "message": "Paesi Bassi - Rotterdam"
   },
   "Netherlands - The Hague": {
-    "message": "Paesi Bassi - The Hague"
+    "message": "Paesi Bassi - L'Aia"
   },
   "New Zealand": {
     "message": "Nuova Zelanda"
@@ -345,6 +369,9 @@
   },
   "Philippines (via Singapore)": {
     "message": "Filippine (via Singapore)"
+  },
+  "Pick for Me": {
+    "message": "Scegli per me"
   },
   "Poland": {
     "message": "Polonia"
@@ -440,6 +467,9 @@
   "UK - London": {
     "message": "Regno Unito - Londra"
   },
+  "UK - Midlands": {
+    "message": "Regno Unito - Midlands"
+  },
   "UK - Wembley": {
     "message": "Regno Unito - Wembley"
   },
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "Uruguay"
+  },
+  "USA - Albuquerque": {
+    "message": "USA - Albuquerque"
   },
   "USA - Atlanta": {
     "message": "USA - Atlanta"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "USA - Hollywood"
+  },
+  "USA - Lincoln Park": {
+    "message": "USA - Lincoln Park"
   },
   "USA - Los Angeles": {
     "message": "USA - Los Angeles"
@@ -511,6 +547,9 @@
   },
   "USA - New York - 2": {
     "message": "USA - New York - 2"
+  },
+  "USA - Phoenix": {
+    "message": "USA - Phoenix"
   },
   "USA - Salt Lake City": {
     "message": "USA - Salt Lake City"

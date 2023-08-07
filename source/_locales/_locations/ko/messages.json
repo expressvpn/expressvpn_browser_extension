@@ -23,6 +23,9 @@
   "Australia": {
     "message": "호주"
   },
+  "Australia - Adelaide": {
+    "message": "호주 - 애들레이드"
+  },
   "Australia - Brisbane": {
     "message": "호주 - 브리즈번"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "호주 - 시드니 - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "호주 - 울루물루"
   },
   "Austria": {
     "message": "오스트리아"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "부탄"
+  },
+  "Bolivia": {
+    "message": "볼리비아"
   },
   "Bosnia and Herzegovina": {
     "message": "보스니아 & 헤르체고비나"
@@ -140,6 +149,12 @@
   "France": {
     "message": "프랑스"
   },
+  "France - Alsace": {
+    "message": "프랑스 - 알자스"
+  },
+  "France - Marseille": {
+    "message": "프랑스 - 마르세유"
+  },
   "France - Paris - 1": {
     "message": "프랑스 - 파리 - 1"
   },
@@ -197,8 +212,11 @@
   "India": {
     "message": "인도"
   },
+  "India (via Singapore)": {
+    "message": "인도(싱가포르 서버 이용)"
+  },
   "India (via UK)": {
-    "message": "인도(영국에 위치)"
+    "message": "인도(영국 서버 이용)"
   },
   "India - Chennai": {
     "message": "인도 - 첸나이"
@@ -213,7 +231,7 @@
     "message": "아일랜드"
   },
   "Isle of Man": {
-    "message": "아일 오브 맨"
+    "message": "맨 섬"
   },
   "Israel": {
     "message": "이스라엘"
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "이탈리아 - 밀라노"
   },
+  "Italy - Naples": {
+    "message": "이탈리아 - 나폴리"
+  },
   "Japan": {
     "message": "일본"
+  },
+  "Japan - Shibuya": {
+    "message": "일본 - 시부야"
   },
   "Japan - Tokyo": {
     "message": "일본 - 도쿄",
@@ -296,7 +320,7 @@
     "message": "모나코"
   },
   "Mongolia": {
-    "message": "몽골리아"
+    "message": "몽골"
   },
   "Montenegro": {
     "message": "몬테네그로"
@@ -344,7 +368,10 @@
     "message": "필리핀"
   },
   "Philippines (via Singapore)": {
-    "message": "필리핀(싱가포르에 위치)"
+    "message": "필리핀(싱가포르 서버 이용)"
+  },
+  "Pick for Me": {
+    "message": "자동 선택"
   },
   "Poland": {
     "message": "폴란드"
@@ -429,7 +456,7 @@
     "message": "터키"
   },
   "UK - Docklands": {
-    "message": "영국 - 도크랜즈"
+    "message": "영국 - 도크랜드"
   },
   "UK - East London": {
     "message": "영국 - 이스트런던"
@@ -439,6 +466,9 @@
   },
   "UK - London": {
     "message": "영국 - 런던"
+  },
+  "UK - Midlands": {
+    "message": "영국 - 미드랜즈"
   },
   "UK - Wembley": {
     "message": "영국 - 웸블리"
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "우루과이"
+  },
+  "USA - Albuquerque": {
+    "message": "미국 - 앨버커키"
   },
   "USA - Atlanta": {
     "message": "미국 - 애틀란타"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "미국 - 헐리우드"
+  },
+  "USA - Lincoln Park": {
+    "message": "미국 - 링컨 파크"
   },
   "USA - Los Angeles": {
     "message": "미국 - 로스앤젤레스"
@@ -512,8 +548,11 @@
   "USA - New York - 2": {
     "message": "미국 - 뉴욕 - 2"
   },
+  "USA - Phoenix": {
+    "message": "미국 - 피닉스"
+  },
   "USA - Salt Lake City": {
-    "message": "미국 - 솔트 레이크 시티 "
+    "message": "미국 - 솔트레이크시티"
   },
   "USA - San Francisco": {
     "message": "미국 - 샌프란시스코"
@@ -522,7 +561,7 @@
     "message": "미국 - 산호세"
   },
   "USA - Santa Monica": {
-    "message": "미국 - 산타 모니카"
+    "message": "미국 - 샌타모니카"
   },
   "USA - Seattle": {
     "message": "미국 - 시애틀"
