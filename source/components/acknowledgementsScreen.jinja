@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <secondary-header stringkey="menu_item_acknowledgements_text" :onBackClick="sideBackBtnClick" />
+    {{ licenses_html }}
+  </div>
+</template>
+<script>
+import secondaryHeader from './partials/secondaryHeader.vue';
+
+export default {
+  name: 'acknowledgementsScreen',
+  computed: {
+  },
+  mixins: [],
+  methods: {
+    sideBackBtnClick: function (event) {
+      this.$store.dispatch('setCurrentView', 'helpScreen');
+    },
+  },
+  components: {
+    secondaryHeader,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.acknowledgements {
+  &-container {
+    padding: 0px 20px;
+    height: calc(600px - 60px);
+    width: 100vw;
+    overflow: hidden auto;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 28px;
+  }
+}
+pre {
+  white-space: pre-line;
+}
+</style>

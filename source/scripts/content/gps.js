@@ -1,8 +1,9 @@
 /*
 ExpressVPN Browser Extension:
-Copyright 2017-2020 Express VPN International Ltd
+Copyright 2017-2023 Express VPN International Ltd
 Licensed GPL v2
 */
+let isScriptInjected = false;
 function hookGeo() {
   //<![CDATA[
   const WAIT_TIME = 100;
@@ -40,7 +41,7 @@ function hookGeo() {
   function waitWatchPosition() {
     if ((typeof hookedObj.fakeGeo !== 'undefined')) {
       if (hookedObj.fakeGeo === true) {
-        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        navigator.geolocation.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
         return Math.floor(Math.random() * 10000); // random id
       } else {
         hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
@@ -126,64 +127,25 @@ function hookGeo() {
     return secureBlob;
   }(Blob);
 
-  window.addEventListener('message', function (event) {
-    if (event.source !== window) {
-      return;
-    }
-    const message = event.data;
-    switch (message.method) {
-      case 'updateLocation':
-        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
-          hookedObj.genLat = message.info.coords.lat;
-          hookedObj.genLon = message.info.coords.lon;
-          hookedObj.fakeGeo = message.info.fakeIt;
-        }
-        break;
-      default:
-        break;
-    }
-  }, false);
+  // https://developer.chrome.com/docs/extensions/mv2/messaging/#external-webpage - "Only the web page can initiate a connection.", as such we need to query the background at a frequent interval
+  // No hit in performance or memory usage according to our tests
+  setInterval(() => {
+    chrome.runtime.sendMessage(__EXTENSION_ID__, { GET_LOCATION_SPOOFING_SETTINGS: true }, (response) => {
+      if ((typeof response === 'object') && (typeof response.coords === 'object')) {
+        hookedObj.genLat = response.coords.lat;
+        hookedObj.genLon = response.coords.lon;
+        hookedObj.fakeGeo = response.fakeIt;
+      }
+    });
+  }, 500);
   //]]>
-}
-
-pref_hideLocation = true;
-domain = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
-
-function sendLocation(currentInfo) {
-  let injectStates = ['connected', 'connecting', 'disconnecting', 'reconnecting', 'connection_error'];
-  let info = {
-    fakeIt: false,
-    coords: {
-      lat: 38.883333,
-      lon: -77.000,
-    },  
-  };
-
-  if ((typeof currentInfo === 'object') && (typeof currentInfo.selectedLocation === 'object') && (typeof currentInfo.selectedLocation.coords === 'object')) {
-    info.coords = currentInfo.selectedLocation.coords;
-    info.fakeIt = ((injectStates.indexOf(currentInfo.state) > -1) && pref_hideLocation);
-  }
-  if (['http:', 'https:'].includes((new URL(domain).protocol))) { // It's not possible to reliably set the origin with non-http(s) protocol, so let's try to not trigger any errors
-    window.postMessage({ method: 'updateLocation', info: info }, domain);
-  }
 }
 
 function shouldInject() {
   return ((document instanceof HTMLDocument) || (document instanceof XMLDocument))
 }
 
-function inject(storage) {
-  sendLocation(storage.currentInfo);
-
-  chrome.storage.onChanged.addListener(function (changes, namespace) {
-    if (changes.prefs) {
-      pref_hideLocation = changes.prefs.hideLocation;
-    }
-    if (changes.currentInfo && changes.currentInfo.newValue) {
-      sendLocation(changes.currentInfo.newValue);
-    }
-  });
-
+function inject() {
   let injectedCode = '(function(){' +
     hookGeo.toString() +
     'hookGeo();' +
@@ -200,12 +162,21 @@ function inject(storage) {
   } else {
     parent.appendChild(script);
   }
+  isScriptInjected = true;
 }
 
-chrome.storage.local.get(['currentInfo', 'prefs'], function (storage) {
-  pref_hideLocation = storage.prefs.hideLocation;
+// Inject on page load if enabled by the user
+chrome.storage.local.get(['prefs'], function (storage) {
+  const isLocationSpoofEnabled = storage.prefs.hideLocation;
 
-  if (shouldInject() && pref_hideLocation === true) {
-    inject(storage);
+  if (shouldInject() && isLocationSpoofEnabled === true) {
+    inject();
+  }
+});
+
+// Inject on User config change
+chrome.storage.onChanged.addListener((changes) => {
+  if (changes?.prefs?.newValue?.hideLocation === true && !isScriptInjected) {
+    inject();
   }
 });

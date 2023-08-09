@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Sicher & schnell. Bedienen Sie die ExpressVPN-App direkt in Chrome und spoofen Sie Ihren Standort für freien Zugriff weltweit.",
+    "message": "Sicher & blitzschnell. Spoofen Sie Ihren Standort, greifen Sie auf Inhalte von überall zu und steuern Sie ExpressVPN von Chrome aus.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Sicher & schnell. Bedienen Sie die ExpressVPN-App direkt in Firefox und spoofen Sie Ihren Standort für freien Zugriff weltweit.",
+    "message": "Sicher & blitzschnell. Spoofen Sie Ihren Standort, genießen Sie Inhalte von überall und steuern Sie ExpressVPN von Firefox aus.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "Mit der ExpressVPN Beta-Version sind Sie stets auf dem aktuellen Stand. Entdecken Sie die neuesten Funktionen vor allen anderen."
   },
   "app_name_title": {
     "message": "ExpressVPN: VPN-Proxy für besseres Internet",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN für besseres Internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Webseite"
   },
+  "keys_adoption_header_v1": {
+    "message": "Möchten Sie Zeit sparen?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Vergessen Sie oft Ihre Passwörter?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Zu Chrome hinzufügen"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Später"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys ist ein sicherer Passwort-Manager, der Ihre Logins speichert und auf Websites einträgt."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Testen Sie den Passwort-Manager ExpressVPN Keys, der eine unbegrenzte Anzahl von Logins speichern und ausfüllen kann."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Dänisch (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "Verhindern Sie, dass Webseiten Ihre wahre IP-Adresse und Ihren Standort entdecken, während Sie mit dem VPN verbunden sind."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Verhindern Sie mit einer bestehenden VPN-Verbindung, dass HTML-basierte Geolokalisierung Ihre physischen Daten offenlegt."
+    "message": "Verhindern Sie mit einer bestehenden VPN-Verbindung auf den meisten Websites, dass durch eine HTML5-basierte Geolokalisierung Ihr physischer Standort offengelegt wird."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Verbinden Sie sich automatisch mit der sichereren HTTPS-Version von Webseiten, sofern verfügbar."
@@ -813,7 +840,7 @@
     "message": "Empfehlen Sie uns und Sie erhalten kostenlosen Service."
   },
   "myaccount_account_active_p2_text": {
-    "message": "Für jeden Neukunden erhalten Sie und der Kunde 30 Tage gratis."
+    "message": "30 Tage gratis für jeden Neukunden!"
   },
   "myaccount_account_expired_label": {
     "message": "Abgelaufen"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPN verbessern"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Mehr erfahren"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nein, danke"
   },
@@ -1149,7 +1179,7 @@
     "message": "Mehr erfahren"
   },
   "welcome_screen3_p1_text": {
-    "message": "Die Erweiterung spooft Ihren Standort, blockiert WebRTC und beinhaltet HTTPS Everywhere."
+    "message": "Die Erweiterung verschleiert Ihren Standort auf den meisten Websites, blockiert WebRTC und beinhaltet HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Überspringen"

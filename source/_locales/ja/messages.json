@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "超高速で安全にオンラインを使いましょう。ChromeからExpressVPNアプリをコントロールし、実際のロケーションは隠したままで、全世界どこからでもコンテンツにアクセスできます。",
+    "message": "超高速で安全にオンラインを使いましょう。実際の居場所を隠したり、どこからでもコンテンツにアクセスしたり、ChromeからExpressVPNアプリをコントロールできます。",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "超高速で安全にオンラインを使いましょう。Firefoxから直接ExpressVPNアプリをコントロールし、実際のロケーションは隠したままで、全世界どこからでもコンテンツにアクセスできます。",
+    "message": "超高速で安全にオンラインを使いましょう。実際の居場所を隠したり、どこからでもコンテンツにアクセスしたり、Firefoxから直接ExpressVPNアプリをコントロールできます。",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "ベータ版ExpressVPNは、最先端の生活を楽しむ人々のためのものです。最新機能を使う最初の人になりましょう。"
   },
   "app_name_title": {
     "message": "ExpressVPN：より良いインターネットのためのVPNプロキシ",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ベータ版ExpressVPN：よりよいインターネットのためのVPN"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -97,7 +103,7 @@
     "message": "別の[VPNロケーション]を選択"
   },
   "error_connection_error_check_l3_text": {
-    "message": "問題が解決されない場合は、[サポートにご連絡ください]"
+    "message": "問題が解決されない場合は、[contact Support]ください。"
   },
   "error_connection_error_lock_on_text": {
     "message": "プライバシー保護のためインターネットトラフィックは現在ブロックされています。"
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "ウェブサイト"
   },
+  "keys_adoption_header_v1": {
+    "message": "時間を節約しませんか？"
+  },
+  "keys_adoption_header_v2": {
+    "message": "パスワード忘れにお困りですか？"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Chromeに追加"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "あとで"
+  },
+  "keys_adoption_text_v1": {
+    "message": "Keysは無料の安全なパスワードマネージャーです。ワンクリックでログイン情報を保存、入力できます。"
+  },
+  "keys_adoption_text_v2": {
+    "message": "自動で安全に無制限数のログイン情報を保存、入力できる無料のパスワードマネージャーです。"
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "デンマーク語 (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "VPNに接続中に、ウェブサイトが実際のIPアドレスやアクセス場所を見つけられないようにします。"
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "VPNに接続中にHTML5ジオロケーションが実際のアクセス場所を明らかにしないようにします。"
+    "message": "VPN接続中に、ほとんどのサイトでHTML5ジオロケーションが実際のアクセス場所を明らかにしないようにします。"
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "安全性が高いHTTPSバージョンのウェブサイトに自動で接続します。"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "ExpressVPNの改善に協力"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "詳細"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "協力しない"
   },
@@ -1149,7 +1179,7 @@
     "message": "詳細"
   },
   "welcome_screen3_p1_text": {
-    "message": "拡張機能は、どこにいてもあなたの場所を偽装し、WebRTCをブロックし、HTTPS Everywhere。"
+    "message": "この拡張機能は、ほとんどのサイトであなたの接続場所を隠し、HTTPS Everywhereを含むWebRTCをブロックします。"
   },
   "welcome_skip_button_label": {
     "message": "スキップ"

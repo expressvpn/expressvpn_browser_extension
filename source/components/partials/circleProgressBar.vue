@@ -23,7 +23,11 @@ export default {
   },
   computed: {
     showInfiniteAnimation() {
-      return (['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && ['no internet', 'captive portal', 'not sure', 'not ready'].includes(this.currentInfo.networkStatus));
+      const hasNetworkProblem = ['no internet', 'captive portal', 'not sure', 'not ready'].includes(this.currentInfo.networkStatus);
+      return (
+        ['ready', 'reconnecting', 'connecting'].includes(this.currentInfo.state) && hasNetworkProblem
+        || ['reconnecting', 'connecting'].includes(this.currentInfo.state) && this.currentInfo.isNewProtocol
+      );
     },
     radius() {
       return (this.size / 2) - (this.strokeWidth / 2);

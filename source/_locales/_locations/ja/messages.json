@@ -23,6 +23,9 @@
   "Australia": {
     "message": "オーストラリア"
   },
+  "Australia - Adelaide": {
+    "message": "オーストラリア - アデレイド"
+  },
   "Australia - Brisbane": {
     "message": "オーストラリア - ブリスベン"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "オーストラリア - シドニー - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "オーストラリア －ウールームールー"
   },
   "Austria": {
     "message": "オーストリア"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "ブータン"
+  },
+  "Bolivia": {
+    "message": "ボリビア"
   },
   "Bosnia and Herzegovina": {
     "message": "ボスニア・ヘルツェゴビナ"
@@ -140,6 +149,12 @@
   "France": {
     "message": "フランス"
   },
+  "France - Alsace": {
+    "message": "フランス - アルザス"
+  },
+  "France - Marseille": {
+    "message": "フランス - マルセイユ"
+  },
   "France - Paris - 1": {
     "message": "フランス - パリ - 1"
   },
@@ -197,8 +212,11 @@
   "India": {
     "message": "インド"
   },
+  "India (via Singapore)": {
+    "message": "インド（シンガポール経由）"
+  },
   "India (via UK)": {
-    "message": "インド(イギリス経由)"
+    "message": "インド（イギリス経由）"
   },
   "India - Chennai": {
     "message": "インド - チェンナイ"
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "イタリア - ミラノ"
   },
+  "Italy - Naples": {
+    "message": "イタリア - ナポリ"
+  },
   "Japan": {
     "message": "日本"
+  },
+  "Japan - Shibuya": {
+    "message": "日本 - 渋谷"
   },
   "Japan - Tokyo": {
     "message": "日本 - 東京",
@@ -287,7 +311,7 @@
     "message": "メキシコ"
   },
   "Middle East and Africa": {
-    "message": "中東 、アフリカ"
+    "message": "中東＆アフリカ"
   },
   "Moldova": {
     "message": "モルドバ"
@@ -344,7 +368,10 @@
     "message": "フィリピン"
   },
   "Philippines (via Singapore)": {
-    "message": "フィリピン(シンガポール経由)"
+    "message": "フィリピン（シンガポール経由）"
+  },
+  "Pick for Me": {
+    "message": "自動選択"
   },
   "Poland": {
     "message": "ポーランド"
@@ -440,6 +467,9 @@
   "UK - London": {
     "message": "イギリス - ロンドン"
   },
+  "UK - Midlands": {
+    "message": "イギリス - ミッドランド"
+  },
   "UK - Wembley": {
     "message": "イギリス - ウェンブリー"
   },
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "ウルグアイ"
+  },
+  "USA - Albuquerque": {
+    "message": "アメリカ - アルバカーキ"
   },
   "USA - Atlanta": {
     "message": "アメリカ - アトランタ"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "アメリカ - ハリウッド"
+  },
+  "USA - Lincoln Park": {
+    "message": "アメリカ - リンカーンパーク"
   },
   "USA - Los Angeles": {
     "message": "アメリカ - ロサンゼルス"
@@ -512,6 +548,9 @@
   "USA - New York - 2": {
     "message": "アメリカ - ニューヨーク - 2"
   },
+  "USA - Phoenix": {
+    "message": "アメリカ - フェニックス"
+  },
   "USA - Salt Lake City": {
     "message": "アメリカ - ソルトレイクシティ"
   },
@@ -528,7 +567,7 @@
     "message": "アメリカ - シアトル"
   },
   "USA - Tampa - 1": {
-    "message": "アメリカ - タンパ - 2"
+    "message": "アメリカ - タンパ - 1"
   },
   "USA - Washington DC": {
     "message": "アメリカ - ワシントンDC"

@@ -23,6 +23,9 @@
   "Australia": {
     "message": "Australia"
   },
+  "Australia - Adelaide": {
+    "message": "Australia - Adelaide"
+  },
   "Australia - Brisbane": {
     "message": "Australia - Brisbane"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "Australia - Sydney - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Australia - Woolloomooloo"
   },
   "Austria": {
     "message": "Austria"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "Bhutan"
+  },
+  "Bolivia": {
+    "message": "Bolivia"
   },
   "Bosnia and Herzegovina": {
     "message": "Bosnia and Herzegovina"
@@ -140,6 +149,12 @@
   "France": {
     "message": "France"
   },
+  "France - Alsace": {
+    "message": "France - Alsace"
+  },
+  "France - Marseille": {
+    "message": "France - Marseille"
+  },
   "France - Paris - 1": {
     "message": "France - Paris - 1"
   },
@@ -197,6 +212,9 @@
   "India": {
     "message": "India"
   },
+  "India (via Singapore)": {
+    "message": "India (via Singapore)"
+  },
   "India (via UK)": {
     "message": "India (via UK)"
   },
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "Italy - Milan"
   },
+  "Italy - Naples": {
+    "message": "Italy - Naples"
+  },
   "Japan": {
     "message": "Japan"
+  },
+  "Japan - Shibuya": {
+    "message": "Japan - Shibuya"
   },
   "Japan - Tokyo": {
     "message": "Japan - Tokyo",
@@ -346,6 +370,9 @@
   "Philippines (via Singapore)": {
     "message": "Philippines (via Singapore)"
   },
+  "Pick for Me": {
+    "message": "Pick for Me"
+  },
   "Poland": {
     "message": "Poland"
   },
@@ -440,6 +467,9 @@
   "UK - London": {
     "message": "UK - London"
   },
+  "UK - Midlands": {
+    "message": "UK - Midlands"
+  },
   "UK - Wembley": {
     "message": "UK - Wembley"
   },
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "Uruguay"
+  },
+  "USA - Albuquerque": {
+    "message": "USA - Albuquerque"
   },
   "USA - Atlanta": {
     "message": "USA - Atlanta"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "USA - Hollywood"
+  },
+  "USA - Lincoln Park": {
+    "message": "USA - Lincoln Park"
   },
   "USA - Los Angeles": {
     "message": "USA - Los Angeles"
@@ -511,6 +547,9 @@
   },
   "USA - New York - 2": {
     "message": "USA - New York - 2"
+  },
+  "USA - Phoenix": {
+    "message": "USA - Phoenix"
   },
   "USA - Salt Lake City": {
     "message": "USA - Salt Lake City"

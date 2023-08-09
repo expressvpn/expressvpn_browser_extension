@@ -5,7 +5,7 @@
       <div v-if="!['connecting', 'reconnecting', 'connection_error'].includes(currentInfo.state) && !isNonceValid">
         <p><b>Warning:</b> an unexpected redirect was detected. Only continue if you recognise the link below</p>
         <p>Please <a target="_blank" :href="`${currentInfo.website_url}/support/?utm_source=browser_extension&utm_medium=apps&utm_campaign=browser_extension_links&utm_content=network-lock-nonce`">contact Support</a> if this issue persists.</p>
-        <a :href="urlParams.get('url')">{{ urlParams.get('url') }}</a>
+        <a :href="destinationUrl">{{ urlParams.get('url') }}</a>
       </div>
       <div v-else>
         <div v-if="['connecting', 'reconnecting', 'connection_error', 'connected'].includes(currentInfo.state)">
@@ -53,6 +53,10 @@ export default {
     };
   },
   computed: {
+    destinationUrl() {
+      const url = this.urlParams.get('url');
+      return /^https?:\/\//i.test(url) ? url : '#';
+    },
     extensionPreferences() {
       return this.$store.getters.extensionPreferences;
     },

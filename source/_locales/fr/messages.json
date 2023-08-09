@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Navigation sécurisée. Masquez votre localisation, accédez à vos contenus partout et contrôlez l'appli ExpressVPN depuis Chrome.",
+    "message": "Naviguez en toute sécurité. Masquez votre localisation, accédez à vos contenus et contrôlez l'appli ExpressVPN depuis Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Naviguez en toute sécurité sur Internet avec une vitesse élevée. Masquez votre localisation, accédez à vos contenus préférés partout et contrôlez l'application ExpressVPN depuis Firefox.",
+    "message": "Naviguez en toute sécurité. Masquez votre localisation, accédez à vos contenus préférés partout et contrôlez l'appli ExpressVPN depuis Firefox.",
     "description": "The description of the application"
   },
+  "app_description_text_beta": {
+    "message": "ExpressVPN bêta est dédié à ceux qui aiment les nouveautés. Soyez les premiers à bénéficier des fonctionnalités les plus avancées !"
+  },
   "app_name_title": {
-    "message": "ExpressVPN : proxy VPN pour une connexion Internet sécurisée",
+    "message": "ExpressVPN : proxy VPN sécurisé",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN bêta : internet plus sûr"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -25,7 +31,7 @@
     "message": "Acheter un abonnement"
   },
   "error_app_not_found_contact_support_text": {
-    "message": "Besoin d'aide ? Veuillez [contacter le Support client]."
+    "message": "Besoin d'aide ? Veuillez [contacter le support client]."
   },
   "error_app_not_found_download_LINUX_button_label": {
     "message": "Télécharger l'appli Linux"
@@ -58,7 +64,7 @@
     "message": "Revenir à l'écran principal"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "Pour toute question, veuillez [contacter le Support client]."
+    "message": "Pour toute question, veuillez [contacter le support client]."
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "Se déconnecter"
@@ -91,16 +97,16 @@
     "message": "Mettre à jour le système d'exploitation"
   },
   "error_connection_error_check_l1_text": {
-    "message": "Vérifiez l'état de votre connexion Internet."
+    "message": "Vérifiez l'état de votre connexion internet"
   },
   "error_connection_error_check_l2_text": {
     "message": "Sélectionnez une autre [localisation VPN]."
   },
   "error_connection_error_check_l3_text": {
-    "message": "Si l'erreur persiste, [contactez le Support client]."
+    "message": "Si l'erreur persiste, [contactez le support client]"
   },
   "error_connection_error_lock_on_text": {
-    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+    "message": "Le trafic internet est actuellement bloqué pour protéger vos données."
   },
   "error_connection_error_return_home_button_label": {
     "message": "Revenir à l'écran principal"
@@ -109,7 +115,7 @@
     "message": "Annuler"
   },
   "error_connection_error_return_home_button_label_network_lock_on": {
-    "message": "Débloquer Internet"
+    "message": "Débloquer internet"
   },
   "error_connection_error_title": {
     "message": "Échec de connexion "
@@ -197,7 +203,7 @@
     "message": "Essai gratuit expiré"
   },
   "error_free_trial_expired_upgrade_now_button_label": {
-    "message": "S'abonner maintenant"
+    "message": "S'abonner"
   },
   "error_FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED_main_button_label": {
     "message": "Acheter un abonnement"
@@ -239,7 +245,7 @@
     "message": "Installer ExpressVPN"
   },
   "error_NOT_INSTALLED_chromeOS_secondary_button": {
-    "message": "Contacter le Support"
+    "message": "Contacter le support client"
   },
   "error_NOT_INSTALLED_chromeOS_title": {
     "message": "L'appli ne prend pas en charge Chrome OS",
@@ -264,7 +270,7 @@
     "message": "Vous devez lancer l’appli ExpressVPN pour pouvoir utiliser cette extension."
   },
   "error_open_app_contact_support_button_label": {
-    "message": "Contacter le Support client"
+    "message": "Contacter le support client"
   },
   "error_open_app_open_app_button_label": {
     "message": "Ouvrir l'appli de bureau"
@@ -303,10 +309,10 @@
     "message": "OK"
   },
   "error_simultaneous_connection_popup_text": {
-    "message": "Ouvrir ce lien débloquera tout le trafic Internet."
+    "message": "Ouvrir ce lien débloquera tout le trafic internet."
   },
   "error_simultaneous_connection_popup_title": {
-    "message": "Débloquer Internet"
+    "message": "Débloquer internet"
   },
   "error_SUBSCRIPTION_ACTIVE_LAST_IAP_FAILED_main_button_label": {
     "message": "Mettre à jour"
@@ -381,13 +387,13 @@
     "message": "Pour continuer à utiliser ExpressVPN, veuillez renouveler votre abonnement."
   },
   "error_subscription_expiring_renew_button_label": {
-    "message": "Renouveler maintenant"
+    "message": "Renouveler"
   },
   "error_subscription_expiring_title": {
     "message": "Expiration de l'abonnement"
   },
   "error_upgrade_app_button_label": {
-    "message": "Mettre à jour maintenant"
+    "message": "Mettre à jour"
   },
   "error_upgrade_app_header_title": {
     "message": "Mettre à jour l'appli"
@@ -396,7 +402,7 @@
     "message": "Cette extension nécessite la dernière version de l'appli ExpressVPN."
   },
   "general_contact_support_button_label": {
-    "message": "Contacter le Support client"
+    "message": "Contacter le support client"
   },
   "hint_connection_delay_text": {
     "message": "Tentative de connexion en cours..."
@@ -408,37 +414,37 @@
     "message": "Veuillez patienter pendant que le réseau s'initialise."
   },
   "hint_network_state_not_sure_connecting_text": {
-    "message": "Aucune connexion Internet. Le VPN se connectera dès que possible."
+    "message": "Aucune connexion internet. Le VPN se connectera dès que possible."
   },
   "hint_network_state_not_sure_ready_text": {
-    "message": "Connexion Internet non détectée. Le VPN pourrait être indisponible."
+    "message": "Connexion internet non détectée. Le VPN pourrait être indisponible."
   },
   "hint_network_state_not_sure_reconnecting_text": {
-    "message": "Aucune connexion Internet. Le VPN se connectera dès que possible."
+    "message": "Aucune connexion internet. Le VPN se connectera dès que possible."
   },
   "hint_network_state_no_internet_connecting_text": {
-    "message": "Aucune connexion Internet détectée. <br>Le VPN se connectera dès que possible."
+    "message": "Aucune connexion internet détectée. <br>Le VPN se connectera dès que possible."
   },
   "hint_network_state_no_internet_ready_text": {
-    "message": "Aucune connexion Internet détectée.<br>Le VPN est peut-être indisponible."
+    "message": "Aucune connexion internet détectée.<br>Le VPN est peut-être indisponible."
   },
   "hint_network_state_no_internet_reconnecting_text": {
-    "message": "Aucune connexion Internet. <br>Le VPN se reconnectera dès que possible."
+    "message": "Aucune connexion internet. <br>Le VPN se reconnectera dès que possible."
   },
   "hint_no_internet_connecting_text": {
-    "message": "Aucune connexion Internet détectée. <br>Le VPN se connectera dès que possible."
+    "message": "Aucune connexion internet détectée. <br>Le VPN se connectera dès que possible."
   },
   "hint_no_internet_ready_text": {
-    "message": "Aucune connexion Internet détectée.<br>Le VPN est peut-être indisponible."
+    "message": "Aucune connexion internet détectée.<br>Le VPN est peut-être indisponible."
   },
   "hint_no_internet_reconnecting_text": {
-    "message": "Connexion Internet perdue. Le VPN se reconnectera dès que possible."
+    "message": "Connexion internet perdue. Le VPN se reconnectera dès que possible."
   },
   "hint_reconnecting_network_lock_off_text": {
     "message": "Connexion interrompue. Reconnexion en cours..."
   },
   "hint_reconnecting_network_lock_on_text": {
-    "message": "Le trafic Internet est bloqué pour protéger vos données."
+    "message": "Le trafic internet est bloqué pour protéger vos données."
   },
   "hint_saved_text": {
     "message": "Enregistré"
@@ -450,7 +456,7 @@
     "message": "Continuer"
   },
   "home_change_location_popup_text": {
-    "message": "Il se peut que votre trafic Internet ne soit pas sécurisé pendant la reconnexion."
+    "message": "Il se peut que votre trafic internet ne soit pas sécurisé pendant la reconnexion."
   },
   "home_change_location_popup_title": {
     "message": "Changer de localisation"
@@ -504,7 +510,7 @@
     "message": "Tests CAPTCHA trop nombreux"
   },
   "issue_reporter_opt6": {
-    "message": "Connexion Internet lente"
+    "message": "Connexion internet lente"
   },
   "issue_reporter_opt7": {
     "message": "Déconnexions fréquentes"
@@ -522,7 +528,7 @@
     "message": "Envoyer un rapport"
   },
   "issue_reporter_support_button_label": {
-    "message": "Contacter le Support client"
+    "message": "Contacter le support client"
   },
   "issue_reporter_thank_you_message": {
     "message": "Merci d'avoir aidé à améliorer le service pour tous les clients d'ExpressVPN."
@@ -532,6 +538,27 @@
   },
   "issue_reporter_website_label": {
     "message": "Site web"
+  },
+  "keys_adoption_header_v1": {
+    "message": "Vous souhaitez gagner du temps ?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Vous oubliez vos mots de passe ?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Ajouter à Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Plus tard"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys est un gestionnaire de mots de passe gratuit et sécurisé ! Sauvegardez vos identifiants en un clic."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Essayez ExpressVPN Keys, un gestionnaire de mots de passe gratuit et sécurisé."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
   },
   "language_dropdown_danish": {
     "message": "Danois (Dansk)",
@@ -696,7 +723,7 @@
     "message": "Options"
   },
   "menu_help_support": {
-    "message": "Aide et Support"
+    "message": "Aide et support"
   },
   "menu_item_acknowledgements_text": {
     "message": "Mentions spéciales"
@@ -741,7 +768,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Masquer ma position"
+    "message": "Masquez votre localisation"
   },
   "menu_rate_expressvpn": {
     "message": "Notez ExpressVPN"
@@ -783,7 +810,7 @@
     "message": "Empêche WebRTC de révéler votre véritable adresse IP quand connecté au VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Empêche la géolocalisation HTML5 de révéler votre localisation physique quand connecté au VPN."
+    "message": "Empêche la géolocalisation HTML5 sur la plupart des sites web, en masquant votre localisation physique lorsque vous vous connectez au VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Connexion automatique à la version HTTPS sécurisée des sites web si disponible."
@@ -810,10 +837,10 @@
     "message": "Déconnecter"
   },
   "myaccount_account_active_p1_text": {
-    "message": "Parlez d'ExpressVPN à vos amis et gagnez des jours gratuits !"
+    "message": "Partagez ExpressVPN et gagnez plus !"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Pour chaque ami parrainé, nous vous offrons à tous les deux 30 jours gratuits. "
+    "message": "Vous gagnerez 30 jours gratuits, vous et chaque ami que vous parrainez."
   },
   "myaccount_account_expired_label": {
     "message": "Expiré"
@@ -852,7 +879,7 @@
     "message": "Parrainer des amis"
   },
   "myaccount_expiring_buy_button_label": {
-    "message": "Acheter maintenant"
+    "message": "Acheter"
   },
   "myaccount_expiring_renew_button_label": {
     "message": "Renouveler"
@@ -891,13 +918,13 @@
     "message": "Vous allez être redirigé sous peu."
   },
   "networkLock_hint_connecting_text": {
-    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+    "message": "Le trafic internet est actuellement bloqué pour protéger vos données."
   },
   "networkLock_hint_connection_error_text": {
     "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
   },
   "networkLock_hint_reconnecting_text": {
-    "message": "Le trafic Internet est actuellement bloqué pour protéger vos données."
+    "message": "Le trafic internet est actuellement bloqué pour protéger vos données."
   },
   "networkLock_status_connected_text": {
     "message": "Connecté à %LOCATION%."
@@ -915,7 +942,7 @@
     "message": "Réessayer"
   },
   "networkLock_unblock_internet_button_label": {
-    "message": "Débloquer Internet"
+    "message": "Débloquer internet"
   },
   "notification_extension_update_message": {
     "message": "Découvrez les nouveautés contenues dans la version %VERSION%"
@@ -975,13 +1002,13 @@
     "message": "Acheter un abonnement"
   },
   "promobar_subscription_expiring_soon_renewable_true_text": {
-    "message": "Renouveler maintenant"
+    "message": "Renouveler"
   },
   "promobar_update_available_header": {
     "message": "Mise à jour disponible !"
   },
   "promobar_update_available_text": {
-    "message": "Installer maintenant"
+    "message": "Installer"
   },
   "promo_bar_free_trial_expiring_soon_days_text": {
     "message": "L'essai expire dans [days] jours"
@@ -996,7 +1023,7 @@
     "message": "L'essai expire dans < 1 heure"
   },
   "promo_bar_free_trial_expiring_soon_upgrade_now_button_label": {
-    "message": "S'abonner maintenant"
+    "message": "S'abonner"
   },
   "promo_bar_splittunneling_@chrome@_text": {
     "message": "Chrome n'utilisera pas le VPN."
@@ -1074,7 +1101,7 @@
     "message": "Échec de connexion à %s."
   },
   "vpn_status_notification_connection_failed_network_lock_on_text": {
-    "message": "La connexion à %s n'a pu aboutir. Le trafic Internet est bloqué."
+    "message": "La connexion à %s n'a pu aboutir. Le trafic internet est bloqué."
   },
   "vpn_status_notification_connection_limit_label": {
     "message": "Trop d'appareils connectés"
@@ -1089,13 +1116,16 @@
     "message": "Reconnexion à %s."
   },
   "vpn_status_notification_reconnecting_network_lock_on_text": {
-    "message": " Reconnexion à %s. Le trafic Internet est bloqué."
+    "message": " Reconnexion à %s. Le trafic internet est bloqué."
   },
   "welcome_continue_button_label": {
     "message": "Continuer"
   },
   "welcome_help_improve_expressvpn_header": {
     "message": "Contribuez à améliorer ExpressVPN"
+  },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "En savoir plus"
   },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Non merci"
@@ -1131,10 +1161,10 @@
     "message": "Garantie 30 jours satisfait ou remboursé"
   },
   "welcome_not_installed_scene_1_text": {
-    "message": "Prenez le contrôle de votre vie privée et protégez vos données"
+    "message": "Protégez votre vie privée et vos données en ligne"
   },
   "welcome_not_installed_scene_2_text": {
-    "message": "Profitez de vos émissions et applis favorites où que vous soyez"
+    "message": "Regardez vos émissions et utilisez vos applis favorites où que vous soyez"
   },
   "welcome_not_installed_scene_3_text": {
     "message": "Connectez-vous au Wi-Fi public des hôtels, cafés et aéroports en toute sécurité"
@@ -1149,7 +1179,7 @@
     "message": "En savoir plus"
   },
   "welcome_screen3_p1_text": {
-    "message": "L'extension brouille votre localisation, bloque WebRTC et inclut HTTPS Everywhere."
+    "message": "L'extension masque votre localisation sur la plupart des sites web, bloque WebRTC et inclut HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Passer"

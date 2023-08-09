@@ -15,10 +15,22 @@ let version = require('./package.json').version;
 
 const supportedBrowsers = ['chrome', 'firefox'];
 const browser = argv.browser || 'chrome';
+let launchDarklyId = '';
+let extensionId = 'fgddmllnllkalaagkghckoinaemmogpe';
 
 if ((argv.alpha || argv.beta) && (!process.env.XVCHROME_ALPHA_KEY || !process.env.XVCHROME_BETA_KEY) && browser === 'chrome') {
   console.error('Alpha or Beta keys are missing!');
   process.exit(-1);
+}
+
+if (argv.beta) {
+let launchDarklyId = '';
+  extensionId = 'olhkmmhcabcohlcodnbkfoekafimgkmb';
+} else if (argv.alpha) {
+let launchDarklyId = '';
+  extensionId = 'gicmddjpmepnbabhkhihlgdfccbppflm';
+} else if (process.env.NODE_ENV === 'production') {
+let launchDarklyId = '';
 }
 
 if (process.env.CIRCLE_BUILD_NUM) {
@@ -120,6 +132,8 @@ const config = {
       global: 'window',
       '__IS_BETA__': !!argv.beta,
       '__IS_ALPHA__': !!argv.alpha,
+      '__BROWSER__': JSON.stringify(browser),
+      '__LD_ID__': `'${launchDarklyId}'`,
     }),
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([
@@ -152,7 +166,14 @@ const config = {
       { from: 'styles/shared/vendor/assets/fonts/eds/**/*', to: 'fonts/[name].[ext]' },
       { from: '**/*', to: 'images/[path][name].[ext]', context: 'styles/shared/vendor/assets/images/eds/' },
       { from: 'fonts/**/*', to: 'fonts/[name].[ext]' },
-      { from: 'scripts/content/**/*', to: 'scripts/content/[name].[ext]' },
+      {
+        from: 'scripts/content/**/*',
+        to: 'scripts/content/[name].[ext]',
+        transform(content, filePath) {
+          const transformedContent = content.toString().replace('__EXTENSION_ID__', `'${extensionId}'`);
+          return transformedContent;
+        },
+      },
       // { from: 'scripts/modules/https/**/*', to: 'scripts/modules/https/[name].[ext]' },
       {
         from: 'manifest.json',
@@ -179,8 +200,8 @@ const config = {
                   'Alpha': process.env.XVCHROME_ALPHA_KEY,
                   'Beta': process.env.XVCHROME_BETA_KEY,
                 };
-                manifestObj.name = `(${currentBuildType}) ExpressVPN Extension`;
-                manifestObj.description = `(${currentBuildType}) ExpressVPN Extension`;
+                manifestObj.name = currentBuildType === 'Beta' ? '__MSG_app_name_title_beta__' : '(Alpha) ExpressVPN Extension';
+                manifestObj.description = currentBuildType === 'Beta' ? '__MSG_app_description_text_beta__' : '(Alpha) ExpressVPN Extension';
                 manifestObj.key = chromeKeys[currentBuildType];
                 break;
               case 'firefox':

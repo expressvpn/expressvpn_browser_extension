@@ -10,7 +10,7 @@ Licensed GPL v2
       <img class="illustration" src="/images/illustrations/improve.svg" />
     </div>
     <h1>{{ localize('welcome_help_improve_expressvpn_header') }}</h1>
-    <p>{{ localize('welcome_help_improve_expressvpn_p1_text') }}</p>
+    <p>{{ localize('welcome_help_improve_expressvpn_p1_text') }} <a v-if="browserInfo.name === 'Firefox'" href="#" @click="createTab({ url: 'https://addons.mozilla.org/en-US/firefox/addon/expressvpn/privacy/' })">{{ localize('welcome_help_improve_expressvpn_learn_more_text') }}</a></p>
 
     <div class="button-container">
       <button class="primary" @click="helpImprove(true)">{{ localize('welcome_help_improve_expressvpn_ok_button_label') }}</button>

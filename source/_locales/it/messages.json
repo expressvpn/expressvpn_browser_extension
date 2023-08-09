@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Naviga a una velocità sorprendente. Maschera la posizione, accedi ai contenuti ovunque e gestisci l'app ExpressVPN da Chrome.",
+    "message": "Naviga online in modo sicuro e velocemente. Modifica la posizione, accedi a qualsiasi contenuto e controlla ExpressVPN da Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Naviga online ad un'incredibile velocità. Nascondi la tua posizione, accedi a qualsiasi contenuto e controlla l'app di ExpressVPN direttamente da Firefox.",
+    "message": "Naviga online in modo sicuro e velocemente. Modifica la posizione, accedi a qualsiasi contenuto e controlla ExpressVPN da Firefox.",
     "description": "The description of the application"
   },
+  "app_description_text_beta": {
+    "message": "La versione beta di ExpressVPN è per tutti coloro che vogliono anticipare i tempi. Ricevi per primo le ultime funzionalità."
+  },
   "app_name_title": {
-    "message": "ExpressVPN: proxy VPN per navigare meglio",
+    "message": "ExpressVPN: proxy VPN per un'internet migliore",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN beta: VPN per migliorare internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Sito web"
   },
+  "keys_adoption_header_v1": {
+    "message": "Vuoi risparmiare tempo?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Dimentichi spesso le tue password?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Aggiungi a Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Non ora"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys è un password manager che salva gli accessi e li inserisce automaticamente con un clic."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Prova ExpressVPN Keys, un password manager che protegge gli accessi e li inserisce automaticamente."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Danese (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "Evita che i siti web scoprano il tuo indirizzo IP reale e la tua posizione mentre sei connesso alla VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Interrompe la geolocalizzazione HTML5 che rivela la tua posizione fisica mentre sei connesso alla VPN."
+    "message": "Interrompe la geolocalizzazione HTML5 sulla maggior parte dei siti, che rivela la tua posizione fisica mentre sei connesso alla VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Connette automaticamente a versioni dei siti web HTTPS più sicure, se disponibili."
@@ -810,10 +837,10 @@
     "message": "Esci"
   },
   "myaccount_account_active_p1_text": {
-    "message": "Condividi ExpressVPN e ricevi il servizio gratis!"
+    "message": "Condividi e ricevi ExpressVPN gratis!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Per ogni amico che si abbona, entrambi ricevete 30 giorni gratis."
+    "message": "30 giorni gratis per ogni amico che si abbona."
   },
   "myaccount_account_expired_label": {
     "message": "Scadenza"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Aiutaci a migliorare ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Scopri di più"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "No grazie"
   },
@@ -1149,7 +1179,7 @@
     "message": "Scopri di più"
   },
   "welcome_screen3_p1_text": {
-    "message": "L'estensione nasconde la tua posizione, blocca WebRTC e include HTTPS Everywhere."
+    "message": "L'estensione nasconde la tua posizione sulla maggior parte dei siti, blocca WebRTC e include HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Salta"

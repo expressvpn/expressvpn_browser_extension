@@ -23,6 +23,9 @@
   "Australia": {
     "message": "Australia"
   },
+  "Australia - Adelaide": {
+    "message": "Australia - Adelaida"
+  },
   "Australia - Brisbane": {
     "message": "Australia - Brisbane"
   },
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "Australia - Sídney - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Australia - Woolloomooloo"
   },
   "Austria": {
     "message": "Austria"
@@ -62,6 +68,9 @@
   "Bhutan": {
     "message": "Bután"
   },
+  "Bolivia": {
+    "message": "Bolivia"
+  },
   "Bosnia and Herzegovina": {
     "message": "Bosnia y Herzegovina"
   },
@@ -72,7 +81,7 @@
     "message": "Brasil - 2"
   },
   "Brunei": {
-    "message": "Brunéi Darussalam"
+    "message": "Brunéi"
   },
   "Brunei Darussalam": {
     "message": "Brunéi Darussalam"
@@ -140,6 +149,12 @@
   "France": {
     "message": "Francia"
   },
+  "France - Alsace": {
+    "message": "Francia - Alsacia"
+  },
+  "France - Marseille": {
+    "message": "Francia - Marsella"
+  },
   "France - Paris - 1": {
     "message": "Francia - París - 1"
   },
@@ -156,13 +171,13 @@
     "message": "Alemania"
   },
   "Germany - Frankfurt - 1": {
-    "message": "Alemania - Francfort - 1"
+    "message": "Alemania - Fráncfort - 1"
   },
   "Germany - Frankfurt - 2": {
-    "message": "Alemania - Francfort - 2"
+    "message": "Alemania - Fráncfort - 2"
   },
   "Germany - Frankfurt - 3": {
-    "message": "Alemania - Francfort - 3"
+    "message": "Alemania - Fráncfort - 3"
   },
   "Germany - Nuremberg": {
     "message": "Alemania - Núremberg"
@@ -197,8 +212,11 @@
   "India": {
     "message": "India"
   },
+  "India (via Singapore)": {
+    "message": "India (por Singapur)"
+  },
   "India (via UK)": {
-    "message": "India (mediante Reino Unido)"
+    "message": "India (por Reino Unido)"
   },
   "India - Chennai": {
     "message": "India - Chennai"
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "Italia - Milán"
   },
+  "Italy - Naples": {
+    "message": "Italia - Nápoles"
+  },
   "Japan": {
     "message": "Japón"
+  },
+  "Japan - Shibuya": {
+    "message": "Japón - Shibuya"
   },
   "Japan - Tokyo": {
     "message": "Japón - Tokio",
@@ -317,7 +341,7 @@
     "message": "Holanda - Ámsterdam - 2"
   },
   "Netherlands - Rotterdam": {
-    "message": "Holanda - Rotterdam"
+    "message": "Holanda - Róterdam"
   },
   "Netherlands - The Hague": {
     "message": "Holanda - La Haya"
@@ -344,7 +368,10 @@
     "message": "Filipinas"
   },
   "Philippines (via Singapore)": {
-    "message": "Filipinas (mediante Singapur)"
+    "message": "Filipinas (por Singapur)"
+  },
+  "Pick for Me": {
+    "message": "Elegir por mí"
   },
   "Poland": {
     "message": "Polonia"
@@ -432,13 +459,16 @@
     "message": "Reino Unido - Docklands"
   },
   "UK - East London": {
-    "message": "Reino Unido - Londres Este"
+    "message": "Reino Unido - Este de Londres"
   },
   "UK - Kent": {
     "message": "Reino Unido - Kent"
   },
   "UK - London": {
     "message": "Reino Unido - Londres"
+  },
+  "UK - Midlands": {
+    "message": "Reino Unido - Midlands"
   },
   "UK - Wembley": {
     "message": "Reino Unido - Wembley"
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "Uruguay"
+  },
+  "USA - Albuquerque": {
+    "message": "EE. UU. - Albuquerque"
   },
   "USA - Atlanta": {
     "message": "EE. UU. - Atlanta"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "EE. UU. - Hollywood"
+  },
+  "USA - Lincoln Park": {
+    "message": "EE. UU. - Lincoln Park"
   },
   "USA - Los Angeles": {
     "message": "EE. UU. - Los Ángeles"
@@ -511,6 +547,9 @@
   },
   "USA - New York - 2": {
     "message": "EE. UU. - Nueva York - 2"
+  },
+  "USA - Phoenix": {
+    "message": "EE. UU. - Phoenix"
   },
   "USA - Salt Lake City": {
     "message": "EE. UU. - Salt Lake City"

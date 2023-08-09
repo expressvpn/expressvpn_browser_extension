@@ -1,15 +1,21 @@
 {
   "app_description_@chrome@_text": {
-    "message": "Korzystaj z Internetu z błyskawiczną prędkością. Pozoruj lokalizację, mej dostęp do wszystkiego i kontroluj ExpressVPN z Chrome.",
+    "message": "Włącz tryb online z mega prędkością. Sfałszuj swoją lokalizację, uzyskaj dostęp do treści i kontroluj aplikację ExpressVPN z Chrome.",
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Przejdź do trybu online z błyskawiczną prędkością. Sfałszuj swoją lokalizację, uzyskaj dostęp do dowolnych treści i kontroluj aplikację ExpressVPN bezpośrednio z Firefoxa.",
+    "message": "Włącz tryb online z mega prędkością. Sfałszuj swoją lokalizację, uzyskaj dostęp do treści i kontroluj aplikację ExpressVPN z Firefoxa.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "Wersja beta ExpressVPN jest dla osób, które lubią żyć na najwyższym poziomie. Miej pierwszeństwo do naszych najnowszych funkcji."
   },
   "app_name_title": {
     "message": "ExpressVPN: Proxy VPN dla lepszego Internetu",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN, który ulepsza Internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -43,7 +49,7 @@
     "message": "Zainstaluj aplikację ExpressVPN z Google Play Store.\n"
   },
   "error_app_not_found_require_LINUX_snap_text": {
-    "message": "Jeśli zainstalowałeś przeglądarkę z <b>Centrum oprogramowania Ubuntu</b>, rozszerzenie nie będzie komunikować się z aplikacją Linuxa. [Więcej info]\n"
+    "message": "Jeśli zainstalowano przeglądarkę z <b>Centrum oprogramowania Ubuntu</b>, rozszerzenie nie będzie komunikować się z aplikacją Linuxa. [Więcej info]\n"
   },
   "error_app_not_found_require_LINUX_text": {
     "message": "To rozszerzenie wymaga aplikacji ExpressVPN dla Linuxa z aktywną subskrypcją. "
@@ -58,7 +64,7 @@
     "message": "Wróć do strony głównej"
   },
   "error_business_subscription_expired_contact_support_text": {
-    "message": "W przypadku pytań [skontaktuj się z pomocą techniczną]."
+    "message": "W przypadku pytań, [skontaktuj się z pomocą techniczną]."
   },
   "error_business_subscription_expired_signout_button_label": {
     "message": "Wyloguj się"
@@ -97,7 +103,7 @@
     "message": "Wybierz inną  [lokalizację VPN]"
   },
   "error_connection_error_check_l3_text": {
-    "message": "Jeśli wszystko inne zawiedzie, [skontaktuj się z pomocą techniczną]."
+    "message": "Jeśli wszystko inne zawiedzie, [skontaktuj się z pomocą techniczną]"
   },
   "error_connection_error_lock_on_text": {
     "message": "Ruch internetowy jest obecnie zablokowany w celu ochrony Twojej prywatności. "
@@ -124,7 +130,7 @@
     "message": "Masz już subskrypcję? [Zaktualizuj teraz]. "
   },
   "error_forced_signout_p1_text": {
-    "message": "Zostałeś wylogowany, ponieważ dane Twojego konta zostały zaktualizowane."
+    "message": "Wylogowano Cię, ponieważ dane Twojego konta zostały zaktualizowane."
   },
   "error_forced_signout_p2_linux_text": {
     "message": "Uruchom to polecenie, aby zalogować się ponownie i dalej korzystać z ExpressVPN:"
@@ -142,10 +148,10 @@
     "message": "Twoja płatność została anulowana z powodu braku możliwości weryfikacji informacji rozliczeniowych."
   },
   "error_fraudster_p1_text": {
-    "message": "W celu ponownej aktywacji subskrypcji<br>wyślij e-mail na"
+    "message": "W celu ponownej aktywacji subskrypcji <br>wyślij e-mail na"
   },
   "error_fraudster_p2_text": {
-    "message": "tytuł: <span class='bold'>Billing Verification</span>.",
+    "message": "o tytule: <span class='bold'>Billing Verification</span>.",
     "description": "Do not translate 'Billing Verification'"
   },
   "error_fraudster_p3_text": {
@@ -282,7 +288,7 @@
     "message": "Osiągnięto limit połączenia."
   },
   "error_simultaneous_connection_iap_false_p2_text": {
-    "message": "W celu dalszego korzystania, odłącz aktualne urządzenie lub [wykup dodatkową subskrypcję]."
+    "message": "W celu dalszego korzystania odłącz aktualne urządzenie lub [wykup dodatkową subskrypcję]."
   },
   "error_simultaneous_connection_iap_true_p2_text": {
     "message": "Proszę odłączyć urządzenie."
@@ -456,7 +462,7 @@
     "message": "Zmień lokalizację"
   },
   "home_report_issue_label": {
-    "message": "Feedback"
+    "message": "Opinia"
   },
   "home_report_issue_text": {
     "message": "Jak oceniasz swoje połączenie?"
@@ -532,6 +538,27 @@
   },
   "issue_reporter_website_label": {
     "message": "Strona www"
+  },
+  "keys_adoption_header_v1": {
+    "message": "Chcesz zaoszczędzić czas?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Masz dość zapominania haseł?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Dodaj do Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Nie teraz"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys to bezpieczny, darmowy menedżer haseł, który szybko zapisuje i wypełnia loginy do stron."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Wypróbuj ExpressVPN Keys, darmowy menedżer haseł, który automatycznie i bezpiecznie zapisuje i wypełnia loginy."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
   },
   "language_dropdown_danish": {
     "message": "Duński (Dansk)",
@@ -614,7 +641,7 @@
     "message": "160 lokalizacji na całym świecie"
   },
   "list_item_refer_frieds": {
-    "message": "30 darmowych dni w przypadku polecenia aplikacji znajomym"
+    "message": "30 darmowych dni, gdy polecasz VPN znajomym"
   },
   "list_item_unlimited_bandwidth": {
     "message": "Nieograniczony transfer"
@@ -626,7 +653,7 @@
     "message": "Ostatnie lokalizacje"
   },
   "location_picker_recommended_locations_text": {
-    "message": "Polecane lokalizacje"
+    "message": "Zalecane lokalizacje"
   },
   "location_picker_search_no_results_text": {
     "message": "Brak wyników"
@@ -641,7 +668,7 @@
     "message": "Wszystkie lokalizacje"
   },
   "location_picker_tab_recommended_text": {
-    "message": "Polecane"
+    "message": "Zalecane"
   },
   "main_screen_current_location_text": {
     "message": "Aktualna lokalizacja"
@@ -674,7 +701,7 @@
     "message": "Trwa test prędkości"
   },
   "menu_beta_feedback": {
-    "message": "Wyślij feedback Beta"
+    "message": "Wyślij opinię o wersji beta"
   },
   "menu_cancel_text": {
     "message": "Anuluj"
@@ -783,7 +810,7 @@
     "message": "Spraw, by strony www nie mogły odkryć Twojego prawdziwego adresu IP oraz lokalizacji podczas połączenia z VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Zatrzymaj geolokalizację HTML5, aby nie ujawniać swojego fizycznego położenia podczas połączenia z VPN."
+    "message": "Zatrzymaj geolokalizację HTML5 w przypadku większości stron, aby nie ujawniać swojego fizycznego miejsca pobytu podczas połączenia z VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Automatycznie łącz się z bardziej bezpieczną wersją HTTPS, gdy tylko jest to możliwe."
@@ -810,10 +837,10 @@
     "message": "Wyloguj się"
   },
   "myaccount_account_active_p1_text": {
-    "message": "Podziel się ExpressVPN i otrzymaj darmową usługę!"
+    "message": "Poleć ExpressVPN i zyskaj darmową usługę!"
   },
   "myaccount_account_active_p2_text": {
-    "message": "Gdy Twój znajomy zarejestruje się, oboje otrzymacie 30 darmowych dni."
+    "message": "Za rejestrację znajomego damy Wam po 30 darmowych dni."
   },
   "myaccount_account_expired_label": {
     "message": "Wygasło"
@@ -939,7 +966,7 @@
     "message": "Zaktualizuj teraz"
   },
   "promobar_iap_failed_header": {
-    "message": "Ostatnia płatność nie powiodła się"
+    "message": "Błąd ostatniej płatności"
   },
   "promobar_iap_failed_text": {
     "message": "Zaktualizuj metodę płatności"
@@ -957,7 +984,7 @@
     "message": "Twoja subskrypcja wygasa"
   },
   "promobar_subscription_expiring_autobill_header": {
-    "message": "Ostatnia płatność nie powiodła się"
+    "message": "Błąd ostatniej płatności"
   },
   "promobar_subscription_expiring_autobill_text": {
     "message": "Zaktualizuj metodę płatności"
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Pomóż ulepszyć ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Dowiedz się więcej"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nie, dziękuję"
   },
@@ -1149,7 +1179,7 @@
     "message": "Dowiedz się więcej"
   },
   "welcome_screen3_p1_text": {
-    "message": "Rozszerzenie pozoruje Twoją lokalizację, blokuje WebRTC i zawiera HTTPS Everywhere."
+    "message": "Rozszerzenie pozoruje Twoją lokalizację w przypadku większości stron, blokuje WebRTC i zawiera HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Pomiń "

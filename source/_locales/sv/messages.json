@@ -4,12 +4,18 @@
     "description": "The description of the application"
   },
   "app_description_@firefox@_text": {
-    "message": "Skaffa en trygg uppkoppling med blixtsnabba hastigheter. Spoofa din position, se på innehåll från hela världen och kontrollera ExpressVPN-appen direkt från Firefox.",
+    "message": "Surfa säkert i blixtsnabba hastigheter. Spoofa din position, kom åt innehåll överallt och kontrollera ExpressVPN:s app från Firefox.",
     "description": "The description of the application"
+  },
+  "app_description_text_beta": {
+    "message": "ExpressVPN beta är för dig som vill leva livet i framkant. Var först med att få de senaste funktionerna."
   },
   "app_name_title": {
     "message": "ExpressVPN: VPN proxy för ett bättre internet",
     "description": "The name of the application"
+  },
+  "app_name_title_beta": {
+    "message": "ExpressVPN Beta: VPN för ett bättre internet"
   },
   "app_short_name_title": {
     "message": "ExpressVPN",
@@ -533,6 +539,27 @@
   "issue_reporter_website_label": {
     "message": "Hemsida"
   },
+  "keys_adoption_header_v1": {
+    "message": "Vill du spara tid?"
+  },
+  "keys_adoption_header_v2": {
+    "message": "Trött på att glömma lösenord?"
+  },
+  "keys_adoption_primary_btn": {
+    "message": "Lägg till i Chrome"
+  },
+  "keys_adoption_secondary_btn": {
+    "message": "Inte nu"
+  },
+  "keys_adoption_text_v1": {
+    "message": "ExpressVPN Keys är en kostnadsfri och säker lösenordshanterare som sparar och fyller i inloggningar med ett klick."
+  },
+  "keys_adoption_text_v2": {
+    "message": "Prova ExpressVPN Keys, en kostnadsfri lösenordshanterare som kan spara och fylla i inloggningar automatiskt."
+  },
+  "keys_adoption_title": {
+    "message": "ExpressVPN Keys"
+  },
   "language_dropdown_danish": {
     "message": "Danska (Dansk)",
     "description": "Do not translate the text between parentheses"
@@ -783,7 +810,7 @@
     "message": "Förhindra sidor från att upptäcka din sanna IP-adress och position när du är ansluten till VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Stoppa HTML5-geolokalisering från att avslöja din faktiska position när du är ansluten till VPN."
+    "message": "Hindra HTML5-geolokalisering på de flesta sidor och maskera din faktiska position när du är ansluten till VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Ansluter automatiskt till den säkrare HTTPS-versionen på hemsidor där detta är möjligt."
@@ -1097,6 +1124,9 @@
   "welcome_help_improve_expressvpn_header": {
     "message": "Hjälp oss förbättra ExpressVPN"
   },
+  "welcome_help_improve_expressvpn_learn_more_text": {
+    "message": "Läs mer"
+  },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nej, tack"
   },
@@ -1149,7 +1179,7 @@
     "message": "Läs mer"
   },
   "welcome_screen3_p1_text": {
-    "message": "Tillägget spoofar din position, blockerar WebRTC och kommer med HTTPS Everywhere."
+    "message": "Tillägget spoofar din position på de flesta sidor, blockerar WebRTC och kommer med HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Hoppa över"

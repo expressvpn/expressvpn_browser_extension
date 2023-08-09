@@ -18,10 +18,13 @@
     "message": "Армения"
   },
   "Asia Pacific": {
-    "message": "Азиатско-Тихоокеанский регион"
+    "message": "АТР"
   },
   "Australia": {
     "message": "Австралия"
+  },
+  "Australia - Adelaide": {
+    "message": "Австралия - Аделаида"
   },
   "Australia - Brisbane": {
     "message": "Австралия - Брисбен"
@@ -40,6 +43,9 @@
   },
   "Australia - Sydney - 3": {
     "message": "Австралия - Сидней - 3"
+  },
+  "Australia - Woolloomooloo": {
+    "message": "Австралия - Вуллумулу"
   },
   "Austria": {
     "message": "Австрия"
@@ -61,6 +67,9 @@
   },
   "Bhutan": {
     "message": "Бутан"
+  },
+  "Bolivia": {
+    "message": "Боливия"
   },
   "Bosnia and Herzegovina": {
     "message": "Босния и Герцеговина"
@@ -140,6 +149,12 @@
   "France": {
     "message": "Франция"
   },
+  "France - Alsace": {
+    "message": "Франция - Эльзас"
+  },
+  "France - Marseille": {
+    "message": "Франция - Марсель"
+  },
   "France - Paris - 1": {
     "message": "Франция - Париж - 1"
   },
@@ -197,8 +212,11 @@
   "India": {
     "message": "Индия"
   },
+  "India (via Singapore)": {
+    "message": "Индия (через Сингапур)"
+  },
   "India (via UK)": {
-    "message": "Индия (через Британию)"
+    "message": "Индия (через Англию)"
   },
   "India - Chennai": {
     "message": "Индия - Ченнаи"
@@ -227,8 +245,14 @@
   "Italy - Milan": {
     "message": "Италия - Милан"
   },
+  "Italy - Naples": {
+    "message": "Италия - Неаполь"
+  },
   "Japan": {
     "message": "Япония"
+  },
+  "Japan - Shibuya": {
+    "message": "Япония - Сибуя"
   },
   "Japan - Tokyo": {
     "message": "Япония - Токио",
@@ -346,6 +370,9 @@
   "Philippines (via Singapore)": {
     "message": "Филиппины (через Сингапур)"
   },
+  "Pick for Me": {
+    "message": "Выбрать для меня"
+  },
   "Poland": {
     "message": "Польша"
   },
@@ -429,19 +456,22 @@
     "message": "Турция"
   },
   "UK - Docklands": {
-    "message": "Великобритания - Доклендс"
+    "message": "Англия - Доклендс"
   },
   "UK - East London": {
-    "message": "Великобритания - Восточный Лондон"
+    "message": "Англия - Вост. Лондон"
   },
   "UK - Kent": {
-    "message": "Великобритания - Кент"
+    "message": "Англия - Кент"
   },
   "UK - London": {
-    "message": "Великобритания - Лондон"
+    "message": "Англия - Лондон"
+  },
+  "UK - Midlands": {
+    "message": "Англия - Мидлендс"
   },
   "UK - Wembley": {
-    "message": "Великобритания - Уэмбли"
+    "message": "Англия - Уэмбли"
   },
   "Ukraine": {
     "message": "Украина"
@@ -454,6 +484,9 @@
   },
   "Uruguay": {
     "message": "Уругвай"
+  },
+  "USA - Albuquerque": {
+    "message": "США - Альбукерке"
   },
   "USA - Atlanta": {
     "message": "США - Атланта"
@@ -472,6 +505,9 @@
   },
   "USA - Hollywood": {
     "message": "США - Голливуд"
+  },
+  "USA - Lincoln Park": {
+    "message": "США - Линкольн-Парк"
   },
   "USA - Los Angeles": {
     "message": "США - Лос-Анджелес"
@@ -507,10 +543,13 @@
     "message": "США - Нью-Джерси - 3"
   },
   "USA - New York": {
-    "message": "США - Нью-йорк"
+    "message": "США - Нью-Йорк"
   },
   "USA - New York - 2": {
-    "message": "США - Нью-йорк - 2"
+    "message": "США - Нью-Йорк - 2"
+  },
+  "USA - Phoenix": {
+    "message": "США - Финикс"
   },
   "USA - Salt Lake City": {
     "message": "США - Солт-Лейк-Сити"

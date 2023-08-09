@@ -10,17 +10,43 @@ export default (function () {
   let isConnected = false;
   let currentBackoffCollision = 0;
   let prevCurrentBackoffCollision = 0;
-  let englisLocations = [];
+  let englishLocations = [];
+  let isNewProtocol = false;
 
   // helper method to build the requests.
-  const buildRequest = (method, customParams) => {
-    const defaultParams = {
+  const buildRequest = (_method, _params) => {
+    let method = _method;
+    let params = _params;
+
+    let request = {
       jsonrpc: '2.0',
-      method: method,
-      params: customParams,
+      method,
+      params,
       id: 1,
     };
-    return defaultParams;
+    if (isNewProtocol) {
+      switch (_method) {
+        case 'XVPN.GetEnginePreferences':
+          method = 'GetPreferences';
+          break;
+        case 'XVPN.Reset':
+          method = 'SignOut';
+          break;
+        case 'XVPN.SelectLocation':
+          method = 'SelectLocation';
+          params = { ...params.selected_location };
+          break;
+        default:
+          method = _method.replace(/^XVPN\./, '');
+          break;
+      }
+
+      request = {
+        method,
+        params,
+      };
+    }
+    return request;
   };
 
   /*
@@ -41,6 +67,68 @@ export default (function () {
     return nextDelay;
   };
 
+  function handleNewProtocol(msg) {
+    const { type: responseType, name: responseName, data: responseData } = msg;
+
+    if (responseType === 'event') {
+      window.top.postMessage({ method: 'updateStatus', name: responseName, data: responseData }, '*');
+    } else if (responseType === 'method') {
+      if (responseName === 'status') {
+        const info = responseData.info;
+        const app = responseData.app;
+
+        let currentInfo = {
+          state: info.state,
+          selectedLocation: utils.localizeLocation(info.selected_location || info.last_location),
+          app,
+          subscription: responseData.subscription,
+          website_url: info.website_url,
+          isNewProtocol,
+          raw: responseData,
+        };
+        window.top.postMessage({ method: 'currentState', currentInfo }, '*');
+      } else if (responseName === 'preferences') {
+        window.top.postMessage({ method: 'updatePreferences', data: responseData }, '*');
+      } else if (responseName === 'messages') {
+        if (responseData.length > 0) {
+          chrome.storage.local.set({ 'messages': responseData });
+        }
+      } else if (responseName === 'locations') {
+        englishLocations = responseData.locations;
+        let recommendedList = [];
+        const allLocations = responseData.locations.map(el => {
+          const localizedEl = {
+            country: utils.localizeLocation(el.country),
+            name: utils.localizeLocation(el.name),
+            region: utils.localizeLocation(el.region),
+          };
+          const item = { ...el, ...localizedEl };
+          if (msg.data.recommended_location_ids.includes(item.id)) {
+            recommendedList.push(item);
+          }
+          return item;
+        });
+
+        window.top.postMessage({
+          method: 'updateLocationsData',
+          // eslint-disable-next-line camelcase
+          data: { recommended: recommendedList, all: allLocations, recent_locations_ids: responseData.recent_locations_ids },
+        }, '*');
+
+        if (responseData.smart_location_id) {
+          const smartLocation = responseData.locations.find((el) => el.id === responseData.smart_location_id);
+          if (smartLocation) {
+            window.top.postMessage({ method: 'updateSmartLocation', data: utils.localizeLocation(smartLocation) }, '*');
+          }
+        }
+      } else {
+        console.error('Method not supported', msg);
+      }
+    } else if (responseType === 'error') {
+      console.error('Engine error:', responseData.message);
+    }
+  }
+
   const connect = () => {
     const helperName = 'com.expressvpn.helper';
     port = chrome.runtime.connectNative(helperName);
@@ -50,11 +138,18 @@ export default (function () {
       if ((msg === null) || (typeof msg !== 'object')) { // null is an object...
         return true; // must return true to keep the event listener running
       }
+      if (isNewProtocol) {
+        handleNewProtocol(msg);
+        return true;
+      }
       if (msg.error && typeof msg.error === 'string') {
         if (msg.error.indexOf('sendEngineCommand: not activated') > 0) {
           currentBackoffCollision = prevCurrentBackoffCollision;
         }
       } else if (msg.connected) {
+        if (msg.browser_helper_protocol === 2) {
+          isNewProtocol = true;
+        }
         prevCurrentBackoffCollision = currentBackoffCollision;
         currentBackoffCollision = 0; // reset exponential backoff collision counter on connect
         if (!isConnected) { // Notify extension is connected to helper
@@ -90,7 +185,7 @@ export default (function () {
       } else if (msg.Preferences) {
         window.top.postMessage({ method: 'updatePreferences', data: msg.Preferences }, '*');
       } else if (msg.locations) {
-        englisLocations = msg.locations;
+        englishLocations = msg.locations;
         const allLocations = msg.locations.map(el => {
           const localizedItems = {
             country: utils.localizeLocation(el.country),
@@ -163,7 +258,9 @@ export default (function () {
    * Sends a native message. Checks first if we're connected
    *
   */
-  const sendNativeMessage = (msg) => {
+  const sendNativeMessage = (_msg) => {
+    let msg = _msg;
+
     if (isConnected === true) {
       port.postMessage(msg);
       console.debug('COMMAND SENT', msg);
@@ -212,13 +309,11 @@ export default (function () {
   * returns the stringified request made to the watchdog so this method can be tested
   * */
   const selectLocation = (selectedLocation) => {
-    const englishLocation = englisLocations.find(el => el.id === selectedLocation.id);
-    sendNativeMessage(buildRequest('XVPN.SelectLocation', {
+    const englishLocation = englishLocations.find(el => el.id === selectedLocation.id);
+    return sendNativeMessage(buildRequest('XVPN.SelectLocation', {
       selected_location: {
+        ...selectedLocation,
         name: selectedLocation.is_country ? englishLocation.country : englishLocation.name,
-        is_country: selectedLocation.is_country,
-        is_smart_location: selectedLocation.is_smart_location,
-        id: selectedLocation.id,
       },
     }));
   };
@@ -229,10 +324,11 @@ export default (function () {
   * */
   const connectToLocation = (location, options = {}) => {
     const { connectWhileConnected, isAutoConnect } = options;
-    const englishLocation = englisLocations.find(el => el.id === location.id);
+    const englishLocation = englishLocations.find(el => el.id === location.id);
     let connectionData = {};
     if (location.is_country) {
       connectionData.country = englishLocation.country;
+      connectionData.country_code = location.country_code;
     } else {
       connectionData.name = englishLocation.name;
       connectionData.is_default = location.is_smart_location;
