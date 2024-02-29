@@ -768,7 +768,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Vermom uw locatie"
+    "message": "Vermom je locatie"
   },
   "menu_rate_expressvpn": {
     "message": "Beoordeel ExpressVPN"
@@ -807,7 +807,7 @@
     "message": "Hulp"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Voorkom dat websites achter uw echte IP-adres en locatie komen wanneer u verbonden bent met VPN."
+    "message": "Voorkom dat websites achter je echte IP-adres en locatie komen wanneer je verbonden bent met VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
     "message": "Verhinder HTML5 geolocatie op de meeste websites en maskeer je fysieke locatie zolang je verbonden bent met VPN."
@@ -1179,7 +1179,7 @@
     "message": "Meer informatie"
   },
   "welcome_screen3_p1_text": {
-    "message": "De extensie verbergt op de meeste websitest je locatie, blokkeert WebRTC en gebruikt HTTPS Everywhere."
+    "message": "De extensie verbergt op de meeste websites je locatie, blokkeert WebRTC en gebruikt HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Overslaan"

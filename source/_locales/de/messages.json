@@ -807,13 +807,13 @@
     "message": "Hilfe"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Verhindern Sie, dass Webseiten Ihre wahre IP-Adresse und Ihren Standort entdecken, während Sie mit dem VPN verbunden sind."
+    "message": "Verhindern Sie, dass Websites Ihre wahre IP-Adresse und Ihren Standort entdecken, während Sie mit dem VPN verbunden sind."
   },
   "menu_settings_privacy_hide_location_description_text": {
     "message": "Verhindern Sie mit einer bestehenden VPN-Verbindung auf den meisten Websites, dass durch eine HTML5-basierte Geolokalisierung Ihr physischer Standort offengelegt wird."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "Verbinden Sie sich automatisch mit der sichereren HTTPS-Version von Webseiten, sofern verfügbar."
+    "message": "Verbinden Sie sich automatisch mit der sichereren HTTPS-Version von Websites, sofern verfügbar."
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "Mehr erfahren"

@@ -91,7 +91,7 @@
     "message": "Opdater dit operativsystem for at bruge udvidelsen. "
   },
   "error_compatibility_error_os_version_update_button_label": {
-    "message": "Lær mere"
+    "message": "Få mere at vide"
   },
   "error_compatibility_error_title": {
     "message": "Opdater operativsystemet"
@@ -294,7 +294,7 @@
     "message": "Afbryd forbindelsen til en enhed."
   },
   "error_simultaneous_connection_learn_more_button_label": {
-    "message": "Lær mere"
+    "message": "Få mere at vide"
   },
   "error_simultaneous_connection_ok_button_label": {
     "message": "OK"
@@ -807,7 +807,7 @@
     "message": "Hjælp"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Forhindr internetsider i at opdage din sande IP-adresse og placering, når du er forbundet til VPN."
+    "message": "Undgå at hjemmesider opdager din sande IP-adresse og placering, når du er forbundet til VPN'en."
   },
   "menu_settings_privacy_hide_location_description_text": {
     "message": "Stop sporingen af HTML5-geoplacering på de fleste sider, så du kan skjule din fysiske placering, når du er forbundet til VPN'en."
@@ -816,16 +816,16 @@
     "message": "Genopret automatisk forbindelsen til den mere sikre HTTPS-version af hjemmesider, når de er tilgængelige."
   },
   "menu_settings_privacy_learn_more_button_label": {
-    "message": "Lær mere"
+    "message": "Få mere at vide"
   },
   "menu_settings_privacy_security_name": {
-    "message": "Privatliv & sikkerhed"
+    "message": "Databeskyttelse og sikkerhed"
   },
   "menu_settings_settings_general_title": {
     "message": "Indstillinger "
   },
   "menu_settings_settings_privacy_title": {
-    "message": "Privatlivsindstillinger "
+    "message": "Indstillinger for databeskyttelse"
   },
   "menu_setup_other_devices": {
     "message": "Opsæt andre enheder"
@@ -1125,7 +1125,7 @@
     "message": "Hjælp med at forbedre ExpressVPN"
   },
   "welcome_help_improve_expressvpn_learn_more_text": {
-    "message": "Lær mere"
+    "message": "Få mere at vide"
   },
   "welcome_help_improve_expressvpn_no_button_label": {
     "message": "Nej tak"
@@ -1176,7 +1176,7 @@
     "message": "Når du er forbundet til VPN, beskytter den hele din enhed og ikke kun browseren."
   },
   "welcome_screen3_learn_more_text": {
-    "message": "Lær mere"
+    "message": "Få mere at vide"
   },
   "welcome_screen3_p1_text": {
     "message": "Udvidelsen skjuler din placering på de fleste sider, blokerer WebRTC og inkluderer HTTPS Everywhere."

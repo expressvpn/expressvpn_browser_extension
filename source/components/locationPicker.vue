@@ -4,32 +4,68 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 -->
 <template>
-  <div id="locationPicker">
-    <secondary-header stringkey="location_picker_locations_title" :onBackClick="sideBackBtnClick" :showSearchOption="!searchFlag" :onSearchClick="showSearchBox" />
+    <div id="locationPicker">
+        <secondary-header
+            stringkey="location_picker_locations_title"
+            :onBackClick="sideBackBtnClick"
+            :showSearchOption="!searchFlag"
+            :onSearchClick="showSearchBox"
+        />
 
-    <div>
-      <div class="location-tab-container">
-        <div :class="['location-tab', { active: activeTab === 'recommended' }]" @click="setActiveTab('recommended')">{{ localize('location_picker_tab_recommended_text') }}</div>
-        <div :class="['location-tab', { active: activeTab === 'all' }]" @click="setActiveTab('all')">{{ localize('location_picker_tab_all_text') }}</div>
-      </div>
+        <div>
+            <div class="location-tab-container">
+                <div
+                    :class="[
+                        'location-tab',
+                        { active: activeTab === 'recommended' },
+                    ]"
+                    @click="setActiveTab('recommended')"
+                >
+                    {{ localize('location_picker_tab_recommended_text') }}
+                </div>
+                <div
+                    :class="['location-tab', { active: activeTab === 'all' }]"
+                    @click="setActiveTab('all')"
+                >
+                    {{ localize('location_picker_tab_all_text') }}
+                </div>
+            </div>
 
-      <div class="location-list-container">
-        <div v-if="searchFlag">
-          <search-box-container v-if="searchFlag" v-model="searchText" :initialText="initialText"/>
-          <search-locations-container v-if="searchTypingStatus" :searchText="searchText" />
+            <div class="location-list-container">
+                <div v-if="searchFlag">
+                    <search-box-container
+                        v-if="searchFlag"
+                        v-model="searchText"
+                        :initialText="initialText"
+                    />
+                    <search-locations-container
+                        v-if="searchTypingStatus"
+                        :searchText="searchText"
+                    />
+                </div>
+
+                <country-screen
+                    v-if="showCountryScreen && searchTypingStatus === false"
+                    :country="currentCountry"
+                />
+
+                <div
+                    v-if="
+                        showCountryScreen === false &&
+                        searchTypingStatus === false
+                    "
+                >
+                    <recommended-locations v-if="activeTab === 'recommended'" />
+                    <all-locations
+                        v-else
+                        :expandRegion="currentExpandedRegion"
+                    />
+                </div>
+            </div>
         </div>
 
-        <country-screen v-if="showCountryScreen && searchTypingStatus === false" :country="currentCountry"/>
-
-        <div v-if="showCountryScreen === false && searchTypingStatus === false">
-          <recommended-locations v-if="activeTab === 'recommended'" />
-          <all-locations v-else :expandRegion="currentExpandedRegion" />
-        </div>
-      </div>
+        <popup :options="popupOptions"></popup>
     </div>
-
-    <popup :options="popupOptions"></popup>
-  </div>
 </template>
 <script>
 import mixinLocation from '@/scripts/mixins/location';
@@ -42,115 +78,124 @@ import countryScreen from './partials/locationPicker/countryScreen.vue';
 import popup from './partials/popup.vue';
 
 export default {
-  name: 'locationsScreen',
-  mixins: [mixinLocation],
-  data() {
-    return {
-      activeTab: 'recommended',
-      initialText: '',
-      searchText: '',
-      searchFlag: false,
-      currentCountry: {},
-      currentExpandedRegion: '',
-      popupOptions: {},
-    };
-  },
-  computed: {
-    showCountryScreen() {
-      return Object.keys(this.currentCountry).length > 0;
-    },
-    searchTypingStatus: function () {
-      let searchString = this.searchText; // .toLowerCase();
-      searchString = searchString.replace(/-/g, '');
-      if (this.searchFlag && searchString !== '') {
-        return true;
-      }
-      return false;
-    },
-  },
-  mounted() {
-    this.$on('cancelSearch', this.cancelSearch);
-
-    this.$root.$on('show-country-screen', (data) => {
-      this.currentCountry = Object.assign(data, { searchText: this.searchText });
-    });
-
-    this.$root.$on('close-country-screen', (data) => {
-      this.currentExpandedRegion = data.region;
-      if (data.searchText !== '') {
-        this.initialText = data.searchText;
-      } else {
-        this.cancelSearch();
-      }
-
-      this.currentCountry = {};
-      setTimeout(() => {
-        document.querySelector('.location-list-container').scrollTop = data.scrollTop;
-      }, 10);
-    });
-
-    this.$root.$on('connect-to-location', (selectedLocation) => {
-      if ((this.currentInfo.state === 'ready' || this.currentInfo.state === 'connection_error') || localStorage.getItem('hasCWCbefore')) {
-        this.updateLocationAndConnect(selectedLocation);
-      } else if (this.currentInfo.state === 'connected') {
-        this.popupOptions = {
-          id: 'home_change_location_popup',
-          buttons: [
-            {
-              callback: () => { this.popupOptions = {}; },
-            },
-            {
-              highlightIt: true,
-              callback: () => {
-                localStorage.setItem('hasCWCbefore', true);
-                this.updateLocationAndConnect(selectedLocation);
-                this.popupOptions = {};
-              },
-            },
-          ],
-          isVisible: true,
-          style: 'vertical',
+    name: 'locationsScreen',
+    mixins: [mixinLocation],
+    data() {
+        return {
+            activeTab: 'recommended',
+            initialText: '',
+            searchText: '',
+            searchFlag: false,
+            currentCountry: {},
+            currentExpandedRegion: '',
+            popupOptions: {},
         };
-      }
-    });
-  },
-  components: {
-    recommendedLocations,
-    allLocations,
-    searchLocationsContainer,
-    searchBoxContainer,
-    secondaryHeader,
-    countryScreen,
-    popup,
-  },
-  methods: {
-    onWheel(event) {
-      if (event.deltaX > 10) {
-        this.setActiveTab('all');
-      } else if (event.deltaX < -10) {
-        this.setActiveTab('recommended');
-      }
     },
-    sideBackBtnClick(event) {
-      this.$store.dispatch('setCurrentView', 'mainScreen');
+    computed: {
+        showCountryScreen() {
+            return Object.keys(this.currentCountry).length > 0;
+        },
+        searchTypingStatus: function () {
+            let searchString = this.searchText; // .toLowerCase();
+            searchString = searchString.replace(/-/g, '');
+            if (this.searchFlag && searchString !== '') {
+                return true;
+            }
+            return false;
+        },
     },
-    showSearchBox(event) {
-      // Show search box
-      this.searchFlag = !this.searchFlag;
+    mounted() {
+        this.$on('cancelSearch', this.cancelSearch);
+
+        this.$root.$on('show-country-screen', (data) => {
+            this.currentCountry = Object.assign(data, {
+                searchText: this.searchText,
+            });
+        });
+
+        this.$root.$on('close-country-screen', (data) => {
+            this.currentExpandedRegion = data.region;
+            if (data.searchText !== '') {
+                this.initialText = data.searchText;
+            } else {
+                this.cancelSearch();
+            }
+
+            this.currentCountry = {};
+            setTimeout(() => {
+                document.querySelector('.location-list-container').scrollTop =
+                    data.scrollTop;
+            }, 10);
+        });
+
+        this.$root.$on('connect-to-location', (selectedLocation) => {
+            if (
+                this.currentInfo.state === 'ready' ||
+                this.currentInfo.state === 'connection_error' ||
+                localStorage.getItem('hasCWCbefore')
+            ) {
+                this.updateLocationAndConnect(selectedLocation);
+            } else if (this.currentInfo.state === 'connected') {
+                this.popupOptions = {
+                    id: 'home_change_location_popup',
+                    buttons: [
+                        {
+                            callback: () => {
+                                this.popupOptions = {};
+                            },
+                        },
+                        {
+                            highlightIt: true,
+                            callback: () => {
+                                localStorage.setItem('hasCWCbefore', true);
+                                this.updateLocationAndConnect(selectedLocation);
+                                this.popupOptions = {};
+                            },
+                        },
+                    ],
+                    isVisible: true,
+                    style: 'vertical',
+                };
+            }
+        });
     },
-    cancelSearch(event) {
-      // Hide search box
-      this.searchFlag = false;
-      this.searchText = '';
+    components: {
+        recommendedLocations,
+        allLocations,
+        searchLocationsContainer,
+        searchBoxContainer,
+        secondaryHeader,
+        countryScreen,
+        popup,
     },
-    setActiveTab(tabName) {
-      if (this.activeTab !== tabName) {
-        this.activeTab = tabName;
-        this.currentExpandedRegion = '';
-        this.currentCountry = {};
-      }
+    methods: {
+        onWheel(event) {
+            if (event.deltaX > 10) {
+                this.setActiveTab('all');
+            } else if (event.deltaX < -10) {
+                this.setActiveTab('recommended');
+            }
+        },
+        sideBackBtnClick(event) {
+            this.$store.dispatch('setCurrentView', 'mainScreen');
+        },
+        showSearchBox(event) {
+            // Show search box
+            this.searchFlag = !this.searchFlag;
+        },
+        cancelSearch(event) {
+            // Hide search box
+            this.searchFlag = false;
+            this.searchText = '';
+        },
+        setActiveTab(tabName) {
+            if (this.activeTab !== tabName) {
+                this.activeTab = tabName;
+                this.currentExpandedRegion = '';
+                this.currentCountry = {};
+            }
+        },
     },
-  },
 };
 </script>
 
@@ -255,45 +300,45 @@ export default {
 </style>
 <style lang="scss">
 .location-expand {
-  &:hover {
-     .icon path {
-       fill: var(--font-color-highlight);
-     }
-  }
-  &:active {
-     .icon path {
-       fill: var(--font-color);
-     }
-  }
-  .icon path {
-    fill: var(--font-color);
-  }
+    &:hover {
+        .icon path {
+            fill: var(--font-color-highlight);
+        }
+    }
+    &:active {
+        .icon path {
+            fill: var(--font-color);
+        }
+    }
+    .icon path {
+        fill: var(--font-color);
+    }
 }
 .location-item {
-  &:hover {
-    color: var(--font-color-highlight);
-  }
+    &:hover {
+        color: var(--font-color-highlight);
+    }
 
-  &:active {
-    color: var(--font-color);
-  }
+    &:active {
+        color: var(--font-color);
+    }
 }
 @media (prefers-color-scheme: light) {
-  #locationPicker {
-    --tab-header-unselected: #{$eds-color-grey-20};
-    --tab-header-unselected-border: #{$eds-color-grey-40};
-    --location-item-border-color: #{$eds-color-grey-40};
-  }
+    #locationPicker {
+        --tab-header-unselected: #{$eds-color-grey-20};
+        --tab-header-unselected-border: #{$eds-color-grey-40};
+        --location-item-border-color: #{$eds-color-grey-40};
+    }
 }
 @media (prefers-color-scheme: dark) {
-  #locationPicker {
-    --tab-header-unselected: #{$eds-color-grey-40};
-    --tab-header-unselected-border: #{$eds-color-grey-40};
-    --location-item-border-color: #{$eds-color-grey-40};
+    #locationPicker {
+        --tab-header-unselected: #{$eds-color-grey-40};
+        --tab-header-unselected-border: #{$eds-color-grey-40};
+        --location-item-border-color: #{$eds-color-grey-40};
 
-    .logo path {
-      fill: $eds-color-grey-40;
+        .logo path {
+            fill: $eds-color-grey-40;
+        }
     }
-  }
 }
 </style>

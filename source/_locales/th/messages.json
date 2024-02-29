@@ -1179,7 +1179,7 @@
     "message": "เรียนรู้เพิ่มเติม"
   },
   "welcome_screen3_p1_text": {
-    "message": "ส่วนขยายนี้หลอกตำแหน่งของคุณบนเว็บไซต์ส่วนใหญ่ บล็อก WebRTC และรวมถึง HTTPS Everywhere"
+    "message": "ส่วนขยายนี้ปลอมแปลงตำแหน่งของคุณบนเว็บไซต์ส่วนใหญ่ บล็อก WebRTC และรวมถึง HTTPS Everywhere"
   },
   "welcome_skip_button_label": {
     "message": "ข้าม"

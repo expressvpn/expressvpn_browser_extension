@@ -762,7 +762,7 @@
     "message": "Compte"
   },
   "menu_privacy_block_webrtc_text": {
-    "message": "Bloquer WebRTC"
+    "message": "Bloquez WebRTC"
   },
   "menu_privacy_enable_https_everywhere_text": {
     "message": "HTTPS Everywhere"
@@ -807,7 +807,7 @@
     "message": "Aide"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Empêche WebRTC de révéler votre véritable adresse IP quand connecté au VPN."
+    "message": "Empêche les sites web de découvrir votre véritable adresse IP et localisation quand vous êtes connecté au VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
     "message": "Empêche la géolocalisation HTML5 sur la plupart des sites web, en masquant votre localisation physique lorsque vous vous connectez au VPN."

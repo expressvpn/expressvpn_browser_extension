@@ -807,10 +807,10 @@
     "message": "Tuki"
   },
   "menu_settings_privacy_block_webrtc_description_text": {
-    "message": "Estä sivustoja näkemästä todellista IP-osoitettasi ja sijaintiasi ollessasi yhteydessä VPN:ään."
+    "message": "Estä sivustoja näkemästä todellista IP-osoitettasi ja sijaintiasi, kun olet yhteydessä VPN:ään."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Estää HTML5-geosijaintia paljastamasta fyysistä sijaintiasi useimmilla sivustoilla ollessasi yhteydessä VPN:ään."
+    "message": "Estä HTML5-geosijaintia paljastamasta todellista sijaintiasi useimmilla sivustoilla, kun olet yhteydessä VPN:ään."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Muodosta yhteys automaattisesti sivustojen turvallisempaan HTTPS-versioon, kun sellainen on saatavilla."

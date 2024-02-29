@@ -1,6 +1,6 @@
 {
   "United States": {
-    "default": { "lat": 38.883333, "lon": -77.000 },
+    "default": { "lat": 38.883333, "lon": -77.0 },
     "USA - Atlanta": { "lat": 33.7557, "lon": -84.392 },
     "USA - Chicago": { "lat": 41.8825, "lon": -87.6441 },
     "USA - Dallas": { "lat": 32.8148, "lon": -96.8705 },
@@ -25,736 +25,736 @@
     "USA - Washington DC": { "lat": 38.9024, "lon": -77.0146 },
     "USA - Washington DC - 2": { "lat": 38.8922, "lon": -77.0505 }
   },
-    "Afghanistan": {
-    "default": {"lat": 34.51666667, "lon": 69.183333 }
+  "Afghanistan": {
+    "default": { "lat": 34.51666667, "lon": 69.183333 }
   },
   "Aland Islands": {
-    "default": {"lat": 60.116667, "lon": 19.9 }
+    "default": { "lat": 60.116667, "lon": 19.9 }
   },
   "Albania": {
-    "default": {"lat": 41.31666667, "lon": 19.816667 }
+    "default": { "lat": 41.31666667, "lon": 19.816667 }
   },
   "Algeria": {
-    "default": {"lat": 36.75, "lon": 3.05 }
+    "default": { "lat": 36.75, "lon": 3.05 }
   },
   "American Samoa": {
-    "default": {"lat": -14.26666667, "lon": -170.70 }
+    "default": { "lat": -14.26666667, "lon": -170.7 }
   },
   "Andorra": {
-    "default": {"lat": 42.50, "lon": 1.516667 }
+    "default": { "lat": 42.5, "lon": 1.516667 }
   },
   "Angola": {
-    "default": {"lat": -8.833333333, "lon": 13.216667 }
+    "default": { "lat": -8.833333333, "lon": 13.216667 }
   },
   "Anguilla": {
-    "default": {"lat": 18.21666667, "lon": -63.05 }
+    "default": { "lat": 18.21666667, "lon": -63.05 }
   },
   "Antarctica": {
-    "default": {"lat": 0.000, "lon": 0.00 }
+    "default": { "lat": 0.0, "lon": 0.0 }
   },
   "Antigua and Barbuda": {
-    "default": {"lat": 17.11666667, "lon": -61.85 }
+    "default": { "lat": 17.11666667, "lon": -61.85 }
   },
   "Argentina": {
-    "default": {"lat": -34.58333333, "lon": -58.666667 }
+    "default": { "lat": -34.58333333, "lon": -58.666667 }
   },
   "Armenia": {
-    "default": {"lat": 40.16666667, "lon": 44.50 }
+    "default": { "lat": 40.16666667, "lon": 44.5 }
   },
   "Aruba": {
-    "default": {"lat": 12.51666667, "lon": -70.033333 }
+    "default": { "lat": 12.51666667, "lon": -70.033333 }
   },
   "Australia": {
-    "default": {"lat": -35.26666667, "lon": 149.133333 }
+    "default": { "lat": -35.26666667, "lon": 149.133333 }
   },
   "Austria": {
-    "default": {"lat": 48.2, "lon": 16.366667 }
+    "default": { "lat": 48.2, "lon": 16.366667 }
   },
   "Azerbaijan": {
-    "default": {"lat": 40.38333333, "lon": 49.866667 }
+    "default": { "lat": 40.38333333, "lon": 49.866667 }
   },
   "Bahamas": {
-    "default": {"lat": 25.08333333, "lon": -77.35 }
+    "default": { "lat": 25.08333333, "lon": -77.35 }
   },
   "Bahrain": {
-    "default": {"lat": 26.23333333, "lon": 50.566667 }
+    "default": { "lat": 26.23333333, "lon": 50.566667 }
   },
   "Bangladesh": {
-    "default": {"lat": 23.71666667, "lon": 90.4 }
+    "default": { "lat": 23.71666667, "lon": 90.4 }
   },
   "Barbados": {
-    "default": {"lat": 13.1, "lon": -59.616667 }
+    "default": { "lat": 13.1, "lon": -59.616667 }
   },
   "Belarus": {
-    "default": {"lat": 53.9, "lon": 27.566667 }
+    "default": { "lat": 53.9, "lon": 27.566667 }
   },
   "Belgium": {
-    "default": {"lat": 50.83333333, "lon": 4.333333 }
+    "default": { "lat": 50.83333333, "lon": 4.333333 }
   },
   "Belize": {
-    "default": {"lat": 17.25, "lon": -88.766667 }
+    "default": { "lat": 17.25, "lon": -88.766667 }
   },
   "Benin": {
-    "default": {"lat": 6.483333333, "lon": 2.616667 }
+    "default": { "lat": 6.483333333, "lon": 2.616667 }
   },
   "Bermuda": {
-    "default": {"lat": 32.28333333, "lon": -64.783333 }
+    "default": {"lat": 32.2951, "lon": -64.7842 }
   },
   "Bhutan": {
-    "default": {"lat": 27.46666667, "lon": 89.633333 }
+    "default": { "lat": 27.46666667, "lon": 89.633333 }
   },
   "Bolivia": {
-    "default": {"lat": -16.5, "lon": -68.15 }
+    "default": { "lat": -16.5, "lon": -68.15 }
   },
   "Bosnia and Herzegovina": {
-    "default": {"lat": 43.86666667, "lon": 18.416667 }
+    "default": { "lat": 43.86666667, "lon": 18.416667 }
   },
   "Botswana": {
-    "default": {"lat": -24.63333333, "lon": 25.9 }
+    "default": { "lat": -24.63333333, "lon": 25.9 }
   },
   "Brazil": {
-    "default": {"lat": -15.78333333, "lon": -47.916667 }
+    "default": { "lat": -15.78333333, "lon": -47.916667 }
   },
   "British Indian Ocean Territory": {
-    "default": {"lat": -7.3, "lon": 72.4 }
+    "default": { "lat": -7.3, "lon": 72.4 }
   },
   "British Virgin Islands": {
-    "default": {"lat": 18.41666667, "lon": -64.616667 }
+    "default": { "lat": 18.41666667, "lon": -64.616667 }
   },
   "Brunei Darussalam": {
-    "default": {"lat": 4.883333333, "lon": 114.933333 }
+    "default": { "lat": 4.883333333, "lon": 114.933333 }
   },
   "Bulgaria": {
-    "default": {"lat": 42.68333333, "lon": 23.316667 }
+    "default": { "lat": 42.68333333, "lon": 23.316667 }
   },
   "Burkina Faso": {
-    "default": {"lat": 12.36666667, "lon": -1.516667 }
+    "default": { "lat": 12.36666667, "lon": -1.516667 }
   },
   "Burundi": {
-    "default": {"lat": -3.366666667, "lon": 29.35 }
+    "default": { "lat": -3.366666667, "lon": 29.35 }
   },
   "Cambodia": {
-    "default": {"lat": 11.55, "lon": 104.916667 }
+    "default": { "lat": 11.55, "lon": 104.916667 }
   },
   "Cameroon": {
-    "default": {"lat": 3.866666667, "lon": 11.516667 }
+    "default": { "lat": 3.866666667, "lon": 11.516667 }
   },
   "Canada": {
-    "default": {"lat": 45.41666667, "lon": -75.7 }
+    "default": { "lat": 45.41666667, "lon": -75.7 }
   },
   "Cape Verde": {
-    "default": {"lat": 14.91666667, "lon": -23.516667 }
+    "default": { "lat": 14.91666667, "lon": -23.516667 }
   },
   "Cayman Islands": {
-    "default": {"lat": 19.3, "lon": -81.383333 }
+    "default": {"lat": 19.2966, "lon": -81.3823 }
   },
   "Central African Republic": {
-    "default": {"lat": 4.366666667, "lon": 18.583333 }
+    "default": { "lat": 4.366666667, "lon": 18.583333 }
   },
   "Chad": {
-    "default": {"lat": 12.1, "lon": 15.033333 }
+    "default": { "lat": 12.1, "lon": 15.033333 }
   },
   "Chile": {
-    "default": {"lat": -33.45, "lon": -70.666667 }
+    "default": { "lat": -33.45, "lon": -70.666667 }
   },
   "China": {
-    "default": {"lat": 39.91666667, "lon": 116.383333 }
+    "default": { "lat": 39.91666667, "lon": 116.383333 }
   },
   "Christmas Island": {
-    "default": {"lat": -10.41666667, "lon": 105.716667 }
+    "default": { "lat": -10.41666667, "lon": 105.716667 }
   },
   "Cocos Islands": {
-    "default": {"lat": -12.16666667, "lon": 96.833333 }
+    "default": { "lat": -12.16666667, "lon": 96.833333 }
   },
   "Colombia": {
-    "default": {"lat": 4.6, "lon": -74.083333 }
+    "default": { "lat": 4.6, "lon": -74.083333 }
   },
   "Comoros": {
-    "default": {"lat": -11.7, "lon": 43.233333 }
+    "default": { "lat": -11.7, "lon": 43.233333 }
   },
   "Cook Islands": {
-    "default": {"lat": -21.2, "lon": -159.766667 }
+    "default": { "lat": -21.2, "lon": -159.766667 }
   },
   "Costa Rica": {
-    "default": {"lat": 9.933333333, "lon": -84.083333 }
+    "default": { "lat": 9.933333333, "lon": -84.083333 }
   },
   "Cote d’Ivoire": {
-    "default": {"lat": 6.816666667, "lon": -5.266667 }
+    "default": { "lat": 6.816666667, "lon": -5.266667 }
   },
   "Croatia": {
-    "default": {"lat": 45.8, "lon": 16 }
+    "default": { "lat": 45.8, "lon": 16 }
   },
   "Cuba": {
-    "default": {"lat": 23.11666667, "lon": -82.35 }
+    "default": {"lat": 23.1106, "lon": -82.3714 }
   },
   "CuraÃ§ao": {
-    "default": {"lat": 12.1, "lon": -68.916667 }
+    "default": { "lat": 12.1, "lon": -68.916667 }
   },
   "Cyprus": {
-    "default": {"lat": 35.16666667, "lon": 33.366667 }
+    "default": { "lat": 35.16666667, "lon": 33.366667 }
   },
   "Czech Republic": {
-    "default": {"lat": 50.08333333, "lon": 14.466667 }
+    "default": { "lat": 50.08333333, "lon": 14.466667 }
   },
   "Democratic Republic of the Congo": {
-    "default": {"lat": -4.316666667, "lon": 15.3 }
+    "default": { "lat": -4.316666667, "lon": 15.3 }
   },
   "Denmark": {
-    "default": {"lat": 55.66666667, "lon": 12.583333 }
+    "default": { "lat": 55.66666667, "lon": 12.583333 }
   },
   "Djibouti": {
-    "default": {"lat": 11.58333333, "lon": 43.15 }
+    "default": { "lat": 11.58333333, "lon": 43.15 }
   },
   "Dominica": {
-    "default": {"lat": 15.3, "lon": -61.4 }
+    "default": { "lat": 15.3, "lon": -61.4 }
   },
   "Dominican Republic": {
-    "default": {"lat": 18.46666667, "lon": -69.9 }
+    "default": {"lat": 18.4848, "lon": -69.9309 }
   },
   "Ecuador": {
-    "default": {"lat": -0.216666667, "lon": -78.5 }
+    "default": { "lat": -0.216666667, "lon": -78.5 }
   },
   "Egypt": {
-    "default": {"lat": 30.05, "lon": 31.25 }
+    "default": { "lat": 30.05, "lon": 31.25 }
   },
   "El Salvador": {
-    "default": {"lat": 13.7, "lon": -89.2 }
+    "default": { "lat": 13.7, "lon": -89.2 }
   },
   "Equatorial Guinea": {
-    "default": {"lat": 3.75, "lon": 8.783333 }
+    "default": { "lat": 3.75, "lon": 8.783333 }
   },
   "Eritrea": {
-    "default": {"lat": 15.33333333, "lon": 38.933333 }
+    "default": { "lat": 15.33333333, "lon": 38.933333 }
   },
   "Estonia": {
-    "default": {"lat": 59.43333333, "lon": 24.716667 }
+    "default": { "lat": 59.43333333, "lon": 24.716667 }
   },
   "Ethiopia": {
-    "default": {"lat": 9.033333333, "lon": 38.7 }
+    "default": { "lat": 9.033333333, "lon": 38.7 }
   },
   "Falkland Islands": {
-    "default": {"lat": -51.7, "lon": -57.85 }
+    "default": { "lat": -51.7, "lon": -57.85 }
   },
   "Faroe Islands": {
-    "default": {"lat": 62, "lon": -6.766667 }
+    "default": { "lat": 62, "lon": -6.766667 }
   },
   "Federated States of Micronesia": {
-    "default": {"lat": 6.916666667, "lon": 158.15 }
+    "default": { "lat": 6.916666667, "lon": 158.15 }
   },
   "Fiji": {
-    "default": {"lat": -18.13333333, "lon": 178.416667 }
+    "default": { "lat": -18.13333333, "lon": 178.416667 }
   },
   "Finland": {
-    "default": {"lat": 60.16666667, "lon": 24.933333 }
+    "default": { "lat": 60.16666667, "lon": 24.933333 }
   },
   "France": {
-    "default": {"lat": 48.86666667, "lon": 2.333333 }
+    "default": { "lat": 48.86666667, "lon": 2.333333 }
   },
   "French Polynesia": {
-    "default": {"lat": -17.53333333, "lon": -149.566667 }
+    "default": { "lat": -17.53333333, "lon": -149.566667 }
   },
   "French Southern and Antarctic Lands": {
-    "default": {"lat": -49.35, "lon": 70.216667 }
+    "default": { "lat": -49.35, "lon": 70.216667 }
   },
   "Gabon": {
-    "default": {"lat": 0.383333333, "lon": 9.45 }
+    "default": { "lat": 0.383333333, "lon": 9.45 }
   },
   "Georgia": {
-    "default": {"lat": 41.68333333, "lon": 44.833333 }
+    "default": { "lat": 41.68333333, "lon": 44.833333 }
   },
   "Germany": {
-    "default": {"lat": 52.51666667, "lon": 13.4 }
+    "default": { "lat": 52.51666667, "lon": 13.4 }
   },
   "Ghana": {
-    "default": {"lat": 5.55, "lon": -0.216667 }
+    "default": {"lat": 5.6037, "lon": 0.187 }
   },
   "Gibraltar": {
-    "default": {"lat": 36.13333333, "lon": -5.35 }
+    "default": { "lat": 36.13333333, "lon": -5.35 }
   },
   "Greece": {
-    "default": {"lat": 37.98333333, "lon": 23.733333 }
+    "default": { "lat": 37.98333333, "lon": 23.733333 }
   },
   "Greenland": {
-    "default": {"lat": 64.18333333, "lon": -51.75 }
+    "default": { "lat": 64.18333333, "lon": -51.75 }
   },
   "Grenada": {
-    "default": {"lat": 12.05, "lon": -61.75 }
+    "default": { "lat": 12.05, "lon": -61.75 }
   },
   "Guam": {
-    "default": {"lat": 13.46666667, "lon": 144.733333 }
+    "default": {"lat": 13.4769, "lon": 144.754 }
   },
   "Guatemala": {
-    "default": {"lat": 14.61666667, "lon": -90.516667 }
+    "default": { "lat": 14.61666667, "lon": -90.516667 }
   },
   "Guernsey": {
-    "default": {"lat": 49.45, "lon": -2.533333 }
+    "default": { "lat": 49.45, "lon": -2.533333 }
   },
   "Guinea": {
-    "default": {"lat": 9.5, "lon": -13.7 }
+    "default": { "lat": 9.5, "lon": -13.7 }
   },
   "Guinea-Bissau": {
-    "default": {"lat": 11.85, "lon": -15.583333 }
+    "default": { "lat": 11.85, "lon": -15.583333 }
   },
   "Guyana": {
-    "default": {"lat": 6.8, "lon": -58.15 }
+    "default": { "lat": 6.8, "lon": -58.15 }
   },
   "Haiti": {
-    "default": {"lat": 18.53333333, "lon": -72.333333 }
+    "default": { "lat": 18.53333333, "lon": -72.333333 }
   },
   "Heard Island and McDonald Islands": {
-    "default": {"lat": 0, "lon": 0 }
+    "default": { "lat": 0, "lon": 0 }
   },
   "Honduras": {
-    "default": {"lat": 14.1, "lon": -87.216667 }
+    "default": {"lat": 14.0658, "lon": -87.1796 }
   },
   "Hong Kong": {
-    "default": {"lat": 22.396428, "lon": 114.109497 }
+    "default": { "lat": 22.396428, "lon": 114.109497 }
   },
   "Hungary": {
-    "default": {"lat": 47.5, "lon": 19.083333 }
+    "default": { "lat": 47.5, "lon": 19.083333 }
   },
   "Iceland": {
-    "default": {"lat": 64.15, "lon": -21.95 }
+    "default": { "lat": 64.15, "lon": -21.95 }
   },
   "India": {
-    "default": {"lat": 28.6, "lon": 77.2 }
+    "default": { "lat": 28.6, "lon": 77.2 }
   },
   "Indonesia": {
-    "default": {"lat": -6.166666667, "lon": 106.816667 }
+    "default": { "lat": -6.166666667, "lon": 106.816667 }
   },
   "Iran": {
-    "default": {"lat": 35.7, "lon": 51.416667 }
+    "default": { "lat": 35.7, "lon": 51.416667 }
   },
   "Iraq": {
-    "default": {"lat": 33.33333333, "lon": 44.4 }
+    "default": { "lat": 33.33333333, "lon": 44.4 }
   },
   "Ireland": {
-    "default": {"lat": 53.31666667, "lon": -6.233333 }
+    "default": { "lat": 53.31666667, "lon": -6.233333 }
   },
   "Isle of Man": {
-    "default": {"lat": 54.15, "lon": -4.483333 }
+    "default": { "lat": 54.15, "lon": -4.483333 }
   },
   "Israel": {
-    "default": {"lat": 31.76666667, "lon": 35.233333 }
+    "default": { "lat": 31.76666667, "lon": 35.233333 }
   },
   "Italy": {
-    "default": {"lat": 41.9, "lon": 12.483333 }
+    "default": { "lat": 41.9, "lon": 12.483333 }
   },
   "Jamaica": {
-    "default": {"lat": 18, "lon": -76.8 }
+    "default": {"lat": 18.0178, "lon": -76.8092 }
   },
   "Japan": {
-    "default": {"lat": 35.68333333, "lon": 139.75 }
+    "default": { "lat": 35.68333333, "lon": 139.75 }
   },
   "Jersey": {
-    "default": {"lat": 49.18333333, "lon": -2.1 }
+    "default": { "lat": 49.18333333, "lon": -2.1 }
   },
   "Jordan": {
-    "default": {"lat": 31.95, "lon": 35.933333 }
+    "default": { "lat": 31.95, "lon": 35.933333 }
   },
   "Kazakhstan": {
-    "default": {"lat": 51.16666667, "lon": 71.416667 }
+    "default": { "lat": 51.16666667, "lon": 71.416667 }
   },
   "Kenya": {
-    "default": {"lat": -1.283333333, "lon": 36.816667 }
+    "default": { "lat": -1.283333333, "lon": 36.816667 }
   },
   "Kiribati": {
-    "default": {"lat": -0.883333333, "lon": 169.533333 }
+    "default": { "lat": -0.883333333, "lon": 169.533333 }
   },
   "Kosovo": {
-    "default": {"lat": 42.66666667, "lon": 21.166667 }
+    "default": { "lat": 42.66666667, "lon": 21.166667 }
   },
   "Kuwait": {
-    "default": {"lat": 29.36666667, "lon": 47.966667 }
+    "default": { "lat": 29.36666667, "lon": 47.966667 }
   },
   "Kyrgyzstan": {
-    "default": {"lat": 42.86666667, "lon": 74.6 }
+    "default": { "lat": 42.86666667, "lon": 74.6 }
   },
   "Laos": {
-    "default": {"lat": 17.96666667, "lon": 102.6 }
+    "default": { "lat": 17.96666667, "lon": 102.6 }
   },
   "Latvia": {
-    "default": {"lat": 56.95, "lon": 24.1 }
+    "default": { "lat": 56.95, "lon": 24.1 }
   },
   "Lebanon": {
-    "default": {"lat": 33.86666667, "lon": 35.5 }
+    "default": {"lat": 33.8959, "lon": 35.505 }
   },
   "Lesotho": {
-    "default": {"lat": -29.31666667, "lon": 27.483333 }
+    "default": { "lat": -29.31666667, "lon": 27.483333 }
   },
   "Liberia": {
-    "default": {"lat": 6.3, "lon": -10.8 }
+    "default": { "lat": 6.3, "lon": -10.8 }
   },
   "Libya": {
-    "default": {"lat": 32.88333333, "lon": 13.166667 }
+    "default": { "lat": 32.88333333, "lon": 13.166667 }
   },
   "Liechtenstein": {
-    "default": {"lat": 47.13333333, "lon": 9.516667 }
+    "default": { "lat": 47.13333333, "lon": 9.516667 }
   },
   "Lithuania": {
-    "default": {"lat": 54.68333333, "lon": 25.316667 }
+    "default": { "lat": 54.68333333, "lon": 25.316667 }
   },
   "Luxembourg": {
-    "default": {"lat": 49.6, "lon": 6.116667 }
+    "default": { "lat": 49.6, "lon": 6.116667 }
   },
   "Macau": {
-    "default": {"lat": 22.210928, "lon": 113.552971 }
+    "default": { "lat": 22.210928, "lon": 113.552971 }
   },
   "North Macedonia": {
-    "default": {"lat": 42, "lon": 21.433333 }
+    "default": { "lat": 42, "lon": 21.433333 }
   },
   "Madagascar": {
-    "default": {"lat": -18.91666667, "lon": 47.516667 }
+    "default": { "lat": -18.91666667, "lon": 47.516667 }
   },
   "Malawi": {
-    "default": {"lat": -13.96666667, "lon": 33.783333 }
+    "default": { "lat": -13.96666667, "lon": 33.783333 }
   },
   "Malaysia": {
-    "default": {"lat": 3.166666667, "lon": 101.7 }
+    "default": { "lat": 3.166666667, "lon": 101.7 }
   },
   "Maldives": {
-    "default": {"lat": 4.166666667, "lon": 73.5 }
+    "default": { "lat": 4.166666667, "lon": 73.5 }
   },
   "Mali": {
-    "default": {"lat": 12.65, "lon": -8 }
+    "default": { "lat": 12.65, "lon": -8 }
   },
   "Malta": {
-    "default": {"lat": 35.88333333, "lon": 14.5 }
+    "default": { "lat": 35.88333333, "lon": 14.5 }
   },
   "Marshall Islands": {
-    "default": {"lat": 7.1, "lon": 171.383333 }
+    "default": { "lat": 7.1, "lon": 171.383333 }
   },
   "Mauritania": {
-    "default": {"lat": 18.06666667, "lon": -15.966667 }
+    "default": { "lat": 18.06666667, "lon": -15.966667 }
   },
   "Mauritius": {
-    "default": {"lat": -20.15, "lon": 57.483333 }
+    "default": { "lat": -20.15, "lon": 57.483333 }
   },
   "Mexico": {
-    "default": {"lat": 19.43333333, "lon": -99.133333 }
+    "default": { "lat": 19.43333333, "lon": -99.133333 }
   },
   "Moldova": {
-    "default": {"lat": 47, "lon": 28.85 }
+    "default": { "lat": 47, "lon": 28.85 }
   },
   "Monaco": {
-    "default": {"lat": 43.73333333, "lon": 7.416667 }
+    "default": { "lat": 43.73333333, "lon": 7.416667 }
   },
   "Mongolia": {
-    "default": {"lat": 47.91666667, "lon": 106.916667 }
+    "default": { "lat": 47.91666667, "lon": 106.916667 }
   },
   "Montenegro": {
-    "default": {"lat": 42.43333333, "lon": 19.266667 }
+    "default": { "lat": 42.43333333, "lon": 19.266667 }
   },
   "Montserrat": {
-    "default": {"lat": 16.7, "lon": -62.216667 }
+    "default": { "lat": 16.7, "lon": -62.216667 }
   },
   "Morocco": {
-    "default": {"lat": 34.01666667, "lon": -6.816667 }
+    "default": {"lat": 33.9758, "lon": -6.85073 }
   },
   "Mozambique": {
-    "default": {"lat": -25.95, "lon": 32.583333 }
+    "default": { "lat": -25.95, "lon": 32.583333 }
   },
   "Myanmar": {
-    "default": {"lat": 16.8, "lon": 96.15 }
+    "default": { "lat": 16.8, "lon": 96.15 }
   },
   "Namibia": {
-    "default": {"lat": -22.56666667, "lon": 17.083333 }
+    "default": { "lat": -22.56666667, "lon": 17.083333 }
   },
   "Nauru": {
-    "default": {"lat": -0.5477, "lon": 166.920867 }
+    "default": { "lat": -0.5477, "lon": 166.920867 }
   },
   "Nepal": {
-    "default": {"lat": 27.71666667, "lon": 85.316667 }
+    "default": { "lat": 27.71666667, "lon": 85.316667 }
   },
   "Netherlands": {
-    "default": {"lat": 52.35, "lon": 4.916667 }
+    "default": { "lat": 52.35, "lon": 4.916667 }
   },
   "New Caledonia": {
-    "default": {"lat": -22.26666667, "lon": 166.45 }
+    "default": { "lat": -22.26666667, "lon": 166.45 }
   },
   "New Zealand": {
-    "default": {"lat": -41.3, "lon": 174.783333 }
+    "default": { "lat": -41.3, "lon": 174.783333 }
   },
   "Nicaragua": {
-    "default": {"lat": 12.13333333, "lon": -86.25 }
+    "default": { "lat": 12.13333333, "lon": -86.25 }
   },
   "Niger": {
-    "default": {"lat": 13.51666667, "lon": 2.116667 }
+    "default": { "lat": 13.51666667, "lon": 2.116667 }
   },
   "Nigeria": {
-    "default": {"lat": 9.083333333, "lon": 7.533333 }
+    "default": { "lat": 9.083333333, "lon": 7.533333 }
   },
   "Niue": {
-    "default": {"lat": -19.01666667, "lon": -169.916667 }
+    "default": { "lat": -19.01666667, "lon": -169.916667 }
   },
   "Norfolk Island": {
-    "default": {"lat": -29.05, "lon": 167.966667 }
+    "default": { "lat": -29.05, "lon": 167.966667 }
   },
   "North Korea": {
-    "default": {"lat": 39.01666667, "lon": 125.75 }
+    "default": { "lat": 39.01666667, "lon": 125.75 }
   },
   "Northern Cyprus": {
-    "default": {"lat": 35.183333, "lon": 33.366667 }
+    "default": { "lat": 35.183333, "lon": 33.366667 }
   },
   "Northern Mariana Islands": {
-    "default": {"lat": 15.2, "lon": 145.75 }
+    "default": { "lat": 15.2, "lon": 145.75 }
   },
   "Norway": {
-    "default": {"lat": 59.91666667, "lon": 10.75 }
+    "default": { "lat": 59.91666667, "lon": 10.75 }
   },
   "Oman": {
-    "default": {"lat": 23.61666667, "lon": 58.583333 }
+    "default": { "lat": 23.61666667, "lon": 58.583333 }
   },
   "Pakistan": {
-    "default": {"lat": 33.68333333, "lon": 73.05 }
+    "default": { "lat": 33.68333333, "lon": 73.05 }
   },
   "Palau": {
-    "default": {"lat": 7.483333333, "lon": 134.633333 }
+    "default": { "lat": 7.483333333, "lon": 134.633333 }
   },
   "Palestine": {
-    "default": {"lat": 31.76666667, "lon": 35.233333 }
+    "default": { "lat": 31.76666667, "lon": 35.233333 }
   },
   "Panama": {
-    "default": {"lat": 8.966666667, "lon": -79.533333 }
+    "default": { "lat": 8.966666667, "lon": -79.533333 }
   },
   "Papua New Guinea": {
-    "default": {"lat": -9.45, "lon": 147.183333 }
+    "default": { "lat": -9.45, "lon": 147.183333 }
   },
   "Paraguay": {
-    "default": {"lat": -25.26666667, "lon": -57.666667 }
+    "default": { "lat": -25.26666667, "lon": -57.666667 }
   },
   "Peru": {
-    "default": {"lat": -12.05, "lon": -77.05 }
+    "default": { "lat": -12.05, "lon": -77.05 }
   },
   "Philippines": {
-    "default": {"lat": 14.6, "lon": 120.966667 }
+    "default": { "lat": 14.6, "lon": 120.966667 }
   },
   "Pitcairn Islands": {
-    "default": {"lat": -25.06666667, "lon": -130.083333 }
+    "default": { "lat": -25.06666667, "lon": -130.083333 }
   },
   "Poland": {
-    "default": {"lat": 52.25, "lon": 21 }
+    "default": { "lat": 52.25, "lon": 21 }
   },
   "Portugal": {
-    "default": {"lat": 38.71666667, "lon": -9.133333 }
+    "default": { "lat": 38.71666667, "lon": -9.133333 }
   },
   "Puerto Rico": {
-    "default": {"lat": 18.46666667, "lon": -66.116667 }
+    "default": {"lat": 18.4676, "lon": -66.1202 }
   },
   "Qatar": {
-    "default": {"lat": 25.28333333, "lon": 51.533333 }
+    "default": { "lat": 25.28333333, "lon": 51.533333 }
   },
   "Republic of Congo": {
-    "default": {"lat": -4.25, "lon": 15.283333 }
+    "default": { "lat": -4.25, "lon": 15.283333 }
   },
   "Romania": {
-    "default": {"lat": 44.43333333, "lon": 26.1 }
+    "default": { "lat": 44.43333333, "lon": 26.1 }
   },
   "Russia": {
-    "default": {"lat": 55.75, "lon": 37.6 }
+    "default": { "lat": 55.75, "lon": 37.6 }
   },
   "Rwanda": {
-    "default": {"lat": -1.95, "lon": 30.05 }
+    "default": { "lat": -1.95, "lon": 30.05 }
   },
   "Saint Barthelemy": {
-    "default": {"lat": 17.88333333, "lon": -62.85 }
+    "default": { "lat": 17.88333333, "lon": -62.85 }
   },
   "Saint Helena": {
-    "default": {"lat": -15.93333333, "lon": -5.716667 }
+    "default": { "lat": -15.93333333, "lon": -5.716667 }
   },
   "Saint Kitts and Nevis": {
-    "default": {"lat": 17.3, "lon": -62.716667 }
+    "default": { "lat": 17.3, "lon": -62.716667 }
   },
   "Saint Lucia": {
-    "default": {"lat": 14, "lon": -61 }
+    "default": { "lat": 14, "lon": -61 }
   },
   "Saint Martin": {
-    "default": {"lat": 18.0731, "lon": -63.0822 }
+    "default": { "lat": 18.0731, "lon": -63.0822 }
   },
   "Saint Pierre and Miquelon": {
-    "default": {"lat": 46.76666667, "lon": -56.183333 }
+    "default": { "lat": 46.76666667, "lon": -56.183333 }
   },
   "Saint Vincent and the Grenadines": {
-    "default": {"lat": 13.13333333, "lon": -61.216667 }
+    "default": { "lat": 13.13333333, "lon": -61.216667 }
   },
   "Samoa": {
-    "default": {"lat": -13.81666667, "lon": -171.766667 }
+    "default": { "lat": -13.81666667, "lon": -171.766667 }
   },
   "San Marino": {
-    "default": {"lat": 43.93333333, "lon": 12.416667 }
+    "default": { "lat": 43.93333333, "lon": 12.416667 }
   },
   "Sao Tome and Principe": {
-    "default": {"lat": 0.333333333, "lon": 6.733333 }
+    "default": { "lat": 0.333333333, "lon": 6.733333 }
   },
   "Saudi Arabia": {
-    "default": {"lat": 24.65, "lon": 46.7 }
+    "default": { "lat": 24.65, "lon": 46.7 }
   },
   "Senegal": {
-    "default": {"lat": 14.73333333, "lon": -17.633333 }
+    "default": { "lat": 14.73333333, "lon": -17.633333 }
   },
   "Serbia": {
-    "default": {"lat": 44.83333333, "lon": 20.5 }
+    "default": { "lat": 44.83333333, "lon": 20.5 }
   },
   "Seychelles": {
-    "default": {"lat": -4.616666667, "lon": 55.45 }
+    "default": { "lat": -4.616666667, "lon": 55.45 }
   },
   "Sierra Leone": {
-    "default": {"lat": 8.483333333, "lon": -13.233333 }
+    "default": { "lat": 8.483333333, "lon": -13.233333 }
   },
   "Singapore": {
-    "default": {"lat": 1.283333333, "lon": 103.85 }
+    "default": { "lat": 1.283333333, "lon": 103.85 }
   },
   "Sint Maarten": {
-    "default": {"lat": 18.01666667, "lon": -63.033333 }
+    "default": { "lat": 18.01666667, "lon": -63.033333 }
   },
   "Slovakia": {
-    "default": {"lat": 48.15, "lon": 17.116667 }
+    "default": { "lat": 48.15, "lon": 17.116667 }
   },
   "Slovenia": {
-    "default": {"lat": 46.05, "lon": 14.516667 }
+    "default": { "lat": 46.05, "lon": 14.516667 }
   },
   "Solomon Islands": {
-    "default": {"lat": -9.433333333, "lon": 159.95 }
+    "default": { "lat": -9.433333333, "lon": 159.95 }
   },
   "Somalia": {
-    "default": {"lat": 2.066666667, "lon": 45.333333 }
+    "default": { "lat": 2.066666667, "lon": 45.333333 }
   },
   "Somaliland": {
-    "default": {"lat": 9.55, "lon": 44.05 }
+    "default": { "lat": 9.55, "lon": 44.05 }
   },
   "South Africa": {
-    "default": {"lat": -25.7, "lon": 28.216667 }
+    "default": { "lat": -25.7, "lon": 28.216667 }
   },
   "South Georgia and South Sandwich Islands": {
-    "default": {"lat": -54.283333, "lon": -36.5 }
+    "default": { "lat": -54.283333, "lon": -36.5 }
   },
   "South Korea": {
-    "default": {"lat": 37.55, "lon": 126.983333 }
+    "default": { "lat": 37.55, "lon": 126.983333 }
   },
   "South Sudan": {
-    "default": {"lat": 4.85, "lon": 31.616667 }
+    "default": { "lat": 4.85, "lon": 31.616667 }
   },
   "Spain": {
-    "default": {"lat": 40.4, "lon": -3.683333 }
+    "default": { "lat": 40.4, "lon": -3.683333 }
   },
   "Sri Lanka": {
-    "default": {"lat": 6.916666667, "lon": 79.833333 }
+    "default": { "lat": 6.916666667, "lon": 79.833333 }
   },
   "Sudan": {
-    "default": {"lat": 15.6, "lon": 32.533333 }
+    "default": { "lat": 15.6, "lon": 32.533333 }
   },
   "Suriname": {
-    "default": {"lat": 5.833333333, "lon": -55.166667 }
+    "default": { "lat": 5.833333333, "lon": -55.166667 }
   },
   "Svalbard": {
-    "default": {"lat": 78.21666667, "lon": 15.633333 }
+    "default": { "lat": 78.21666667, "lon": 15.633333 }
   },
   "Swaziland": {
-    "default": {"lat": -26.31666667, "lon": 31.133333 }
+    "default": { "lat": -26.31666667, "lon": 31.133333 }
   },
   "Sweden": {
-    "default": {"lat": 59.33333333, "lon": 18.05 }
+    "default": { "lat": 59.33333333, "lon": 18.05 }
   },
   "Switzerland": {
-    "default": {"lat": 46.91666667, "lon": 7.466667 }
+    "default": { "lat": 46.91666667, "lon": 7.466667 }
   },
   "Syria": {
-    "default": {"lat": 33.5, "lon": 36.3 }
+    "default": { "lat": 33.5, "lon": 36.3 }
   },
   "Taiwan": {
-    "default": {"lat": 25.03333333, "lon": 121.516667 }
+    "default": { "lat": 25.03333333, "lon": 121.516667 }
   },
   "Tajikistan": {
-    "default": {"lat": 38.55, "lon": 68.766667 }
+    "default": { "lat": 38.55, "lon": 68.766667 }
   },
   "Tanzania": {
-    "default": {"lat": -6.8, "lon": 39.283333 }
+    "default": { "lat": -6.8, "lon": 39.283333 }
   },
   "Thailand": {
-    "default": {"lat": 13.75, "lon": 100.516667 }
+    "default": { "lat": 13.75, "lon": 100.516667 }
   },
   "The Gambia": {
-    "default": {"lat": 13.45, "lon": -16.566667 }
+    "default": { "lat": 13.45, "lon": -16.566667 }
   },
   "Timor-Leste": {
-    "default": {"lat": -8.583333333, "lon": 125.6 }
+    "default": { "lat": -8.583333333, "lon": 125.6 }
   },
   "Togo": {
-    "default": {"lat": 6.116666667, "lon": 1.216667 }
+    "default": { "lat": 6.116666667, "lon": 1.216667 }
   },
   "Tokelau": {
-    "default": {"lat": -9.166667, "lon": -171.833333 }
+    "default": { "lat": -9.166667, "lon": -171.833333 }
   },
   "Tonga": {
-    "default": {"lat": -21.13333333, "lon": -175.2 }
+    "default": { "lat": -21.13333333, "lon": -175.2 }
   },
   "Trinidad and Tobago": {
-    "default": {"lat": 10.65, "lon": -61.516667 }
+    "default": {"lat": 10.6603, "lon": -61.5071 }
   },
   "Tunisia": {
-    "default": {"lat": 36.8, "lon": 10.183333 }
+    "default": { "lat": 36.8, "lon": 10.183333 }
   },
   "Turkey": {
-    "default": {"lat": 39.93333333, "lon": 32.866667 }
+    "default": { "lat": 39.93333333, "lon": 32.866667 }
   },
   "Turkmenistan": {
-    "default": {"lat": 37.95, "lon": 58.383333 }
+    "default": { "lat": 37.95, "lon": 58.383333 }
   },
   "Turks and Caicos Islands": {
-    "default": {"lat": 21.46666667, "lon": -71.133333 }
+    "default": { "lat": 21.46666667, "lon": -71.133333 }
   },
   "Tuvalu": {
-    "default": {"lat": -8.516666667, "lon": 179.216667 }
+    "default": { "lat": -8.516666667, "lon": 179.216667 }
   },
   "Uganda": {
-    "default": {"lat": 0.316666667, "lon": 32.55 }
+    "default": { "lat": 0.316666667, "lon": 32.55 }
   },
   "Ukraine": {
-    "default": {"lat": 50.43333333, "lon": 30.516667 }
+    "default": { "lat": 50.43333333, "lon": 30.516667 }
   },
   "United Arab Emirates": {
-    "default": {"lat": 24.46666667, "lon": 54.366667 }
+    "default": { "lat": 24.46666667, "lon": 54.366667 }
   },
   "United Kingdom": {
-    "default": {"lat": 51.5, "lon": -0.083333 }
+    "default": { "lat": 51.5, "lon": -0.083333 }
   },
   "Uruguay": {
-    "default": {"lat": -34.85, "lon": -56.166667 }
+    "default": { "lat": -34.85, "lon": -56.166667 }
   },
   "US Minor Outlying Islands": {
-    "default": {"lat": 38.883333, "lon": -77 }
+    "default": { "lat": 38.883333, "lon": -77 }
   },
   "US Virgin Islands": {
-    "default": {"lat": 18.35, "lon": -64.933333 }
+    "default": { "lat": 18.35, "lon": -64.933333 }
   },
   "Uzbekistan": {
-    "default": {"lat": 41.31666667, "lon": 69.25 }
+    "default": { "lat": 41.31666667, "lon": 69.25 }
   },
   "Vanuatu": {
-    "default": {"lat": -17.73333333, "lon": 168.316667 }
+    "default": { "lat": -17.73333333, "lon": 168.316667 }
   },
   "Vatican City": {
-    "default": {"lat": 41.9, "lon": 12.45 }
+    "default": { "lat": 41.9, "lon": 12.45 }
   },
   "Venezuela": {
-    "default": {"lat": 10.48333333, "lon": -66.866667 }
+    "default": { "lat": 10.48333333, "lon": -66.866667 }
   },
   "Vietnam": {
-    "default": {"lat": 21.03333333, "lon": 105.85 }
+    "default": { "lat": 21.03333333, "lon": 105.85 }
   },
   "Wallis and Futuna": {
-    "default": {"lat": -13.95, "lon": -171.933333 }
+    "default": { "lat": -13.95, "lon": -171.933333 }
   },
   "Western Sahara": {
-    "default": {"lat": 27.153611, "lon": -13.203333 }
+    "default": { "lat": 27.153611, "lon": -13.203333 }
   },
   "Yemen": {
-    "default": {"lat": 15.35, "lon": 44.2 }
+    "default": { "lat": 15.35, "lon": 44.2 }
   },
   "Zambia": {
-    "default": {"lat": -15.41666667, "lon": 28.283333 }
+    "default": { "lat": -15.41666667, "lon": 28.283333 }
   },
   "Zimbabwe": {
-    "default": {"lat": -17.81666667, "lon": 31.033333 }
+    "default": { "lat": -17.81666667, "lon": 31.033333 }
   }
 }

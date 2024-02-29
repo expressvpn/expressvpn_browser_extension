@@ -762,13 +762,13 @@
     "message": "Уч. запись"
   },
   "menu_privacy_block_webrtc_text": {
-    "message": "Заблокировать WebRTC"
+    "message": "Блокировка WebRTC"
   },
   "menu_privacy_enable_https_everywhere_text": {
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "заменить местоположение"
+    "message": "Замена местоположения"
   },
   "menu_rate_expressvpn": {
     "message": "Оценить ExpressVPN"

@@ -65,6 +65,9 @@
   "Belgium": {
     "message": "เบลเยี่ยม"
   },
+  "Bermuda": {
+    "message": "เบอร์มิวดา"
+  },
   "Bhutan": {
     "message": "ภูฏาน"
   },
@@ -110,6 +113,9 @@
   "Canada - Vancouver": {
     "message": "แคนาดา - แวนคูเวอร์"
   },
+  "Cayman Islands": {
+    "message": "หมู่เกาะเคย์เเมน"
+  },
   "Chile": {
     "message": "ชิลี"
   },
@@ -122,6 +128,9 @@
   "Croatia": {
     "message": "โครเอเชีย"
   },
+  "Cuba": {
+    "message": "คิวบา"
+  },
   "Cyprus": {
     "message": "ไซปรัส"
   },
@@ -130,6 +139,9 @@
   },
   "Denmark": {
     "message": "เดนมาร์ก"
+  },
+  "Dominican Republic": {
+    "message": "สาธารณรัฐโดมินิกัน"
   },
   "Ecuador": {
     "message": "เอกวาดอร์ "
@@ -182,11 +194,20 @@
   "Germany - Nuremberg": {
     "message": "เยอรมนี - นูเรมเบิร์ก"
   },
+  "Ghana": {
+    "message": "กานา"
+  },
   "Greece": {
     "message": "กรีซ"
   },
+  "Guam": {
+    "message": "กวม"
+  },
   "Guatemala": {
     "message": "กัวเตมาลา"
+  },
+  "Honduras": {
+    "message": "ฮอนดูรัส"
   },
   "Hong Kong": {
     "message": "ฮ่องกง"
@@ -248,6 +269,9 @@
   "Italy - Naples": {
     "message": "อิตาลี - เนเปิลส์"
   },
+  "Jamaica": {
+    "message": "จาเมกา"
+  },
   "Japan": {
     "message": "ญี่ปุ่น"
   },
@@ -255,8 +279,7 @@
     "message": "ญี่ปุ่น - ชิบูย่า"
   },
   "Japan - Tokyo": {
-    "message": "ญี่ปุ่น - โตเกียว",
-    "description": "Japan - Tokyo"
+    "message": "ญี่ปุ่น - โตเกียว"
   },
   "Japan - Tokyo - 1": {
     "message": "ญี่ปุ่น - โตเกียว - 1"
@@ -268,8 +291,7 @@
     "message": "ญี่ปุ่น - โตเกียว - 3"
   },
   "Japan - Yokohama": {
-    "message": "ญี่ปุ่น - โยโกฮาม่า",
-    "description": "Japan - Yokohama"
+    "message": "ญี่ปุ่น - โยโกฮาม่า"
   },
   "Jersey": {
     "message": "เจอร์ซีย์"
@@ -288,6 +310,9 @@
   },
   "Latvia": {
     "message": "ลัตเวีย"
+  },
+  "Lebanon": {
+    "message": "เลบานอน"
   },
   "Liechtenstein": {
     "message": "ลิกเตนสไตน์"
@@ -324,6 +349,9 @@
   },
   "Montenegro": {
     "message": "มอนเตเนโก"
+  },
+  "Morocco": {
+    "message": "โมร็อกโก"
   },
   "Myanmar": {
     "message": "พม่า"
@@ -379,6 +407,9 @@
   "Portugal": {
     "message": "โปรตุเกส"
   },
+  "Puerto Rico": {
+    "message": "เปอร์โตริโก้"
+  },
   "Romania": {
     "message": "โรมาเนีย"
   },
@@ -398,8 +429,7 @@
     "message": "สิงคโปร์ - มารีน่าเบย์"
   },
   "Singapore - Sentosa": {
-    "message": "สิงคโปร์ - เซ็นโตซ่า",
-    "description": "Singapore - Sentosa"
+    "message": "สิงคโปร์ - เซ็นโตซ่า"
   },
   "Slovakia": {
     "message": "สโลวาเกีย"
@@ -451,6 +481,9 @@
   },
   "Thailand": {
     "message": "ไทย"
+  },
+  "Trinidad and Tobago": {
+    "message": "ตรินิแดดและโตเบโก"
   },
   "Turkey": {
     "message": "ตุรกี"

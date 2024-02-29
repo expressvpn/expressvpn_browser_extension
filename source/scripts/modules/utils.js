@@ -36,6 +36,9 @@ const currentInfo = {
     latest_version: '',
     latest_version_url: '',
   },
+  /**
+   * @type {{preferred_protocol:string, traffic_guard_level?:boolean}}
+   */
   preferences: {
     preferred_protocol: 'auto',
   },
@@ -53,11 +56,9 @@ const defaultPreferences = {
   'chrome.auto_connect': false,
   'chrome.prevent_webrtc_leaks': true,
   'chrome.desktop_notification': true,
-  'httpsEverywhere': true,
-  'httpsPeriodicity': 86400,
-  'language': '',
-  'hideLocation': true,
-  'helpImprove': false,
+  language: '',
+  hideLocation: true,
+  helpImprove: false,
 };
 
 const ICONS = {
@@ -79,20 +80,71 @@ const ICONS = {
   },
 };
 
+
+
+export const getExtensionVersion = (addVariantSuffix) => {
+  let version = chrome.runtime.getManifest()?.version;
+  if (addVariantSuffix) {
+    switch (true) {
+      case __IS_ALPHA__:
+        version += '-alpha';
+        break;
+      case __IS_BETA__:
+        version += '-beta';
+        break;
+      case __IS_RELEASE__:
+        version += '-prod';
+        break;
+      default:
+        version += '-dev';
+    }
+  }
+  return version;
+};
+
+
+const getPreferences = async () => {
+  const prefs = await chrome.storage.local.get('prefs');
+  return { ...defaultPreferences, ...prefs.prefs };
+};
+/**
+ *
+ * If we run chrome.runtime.sendMessage while the listener does not
+ * exist yet, an error "chrome.runtime.sendMessage" is thrown.
+ * This function sends the message if there's any context that can receive it
+ *
+ * @param {object} message
+ */
+const safeSendRuntimeMessage = async (message) => {
+  // Firefox does not have the getContexts method
+  if (chrome.runtime.getContexts) {
+    const ctxArr = await chrome.runtime.getContexts({ contextTypes: ['POPUP', 'OFFSCREEN_DOCUMENT', 'TAB'] });
+    if (ctxArr.length > 0) {
+      return chrome.runtime.sendMessage(message);
+    }
+  } else if (browser.extension.getViews) {
+    // firefox requires us to check check each type individually...
+    const popup = await browser.extension.getViews({ type: 'popup' });
+    const tabs = await browser.extension.getViews({ type: 'tab' });
+    if ([...popup, ...tabs].length > 0) {
+      return chrome.runtime.sendMessage(message);
+    }
+  } else {
+    return chrome.runtime.sendMessage(message);
+  }
+};
+
 // based on C# String.IsNullOrEmpty()
-const isNullOrEmpty = str => (str === null || typeof str === 'undefined' || str === '');
+const isNullOrEmpty = (str) => str === null || typeof str === 'undefined' || str === '';
 
 // stringent encodeURIComponent
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-const fixedEncodeURIComponent = str => encodeURIComponent(str).replace(
-  /[!'()*]/g,
-  c => `%${c.charCodeAt(0).toString(16)}`,
-);
+const fixedEncodeURIComponent = (str) => encodeURIComponent(str).replace(/[!'()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`);
 
 /**
  * Capitalizes the string
-*/
-const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+ */
+const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 // Returns a random integer between two values, inclusive
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -122,12 +174,11 @@ const calculateRandomPosition = (srcCoords) => {
   const angularDistance = distance / EARTH_RADIUS;
   const trueCourse = bearing * DEGREES_TO_RADIANS;
 
-  const lat = Math.asin(Math.sin(latA) * Math.cos(angularDistance) +
-    Math.cos(latA) * Math.sin(angularDistance) * Math.cos(trueCourse));
+  const lat = Math.asin(Math.sin(latA) * Math.cos(angularDistance) + Math.cos(latA) * Math.sin(angularDistance) * Math.cos(trueCourse));
 
   const dlon = Math.atan2(
     Math.sin(trueCourse) * Math.sin(angularDistance) * Math.cos(latA),
-    Math.cos(angularDistance) - Math.sin(latA) * Math.sin(lat),
+    Math.cos(angularDistance) - Math.sin(latA) * Math.sin(lat)
   );
 
   const lon = ((lonA + dlon + Math.PI) % (Math.PI * 2)) - Math.PI;
@@ -175,7 +226,7 @@ const versionCompare = (v1, v2, options) => {
   let v1parts = v1.split('.');
   let v2parts = v2.split('.');
 
-  const isValidPart = x => (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
+  const isValidPart = (x) => (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
 
   if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
     return NaN;
@@ -198,7 +249,8 @@ const versionCompare = (v1, v2, options) => {
 
     if (v1parts[i] > v2parts[i]) {
       return 1;
-    } else if (v1parts[i] !== v2parts[i]) {
+    }
+    if (v1parts[i] !== v2parts[i]) {
       return -1;
     }
   }
@@ -224,24 +276,24 @@ const setLanguage = (_locale) => {
       });
   };
 
-  return !isNullOrEmpty(locale) ?
-    fetch(localeFileUrl.replace('[XX]', locale))
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (strings) {
-        return { strings, locale };
-      })
-      .catch(fetchDefaultLang) // 404 -> default to English
+  return !isNullOrEmpty(locale)
+    ? fetch(localeFileUrl.replace('[XX]', locale))
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (strings) {
+          return { strings, locale };
+        })
+        .catch(fetchDefaultLang) // 404 -> default to English
     : fetchDefaultLang();
 };
 
 const localize = (localeKey) => {
-  if (!window.localizedStrings) {
+  if (!navigator.localizedStrings) {
     setLanguage();
   }
 
-  let strings = window.localizedStrings || {};
+  let strings = navigator.localizedStrings || {};
   let obj = strings[localeKey] || '';
 
   if (obj && typeof obj === 'object') {
@@ -266,86 +318,82 @@ const localizeLocation = (_location) => {
   return location;
 };
 
-/**
- * Group collection items by certain predicate and sort groups by min value of given factor per group.
-*/
-const sortAndGroupBy = (data, factor, filterBy) => {
-  const sortOrderMap = {};
-  const groupedData = (filterBy ? data.filter(filterBy) : data).reduce((result, val, index) => {
-    const key = val[factor];
-    if (hasOwnProperty.call(result, key)) {
-      result[key].push(val);
-    } else {
-      Object.assign(result, { [key]: [val] });
-    }
-    return result;
+const sortAndGroupBy = (array, groupByProperty, protocolsFilter = 'auto') => {
+  const rx = RegExp(protocolsFilter, 'i');
+  const sortedArray = array.sort((a, b) => a.sort_order - b.sort_order);
+
+  // Filter the array based on the protocolsFilter condition
+  const filteredArray = sortedArray.filter((item) => protocolsFilter === 'auto' || rx.test(item.protocols));
+
+  // Group the array based on the specified property
+  const grouped = filteredArray.reduce((acc, item) => {
+    const key = item[groupByProperty];
+    acc[key] = acc[key] || [];
+    acc[key].push(item);
+    return acc;
   }, {});
-  data.forEach((item) => {
-    sortOrderMap[item[factor]] = sortOrderMap[item[factor]] ? Math.min(
-      sortOrderMap[item[factor]],
-      item.sort_order,
-    ) : item.sort_order;
-  });
-  const keys = Object.keys(groupedData);
-  keys.sort((a, b) => (sortOrderMap[a] - sortOrderMap[b]));
-  const sortedGroupedData = {};
-  keys.forEach((key) => {
-    sortedGroupedData[key] = groupedData[key];
-    sortedGroupedData[key].sort((loc1, loc2) => (loc1.sort_order - loc2.sort_order));
-  });
-  return sortedGroupedData;
+
+  return grouped;
 };
 
 /**
  * escapes strings so they can be safely used in regex patterns
-*/
+ */
 const escapeRegExp = (str) => str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
 
-const isRegularUser = (subscriptionInfo) => (subscriptionInfo.status === 'ACTIVE') && (subscriptionInfo.plan_type === 'full');
+const isRegularUser = (subscriptionInfo) => subscriptionInfo.status === 'ACTIVE' && subscriptionInfo.plan_type === 'full';
 
 const getTimeDelta = (_date1, _date2) => {
-  _date2 = _date2 || (new Date()).getTime() / 1000; // eslint-disable-line no-param-reassign
+  _date2 = _date2 || new Date().getTime() / 1000; // eslint-disable-line no-param-reassign
 
   let date1 = new Date(_date1 * 1000);
   let date2 = new Date(_date2 * 1000);
 
-  let rawDifference = (date2 - date1);
+  let rawDifference = date2 - date1;
 
-  let seconds = Math.floor((rawDifference) / 1000);
+  let seconds = Math.floor(rawDifference / 1000);
   let minutes = Math.floor(seconds / 60);
   let hours = Math.floor(minutes / 60);
   let days = Math.floor(hours / 24);
 
-  hours -= (days * 24);
-  minutes = (days * 24 * 60) - (hours * 60);
-  seconds -= (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+  hours -= days * 24;
+  minutes = days * 24 * 60 - hours * 60;
+  seconds -= days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
 
   return {
-    days, hours, minutes, seconds, rawDifference,
+    days,
+    hours,
+    minutes,
+    seconds,
+    rawDifference,
   };
 };
 
 /**
  *  Given a subscription object, return true or false if the user's subscription expired
-*/
-const isSubscriptionExpired = (subscriptionObj) => (getTimeDelta(subscriptionObj.expiration_time).rawDifference > 0);
+ */
+const isSubscriptionExpired = (subscriptionObj) => getTimeDelta(subscriptionObj.expiration_time).rawDifference > 0;
 
 /**
  *  Given a subscription object, return true or false if the user's subscription in grace period
-*/
-const isInGracePeriod = (subscriptionObj) => isSubscriptionExpired(subscriptionObj) && ['ACTIVE', 'FREE_TRIAL_ACTIVE', 'MULTI_DEVICE_FREE_TRIAL_ACTIVE'].includes(subscriptionObj.status);
+ */
+const isInGracePeriod = (subscriptionObj) =>
+  isSubscriptionExpired(subscriptionObj) &&
+  ['ACTIVE', 'FREE_TRIAL_ACTIVE', 'MULTI_DEVICE_FREE_TRIAL_ACTIVE'].includes(subscriptionObj.status);
 
 /**
  *  Given a subscription object, return true or false if the user's subscription was paid via IAP
-*/
+ */
 const isPaymentMethodIAP = (subscriptionObj) => {
   let isIAP = subscriptionObj.is_using_in_app_purchase;
-  return isIAP && (subscriptionObj.payment_method === 'app_store_auto_renewable' || subscriptionObj.payment_method === 'app_store_non_renewable');
+  return (
+    isIAP && (subscriptionObj.payment_method === 'app_store_auto_renewable' || subscriptionObj.payment_method === 'app_store_non_renewable')
+  );
 };
 
 /**
  *  Given a subscription object, return true or false if the user's subscription is automatically renewable
-*/
+ */
 const isInAppPurchasesRenewable = (subscriptionObj) => {
   let isIAP = subscriptionObj.is_using_in_app_purchase;
   return isIAP && subscriptionObj.payment_method === 'app_store_auto_renewable' && subscriptionObj.auto_bill === true;
@@ -353,7 +401,7 @@ const isInAppPurchasesRenewable = (subscriptionObj) => {
 
 /**
  *  Given a subscription object, return true or false if the user's last IAP subscription failed
-*/
+ */
 const isLastInAppPurchasesFailure = (subscriptionObj) => {
   let isIAP = subscriptionObj.is_using_in_app_purchase;
   return isIAP && subscriptionObj.payment_method === 'app_store_auto_renewable' && subscriptionObj.last_auto_bill_failure === true;
@@ -361,20 +409,28 @@ const isLastInAppPurchasesFailure = (subscriptionObj) => {
 
 /**
  * Checks if the current subscription data makes it impossible to continue
-*/
+ */
 const getLastIAPFatalError = (subscriptionObj) => {
   let iapStatus = null;
 
   if (isPaymentMethodIAP(subscriptionObj) === false) {
     return null;
   }
-  if ((subscriptionObj.status === 'FREE_TRIAL_EXPIRED') && isLastInAppPurchasesFailure(subscriptionObj) && (subscriptionObj.auto_bill === true)) {
+  if (
+    subscriptionObj.status === 'FREE_TRIAL_EXPIRED' &&
+    isLastInAppPurchasesFailure(subscriptionObj) &&
+    subscriptionObj.auto_bill === true
+  ) {
     iapStatus = 'FREE_TRIAL_IAP_RENEWAL_FAILED';
-  } else if ((subscriptionObj.status === 'FREE_TRIAL_EXPIRED') && (isSubscriptionExpired(subscriptionObj) === true) && (subscriptionObj.auto_bill === false)) {
+  } else if (
+    subscriptionObj.status === 'FREE_TRIAL_EXPIRED' &&
+    isSubscriptionExpired(subscriptionObj) === true &&
+    subscriptionObj.auto_bill === false
+  ) {
     iapStatus = 'FREE_TRIAL_IAP_NON_RENEWAL_EXPIRED';
-  } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && (subscriptionObj.auto_bill === true)) {
+  } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && subscriptionObj.auto_bill === true) {
     iapStatus = 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_ON';
-  } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && (subscriptionObj.auto_bill === false)) {
+  } else if (isSubscriptionExpired(subscriptionObj) && !isInGracePeriod(subscriptionObj) && subscriptionObj.auto_bill === false) {
     iapStatus = 'SUBSCRIPTION_EXPIRED_NOGRACE_AUTOBILL_OFF';
   }
 
@@ -382,14 +438,14 @@ const getLastIAPFatalError = (subscriptionObj) => {
 };
 
 /**
-* Returns a sha256 string of the parameter (https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
-* @param {String} message
-*/
+ * Returns a sha256 string of the parameter (https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
+ * @param {String} message
+ */
 const sha256 = async (message) => {
   const msgBuffer = new TextEncoder().encode(message);
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
   return hashHex;
 };
 
@@ -417,4 +473,6 @@ export {
   getLastIAPFatalError,
   isSubscriptionExpired,
   sha256,
+  safeSendRuntimeMessage,
+  getPreferences,
 };
