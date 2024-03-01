@@ -4,8 +4,7 @@ Copyright 2017-2019 Express VPN International Ltd
 Licensed GPL v2
 */
 const filterLocationsByProtocol = (locationsList, targetProtocol) => {
-  const filterPredicate = loc => (targetProtocol.toLowerCase() === 'auto'
-    || loc.protocols.indexOf(targetProtocol.toLowerCase()) > -1);
+  const filterPredicate = (loc) => targetProtocol.toLowerCase() === 'auto' || loc.protocols.indexOf(targetProtocol.toLowerCase()) > -1;
   if (Array.isArray(locationsList)) {
     return locationsList.filter(filterPredicate);
   }
@@ -21,8 +20,7 @@ const filterLocationsByProtocol = (locationsList, targetProtocol) => {
 };
 
 const trimLocationName = (loc) => {
-  let countryTrimmedLocationName = loc.name.includes(' - ') ?
-    loc.name.slice(loc.name.indexOf(' - ') + 3) : loc.name;
+  let countryTrimmedLocationName = loc.name.includes(' - ') ? loc.name.slice(loc.name.indexOf(' - ') + 3) : loc.name;
   if (/^\d+/.test(countryTrimmedLocationName)) {
     countryTrimmedLocationName = loc.name;
   }
@@ -33,8 +31,10 @@ const isValidRecommendedCountry = (countryLocations, recentLocations) => {
   if (recentLocations.length === 0 || countryLocations.length > 1) {
     return true;
   }
-  return countryLocations[0].id !== recentLocations[0].id && (
-    recentLocations.length > 1 ? countryLocations[0].id !== recentLocations[1].id : true);
+  return (
+    countryLocations[0].id !== recentLocations[0].id &&
+    (recentLocations.length > 1 ? countryLocations[0].id !== recentLocations[1].id : true)
+  );
 };
 
 const getRecentConnectedLocations = (locationsList) => {
@@ -66,15 +66,19 @@ const getRecentConnectedLocations = (locationsList) => {
     }
   }
 
-  if (lastConnectedLocation1) { recentLocations.push(lastConnectedLocation1); }
-  if (lastConnectedLocation2) { recentLocations.push(lastConnectedLocation2); }
+  if (lastConnectedLocation1) {
+    recentLocations.push(lastConnectedLocation1);
+  }
+  if (lastConnectedLocation2) {
+    recentLocations.push(lastConnectedLocation2);
+  }
   return recentLocations;
 };
 
 const getLocationByName = (locationsList, name) => {
   for (let continent in locationsList) {
     for (let country in locationsList[continent]) {
-      let foundLocationObj = locationsList[continent][country].find(location => location.name === name);
+      let foundLocationObj = locationsList[continent][country].find((location) => location.name === name);
       if (foundLocationObj) {
         return foundLocationObj;
       }
@@ -86,7 +90,7 @@ const getLocationById = (locationsList, _id) => {
   let id = parseInt(_id, 10);
   for (let continent in locationsList) {
     for (let country in locationsList[continent]) {
-      let foundLocationObj = locationsList[continent][country].find(location => parseInt(location.id, 10) === id);
+      let foundLocationObj = locationsList[continent][country].find((location) => parseInt(location.id, 10) === id);
       if (foundLocationObj) {
         return foundLocationObj;
       }

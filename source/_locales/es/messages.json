@@ -810,7 +810,7 @@
     "message": "Evitar que las páginas web descubran su verdadera ubicación y dirección IP mientras esté conectado a la VPN."
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "Evite la geolocalización de HTML5 en la mayoría de las páginas web, enmascarando su ubicación física al estar conectado a la VPN."
+    "message": "Evitar la geolocalización de HTML5 en la mayoría de las páginas web, enmascarando su ubicación física al estar conectado a la VPN."
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "Conectarse automáticamente a la versión HTTPS, más segura, de las páginas web cuando esté disponible."

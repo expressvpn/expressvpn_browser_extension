@@ -16,7 +16,8 @@ export default {
       }
     }
   },
-  SET_CURRENT_CONTAINER(stateParams, newCurrentContainer) { // ToDo: Remove
+  SET_CURRENT_CONTAINER(stateParams, newCurrentContainer) {
+    // ToDo: Remove
     let state = stateParams;
     state.currentContainer = newCurrentContainer;
   },

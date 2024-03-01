@@ -188,7 +188,7 @@
     "message": "30-day money-back guarantee"
   },
   "error_free_trial_expired_l3_text": {
-    "message": "160 locations worldwide"
+    "message": "Secure servers in 105 countries"
   },
   "error_free_trial_expired_l4_text": {
     "message": "24/7 customer support"
@@ -539,7 +539,7 @@
     "message": "Apps for every device"
   },
   "list_item_locations_worldwide": {
-    "message": "160 locations worldwide"
+    "message": "Secure servers in 105 countries"
   },
   "list_item_refer_frieds": {
     "message": "Refer friends, get 30 days free"
@@ -644,6 +644,9 @@
   "menu_item_extension_version_text": {
     "message": "Extension version: %VERSION%"
   },
+  "menu_item_extension_loggedin_text": {
+    "message": "Currently signed in to <b>[expressvpn.com]</b>"
+  },
   "menu_item_faq_text": {
     "message": "Frequently Asked Questions"
   },
@@ -664,9 +667,6 @@
   },
   "menu_privacy_block_webrtc_text": {
     "message": "Block WebRTC"
-  },
-  "menu_privacy_enable_https_everywhere_text": {
-    "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
     "message": "Spoof your location"
@@ -712,9 +712,6 @@
   },
   "menu_settings_privacy_hide_location_description_text": {
     "message": "Stop HTML5 geolocation on most sites, masking your physical whereabouts while connected to VPN."
-  },
-  "menu_settings_privacy_https_everywhere_description_text": {
-    "message": "Automatically connect to the more-secure HTTPS version of websites where available."
   },
   "menu_settings_privacy_learn_more_button_label": {
     "message": "Learn More"
@@ -1074,15 +1071,39 @@
     "message": "The ExpressVPN extension is a remote control for the desktop app."
   },
   "welcome_screen2_p1_text": {
-    "message": "When you’re connected to the VPN, it protects your entire device, not just the browser."
+    "message": "When you connect to the VPN, it protects your entire device — not just your browser."
   },
   "welcome_screen3_learn_more_text": {
     "message": "Learn more"
   },
   "welcome_screen3_p1_text": {
-    "message": "The extension spoofs your location on most sites, blocks WebRTC, and includes HTTPS Everywhere."
+    "message": "The extension spoofs your location on most sites, blocks WebRTC."
+  },
+  "welcome_screen3_firefox_title_text": {
+    "message": "Mask your real location"
+  },
+  "welcome_screen3_firefox_p1_text": {
+    "message": "Websites asking for your location will see your VPN location instead."
+  },
+  "welcome_screen3_firefox_p2_text": {
+    "message": "To spoof your location, your browser will request additional permissions."
+  },
+  "welcome_screen3_firefox_ok_button": {
+    "message": "OK"
+  },
+  "welcome_screen3_firefox_no_thanks_button": {
+    "message": "No Thanks"
   },
   "welcome_skip_button_label": {
     "message": "Skip"
+  },
+  "firefox_location_spoofing_popup_btn0": {
+    "message": "OK"
+  },
+  "firefox_location_spoofing_popup_text": {
+    "message": "To enable location spoofing, allow access when prompted."
+  },
+  "firefox_location_spoofing_popup_title": {
+    "message": "Additional permissions required"
   }
 }

@@ -5,8 +5,7 @@ Licensed GPL v2
 */
 export default {
   data: function () {
-    return {
-    };
+    return {};
   },
   methods: {
     checkForLinks(ev) {
@@ -25,11 +24,7 @@ export default {
       return this.currentInfo.preferences.traffic_guard_level ? 'on' : 'off';
     },
   },
-  mounted() {
-  },
-  created: function () {
-  },
-  updated: function () {
-  },
+  mounted() {},
+  created: function () {},
+  updated: function () {},
 };
-

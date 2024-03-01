@@ -768,7 +768,7 @@
     "message": "HTTPS Everywhere"
   },
   "menu_privacy_hide_location_text": {
-    "message": "Falsificar sua localização "
+    "message": "Disfarçar sua localização "
   },
   "menu_rate_expressvpn": {
     "message": "Avalie a ExpressVPN"
@@ -1179,7 +1179,7 @@
     "message": "Saiba mais"
   },
   "welcome_screen3_p1_text": {
-    "message": "A extensão falsifica a sua localização na maioria dos sites, bloqueia o WebRTC e inclui HTTPS Everywhere."
+    "message": "A extensão disfarça a sua localização na maioria dos sites, bloqueia o WebRTC e inclui HTTPS Everywhere."
   },
   "welcome_skip_button_label": {
     "message": "Ignorar"

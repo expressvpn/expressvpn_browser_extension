@@ -810,7 +810,7 @@
     "message": "VPNに接続中に、ウェブサイトが実際のIPアドレスやアクセス場所を見つけられないようにします。"
   },
   "menu_settings_privacy_hide_location_description_text": {
-    "message": "VPN接続中に、ほとんどのサイトでHTML5ジオロケーションが実際のアクセス場所を明らかにしないようにします。"
+    "message": "VPN接続中、ほとんどのサイトでHTML5のジオロケーションを無効にして、実際のアクセス場所を隠します。"
   },
   "menu_settings_privacy_https_everywhere_description_text": {
     "message": "安全性が高いHTTPSバージョンのウェブサイトに自動で接続します。"

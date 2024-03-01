@@ -17,17 +17,18 @@ export default {
       if (event) {
         event.stopPropagation();
       }
-      if (this.currentInfo.locale !== 'en' && url.host === websiteUrl.host) { // Only localize our website
+      if (this.currentInfo.locale !== 'en' && url.host === websiteUrl.host) {
+        // Only localize our website
         let localeMap = {
-          'pt_BR': 'pt',
-          'ja': 'jp',
-          'sv': 'se',
-          'da': 'dk',
-          'ko': 'kr',
+          pt_BR: 'pt',
+          ja: 'jp',
+          sv: 'se',
+          da: 'dk',
+          ko: 'kr',
         };
         let locale = localeMap[this.currentInfo.locale] ? localeMap[this.currentInfo.locale] : this.currentInfo.locale;
         let allUrlsLocales = ['fr', 'de', 'es', 'pt', 'it', 'nl'];
-        if ((url.pathname === '/support/' && allUrlsLocales.includes(locale)) || (url.pathname !== '/support/')) {
+        if ((url.pathname === '/support/' && allUrlsLocales.includes(locale)) || url.pathname !== '/support/') {
           url.pathname = '/' + locale + url.pathname;
           // eslint-disable-next-line no-param-reassign
           opts.url = url.href;
@@ -39,14 +40,14 @@ export default {
     resetState: () => {
       chrome.runtime.sendMessage({ resetState: true });
     },
-    chromePath: path => chrome.extension.getURL(path),
+    chromePath: (path) => chrome.runtime.getURL(path),
     reset: () => {
       chrome.runtime.sendMessage({ reset: true });
     },
     openApp: () => {
       chrome.runtime.sendMessage({ openApp: true });
     },
-    getUrl: (path) => chrome.extension.getURL(path),
+    getUrl: (path) => chrome.runtime.getURL(path),
     localize: function (localeKey) {
       let strings = this.currentInfo.localizedStrings || {};
 
@@ -59,7 +60,9 @@ export default {
     },
     getFormattedDate: function (time, options) {
       let defaultOptions = {
-        month: 'long', day: 'numeric', year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
       };
       let optionEl = options || defaultOptions;
       let expiryDate = new Date(time * 1000);
@@ -76,7 +79,7 @@ export default {
       } else {
         dateStr = expiryDate.toLocaleDateString('en-us', optionEl).replace(/[^ -~]/g, '');
       }
-      return dateStr;// format eg : 'January 19, 2017' for 'en' locale
+      return dateStr; // format eg : 'January 19, 2017' for 'en' locale
     },
     openLocationPicker() {
       if (['connected', 'ready', 'connection_error'].includes(this.currentInfo.state)) {
@@ -85,14 +88,11 @@ export default {
     },
   },
   computed: {
-    ...mapGetters([
-      'currentInfo',
-      'errorStates',
-      'langList',
-    ]),
+    ...mapGetters(['currentInfo', 'errorStates', 'langList']),
   },
   mounted: function () {
-    if (process.env.NODE_ENV === 'development') { // this will get stripped out in the production build
+    if (process.env.NODE_ENV === 'development') {
+      // this will get stripped out in the production build
       this.$nextTick(function () {
         window.parent.postMessage('expressvpn_test_loaded', '*');
         if (!document.getElementById('mockFlag')) {
@@ -109,10 +109,9 @@ export default {
       browserInfo: UAParser(window.navigator.userAgent).browser,
       browserDict: {
         'Google Chrome': 'Chrome',
-        'Firefox': 'Firefox',
+        Firefox: 'Firefox',
         'Microsoft Edge': 'Edge',
       },
     };
   },
 };
-

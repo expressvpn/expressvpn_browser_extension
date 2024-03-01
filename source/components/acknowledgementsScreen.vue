@@ -1,71 +1,272 @@
 <template>
-  <div>
-    <secondary-header stringkey="menu_item_acknowledgements_text" :onBackClick="sideBackBtnClick" />
-    <div class="acknowledgements-container">
-  <h1>THIRD PARTY CONTENT NOTICES</h1>
-  <p>These Third Party Content notices are provided in connection with the ExpressVPN Terms of Service (available at https://www.expressvpn.com/tos) (the “Terms”) and all capitalized terms used, but not defined herein are defined in the Terms. As referenced in the Terms, the Third Party Content listed below may be contained in the Software and the license terms accompanying such Third Party Content supersede the Terms to the degree that they conflict with the Terms. While the information contained herein is believed to be complete and accurate, ExpressVPN makes no warranty with respect to, and assumes no liability whatsoever in connection with, such information. As more fully provided in the Terms, Third Party Content is provided on an &quot;as is&quot; and &quot;as available&quot; basis and, to the fullest extent permitted by law, without representation or warranty of any kind. ExpressVPN and its licensors disclaim all warranties with respect to Third Party Content, including, but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-  <p>ExpressVPN makes available the source code of Third Party Content, and any of ExpressVPN’s modifications to such Third Party Content as required by the applicable Third Party Content license terms, by written request to ExpressVPN at the following email address: opensource@expressvpn.com.</p>
-  <p>For components licensed pursuant to the GNU General Public License (GPL) Version 2, or Apache License Version 2.0 please refer to copies of the license terms included below.</p>
-  <p>Table of contents
-
-HTTPS Everywhere
-Inter
-ua-parser-js
-uuid
-vue
-vue-inline-svg
-vuex
-</p>
-  <h2>HTTPS Everywhere</h2>
-  <p>HTTPS Everywhere:<br>Copyright © 2010-2021 Electronic Frontier Foundation and others<br>Licensed GPL v2+<br><br>HTTPS Everywhere Rulesets (src/chrome/content/rules):<br>To the extent copyright applies to the rulesets, they can be used according to GPL v2 or later.<br><br>The DuckDuckGo Smarter Encryption list, utilized by HTTPS Everywhere at https://www.https-rulesets.org/ddg, is publicly available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0. International license.<br>If you'd like to license the list for commercial use, please reach out to: https://help.duckduckgo.com/duckduckgo-help-pages/company/contact-us/<br><br>Issue Format Bot (utils/issue-format-bot/*):<br>Copyright © 2017 AJ Jordan, AGPLv3+<br><br>The build system incorporates code from Python 3.6 and Python 3 respectively<br>Copyright © 2001-2018 Python Software Foundation; All Rights Reserved<br><br>GNU GENERAL PUBLIC LICENSE<br>Version 2, June 1991<br><br>Copyright (C) 1989, 1991 Free Software Foundation, Inc.<br>51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA<br><br>Everyone is permitted to copy and distribute verbatim copies<br>of this license document, but changing it is not allowed.<br>Preamble<br>The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users. This General Public License applies to most of the Free Software Foundation's software and to any other program whose authors commit to using it. (Some other Free Software Foundation software is covered by the GNU Lesser General Public License instead.) You can apply it to your programs, too.<br><br>When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for this service if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs; and that you know you can do these things.<br><br>To protect your rights, we need to make restrictions that forbid anyone to deny you these rights or to ask you to surrender the rights. These restrictions translate to certain responsibilities for you if you distribute copies of the software, or if you modify it.<br><br>For example, if you distribute copies of such a program, whether gratis or for a fee, you must give the recipients all the rights that you have. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights.<br><br>We protect your rights with two steps: (1) copyright the software, and (2) offer you this license which gives you legal permission to copy, distribute and/or modify the software.<br><br>Also, for each author's protection and ours, we want to make certain that everyone understands that there is no warranty for this free software. If the software is modified by someone else and passed on, we want its recipients to know that what they have is not the original, so that any problems introduced by others will not reflect on the original authors' reputations.<br><br>Finally, any free program is threatened constantly by software patents. We wish to avoid the danger that redistributors of a free program will individually obtain patent licenses, in effect making the program proprietary. To prevent this, we have made it clear that any patent must be licensed for everyone's free use or not licensed at all.<br><br>The precise terms and conditions for copying, distribution and modification follow.<br><br>TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION<br>0. This License applies to any program or other work which contains a notice placed by the copyright holder saying it may be distributed under the terms of this General Public License. The &quot;Program&quot;, below, refers to any such program or work, and a &quot;work based on the Program&quot; means either the Program or any derivative work under copyright law: that is to say, a work containing the Program or a portion of it, either verbatim or with modifications and/or translated into another language. (Hereinafter, translation is included without limitation in the term &quot;modification&quot;.) Each licensee is addressed as &quot;you&quot;.<br><br>Activities other than copying, distribution and modification are not covered by this License; they are outside its scope. The act of running the Program is not restricted, and the output from the Program is covered only if its contents constitute a work based on the Program (independent of having been made by running the Program). Whether that is true depends on what the Program does.<br><br>1. You may copy and distribute verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice and disclaimer of warranty; keep intact all the notices that refer to this License and to the absence of any warranty; and give any other recipients of the Program a copy of this License along with the Program.<br><br>You may charge a fee for the physical act of transferring a copy, and you may at your option offer warranty protection in exchange for a fee.<br><br>2. You may modify your copy or copies of the Program or any portion of it, thus forming a work based on the Program, and copy and distribute such modifications or work under the terms of Section 1 above, provided that you also meet all of these conditions:<br><br>a) You must cause the modified files to carry prominent notices stating that you changed the files and the date of any change.<br>b) You must cause any work that you distribute or publish, that in whole or in part contains or is derived from the Program or any part thereof, to be licensed as a whole at no charge to all third parties under the terms of this License.<br>c) If the modified program normally reads commands interactively when run, you must cause it, when started running for such interactive use in the most ordinary way, to print or display an announcement including an appropriate copyright notice and a notice that there is no warranty (or else, saying that you provide a warranty) and that users may redistribute the program under these conditions, and telling the user how to view a copy of this License. (Exception: if the Program itself is interactive but does not normally print such an announcement, your work based on the Program is not required to print an announcement.)<br>These requirements apply to the modified work as a whole. If identifiable sections of that work are not derived from the Program, and can be reasonably considered independent and separate works in themselves, then this License, and its terms, do not apply to those sections when you distribute them as separate works. But when you distribute the same sections as part of a whole which is a work based on the Program, the distribution of the whole must be on the terms of this License, whose permissions for other licensees extend to the entire whole, and thus to each and every part regardless of who wrote it.<br><br>Thus, it is not the intent of this section to claim rights or contest your rights to work written entirely by you; rather, the intent is to exercise the right to control the distribution of derivative or collective works based on the Program.<br><br>In addition, mere aggregation of another work not based on the Program with the Program (or with a work based on the Program) on a volume of a storage or distribution medium does not bring the other work under the scope of this License.<br><br>3. You may copy and distribute the Program (or a work based on it, under Section 2) in object code or executable form under the terms of Sections 1 and 2 above provided that you also do one of the following:<br><br>a) Accompany it with the complete corresponding machine-readable source code, which must be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange; or,<br>b) Accompany it with a written offer, valid for at least three years, to give any third party, for a charge no more than your cost of physically performing source distribution, a complete machine-readable copy of the corresponding source code, to be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange; or,<br>c) Accompany it with the information you received as to the offer to distribute corresponding source code. (This alternative is allowed only for noncommercial distribution and only if you received the program in object code or executable form with such an offer, in accord with Subsection b above.)<br>The source code for a work means the preferred form of the work for making modifications to it. For an executable work, complete source code means all the source code for all modules it contains, plus any associated interface definition files, plus the scripts used to control compilation and installation of the executable. However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable.<br><br>If distribution of executable or object code is made by offering access to copy from a designated place, then offering equivalent access to copy the source code from the same place counts as distribution of the source code, even though third parties are not compelled to copy the source along with the object code.<br><br>4. You may not copy, modify, sublicense, or distribute the Program except as expressly provided under this License. Any attempt otherwise to copy, modify, sublicense or distribute the Program is void, and will automatically terminate your rights under this License. However, parties who have received copies, or rights, from you under this License will not have their licenses terminated so long as such parties remain in full compliance.<br><br>5. You are not required to accept this License, since you have not signed it. However, nothing else grants you permission to modify or distribute the Program or its derivative works. These actions are prohibited by law if you do not accept this License. Therefore, by modifying or distributing the Program (or any work based on the Program), you indicate your acceptance of this License to do so, and all its terms and conditions for copying, distributing or modifying the Program or works based on it.<br><br>6. Each time you redistribute the Program (or any work based on the Program), the recipient automatically receives a license from the original licensor to copy, distribute or modify the Program subject to these terms and conditions. You may not impose any further restrictions on the recipients' exercise of the rights granted herein. You are not responsible for enforcing compliance by third parties to this License.<br><br>7. If, as a consequence of a court judgment or allegation of patent infringement or for any other reason (not limited to patent issues), conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot distribute so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not distribute the Program at all. For example, if a patent license would not permit royalty-free redistribution of the Program by all those who receive copies directly or indirectly through you, then the only way you could satisfy both it and this License would be to refrain entirely from distribution of the Program.<br><br>If any portion of this section is held invalid or unenforceable under any particular circumstance, the balance of the section is intended to apply and the section as a whole is intended to apply in other circumstances.<br><br>It is not the purpose of this section to induce you to infringe any patents or other property right claims or to contest validity of any such claims; this section has the sole purpose of protecting the integrity of the free software distribution system, which is implemented by public license practices. Many people have made generous contributions to the wide range of software distributed through that system in reliance on consistent application of that system; it is up to the author/donor to decide if he or she is willing to distribute software through any other system and a licensee cannot impose that choice.<br><br>This section is intended to make thoroughly clear what is believed to be a consequence of the rest of this License.<br><br>8. If the distribution and/or use of the Program is restricted in certain countries either by patents or by copyrighted interfaces, the original copyright holder who places the Program under this License may add an explicit geographical distribution limitation excluding those countries, so that distribution is permitted only in or among countries not thus excluded. In such case, this License incorporates the limitation as if written in the body of this License.<br><br>9. The Free Software Foundation may publish revised and/or new versions of the General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.<br><br>Each version is given a distinguishing version number. If the Program specifies a version number of this License which applies to it and &quot;any later version&quot;, you have the option of following the terms and conditions either of that version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of this License, you may choose any version ever published by the Free Software Foundation.<br><br>10. If you wish to incorporate parts of the Program into other free programs whose distribution conditions are different, write to the author to ask for permission. For software which is copyrighted by the Free Software Foundation, write to the Free Software Foundation; we sometimes make exceptions for this. Our decision will be guided by the two goals of preserving the free status of all derivatives of our free software and of promoting the sharing and reuse of software generally.<br><br>NO WARRANTY<br><br>11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.<br><br>12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.<br><br>END OF TERMS AND CONDITIONS<br><br></p>
-  <h2>Inter</h2>
-  <p>Copyright (c) 2016-2020 The Inter Project Authors.<br>&quot;Inter&quot; is trademark of Rasmus Andersson.<br>https://github.com/rsms/inter<br><br>This Font Software is licensed under the SIL Open Font License, Version 1.1.<br>This license is copied below, and is also available with a FAQ at:<br>http://scripts.sil.org/OFL<br><br>-----------------------------------------------------------<br>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007<br>-----------------------------------------------------------<br><br>PREAMBLE<br>The goals of the Open Font License (OFL) are to stimulate worldwide<br>development of collaborative font projects, to support the font creation<br>efforts of academic and linguistic communities, and to provide a free and<br>open framework in which fonts may be shared and improved in partnership<br>with others.<br><br>The OFL allows the licensed fonts to be used, studied, modified and<br>redistributed freely as long as they are not sold by themselves. The<br>fonts, including any derivative works, can be bundled, embedded,<br>redistributed and/or sold with any software provided that any reserved<br>names are not used by derivative works. The fonts and derivatives,<br>however, cannot be released under any other type of license. The<br>requirement for fonts to remain under this license does not apply<br>to any document created using the fonts or their derivatives.<br><br>DEFINITIONS<br>&quot;Font Software&quot; refers to the set of files released by the Copyright<br>Holder(s) under this license and clearly marked as such. This may<br>include source files, build scripts and documentation.<br><br>&quot;Reserved Font Name&quot; refers to any names specified as such after the<br>copyright statement(s).<br><br>&quot;Original Version&quot; refers to the collection of Font Software components as<br>distributed by the Copyright Holder(s).<br><br>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,<br>or substituting -- in part or in whole -- any of the components of the<br>Original Version, by changing formats or by porting the Font Software to a<br>new environment.<br><br>&quot;Author&quot; refers to any designer, engineer, programmer, technical<br>writer or other person who contributed to the Font Software.<br><br>PERMISSION AND CONDITIONS<br>Permission is hereby granted, free of charge, to any person obtaining<br>a copy of the Font Software, to use, study, copy, merge, embed, modify,<br>redistribute, and sell modified and unmodified copies of the Font<br>Software, subject to the following conditions:<br><br>1) Neither the Font Software nor any of its individual components,<br>in Original or Modified Versions, may be sold by itself.<br><br>2) Original or Modified Versions of the Font Software may be bundled,<br>redistributed and/or sold with any software, provided that each copy<br>contains the above copyright notice and this license. These can be<br>included either as stand-alone text files, human-readable headers or<br>in the appropriate machine-readable metadata fields within text or<br>binary files as long as those fields can be easily viewed by the user.<br><br>3) No Modified Version of the Font Software may use the Reserved Font<br>Name(s) unless explicit written permission is granted by the corresponding<br>Copyright Holder. This restriction only applies to the primary font name as<br>presented to the users.<br><br>4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font<br>Software shall not be used to promote, endorse or advertise any<br>Modified Version, except to acknowledge the contribution(s) of the<br>Copyright Holder(s) and the Author(s) or with their explicit written<br>permission.<br><br>5) The Font Software, modified or unmodified, in part or in whole,<br>must be distributed entirely under this license, and must not be<br>distributed under any other license. The requirement for fonts to<br>remain under this license does not apply to any document created<br>using the Font Software.<br><br>TERMINATION<br>This license becomes null and void if any of the above conditions are<br>not met.<br><br>DISCLAIMER<br>THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,<br>EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF<br>MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT<br>OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE<br>COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,<br>INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL<br>DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING<br>FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM<br>OTHER DEALINGS IN THE FONT SOFTWARE.<br><br></p>
-  <h2>ua-parser-js</h2>
-  <p>MIT License<br><br>Copyright (c) 2012-2019 Faisal Salman &lt;&lt;f@faisalman.com&gt;&gt;<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the &quot;Software&quot;), to deal<br>in the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to do so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included in all<br>copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>SOFTWARE.<br><br></p>
-  <h2>uuid</h2>
-  <p>The MIT License (MIT)<br><br>Copyright (c) 2010-2020 Robert Kieffer and other contributors<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the &quot;Software&quot;), to deal<br>in the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to do so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included in all<br>copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>SOFTWARE.<br><br></p>
-  <h2>vue</h2>
-  <p>The MIT License (MIT)<br><br>Copyright (c) 2013-present, Yuxi (Evan) You<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the &quot;Software&quot;), to deal<br>in the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to do so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included in<br>all copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>THE SOFTWARE.<br><br></p>
-  <h2>vue-inline-svg</h2>
-  <p>MIT License<br><br>Copyright (c) 2018 <br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the &quot;Software&quot;), to deal<br>in the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to do so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included in all<br>copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>SOFTWARE.<br><br></p>
-  <h2>vuex</h2>
-  <p>The MIT License (MIT)<br><br>Copyright (c) 2015-present Evan You<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the &quot;Software&quot;), to deal<br>in the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to do so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included in<br>all copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN<br>THE SOFTWARE.<br><br></p>
-</div>
-  </div>
+    <div>
+        <secondary-header
+            stringkey="menu_item_acknowledgements_text"
+            :onBackClick="sideBackBtnClick"
+        />
+        <div class="acknowledgements-container">
+            <h1>THIRD PARTY CONTENT NOTICES</h1>
+            <p>
+                These Third Party Content notices are provided in connection
+                with the ExpressVPN Terms of Service (available at
+                https://www.expressvpn.com/tos) (the “Terms”) and all
+                capitalized terms used, but not defined herein are defined in
+                the Terms. As referenced in the Terms, the Third Party Content
+                listed below may be contained in the Software and the license
+                terms accompanying such Third Party Content supersede the Terms
+                to the degree that they conflict with the Terms. While the
+                information contained herein is believed to be complete and
+                accurate, ExpressVPN makes no warranty with respect to, and
+                assumes no liability whatsoever in connection with, such
+                information. As more fully provided in the Terms, Third Party
+                Content is provided on an &quot;as is&quot; and &quot;as
+                available&quot; basis and, to the fullest extent permitted by
+                law, without representation or warranty of any kind. ExpressVPN
+                and its licensors disclaim all warranties with respect to Third
+                Party Content, including, but not limited to the implied
+                warranties of merchantability, fitness for a particular purpose,
+                and non-infringement.
+            </p>
+            <p>
+                ExpressVPN makes available the source code of Third Party
+                Content, and any of ExpressVPN’s modifications to such Third
+                Party Content as required by the applicable Third Party Content
+                license terms, by written request to ExpressVPN at the following
+                email address: opensource@expressvpn.com.
+            </p>
+            <p>
+                For components licensed pursuant to the GNU General Public
+                License (GPL) Version 2, or Apache License Version 2.0 please
+                refer to copies of the license terms included below.
+            </p>
+            <p>
+                Table of contents Inter ua-parser-js uuid vue vue-inline-svg
+                vuex
+            </p>
+            <h2>Inter</h2>
+            <p>
+                Copyright (c) 2016-2020 The Inter Project Authors.<br />&quot;Inter&quot;
+                is trademark of Rasmus Andersson.<br />https://github.com/rsms/inter<br /><br />This
+                Font Software is licensed under the SIL Open Font License,
+                Version 1.1.<br />This license is copied below, and is also
+                available with a FAQ at:<br />http://scripts.sil.org/OFL<br /><br />-----------------------------------------------------------<br />SIL
+                OPEN FONT LICENSE Version 1.1 - 26 February 2007<br />-----------------------------------------------------------<br /><br />PREAMBLE<br />The
+                goals of the Open Font License (OFL) are to stimulate
+                worldwide<br />development of collaborative font projects, to
+                support the font creation<br />efforts of academic and
+                linguistic communities, and to provide a free and<br />open
+                framework in which fonts may be shared and improved in
+                partnership<br />with others.<br /><br />The OFL allows the
+                licensed fonts to be used, studied, modified and<br />redistributed
+                freely as long as they are not sold by themselves. The<br />fonts,
+                including any derivative works, can be bundled, embedded,<br />redistributed
+                and/or sold with any software provided that any reserved<br />names
+                are not used by derivative works. The fonts and derivatives,<br />however,
+                cannot be released under any other type of license. The<br />requirement
+                for fonts to remain under this license does not apply<br />to
+                any document created using the fonts or their derivatives.<br /><br />DEFINITIONS<br />&quot;Font
+                Software&quot; refers to the set of files released by the
+                Copyright<br />Holder(s) under this license and clearly marked
+                as such. This may<br />include source files, build scripts and
+                documentation.<br /><br />&quot;Reserved Font Name&quot; refers
+                to any names specified as such after the<br />copyright
+                statement(s).<br /><br />&quot;Original Version&quot; refers to
+                the collection of Font Software components as<br />distributed
+                by the Copyright Holder(s).<br /><br />&quot;Modified
+                Version&quot; refers to any derivative made by adding to,
+                deleting,<br />or substituting -- in part or in whole -- any of
+                the components of the<br />Original Version, by changing formats
+                or by porting the Font Software to a<br />new environment.<br /><br />&quot;Author&quot;
+                refers to any designer, engineer, programmer, technical<br />writer
+                or other person who contributed to the Font Software.<br /><br />PERMISSION
+                AND CONDITIONS<br />Permission is hereby granted, free of
+                charge, to any person obtaining<br />a copy of the Font
+                Software, to use, study, copy, merge, embed, modify,<br />redistribute,
+                and sell modified and unmodified copies of the Font<br />Software,
+                subject to the following conditions:<br /><br />1) Neither the
+                Font Software nor any of its individual components,<br />in
+                Original or Modified Versions, may be sold by itself.<br /><br />2)
+                Original or Modified Versions of the Font Software may be
+                bundled,<br />redistributed and/or sold with any software,
+                provided that each copy<br />contains the above copyright notice
+                and this license. These can be<br />included either as
+                stand-alone text files, human-readable headers or<br />in the
+                appropriate machine-readable metadata fields within text or<br />binary
+                files as long as those fields can be easily viewed by the
+                user.<br /><br />3) No Modified Version of the Font Software may
+                use the Reserved Font<br />Name(s) unless explicit written
+                permission is granted by the corresponding<br />Copyright
+                Holder. This restriction only applies to the primary font name
+                as<br />presented to the users.<br /><br />4) The name(s) of the
+                Copyright Holder(s) or the Author(s) of the Font<br />Software
+                shall not be used to promote, endorse or advertise any<br />Modified
+                Version, except to acknowledge the contribution(s) of the<br />Copyright
+                Holder(s) and the Author(s) or with their explicit written<br />permission.<br /><br />5)
+                The Font Software, modified or unmodified, in part or in
+                whole,<br />must be distributed entirely under this license, and
+                must not be<br />distributed under any other license. The
+                requirement for fonts to<br />remain under this license does not
+                apply to any document created<br />using the Font Software.<br /><br />TERMINATION<br />This
+                license becomes null and void if any of the above conditions
+                are<br />not met.<br /><br />DISCLAIMER<br />THE FONT SOFTWARE
+                IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,<br />EXPRESS
+                OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF<br />MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT<br />OF
+                COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL
+                THE<br />COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER LIABILITY,<br />INCLUDING ANY GENERAL, SPECIAL, INDIRECT,
+                INCIDENTAL, OR CONSEQUENTIAL<br />DAMAGES, WHETHER IN AN ACTION
+                OF CONTRACT, TORT OR OTHERWISE, ARISING<br />FROM, OUT OF THE
+                USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM<br />OTHER
+                DEALINGS IN THE FONT SOFTWARE.<br /><br />
+            </p>
+            <h2>ua-parser-js</h2>
+            <p>
+                MIT License<br /><br />Copyright (c) 2012-2019 Faisal Salman
+                &lt;&lt;f@faisalman.com&gt;&gt;<br /><br />Permission is hereby
+                granted, free of charge, to any person obtaining a copy<br />of
+                this software and associated documentation files (the
+                &quot;Software&quot;), to deal<br />in the Software without
+                restriction, including without limitation the rights<br />to
+                use, copy, modify, merge, publish, distribute, sublicense,
+                and/or sell<br />copies of the Software, and to permit persons
+                to whom the Software is<br />furnished to do so, subject to the
+                following conditions:<br /><br />The above copyright notice and
+                this permission notice shall be included in all<br />copies or
+                substantial portions of the Software.<br /><br />THE SOFTWARE IS
+                PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR<br />IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                WARRANTIES OF MERCHANTABILITY,<br />FITNESS FOR A PARTICULAR
+                PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />AUTHORS
+                OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER<br />LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                OTHERWISE, ARISING FROM,<br />OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br />SOFTWARE.<br /><br />
+            </p>
+            <h2>uuid</h2>
+            <p>
+                The MIT License (MIT)<br /><br />Copyright (c) 2010-2020 Robert
+                Kieffer and other contributors<br /><br />Permission is hereby
+                granted, free of charge, to any person obtaining a copy<br />of
+                this software and associated documentation files (the
+                &quot;Software&quot;), to deal<br />in the Software without
+                restriction, including without limitation the rights<br />to
+                use, copy, modify, merge, publish, distribute, sublicense,
+                and/or sell<br />copies of the Software, and to permit persons
+                to whom the Software is<br />furnished to do so, subject to the
+                following conditions:<br /><br />The above copyright notice and
+                this permission notice shall be included in all<br />copies or
+                substantial portions of the Software.<br /><br />THE SOFTWARE IS
+                PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR<br />IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                WARRANTIES OF MERCHANTABILITY,<br />FITNESS FOR A PARTICULAR
+                PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />AUTHORS
+                OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER<br />LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                OTHERWISE, ARISING FROM,<br />OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br />SOFTWARE.<br /><br />
+            </p>
+            <h2>vue</h2>
+            <p>
+                The MIT License (MIT)<br /><br />Copyright (c) 2013-present,
+                Yuxi (Evan) You<br /><br />Permission is hereby granted, free of
+                charge, to any person obtaining a copy<br />of this software and
+                associated documentation files (the &quot;Software&quot;), to
+                deal<br />in the Software without restriction, including without
+                limitation the rights<br />to use, copy, modify, merge, publish,
+                distribute, sublicense, and/or sell<br />copies of the Software,
+                and to permit persons to whom the Software is<br />furnished to
+                do so, subject to the following conditions:<br /><br />The above
+                copyright notice and this permission notice shall be included
+                in<br />all copies or substantial portions of the Software.<br /><br />THE
+                SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY
+                KIND, EXPRESS OR<br />IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                WARRANTIES OF MERCHANTABILITY,<br />FITNESS FOR A PARTICULAR
+                PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />AUTHORS
+                OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER<br />LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                OTHERWISE, ARISING FROM,<br />OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN<br />THE SOFTWARE.<br /><br />
+            </p>
+            <h2>vue-inline-svg</h2>
+            <p>
+                MIT License<br /><br />Copyright (c) 2018 <br /><br />Permission
+                is hereby granted, free of charge, to any person obtaining a
+                copy<br />of this software and associated documentation files
+                (the &quot;Software&quot;), to deal<br />in the Software without
+                restriction, including without limitation the rights<br />to
+                use, copy, modify, merge, publish, distribute, sublicense,
+                and/or sell<br />copies of the Software, and to permit persons
+                to whom the Software is<br />furnished to do so, subject to the
+                following conditions:<br /><br />The above copyright notice and
+                this permission notice shall be included in all<br />copies or
+                substantial portions of the Software.<br /><br />THE SOFTWARE IS
+                PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR<br />IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                WARRANTIES OF MERCHANTABILITY,<br />FITNESS FOR A PARTICULAR
+                PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />AUTHORS
+                OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER<br />LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                OTHERWISE, ARISING FROM,<br />OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br />SOFTWARE.<br /><br />
+            </p>
+            <h2>vuex</h2>
+            <p>
+                The MIT License (MIT)<br /><br />Copyright (c) 2015-present Evan
+                You<br /><br />Permission is hereby granted, free of charge, to
+                any person obtaining a copy<br />of this software and associated
+                documentation files (the &quot;Software&quot;), to deal<br />in
+                the Software without restriction, including without limitation
+                the rights<br />to use, copy, modify, merge, publish,
+                distribute, sublicense, and/or sell<br />copies of the Software,
+                and to permit persons to whom the Software is<br />furnished to
+                do so, subject to the following conditions:<br /><br />The above
+                copyright notice and this permission notice shall be included
+                in<br />all copies or substantial portions of the Software.<br /><br />THE
+                SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY
+                KIND, EXPRESS OR<br />IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                WARRANTIES OF MERCHANTABILITY,<br />FITNESS FOR A PARTICULAR
+                PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />AUTHORS
+                OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+                OTHER<br />LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+                OTHERWISE, ARISING FROM,<br />OUT OF OR IN CONNECTION WITH THE
+                SOFTWARE OR THE USE OR OTHER DEALINGS IN<br />THE SOFTWARE.<br /><br />
+            </p>
+        </div>
+    </div>
 </template>
 <script>
 import secondaryHeader from './partials/secondaryHeader.vue';
 
 export default {
-  name: 'acknowledgementsScreen',
-  computed: {
-  },
-  mixins: [],
-  methods: {
-    sideBackBtnClick: function (event) {
-      this.$store.dispatch('setCurrentView', 'helpScreen');
+    name: 'acknowledgementsScreen',
+    computed: {},
+    mixins: [],
+    methods: {
+        sideBackBtnClick: function (event) {
+            this.$store.dispatch('setCurrentView', 'helpScreen');
+        },
     },
-  },
-  components: {
-    secondaryHeader,
-  },
+    components: {
+        secondaryHeader,
+    },
 };
 </script>
 
 <style lang="scss" scoped>
 .acknowledgements {
-  &-container {
-    padding: 0px 20px;
-    height: calc(600px - 60px);
-    width: 100vw;
-    overflow: hidden auto;
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: 0px;
-    line-height: 28px;
-  }
+    &-container {
+        padding: 0px 20px;
+        height: calc(600px - 60px);
+        width: 100vw;
+        overflow: hidden auto;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 28px;
+    }
 }
 pre {
-  white-space: pre-line;
+    white-space: pre-line;
 }
 </style>
