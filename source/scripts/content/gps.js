@@ -87,10 +87,6 @@ function hookGeo(eventName) {
 				const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
 				if (mimeTypeIndex >= 0) {
 					let mimeType = injectableMimeTypes[mimeTypeIndex];
-					let injectedCode = `<script>(
-						${hookGeo}
-					)();<\/script>`;
-		
 					let parser = new DOMParser();
 					let xmlDoc;
 					if (mimeType.useXMLparser === true) {
@@ -100,7 +96,26 @@ function hookGeo(eventName) {
 					}
 
 					if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
-						xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+						if (typeEl.type === "image/svg+xml") {
+						  const scriptElem = xmlDoc.createElementNS(
+						    "http://www.w3.org/2000/svg",
+						    "script",
+						  );
+						  scriptElem.setAttributeNS(null, "type", "application/ecmascript");
+						  scriptElem.innerHTML = `(${hookGeo})();`;
+						  xmlDoc.documentElement.insertBefore(
+						    scriptElem,
+						    xmlDoc.documentElement.firstChild,
+						  );
+						} else {
+						  const injectedCode = `<script>(
+											    	${hookGeo}
+											    )();<\/script>`;
+						  xmlDoc.documentElement.insertAdjacentHTML(
+						    "afterbegin",
+						    injectedCode,
+						  );
+						}
 		
 						if (mimeType.useXMLparser === true) {
 							args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
